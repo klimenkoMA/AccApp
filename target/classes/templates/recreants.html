@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" content="">
+    <title>RECREANTS</title>
+</head>
+<body>
+<table align="center" width="1500">
+
+    <tr>
+        <form action="/allPersons">
+            <button type="submit">Пользователи</button>
+        </form>
+    </tr>
+
+    <tr>
+        <form action="/allPersonsProf">
+            <button type="submit">Профессии врачей</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allAegerCaptions">
+            <button type="submit">Заболевания</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProcedCaptions">
+            <button type="submit">Процедуры</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProfCaptions">
+            <button type="submit">Профессии пациентов</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProcForAegers">
+            <button type="submit">Назначенные процедуры</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProfAegers">
+            <button type="submit">Профессиональные заболевания</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allRecreants">
+            <button type="submit">Пациенты</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allRecreantsAegers">
+            <button type="submit">Диагнозы</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProceduresAssigned">
+            <button type="submit">Выполнение процедур</button>
+        </form>
+    </tr>
+</table>
+    <tr>
+        <form action="/allRecreants">
+            <button type="submit">Пациенты</button>
+        </form>
+    </tr>
+</table>
+<form method="post" action="/addrecreants">
+    <input type="text" name="waypaperSnn" placeholder="Номер путевки"/>
+    <input type="text" name="fio" placeholder="Фамилия Имя Отчество"/>
+    <input type="text" name="dBorn" placeholder="Дата рождения"/>
+    <input type="text" name="liveCity" placeholder="Город проживания"/>
+    <input type="text" name="cProfessionId" placeholder="Профессия пациента"/>
+    <input type="text" name="doctorId" placeholder="Лечащий врач"/>
+    <input type="text" name="waypaperDate" placeholder="Дата путевки"/>
+    <input type="text" name="dArrival" placeholder="Дата прибытия"/>
+    <input type="text" name="dLeave" placeholder="Дата отбытия"/>
+    <input type="text" name="dRevision" placeholder="Дата осмотра"/>
+    <input type="text" name="corpus" placeholder="Корпус"/>
+    <input type="text" name="room" placeholder="Комната"/>
+    <input type="text" name="place" placeholder="Спальное место"/>
+    <button type="submit">Добавить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="deleterecreants">
+    <input type="text" name="id" placeholder="Введите id">
+    <button type="submit">Удалить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="/updaterecreants">
+    <input type="text" name="id" placeholder="Введите id">
+    <input type="text" name="waypaperSnn" placeholder="Номер путевки"/>
+    <input type="text" name="fio" placeholder="Фамилия Имя Отчество"/>
+    <input type="text" name="dBorn" placeholder="Дата рождения"/>
+    <input type="text" name="liveCity" placeholder="Город проживания"/>
+    <input type="text" name="cProfessionId" placeholder="Профессия пациента"/>
+    <input type="text" name="doctorId" placeholder="Лечащий врач"/>
+    <input type="text" name="waypaperDate" placeholder="Дата путевки"/>
+    <input type="text" name="dArrival" placeholder="Дата прибытия"/>
+    <input type="text" name="dLeave" placeholder="Дата отбытия"/>
+    <input type="text" name="dRevision" placeholder="Дата осмотра"/>
+    <input type="text" name="corpus" placeholder="Корпус"/>
+    <input type="text" name="room" placeholder="Комната"/>
+    <input type="text" name="place" placeholder="Спальное место"/>
+    <button type="submit">Обновить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="findrecreantsbyid">
+    <input type="text" name="findbyid" placeholder="Введите id">
+    <button type="submit">Найти</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<table align="center" bgcolor="#a9a9a9" width="1350" style="columns: max-content">
+    <tr>
+        <th>id</th>
+        <th>Номер путевки</th>
+        <th>ФИО</th>
+        <th>Дата рождения</th>
+        <th>Город проживания</th>
+        <th>Профессия пациента</th>
+        <th>Лечащий врач</th>
+        <th>Дата путевки</th>
+        <th>Дата прибытия</th>
+        <th>Дата отбытия</th>
+        <th>Дата осмотра</th>
+        <th>Корпус</th>
+        <th>Комната</th>
+        <th>Спальное место</th>
+    </tr>
+    <div th:each="element : ${recreantsList}" class="row m-1">
+        <div class="col-8">
+            <tr align="center">
+                <td>
+                    <div>[[${element.id}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.waypaperSnn}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.fio}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.dBorn}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.liveCity}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.cProfession}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.doctor}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.waypaperDate}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.dArrival}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.dLeave}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.dRevision}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.corpus}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.room}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.place}]]</div>
+                </td>
+            </tr>
+        </div>
+    </div>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</table>
+</body>
+</html>

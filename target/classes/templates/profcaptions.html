@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" content="">
+    <title>PROFCAPTIONS</title>
+</head>
+<body>
+<table align="center" width="1500">
+
+    <tr>
+        <form action="/allPersons">
+            <button type="submit">Пользователи</button>
+        </form>
+    </tr>
+
+    <tr>
+        <form action="/allPersonsProf">
+            <button type="submit">Профессии врачей</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allAegerCaptions">
+            <button type="submit">Заболевания</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProcedCaptions">
+            <button type="submit">Процедуры</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProfCaptions">
+            <button type="submit">Профессии пациентов</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProcForAegers">
+            <button type="submit">Назначенные процедуры</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProfAegers">
+            <button type="submit">Профессиональные заболевания</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allRecreants">
+            <button type="submit">Пациенты</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allRecreantsAegers">
+            <button type="submit">Диагнозы</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProceduresAssigned">
+            <button type="submit">Выполнение процедур</button>
+        </form>
+    </tr>
+</table>
+<form method="post" action="/addprofcaptions">
+    <input type="text" name="caption" placeholder="Название профессии">
+    <button type="submit">Добавить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="/deleteprofcaptions">
+    <input type="text" name="cProf" placeholder="Код профессии">
+    <button type="submit">Удалить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="/updateprofcaptions">
+    <input type="text" name="cProf" placeholder="Код профессии">
+    <input type="text" name="caption" placeholder="Название профессии">
+    <button type="submit">Обновить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="findprofcaptionsbyid">
+    <input type="text" name="findbyid" placeholder="Введите id">
+    <button type="submit">Найти</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+<table align="center" bgcolor="#a9a9a9" width="400" style="columns: max-content">
+    <tr>
+        <th>id</th>
+        <th>Профессия пациента</th>
+    </tr>
+    <div th:each="element : ${profCaptionsList}" class="row m-1">
+        <div class="col-8">
+            <tr align="center">
+                <td>
+                    <div>[[${element.cProf}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.caption}]]</div>
+                </td>
+            </tr>
+        </div>
+    </div>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</table>
+</body>
+</html>

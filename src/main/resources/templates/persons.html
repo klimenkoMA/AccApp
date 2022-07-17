@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" content="">
+    <title>PERSONS</title>
+</head>
+<body>
+
+<table align="center" width="1500">
+
+    <tr>
+        <form action="/allPersons">
+            <button type="submit">Пользователи</button>
+        </form>
+    </tr>
+
+    <tr>
+        <form action="/allPersonsProf">
+            <button type="submit">Профессии врачей</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allAegerCaptions">
+            <button type="submit">Заболевания</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProcedCaptions">
+            <button type="submit">Процедуры</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProfCaptions">
+            <button type="submit">Профессии пациентов</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProcForAegers">
+            <button type="submit">Назначенные процедуры</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProfAegers">
+            <button type="submit">Профессиональные заболевания</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allRecreants">
+            <button type="submit">Пациенты</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allRecreantsAegers">
+            <button type="submit">Диагнозы</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/allProceduresAssigned">
+            <button type="submit">Выполнение процедур</button>
+        </form>
+    </tr>
+</table>
+
+<form method="post" action="/allPersons">
+    <input type="text" name="fio" placeholder="Введите ФИО"/>
+    <input type="text" name="login" placeholder="Введите логин"/>
+    <input type="text" name="password" placeholder="Введите пароль"/>
+    <input type="text" name="prof_id" placeholder="Введите код профессии"/>
+    <button type="submit">Добавить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="delete">
+    <input type="text" name="delete" placeholder="Введите id">
+    <button type="submit">Удалить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="/updatePersons">
+    <input type="text" name="id" placeholder="Введите id врача">
+    <input type="text" name="fio" placeholder="Введите ФИО"/>
+    <input type="text" name="login" placeholder="Введите логин"/>
+    <input type="text" name="password" placeholder="Введите пароль"/>
+    <input type="text" name="prof_id" placeholder="Введите код профессии"/>
+    <button type="submit">Обновить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="findbyfio">
+    <input type="text" name="findbyfio" placeholder="Введите ФИО">
+    <button type="submit">Найти</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="findbyid">
+    <input type="text" name="findbyid" placeholder="Введите id">
+    <button type="submit">Найти</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<table align="center" bgcolor="#a9a9a9" width="700" style="columns: max-content">
+    <tr>
+        <th>id</th>
+        <th>Фамилия Имя Отчество</th>
+        <th>Логин</th>
+        <th>Пароль</th>
+        <th>Профессия</th>
+    </tr>
+    <div th:each="element : ${personsList}" class="row m-1">
+        <div class="col-8">
+            <tr align="center">
+                <td>
+                    <div>[[${element.id}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.fio}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.login}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.password}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.prof_id}]]</div>
+                </td>
+            </tr>
+        </div>
+    </div>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</table>
+</body>
+</html>
