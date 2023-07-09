@@ -1,2 +1,2 @@
-# Recreation-DB
-Institute project, implementation of a database for a sanatorium
+# Accounting App
+Institute project, application for accounting of computer equipment
