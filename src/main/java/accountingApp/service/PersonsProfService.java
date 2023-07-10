@@ -2,10 +2,10 @@ package accountingApp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import accountingApp.entity.Persons;
+import accountingApp.entity.Employee;
 import accountingApp.entity.PersonsProf;
 import accountingApp.repository.PersonsProfRepository;
-import accountingApp.repository.PersonsRepository;
+import accountingApp.repository.EmployeeRepository;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class PersonsProfService {
 	@Autowired
 	PersonsProfRepository personsProfRepository;
 	@Autowired
-	PersonsRepository personsRepository;
+	EmployeeRepository employeeRepository;
 
 
 	public List<PersonsProf> getAllPersonsProf() {
@@ -37,7 +37,7 @@ public class PersonsProfService {
 		return personsProfRepository.findPersonsProfById(id);
 	}
 
-	public void addNewPersons(Persons persons) {
-		personsRepository.save(persons);
+	public void addNewPersons(Employee employee) {
+		employeeRepository.save(employee);
 	}
 }
