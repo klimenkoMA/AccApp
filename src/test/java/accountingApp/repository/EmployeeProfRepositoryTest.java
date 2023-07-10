@@ -1,18 +1,18 @@
 package accountingApp.repository;
 
+import accountingApp.entity.Employee;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
-import accountingApp.entity.Persons;
 import accountingApp.entity.PersonsProf;
 
 @DataJpaTest(showSql = true)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback(false)
-public class PersonsProfRepositoryTest {
+public class EmployeeProfRepositoryTest {
 
 	@Autowired
 	PersonsProfRepository personsProfRepository;
@@ -46,14 +46,14 @@ public class PersonsProfRepositoryTest {
 	@Test
 	public void createPersons() {
 		PersonsProf personsProf = testEntityManager.find(PersonsProf.class, 1);
-		Persons persons1 = new Persons("Петров Иван Иванович", "log1", "pass1", personsProf);
-		Persons persons2 = new Persons("Мельников Илья Петрович", "log3", "pass3", personsProf);
-		Persons persons3 = new Persons("Савва Георгий Олегович", "log4", "pass4", personsProf);
-		Persons persons4 = new Persons("Куницина Валентина Петровна", "log2", "pass2", personsProf);
-		personsProf.addPersons(persons1);
-		personsProf.addPersons(persons2);
-		personsProf.addPersons(persons3);
-		personsProf.addPersons(persons4);
+		Employee employee1 = new Employee("Петров Иван Иванович", "log1", "pass1", personsProf);
+		Employee employee2 = new Employee("Мельников Илья Петрович", "log3", "pass3", personsProf);
+		Employee employee3 = new Employee("Савва Георгий Олегович", "log4", "pass4", personsProf);
+		Employee employee4 = new Employee("Куницина Валентина Петровна", "log2", "pass2", personsProf);
+		personsProf.addPersons(employee1);
+		personsProf.addPersons(employee2);
+		personsProf.addPersons(employee3);
+		personsProf.addPersons(employee4);
 		personsProfRepository.save(personsProf);
 	}
 }

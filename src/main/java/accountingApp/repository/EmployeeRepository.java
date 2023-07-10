@@ -1,20 +1,20 @@
 package accountingApp.repository;
 
+import accountingApp.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import accountingApp.entity.Persons;
 
 import java.util.List;
 
 @Repository
-public interface PersonsRepository extends JpaRepository<Persons, Integer> {
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     //	@Query("SELECT c FROM users c")
-    List<Persons> findAll();
+    List<Employee> findAll();
 
-    List<Persons> findByFio(String fio);
+    List<Employee> findByFio(String fio);
 
-    List<Persons> findById(int id);
+    List<Employee> findById(int id);
 
     void deleteById(int id);
 }

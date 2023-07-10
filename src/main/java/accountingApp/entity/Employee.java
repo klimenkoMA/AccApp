@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "persons")
-public class Persons {
+public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -27,10 +27,10 @@ public class Persons {
 	// Цифра профессии tinyint
 	private PersonsProf prof_id;
 
-	public Persons() {
+	public Employee() {
 	}
 
-	public Persons(int id, String fio, String login, String password, PersonsProf prof_id) {
+	public Employee(int id, String fio, String login, String password, PersonsProf prof_id) {
 		this.id = id;
 		this.fio = fio;
 		this.login = login;
@@ -38,7 +38,7 @@ public class Persons {
 		this.prof_id = prof_id;
 	}
 
-	public Persons(String fio, String login, String password, PersonsProf prof_id) {
+	public Employee(String fio, String login, String password, PersonsProf prof_id) {
 		this.fio = fio;
 		this.login = login;
 		this.password = password;

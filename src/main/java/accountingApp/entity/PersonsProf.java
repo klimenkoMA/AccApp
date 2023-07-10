@@ -22,7 +22,7 @@ public class PersonsProf {
 
 	@OneToMany(mappedBy = "prof_id")
 	// Цифра вида пользователей
-	private List<Persons> cMenu;
+	private List<Employee> cMenu;
 
 	@Column(name = "name_rec")
 	//Название вида пользователей nvarchar(50)
@@ -35,7 +35,7 @@ public class PersonsProf {
 	public PersonsProf() {
 	}
 
-	public PersonsProf(int id, List<Persons> cMenu, String nameRec) {
+	public PersonsProf(int id, List<Employee> cMenu, String nameRec) {
 		this.id = id;
 		this.cMenu = cMenu;
 		this.nameRec = nameRec;
@@ -58,11 +58,11 @@ public class PersonsProf {
 		this.id = id;
 	}
 
-	public List<Persons> getcMenu() {
+	public List<Employee> getcMenu() {
 		return cMenu;
 	}
 
-	public void setcMenu(List<Persons> cMenu) {
+	public void setcMenu(List<Employee> cMenu) {
 		this.cMenu = cMenu;
 	}
 
@@ -74,9 +74,9 @@ public class PersonsProf {
 		this.nameRec = nameRec;
 	}
 
-	public void addPersons(Persons persons){
-		if(persons != null){
-			cMenu.add(persons);
+	public void addPersons(Employee employee){
+		if(employee != null){
+			cMenu.add(employee);
 		}
 	}
 }

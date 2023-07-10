@@ -11,10 +11,10 @@ import accountingApp.entity.PersonsProf;
 @DataJpaTest(showSql = true)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback(false)
-public class PersonsRepositoryTest {
+public class EmployeeRepositoryTest {
 
 	@Autowired
-	PersonsRepository personsRepository;
+	EmployeeRepository employeeRepository;
 	@Autowired
 	PersonsProfRepository personsProfRepository;
 	@Autowired

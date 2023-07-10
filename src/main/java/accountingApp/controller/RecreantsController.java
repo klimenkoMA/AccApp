@@ -6,10 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import accountingApp.entity.Persons;
+import accountingApp.entity.Employee;
 import accountingApp.entity.ProfCaptions;
 import accountingApp.entity.Recreants;
-import accountingApp.service.PersonsService;
+import accountingApp.service.EmployeeService;
 import accountingApp.service.ProfCaptionsService;
 import accountingApp.service.RecreantsService;
 
@@ -22,7 +22,7 @@ public class RecreantsController {
 	@Autowired
 	ProfCaptionsService profCaptionsService;
 	@Autowired
-	PersonsService personsService;
+	EmployeeService employeeService;
 
 	@GetMapping("/allRecreants")
 	public String getRecreants(Model model) {
@@ -47,9 +47,9 @@ public class RecreantsController {
 	                           @RequestParam String place,
 	                           Model model) {
 		List<ProfCaptions> profCaptionsList = profCaptionsService.getProfCaptionsById(cProfessionId);
-		List<Persons> personsList = personsService.findPersonsById(doctorId);
+		List<Employee> employeeList = employeeService.findPersonsById(doctorId);
 		Recreants recreants = new Recreants(waypaperSnn, fio, dBorn, liveCity,
-				profCaptionsList.get(0), personsList.get(0), waypaperDate, dArrival, dLeave, dRevision,
+				profCaptionsList.get(0), employeeList.get(0), waypaperDate, dArrival, dLeave, dRevision,
 				corpus, room, place);
 		recreantsService.addNewARecreants(recreants);
 		List<Recreants> recreantsList = recreantsService.findAllRecreants();
@@ -82,9 +82,9 @@ public class RecreantsController {
 	                                  @RequestParam String place,
 	                                  Model model) {
 		List<ProfCaptions> profCaptionsList = profCaptionsService.getProfCaptionsById(cProfessionId);
-		List<Persons> personsList = personsService.findPersonsById(doctorId);
+		List<Employee> employeeList = employeeService.findPersonsById(doctorId);
 		Recreants recreants = new Recreants(id, waypaperSnn, fio, dBorn, liveCity,
-				profCaptionsList.get(0), personsList.get(0), waypaperDate, dArrival, dLeave, dRevision,
+				profCaptionsList.get(0), employeeList.get(0), waypaperDate, dArrival, dLeave, dRevision,
 				corpus, room, place);
 		recreantsService.addNewARecreants(recreants);
 		List<Recreants> recreantsList = recreantsService.findAllRecreants();

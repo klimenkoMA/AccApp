@@ -39,7 +39,7 @@ public class Recreants implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "doctor")
 	// ИНН доктора
-	private Persons doctor;
+	private Employee doctor;
 
 	@Column(name = "waypaper_date")
 	//Дата путевки
@@ -81,10 +81,10 @@ public class Recreants implements Serializable {
 	}
 
 	public Recreants(String waypaperSnn, String fio, String dBorn,
-	                 String liveCity, ProfCaptions cProfession,
-	                 Persons doctor, String waypaperDate, String dArrival,
-	                 String dLeave, String dRevision, String corpus, String room,
-	                 String place) {
+					 String liveCity, ProfCaptions cProfession,
+					 Employee doctor, String waypaperDate, String dArrival,
+					 String dLeave, String dRevision, String corpus, String room,
+					 String place) {
 		this.waypaperSnn = waypaperSnn;
 		this.fio = fio;
 		this.dBorn = dBorn;
@@ -101,10 +101,10 @@ public class Recreants implements Serializable {
 	}
 
 	public Recreants(int id, String waypaperSnn, String fio, String dBorn,
-	                 String liveCity, ProfCaptions cProfession,
-	                 Persons doctor, String waypaperDate, String dArrival,
-	                 String dLeave, String dRevision, String corpus, String room,
-	                 String place) {
+					 String liveCity, ProfCaptions cProfession,
+					 Employee doctor, String waypaperDate, String dArrival,
+					 String dLeave, String dRevision, String corpus, String room,
+					 String place) {
 		this.id = id;
 		this.waypaperSnn = waypaperSnn;
 		this.fio = fio;
@@ -169,11 +169,11 @@ public class Recreants implements Serializable {
 		this.cProfession = cProfession;
 	}
 
-	public Persons getDoctor() {
+	public Employee getDoctor() {
 		return doctor;
 	}
 
-	public void setDoctor(Persons doctor) {
+	public void setDoctor(Employee doctor) {
 		this.doctor = doctor;
 	}
 
