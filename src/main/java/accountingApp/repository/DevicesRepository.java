@@ -1,18 +1,17 @@
 package accountingApp.repository;
 
+import accountingApp.entity.Devices;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import accountingApp.entity.AegerCaptions;
 
 import java.util.List;
 
 @Repository
-public interface AegerCaptionsRepository extends JpaRepository<AegerCaptions, Integer> {
-
+public interface DevicesRepository extends JpaRepository<Devices, Integer> {
 	@Override
-	List<AegerCaptions> findAll();
+	List<Devices> findAll();
 
-	List<AegerCaptions> findBycAeger(int id);
+	List<Devices> findByid(int id);
 
 	@Override
 	void deleteById(Integer integer);

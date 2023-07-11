@@ -25,12 +25,12 @@ public class Employee {
 	@ManyToOne(cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "prof_id")
 	// Цифра профессии tinyint
-	private PersonsProf prof_id;
+	private ITStaff prof_id;
 
 	public Employee() {
 	}
 
-	public Employee(int id, String fio, String login, String password, PersonsProf prof_id) {
+	public Employee(int id, String fio, String login, String password, ITStaff prof_id) {
 		this.id = id;
 		this.fio = fio;
 		this.login = login;
@@ -38,7 +38,7 @@ public class Employee {
 		this.prof_id = prof_id;
 	}
 
-	public Employee(String fio, String login, String password, PersonsProf prof_id) {
+	public Employee(String fio, String login, String password, ITStaff prof_id) {
 		this.fio = fio;
 		this.login = login;
 		this.password = password;
@@ -82,11 +82,11 @@ public class Employee {
 		this.password = password;
 	}
 
-	public PersonsProf getProf_id() {
+	public ITStaff getProf_id() {
 		return prof_id;
 	}
 
-	public void setProf_id(PersonsProf prof_id) {
+	public void setProf_id(ITStaff prof_id) {
 		this.prof_id = prof_id;
 	}
 }

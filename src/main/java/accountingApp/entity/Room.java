@@ -8,7 +8,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "proced_captions")
-public class ProcedCaptions {
+public class Room {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,29 +22,29 @@ public class ProcedCaptions {
 	private String caption;
 
 	@OneToMany(mappedBy = "procedCaptions")
-	private List<ProceduresAssigned> proceduresAssigneds;
+	private List<Devices> devices;
 	@OneToMany(mappedBy = "procedCaptions")
 	private List<ProcForAegers> procForAegers;
 
-	public ProcedCaptions() {
+	public Room() {
 
 	}
 
-	public ProcedCaptions(int cProc, String caption) {
+	public Room(int cProc, String caption) {
 		this.cProc = cProc;
 		this.caption = caption;
 	}
 
-	public ProcedCaptions(String caption) {
+	public Room(String caption) {
 		this.caption = caption;
 	}
 
-	public List<ProceduresAssigned> getProceduresAssigneds() {
-		return proceduresAssigneds;
+	public List<Devices> getProceduresAssigneds() {
+		return devices;
 	}
 
-	public void setProceduresAssigneds(List<ProceduresAssigned> proceduresAssigneds) {
-		this.proceduresAssigneds = proceduresAssigneds;
+	public void setProceduresAssigneds(List<Devices> devices) {
+		this.devices = devices;
 	}
 
 	public List<ProcForAegers> getProcForAegers() {

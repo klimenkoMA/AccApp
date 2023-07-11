@@ -9,7 +9,7 @@ import java.util.List;
  **/
 @Entity
 @Table(name = "persons_prof")
-public class PersonsProf {
+public class ITStaff {
 
 	@Override
 	public String toString() {
@@ -28,24 +28,24 @@ public class PersonsProf {
 	//Название вида пользователей nvarchar(50)
 	private String nameRec;
 
-	public PersonsProf(String nameRec) {
+	public ITStaff(String nameRec) {
 		this.nameRec = nameRec;
 	}
 
-	public PersonsProf() {
+	public ITStaff() {
 	}
 
-	public PersonsProf(int id, List<Employee> cMenu, String nameRec) {
+	public ITStaff(int id, List<Employee> cMenu, String nameRec) {
 		this.id = id;
 		this.cMenu = cMenu;
 		this.nameRec = nameRec;
 	}
 
-	public PersonsProf(int id) {
+	public ITStaff(int id) {
 		this.id = id;
 	}
 
-	public PersonsProf(int id, String nameRec) {
+	public ITStaff(int id, String nameRec) {
 		this.id = id;
 		this.nameRec = nameRec;
 	}

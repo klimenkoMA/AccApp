@@ -1,12 +1,12 @@
 package accountingApp.repository;
 
+import accountingApp.entity.ITStaff;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
-import accountingApp.entity.PersonsProf;
 
 @DataJpaTest(showSql = true)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -16,13 +16,13 @@ public class EmployeeRepositoryTest {
 	@Autowired
 	EmployeeRepository employeeRepository;
 	@Autowired
-	PersonsProfRepository personsProfRepository;
+	ITStaffRepository ITStaffRepository;
 	@Autowired
 	TestEntityManager testEntityManager;
 
 	@Test
 	public void createPersonsProf() {
-		PersonsProf personsProf = new PersonsProf("Плотник");
-		personsProfRepository.save(personsProf);
+		ITStaff ITStaff = new ITStaff("Плотник");
+		ITStaffRepository.save(ITStaff);
 	}
 }

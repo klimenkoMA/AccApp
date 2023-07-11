@@ -1,14 +1,14 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Employee;
+import accountingApp.entity.ITStaff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import accountingApp.entity.PersonsProf;
-import accountingApp.service.PersonsProfService;
+import accountingApp.service.ITStaffService;
 import accountingApp.service.EmployeeService;
 
 import java.util.List;
@@ -18,36 +18,36 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 	@Autowired
-	PersonsProfService personsProfService;
+	ITStaffService ITStaffService;
 
 	@GetMapping("/allPersons")
 	public String getPersons(Model model) {
 		List<Employee> employeeList = employeeService.getListPersons();
 		model.addAttribute("personsList", employeeList);
-		return "persons";
+		return "employee";
 	}
 @PostMapping("/updatePersons")
 	public String updatePersons(@RequestParam int id,@RequestParam String fio, @RequestParam
 			String login, @RequestParam String password,
 	                            @RequestParam(required = false) Integer prof_id, Model model){
-		List<PersonsProf> personsProfList = personsProfService.getPersonsProfById(prof_id);
-		Employee employee = new Employee(id, fio, login, password, personsProfList.get(0));
+		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(prof_id);
+		Employee employee = new Employee(id, fio, login, password, ITStaffList.get(0));
 		employeeService.updatePerson(employee);
 		List<Employee> employeeList = employeeService.getListPersons();
 		model.addAttribute("personsList", employeeList);
-		return "persons";
+		return "employee";
 	}
 
 	@PostMapping("/allPersons")
 	public String addPerson(@RequestParam String fio, @RequestParam
 			String login, @RequestParam String password,
 	                        @RequestParam(required = false) Integer prof_id, Model model) {
-		List<PersonsProf> personsProfList = personsProfService.getPersonsProfById(prof_id);
-		Employee employee = new Employee(fio, login, password, personsProfList.get(0));
-		personsProfService.addNewPersons(employee);
+		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(prof_id);
+		Employee employee = new Employee(fio, login, password, ITStaffList.get(0));
+		ITStaffService.addNewPersons(employee);
 		List<Employee> employeeList = employeeService.getListPersons();
 		model.addAttribute("personsList", employeeList);
-		return "persons";
+		return "employee";
 	}
 
 	@PostMapping("findbyfio")
@@ -59,7 +59,7 @@ public class EmployeeController {
 		} else {
 			getPersons(model);
 		}
-		return "persons";
+		return "employee";
 	}
 
 	@PostMapping("delete")
@@ -69,7 +69,7 @@ public class EmployeeController {
 		}
 		List<Employee> employeeList = employeeService.getListPersons();
 		model.addAttribute("personsList", employeeList);
-		return "persons";
+		return "employee";
 	}
 
 	@PostMapping("findbyid")
@@ -82,6 +82,6 @@ public class EmployeeController {
 			List<Employee> employeeList = employeeService.getListPersons();
 			model.addAttribute("personsList", employeeList);
 		}
-		return "persons";
+		return "employee";
 	}
 }

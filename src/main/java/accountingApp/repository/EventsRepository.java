@@ -1,17 +1,17 @@
 package accountingApp.repository;
 
+import accountingApp.entity.Events;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import accountingApp.entity.RecreantsAegers;
 
 import java.util.List;
 
 @Repository
-public interface RecreantsAegersRepository extends JpaRepository<RecreantsAegers, Integer> {
+public interface EventsRepository extends JpaRepository<Events, Integer> {
 	@Override
-	List<RecreantsAegers> findAll();
+	List<Events> findAll();
 
-	List<RecreantsAegers> findById(int id);
+	List<Events> findById(int id);
 
 	@Override
 	void deleteById(Integer integer);

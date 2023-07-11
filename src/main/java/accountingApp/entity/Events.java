@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "recreants_aegers")
-public class RecreantsAegers {
+public class Events {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,19 +21,19 @@ public class RecreantsAegers {
 	@ManyToOne
 	@JoinColumn(name = "c_aeger")
 	//ИНН заболевания int
-	private AegerCaptions cAeger;
+	private WorkArea cAeger;
 
-	public RecreantsAegers(int id, Recreants waypaperSnn, AegerCaptions cAeger) {
+	public Events(int id, Recreants waypaperSnn, WorkArea cAeger) {
 		this.id = id;
 		this.waypaperSnn = waypaperSnn;
 		this.cAeger = cAeger;
 	}
 
-	public RecreantsAegers() {
+	public Events() {
 	}
 
-	public RecreantsAegers(Recreants waypaperSnn,
-	                       AegerCaptions cAeger) {
+	public Events(Recreants waypaperSnn,
+				  WorkArea cAeger) {
 		this.waypaperSnn = waypaperSnn;
 		this.cAeger = cAeger;
 	}
@@ -54,11 +54,11 @@ public class RecreantsAegers {
 		this.waypaperSnn = waypaperSnn;
 	}
 
-	public AegerCaptions getcAeger() {
+	public WorkArea getcAeger() {
 		return cAeger;
 	}
 
-	public void setcAeger(AegerCaptions cAeger) {
+	public void setcAeger(WorkArea cAeger) {
 		this.cAeger = cAeger;
 	}
 }
