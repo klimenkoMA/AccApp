@@ -24,14 +24,14 @@ public class ProfAegers {
 	@JoinColumn(name = "c_aeger")
 	// ИНН заболевания
 	// int
-	private AegerCaptions cAeger;
+	private WorkArea cAeger;
 
-	public ProfAegers(ProfCaptions cProf, AegerCaptions cAeger) {
+	public ProfAegers(ProfCaptions cProf, WorkArea cAeger) {
 		this.cProf = cProf;
 		this.cAeger = cAeger;
 	}
 
-	public ProfAegers(int id, ProfCaptions cProf, AegerCaptions cAeger) {
+	public ProfAegers(int id, ProfCaptions cProf, WorkArea cAeger) {
 		this.id = id;
 		this.cProf = cProf;
 		this.cAeger = cAeger;
@@ -53,11 +53,11 @@ public class ProfAegers {
 		this.cProf = cProf;
 	}
 
-	public AegerCaptions getcAeger() {
+	public WorkArea getcAeger() {
 		return cAeger;
 	}
 
-	public void setcAeger(AegerCaptions cAeger) {
+	public void setcAeger(WorkArea cAeger) {
 		this.cAeger = cAeger;
 	}
 

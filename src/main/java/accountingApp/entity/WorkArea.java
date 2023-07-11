@@ -8,7 +8,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "aeger_captions")
-public class AegerCaptions {
+public class WorkArea {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "c_aeger")
@@ -19,21 +19,21 @@ public class AegerCaptions {
 	// nvarchar(25)
 	private String caption;
 	@OneToMany(mappedBy = "cAeger")
-	private List<RecreantsAegers> recreantsAegers;
+	private List<Events> recreantsAegers;
 	@OneToMany(mappedBy = "aegerCaptions")
 	private List<ProcForAegers> procForAegers;
 	@OneToMany(mappedBy = "cAeger")
 	private List<ProfAegers> profAegers;
 
-	public AegerCaptions(int cAeger, String caption) {
+	public WorkArea(int cAeger, String caption) {
 		this.cAeger = cAeger;
 		this.caption = caption;
 	}
 
-	public AegerCaptions() {
+	public WorkArea() {
 	}
 
-	public AegerCaptions(String caption) {
+	public WorkArea(String caption) {
 		this.caption = caption;
 	}
 
@@ -42,11 +42,11 @@ public class AegerCaptions {
 		return caption;
 	}
 
-	public List<RecreantsAegers> getRecreantsAegers() {
+	public List<Events> getRecreantsAegers() {
 		return recreantsAegers;
 	}
 
-	public void setRecreantsAegers(List<RecreantsAegers> recreantsAegers) {
+	public void setRecreantsAegers(List<Events> recreantsAegers) {
 		this.recreantsAegers = recreantsAegers;
 	}
 

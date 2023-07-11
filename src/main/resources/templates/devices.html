@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8" content="">
-    <title>RECREANTSAEGERS</title>
+    <title>PROCEDURESASSIGNED</title>
 </head>
 <body>
 
@@ -62,50 +62,68 @@
     </tr>
 </table>
 
-<form method="post" action="/addrecreantsaegers">
-    <input type="text" name="waypaperSnnId" placeholder="Введите id путевки"/>
-    <input type="text" name="cAegerId" placeholder="Введите код заболевания"/>
+<form method="post" action="/addproceduresassigned">
+    <input type="text" name="nAssigned" placeholder="Назначено процедур"/>
+    <input type="text" name="nPassed" placeholder="Пройдено процедур"/>
+    <input type="text" name="comment" placeholder="Комментарий врача"/>
+    <input type="text" name="waypaperSnnId" placeholder="Код путевки"/>
+    <input type="text" name="cProcId" placeholder="Название процедуры"/>
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="deleterecreantsaegers">
-    <input type="text" name="delete" placeholder="Введите id диагноза">
+<form method="post" action="deleteproceduresassigned">
+    <input type="text" name="delete" placeholder="Введите id назначения">
     <button type="submit">Удалить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="/updaterecreantsaegers">
-    <input type="text" name="id" placeholder="Введите id диагноза">
-    <input type="text" name="waypaperSnnId" placeholder="Введите id путевки"/>
-    <input type="text" name="cAegerId" placeholder="Введите код заболевания"/>
+<form method="post" action="/updateproceduresassigned">
+    <input type="text" name="id" placeholder="Введите id назначения">
+    <input type="text" name="nAssigned" placeholder="Назначено процедур"/>
+    <input type="text" name="nPassed" placeholder="Пройдено процедур"/>
+    <input type="text" name="comment" placeholder="Комментарий врача"/>
+    <input type="text" name="waypaperSnnId" placeholder="Код путевки"/>
+    <input type="text" name="cProcId" placeholder="Название процедуры"/>
     <button type="submit">Обновить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="findrecreantsaegersbyid">
-    <input type="text" name="findbyid" placeholder="Введите id диагноза">
+<form method="post" action="findproceduresassignedbyid">
+    <input type="text" name="findbyid" placeholder="Введите id назначения">
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
 <table align="center" bgcolor="#a9a9a9" width="700" style="columns: max-content">
     <tr>
-        <th>id</th>
+        <th>id назначения</th>
+        <th>Назначено процедур</th>
+        <th>Пройдено процедур</th>
+        <th>Комментарий врача</th>
         <th>Код путевки</th>
-        <th>Код заболевания</th>
+        <th>Название процедуры</th>
     </tr>
-    <div th:each="element : ${recreantsAegersList}" class="row m-1">
+    <div th:each="element : ${devicesList}" class="row m-1">
         <div class="col-8">
             <tr align="center">
                 <td>
                     <div>[[${element.id}]]</div>
                 </td>
                 <td>
-                    <div>[[${element.waypaperSnn}]]</div>
+                    <div>[[${element.nAssigned}]]</div>
                 </td>
                 <td>
-                    <div>[[${element.cAeger}]]</div>
+                    <div>[[${element.nPassed}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.comment}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.recreantsSnn}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.room}]]</div>
                 </td>
             </tr>
         </div>

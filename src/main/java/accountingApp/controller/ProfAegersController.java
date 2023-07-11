@@ -6,10 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import accountingApp.entity.AegerCaptions;
+import accountingApp.entity.WorkArea;
 import accountingApp.entity.ProfAegers;
 import accountingApp.entity.ProfCaptions;
-import accountingApp.service.AegerCaptionsService;
+import accountingApp.service.WorkAreaService;
 import accountingApp.service.ProfAegersService;
 import accountingApp.service.ProfCaptionsService;
 
@@ -22,7 +22,7 @@ public class ProfAegersController {
 	@Autowired
 	ProfCaptionsService profCaptionsService;
 	@Autowired
-	AegerCaptionsService aegerCaptionsService;
+	WorkAreaService workAreaService;
 
 	@GetMapping("/allProfAegers")
 	public String getProfAegers(Model model) {
@@ -35,8 +35,8 @@ public class ProfAegersController {
 	public String addAegerCaptions(@RequestParam int cProfId,
 	                               @RequestParam int cAegerId, Model model) {
 		List<ProfCaptions> profCaptionsList = profCaptionsService.getProfCaptionsById(cProfId);
-		List<AegerCaptions> aegerCaptionsList = aegerCaptionsService.getAegerCaptionsById(cAegerId);
-		ProfAegers profAegers = new ProfAegers(profCaptionsList.get(0), aegerCaptionsList.get(0));
+		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(cAegerId);
+		ProfAegers profAegers = new ProfAegers(profCaptionsList.get(0), workAreaList.get(0));
 		profAegersService.addNewProfAegers(profAegers);
 		List<ProfAegers> profAegersList = profAegersService.findAllProfAegers();
 		model.addAttribute("profAegersList", profAegersList);
@@ -56,8 +56,8 @@ public class ProfAegersController {
 	                                  @RequestParam int cProfId,
 	                                  @RequestParam int cAegerId, Model model) {
 		List<ProfCaptions> profCaptionsList = profCaptionsService.getProfCaptionsById(cProfId);
-		List<AegerCaptions> aegerCaptionsList = aegerCaptionsService.getAegerCaptionsById(cAegerId);
-		ProfAegers profAegers = new ProfAegers(id, profCaptionsList.get(0), aegerCaptionsList.get(0));
+		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(cAegerId);
+		ProfAegers profAegers = new ProfAegers(id, profCaptionsList.get(0), workAreaList.get(0));
 		profAegersService.updateProfAegers(profAegers);
 		List<ProfAegers> profAegersList = profAegersService.findAllProfAegers();
 		model.addAttribute("profAegersList", profAegersList);

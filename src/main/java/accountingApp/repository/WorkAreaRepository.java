@@ -1,17 +1,18 @@
 package accountingApp.repository;
 
+import accountingApp.entity.WorkArea;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import accountingApp.entity.ProceduresAssigned;
 
 import java.util.List;
 
 @Repository
-public interface ProceduresAssignedRepository extends JpaRepository<ProceduresAssigned, Integer> {
-	@Override
-	List<ProceduresAssigned> findAll();
+public interface WorkAreaRepository extends JpaRepository<WorkArea, Integer> {
 
-	List<ProceduresAssigned> findByid(int id);
+	@Override
+	List<WorkArea> findAll();
+
+	List<WorkArea> findBycAeger(int id);
 
 	@Override
 	void deleteById(Integer integer);

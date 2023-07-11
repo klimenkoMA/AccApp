@@ -1,18 +1,18 @@
 package accountingApp.repository;
 
+import accountingApp.entity.ITStaff;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import accountingApp.entity.PersonsProf;
 
 import java.util.List;
 
 @Repository
-public interface PersonsProfRepository extends JpaRepository<PersonsProf, Integer> {
-	@Query("SELECT c FROM PersonsProf c")
-	List<PersonsProf> findAll();
+public interface ITStaffRepository extends JpaRepository<ITStaff, Integer> {
+	@Query("SELECT c FROM ITStaff c")
+	List<ITStaff> findAll();
 
-	List<PersonsProf> findPersonsProfById(int id);
+	List<ITStaff> findPersonsProfById(int id);
 
 	void deleteById(int id);
 

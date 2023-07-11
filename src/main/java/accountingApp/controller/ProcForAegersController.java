@@ -1,17 +1,17 @@
 package accountingApp.controller;
 
+import accountingApp.entity.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import accountingApp.entity.AegerCaptions;
+import accountingApp.entity.WorkArea;
 import accountingApp.entity.ProcForAegers;
-import accountingApp.entity.ProcedCaptions;
-import accountingApp.service.AegerCaptionsService;
+import accountingApp.service.WorkAreaService;
 import accountingApp.service.ProcForAegersService;
-import accountingApp.service.ProcedCaptionsService;
+import accountingApp.service.RoomService;
 
 import java.util.List;
 
@@ -20,9 +20,9 @@ public class ProcForAegersController {
 	@Autowired
 	ProcForAegersService procForAegersService;
 	@Autowired
-	AegerCaptionsService aegerCaptionsService;
+	WorkAreaService workAreaService;
 	@Autowired
-	ProcedCaptionsService procedCaptionsService;
+	RoomService roomService;
 
 	@GetMapping("/allProcForAegers")
 	public String getProcForAegers(Model model) {
@@ -35,9 +35,9 @@ public class ProcForAegersController {
 	public String addProcForAegers(@RequestParam int aegerCaptionsId,
 	                               @RequestParam int procedCaptionsId,
 	                               Model model) {
-		List<AegerCaptions> aegerCaptionsList = aegerCaptionsService.getAegerCaptionsById(aegerCaptionsId);
-		List<ProcedCaptions> procedCaptionsList = procedCaptionsService.getProcedCaptionsById(procedCaptionsId);
-		ProcForAegers procForAegers = new ProcForAegers(aegerCaptionsList.get(0), procedCaptionsList.get(0));
+		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(aegerCaptionsId);
+		List<Room> roomList = roomService.getProcedCaptionsById(procedCaptionsId);
+		ProcForAegers procForAegers = new ProcForAegers(workAreaList.get(0), roomList.get(0));
 		procForAegersService.addNewProcForAegers(procForAegers);
 		List<ProcForAegers> procForAegersList = procForAegersService.findAllProcForAegers();
 		model.addAttribute("procForAegersList", procForAegersList);
@@ -56,9 +56,9 @@ public class ProcForAegersController {
 	public String updateProcForAegers(@RequestParam int id,
 	                                  @RequestParam int aegerCaptionsId,
 	                                  @RequestParam int procedCaptionsId, Model model) {
-		List<AegerCaptions> aegerCaptionsList = aegerCaptionsService.getAegerCaptionsById(aegerCaptionsId);
-		List<ProcedCaptions> procedCaptionsList = procedCaptionsService.getProcedCaptionsById(procedCaptionsId);
-		ProcForAegers procForAegers = new ProcForAegers(id, aegerCaptionsList.get(0), procedCaptionsList.get(0));
+		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(aegerCaptionsId);
+		List<Room> roomList = roomService.getProcedCaptionsById(procedCaptionsId);
+		ProcForAegers procForAegers = new ProcForAegers(id, workAreaList.get(0), roomList.get(0));
 		procForAegersService.updateProcForAegers(procForAegers);
 		List<ProcForAegers> procForAegersList = procForAegersService.findAllProcForAegers();
 		model.addAttribute("procForAegersList", procForAegersList);

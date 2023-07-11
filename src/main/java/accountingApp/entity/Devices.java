@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "procedures_assigned")
-public class ProceduresAssigned {
+public class Devices {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -27,31 +27,31 @@ public class ProceduresAssigned {
 
 	@ManyToOne
 	@JoinColumn(name = "c_proc")
-	private ProcedCaptions procedCaptions;
+	private Room room;
 
 
-	public ProceduresAssigned(int nAssigned, int nPassed, String comment,
-	                          Recreants recreantsSnn,
-	                          ProcedCaptions procedCaptions) {
+	public Devices(int nAssigned, int nPassed, String comment,
+				   Recreants recreantsSnn,
+				   Room room) {
 		this.nAssigned = nAssigned;
 		this.nPassed = nPassed;
 		this.comment = comment;
 		this.recreantsSnn = recreantsSnn;
-		this.procedCaptions = procedCaptions;
+		this.room = room;
 	}
 
-	public ProceduresAssigned(int id, int nAssigned, int nPassed, String comment,
-	                          Recreants recreantsSnn,
-	                          ProcedCaptions procedCaptions) {
+	public Devices(int id, int nAssigned, int nPassed, String comment,
+				   Recreants recreantsSnn,
+				   Room room) {
 		this.id = id;
 		this.nAssigned = nAssigned;
 		this.nPassed = nPassed;
 		this.comment = comment;
 		this.recreantsSnn = recreantsSnn;
-		this.procedCaptions = procedCaptions;
+		this.room = room;
 	}
 
-	public ProceduresAssigned() {
+	public Devices() {
 	}
 
 	public int getId() {
@@ -94,12 +94,12 @@ public class ProceduresAssigned {
 		this.recreantsSnn = recreantsSnn;
 	}
 
-	public ProcedCaptions getProcedCaptions() {
-		return procedCaptions;
+	public Room getProcedCaptions() {
+		return room;
 	}
 
-	public void setProcedCaptions(ProcedCaptions procedCaptions) {
-		this.procedCaptions = procedCaptions;
+	public void setProcedCaptions(Room room) {
+		this.room = room;
 	}
 }
 

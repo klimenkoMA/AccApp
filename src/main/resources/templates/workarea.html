@@ -3,10 +3,9 @@
 <html>
 <head>
     <meta charset="UTF-8" content="">
-    <title>PROCEDURESASSIGNED</title>
+    <title>AEGERCAPTIONS</title>
 </head>
 <body>
-
 <table align="center" width="1500">
 
     <tr>
@@ -61,74 +60,48 @@
         </form>
     </tr>
 </table>
-
-<form method="post" action="/addproceduresassigned">
-    <input type="text" name="nAssigned" placeholder="Назначено процедур"/>
-    <input type="text" name="nPassed" placeholder="Пройдено процедур"/>
-    <input type="text" name="comment" placeholder="Комментарий врача"/>
-    <input type="text" name="waypaperSnnId" placeholder="Код путевки"/>
-    <input type="text" name="cProcId" placeholder="Название процедуры"/>
+<form method="post" action="/addaegercaptions">
+    <input type="text" name="caption" placeholder="Название заболевания">
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="deleteproceduresassigned">
-    <input type="text" name="delete" placeholder="Введите id назначения">
+<form method="post" action="/deleteaegercaptions">
+    <input type="text" name="cAeger" placeholder="Код заболевания">
     <button type="submit">Удалить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="/updateproceduresassigned">
-    <input type="text" name="id" placeholder="Введите id назначения">
-    <input type="text" name="nAssigned" placeholder="Назначено процедур"/>
-    <input type="text" name="nPassed" placeholder="Пройдено процедур"/>
-    <input type="text" name="comment" placeholder="Комментарий врача"/>
-    <input type="text" name="waypaperSnnId" placeholder="Код путевки"/>
-    <input type="text" name="cProcId" placeholder="Название процедуры"/>
+<form method="post" action="/updateaegercaptions">
+    <input type="text" name="cAeger" placeholder="Код заболевания">
+    <input type="text" name="caption" placeholder="Название заболевания">
     <button type="submit">Обновить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="findproceduresassignedbyid">
-    <input type="text" name="findbyid" placeholder="Введите id назначения">
+<form method="post" action="findaegercaptionsbyid">
+    <input type="text" name="findbyid" placeholder="Введите id">
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
-
-<table align="center" bgcolor="#a9a9a9" width="700" style="columns: max-content">
+<table align="center" bgcolor="#a9a9a9" width="400" style="columns: max-content">
     <tr>
-        <th>id назначения</th>
-        <th>Назначено процедур</th>
-        <th>Пройдено процедур</th>
-        <th>Комментарий врача</th>
-        <th>Код путевки</th>
-        <th>Название процедуры</th>
+        <th>id</th>
+        <th>Заболевание</th>
     </tr>
-    <div th:each="element : ${proceduresAssignedList}" class="row m-1">
+    <div th:each="element : ${workAreaList}" class="row m-1">
         <div class="col-8">
             <tr align="center">
                 <td>
-                    <div>[[${element.id}]]</div>
+                    <div>[[${element.cAeger}]]</div>
                 </td>
                 <td>
-                    <div>[[${element.nAssigned}]]</div>
-                </td>
-                <td>
-                    <div>[[${element.nPassed}]]</div>
-                </td>
-                <td>
-                    <div>[[${element.comment}]]</div>
-                </td>
-                <td>
-                    <div>[[${element.recreantsSnn}]]</div>
-                </td>
-                <td>
-                    <div>[[${element.procedCaptions}]]</div>
+                    <div>[[${element.caption}]]</div>
                 </td>
             </tr>
         </div>
     </div>
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </table>
+<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </body>
 </html>

@@ -16,26 +16,26 @@ public class ProcForAegers {
 	@ManyToOne
 	@JoinColumn(name = "c_aeger")
 	//ИНН заболевания
-	private AegerCaptions aegerCaptions;
+	private WorkArea workArea;
 
 	@ManyToOne
 	@JoinColumn(name = "c_proced")
 	// ИНН процедуры
-	private ProcedCaptions procedCaptions;
+	private Room room;
 
-	public ProcForAegers(int id, AegerCaptions aegerCaptions, ProcedCaptions procedCaptions) {
+	public ProcForAegers(int id, WorkArea workArea, Room room) {
 		this.id = id;
-		this.aegerCaptions = aegerCaptions;
-		this.procedCaptions = procedCaptions;
+		this.workArea = workArea;
+		this.room = room;
 	}
 
 	public ProcForAegers() {
 
 	}
 
-	public ProcForAegers(AegerCaptions aegerCaptions, ProcedCaptions procedCaptions) {
-		this.aegerCaptions = aegerCaptions;
-		this.procedCaptions = procedCaptions;
+	public ProcForAegers(WorkArea workArea, Room room) {
+		this.workArea = workArea;
+		this.room = room;
 	}
 
 	public int getId() {
@@ -46,19 +46,19 @@ public class ProcForAegers {
 		this.id = id;
 	}
 
-	public AegerCaptions getAegerCaptions() {
-		return aegerCaptions;
+	public WorkArea getAegerCaptions() {
+		return workArea;
 	}
 
-	public void setAegerCaptions(AegerCaptions aegerCaptions) {
-		this.aegerCaptions = aegerCaptions;
+	public void setAegerCaptions(WorkArea workArea) {
+		this.workArea = workArea;
 	}
 
-	public ProcedCaptions getProcedCaptions() {
-		return procedCaptions;
+	public Room getProcedCaptions() {
+		return room;
 	}
 
-	public void setProcedCaptions(ProcedCaptions procedCaptions) {
-		this.procedCaptions = procedCaptions;
+	public void setProcedCaptions(Room room) {
+		this.room = room;
 	}
 }

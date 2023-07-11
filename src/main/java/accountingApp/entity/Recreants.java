@@ -70,11 +70,11 @@ public class Recreants implements Serializable {
 	private String place;
 
 	@OneToMany(mappedBy = "recreantsSnn")
-	private List<ProceduresAssigned> waypaper_snnProcedures;
+	private List<Devices> waypaper_snnProcedures;
 
 
 	@OneToMany(mappedBy = "waypaperSnn")
-	private List<RecreantsAegers> waypaper_snnRecreants;
+	private List<Events> waypaper_snnRecreants;
 
 
 	public Recreants() {
@@ -233,19 +233,19 @@ public class Recreants implements Serializable {
 		this.place = place;
 	}
 
-	public List<ProceduresAssigned> getWaypaper_snnProcedures() {
+	public List<Devices> getWaypaper_snnProcedures() {
 		return waypaper_snnProcedures;
 	}
 
-	public void setWaypaper_snnProcedures(List<ProceduresAssigned> waypaper_snnProcedures) {
+	public void setWaypaper_snnProcedures(List<Devices> waypaper_snnProcedures) {
 		this.waypaper_snnProcedures = waypaper_snnProcedures;
 	}
 
-	public List<RecreantsAegers> getWaypaper_snnRecreants() {
+	public List<Events> getWaypaper_snnRecreants() {
 		return waypaper_snnRecreants;
 	}
 
-	public void setWaypaper_snnRecreants(List<RecreantsAegers> waypaper_snnRecreants) {
+	public void setWaypaper_snnRecreants(List<Events> waypaper_snnRecreants) {
 		this.waypaper_snnRecreants = waypaper_snnRecreants;
 	}
 
