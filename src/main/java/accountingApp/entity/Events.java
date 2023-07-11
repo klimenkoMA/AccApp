@@ -13,28 +13,23 @@ public class Events {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@ManyToOne
 	@JoinColumn(name = "waypaper_snn")
 	//код путевки int
-	private Recreants waypaperSnn;
 
 	@ManyToOne
 	@JoinColumn(name = "c_aeger")
 	//ИНН заболевания int
 	private WorkArea cAeger;
 
-	public Events(int id, Recreants waypaperSnn, WorkArea cAeger) {
+	public Events(int id, WorkArea cAeger) {
 		this.id = id;
-		this.waypaperSnn = waypaperSnn;
 		this.cAeger = cAeger;
 	}
 
 	public Events() {
 	}
 
-	public Events(Recreants waypaperSnn,
-				  WorkArea cAeger) {
-		this.waypaperSnn = waypaperSnn;
+	public Events(WorkArea cAeger) {
 		this.cAeger = cAeger;
 	}
 
@@ -46,13 +41,8 @@ public class Events {
 		this.id = id;
 	}
 
-	public Recreants getWaypaperSnn() {
-		return waypaperSnn;
-	}
 
-	public void setWaypaperSnn(Recreants waypaperSnn) {
-		this.waypaperSnn = waypaperSnn;
-	}
+
 
 	public WorkArea getcAeger() {
 		return cAeger;
