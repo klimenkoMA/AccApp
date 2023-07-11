@@ -18,8 +18,6 @@ public class EventsController {
 	@Autowired
 	EventsService eventsService;
 	@Autowired
-	RecreantsService recreantsService;
-	@Autowired
 	WorkAreaService workAreaService;
 
 	@GetMapping("/allRecreantsAegers")
@@ -33,9 +31,8 @@ public class EventsController {
 	public String addAegerCaptions(@RequestParam int waypaperSnnId,
 	                               @RequestParam int cAegerId,
 	                               Model model) {
-		List<Recreants> recreantsList = recreantsService.getRecreantsById(waypaperSnnId);
 		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(cAegerId);
-		Events events = new Events(recreantsList.get(0), workAreaList.get(0));
+		Events events = new Events(workAreaList.get(0));
 		eventsService.addNewRecreantsAegers(events);
 		List<Events> eventsList = eventsService.findAllRecreantsAegers();
 		model.addAttribute("recreantsAegersList", eventsList);
@@ -55,9 +52,8 @@ public class EventsController {
 	                                  @RequestParam int waypaperSnnId,
 	                                  @RequestParam int cAegerId,
 	                                  Model model) {
-		List<Recreants> recreantsList = recreantsService.getRecreantsById(waypaperSnnId);
 		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(cAegerId);
-		Events events = new Events(id, recreantsList.get(0), workAreaList.get(0));
+		Events events = new Events(id,workAreaList.get(0));
 		eventsService.addNewRecreantsAegers(events);
 		List<Events> eventsList = eventsService.findAllRecreantsAegers();
 		model.addAttribute("recreantsAegersList", eventsList);
