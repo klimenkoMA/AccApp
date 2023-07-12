@@ -6,43 +6,43 @@ import javax.persistence.*;
  * Пользователи
  */
 @Entity
-@Table(name = "persons")
+@Table(name = "EMPLOYEE") //persons
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "ID")
 	// Уникальный номер int
 	private int id;
-	@Column(name = "fio")
+	@Column(name = "FIO")
 	// Фамилия Имя Очество nvarchar(50)
 	private String fio;
-	@Column(name = "login")
-	// логин char(8)
-	private String login;
-	@Column(name = "passwd")
-	// пароль char(8)
-	private String password;
-	@ManyToOne(cascade = CascadeType.REMOVE)
-	@JoinColumn(name = "prof_id")
-	// Цифра профессии tinyint
-	private ITStaff prof_id;
+	@Column(name = "D_BORN") // login
+	//  дата рождения SHORT DATE
+	private String dBorn;
+	@Column(name = "WORK_AREA") // password
+	// место работы nvarchar(50)
+	private String workArea;
+
+	@Column(name = "ROOM") // prof_id
+	// кабинет nvarchar(10)
+	private String room;
 
 	public Employee() {
 	}
 
-	public Employee(int id, String fio, String login, String password, ITStaff prof_id) {
+	public Employee(int id, String fio, String dBorn, String workArea, String room) {
 		this.id = id;
 		this.fio = fio;
-		this.login = login;
-		this.password = password;
-		this.prof_id = prof_id;
+		this.dBorn = dBorn;
+		this.workArea = workArea;
+		this.room = room;
 	}
 
-	public Employee(String fio, String login, String password, ITStaff prof_id) {
+	public Employee(String fio, String dBorn, String workArea, String room) {
 		this.fio = fio;
-		this.login = login;
-		this.password = password;
-		this.prof_id = prof_id;
+		this.dBorn = dBorn;
+		this.workArea = workArea;
+		this.room = room;
 	}
 
 	@Override
@@ -66,27 +66,27 @@ public class Employee {
 		this.fio = fio;
 	}
 
-	public String getLogin() {
-		return login;
+	public String getDBorn() {
+		return dBorn;
 	}
 
-	public void setLogin(String login) {
-		this.login = login;
+	public void setDBorn(String login) {
+		this.dBorn = login;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getWorkArea() {
+		return workArea;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setWorkArea(String password) {
+		this.workArea = password;
 	}
 
-	public ITStaff getProf_id() {
-		return prof_id;
+	public String getRoom() {
+		return room;
 	}
 
-	public void setProf_id(ITStaff prof_id) {
-		this.prof_id = prof_id;
+	public void setRoom(String prof_id) {
+		this.room = prof_id;
 	}
 }

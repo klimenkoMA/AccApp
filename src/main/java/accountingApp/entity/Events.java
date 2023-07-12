@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Диагноз
  */
 @Entity
-@Table(name = "recreants_aegers")
+@Table(name = "EVENTS")
 public class Events {
 
 	@Id
