@@ -9,46 +9,52 @@ import javax.persistence.*;
 @Table(name = "EVENTS")
 public class Events {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-	@JoinColumn(name = "waypaper_snn")
-	//код путевки int
+    @JoinColumn(name = "DATE")//waypaper_snn
+    //код путевки int
+    private int date;
 
-	@ManyToOne
-	@JoinColumn(name = "c_aeger")
-	//ИНН заболевания int
-	private WorkArea cAeger;
+    @JoinColumn(name = "EMPLOYEE_ID") //c_aeger
+    //ИНН заболевания int
+    private String employeeId;
 
-	public Events(int id, WorkArea cAeger) {
-		this.id = id;
-		this.cAeger = cAeger;
-	}
-
-	public Events() {
-	}
-
-	public Events(WorkArea cAeger) {
-		this.cAeger = cAeger;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+    @JoinColumn(name = "IT_STAFF_ID")
+    //ИНН заболевания int
+    private String itStaffId;
 
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public WorkArea getcAeger() {
-		return cAeger;
-	}
+    public int getDate() {
+        return date;
+    }
 
-	public void setcAeger(WorkArea cAeger) {
-		this.cAeger = cAeger;
-	}
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public String getItStaffId() {
+        return itStaffId;
+    }
+
+    public void setItStaffId(String itStaffId) {
+        this.itStaffId = itStaffId;
+    }
 }

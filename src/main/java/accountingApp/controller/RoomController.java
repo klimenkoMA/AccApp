@@ -23,15 +23,15 @@ public class RoomController {
 		return "room";
 	}
 
-	@PostMapping("/addprocedcaptions")
-	public String addProcedCaptions(@RequestParam String caption,
-	                                Model model) {
-		Room room = new Room(caption);
-		roomService.addNewProcedCaptions(room);
-		List<Room> roomList = roomService.findAllProcedCaptions();
-		model.addAttribute("procedCaptionsList", roomList);
-		return "room";
-	}
+//	@PostMapping("/addprocedcaptions")
+//	public String addProcedCaptions(@RequestParam String caption,
+//	                                Model model) {
+//		Room room = new Room(caption);
+//		roomService.addNewProcedCaptions(room);
+//		List<Room> roomList = roomService.findAllProcedCaptions();
+//		model.addAttribute("procedCaptionsList", roomList);
+//		return "room";
+//	}
 
 	@PostMapping("/deleteprocedcaptions")
 	public String deleteProcedCaptions(@RequestParam int cProc, Model model) {
@@ -41,25 +41,25 @@ public class RoomController {
 		return "room";
 	}
 
-	@PostMapping("/updateprocedcaptions")
-	public String updateProcedCaptions(@RequestParam int cProc, @RequestParam String caption, Model model) {
-		Room room = new Room(cProc, caption);
-		roomService.updateProcedCaptions(room);
-		List<Room> roomList = roomService.findAllProcedCaptions();
-		model.addAttribute("procedCaptionsList", roomList);
-		return "room";
-	}
+//	@PostMapping("/updateprocedcaptions")
+//	public String updateProcedCaptions(@RequestParam int cProc, @RequestParam String caption, Model model) {
+//		Room room = new Room(cProc, caption);
+//		roomService.updateProcedCaptions(room);
+//		List<Room> roomList = roomService.findAllProcedCaptions();
+//		model.addAttribute("procedCaptionsList", roomList);
+//		return "room";
+//	}
 
-	@PostMapping("findprocedcaptionsbyid")
-	public String findProcedCaptionsById(@RequestParam int findbyid, Model model) {
-
-		if(findbyid > 0) {
-			List<Room> roomList = roomService.getProcedCaptionsById(findbyid);
-			model.addAttribute("procedCaptionsList", roomList);
-		} else {
-			List<Room> roomList = roomService.findAllProcedCaptions();
-			model.addAttribute("procedCaptionsList", roomList);
-		}
-		return "room";
-	}
+//	@PostMapping("findprocedcaptionsbyid")
+//	public String findProcedCaptionsById(@RequestParam int findbyid, Model model) {
+//
+//		if(findbyid > 0) {
+//			List<Room> roomList = roomService.getProcedCaptionsById(findbyid);
+//			model.addAttribute("procedCaptionsList", roomList);
+//		} else {
+//			List<Room> roomList = roomService.findAllProcedCaptions();
+//			model.addAttribute("procedCaptionsList", roomList);
+//		}
+//		return "room";
+//	}
 }

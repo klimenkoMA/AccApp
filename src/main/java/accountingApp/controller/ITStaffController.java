@@ -17,14 +17,14 @@ public class ITStaffController {
 	@Autowired
 	ITStaffService ITStaffService;
 
-	@PostMapping("/addpersonsprof")
-	public String addPersonsProf(@RequestParam String name_rec, Model model) {
-		ITStaff ITStaff = new ITStaff(name_rec);
-		ITStaffService.addNewPersonsProf(ITStaff);
-		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-		model.addAttribute("personsProfList", ITStaffList);
-		return "itstaff";
-	}
+//	@PostMapping("/addpersonsprof")
+//	public String addPersonsProf(@RequestParam String name_rec, Model model) {
+//		ITStaff ITStaff = new ITStaff(name_rec);
+//		ITStaffService.addNewPersonsProf(ITStaff);
+//		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
+//		model.addAttribute("personsProfList", ITStaffList);
+//		return "itstaff";
+//	}
 
 	@PostMapping("/deletepersonsprof")
 	public String deletePersonsProf(@RequestParam int id, Model model) {
@@ -34,14 +34,14 @@ public class ITStaffController {
 		return "itstaff";
 	}
 
-	@PostMapping("/updatepersonsprof")
-	public String updatePersonProf(@RequestParam int id, @RequestParam String name_rec, Model model) {
-		ITStaff ITStaff = new ITStaff(id, name_rec);
-		ITStaffService.updatePersonsProf(ITStaff);
-		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-		model.addAttribute("personsProfList", ITStaffList);
-		return "itstaff";
-	}
+//	@PostMapping("/updatepersonsprof")
+//	public String updatePersonProf(@RequestParam int id, @RequestParam String name_rec, Model model) {
+//		ITStaff ITStaff = new ITStaff(id, name_rec);
+//		ITStaffService.updatePersonsProf(ITStaff);
+//		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
+//		model.addAttribute("personsProfList", ITStaffList);
+//		return "itstaff";
+//	}
 
 	@PostMapping("findpersonsprofbyid")
 	public String findPersonById(@RequestParam int findbyid, Model model) {

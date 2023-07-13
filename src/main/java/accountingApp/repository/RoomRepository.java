@@ -11,7 +11,7 @@ public interface RoomRepository extends JpaRepository<Room, Integer> {
 
 	List<Room> findAll();
 
-	List<Room> findProcedCaptionsBycProc(int id);
+//	List<Room> findProcedCaptionsBycProc(int id);
 
 	void deleteById(int id);
 }

@@ -45,11 +45,6 @@ public class Employee {
 		this.room = room;
 	}
 
-	@Override
-	public String toString() {
-		return fio;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -66,27 +61,29 @@ public class Employee {
 		this.fio = fio;
 	}
 
-	public String getDBorn() {
+	public String getdBorn() {
 		return dBorn;
 	}
 
-	public void setDBorn(String login) {
-		this.dBorn = login;
+	public void setdBorn(String dBorn) {
+		this.dBorn = dBorn;
 	}
 
 	public String getWorkArea() {
 		return workArea;
 	}
 
-	public void setWorkArea(String password) {
-		this.workArea = password;
+	public void setWorkArea(String workArea) {
+		this.workArea = workArea;
 	}
 
 	public String getRoom() {
 		return room;
 	}
 
-	public void setRoom(String prof_id) {
-		this.room = prof_id;
+	public void setRoom(String room) {
+		this.room = room;
 	}
+
+
 }

@@ -20,9 +20,9 @@ public class EmployeeRepositoryTest {
 	@Autowired
 	TestEntityManager testEntityManager;
 
-	@Test
-	public void createPersonsProf() {
-		ITStaff ITStaff = new ITStaff("Плотник");
-		ITStaffRepository.save(ITStaff);
-	}
+//	@Test
+//	public void createPersonsProf() {
+//		ITStaff ITStaff = new ITStaff("Плотник");
+//		ITStaffRepository.save(ITStaff);
+//	}
 }
