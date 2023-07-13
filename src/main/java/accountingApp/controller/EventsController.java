@@ -27,17 +27,17 @@ public class EventsController {
 		return "events";
 	}
 
-	@PostMapping("/addrecreantsaegers")
-	public String addAegerCaptions(@RequestParam int waypaperSnnId,
-	                               @RequestParam int cAegerId,
-	                               Model model) {
-		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(cAegerId);
-		Events events = new Events(workAreaList.get(0));
-		eventsService.addNewRecreantsAegers(events);
-		List<Events> eventsList = eventsService.findAllRecreantsAegers();
-		model.addAttribute("recreantsAegersList", eventsList);
-		return "events";
-	}
+//	@PostMapping("/addrecreantsaegers")
+//	public String addAegerCaptions(@RequestParam int waypaperSnnId,
+//	                               @RequestParam int cAegerId,
+//	                               Model model) {
+//		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(cAegerId);
+//		Events events = new Events(workAreaList.get(0));
+//		eventsService.addNewRecreantsAegers(events);
+//		List<Events> eventsList = eventsService.findAllRecreantsAegers();
+//		model.addAttribute("recreantsAegersList", eventsList);
+//		return "events";
+//	}
 
 	@PostMapping("/deleterecreantsaegers")
 	public String deleteAegerCaptions(@RequestParam int id, Model model) {
@@ -47,18 +47,18 @@ public class EventsController {
 		return "events";
 	}
 
-	@PostMapping("/updaterecreantsaegers")
-	public String updateAegerCaptions(@RequestParam int id,
-	                                  @RequestParam int waypaperSnnId,
-	                                  @RequestParam int cAegerId,
-	                                  Model model) {
-		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(cAegerId);
-		Events events = new Events(id,workAreaList.get(0));
-		eventsService.addNewRecreantsAegers(events);
-		List<Events> eventsList = eventsService.findAllRecreantsAegers();
-		model.addAttribute("recreantsAegersList", eventsList);
-		return "events";
-	}
+//	@PostMapping("/updaterecreantsaegers")
+//	public String updateAegerCaptions(@RequestParam int id,
+//	                                  @RequestParam int waypaperSnnId,
+//	                                  @RequestParam int cAegerId,
+//	                                  Model model) {
+//		List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(cAegerId);
+//		Events events = new Events(id,workAreaList.get(0));
+//		eventsService.addNewRecreantsAegers(events);
+//		List<Events> eventsList = eventsService.findAllRecreantsAegers();
+//		model.addAttribute("recreantsAegersList", eventsList);
+//		return "events";
+//	}
 
 	@PostMapping("findrecreantsaegersbyid")
 	public String findRecreantsAegersById(@RequestParam int findbyid, Model model) {

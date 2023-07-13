@@ -23,15 +23,15 @@ public class WorkAreaController {
 		return "workarea";
 	}
 
-	@PostMapping("/addaegercaptions")
-	public String addAegerCaptions(@RequestParam String caption,
-	                               Model model) {
-		WorkArea workArea = new WorkArea(caption);
-		workAreaService.addNewAegerCaptions(workArea);
-		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-		model.addAttribute("aegerCaptionsList", workAreaList);
-		return "workarea";
-	}
+//	@PostMapping("/addaegercaptions")
+//	public String addAegerCaptions(@RequestParam String caption,
+//	                               Model model) {
+//		WorkArea workArea = new WorkArea(caption);
+//		workAreaService.addNewAegerCaptions(workArea);
+//		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
+//		model.addAttribute("aegerCaptionsList", workAreaList);
+//		return "workarea";
+//	}
 
 	@PostMapping("/deleteaegercaptions")
 	public String deleteAegerCaptions(@RequestParam int cAeger, Model model) {
@@ -41,14 +41,14 @@ public class WorkAreaController {
 		return "workarea";
 	}
 
-	@PostMapping("/updateaegercaptions")
-	public String updateAegerCaptions(@RequestParam int cAeger, @RequestParam String caption, Model model) {
-		WorkArea workArea = new WorkArea(cAeger, caption);
-		workAreaService.updateAegerCaptions(workArea);
-		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-		model.addAttribute("aegerCaptionsList", workAreaList);
-		return "workarea";
-	}
+//	@PostMapping("/updateaegercaptions")
+//	public String updateAegerCaptions(@RequestParam int cAeger, @RequestParam String caption, Model model) {
+//		WorkArea workArea = new WorkArea(cAeger, caption);
+//		workAreaService.updateAegerCaptions(workArea);
+//		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
+//		model.addAttribute("aegerCaptionsList", workAreaList);
+//		return "workarea";
+//	}
 
 	@PostMapping("findaegercaptionsbyid")
 	public String findAegerCaptionsById(@RequestParam int findbyid, Model model) {
