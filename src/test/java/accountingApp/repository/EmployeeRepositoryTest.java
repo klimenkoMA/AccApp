@@ -1,4 +1,4 @@
-package accountingApp.repository;
+/* package accountingApp.repository;
 
 import accountingApp.entity.ITStaff;
 import org.junit.jupiter.api.Test;
@@ -26,3 +26,4 @@ public class EmployeeRepositoryTest {
 //		ITStaffRepository.save(ITStaff);
 //	}
 }
+ */

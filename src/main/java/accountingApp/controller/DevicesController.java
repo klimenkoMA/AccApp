@@ -22,7 +22,7 @@ public class DevicesController {
 //	@Autowired
 //	RoomService roomService;
 
-	@GetMapping("/allProceduresAssigned")
+	@GetMapping("/devices") //allProceduresAssigned
 	public String getProceduresAssigned(Model model) {
 		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
 		model.addAttribute("proceduresAssignedList", devicesList);
