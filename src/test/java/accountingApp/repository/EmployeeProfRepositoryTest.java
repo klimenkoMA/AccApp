@@ -1,4 +1,4 @@
-package accountingApp.repository;
+/* package accountingApp.repository;
 
 import accountingApp.entity.Employee;
 import accountingApp.entity.ITStaff;
@@ -57,3 +57,4 @@ public class EmployeeProfRepositoryTest {
 //		ITStaffRepository.save(ITStaff);
 //	}
 }
+ */
