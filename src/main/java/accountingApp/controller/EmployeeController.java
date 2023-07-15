@@ -1,13 +1,10 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Employee;
-import accountingApp.entity.ITStaff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import accountingApp.service.ITStaffService;
 import accountingApp.service.EmployeeService;
 
@@ -20,10 +17,10 @@ public class EmployeeController {
 	@Autowired
 	ITStaffService ITStaffService;
 
-	@GetMapping("/allPersons")
-	public String getPersons(Model model) {
+	@GetMapping("/employee") //allPersons
+	public String getEmployee(Model model) {
 		List<Employee> employeeList = employeeService.getListEmployee();
-		model.addAttribute("personsList", employeeList);
+		model.addAttribute("employeeList", employeeList);
 		return "employee";
 	}
 //@PostMapping("/updatePersons")
@@ -34,7 +31,7 @@ public class EmployeeController {
 //		Employee employee = new Employee(id, fio, dBorn, workArea, ITStaffList.get(0));
 //		employeeService.updateEmployee(employee);
 //		List<Employee> employeeList = employeeService.getListEmployee();
-//		model.addAttribute("personsList", employeeList);
+//		model.addAttribute("employeeList", employeeList);
 //		return "employee";
 //	}
 
@@ -46,7 +43,7 @@ public class EmployeeController {
 //		Employee employee = new Employee(fio, dBorn, workArea, ITStaffList.get(0));
 //		ITStaffService.addNewPersons(employee);
 //		List<Employee> employeeList = employeeService.getListEmployee();
-//		model.addAttribute("personsList", employeeList);
+//		model.addAttribute("employeeList", employeeList);
 //		return "employee";
 //	}
 
@@ -55,7 +52,7 @@ public class EmployeeController {
 //	                                Model model) {
 //		if(findbyfio != null && !findbyfio.isEmpty()) {
 //			List<Employee> employeeList = employeeService.findEmployeeByFio(findbyfio);
-//			model.addAttribute("personsList", employeeList);
+//			model.addAttribute("employeeList", employeeList);
 //		} else {
 //			getPersons(model);
 //		}
@@ -68,7 +65,7 @@ public class EmployeeController {
 //			employeeService.deleteEmployeeById(delete);
 //		}
 //		List<Employee> employeeList = employeeService.getListEmployee();
-//		model.addAttribute("personsList", employeeList);
+//		model.addAttribute("employeeList", employeeList);
 //		return "employee";
 //	}
 //
@@ -77,10 +74,10 @@ public class EmployeeController {
 //
 //		if(findbyid > 0) {
 //			List<Employee> employeeList = employeeService.findEmployeeById(findbyid);
-//			model.addAttribute("personsList", employeeList);
+//			model.addAttribute("employeeList", employeeList);
 //		} else {
 //			List<Employee> employeeList = employeeService.getListEmployee();
-//			model.addAttribute("personsList", employeeList);
+//			model.addAttribute("employeeList", employeeList);
 //		}
 //		return "employee";
 //	}

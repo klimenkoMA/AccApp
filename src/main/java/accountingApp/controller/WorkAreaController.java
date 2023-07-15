@@ -5,8 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import accountingApp.service.WorkAreaService;
 
 import java.util.List;
@@ -16,10 +14,10 @@ public class WorkAreaController {
 	@Autowired
 	WorkAreaService workAreaService;
 
-	@GetMapping("/allAegerCaptions")
-	public String getAegerCaptions(Model model) {
+	@GetMapping("/workarea") //allAegerCaptions
+	public String getWorkArea(Model model) {
 		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-		model.addAttribute("aegerCaptionsList", workAreaList);
+		model.addAttribute("workAreaList", workAreaList);
 		return "workarea";
 	}
 
@@ -29,7 +27,7 @@ public class WorkAreaController {
 //		WorkArea workArea = new WorkArea(caption);
 //		workAreaService.addNewAegerCaptions(workArea);
 //		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-//		model.addAttribute("aegerCaptionsList", workAreaList);
+//		model.addAttribute("workAreaList", workAreaList);
 //		return "workarea";
 //	}
 
@@ -37,7 +35,7 @@ public class WorkAreaController {
 //	public String deleteAegerCaptions(@RequestParam int cAeger, Model model) {
 //		workAreaService.deleteAegerCaptionsById(cAeger);
 //		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-//		model.addAttribute("aegerCaptionsList", workAreaList);
+//		model.addAttribute("workAreaList", workAreaList);
 //		return "workarea";
 //	}
 
@@ -46,7 +44,7 @@ public class WorkAreaController {
 //		WorkArea workArea = new WorkArea(cAeger, caption);
 //		workAreaService.updateAegerCaptions(workArea);
 //		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-//		model.addAttribute("aegerCaptionsList", workAreaList);
+//		model.addAttribute("workAreaList", workAreaList);
 //		return "workarea";
 //	}
 
@@ -55,10 +53,10 @@ public class WorkAreaController {
 //
 //		if(findbyid > 0) {
 //			List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(findbyid);
-//			model.addAttribute("aegerCaptionsList", workAreaList);
+//			model.addAttribute("workAreaList", workAreaList);
 //		} else {
 //			List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-//			model.addAttribute("aegerCaptionsList", workAreaList);
+//			model.addAttribute("workAreaList", workAreaList);
 //		}
 //		return "workarea";
 //	}

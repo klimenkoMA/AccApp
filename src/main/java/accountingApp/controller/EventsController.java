@@ -1,13 +1,10 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Events;
-import accountingApp.entity.WorkArea;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import accountingApp.service.WorkAreaService;
 import accountingApp.service.EventsService;
 
@@ -20,10 +17,10 @@ public class EventsController {
 	@Autowired
 	WorkAreaService workAreaService;
 
-	@GetMapping("/allRecreantsAegers")
-	public String getRecreantsAegers(Model model) {
+	@GetMapping("/events") //allRecreantsAegers
+	public String getEvents(Model model) {
 		List<Events> eventsList = eventsService.findAllRecreantsAegers();
-		model.addAttribute("recreantsAegersList", eventsList);
+		model.addAttribute("eventsList", eventsList);
 		return "events";
 	}
 
@@ -35,7 +32,7 @@ public class EventsController {
 //		Events events = new Events(workAreaList.get(0));
 //		eventsService.addNewRecreantsAegers(events);
 //		List<Events> eventsList = eventsService.findAllRecreantsAegers();
-//		model.addAttribute("recreantsAegersList", eventsList);
+//		model.addAttribute("eventsList", eventsList);
 //		return "events";
 //	}
 
@@ -43,7 +40,7 @@ public class EventsController {
 //	public String deleteAegerCaptions(@RequestParam int id, Model model) {
 //		eventsService.deleteRecreantsAegersById(id);
 //		List<Events> eventsList = eventsService.findAllRecreantsAegers();
-//		model.addAttribute("recreantsAegersList", eventsList);
+//		model.addAttribute("eventsList", eventsList);
 //		return "events";
 //	}
 
@@ -56,7 +53,7 @@ public class EventsController {
 //		Events events = new Events(id,workAreaList.get(0));
 //		eventsService.addNewRecreantsAegers(events);
 //		List<Events> eventsList = eventsService.findAllRecreantsAegers();
-//		model.addAttribute("recreantsAegersList", eventsList);
+//		model.addAttribute("eventsList", eventsList);
 //		return "events";
 //	}
 
@@ -65,10 +62,10 @@ public class EventsController {
 //
 //		if(findbyid > 0) {
 //			List<Events> eventsList = eventsService.getRecreantsAegersById(findbyid);
-//			model.addAttribute("recreantsAegersList", eventsList);
+//			model.addAttribute("eventsList", eventsList);
 //		} else {
 //			List<Events> eventsList = eventsService.findAllRecreantsAegers();
-//			model.addAttribute("recreantsAegersList", eventsList);
+//			model.addAttribute("eventsList", eventsList);
 //		}
 //		return "events";
 //	}
