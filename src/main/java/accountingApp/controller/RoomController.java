@@ -33,13 +33,13 @@ public class RoomController {
 //		return "room";
 //	}
 
-	@PostMapping("/deleteprocedcaptions")
-	public String deleteProcedCaptions(@RequestParam int cProc, Model model) {
-		roomService.deleteProcedCaptionsById(cProc);
-		List<Room> roomList = roomService.findAllProcedCaptions();
-		model.addAttribute("procedCaptionsList", roomList);
-		return "room";
-	}
+//	@PostMapping("/deleteprocedcaptions")
+//	public String deleteProcedCaptions(@RequestParam int cProc, Model model) {
+//		roomService.deleteProcedCaptionsById(cProc);
+//		List<Room> roomList = roomService.findAllProcedCaptions();
+//		model.addAttribute("procedCaptionsList", roomList);
+//		return "room";
+//	}
 
 //	@PostMapping("/updateprocedcaptions")
 //	public String updateProcedCaptions(@RequestParam int cProc, @RequestParam String caption, Model model) {
