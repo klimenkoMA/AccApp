@@ -1,14 +1,10 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Devices;
-import accountingApp.entity.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import accountingApp.service.RoomService;
 import accountingApp.service.DevicesService;
 
 import java.util.List;
@@ -23,9 +19,9 @@ public class DevicesController {
 //	RoomService roomService;
 
 	@GetMapping("/devices") //allProceduresAssigned
-	public String getProceduresAssigned(Model model) {
+	public String getDevices(Model model) {
 		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-		model.addAttribute("proceduresAssignedList", devicesList);
+		model.addAttribute("devicesList", devicesList);
 		return "devices";
 	}
 
@@ -42,7 +38,7 @@ public class DevicesController {
 //				recreantsList.get(0), roomList.get(0));
 //		devicesService.addNewProceduresAssigned(devices);
 //		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-//		model.addAttribute("proceduresAssignedList", devicesList);
+//		model.addAttribute("devicesList", devicesList);
 //		return "devices";
 //	}
 
@@ -51,7 +47,7 @@ public class DevicesController {
 //	                                       Model model) {
 //		devicesService.deleteProceduresAssignedById(id);
 //		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-//		model.addAttribute("proceduresAssignedList", devicesList);
+//		model.addAttribute("devicesList", devicesList);
 //		return "devices";
 //	}
 
@@ -69,7 +65,7 @@ public class DevicesController {
 //				recreantsList.get(0), roomList.get(0));
 //		devicesService.addNewProceduresAssigned(devices);
 //		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-//		model.addAttribute("proceduresAssignedList", devicesList);
+//		model.addAttribute("devicesList", devicesList);
 //		return "devices";
 //	}
 
@@ -78,10 +74,10 @@ public class DevicesController {
 //
 //		if(findbyid > 0) {
 //			List<Devices> devicesList = devicesService.getProceduresAssignedById(findbyid);
-//			model.addAttribute("proceduresAssignedList", devicesList);
+//			model.addAttribute("devicesList", devicesList);
 //		} else {
 //			List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-//			model.addAttribute("proceduresAssignedList", devicesList);
+//			model.addAttribute("devicesList", devicesList);
 //		}
 //		return "devices";
 //	}
