@@ -39,13 +39,13 @@ public class EventsController {
 //		return "events";
 //	}
 
-	@PostMapping("/deleterecreantsaegers")
-	public String deleteAegerCaptions(@RequestParam int id, Model model) {
-		eventsService.deleteRecreantsAegersById(id);
-		List<Events> eventsList = eventsService.findAllRecreantsAegers();
-		model.addAttribute("recreantsAegersList", eventsList);
-		return "events";
-	}
+//	@PostMapping("/deleterecreantsaegers")
+//	public String deleteAegerCaptions(@RequestParam int id, Model model) {
+//		eventsService.deleteRecreantsAegersById(id);
+//		List<Events> eventsList = eventsService.findAllRecreantsAegers();
+//		model.addAttribute("recreantsAegersList", eventsList);
+//		return "events";
+//	}
 
 //	@PostMapping("/updaterecreantsaegers")
 //	public String updateAegerCaptions(@RequestParam int id,
@@ -60,16 +60,16 @@ public class EventsController {
 //		return "events";
 //	}
 
-	@PostMapping("findrecreantsaegersbyid")
-	public String findRecreantsAegersById(@RequestParam int findbyid, Model model) {
-
-		if(findbyid > 0) {
-			List<Events> eventsList = eventsService.getRecreantsAegersById(findbyid);
-			model.addAttribute("recreantsAegersList", eventsList);
-		} else {
-			List<Events> eventsList = eventsService.findAllRecreantsAegers();
-			model.addAttribute("recreantsAegersList", eventsList);
-		}
-		return "events";
-	}
+//	@PostMapping("findrecreantsaegersbyid")
+//	public String findRecreantsAegersById(@RequestParam int findbyid, Model model) {
+//
+//		if(findbyid > 0) {
+//			List<Events> eventsList = eventsService.getRecreantsAegersById(findbyid);
+//			model.addAttribute("recreantsAegersList", eventsList);
+//		} else {
+//			List<Events> eventsList = eventsService.findAllRecreantsAegers();
+//			model.addAttribute("recreantsAegersList", eventsList);
+//		}
+//		return "events";
+//	}
 }

@@ -33,13 +33,13 @@ public class WorkAreaController {
 //		return "workarea";
 //	}
 
-	@PostMapping("/deleteaegercaptions")
-	public String deleteAegerCaptions(@RequestParam int cAeger, Model model) {
-		workAreaService.deleteAegerCaptionsById(cAeger);
-		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-		model.addAttribute("aegerCaptionsList", workAreaList);
-		return "workarea";
-	}
+//	@PostMapping("/deleteaegercaptions")
+//	public String deleteAegerCaptions(@RequestParam int cAeger, Model model) {
+//		workAreaService.deleteAegerCaptionsById(cAeger);
+//		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
+//		model.addAttribute("aegerCaptionsList", workAreaList);
+//		return "workarea";
+//	}
 
 //	@PostMapping("/updateaegercaptions")
 //	public String updateAegerCaptions(@RequestParam int cAeger, @RequestParam String caption, Model model) {
@@ -50,16 +50,16 @@ public class WorkAreaController {
 //		return "workarea";
 //	}
 
-	@PostMapping("findaegercaptionsbyid")
-	public String findAegerCaptionsById(@RequestParam int findbyid, Model model) {
-
-		if(findbyid > 0) {
-			List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(findbyid);
-			model.addAttribute("aegerCaptionsList", workAreaList);
-		} else {
-			List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-			model.addAttribute("aegerCaptionsList", workAreaList);
-		}
-		return "workarea";
-	}
+//	@PostMapping("findaegercaptionsbyid")
+//	public String findAegerCaptionsById(@RequestParam int findbyid, Model model) {
+//
+//		if(findbyid > 0) {
+//			List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(findbyid);
+//			model.addAttribute("aegerCaptionsList", workAreaList);
+//		} else {
+//			List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
+//			model.addAttribute("aegerCaptionsList", workAreaList);
+//		}
+//		return "workarea";
+//	}
 }

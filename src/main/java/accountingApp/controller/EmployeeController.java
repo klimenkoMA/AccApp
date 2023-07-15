@@ -50,38 +50,38 @@ public class EmployeeController {
 //		return "employee";
 //	}
 
-	@PostMapping("findbyfio")
-	public String findAuthorisation(@RequestParam String findbyfio,
-	                                Model model) {
-		if(findbyfio != null && !findbyfio.isEmpty()) {
-			List<Employee> employeeList = employeeService.findEmployeeByFio(findbyfio);
-			model.addAttribute("personsList", employeeList);
-		} else {
-			getPersons(model);
-		}
-		return "employee";
-	}
-
-	@PostMapping("delete")
-	public String deleteById(@RequestParam int delete, Model model) {
-		if(delete > 0) {
-			employeeService.deleteEmployeeById(delete);
-		}
-		List<Employee> employeeList = employeeService.getListEmployee();
-		model.addAttribute("personsList", employeeList);
-		return "employee";
-	}
-
-	@PostMapping("findbyid")
-	public String findPersonById(@RequestParam int findbyid, Model model) {
-
-		if(findbyid > 0) {
-			List<Employee> employeeList = employeeService.findEmployeeById(findbyid);
-			model.addAttribute("personsList", employeeList);
-		} else {
-			List<Employee> employeeList = employeeService.getListEmployee();
-			model.addAttribute("personsList", employeeList);
-		}
-		return "employee";
-	}
+//	@PostMapping("findbyfio")
+//	public String findAuthorisation(@RequestParam String findbyfio,
+//	                                Model model) {
+//		if(findbyfio != null && !findbyfio.isEmpty()) {
+//			List<Employee> employeeList = employeeService.findEmployeeByFio(findbyfio);
+//			model.addAttribute("personsList", employeeList);
+//		} else {
+//			getPersons(model);
+//		}
+//		return "employee";
+//	}
+//
+//	@PostMapping("delete")
+//	public String deleteById(@RequestParam int delete, Model model) {
+//		if(delete > 0) {
+//			employeeService.deleteEmployeeById(delete);
+//		}
+//		List<Employee> employeeList = employeeService.getListEmployee();
+//		model.addAttribute("personsList", employeeList);
+//		return "employee";
+//	}
+//
+//	@PostMapping("findbyid")
+//	public String findPersonById(@RequestParam int findbyid, Model model) {
+//
+//		if(findbyid > 0) {
+//			List<Employee> employeeList = employeeService.findEmployeeById(findbyid);
+//			model.addAttribute("personsList", employeeList);
+//		} else {
+//			List<Employee> employeeList = employeeService.getListEmployee();
+//			model.addAttribute("personsList", employeeList);
+//		}
+//		return "employee";
+//	}
 }

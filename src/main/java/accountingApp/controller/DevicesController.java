@@ -46,14 +46,14 @@ public class DevicesController {
 //		return "devices";
 //	}
 
-	@PostMapping("/deleteproceduresassigned")
-	public String deleteProceduresAssigned(@RequestParam int id,
-	                                       Model model) {
-		devicesService.deleteProceduresAssignedById(id);
-		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-		model.addAttribute("proceduresAssignedList", devicesList);
-		return "devices";
-	}
+//	@PostMapping("/deleteproceduresassigned")
+//	public String deleteProceduresAssigned(@RequestParam int id,
+//	                                       Model model) {
+//		devicesService.deleteProceduresAssignedById(id);
+//		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
+//		model.addAttribute("proceduresAssignedList", devicesList);
+//		return "devices";
+//	}
 
 //	@PostMapping("/updateproceduresassigned")
 //	public String updateProceduresAssigned(@RequestParam int id,
@@ -73,16 +73,16 @@ public class DevicesController {
 //		return "devices";
 //	}
 
-	@PostMapping("findproceduresassignedbyid")
-	public String findProceduresAssignedById(@RequestParam int findbyid, Model model) {
-
-		if(findbyid > 0) {
-			List<Devices> devicesList = devicesService.getProceduresAssignedById(findbyid);
-			model.addAttribute("proceduresAssignedList", devicesList);
-		} else {
-			List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-			model.addAttribute("proceduresAssignedList", devicesList);
-		}
-		return "devices";
-	}
+//	@PostMapping("findproceduresassignedbyid")
+//	public String findProceduresAssignedById(@RequestParam int findbyid, Model model) {
+//
+//		if(findbyid > 0) {
+//			List<Devices> devicesList = devicesService.getProceduresAssignedById(findbyid);
+//			model.addAttribute("proceduresAssignedList", devicesList);
+//		} else {
+//			List<Devices> devicesList = devicesService.findAllProceduresAssigned();
+//			model.addAttribute("proceduresAssignedList", devicesList);
+//		}
+//		return "devices";
+//	}
 }

@@ -26,13 +26,13 @@ public class ITStaffController {
 //		return "itstaff";
 //	}
 
-	@PostMapping("/deletepersonsprof")
-	public String deletePersonsProf(@RequestParam int id, Model model) {
-		ITStaffService.deletePersonsProfById(id);
-		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-		model.addAttribute("personsProfList", ITStaffList);
-		return "itstaff";
-	}
+//	@PostMapping("/deletepersonsprof")
+//	public String deletePersonsProf(@RequestParam int id, Model model) {
+//		ITStaffService.deletePersonsProfById(id);
+//		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
+//		model.addAttribute("personsProfList", ITStaffList);
+//		return "itstaff";
+//	}
 
 //	@PostMapping("/updatepersonsprof")
 //	public String updatePersonProf(@RequestParam int id, @RequestParam String name_rec, Model model) {
@@ -43,18 +43,18 @@ public class ITStaffController {
 //		return "itstaff";
 //	}
 
-	@PostMapping("findpersonsprofbyid")
-	public String findPersonById(@RequestParam int findbyid, Model model) {
-
-		if(findbyid > 0) {
-			List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(findbyid);
-			model.addAttribute("personsProfList", ITStaffList);
-		} else {
-			List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-			model.addAttribute("personsProfList", ITStaffList);
-		}
-		return "itstaff";
-	}
+//	@PostMapping("findpersonsprofbyid")
+//	public String findPersonById(@RequestParam int findbyid, Model model) {
+//
+//		if(findbyid > 0) {
+//			List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(findbyid);
+//			model.addAttribute("personsProfList", ITStaffList);
+//		} else {
+//			List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
+//			model.addAttribute("personsProfList", ITStaffList);
+//		}
+//		return "itstaff";
+//	}
 
 	@GetMapping("/allPersonsProf")
 	public String getPersonsProf(Model model) {
