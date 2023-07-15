@@ -25,11 +25,11 @@ public class EmployeeService {
 		employeeRepository.save(employee);
 	}
 
-	public List<Employee> findEmployeeByFio(String fio) {
-		return employeeRepository.findByFio(fio);
-	}
+//	public List<Employee> findEmployeeByFio(String fio) {
+//		return employeeRepository.findByFio(fio);
+//	}
 
-	public List<Employee> findEmployeeById(int id) {
-		return employeeRepository.findById(id);
-	}
+//	public List<Employee> findEmployeeById(int id) {
+//		return employeeRepository.findById(id);
+//	}
 }

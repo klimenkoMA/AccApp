@@ -33,11 +33,8 @@ public class ITStaffService {
 		ITStaffRepository.save(ITStaff);
 	}
 
-	public List<ITStaff> getPersonsProfById(int id) {
-		return ITStaffRepository.findPersonsProfById(id);
-	}
+//	public List<ITStaff> getPersonsProfById(int id) {
+//		return ITStaffRepository.findPersonsProfById(id);
+//	}
 
-	public void addNewPersons(Employee employee) {
-		employeeRepository.save(employee);
-	}
 }

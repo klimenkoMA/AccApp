@@ -28,7 +28,7 @@ public class WorkAreaService {
 		workAreaRepository.save(workArea);
 	}
 
-	public List<WorkArea> getAegerCaptionsById(int id) {
-		return workAreaRepository.findBycAeger(id);
-	}
+//	public List<WorkArea> getAegerCaptionsById(int id) {
+//		return workAreaRepository.findBycAeger(id);
+//	}
 }
