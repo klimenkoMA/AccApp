@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" content="">
     <title>DEVICES</title>
@@ -49,7 +49,7 @@
 </form>
 
 <form method="post" action="deleteproceduresassigned">
-    <input type="text" name="delete" placeholder="Введите id назначения">
+    <input type="text" name="delete" placeholder="Введите id оборудования">
     <button type="submit">Удалить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
@@ -68,7 +68,7 @@
 
 <table align="center" bgcolor="#a9a9a9" width="700" style="columns: max-content">
     <tr>
-        <th>id оборудования</th>
+        <th>ID оборудования</th>
         <th>Название оборудования</th>
     </tr>
     <div th:each="element : ${devicesList}" class="row m-1">
@@ -78,7 +78,7 @@
                     <div>[[${element.id}]]</div>
                 </td>
                 <td>
-                    <div>[[${element.nAssigned}]]</div>
+                    <div>[[${element.name}]]</div>
                 </td>
             </tr>
         </div>
