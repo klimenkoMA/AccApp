@@ -1,94 +1,74 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" content="">
-    <title>PERSONSPROF</title>
+    <title>ITSTAFF</title>
 </head>
 <body>
 <table align="center" width="1500">
 
     <tr>
-        <form action="/allPersons">
-            <button type="submit">Пользователи</button>
+        <form action="/employee">
+            <button type="submit">Сотрудник</button>
         </form>
     </tr>
 
     <tr>
-        <form action="/allPersonsProf">
-            <button type="submit">Профессии врачей</button>
+        <form action="/itstaff">
+            <button type="submit">Инженер-программист</button>
         </form>
     </tr>
     <tr>
-        <form action="/allAegerCaptions">
-            <button type="submit">Заболевания</button>
+        <form action="/workarea">
+            <button type="submit">Филиал</button>
         </form>
     </tr>
     <tr>
-        <form action="/allProcedCaptions">
-            <button type="submit">Процедуры</button>
+        <form action="/room">
+            <button type="submit">Кабинет</button>
         </form>
     </tr>
     <tr>
-        <form action="/allProfCaptions">
-            <button type="submit">Профессии пациентов</button>
+        <form action="/events">
+            <button type="submit">Событие</button>
         </form>
     </tr>
     <tr>
-        <form action="/allProcForAegers">
-            <button type="submit">Назначенные процедуры</button>
-        </form>
-    </tr>
-    <tr>
-        <form action="/allProfAegers">
-            <button type="submit">Профессиональные заболевания</button>
-        </form>
-    </tr>
-    <tr>
-        <form action="/allRecreants">
-            <button type="submit">Пациенты</button>
-        </form>
-    </tr>
-    <tr>
-        <form action="/allRecreantsAegers">
-            <button type="submit">Диагнозы</button>
-        </form>
-    </tr>
-    <tr>
-        <form action="/allProceduresAssigned">
-            <button type="submit">Выполнение процедур</button>
+        <form action="/devices">
+            <button type="submit">Оборудование</button>
         </form>
     </tr>
 </table>
 
-<form method="post" action="/addpersonsprof">
-    <input type="text" name="name_rec" placeholder="Название профессии">
+<form method="post" action="/additstaff">
+    <input type="text" name="name" placeholder="Введите ФИО программиста">
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="/deletepersonsprof">
-    <input type="text" name="id" placeholder="Код профессии">
+<form method="post" action="/deleteitstaff">
+    <input type="text" name="id" placeholder="Введите ID программиста">
     <button type="submit">Удалить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="/updatepersonsprof">
-    <input type="text" name="id" placeholder="Код профессии">
-    <input type="text" name="name_rec" placeholder="Название профессии">
+<form method="post" action="/updateitstaff">
+    <input type="text" name="id" placeholder="Введите ID программиста">
+    <input type="text" name="name" placeholder="Введите ФИО программиста">
     <button type="submit">Обновить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="findpersonsprofbyid">
-    <input type="text" name="findbyid" placeholder="Введите id">
+<form method="post" action="finditstaffbyid">
+    <input type="text" name="findbyid" placeholder="Введите ID программиста">
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 <table align="center" bgcolor="#a9a9a9" width="400" style="columns: max-content">
     <tr>
-        <th>id</th>
-        <th>Профессия</th>
+        <th>ID</th>
+        <th>ФИО программиста</th>
     </tr>
     <div th:each="element : ${ITStaffList}" class="row m-1">
         <div class="col-8">
@@ -97,7 +77,7 @@
                     <div>[[${element.id}]]</div>
                 </td>
                 <td>
-                    <div>[[${element.nameRec}]]</div>
+                    <div>[[${element.name}]]</div>
                 </td>
             </tr>
         </div>
