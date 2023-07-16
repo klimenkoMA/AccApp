@@ -42,25 +42,25 @@
     </tr>
 </table>
 
-<form method="post" action="/addproceduresassigned">
+<form method="post" action="/adddevice">
     <input type="text" name="device" placeholder="Название оборудования"/>
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="deleteproceduresassigned">
+<form method="post" action="deletedevice">
     <input type="text" name="delete" placeholder="Введите id оборудования">
     <button type="submit">Удалить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="/updateproceduresassigned">
+<form method="post" action="/updatedevice">
     <input type="text" name="device" placeholder="Название оборудования"/>
     <button type="submit">Обновить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="findproceduresassignedbyid">
+<form method="post" action="finddevicebyid">
     <input type="text" name="findbyname" placeholder="Введите название оборудования">
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
