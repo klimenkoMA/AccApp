@@ -12,21 +12,21 @@ public class DevicesService {
 	@Autowired
 	DevicesRepository devicesRepository;
 
-	public List<Devices> findAllProceduresAssigned() {
+	public List<Devices> findAllDevices() {
 		return devicesRepository.findAll();
 	}
 
-	public void addNewProceduresAssigned(Devices devices) {
+	public void addNewDevice(Devices devices) {
 		devicesRepository.save(devices);
 	}
-
-	public void deleteProceduresAssignedById(int id) {
-		devicesRepository.deleteById(id);
-	}
-
-	public void updateProceduresAssigned(Devices devices) {
-		devicesRepository.save(devices);
-	}
+//
+//	public void deleteProceduresAssignedById(int id) {
+//		devicesRepository.deleteById(id);
+//	}
+//
+//	public void updateProceduresAssigned(Devices devices) {
+//		devicesRepository.save(devices);
+//	}
 
 //	public List<Devices> getProceduresAssignedById(int id) {
 //		return devicesRepository.findByid(id);

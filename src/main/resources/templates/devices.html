@@ -43,7 +43,7 @@
 </table>
 
 <form method="post" action="/adddevice">
-    <input type="text" name="device" placeholder="Название оборудования"/>
+    <input type="text" name="name" placeholder="Название оборудования"/>
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
