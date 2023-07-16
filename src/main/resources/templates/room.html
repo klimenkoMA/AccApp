@@ -59,15 +59,15 @@
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="findprocedcaptionsbyid">
-    <input type="text" name="findbyid" placeholder="Введите id">
+<form method="post" action="findroomyid">
+    <input type="text" name="findbyid" placeholder="Введите id кабинета">
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 <table align="center" bgcolor="#a9a9a9" width="400" style="columns: max-content">
     <tr>
-        <th>id</th>
-        <th>Кабинеты</th>
+        <th>ID кабинета</th>
+        <th>Номер кабинета</th>
     </tr>
     <div th:each="element : ${roomList}" class="row m-1">
         <div class="col-8">
