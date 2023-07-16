@@ -6,41 +6,38 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import accountingApp.service.DevicesService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
 @Controller
 public class DevicesController {
-	@Autowired
-	DevicesService devicesService;
+    @Autowired
+    DevicesService devicesService;
 //	@Autowired
 //	RecreantsService recreantsService;
 //	@Autowired
 //	RoomService roomService;
 
-	@GetMapping("/devices") //allProceduresAssigned
-	public String getDevices(Model model) {
-		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-		model.addAttribute("devicesList", devicesList);
-		return "devices";
-	}
+    @GetMapping("/devices") //allProceduresAssigned
+    public String getDevices(Model model) {
+        List<Devices> devicesList = devicesService.findAllDevices();
+        model.addAttribute("devicesList", devicesList);
+        return "devices";
+    }
 
-//	@PostMapping("/addproceduresassigned")
-//	public String addProceduresAssigned(@RequestParam int nAssigned,
-//	                                    @RequestParam int nPassed,
-//	                                    @RequestParam String comment,
-//	                                    @RequestParam int waypaperSnnId,
-//	                                    @RequestParam int cProcId,
-//	                                    Model model) {
+    @PostMapping("/adddevice")
+    public String addDevice(@RequestParam (name = "name") String name,
+                            Model model) {
 //		List<Recreants> recreantsList = recreantsService.getRecreantsById(waypaperSnnId);
-//		List<Room> roomList = roomService.getProcedCaptionsById(cProcId);
-//		Devices devices = new Devices(nAssigned, nPassed, comment,
-//				recreantsList.get(0), roomList.get(0));
-//		devicesService.addNewProceduresAssigned(devices);
-//		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-//		model.addAttribute("devicesList", devicesList);
-//		return "devices";
-//	}
+//        List<Room> roomList = roomService.getProcedCaptionsById(cProcId);
+        Devices devices = new Devices(name);
+        devicesService.addNewDevice(devices);
+        List<Devices> devicesList = devicesService.findAllDevices();
+        model.addAttribute("devicesList", devicesList);
+        return "devices";
+    }
 
 //	@PostMapping("/deleteproceduresassigned")
 //	public String deleteProceduresAssigned(@RequestParam int id,
@@ -55,13 +52,13 @@ public class DevicesController {
 //	public String updateProceduresAssigned(@RequestParam int id,
 //	                                       @RequestParam int nAssigned,
 //	                                       @RequestParam int nPassed,
-//	                                       @RequestParam String comment,
+//	                                       @RequestParam String name,
 //	                                       @RequestParam int waypaperSnnId,
 //	                                       @RequestParam int cProcId,
 //	                                       Model model) {
 //		List<Recreants> recreantsList = recreantsService.getRecreantsById(waypaperSnnId);
 //		List<Room> roomList = roomService.getProcedCaptionsById(cProcId);
-//		Devices devices = new Devices(id, nAssigned, nPassed, comment,
+//		Devices devices = new Devices(id, nAssigned, nPassed, name,
 //				recreantsList.get(0), roomList.get(0));
 //		devicesService.addNewProceduresAssigned(devices);
 //		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
