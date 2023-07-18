@@ -12,11 +12,11 @@ public class RoomService {
 	@Autowired
 	RoomRepository roomRepository;
 
-	public List<Room> findAllProcedCaptions() {
+	public List<Room> findAllRoom() {
 		return roomRepository.findAll();
 	}
 
-	public void addNewProcedCaptions(Room room) {
+	public void addNewRoom(Room room) {
 		roomRepository.save(room);
 	}
 
