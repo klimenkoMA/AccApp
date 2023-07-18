@@ -10,31 +10,41 @@ import java.util.List;
 @Table(name = "ROOM") //proced_captions
 public class Room {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID") //c_proc
-	//ИНН процедуры
-	//int	RecreationDB.dbo.PROCED_CAPTIONS.PK__PROCED_C__F087B8841BFD2C07
-	private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID") //c_proc
+    private int id;
 
-	@Column(name = "number") //caption
-	//Название процедуры
-	private String number;
+    @Column(name = "number") //caption
+    //Название процедуры
+    private String number;
 
-	public int getId() {
-		return id;
-	}
+    public Room() {
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Room(String number) {
+        this.number = number;
+    }
 
-	public String getNumber() {
-		return number;
-	}
+    public Room(int id, String number) {
+        this.id = id;
+        this.number = number;
+    }
 
-	public void setNumber(String number) {
-		this.number = number;
-	}
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 }
 
