@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import accountingApp.service.RoomService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -21,15 +23,15 @@ public class RoomController {
 		return "room";
 	}
 
-//	@PostMapping("/addprocedcaptions")
-//	public String addProcedCaptions(@RequestParam String caption,
-//	                                Model model) {
-//		Room room = new Room(caption);
-//		roomService.addNewProcedCaptions(room);
-//		List<Room> roomList = roomService.findAllProcedCaptions();
-//		model.addAttribute("roomList", roomList);
-//		return "room";
-//	}
+	@PostMapping("/addroom")//addprocedcaptions
+	public String addRoom(@RequestParam String number,
+						  Model model) {
+		Room room = new Room(number);
+		roomService.addNewProcedCaptions(room);
+		List<Room> roomList = roomService.findAllProcedCaptions();
+		model.addAttribute("roomList", roomList);
+		return "room";
+	}
 
 //	@PostMapping("/deleteprocedcaptions")
 //	public String deleteProcedCaptions(@RequestParam int cProc, Model model) {
@@ -40,8 +42,8 @@ public class RoomController {
 //	}
 
 //	@PostMapping("/updateprocedcaptions")
-//	public String updateProcedCaptions(@RequestParam int cProc, @RequestParam String caption, Model model) {
-//		Room room = new Room(cProc, caption);
+//	public String updateProcedCaptions(@RequestParam int cProc, @RequestParam String number, Model model) {
+//		Room room = new Room(cProc, number);
 //		roomService.updateProcedCaptions(room);
 //		List<Room> roomList = roomService.findAllProcedCaptions();
 //		model.addAttribute("roomList", roomList);
