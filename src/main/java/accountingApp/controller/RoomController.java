@@ -18,7 +18,7 @@ public class RoomController {
 
 	@GetMapping("/room") //allProcedCaptions
 	public String getRoom(Model model) {
-		List<Room> roomList = roomService.findAllProcedCaptions();
+		List<Room> roomList = roomService.findAllRoom();
 		model.addAttribute("roomList", roomList);
 		return "room";
 	}
@@ -27,8 +27,8 @@ public class RoomController {
 	public String addRoom(@RequestParam String number,
 						  Model model) {
 		Room room = new Room(number);
-		roomService.addNewProcedCaptions(room);
-		List<Room> roomList = roomService.findAllProcedCaptions();
+		roomService.addNewRoom(room);
+		List<Room> roomList = roomService.findAllRoom();
 		model.addAttribute("roomList", roomList);
 		return "room";
 	}

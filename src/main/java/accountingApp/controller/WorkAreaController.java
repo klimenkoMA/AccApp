@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import accountingApp.service.WorkAreaService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -16,20 +18,20 @@ public class WorkAreaController {
 
 	@GetMapping("/workarea") //allAegerCaptions
 	public String getWorkArea(Model model) {
-		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
+		List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
 		model.addAttribute("workAreaList", workAreaList);
 		return "workarea";
 	}
 
-//	@PostMapping("/addaegercaptions")
-//	public String addAegerCaptions(@RequestParam String caption,
-//	                               Model model) {
-//		WorkArea workArea = new WorkArea(caption);
-//		workAreaService.addNewAegerCaptions(workArea);
-//		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-//		model.addAttribute("workAreaList", workAreaList);
-//		return "workarea";
-//	}
+	@PostMapping("/addworkarea") //addaegercaptions
+	public String addWorkArea(@RequestParam String name,
+							  Model model) {
+		WorkArea workArea = new WorkArea(name);
+		workAreaService.addNewWorkArea(workArea);
+		List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+		model.addAttribute("workAreaList", workAreaList);
+		return "workarea";
+	}
 
 //	@PostMapping("/deleteaegercaptions")
 //	public String deleteAegerCaptions(@RequestParam int cAeger, Model model) {

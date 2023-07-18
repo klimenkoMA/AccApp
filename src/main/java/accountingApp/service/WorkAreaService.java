@@ -12,11 +12,11 @@ public class WorkAreaService {
 	@Autowired
 	WorkAreaRepository workAreaRepository;
 
-	public List<WorkArea> findAllAegerCaptions() {
+	public List<WorkArea> findAllWorkArea() {
 		return workAreaRepository.findAll();
 	}
 
-	public void addNewAegerCaptions(WorkArea workArea) {
+	public void addNewWorkArea(WorkArea workArea) {
 		workAreaRepository.save(workArea);
 	}
 

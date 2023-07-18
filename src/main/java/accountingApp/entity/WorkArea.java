@@ -9,29 +9,38 @@ import java.util.List;
 @Entity
 @Table(name = "WORK_AREA") //aeger_captions
 public class WorkArea {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID") //c_aeger
-	//ИНН заболевания
-	private int id;
-	@Column(name = "AREA_NAME") //caption
-	// Название заболевания
-	// nvarchar(25)
-	private String areaName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID") //c_aeger
+    private int id;
+    @Column(name = "AREA_NAME") //caption
+    private String areaName;
 
-	public int getId() {
-		return id;
-	}
+    public WorkArea() {
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public WorkArea(String areaName) {
+        this.areaName = areaName;
+    }
 
-	public String getAreaName() {
-		return areaName;
-	}
+    public WorkArea(int id, String areaName) {
+        this.id = id;
+        this.areaName = areaName;
+    }
 
-	public void setAreaName(String areaName) {
-		this.areaName = areaName;
-	}
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getAreaName() {
+        return areaName;
+    }
+
+    public void setAreaName(String areaName) {
+        this.areaName = areaName;
+    }
 }
