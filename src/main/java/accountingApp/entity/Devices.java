@@ -13,7 +13,7 @@ public class Devices {
 	@Column(name = "ID") //n_assigned
 	private int id;
 
-	@Column(name = "NAME") //n_passed пройдено процедур int
+	@Column(name = "name") //n_passed пройдено процедур int
 	private String name;
 
 	public Devices() {

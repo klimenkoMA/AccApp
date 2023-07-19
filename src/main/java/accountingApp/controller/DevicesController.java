@@ -28,10 +28,8 @@ public class DevicesController {
     }
 
     @PostMapping("/adddevice")
-    public String addDevice(@RequestParam (name = "name") String name,
+    public String addDevice(@RequestParam String name,
                             Model model) {
-//		List<Recreants> recreantsList = recreantsService.getRecreantsById(waypaperSnnId);
-//        List<Room> roomList = roomService.getProcedCaptionsById(cProcId);
         Devices devices = new Devices(name);
         devicesService.addNewDevice(devices);
         List<Devices> devicesList = devicesService.findAllDevices();

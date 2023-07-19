@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="">
 <head>
     <meta charset="UTF-8" content="">
     <title>DEVICES</title>
@@ -43,25 +43,33 @@
 </table>
 
 <form method="post" action="/adddevice">
-    <input type="text" name="name" placeholder="Название оборудования"/>
+    <label>
+        <input type="text" name="name" placeholder="Название оборудования"/>
+    </label>
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
 <form method="post" action="deletedevice">
-    <input type="text" name="delete" placeholder="Введите id оборудования">
+    <label>
+        <input type="text" name="delete" placeholder="Введите id оборудования"/>
+    </label>
     <button type="submit">Удалить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
 <form method="post" action="/updatedevice">
-    <input type="text" name="device" placeholder="Название оборудования"/>
+    <label>
+        <input type="text" name="device" placeholder="Название оборудования"/>
+    </label>
     <button type="submit">Обновить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
 <form method="post" action="finddevicebyid">
-    <input type="text" name="findbyname" placeholder="Введите название оборудования">
+    <label>
+        <input type="text" name="findbyname" placeholder="Введите название оборудования"/>
+    </label>
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
