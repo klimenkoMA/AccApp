@@ -1,7 +1,6 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * Название заболевания
@@ -13,19 +12,19 @@ public class WorkArea {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID") //c_aeger
     private int id;
-    @Column(name = "AREA_NAME") //caption
-    private String areaName;
+    @Column(name = "name") //caption
+    private String name;
 
     public WorkArea() {
     }
 
-    public WorkArea(String areaName) {
-        this.areaName = areaName;
+    public WorkArea(String name) {
+        this.name = name;
     }
 
-    public WorkArea(int id, String areaName) {
+    public WorkArea(int id, String name) {
         this.id = id;
-        this.areaName = areaName;
+        this.name = name;
     }
 
     public int getId() {
@@ -36,11 +35,11 @@ public class WorkArea {
         this.id = id;
     }
 
-    public String getAreaName() {
-        return areaName;
+    public String getName() {
+        return name;
     }
 
-    public void setAreaName(String areaName) {
-        this.areaName = areaName;
+    public void setName(String name) {
+        this.name = name;
     }
 }
