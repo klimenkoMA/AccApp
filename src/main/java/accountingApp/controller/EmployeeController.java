@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import accountingApp.service.ITStaffService;
 import accountingApp.service.EmployeeService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -35,13 +37,13 @@ public class EmployeeController {
 //		return "employee";
 //	}
 
-//	@PostMapping("/allPersons")
+//	@PostMapping("/addemployee") //allPersons
 //	public String addPerson(@RequestParam String fio, @RequestParam
 //			String dBorn, @RequestParam String workArea,
 //							@RequestParam(required = false) Integer prof_id, Model model) {
-//		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(prof_id);
+////		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(prof_id);
 //		Employee employee = new Employee(fio, dBorn, workArea, ITStaffList.get(0));
-//		ITStaffService.addNewPersons(employee);
+////		ITStaffService.addNewPersons(employee);
 //		List<Employee> employeeList = employeeService.getListEmployee();
 //		model.addAttribute("employeeList", employeeList);
 //		return "employee";
