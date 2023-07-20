@@ -45,7 +45,7 @@
 <form method="post" action="/addemployee"> <!-- /allPersons -->
     <input type="text" name="fio" placeholder="Введите ФИО сотрудника"/>
     <input type="text" name="dborn" placeholder="Введите дату рождения"/>
-    <input type="text" name="workarea" placeholder="Введите филиал"/>
+    <input type="text" name="workArea" placeholder="Введите филиал"/>
     <input type="text" name="room" placeholder="Введите кабинет"/>
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
@@ -100,7 +100,7 @@
                     <div>[[${element.dborn}]]</div>
                 </td>
                 <td>
-                    <div>[[${element.workarea}]]</div>
+                    <div>[[${element.workArea}]]</div>
                 </td>
                 <td>
                     <div>[[${element.room}]]</div>

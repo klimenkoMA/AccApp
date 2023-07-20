@@ -10,20 +10,20 @@ import javax.persistence.*;
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
+	@Column(name = "id")
 	// Уникальный номер int
 	private int id;
-	@Column(name = "FIO")
+	@Column(name = "fio")
 	// Фамилия Имя Очество nvarchar(50)
 	private String fio;
-	@Column(name = "D_BORN") // login
+	@Column(name = "dborn") // login
 	//  дата рождения SHORT DATE
 	private String dBorn;
-	@Column(name = "WORK_AREA") // password
+	@Column(name = "workarea") // password
 	// место работы nvarchar(50)
 	private String workArea;
 
-	@Column(name = "ROOM") // prof_id
+	@Column(name = "room") // prof_id
 	// кабинет nvarchar(10)
 	private String room;
 

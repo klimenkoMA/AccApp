@@ -43,7 +43,7 @@
 </table>
 
 <form method="post" action="/addevent">  <!-- /addrecreantsaegers -->
-    <input type="text" name="date" placeholder="Введите дату события"/>
+    <input type="text" name="date" placeholder="Введите дату события">
     <input type="text" name="employeefio" placeholder="Введите ФИО сотрудника"/>
     <input type="text" name="itstaffname" placeholder="Введите ФИО программиста"/>
     <button type="submit">Добавить</button>
@@ -57,7 +57,9 @@
 </form>
 
 <form method="post" action="/updateevent">
-    <input type="text" name="id" placeholder="Введите id события"/>
+    <label>
+        <input type="text" name="id" placeholder="Введите id события"/>
+    </label>
     <input type="text" name="date" placeholder="Введите дату события"/>
     <input type="text" name="employeefio" placeholder="Введите ФИО сотрудника"/>
     <input type="text" name="itstaffname" placeholder="Введите ФИО программиста"/>
