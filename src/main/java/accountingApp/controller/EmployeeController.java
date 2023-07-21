@@ -25,6 +25,19 @@ public class EmployeeController {
 		model.addAttribute("employeeList", employeeList);
 		return "employee";
 	}
+
+	//	@PostMapping("/addemployee") //allPersons
+//	public String addPerson(@RequestParam String fio, @RequestParam
+//			String dBorn, @RequestParam String workArea,
+//							@RequestParam(required = false) Integer prof_id, Model model) {
+////		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(prof_id);
+//		Employee employee = new Employee(fio, dBorn, workArea, ITStaffList.get(0));
+////		ITStaffService.addNewPersons(employee);
+//		List<Employee> employeeList = employeeService.getListEmployee();
+//		model.addAttribute("employeeList", employeeList);
+//		return "employee";
+//	}
+
 //@PostMapping("/updatePersons")
 //	public String updatePersons(@RequestParam int id, @RequestParam String fio, @RequestParam
 //			String dBorn, @RequestParam String workArea,
@@ -37,17 +50,6 @@ public class EmployeeController {
 //		return "employee";
 //	}
 
-//	@PostMapping("/addemployee") //allPersons
-//	public String addPerson(@RequestParam String fio, @RequestParam
-//			String dBorn, @RequestParam String workArea,
-//							@RequestParam(required = false) Integer prof_id, Model model) {
-////		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(prof_id);
-//		Employee employee = new Employee(fio, dBorn, workArea, ITStaffList.get(0));
-////		ITStaffService.addNewPersons(employee);
-//		List<Employee> employeeList = employeeService.getListEmployee();
-//		model.addAttribute("employeeList", employeeList);
-//		return "employee";
-//	}
 
 //	@PostMapping("findbyfio")
 //	public String findAuthorisation(@RequestParam String findbyfio,

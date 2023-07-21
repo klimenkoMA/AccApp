@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import accountingApp.service.ITStaffService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -17,19 +19,19 @@ public class ITStaffController {
 
 	@GetMapping("/itstaff") //allPersonsProf
 	public String getItStaff(Model model) {
-		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
+		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
 		model.addAttribute("itStaffList", ITStaffList);
 		return "itstaff";
 	}
 
-//	@PostMapping("/addpersonsprof")
-//	public String addPersonsProf(@RequestParam String name_rec, Model model) {
-//		ITStaff ITStaff = new ITStaff(name_rec);
-//		ITStaffService.addNewPersonsProf(ITStaff);
-//		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-//		model.addAttribute("itStaffList", ITStaffList);
-//		return "itstaff";
-//	}
+	@PostMapping("/additstaff")//addpersonsprof
+	public String addItStaff(@RequestParam String name, Model model) {
+		ITStaff ITStaff = new ITStaff(name);
+		ITStaffService.addNewItStaff(ITStaff);
+		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+		model.addAttribute("itStaffList", ITStaffList);
+		return "itstaff";
+	}
 
 //	@PostMapping("/deletepersonsprof")
 //	public String deletePersonsProf(@RequestParam int id, Model model) {
@@ -40,8 +42,8 @@ public class ITStaffController {
 //	}
 
 //	@PostMapping("/updatepersonsprof")
-//	public String updatePersonProf(@RequestParam int id, @RequestParam String name_rec, Model model) {
-//		ITStaff ITStaff = new ITStaff(id, name_rec);
+//	public String updatePersonProf(@RequestParam int id, @RequestParam String name, Model model) {
+//		ITStaff ITStaff = new ITStaff(id, name);
 //		ITStaffService.updatePersonsProf(ITStaff);
 //		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
 //		model.addAttribute("itStaffList", ITStaffList);
