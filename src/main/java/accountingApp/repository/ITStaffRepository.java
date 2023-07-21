@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface ITStaffRepository extends JpaRepository<ITStaff, Integer> {
-	@Query("SELECT c FROM ITStaff c")
+//	@Query("SELECT c FROM ITStaff c")
 	List<ITStaff> findAll();
 
 	List<ITStaff> findPersonsProfById(int id);

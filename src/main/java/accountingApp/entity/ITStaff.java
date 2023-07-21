@@ -8,7 +8,7 @@ import java.util.List;
  * пользователей
  **/
 @Entity
-@Table(name = "IT_STAFF")//persons_prof
+@Table(name = "itstaff")//persons_prof
 public class ITStaff {
 
 
@@ -17,9 +17,20 @@ public class ITStaff {
 	private int id;
 
 
-	@Column(name = "NAME") //name_rec
-	//Название вида пользователей nvarchar(50)
+	@Column(name = "name") //name_rec
 	private String name;
+
+	public ITStaff() {
+	}
+
+	public ITStaff(String name) {
+		this.name = name;
+	}
+
+	public ITStaff(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 
 	public int getId() {
 		return id;

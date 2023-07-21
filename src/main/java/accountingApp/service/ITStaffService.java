@@ -17,11 +17,11 @@ public class ITStaffService {
 	EmployeeRepository employeeRepository;
 
 
-	public List<ITStaff> getAllPersonsProf() {
+	public List<ITStaff> getAllItStaff() {
 		return ITStaffRepository.findAll();
 	}
 
-	public void addNewPersonsProf(ITStaff ITStaff){
+	public void addNewItStaff(ITStaff ITStaff){
 		ITStaffRepository.save(ITStaff);
 	}
 
