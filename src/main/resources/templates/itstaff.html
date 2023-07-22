@@ -42,26 +42,36 @@
 </table>
 
 <form method="post" action="/additstaff">
-    <input type="text" name="name" placeholder="Введите ФИО программиста">
+    <label>
+        <input type="text" name="name" placeholder="Введите ФИО программиста">
+    </label>
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
 <form method="post" action="/deleteitstaff">
-    <input type="text" name="ID" placeholder="Введите ID программиста">
+    <label>
+        <input type="text" name="ID" placeholder="Введите ID программиста">
+    </label>
     <button type="submit">Удалить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
 <form method="post" action="/updateitstaff">
-    <input type="text" name="ID" placeholder="Введите ID программиста">
-    <input type="text" name="name" placeholder="Введите ФИО программиста">
+    <label>
+        <input type="text" name="ID" placeholder="Введите ID программиста">
+    </label>
+    <label>
+        <input type="text" name="name" placeholder="Введите ФИО программиста">
+    </label>
     <button type="submit">Обновить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
 <form method="post" action="finditstaffbyid">
-    <input type="text" name="findbyid" placeholder="Введите ID программиста">
+    <label>
+        <input type="text" name="findbyid" placeholder="Введите ID программиста">
+    </label>
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
