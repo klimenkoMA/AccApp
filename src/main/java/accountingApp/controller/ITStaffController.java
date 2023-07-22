@@ -25,7 +25,8 @@ public class ITStaffController {
 	}
 
 	@PostMapping("/additstaff")//addpersonsprof
-	public String addItStaff(@RequestParam String name, Model model) {
+	public String addItStaff(@RequestParam String name,
+							 Model model) {
 		ITStaff ITStaff = new ITStaff(name);
 		ITStaffService.addNewItStaff(ITStaff);
 		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
