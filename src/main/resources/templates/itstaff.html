@@ -43,7 +43,7 @@
 
 <form method="post" action="/additstaff">
     <label>
-        <input type="text" name="name" placeholder="Введите ФИО программиста">
+        <input type="text" name="name" placeholder="Введите ФИО программиста"/>
     </label>
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
@@ -80,7 +80,7 @@
         <th>ID программиста</th>
         <th>ФИО программиста</th>
     </tr>
-    <div th:each="element : ${ITStaffList}" class="row m-1">
+    <div th:each="element : ${itStaffList}" class="row m-1">
         <div class="col-8">
             <tr align="center">
                 <td>
