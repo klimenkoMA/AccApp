@@ -14,36 +14,37 @@ import java.util.List;
 
 @Controller
 public class EmployeeController {
-	@Autowired
-	EmployeeService employeeService;
-	@Autowired
-	ITStaffService ITStaffService;
+    @Autowired
+    EmployeeService employeeService;
+    @Autowired
+    ITStaffService ITStaffService;
 
-	@GetMapping("/employee") //allPersons
-	public String getEmployee(Model model) {
-		List<Employee> employeeList = employeeService.getListEmployee();
-		model.addAttribute("employeeList", employeeList);
-		return "employee";
-	}
+    @GetMapping("/employee") //allPersons
+    public String getEmployee(Model model) {
+        List<Employee> employeeList = employeeService.getListEmployee();
+        model.addAttribute("employeeList", employeeList);
+        return "employee";
+    }
 
-	//	@PostMapping("/addemployee") //allPersons
-//	public String addPerson(@RequestParam String fio, @RequestParam
-//			String dBorn, @RequestParam String workArea,
-//							@RequestParam(required = false) Integer prof_id, Model model) {
-////		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(prof_id);
-//		Employee employee = new Employee(fio, dBorn, workArea, ITStaffList.get(0));
-////		ITStaffService.addNewPersons(employee);
-//		List<Employee> employeeList = employeeService.getListEmployee();
-//		model.addAttribute("employeeList", employeeList);
-//		return "employee";
-//	}
+    @PostMapping("/addemployee") //allPersons
+    public String addEmployee(@RequestParam String fio,
+                              @RequestParam String dborn,
+                              @RequestParam String workArea,
+                              @RequestParam String room,
+                              Model model) {
+        Employee employee = new Employee(fio, dborn, workArea, room);
+        employeeService.addNewEmployee(employee);
+        List<Employee> employeeList = employeeService.getListEmployee();
+        model.addAttribute("employeeList", employeeList);
+        return "employee";
+    }
 
 //@PostMapping("/updatePersons")
 //	public String updatePersons(@RequestParam int id, @RequestParam String fio, @RequestParam
-//			String dBorn, @RequestParam String workArea,
-//								@RequestParam(required = false) Integer prof_id, Model model){
-//		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(prof_id);
-//		Employee employee = new Employee(id, fio, dBorn, workArea, ITStaffList.get(0));
+//			String dborn, @RequestParam String workArea,
+//								@RequestParam(required = false) Integer room, Model model){
+//		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(room);
+//		Employee employee = new Employee(id, fio, dborn, workArea, ITStaffList.get(0));
 //		employeeService.updateEmployee(employee);
 //		List<Employee> employeeList = employeeService.getListEmployee();
 //		model.addAttribute("employeeList", employeeList);

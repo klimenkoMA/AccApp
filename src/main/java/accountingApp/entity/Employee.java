@@ -8,82 +8,78 @@ import javax.persistence.*;
 @Entity
 @Table(name = "EMPLOYEE") //persons
 public class Employee {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	// Уникальный номер int
-	private int id;
-	@Column(name = "fio")
-	// Фамилия Имя Очество nvarchar(50)
-	private String fio;
-	@Column(name = "dborn") // login
-	//  дата рождения SHORT DATE
-	private String dBorn;
-	@Column(name = "workarea") // password
-	// место работы nvarchar(50)
-	private String workArea;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
 
-	@Column(name = "room") // prof_id
-	// кабинет nvarchar(10)
-	private String room;
+    @Column(name = "fio")
+    private String fio;
 
-	public Employee() {
-	}
+    @Column(name = "dborn") // login
+    private String dborn;
 
-	public Employee(int id, String fio, String dBorn, String workArea, String room) {
-		this.id = id;
-		this.fio = fio;
-		this.dBorn = dBorn;
-		this.workArea = workArea;
-		this.room = room;
-	}
+    @Column(name = "workarea") // password
+    private String workarea;
 
-	public Employee(String fio, String dBorn, String workArea, String room) {
-		this.fio = fio;
-		this.dBorn = dBorn;
-		this.workArea = workArea;
-		this.room = room;
-	}
+    @Column(name = "room") // prof_id
+    private String room;
 
-	public int getId() {
-		return id;
-	}
+    public Employee() {
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Employee(int id, String fio, String dborn, String workarea, String room) {
+        this.id = id;
+        this.fio = fio;
+        this.dborn = dborn;
+        this.workarea = workarea;
+        this.room = room;
+    }
 
-	public String getFio() {
-		return fio;
-	}
+    public Employee(String fio, String dborn, String workarea, String room) {
+        this.fio = fio;
+        this.dborn = dborn;
+        this.workarea = workarea;
+        this.room = room;
+    }
 
-	public void setFio(String fio) {
-		this.fio = fio;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getdBorn() {
-		return dBorn;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setdBorn(String dBorn) {
-		this.dBorn = dBorn;
-	}
+    public String getFio() {
+        return fio;
+    }
 
-	public String getWorkArea() {
-		return workArea;
-	}
+    public void setFio(String fio) {
+        this.fio = fio;
+    }
 
-	public void setWorkArea(String workArea) {
-		this.workArea = workArea;
-	}
+    public String getDborn() {
+        return dborn;
+    }
 
-	public String getRoom() {
-		return room;
-	}
+    public void setDborn(String dborn) {
+        this.dborn = dborn;
+    }
 
-	public void setRoom(String room) {
-		this.room = room;
-	}
+    public String getWorkarea() {
+        return workarea;
+    }
 
+    public void setWorkarea(String workArea) {
+        this.workarea = workArea;
+    }
 
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
 }

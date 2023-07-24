@@ -13,6 +13,10 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
+	public void addNewEmployee(Employee employee) {
+		employeeRepository.save(employee);
+	}
+
 	public void deleteEmployeeById(int id) {
 		employeeRepository.deleteById(id);
 	}
