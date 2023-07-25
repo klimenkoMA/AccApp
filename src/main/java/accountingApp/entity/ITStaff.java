@@ -1,7 +1,7 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
-import java.util.List;
+
 
 /**
  * Виды
