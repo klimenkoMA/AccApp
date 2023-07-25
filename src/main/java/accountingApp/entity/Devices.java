@@ -6,11 +6,11 @@ import javax.persistence.*;
  * Выполнение процедур
  */
 @Entity
-@Table(name = "DEVICES") //procedures_assigned
+@Table(name = "devices") //procedures_assigned
 public class Devices {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID") //n_assigned
+	@Column(name = "id") //n_assigned
 	private int id;
 
 	@Column(name = "name") //n_passed пройдено процедур int
