@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Microsoft SQL Server - RecDB@localhost" uuid="81d91eef-a572-4b0a-b9dd-9eb286612e56">
+    <data-source source="LOCAL" name="Microsoft SQL Server - AccAppDB@localhost" uuid="add7a296-9df3-4c43-9f3b-3cf94e691883">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
