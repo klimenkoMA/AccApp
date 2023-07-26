@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="">
+<head>
+    <meta charset="UTF-8" content="">
+    <title>DEVICES</title>
+</head>
+<body>
+
+<table align="center" width="1500">
+
+    <tr>
+        <form action="/employee">
+            <button type="submit">Сотрудник</button>
+        </form>
+    </tr>
+
+    <tr>
+        <form action="/itstaff">
+            <button type="submit">Инженер-программист</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/workarea">
+            <button type="submit">Филиал</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/room">
+            <button type="submit">Кабинет</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/events">
+            <button type="submit">Событие</button>
+        </form>
+    </tr>
+    <tr>
+        <form action="/devices">
+            <button type="submit">Оборудование</button>
+        </form>
+    </tr>
+</table>
+
+<form method="post" action="/adddevice">
+    <label>
+        <input type="text" name="name" placeholder="Название оборудования"/>
+    </label>
+    <button type="submit">Добавить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="/deletedevice">
+    <label>
+        <input type="text" name="delete" placeholder="Введите id оборудования"/>
+    </label>
+    <button type="submit">Удалить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="/updatedevice">
+    <label>
+        <input type="text" name="device" placeholder="Название оборудования"/>
+    </label>
+    <button type="submit">Обновить</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<form method="post" action="finddevicebyid">
+    <label>
+        <input type="text" name="findbyname" placeholder="Введите название оборудования"/>
+    </label>
+    <button type="submit">Найти</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<table align="center" bgcolor="#a9a9a9" width="700" style="columns: max-content">
+    <tr>
+        <th>ID оборудования</th>
+        <th>Название оборудования</th>
+    </tr>
+    <div th:each="element : ${devicesList}" class="row m-1">
+        <div class="col-8">
+            <tr align="center">
+                <td>
+                    <div>[[${element.id}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.name}]]</div>
+                </td>
+            </tr>
+        </div>
+    </div>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</table>
+</body>
+</html>
