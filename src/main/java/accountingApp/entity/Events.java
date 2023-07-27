@@ -17,11 +17,11 @@ public class Events {
     //код путевки int
     private int date;
 
-    @JoinColumn(name = "EMPLOYEE_ID") //c_aeger
+    @JoinColumn(name = "EMPLOYEEID") //c_aeger
     //ИНН заболевания int
     private String employeeId;
 
-    @JoinColumn(name = "IT_STAFF_ID")
+    @JoinColumn(name = "ITSTAFFID")
     //ИНН заболевания int
     private String itStaffId;
 

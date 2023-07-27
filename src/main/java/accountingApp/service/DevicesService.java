@@ -19,10 +19,10 @@ public class DevicesService {
 	public void addNewDevice(Devices devices) {
 		devicesRepository.save(devices);
 	}
-//
-//	public void deleteProceduresAssignedById(int id) {
-//		devicesRepository.deleteById(id);
-//	}
+
+	public void deleteDeviceById(Integer id) {
+		devicesRepository.deleteById(id);
+	}
 //
 //	public void updateProceduresAssigned(Devices devices) {
 //		devicesRepository.save(devices);
