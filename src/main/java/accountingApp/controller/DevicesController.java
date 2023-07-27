@@ -37,14 +37,14 @@ public class DevicesController {
         return "devices";
     }
 
-//	@PostMapping("/deleteproceduresassigned")
-//	public String deleteProceduresAssigned(@RequestParam int id,
-//	                                       Model model) {
-//		devicesService.deleteProceduresAssignedById(id);
-//		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-//		model.addAttribute("devicesList", devicesList);
-//		return "devices";
-//	}
+	@PostMapping("/deletedevice")//deleteproceduresassigned
+	public String deleteDeviceById(@RequestParam Integer id,
+                                   Model model) {
+		devicesService.deleteDeviceById(id);
+		List<Devices> devicesList = devicesService.findAllDevices();
+		model.addAttribute("devicesList", devicesList);
+		return "devices";
+	}
 
 //	@PostMapping("/updateproceduresassigned")
 //	public String updateProceduresAssigned(@RequestParam int id,
