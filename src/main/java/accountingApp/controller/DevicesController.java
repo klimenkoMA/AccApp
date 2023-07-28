@@ -38,11 +38,10 @@ public class DevicesController {
     }
 
 	@PostMapping("/deletedevice")//deleteproceduresassigned
-	public String deleteDeviceById(@RequestParam Integer id,
-                                   Model model) {
-		devicesService.deleteDeviceById(id);
-		List<Devices> devicesList = devicesService.findAllDevices();
-		model.addAttribute("devicesList", devicesList);
+	public String deleteDevice(@RequestParam Integer id,
+                               Model model) {
+        devicesService.deleteDeviceById(id);
+        List<Devices> devicesList = devicesService.findAllDevices();		model.addAttribute("devicesList", devicesList);
 		return "devices";
 	}
 
