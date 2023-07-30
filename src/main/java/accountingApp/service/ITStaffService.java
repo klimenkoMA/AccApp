@@ -25,7 +25,7 @@ public class ITStaffService {
 		ITStaffRepository.save(ITStaff);
 	}
 
-	public void deletePersonsProfById(int id){
+	public void deleteITStaffById(int id){
 		ITStaffRepository.deleteById(id);
 	}
 
