@@ -1,7 +1,10 @@
 package accountingApp.security;
 
 
+import org.springframework.security.core.GrantedAuthority;
 
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "t_role")
