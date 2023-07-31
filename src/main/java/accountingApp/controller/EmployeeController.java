@@ -39,6 +39,17 @@ public class EmployeeController {
         return "employee";
     }
 
+    	@PostMapping("/deleteemployee")
+	public String deleteById(@RequestParam int id
+                , Model model) {
+		if(id > 0) {
+			employeeService.deleteEmployeeById(id);
+		}
+		List<Employee> employeeList = employeeService.getListEmployee();
+		model.addAttribute("employeeList", employeeList);
+		return "employee";
+	}
+
 //@PostMapping("/updatePersons")
 //	public String updatePersons(@RequestParam int id, @RequestParam String fio, @RequestParam
 //			String dborn, @RequestParam String workArea,
@@ -64,15 +75,6 @@ public class EmployeeController {
 //		return "employee";
 //	}
 //
-//	@PostMapping("delete")
-//	public String deleteById(@RequestParam int delete, Model model) {
-//		if(delete > 0) {
-//			employeeService.deleteEmployeeById(delete);
-//		}
-//		List<Employee> employeeList = employeeService.getListEmployee();
-//		model.addAttribute("employeeList", employeeList);
-//		return "employee";
-//	}
 //
 //	@PostMapping("findbyid")
 //	public String findPersonById(@RequestParam int findbyid, Model model) {

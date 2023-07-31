@@ -34,13 +34,14 @@ public class ITStaffController {
 		return "itstaff";
 	}
 
-//	@PostMapping("/deletepersonsprof")
-//	public String deletePersonsProf(@RequestParam int id, Model model) {
-//		ITStaffService.deletePersonsProfById(id);
-//		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-//		model.addAttribute("itStaffList", ITStaffList);
-//		return "itstaff";
-//	}
+	@PostMapping("/deleteitstaff")
+	public String deleteITStaff(@RequestParam int id,
+								Model model) {
+		ITStaffService.deleteITStaffById(id);
+		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+		model.addAttribute("itStaffList", ITStaffList);
+		return "itstaff";
+	}
 
 //	@PostMapping("/updatepersonsprof")
 //	public String updatePersonProf(@RequestParam int id, @RequestParam String name, Model model) {
