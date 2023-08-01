@@ -1,4 +1,4 @@
-package accountingApp.security;
+/* package accountingApp.security;
 
 
 import org.springframework.security.core.GrantedAuthority;
@@ -95,4 +95,4 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
-}
+} */
