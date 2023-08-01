@@ -1,4 +1,4 @@
-package accountingApp.security;
+/* package accountingApp.security;
 
 
 import org.springframework.security.core.GrantedAuthority;
@@ -55,4 +55,4 @@ public class Role implements GrantedAuthority {
     public String getAuthority() {
         return getName();
     }
-}
+} */
