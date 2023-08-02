@@ -7,7 +7,7 @@ import accountingApp.repository.WorkAreaRepository;
 
 import java.util.List;
 
-@Service
+@Service 
 public class WorkAreaService {
 	@Autowired
 	WorkAreaRepository workAreaRepository;
@@ -24,7 +24,7 @@ public class WorkAreaService {
 		workAreaRepository.deleteById(id);
 	}
 
-	public void updateAegerCaptions(WorkArea workArea) {
+	public void updateWorkArea(WorkArea workArea) {
 		workAreaRepository.save(workArea);
 	}
 
