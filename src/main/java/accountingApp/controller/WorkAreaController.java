@@ -33,17 +33,18 @@ public class WorkAreaController {
 		return "workarea";
 	}
 
-//	@PostMapping("/deleteaegercaptions")
-//	public String deleteAegerCaptions(@RequestParam int cAeger, Model model) {
-//		workAreaService.deleteAegerCaptionsById(cAeger);
-//		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-//		model.addAttribute("workAreaList", workAreaList);
-//		return "workarea";
-//	}
+	@PostMapping("/deleteworkarea")
+	public String deleteWorkArea(@RequestParam int id,
+								 Model model) {
+		workAreaService.deleteWorkAreaById(id);
+		List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+		model.addAttribute("workAreaList", workAreaList);
+		return "workarea";
+	}
 
 //	@PostMapping("/updateaegercaptions")
-//	public String updateAegerCaptions(@RequestParam int cAeger, @RequestParam String caption, Model model) {
-//		WorkArea workArea = new WorkArea(cAeger, caption);
+//	public String updateAegerCaptions(@RequestParam int id, @RequestParam String caption, Model model) {
+//		WorkArea workArea = new WorkArea(id, caption);
 //		workAreaService.updateAegerCaptions(workArea);
 //		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
 //		model.addAttribute("workAreaList", workAreaList);
