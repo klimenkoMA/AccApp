@@ -43,14 +43,16 @@ public class ITStaffController {
 		return "itstaff";
 	}
 
-//	@PostMapping("/updatepersonsprof")
-//	public String updatePersonProf(@RequestParam int id, @RequestParam String name, Model model) {
-//		ITStaff ITStaff = new ITStaff(id, name);
-//		ITStaffService.updatePersonsProf(ITStaff);
-//		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-//		model.addAttribute("itStaffList", ITStaffList);
-//		return "itstaff";
-//	}
+	@PostMapping("/updateitstaff")
+	public String updateItStaff(@RequestParam int id,
+								@RequestParam String name,
+								Model model) {
+		ITStaff ITStaff = new ITStaff(id, name);
+		ITStaffService.updateItStaff(ITStaff);
+		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+		model.addAttribute("itStaffList", ITStaffList);
+		return "itstaff";
+	}
 
 //	@PostMapping("findpersonsprofbyid")
 //	public String findPersonById(@RequestParam int findbyid, Model model) {

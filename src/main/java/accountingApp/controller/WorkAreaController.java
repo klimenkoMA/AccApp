@@ -42,14 +42,16 @@ public class WorkAreaController {
 		return "workarea";
 	}
 
-//	@PostMapping("/updateaegercaptions")
-//	public String updateAegerCaptions(@RequestParam int id, @RequestParam String caption, Model model) {
-//		WorkArea workArea = new WorkArea(id, caption);
-//		workAreaService.updateAegerCaptions(workArea);
-//		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-//		model.addAttribute("workAreaList", workAreaList);
-//		return "workarea";
-//	}
+	@PostMapping("/updateworkarea")
+	public String updateWorkArea(@RequestParam int id,
+								 @RequestParam String name,
+								 Model model) {
+		WorkArea workArea = new WorkArea(id, name);
+		workAreaService.updateWorkArea(workArea);
+		List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+		model.addAttribute("workAreaList", workAreaList);
+		return "workarea";
+	}
 
 //	@PostMapping("findaegercaptionsbyid")
 //	public String findAegerCaptionsById(@RequestParam int findbyid, Model model) {

@@ -24,7 +24,7 @@ public class RoomService {
 		roomRepository.deleteById(id);
 	}
 
-	public void updateProcedCaptions(Room room) {
+	public void updateRoom(Room room) {
 		roomRepository.save(room);
 	}
 

@@ -29,7 +29,7 @@ public class ITStaffService {
 		ITStaffRepository.deleteById(id);
 	}
 
-	public void updatePersonsProf(ITStaff ITStaff){
+	public void updateItStaff(ITStaff ITStaff){
 		ITStaffRepository.save(ITStaff);
 	}
 
