@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Repaired update method in WorkArea Classes">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Repaired update method in WorkArea, Room Classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/RoomService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/RoomService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/WorkAreaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/WorkAreaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,7 @@
       <workItem from="1690912837735" duration="1947000" />
       <workItem from="1690914930965" duration="579000" />
       <workItem from="1690942791278" duration="3416000" />
-      <workItem from="1690990705878" duration="1506000" />
+      <workItem from="1690990705878" duration="2714000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1688837083515</created>
@@ -393,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690991704170</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Repaired update method in WorkArea, Room Classes">
+      <created>1690992307617</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1690992307617</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +415,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted some tags from devices.html" />
     <MESSAGE value="Deleted some tags from employee.html" />
     <MESSAGE value="Deleted some tags from events.html" />
     <MESSAGE value="Deleted some tags from itstaff.html and room.html" />
@@ -437,6 +439,7 @@
     <MESSAGE value="Repaired delete method in Room Classes" />
     <MESSAGE value="Repaired delete method in Work Area Classes" />
     <MESSAGE value="Repaired update method in WorkArea Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repaired update method in WorkArea Classes" />
+    <MESSAGE value="Repaired update method in WorkArea, Room Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repaired update method in WorkArea, Room Classes" />
   </component>
 </project>
