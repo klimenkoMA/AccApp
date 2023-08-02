@@ -37,31 +37,25 @@ public class DevicesController {
         return "devices";
     }
 
-	@PostMapping("/deletedevice")//deleteproceduresassigned
-	public String deleteDevice(@RequestParam Integer id,
+    @PostMapping("/deletedevice")//deleteproceduresassigned
+    public String deleteDevice(@RequestParam Integer id,
                                Model model) {
         devicesService.deleteDeviceById(id);
-        List<Devices> devicesList = devicesService.findAllDevices();		model.addAttribute("devicesList", devicesList);
-		return "devices";
-	}
+        List<Devices> devicesList = devicesService.findAllDevices();
+        model.addAttribute("devicesList", devicesList);
+        return "devices";
+    }
 
-//	@PostMapping("/updateproceduresassigned")
-//	public String updateProceduresAssigned(@RequestParam int id,
-//	                                       @RequestParam int nAssigned,
-//	                                       @RequestParam int nPassed,
-//	                                       @RequestParam String name,
-//	                                       @RequestParam int waypaperSnnId,
-//	                                       @RequestParam int cProcId,
-//	                                       Model model) {
-//		List<Recreants> recreantsList = recreantsService.getRecreantsById(waypaperSnnId);
-//		List<Room> roomList = roomService.getProcedCaptionsById(cProcId);
-//		Devices devices = new Devices(id, nAssigned, nPassed, name,
-//				recreantsList.get(0), roomList.get(0));
-//		devicesService.addNewProceduresAssigned(devices);
-//		List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-//		model.addAttribute("devicesList", devicesList);
-//		return "devices";
-//	}
+    @PostMapping("/updatedevice")
+    public String updateProceduresAssigned(@RequestParam int id,
+                                           @RequestParam String name,
+                                           Model model) {
+        Devices devices = new Devices(id, name);
+        devicesService.updateDevice(devices);
+        List<Devices> devicesList = devicesService.findAllDevices();
+        model.addAttribute("devicesList", devicesList);
+        return "devices";
+    }
 
 //	@PostMapping("findproceduresassignedbyid")
 //	public String findProceduresAssignedById(@RequestParam int findbyid, Model model) {
