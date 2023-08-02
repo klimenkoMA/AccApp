@@ -50,17 +50,20 @@ public class EmployeeController {
 		return "employee";
 	}
 
-//@PostMapping("/updatePersons")
-//	public String updatePersons(@RequestParam int id, @RequestParam String fio, @RequestParam
-//			String dborn, @RequestParam String workArea,
-//								@RequestParam(required = false) Integer room, Model model){
-//		List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(room);
-//		Employee employee = new Employee(id, fio, dborn, workArea, ITStaffList.get(0));
-//		employeeService.updateEmployee(employee);
-//		List<Employee> employeeList = employeeService.getListEmployee();
-//		model.addAttribute("employeeList", employeeList);
-//		return "employee";
-//	}
+@PostMapping("/updateemployee")
+	public String updateEmployee(@RequestParam int id,
+                                 @RequestParam String fio,
+                                 @RequestParam String dborn,
+                                 @RequestParam String workarea,
+                                 @RequestParam String room,
+                                 Model model){
+
+		Employee employee = new Employee(id ,fio, dborn, workarea, room);
+		employeeService.updateEmployee(employee);
+		List<Employee> employeeList = employeeService.getListEmployee();
+		model.addAttribute("employeeList", employeeList);
+		return "employee";
+	}
 
 
 //	@PostMapping("findbyfio")

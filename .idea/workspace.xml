@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Repaired update method in WorkArea, Room Classes">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Repaired update method in Employee Classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,17 @@
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -114,7 +125,8 @@
       <workItem from="1690912837735" duration="1947000" />
       <workItem from="1690914930965" duration="579000" />
       <workItem from="1690942791278" duration="3416000" />
-      <workItem from="1690990705878" duration="2714000" />
+      <workItem from="1690990705878" duration="3063000" />
+      <workItem from="1690995688698" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1688837083515</created>
@@ -396,7 +408,28 @@
       <option name="project" value="LOCAL" />
       <updated>1690992307617</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Repaired update method in ITStaff Classes">
+      <created>1690993495631</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1690993495631</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Repaired update method in ITStaff Classes">
+      <created>1690993661116</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1690993661116</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Repaired update method in Employee Classes">
+      <created>1690997425622</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1690997425623</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,8 +448,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted some tags from employee.html" />
-    <MESSAGE value="Deleted some tags from events.html" />
     <MESSAGE value="Deleted some tags from itstaff.html and room.html" />
     <MESSAGE value="Improved all html files" />
     <MESSAGE value="Rebuilt all device classes&#10;Added addDevice() method in controller" />
@@ -440,6 +471,8 @@
     <MESSAGE value="Repaired delete method in Work Area Classes" />
     <MESSAGE value="Repaired update method in WorkArea Classes" />
     <MESSAGE value="Repaired update method in WorkArea, Room Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repaired update method in WorkArea, Room Classes" />
+    <MESSAGE value="Repaired update method in ITStaff Classes" />
+    <MESSAGE value="Repaired update method in Employee Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repaired update method in Employee Classes" />
   </component>
 </project>

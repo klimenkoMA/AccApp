@@ -60,7 +60,8 @@
 
 <form method="post" action="/updatedevice">
     <label>
-        <input type="text" name="device" placeholder="Название оборудования"/>
+        <input type="text" name="id" placeholder="ID оборудования"/>
+        <input type="text" name="name" placeholder="Название оборудования"/>
     </label>
     <button type="submit">Обновить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>

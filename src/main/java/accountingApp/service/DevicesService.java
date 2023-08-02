@@ -23,10 +23,10 @@ public class DevicesService {
 	public void deleteDeviceById(Integer id) {
 		devicesRepository.deleteById(id);
 	}
-//
-//	public void updateProceduresAssigned(Devices devices) {
-//		devicesRepository.save(devices);
-//	}
+
+	public void updateDevice(Devices devices) {
+		devicesRepository.save(devices);
+	}
 
 //	public List<Devices> getProceduresAssignedById(int id) {
 //		return devicesRepository.findByid(id);
