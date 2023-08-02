@@ -20,7 +20,7 @@ public class RoomService {
 		roomRepository.save(room);
 	}
 
-	public void deleteProcedCaptionsById(int id) {
+	public void deleteRoomById(int id) {
 		roomRepository.deleteById(id);
 	}
 
