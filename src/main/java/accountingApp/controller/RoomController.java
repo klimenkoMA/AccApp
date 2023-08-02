@@ -41,14 +41,16 @@ public class RoomController {
 		return "room";
 	}
 
-//	@PostMapping("/updateprocedcaptions")
-//	public String updateProcedCaptions(@RequestParam int id, @RequestParam String number, Model model) {
-//		Room room = new Room(id, number);
-//		roomService.updateProcedCaptions(room);
-//		List<Room> roomList = roomService.findAllProcedCaptions();
-//		model.addAttribute("roomList", roomList);
-//		return "room";
-//	}
+	@PostMapping("/updateroom")
+	public String updateRoom(@RequestParam int id,
+							 @RequestParam String number,
+							 Model model) {
+		Room room = new Room(id, number);
+		roomService.updateRoom(room);
+		List<Room> roomList = roomService.findAllRoom();
+		model.addAttribute("roomList", roomList);
+		return "room";
+	}
 
 //	@PostMapping("findprocedcaptionsbyid")
 //	public String findProcedCaptionsById(@RequestParam int findbyid, Model model) {
