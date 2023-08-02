@@ -1,12 +1,12 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Events;
+import accountingApp.service.WorkAreaService;
+import accountingApp.service.EventsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import accountingApp.service.WorkAreaService;
-import accountingApp.service.EventsService;
 
 import java.util.List;
 
