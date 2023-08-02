@@ -20,7 +20,7 @@ public class WorkAreaService {
 		workAreaRepository.save(workArea);
 	}
 
-	public void deleteAegerCaptionsById(int id) {
+	public void deleteWorkAreaById(int id) {
 		workAreaRepository.deleteById(id);
 	}
 
