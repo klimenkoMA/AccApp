@@ -12,7 +12,7 @@ public interface WorkAreaRepository extends JpaRepository<WorkArea, Integer> {
 	@Override
 	List<WorkArea> findAll();
 
-//	List<WorkArea> findBycAeger(int id);
+	List<WorkArea> findAreaById(int id);
 
 	@Override
 	void deleteById(Integer integer);
