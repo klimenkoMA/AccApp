@@ -53,16 +53,17 @@ public class WorkAreaController {
 		return "workarea";
 	}
 
-//	@PostMapping("findaegercaptionsbyid")
-//	public String findAegerCaptionsById(@RequestParam int findbyid, Model model) {
-//
-//		if(findbyid > 0) {
-//			List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(findbyid);
-//			model.addAttribute("workAreaList", workAreaList);
-//		} else {
-//			List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-//			model.addAttribute("workAreaList", workAreaList);
-//		}
-//		return "workarea";
-//	}
+	@PostMapping("findworkareabyid")
+	public String findAegerCaptionsById(@RequestParam int id,
+										Model model) {
+
+		if(id > 0) {
+			List<WorkArea> workAreaList = workAreaService.getWorkAreaById(id);
+			model.addAttribute("workAreaList", workAreaList);
+		} else {
+			List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+			model.addAttribute("workAreaList", workAreaList);
+		}
+		return "workarea";
+	}
 }
