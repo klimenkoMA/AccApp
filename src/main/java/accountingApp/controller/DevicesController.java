@@ -57,16 +57,17 @@ public class DevicesController {
         return "devices";
     }
 
-//	@PostMapping("findproceduresassignedbyid")
-//	public String findProceduresAssignedById(@RequestParam int findbyid, Model model) {
-//
-//		if(findbyid > 0) {
-//			List<Devices> devicesList = devicesService.getProceduresAssignedById(findbyid);
-//			model.addAttribute("devicesList", devicesList);
-//		} else {
-//			List<Devices> devicesList = devicesService.findAllProceduresAssigned();
-//			model.addAttribute("devicesList", devicesList);
-//		}
-//		return "devices";
-//	}
+	@PostMapping("/finddevicebyid")
+	public String findDevicesById(@RequestParam int id,
+                                  Model model) {
+
+        List<Devices> devicesList;
+        if(id > 0) {
+            devicesList = devicesService.getDevicesById(id);
+        } else {
+            devicesList = devicesService.findAllDevices();
+        }
+        model.addAttribute("devicesList", devicesList);
+        return "devices";
+	}
 }

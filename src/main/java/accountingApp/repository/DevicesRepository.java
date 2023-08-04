@@ -11,7 +11,7 @@ public interface DevicesRepository extends JpaRepository<Devices, Integer> {
 	@Override
 	List<Devices> findAll();
 
-//	List<Devices> findByid(int id);
+	List<Devices> findByid(int id);
 
 	@Override
 	void deleteById(Integer integer);

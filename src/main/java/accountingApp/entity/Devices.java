@@ -3,17 +3,17 @@ package accountingApp.entity;
 import javax.persistence.*;
 
 /**
- * Выполнение процедур
+ * Устройства для выдачи
  */
 @Entity
-@Table(name = "devices") //procedures_assigned
+@Table(name = "devices")
 public class Devices {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id") //n_assigned
+	@Column(name = "id")
 	private Integer id;
 
-	@Column(name = "name") //n_passed пройдено процедур int
+	@Column(name = "name")
 	private String name;
 
 	public Devices() {

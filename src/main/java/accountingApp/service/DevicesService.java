@@ -28,7 +28,7 @@ public class DevicesService {
 		devicesRepository.save(devices);
 	}
 
-//	public List<Devices> getProceduresAssignedById(int id) {
-//		return devicesRepository.findByid(id);
-//	}
+	public List<Devices> getDevicesById(int id) {
+		return devicesRepository.findByid(id);
+	}
 }
