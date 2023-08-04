@@ -52,16 +52,17 @@ public class RoomController {
 		return "room";
 	}
 
-//	@PostMapping("findprocedcaptionsbyid")
-//	public String findProcedCaptionsById(@RequestParam int findbyid, Model model) {
-//
-//		if(findbyid > 0) {
-//			List<Room> roomList = roomService.getProcedCaptionsById(findbyid);
-//			model.addAttribute("roomList", roomList);
-//		} else {
-//			List<Room> roomList = roomService.findAllProcedCaptions();
-//			model.addAttribute("roomList", roomList);
-//		}
-//		return "room";
-//	}
+	@PostMapping("/findroomyid")
+	public String findRoomById(@RequestParam int id,
+							   Model model) {
+
+		if(id > 0) {
+			List<Room> roomList = roomService.getRoomById(id);
+			model.addAttribute("roomList", roomList);
+		} else {
+			List<Room> roomList = roomService.findAllRoom();
+			model.addAttribute("roomList", roomList);
+		}
+		return "room";
+	}
 }
