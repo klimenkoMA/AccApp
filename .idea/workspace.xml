@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Repaired findById method in Room Classes">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Repaired findById method in ITStaff Classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/RoomRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/RoomRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/RoomService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/RoomService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +132,7 @@
       <workItem from="1690995688698" duration="1908000" />
       <workItem from="1691029744447" duration="978000" />
       <workItem from="1691083401136" duration="1223000" />
-      <workItem from="1691165263722" duration="1128000" />
+      <workItem from="1691165263722" duration="2298000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1688837083515</created>
@@ -467,7 +463,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691166159579</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Repaired findById method in ITStaff Classes">
+      <created>1691166621425</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1691166621425</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Repaired findById method in ITStaff Classes">
+      <created>1691167017453</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1691167017453</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +496,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed the tag in events.html" />
     <MESSAGE value="Changed the tag in room.html and refactored RoomController" />
     <MESSAGE value="Refactored RoomControllerr and roomService&#10;Refactored all WorkArea classes" />
     <MESSAGE value="Refactored some entity fields&#10;Added some tags to Project_Default.xml" />
@@ -511,6 +520,7 @@
     <MESSAGE value="Repaired update method in Employee, Devices Classes" />
     <MESSAGE value="Repaired findById method in WorkArea Classes" />
     <MESSAGE value="Repaired findById method in Room Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repaired findById method in Room Classes" />
+    <MESSAGE value="Repaired findById method in ITStaff Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repaired findById method in ITStaff Classes" />
   </component>
 </project>

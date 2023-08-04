@@ -3,10 +3,10 @@ package accountingApp.entity;
 import javax.persistence.*;
 
 /**
- * Пользователи
+ * Сотрудники
  */
 @Entity
-@Table(name = "EMPLOYEE") //persons
+@Table(name = "EMPLOYEE")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,13 +16,13 @@ public class Employee {
     @Column(name = "fio")
     private String fio;
 
-    @Column(name = "dborn") // login
+    @Column(name = "dborn")
     private String dborn;
 
-    @Column(name = "workarea") // password
+    @Column(name = "workarea")
     private String workarea;
 
-    @Column(name = "room") // prof_id
+    @Column(name = "room")
     private String room;
 
     public Employee() {
