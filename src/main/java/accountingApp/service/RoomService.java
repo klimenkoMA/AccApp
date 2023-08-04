@@ -28,7 +28,7 @@ public class RoomService {
 		roomRepository.save(room);
 	}
 
-//	public List<Room> getProcedCaptionsById(int id) {
-//		return roomRepository.findProcedCaptionsBycProc(id);
-//	}
+	public List<Room> getRoomById(int id) {
+		return roomRepository.findRoomById(id);
+	}
 }

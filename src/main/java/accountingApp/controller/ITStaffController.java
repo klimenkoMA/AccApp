@@ -54,18 +54,19 @@ public class ITStaffController {
 		return "itstaff";
 	}
 
-//	@PostMapping("findpersonsprofbyid")
-//	public String findPersonById(@RequestParam int findbyid, Model model) {
-//
-//		if(findbyid > 0) {
-//			List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(findbyid);
-//			model.addAttribute("itStaffList", ITStaffList);
-//		} else {
-//			List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-//			model.addAttribute("itStaffList", ITStaffList);
-//		}
-//		return "itstaff";
-//	}
+	@PostMapping("/finditstaffbyid")
+	public String findPersonById(@RequestParam int id,
+								 Model model) {
+
+		List<ITStaff> ITStaffList;
+		if(id > 0) {
+			ITStaffList = ITStaffService.getITStaffById(id);
+		} else {
+			ITStaffList = ITStaffService.getAllItStaff();
+		}
+		model.addAttribute("itStaffList", ITStaffList);
+		return "itstaff";
+	}
 
 
 }

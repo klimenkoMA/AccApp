@@ -4,19 +4,18 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Названия процедур
+ * Номера кабинетов
  */
 @Entity
-@Table(name = "ROOM") //proced_captions
+@Table(name = "ROOM")
 public class Room {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID") //c_proc
+    @Column(name = "ID")
     private int id;
 
-    @Column(name = "number") //caption
-    //Название процедуры
+    @Column(name = "number")
     private String number;
 
     public Room() {
