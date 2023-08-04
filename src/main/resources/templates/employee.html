@@ -89,7 +89,7 @@
 
 <form method="post" action="/findbyfio">
     <label>
-        <input type="text" name="findbyfio" placeholder="Введите ФИО сотрудника">
+        <input type="text" name="fio" placeholder="Введите ФИО сотрудника">
     </label>
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
@@ -97,7 +97,7 @@
 
 <form method="post" action="/findbyid">
     <label>
-        <input type="text" name="findbyid" placeholder="Введите ID сотрудника">
+        <input type="text" name="id" placeholder="Введите ID сотрудника">
     </label>
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
