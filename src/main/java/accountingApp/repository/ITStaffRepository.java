@@ -11,7 +11,7 @@ public interface ITStaffRepository extends JpaRepository<ITStaff, Integer> {
 	@Override
 	List<ITStaff> findAll();
 
-//	List<ITStaff> findPersonsProfById(int id);
+	List<ITStaff> findITStaffById(int id);
 
 	@Override
 	void deleteById(Integer integer);

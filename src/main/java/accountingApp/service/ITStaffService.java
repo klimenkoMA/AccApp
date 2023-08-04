@@ -11,30 +11,30 @@ import java.util.List;
 
 @Service
 public class ITStaffService {
-	@Autowired
-	ITStaffRepository ITStaffRepository;
-	@Autowired
-	EmployeeRepository employeeRepository;
+    @Autowired
+    ITStaffRepository ITStaffRepository;
+    @Autowired
+    EmployeeRepository employeeRepository;
 
 
-	public List<ITStaff> getAllItStaff() {
-		return ITStaffRepository.findAll();
-	}
+    public List<ITStaff> getAllItStaff() {
+        return ITStaffRepository.findAll();
+    }
 
-	public void addNewItStaff(ITStaff ITStaff){
-		ITStaffRepository.save(ITStaff);
-	}
+    public void addNewItStaff(ITStaff ITStaff) {
+        ITStaffRepository.save(ITStaff);
+    }
 
-	public void deleteITStaffById(int id){
-		ITStaffRepository.deleteById(id);
-	}
+    public void deleteITStaffById(int id) {
+        ITStaffRepository.deleteById(id);
+    }
 
-	public void updateItStaff(ITStaff ITStaff){
-		ITStaffRepository.save(ITStaff);
-	}
+    public void updateItStaff(ITStaff ITStaff) {
+        ITStaffRepository.save(ITStaff);
+    }
 
-//	public List<ITStaff> getPersonsProfById(int id) {
-//		return ITStaffRepository.findPersonsProfById(id);
-//	}
+    public List<ITStaff> getITStaffById(int id) {
+        return ITStaffRepository.findITStaffById(id);
+    }
 
 }
