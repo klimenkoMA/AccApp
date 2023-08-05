@@ -1,6 +1,7 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Устройства для выдачи
@@ -15,6 +16,9 @@ public class Devices {
 
 	@Column(name = "name")
 	private String name;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	private Set<Events> events;
 
 	public Devices() {
 	}
