@@ -85,4 +85,15 @@ public class Events {
     public void setItstaffid(ITStaff itStaffId) {
         this.itstaffid = itStaffId;
     }
+
+    @Override
+    public String toString() {
+        return "Events{" +
+                "id=" + id +
+                ", date='" + date + '\'' +
+                ", device=" + device +
+                ", employeeid=" + employeeid +
+                ", itstaffid=" + itstaffid +
+                '}';
+    }
 }
