@@ -1,7 +1,7 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 /**
  * Устройства для выдачи
@@ -12,13 +12,13 @@ public class Devices {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Integer id;
+	private int id;
 
 	@Column(name = "name")
 	private String name;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	private Set<Events> events;
+	private List<Events> events;
 
 	public Devices() {
 	}
@@ -27,16 +27,24 @@ public class Devices {
 		this.name = name;
 	}
 
-	public Devices(Integer id, String name) {
+	public Devices(int id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 
-	public Integer getId() {
+	public List<Events> getEvents() {
+		return events;
+	}
+
+	public void setEvents(List<Events> events) {
+		this.events = events;
+	}
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -46,6 +54,17 @@ public class Devices {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void addEvent(Events event){
+		if (event != null){
+			events.add(event);
+		}
+	}
+
+	@Override
+	public String toString() {
+		return name;
 	}
 }
 

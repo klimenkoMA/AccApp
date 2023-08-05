@@ -13,6 +13,8 @@ public interface DevicesRepository extends JpaRepository<Devices, Integer> {
 
 	List<Devices> findByid(int id);
 
+	List<Devices> findByName(String name);
+
 	@Override
 	void deleteById(Integer integer);
 }

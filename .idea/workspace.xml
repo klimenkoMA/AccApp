@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Repaired findById method in Devices Classes">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild deleteEvent() method in EventsController class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/EventsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/EventsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,42 +121,11 @@
       <workItem from="1691029744447" duration="978000" />
       <workItem from="1691083401136" duration="1223000" />
       <workItem from="1691165263722" duration="3940000" />
-      <workItem from="1691210364785" duration="1622000" />
-    </task>
-    <task id="LOCAL-00004" summary="Adding some new tables into DB">
-      <created>1688924799670</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1688924799670</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Refactoring entity Persons to Employee">
-      <created>1689011712684</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1689011712684</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Refactoring some classes`s names">
-      <created>1689094825375</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1689094825375</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Deleting some classes">
-      <created>1689095228087</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1689095228087</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Checking and repairing some mistakes after deleting">
-      <created>1689096873200</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1689096873201</updated>
+      <workItem from="1691210364785" duration="1843000" />
+      <workItem from="1691229723076" duration="585000" />
+      <workItem from="1691235062891" duration="9815000" />
+      <workItem from="1691245728236" duration="358000" />
+      <workItem from="1691251421719" duration="5329000" />
     </task>
     <task id="LOCAL-00009" summary="Changing fields of Employee class">
       <created>1689183964006</created>
@@ -466,7 +435,42 @@
       <option name="project" value="LOCAL" />
       <updated>1691169153194</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff">
+      <created>1691213167246</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1691213167247</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Preparing for rebuild Events classes">
+      <created>1691237399901</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1691237399901</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Global rebuild almost all classes">
+      <created>1691245894512</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1691245894513</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Finished to rebuild addNewEvent() method in EventsController class">
+      <created>1691254785990</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1691254785991</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Rebuild deleteEvent() method in EventsController class">
+      <created>1691255267877</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1691255267877</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,11 +489,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored some entity fields&#10;Added some tags to Project_Default.xml" />
-    <MESSAGE value="Refactored some entity fields in employee classes" />
-    <MESSAGE value="Refactored some entity fields in itStaff classes" />
-    <MESSAGE value="Refactored some entity fields in itStaff classes v2" />
-    <MESSAGE value="Ended refactoring itstaff classes" />
     <MESSAGE value="Ended refactoring employee classes, create method (CRUD) work correctly" />
     <MESSAGE value="Tried to finish devices.html" />
     <MESSAGE value="Connected to another DB" />
@@ -510,6 +509,11 @@
     <MESSAGE value="Repaired findById method in ITStaff Classes" />
     <MESSAGE value="Repaired findById method in Employee Classes" />
     <MESSAGE value="Repaired findById method in Devices Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repaired findById method in Devices Classes" />
+    <MESSAGE value="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff" />
+    <MESSAGE value="Preparing for rebuild Events classes" />
+    <MESSAGE value="Global rebuild almost all classes" />
+    <MESSAGE value="Finished to rebuild addNewEvent() method in EventsController class" />
+    <MESSAGE value="Rebuild deleteEvent() method in EventsController class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild deleteEvent() method in EventsController class" />
   </component>
 </project>

@@ -70,4 +70,12 @@ public class DevicesController {
         model.addAttribute("devicesList", devicesList);
         return "devices";
 	}
+
+    @PostMapping("/finddevicebyname")
+    public String findDevicesById(@RequestParam String name,
+                                  Model model) {
+        List<Devices> devicesList = devicesService.getDevicesByName(name);
+        model.addAttribute("devicesList", devicesList);
+        return "devices";
+    }
 }

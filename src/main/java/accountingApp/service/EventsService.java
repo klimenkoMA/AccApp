@@ -12,23 +12,23 @@ public class EventsService {
 	@Autowired
 	EventsRepository eventsRepository;
 
-	public List<Events> findAllRecreantsAegers() {
+	public List<Events> findAllEvents() {
 		return eventsRepository.findAll();
 	}
 
-	public void addNewRecreantsAegers(Events events) {
+	public void addNewEvent(Events events) {
 		eventsRepository.save(events);
 	}
 
-	public void deleteRecreantsAegersById(int id) {
+	public void deleteEventsById(int id) {
 		eventsRepository.deleteById(id);
 	}
 
-	public void updateRecreantsAegers(Events events) {
+	public void updateEvent(Events events) {
 		eventsRepository.save(events);
 	}
 
-//	public List<Events> getRecreantsAegersById(int id) {
-//		return eventsRepository.findById(id);
-//	}
+	public List<Events> getEventById(int id) {
+		return eventsRepository.findById(id);
+	}
 }

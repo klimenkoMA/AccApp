@@ -68,13 +68,22 @@
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="finditstaffbyid">
+<form method="post" action="/finditstaffbyid">
     <label>
         <input type="text" name="id" placeholder="Введите ID программиста">
     </label>
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
+
+<form method="post" action="/finditstaffbyname">
+    <label>
+        <input type="text" name="name" placeholder="Введите фамилию программиста">
+    </label>
+    <button type="submit">Найти</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
 <table align="center" bgcolor="#a9a9a9" width="400" style="columns: max-content">
     <tr>
         <th>ID программиста</th>

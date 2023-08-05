@@ -14,7 +14,6 @@
             <button type="submit">Сотрудник</button>
         </form>
     </tr>
-
     <tr>
         <form action="/itstaff">
             <button type="submit">Инженер-программист</button>
@@ -42,16 +41,27 @@
     </tr>
 </table>
 
-<form method="post" action="/addevent">  <!-- /addrecreantsaegers -->
-    <input type="text" name="date" placeholder="Введите дату события">
-    <input type="text" name="employeefio" placeholder="Введите ФИО сотрудника"/>
-    <input type="text" name="itstaffname" placeholder="Введите ФИО программиста"/>
+<form method="post" action="/addevent">
+    <label>
+        <input type="text" name="date" placeholder="Введите дату события"/>
+    </label>
+    <label>
+        <input type="text" name="device" placeholder="Введите устройство"/>
+    </label>
+    <label>
+        <input type="text" name="employeeid" placeholder="Введите ФИО сотрудника"/>
+    </label>
+    <label>
+        <input type="text" name="itstaffid" placeholder="Введите ФИО программиста"/>
+    </label>
     <button type="submit">Добавить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="deleteevent">
-    <input type="text" name="delete" placeholder="Введите id события">
+<form method="post" action="/deleteevent">
+    <label>
+        <input type="text" name="id" placeholder="Введите id события"/>
+    </label>
     <button type="submit">Удалить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
@@ -60,15 +70,26 @@
     <label>
         <input type="text" name="id" placeholder="Введите id события"/>
     </label>
-    <input type="text" name="date" placeholder="Введите дату события"/>
-    <input type="text" name="employeefio" placeholder="Введите ФИО сотрудника"/>
-    <input type="text" name="itstaffname" placeholder="Введите ФИО программиста"/>
+    <label>
+        <input type="text" name="date" placeholder="Введите дату события"/>
+    </label>
+    <label>
+        <input type="text" name="device" placeholder="Введите устройство"/>
+    </label>
+    <label>
+        <input type="text" name="employeeid" placeholder="Введите ФИО сотрудника"/>
+    </label>
+    <label>
+        <input type="text" name="itstaffid" placeholder="Введите ФИО программиста"/>
+    </label>
     <button type="submit">Обновить</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 
-<form method="post" action="findeventbyid">
-    <input type="text" name="findbyid" placeholder="Введите id события">
+<form method="post" action="/findeventbyid">
+    <label>
+        <input type="text" name="id" placeholder="Введите id события"/>
+    </label>
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
@@ -77,6 +98,7 @@
     <tr>
         <th>ID события</th>
         <th>Дата события</th>
+        <th>Оборудование</th>
         <th>ФИО сотрудника</th>
         <th>ФИО программиста</th>
     </tr>
@@ -90,10 +112,13 @@
                     <div>[[${element.date}]]</div>
                 </td>
                 <td>
-                    <div>[[${element.employeefio}]]</div>
+                    <div>[[${element.device}]]</div>
                 </td>
                 <td>
-                    <div>[[${element.itstaffname}]]</div>
+                    <div>[[${element.employeeid}]]</div>
+                </td>
+                <td>
+                    <div>[[${element.itstaffid}]]</div>
                 </td>
             </tr>
         </div>
