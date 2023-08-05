@@ -1,92 +1,103 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
- * Пользователи
+ * Сотрудники
  */
 @Entity
-@Table(name = "persons")
+@Table(name = "EMPLOYEE")
 public class Employee {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	// Уникальный номер int
-	private int id;
-	@Column(name = "fio")
-	// Фамилия Имя Очество nvarchar(50)
-	private String fio;
-	@Column(name = "login")
-	// логин char(8)
-	private String login;
-	@Column(name = "passwd")
-	// пароль char(8)
-	private String password;
-	@ManyToOne(cascade = CascadeType.REMOVE)
-	@JoinColumn(name = "prof_id")
-	// Цифра профессии tinyint
-	private ITStaff prof_id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
 
-	public Employee() {
-	}
+    @Column(name = "fio")
+    private String fio;
 
-	public Employee(int id, String fio, String login, String password, ITStaff prof_id) {
-		this.id = id;
-		this.fio = fio;
-		this.login = login;
-		this.password = password;
-		this.prof_id = prof_id;
-	}
+    @Column(name = "dborn")
+    private String dborn;
 
-	public Employee(String fio, String login, String password, ITStaff prof_id) {
-		this.fio = fio;
-		this.login = login;
-		this.password = password;
-		this.prof_id = prof_id;
-	}
+    @Column(name = "workarea")
+    private String workarea;
 
-	@Override
-	public String toString() {
-		return fio;
-	}
+    @Column(name = "room")
+    private String room;
 
-	public int getId() {
-		return id;
-	}
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Events> events;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Employee() {
+    }
 
-	public String getFio() {
-		return fio;
-	}
+    public Employee(int id, String fio, String dborn, String workarea, String room) {
+        this.id = id;
+        this.fio = fio;
+        this.dborn = dborn;
+        this.workarea = workarea;
+        this.room = room;
+    }
 
-	public void setFio(String fio) {
-		this.fio = fio;
-	}
+    public Employee(String fio, String dborn, String workarea, String room) {
+        this.fio = fio;
+        this.dborn = dborn;
+        this.workarea = workarea;
+        this.room = room;
+    }
 
-	public String getLogin() {
-		return login;
-	}
+    public Set<Events> getEvents() {
+        return events;
+    }
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
+    public void setEvents(Set<Events> events) {
+        this.events = events;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public ITStaff getProf_id() {
-		return prof_id;
-	}
+    public String getFio() {
+        return fio;
+    }
 
-	public void setProf_id(ITStaff prof_id) {
-		this.prof_id = prof_id;
-	}
+    public void setFio(String fio) {
+        this.fio = fio;
+    }
+
+    public String getDborn() {
+        return dborn;
+    }
+
+    public void setDborn(String dborn) {
+        this.dborn = dborn;
+    }
+
+    public String getWorkarea() {
+        return workarea;
+    }
+
+    public void setWorkarea(String workArea) {
+        this.workarea = workArea;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
+
+    public void addEvent(Events event){
+        if (event != null){
+            events.add(event);
+        }
+    }
 }

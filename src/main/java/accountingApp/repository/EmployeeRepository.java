@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
-    //	@Query("SELECT c FROM users c")
+    @Override
     List<Employee> findAll();
 
     List<Employee> findByFio(String fio);

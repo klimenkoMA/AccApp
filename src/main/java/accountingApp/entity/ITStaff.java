@@ -1,82 +1,68 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
+
 
 /**
  * Виды
  * пользователей
  **/
 @Entity
-@Table(name = "persons_prof")
+@Table(name = "itstaff")
 public class ITStaff {
 
-	@Override
-	public String toString() {
-		return nameRec;
-	}
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
 
-	@OneToMany(mappedBy = "prof_id")
-	// Цифра вида пользователей
-	private List<Employee> cMenu;
+    @Column(name = "name")
+    private String name;
 
-	@Column(name = "name_rec")
-	//Название вида пользователей nvarchar(50)
-	private String nameRec;
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Events> events;
 
-	public ITStaff(String nameRec) {
-		this.nameRec = nameRec;
-	}
+    public ITStaff() {
+    }
 
-	public ITStaff() {
-	}
+    public ITStaff(String name) {
+        this.name = name;
+    }
 
-	public ITStaff(int id, List<Employee> cMenu, String nameRec) {
-		this.id = id;
-		this.cMenu = cMenu;
-		this.nameRec = nameRec;
-	}
+    public ITStaff(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
-	public ITStaff(int id) {
-		this.id = id;
-	}
+    public Set<Events> getEvents() {
+        return events;
+    }
 
-	public ITStaff(int id, String nameRec) {
-		this.id = id;
-		this.nameRec = nameRec;
-	}
+    public void setEvents(Set<Events> events) {
+        this.events = events;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public List<Employee> getcMenu() {
-		return cMenu;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setcMenu(List<Employee> cMenu) {
-		this.cMenu = cMenu;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getNameRec() {
-		return nameRec;
-	}
-
-	public void setNameRec(String nameRec) {
-		this.nameRec = nameRec;
-	}
-
-	public void addPersons(Employee employee){
-		if(employee != null){
-			cMenu.add(employee);
-		}
-	}
+    public void addEvent(Events event){
+        if (event != null){
+            events.add(event);
+        }
+    }
 }

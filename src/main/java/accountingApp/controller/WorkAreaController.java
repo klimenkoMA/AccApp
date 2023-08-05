@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import accountingApp.service.WorkAreaService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import accountingApp.service.WorkAreaService;
 
 import java.util.List;
 
@@ -16,49 +16,53 @@ public class WorkAreaController {
 	@Autowired
 	WorkAreaService workAreaService;
 
-	@GetMapping("/allAegerCaptions")
-	public String getAegerCaptions(Model model) {
-		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-		model.addAttribute("aegerCaptionsList", workAreaList);
+	@GetMapping("/workarea") //allAegerCaptions
+	public String getWorkArea(Model model) {
+		List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+		model.addAttribute("workAreaList", workAreaList);
 		return "workarea";
 	}
 
-	@PostMapping("/addaegercaptions")
-	public String addAegerCaptions(@RequestParam String caption,
-	                               Model model) {
-		WorkArea workArea = new WorkArea(caption);
-		workAreaService.addNewAegerCaptions(workArea);
-		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-		model.addAttribute("aegerCaptionsList", workAreaList);
+	@PostMapping("/addworkarea") //addaegercaptions
+	public String addWorkArea(@RequestParam String name,
+							  Model model) {
+		WorkArea workArea = new WorkArea(name);
+		workAreaService.addNewWorkArea(workArea);
+		List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+		model.addAttribute("workAreaList", workAreaList);
 		return "workarea";
 	}
 
-	@PostMapping("/deleteaegercaptions")
-	public String deleteAegerCaptions(@RequestParam int cAeger, Model model) {
-		workAreaService.deleteAegerCaptionsById(cAeger);
-		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-		model.addAttribute("aegerCaptionsList", workAreaList);
+	@PostMapping("/deleteworkarea")
+	public String deleteWorkArea(@RequestParam int id,
+								 Model model) {
+		workAreaService.deleteWorkAreaById(id);
+		List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+		model.addAttribute("workAreaList", workAreaList);
 		return "workarea";
 	}
 
-	@PostMapping("/updateaegercaptions")
-	public String updateAegerCaptions(@RequestParam int cAeger, @RequestParam String caption, Model model) {
-		WorkArea workArea = new WorkArea(cAeger, caption);
-		workAreaService.updateAegerCaptions(workArea);
-		List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-		model.addAttribute("aegerCaptionsList", workAreaList);
+	@PostMapping("/updateworkarea")
+	public String updateWorkArea(@RequestParam int id,
+								 @RequestParam String name,
+								 Model model) {
+		WorkArea workArea = new WorkArea(id, name);
+		workAreaService.updateWorkArea(workArea);
+		List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+		model.addAttribute("workAreaList", workAreaList);
 		return "workarea";
 	}
 
-	@PostMapping("findaegercaptionsbyid")
-	public String findAegerCaptionsById(@RequestParam int findbyid, Model model) {
+	@PostMapping("findworkareabyid")
+	public String findAegerCaptionsById(@RequestParam int id,
+										Model model) {
 
-		if(findbyid > 0) {
-			List<WorkArea> workAreaList = workAreaService.getAegerCaptionsById(findbyid);
-			model.addAttribute("aegerCaptionsList", workAreaList);
+		if(id > 0) {
+			List<WorkArea> workAreaList = workAreaService.getWorkAreaById(id);
+			model.addAttribute("workAreaList", workAreaList);
 		} else {
-			List<WorkArea> workAreaList = workAreaService.findAllAegerCaptions();
-			model.addAttribute("aegerCaptionsList", workAreaList);
+			List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+			model.addAttribute("workAreaList", workAreaList);
 		}
 		return "workarea";
 	}

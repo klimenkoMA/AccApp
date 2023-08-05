@@ -7,28 +7,28 @@ import accountingApp.repository.WorkAreaRepository;
 
 import java.util.List;
 
-@Service
+@Service 
 public class WorkAreaService {
 	@Autowired
 	WorkAreaRepository workAreaRepository;
 
-	public List<WorkArea> findAllAegerCaptions() {
+	public List<WorkArea> findAllWorkArea() {
 		return workAreaRepository.findAll();
 	}
 
-	public void addNewAegerCaptions(WorkArea workArea) {
+	public void addNewWorkArea(WorkArea workArea) {
 		workAreaRepository.save(workArea);
 	}
 
-	public void deleteAegerCaptionsById(int id) {
+	public void deleteWorkAreaById(int id) {
 		workAreaRepository.deleteById(id);
 	}
 
-	public void updateAegerCaptions(WorkArea workArea) {
+	public void updateWorkArea(WorkArea workArea) {
 		workAreaRepository.save(workArea);
 	}
 
-	public List<WorkArea> getAegerCaptionsById(int id) {
-		return workAreaRepository.findBycAeger(id);
+	public List<WorkArea> getWorkAreaById(int id) {
+		return workAreaRepository.findAreaById(id);
 	}
 }

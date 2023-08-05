@@ -12,23 +12,23 @@ public class DevicesService {
 	@Autowired
 	DevicesRepository devicesRepository;
 
-	public List<Devices> findAllProceduresAssigned() {
+	public List<Devices> findAllDevices() {
 		return devicesRepository.findAll();
 	}
 
-	public void addNewProceduresAssigned(Devices devices) {
+	public void addNewDevice(Devices devices) {
 		devicesRepository.save(devices);
 	}
 
-	public void deleteProceduresAssignedById(int id) {
+	public void deleteDeviceById(Integer id) {
 		devicesRepository.deleteById(id);
 	}
 
-	public void updateProceduresAssigned(Devices devices) {
+	public void updateDevice(Devices devices) {
 		devicesRepository.save(devices);
 	}
 
-	public List<Devices> getProceduresAssignedById(int id) {
+	public List<Devices> getDevicesById(int id) {
 		return devicesRepository.findByid(id);
 	}
 }

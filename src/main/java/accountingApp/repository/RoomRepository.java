@@ -8,10 +8,10 @@ import java.util.List;
 
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Integer> {
+    @Override
+    List<Room> findAll();
 
-	List<Room> findAll();
+	List<Room> findRoomById(int id);
 
-	List<Room> findProcedCaptionsBycProc(int id);
-
-	void deleteById(int id);
+    void deleteById(int id);
 }

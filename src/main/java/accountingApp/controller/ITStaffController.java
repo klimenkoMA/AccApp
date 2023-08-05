@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import accountingApp.service.ITStaffService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import accountingApp.service.ITStaffService;
 
 import java.util.List;
 
@@ -17,49 +17,56 @@ public class ITStaffController {
 	@Autowired
 	ITStaffService ITStaffService;
 
-	@PostMapping("/addpersonsprof")
-	public String addPersonsProf(@RequestParam String name_rec, Model model) {
-		ITStaff ITStaff = new ITStaff(name_rec);
-		ITStaffService.addNewPersonsProf(ITStaff);
-		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-		model.addAttribute("personsProfList", ITStaffList);
+	@GetMapping("/itstaff") //allPersonsProf
+	public String getItStaff(Model model) {
+		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+		model.addAttribute("itStaffList", ITStaffList);
 		return "itstaff";
 	}
 
-	@PostMapping("/deletepersonsprof")
-	public String deletePersonsProf(@RequestParam int id, Model model) {
-		ITStaffService.deletePersonsProfById(id);
-		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-		model.addAttribute("personsProfList", ITStaffList);
+	@PostMapping("/additstaff")//addpersonsprof
+	public String addItStaff(@RequestParam String name,
+							 Model model) {
+		ITStaff ITStaff = new ITStaff(name);
+		ITStaffService.addNewItStaff(ITStaff);
+		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+		model.addAttribute("itStaffList", ITStaffList);
 		return "itstaff";
 	}
 
-	@PostMapping("/updatepersonsprof")
-	public String updatePersonProf(@RequestParam int id, @RequestParam String name_rec, Model model) {
-		ITStaff ITStaff = new ITStaff(id, name_rec);
-		ITStaffService.updatePersonsProf(ITStaff);
-		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-		model.addAttribute("personsProfList", ITStaffList);
+	@PostMapping("/deleteitstaff")
+	public String deleteITStaff(@RequestParam int id,
+								Model model) {
+		ITStaffService.deleteITStaffById(id);
+		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+		model.addAttribute("itStaffList", ITStaffList);
 		return "itstaff";
 	}
 
-	@PostMapping("findpersonsprofbyid")
-	public String findPersonById(@RequestParam int findbyid, Model model) {
+	@PostMapping("/updateitstaff")
+	public String updateItStaff(@RequestParam int id,
+								@RequestParam String name,
+								Model model) {
+		ITStaff ITStaff = new ITStaff(id, name);
+		ITStaffService.updateItStaff(ITStaff);
+		List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+		model.addAttribute("itStaffList", ITStaffList);
+		return "itstaff";
+	}
 
-		if(findbyid > 0) {
-			List<ITStaff> ITStaffList = ITStaffService.getPersonsProfById(findbyid);
-			model.addAttribute("personsProfList", ITStaffList);
+	@PostMapping("/finditstaffbyid")
+	public String findPersonById(@RequestParam int id,
+								 Model model) {
+
+		List<ITStaff> ITStaffList;
+		if(id > 0) {
+			ITStaffList = ITStaffService.getITStaffById(id);
 		} else {
-			List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-			model.addAttribute("personsProfList", ITStaffList);
+			ITStaffList = ITStaffService.getAllItStaff();
 		}
+		model.addAttribute("itStaffList", ITStaffList);
 		return "itstaff";
 	}
 
-	@GetMapping("/allPersonsProf")
-	public String getPersonsProf(Model model) {
-		List<ITStaff> ITStaffList = ITStaffService.getAllPersonsProf();
-		model.addAttribute("personsProfList", ITStaffList);
-		return "itstaff";
-	}
+
 }

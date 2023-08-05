@@ -1,0 +1,172 @@
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>2.4.5</version>\r\n        <relativePath/> <!-- lookup parent from repository -->\r\n    </parent>\r\n    <groupId>org.example</groupId>\r\n    <artifactId>RecProj</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <properties>\r\n        <java.version>14</java.version>\r\n    </properties>\r\n    <dependencies>\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-validation</artifactId>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-actuator</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-data-jpa</artifactId>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-security</artifactId>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>javax.servlet</groupId>\r\n            <artifactId>jstl</artifactId>\r\n            <version>1.2</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-thymeleaf</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-web</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-devtools</artifactId>\r\n            <scope>runtime</scope>\r\n            <optional>true</optional>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-test</artifactId>\r\n            <scope>test</scope>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.apache.tomcat.embed</groupId>\r\n            <artifactId>tomcat-embed-jasper</artifactId>\r\n            <version>9.0.27</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.security</groupId>\r\n            <artifactId>spring-security-taglibs</artifactId>\r\n            <version>5.2.0.RELEASE</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>com.microsoft.sqlserver</groupId>\r\n            <artifactId>mssql-jdbc</artifactId>\r\n            <scope>runtime</scope>\r\n        </dependency>\r\n    </dependencies>\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n                <configuration>\r\n                    <excludes>\r\n                        <exclude>\r\n                            <groupId>org.projectlombok</groupId>\r\n                            <artifactId>lombok</artifactId>\r\n                        </exclude>\r\n                    </excludes>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision bf3999d5658ac63118ff8cf965b0199e5a917b1f)
++++ b/pom.xml	(date 1690828835643)
+@@ -19,40 +19,47 @@
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-validation</artifactId>
++            <scope>provided</scope>
+         </dependency>
+ 
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-actuator</artifactId>
++            <scope>provided</scope>
+         </dependency>
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-data-jpa</artifactId>
++            <scope>provided</scope>
+         </dependency>
+ 
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-security</artifactId>
++            <scope>provided</scope>
+         </dependency>
+ 
+         <dependency>
+             <groupId>javax.servlet</groupId>
+             <artifactId>jstl</artifactId>
+             <version>1.2</version>
++            <scope>provided</scope>
+         </dependency>
+ 
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-thymeleaf</artifactId>
++            <scope>provided</scope>
+         </dependency>
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-web</artifactId>
++            <scope>provided</scope>
+         </dependency>
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-devtools</artifactId>
+-            <scope>runtime</scope>
++            <scope>provided</scope>
+             <optional>true</optional>
+         </dependency>
+ 
+@@ -66,12 +73,14 @@
+             <groupId>org.apache.tomcat.embed</groupId>
+             <artifactId>tomcat-embed-jasper</artifactId>
+             <version>9.0.27</version>
++            <scope>provided</scope>
+         </dependency>
+ 
+         <dependency>
+             <groupId>org.springframework.security</groupId>
+             <artifactId>spring-security-taglibs</artifactId>
+             <version>5.2.0.RELEASE</version>
++            <scope>provided</scope>
+         </dependency>
+ 
+         <dependency>
+Index: src/main/java/accountingApp/controller/RoomController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package accountingApp.controller;\r\n\r\nimport accountingApp.entity.Room;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Controller;\r\nimport org.springframework.ui.Model;\r\nimport org.springframework.web.bind.annotation.GetMapping;\r\nimport accountingApp.service.RoomService;\r\nimport org.springframework.web.bind.annotation.PostMapping;\r\nimport org.springframework.web.bind.annotation.RequestParam;\r\n\r\nimport java.util.List;\r\n\r\n@Controller\r\npublic class RoomController {\r\n\t@Autowired\r\n\tRoomService roomService;\r\n\r\n\t@GetMapping(\"/room\") //allProcedCaptions\r\n\tpublic String getRoom(Model model) {\r\n\t\tList<Room> roomList = roomService.findAllRoom();\r\n\t\tmodel.addAttribute(\"roomList\", roomList);\r\n\t\treturn \"room\";\r\n\t}\r\n\r\n\t@PostMapping(\"/addroom\")//addprocedcaptions\r\n\tpublic String addRoom(@RequestParam String number,\r\n\t\t\t\t\t\t  Model model) {\r\n\t\tRoom room = new Room(number);\r\n\t\troomService.addNewRoom(room);\r\n\t\tList<Room> roomList = roomService.findAllRoom();\r\n\t\tmodel.addAttribute(\"roomList\", roomList);\r\n\t\treturn \"room\";\r\n\t}\r\n\r\n//\t@PostMapping(\"/deleteprocedcaptions\")\r\n//\tpublic String deleteProcedCaptions(@RequestParam int cProc, Model model) {\r\n//\t\troomService.deleteProcedCaptionsById(cProc);\r\n//\t\tList<Room> roomList = roomService.findAllProcedCaptions();\r\n//\t\tmodel.addAttribute(\"roomList\", roomList);\r\n//\t\treturn \"room\";\r\n//\t}\r\n\r\n//\t@PostMapping(\"/updateprocedcaptions\")\r\n//\tpublic String updateProcedCaptions(@RequestParam int cProc, @RequestParam String number, Model model) {\r\n//\t\tRoom room = new Room(cProc, number);\r\n//\t\troomService.updateProcedCaptions(room);\r\n//\t\tList<Room> roomList = roomService.findAllProcedCaptions();\r\n//\t\tmodel.addAttribute(\"roomList\", roomList);\r\n//\t\treturn \"room\";\r\n//\t}\r\n\r\n//\t@PostMapping(\"findprocedcaptionsbyid\")\r\n//\tpublic String findProcedCaptionsById(@RequestParam int findbyid, Model model) {\r\n//\r\n//\t\tif(findbyid > 0) {\r\n//\t\t\tList<Room> roomList = roomService.getProcedCaptionsById(findbyid);\r\n//\t\t\tmodel.addAttribute(\"roomList\", roomList);\r\n//\t\t} else {\r\n//\t\t\tList<Room> roomList = roomService.findAllProcedCaptions();\r\n//\t\t\tmodel.addAttribute(\"roomList\", roomList);\r\n//\t\t}\r\n//\t\treturn \"room\";\r\n//\t}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/accountingApp/controller/RoomController.java b/src/main/java/accountingApp/controller/RoomController.java
+--- a/src/main/java/accountingApp/controller/RoomController.java	(revision bf3999d5658ac63118ff8cf965b0199e5a917b1f)
++++ b/src/main/java/accountingApp/controller/RoomController.java	(date 1690827672566)
+@@ -33,17 +33,18 @@
+ 		return "room";
+ 	}
+ 
+-//	@PostMapping("/deleteprocedcaptions")
+-//	public String deleteProcedCaptions(@RequestParam int cProc, Model model) {
+-//		roomService.deleteProcedCaptionsById(cProc);
+-//		List<Room> roomList = roomService.findAllProcedCaptions();
+-//		model.addAttribute("roomList", roomList);
+-//		return "room";
+-//	}
++	@PostMapping("/deleteroom")
++	public String deleteRoom(@RequestParam int id,
++							 Model model) {
++		roomService.deleteRoomById(id);
++		List<Room> roomList = roomService.findAllRoom();
++		model.addAttribute("roomList", roomList);
++		return "room";
++	}
+ 
+ //	@PostMapping("/updateprocedcaptions")
+-//	public String updateProcedCaptions(@RequestParam int cProc, @RequestParam String number, Model model) {
+-//		Room room = new Room(cProc, number);
++//	public String updateProcedCaptions(@RequestParam int id, @RequestParam String number, Model model) {
++//		Room room = new Room(id, number);
+ //		roomService.updateProcedCaptions(room);
+ //		List<Room> roomList = roomService.findAllProcedCaptions();
+ //		model.addAttribute("roomList", roomList);
+Index: src/main/java/accountingApp/repository/RoleRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package accountingApp.repository;\r\n\r\nimport accountingApp.security.Role;\r\nimport org.springframework.data.jpa.repository.JpaRepository;\r\n\r\n\r\npublic interface RoleRepository extends JpaRepository<Role, Long> {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/accountingApp/repository/RoleRepository.java b/src/main/java/accountingApp/repository/RoleRepository.java
+--- a/src/main/java/accountingApp/repository/RoleRepository.java	(revision bf3999d5658ac63118ff8cf965b0199e5a917b1f)
++++ b/src/main/java/accountingApp/repository/RoleRepository.java	(date 1690828712536)
+@@ -2,7 +2,8 @@
+ 
+ import accountingApp.security.Role;
+ import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
+ 
+-
++@Repository
+ public interface RoleRepository extends JpaRepository<Role, Long> {
+ }
+Index: src/main/java/accountingApp/repository/UserRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package accountingApp.repository;\r\n\r\nimport accountingApp.security.User;\r\nimport org.springframework.data.jpa.repository.JpaRepository;\r\n\r\n\r\npublic interface UserRepository extends JpaRepository<User, Long> {\r\n    User findByUsername(String username);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/accountingApp/repository/UserRepository.java b/src/main/java/accountingApp/repository/UserRepository.java
+--- a/src/main/java/accountingApp/repository/UserRepository.java	(revision bf3999d5658ac63118ff8cf965b0199e5a917b1f)
++++ b/src/main/java/accountingApp/repository/UserRepository.java	(date 1690828693780)
+@@ -2,8 +2,9 @@
+ 
+ import accountingApp.security.User;
+ import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
+ 
+-
++@Repository
+ public interface UserRepository extends JpaRepository<User, Long> {
+     User findByUsername(String username);
+ }
+Index: src/main/java/accountingApp/service/RoomService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package accountingApp.service;\r\n\r\nimport accountingApp.entity.Room;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Service;\r\nimport accountingApp.repository.RoomRepository;\r\n\r\nimport java.util.List;\r\n\r\n@Service\r\npublic class RoomService {\r\n\t@Autowired\r\n\tRoomRepository roomRepository;\r\n\r\n\tpublic List<Room> findAllRoom() {\r\n\t\treturn roomRepository.findAll();\r\n\t}\r\n\r\n\tpublic void addNewRoom(Room room) {\r\n\t\troomRepository.save(room);\r\n\t}\r\n\r\n\tpublic void deleteProcedCaptionsById(int id) {\r\n\t\troomRepository.deleteById(id);\r\n\t}\r\n\r\n\tpublic void updateProcedCaptions(Room room) {\r\n\t\troomRepository.save(room);\r\n\t}\r\n\r\n//\tpublic List<Room> getProcedCaptionsById(int id) {\r\n//\t\treturn roomRepository.findProcedCaptionsBycProc(id);\r\n//\t}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/accountingApp/service/RoomService.java b/src/main/java/accountingApp/service/RoomService.java
+--- a/src/main/java/accountingApp/service/RoomService.java	(revision bf3999d5658ac63118ff8cf965b0199e5a917b1f)
++++ b/src/main/java/accountingApp/service/RoomService.java	(date 1690827672616)
+@@ -20,7 +20,7 @@
+ 		roomRepository.save(room);
+ 	}
+ 
+-	public void deleteProcedCaptionsById(int id) {
++	public void deleteRoomById(int id) {
+ 		roomRepository.deleteById(id);
+ 	}
+ 

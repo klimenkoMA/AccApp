@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="AccAppWorkBranch" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProjectId" id="2SIa9ZsRcTmaJS9C7vImjVszo0H" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="sql.rename.search.for.storage.occurrences" value="true" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="RecProjApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="AccApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="accountingApp.AccountingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.employee.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="" />
+      <created>1688836398484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688836398484</updated>
+      <workItem from="1688836404855" duration="2676000" />
+      <workItem from="1688920448896" duration="460000" />
+      <workItem from="1688921026419" duration="32000" />
+      <workItem from="1688921111786" duration="1380000" />
+      <workItem from="1689008962915" duration="845000" />
+      <workItem from="1689011368704" duration="495000" />
+      <workItem from="1689093174404" duration="4120000" />
+      <workItem from="1689099726747" duration="930000" />
+      <workItem from="1689181793463" duration="2578000" />
+      <workItem from="1689266086559" duration="4787000" />
+      <workItem from="1689361641703" duration="763000" />
+      <workItem from="1689397655664" duration="1774000" />
+      <workItem from="1689441522909" duration="2628000" />
+      <workItem from="1689499035126" duration="7097000" />
+      <workItem from="1689519881185" duration="1904000" />
+      <workItem from="1689524809924" duration="6700000" />
+      <workItem from="1689562911959" duration="687000" />
+      <workItem from="1689651379814" duration="937000" />
+      <workItem from="1689700511651" duration="3936000" />
+      <workItem from="1689734599422" duration="2283000" />
+      <workItem from="1689785945369" duration="2644000" />
+      <workItem from="1689878957468" duration="970000" />
+      <workItem from="1689957975491" duration="1235000" />
+      <workItem from="1689999866257" duration="1691000" />
+      <workItem from="1690049794643" duration="104000" />
+      <workItem from="1690093068666" duration="1230000" />
+      <workItem from="1690214865952" duration="3807000" />
+      <workItem from="1690306877868" duration="2715000" />
+      <workItem from="1690393157863" duration="2864000" />
+      <workItem from="1690480297647" duration="2712000" />
+      <workItem from="1690565372666" duration="3015000" />
+      <workItem from="1690651646228" duration="563000" />
+      <workItem from="1690733739936" duration="65000" />
+      <workItem from="1690735013687" duration="951000" />
+      <workItem from="1690823163291" duration="5336000" />
+      <workItem from="1690912837735" duration="1947000" />
+      <workItem from="1690914930965" duration="579000" />
+      <workItem from="1690942791278" duration="3416000" />
+      <workItem from="1690990705878" duration="3063000" />
+      <workItem from="1690995688698" duration="1908000" />
+      <workItem from="1691029744447" duration="978000" />
+      <workItem from="1691083401136" duration="1223000" />
+      <workItem from="1691165263722" duration="3940000" />
+      <workItem from="1691210364785" duration="1843000" />
+      <workItem from="1691229723076" duration="585000" />
+      <workItem from="1691235062891" duration="1935000" />
+    </task>
+    <task id="LOCAL-00005" summary="Refactoring entity Persons to Employee">
+      <created>1689011712684</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689011712684</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactoring some classes`s names">
+      <created>1689094825375</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689094825375</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Deleting some classes">
+      <created>1689095228087</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689095228087</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Checking and repairing some mistakes after deleting">
+      <created>1689096873200</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689096873201</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changing fields of Employee class">
+      <created>1689183964006</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689183964006</updated>
+    </task>
+    <task id="LOCAL-00010" summary="New deep changing in all classes">
+      <created>1689271816547</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689271816547</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Committing all controller classes">
+      <created>1689398210232</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689398210232</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Committing all service classes and repo classes. The server was up at this step">
+      <created>1689399369039</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689399369039</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Renamed all controller`s classes methods, rebuild devices.html">
+      <created>1689443927565</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689443927565</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Deleted some tags from devices.html">
+      <created>1689500140189</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689500140189</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Deleted some tags from employee.html">
+      <created>1689501874818</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1689501874819</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Deleted some tags from events.html">
+      <created>1689504282320</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689504282320</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Deleted some tags from itstaff.html and room.html">
+      <created>1689506876493</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689506876493</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Improved all html files">
+      <created>1689521705198</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689521705198</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Rebuilt all device classes&#10;Added addDevice() method in controller">
+      <created>1689531497135</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1689531497135</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Changed the tag in events.html">
+      <created>1689563532447</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1689563532447</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Changed the tag in room.html and refactored RoomController">
+      <created>1689652271570</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1689652271570</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactored RoomControllerr and roomService&#10;Refactored all WorkArea classes">
+      <created>1689702579733</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1689702579733</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Refactored some entity fields&#10;Added some tags to Project_Default.xml">
+      <created>1689788414582</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689788414582</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Refactored some entity fields in employee classes">
+      <created>1689879932118</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689879932118</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Refactored some entity fields in itStaff classes">
+      <created>1689959201345</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689959201345</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Refactored some entity fields in itStaff classes v2">
+      <created>1690049895520</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1690049895520</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Ended refactoring itstaff classes">
+      <created>1690094087887</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1690094087887</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Ended refactoring employee classes, create method (CRUD) work correctly">
+      <created>1690218609230</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1690218609230</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Tried to finish devices.html">
+      <created>1690309300864</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1690309300864</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Connected to another DB">
+      <created>1690396860207</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1690396860208</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Tried to solve delete method in devices">
+      <created>1690482959619</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1690482959619</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Repaired delete method in DevicesController">
+      <created>1690568797400</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1690568797400</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Repaired delete method in EmployeeController">
+      <created>1690652209400</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1690652209400</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Repaired delete method in ITStaffController">
+      <created>1690735959465</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1690735959465</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added security part with some new classes">
+      <created>1690825215247</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1690825215247</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Repaired delete method in Room Classes">
+      <created>1690944467856</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1690944467856</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Repaired delete method in Room Classes">
+      <created>1690944932741</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1690944932741</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Repaired delete method in Work Area Classes">
+      <created>1690946309578</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1690946309578</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Repaired update method in WorkArea Classes">
+      <created>1690991704170</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1690991704170</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Repaired update method in WorkArea, Room Classes">
+      <created>1690992307617</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1690992307617</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Repaired update method in ITStaff Classes">
+      <created>1690993495631</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1690993495631</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Repaired update method in ITStaff Classes">
+      <created>1690993661116</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1690993661116</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Repaired update method in Employee Classes">
+      <created>1690997425622</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1690997425623</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Repaired update method in Employee, Devices Classes">
+      <created>1690997903037</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1690997903037</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Repaired findById method in WorkArea Classes">
+      <created>1691083979948</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1691083979948</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Repaired findById method in WorkArea Classes">
+      <created>1691087140584</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1691087140584</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Repaired findById method in Room Classes">
+      <created>1691166159579</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1691166159579</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Repaired findById method in ITStaff Classes">
+      <created>1691166621425</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1691166621425</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Repaired findById method in ITStaff Classes">
+      <created>1691167017453</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1691167017453</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Repaired findById method in Employee Classes">
+      <created>1691167943117</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1691167943118</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Repaired findById method in Devices Classes">
+      <created>1691169016863</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1691169016863</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Repaired findById method in Devices Classes">
+      <created>1691169153194</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1691169153194</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff">
+      <created>1691213167246</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1691213167247</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactored some entity fields in employee classes" />
+    <MESSAGE value="Refactored some entity fields in itStaff classes" />
+    <MESSAGE value="Refactored some entity fields in itStaff classes v2" />
+    <MESSAGE value="Ended refactoring itstaff classes" />
+    <MESSAGE value="Ended refactoring employee classes, create method (CRUD) work correctly" />
+    <MESSAGE value="Tried to finish devices.html" />
+    <MESSAGE value="Connected to another DB" />
+    <MESSAGE value="Tried to solve delete method in devices" />
+    <MESSAGE value="Repaired delete method in DevicesController" />
+    <MESSAGE value="Repaired delete method in EmployeeController" />
+    <MESSAGE value="Repaired delete method in ITStaffController" />
+    <MESSAGE value="Added security part with some new classes" />
+    <MESSAGE value="Repaired delete method in Room Classes" />
+    <MESSAGE value="Repaired delete method in Work Area Classes" />
+    <MESSAGE value="Repaired update method in WorkArea Classes" />
+    <MESSAGE value="Repaired update method in WorkArea, Room Classes" />
+    <MESSAGE value="Repaired update method in ITStaff Classes" />
+    <MESSAGE value="Repaired update method in Employee Classes" />
+    <MESSAGE value="Repaired update method in Employee, Devices Classes" />
+    <MESSAGE value="Repaired findById method in WorkArea Classes" />
+    <MESSAGE value="Repaired findById method in Room Classes" />
+    <MESSAGE value="Repaired findById method in ITStaff Classes" />
+    <MESSAGE value="Repaired findById method in Employee Classes" />
+    <MESSAGE value="Repaired findById method in Devices Classes" />
+    <MESSAGE value="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff" />
+  </component>
+</project>

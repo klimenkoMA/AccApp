@@ -12,23 +12,23 @@ public class RoomService {
 	@Autowired
 	RoomRepository roomRepository;
 
-	public List<Room> findAllProcedCaptions() {
+	public List<Room> findAllRoom() {
 		return roomRepository.findAll();
 	}
 
-	public void addNewProcedCaptions(Room room) {
+	public void addNewRoom(Room room) {
 		roomRepository.save(room);
 	}
 
-	public void deleteProcedCaptionsById(int id) {
+	public void deleteRoomById(int id) {
 		roomRepository.deleteById(id);
 	}
 
-	public void updateProcedCaptions(Room room) {
+	public void updateRoom(Room room) {
 		roomRepository.save(room);
 	}
 
-	public List<Room> getProcedCaptionsById(int id) {
-		return roomRepository.findProcedCaptionsBycProc(id);
+	public List<Room> getRoomById(int id) {
+		return roomRepository.findRoomById(id);
 	}
 }

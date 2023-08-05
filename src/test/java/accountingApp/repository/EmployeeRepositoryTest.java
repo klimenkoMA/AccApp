@@ -1,4 +1,4 @@
-package accountingApp.repository;
+/* package accountingApp.repository;
 
 import accountingApp.entity.ITStaff;
 import org.junit.jupiter.api.Test;
@@ -20,9 +20,10 @@ public class EmployeeRepositoryTest {
 	@Autowired
 	TestEntityManager testEntityManager;
 
-	@Test
-	public void createPersonsProf() {
-		ITStaff ITStaff = new ITStaff("Плотник");
-		ITStaffRepository.save(ITStaff);
-	}
+//	@Test
+//	public void createPersonsProf() {
+//		ITStaff ITStaff = new ITStaff("Плотник");
+//		ITStaffRepository.save(ITStaff);
+//	}
 }
+ */

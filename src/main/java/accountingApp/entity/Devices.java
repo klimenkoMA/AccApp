@@ -1,105 +1,65 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
- * Выполнение процедур
+ * Устройства для выдачи
  */
 @Entity
-@Table(name = "procedures_assigned")
+@Table(name = "devices")
 public class Devices {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	@Column(name = "id")
+	private Integer id;
 
-	@Column(name = "n_assigned")
-	//назначено процедур int
-	private int nAssigned;
-	@Column(name = "n_passed")
-	// пройдено процедур int
-	private int nPassed;
-	@Column(name = "comment")
-	// комментарий врача nvarchar(50)
-	private String comment;
-	@ManyToOne
-	@JoinColumn(name = "waypaper_snn")
-	private Recreants recreantsSnn;
+	@Column(name = "name")
+	private String name;
 
-	@ManyToOne
-	@JoinColumn(name = "c_proc")
-	private Room room;
-
-
-	public Devices(int nAssigned, int nPassed, String comment,
-				   Recreants recreantsSnn,
-				   Room room) {
-		this.nAssigned = nAssigned;
-		this.nPassed = nPassed;
-		this.comment = comment;
-		this.recreantsSnn = recreantsSnn;
-		this.room = room;
-	}
-
-	public Devices(int id, int nAssigned, int nPassed, String comment,
-				   Recreants recreantsSnn,
-				   Room room) {
-		this.id = id;
-		this.nAssigned = nAssigned;
-		this.nPassed = nPassed;
-		this.comment = comment;
-		this.recreantsSnn = recreantsSnn;
-		this.room = room;
-	}
+	@OneToMany(cascade = CascadeType.ALL)
+	private Set<Events> events;
 
 	public Devices() {
 	}
 
-	public int getId() {
+	public Devices(String name) {
+		this.name = name;
+	}
+
+	public Devices(Integer id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public Set<Events> getEvents() {
+		return events;
+	}
+
+	public void setEvents(Set<Events> events) {
+		this.events = events;
+	}
+
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public int getnAssigned() {
-		return nAssigned;
+	public String getName() {
+		return name;
 	}
 
-	public void setnAssigned(int nAssigned) {
-		this.nAssigned = nAssigned;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public int getnPassed() {
-		return nPassed;
-	}
-
-	public void setnPassed(int nPassed) {
-		this.nPassed = nPassed;
-	}
-
-	public String getComment() {
-		return comment;
-	}
-
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
-
-	public Recreants getRecreantsSnn() {
-		return recreantsSnn;
-	}
-
-	public void setRecreantsSnn(Recreants recreantsSnn) {
-		this.recreantsSnn = recreantsSnn;
-	}
-
-	public Room getProcedCaptions() {
-		return room;
-	}
-
-	public void setProcedCaptions(Room room) {
-		this.room = room;
+	public void addEvent(Events event){
+		if (event != null){
+			events.add(event);
+		}
 	}
 }
 
