@@ -1,6 +1,7 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 
 /**
@@ -17,9 +18,11 @@ public class ITStaff {
     @Column(name = "id")
     private int id;
 
-
     @Column(name = "name") //name_rec
     private String name;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Events> events;
 
     public ITStaff() {
     }

@@ -13,18 +13,38 @@ public class Events {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @JoinColumn(name = "DATE")//waypaper_snn
-    //код путевки int
+    @Column(name = "DATE")
     private int date;
 
-    @JoinColumn(name = "EMPLOYEEID") //c_aeger
-    //ИНН заболевания int
-    private String employeeId;
+    @ManyToOne
+    @JoinColumn(name = "deviceid")
+    private Devices device;
 
+    @ManyToOne
+    @JoinColumn(name = "EMPLOYEEID")
+    private Employee employeeId;
+
+    @ManyToOne
     @JoinColumn(name = "ITSTAFFID")
-    //ИНН заболевания int
-    private String itStaffId;
+    private ITStaff itStaffId;
 
+    public Events() {
+    }
+
+    public Events(int date, Devices device, Employee employeeId, ITStaff itStaffId) {
+        this.date = date;
+        this.device = device;
+        this.employeeId = employeeId;
+        this.itStaffId = itStaffId;
+    }
+
+    public Events(int id, int date, Devices device, Employee employeeId, ITStaff itStaffId) {
+        this.id = id;
+        this.date = date;
+        this.device = device;
+        this.employeeId = employeeId;
+        this.itStaffId = itStaffId;
+    }
 
     public int getId() {
         return id;
@@ -42,19 +62,27 @@ public class Events {
         this.date = date;
     }
 
-    public String getEmployeeId() {
+    public Devices getDevice() {
+        return device;
+    }
+
+    public void setDevice(Devices device) {
+        this.device = device;
+    }
+
+    public Employee getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(String employeeId) {
+    public void setEmployeeId(Employee employeeId) {
         this.employeeId = employeeId;
     }
 
-    public String getItStaffId() {
+    public ITStaff getItStaffId() {
         return itStaffId;
     }
 
-    public void setItStaffId(String itStaffId) {
+    public void setItStaffId(ITStaff itStaffId) {
         this.itStaffId = itStaffId;
     }
 }

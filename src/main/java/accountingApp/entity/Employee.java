@@ -1,6 +1,7 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Сотрудники
@@ -24,6 +25,9 @@ public class Employee {
 
     @Column(name = "room")
     private String room;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Events> events;
 
     public Employee() {
     }
