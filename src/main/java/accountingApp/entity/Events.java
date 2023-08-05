@@ -14,7 +14,7 @@ public class Events {
     private int id;
 
     @Column(name = "DATE")
-    private int date;
+    private String date;
 
     @ManyToOne
     @JoinColumn(name = "deviceid")
@@ -22,28 +22,28 @@ public class Events {
 
     @ManyToOne
     @JoinColumn(name = "EMPLOYEEID")
-    private Employee employeeId;
+    private Employee employeeid;
 
     @ManyToOne
     @JoinColumn(name = "ITSTAFFID")
-    private ITStaff itStaffId;
+    private ITStaff itstaffid;
 
     public Events() {
     }
 
-    public Events(int date, Devices device, Employee employeeId, ITStaff itStaffId) {
+    public Events(String date, Devices device, Employee employeeid, ITStaff itstaffid) {
         this.date = date;
         this.device = device;
-        this.employeeId = employeeId;
-        this.itStaffId = itStaffId;
+        this.employeeid = employeeid;
+        this.itstaffid = itstaffid;
     }
 
-    public Events(int id, int date, Devices device, Employee employeeId, ITStaff itStaffId) {
+    public Events(int id, String date, Devices device, Employee employeeid, ITStaff itstaffid) {
         this.id = id;
         this.date = date;
         this.device = device;
-        this.employeeId = employeeId;
-        this.itStaffId = itStaffId;
+        this.employeeid = employeeid;
+        this.itstaffid = itstaffid;
     }
 
     public int getId() {
@@ -54,11 +54,11 @@ public class Events {
         this.id = id;
     }
 
-    public int getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(int date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -70,19 +70,19 @@ public class Events {
         this.device = device;
     }
 
-    public Employee getEmployeeId() {
-        return employeeId;
+    public Employee getEmployeeid() {
+        return employeeid;
     }
 
-    public void setEmployeeId(Employee employeeId) {
-        this.employeeId = employeeId;
+    public void setEmployeeid(Employee employeeId) {
+        this.employeeid = employeeId;
     }
 
-    public ITStaff getItStaffId() {
-        return itStaffId;
+    public ITStaff getItstaffid() {
+        return itstaffid;
     }
 
-    public void setItStaffId(ITStaff itStaffId) {
-        this.itStaffId = itStaffId;
+    public void setItstaffid(ITStaff itStaffId) {
+        this.itstaffid = itStaffId;
     }
 }

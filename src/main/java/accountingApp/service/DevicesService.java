@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import accountingApp.entity.Devices;
 import accountingApp.repository.DevicesRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -26,6 +27,23 @@ public class DevicesService {
 
 	public void updateDevice(Devices devices) {
 		devicesRepository.save(devices);
+	}
+
+	public List<Devices> getDevicesByName(String name){
+
+		List<Devices> devicesList = devicesRepository.findAll();
+		List<Devices> cloneDevices = new ArrayList<>();
+		for (Devices d : devicesList
+			 ) {
+			if (d.getName().equals(name)){
+				cloneDevices.add(d);
+			}
+		}
+		if (!cloneDevices.isEmpty()){
+			return cloneDevices;
+		}else{
+			return devicesRepository.findAll();
+		}
 	}
 
 	public List<Devices> getDevicesById(int id) {
