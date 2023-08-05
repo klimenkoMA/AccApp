@@ -36,8 +36,8 @@ public class EventsController {
                               @RequestParam String itstaffid,
                               Model model) {
         List<Devices> devicesList = devicesService.getDevicesByName(device);
-        List<Employee> employeeList = employeeService.getListEmployee();
-        List<ITStaff> itStaffList = itStaffService.getAllItStaff();
+        List<Employee> employeeList = employeeService.findEmployeeByFio(employeeid);
+        List<ITStaff> itStaffList = itStaffService.getITStaffByName(itstaffid);
         Events events = new Events(date,
                 devicesList.get(0),
                 employeeList.get(0),
