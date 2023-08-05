@@ -24,11 +24,11 @@ public class EventsService {
 		eventsRepository.deleteById(id);
 	}
 
-	public void updateRecreantsAegers(Events events) {
+	public void updateEvent(Events events) {
 		eventsRepository.save(events);
 	}
 
-//	public List<Events> getRecreantsAegersById(int id) {
-//		return eventsRepository.findById(id);
-//	}
+	public List<Events> getEventById(int id) {
+		return eventsRepository.findById(id);
+	}
 }
