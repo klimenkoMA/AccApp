@@ -20,7 +20,7 @@ public class EventsService {
 		eventsRepository.save(events);
 	}
 
-	public void deleteRecreantsAegersById(int id) {
+	public void deleteEventsById(int id) {
 		eventsRepository.deleteById(id);
 	}
 

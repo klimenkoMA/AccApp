@@ -48,13 +48,14 @@ public class EventsController {
         return "events";
     }
 
-//	@PostMapping("/deleterecreantsaegers")
-//	public String deleteAegerCaptions(@RequestParam int id, Model model) {
-//		eventsService.deleteRecreantsAegersById(id);
-//		List<Events> eventsList = eventsService.findAllRecreantsAegers();
-//		model.addAttribute("eventsList", eventsList);
-//		return "events";
-//	}
+	@PostMapping("/deleteevent")
+	public String deleteEvent(@RequestParam int id,
+                                      Model model) {
+		eventsService.deleteEventsById(id);
+		List<Events> eventsList = eventsService.findAllEvents();
+		model.addAttribute("eventsList", eventsList);
+		return "events";
+	}
 
 //	@PostMapping("/updaterecreantsaegers")
 //	public String updateAegerCaptions(@RequestParam int id,
