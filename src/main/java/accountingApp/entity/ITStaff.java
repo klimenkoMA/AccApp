@@ -9,7 +9,7 @@ import java.util.Set;
  * пользователей
  **/
 @Entity
-@Table(name = "itstaff")//persons_prof
+@Table(name = "itstaff")
 public class ITStaff {
 
 
@@ -18,7 +18,7 @@ public class ITStaff {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name") //name_rec
+    @Column(name = "name")
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL)
@@ -36,6 +36,14 @@ public class ITStaff {
         this.name = name;
     }
 
+    public Set<Events> getEvents() {
+        return events;
+    }
+
+    public void setEvents(Set<Events> events) {
+        this.events = events;
+    }
+
     public int getId() {
         return id;
     }
@@ -50,5 +58,11 @@ public class ITStaff {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void addEvent(Events event){
+        if (event != null){
+            events.add(event);
+        }
     }
 }

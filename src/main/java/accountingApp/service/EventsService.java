@@ -12,7 +12,7 @@ public class EventsService {
 	@Autowired
 	EventsRepository eventsRepository;
 
-	public List<Events> findAllRecreantsAegers() {
+	public List<Events> findAllEvents() {
 		return eventsRepository.findAll();
 	}
 

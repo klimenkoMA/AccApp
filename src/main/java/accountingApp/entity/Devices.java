@@ -32,6 +32,14 @@ public class Devices {
 		this.name = name;
 	}
 
+	public Set<Events> getEvents() {
+		return events;
+	}
+
+	public void setEvents(Set<Events> events) {
+		this.events = events;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -46,6 +54,12 @@ public class Devices {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void addEvent(Events event){
+		if (event != null){
+			events.add(event);
+		}
 	}
 }
 

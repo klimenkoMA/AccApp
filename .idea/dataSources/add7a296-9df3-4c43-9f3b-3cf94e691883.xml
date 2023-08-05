@@ -293,7 +293,7 @@
 341576255|||0|execute|G
 341576255|||2|execute|D
 </Grants>
-      <IntrospectionTimestamp>2023-08-02.00:08:12.997</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-08-05.11:20:48.327</IntrospectionTimestamp>
       <Current>1</Current>
       <DescriptionsCheckSum>13001862419</DescriptionsCheckSum>
     </schema>
@@ -388,9 +388,9 @@
       <ModifiedTimestamp>2023-07-21.00:59:51.027</ModifiedTimestamp>
     </table>
     <table id="71" parent="53" name="EVENTS">
-      <ObjectId>517576882</ObjectId>
-      <CreatedTimestamp>2023-07-21.00:59:07.770</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-21.00:59:07.787</ModifiedTimestamp>
+      <ObjectId>741577680</ObjectId>
+      <CreatedTimestamp>2023-08-05.11:19:30.423</CreatedTimestamp>
+      <ModifiedTimestamp>2023-08-05.11:19:30.857</ModifiedTimestamp>
     </table>
     <table id="72" parent="53" name="ITSTAFF">
       <ObjectId>2137058649</ObjectId>
@@ -541,47 +541,52 @@ int</ExtendedProperties>
       <DataType>nvarchar(max)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="93" parent="71" name="employeeid">
+    <column id="93" parent="71" name="deviceid">
       <Position>3</Position>
       <DataType>nvarchar(max)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="94" parent="71" name="itstaffid">
+    <column id="94" parent="71" name="employeeid">
       <Position>4</Position>
       <DataType>nvarchar(max)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="95" parent="71" name="PK_EVENTS">
+    <column id="95" parent="71" name="itstaffid">
+      <Position>5</Position>
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="96" parent="71" name="PK_EVENTS">
       <Position>1</Position>
       <ColNames>id</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="96" parent="71" name="PK_EVENTS">
-      <ObjectId>533576939</ObjectId>
-      <CreatedTimestamp>2023-07-21.00:59:07.780</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-21.00:59:07.780</ModifiedTimestamp>
+    <key id="97" parent="71" name="PK_EVENTS">
+      <ObjectId>757577737</ObjectId>
+      <CreatedTimestamp>2023-08-05.11:19:30.857</CreatedTimestamp>
+      <ModifiedTimestamp>2023-08-05.11:19:30.857</ModifiedTimestamp>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>PK_EVENTS</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="97" parent="72" name="id">
+    <column id="98" parent="72" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="98" parent="72" name="name">
+    <column id="99" parent="72" name="name">
       <Position>2</Position>
       <DataType>nvarchar(50 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="99" parent="72" name="PK_IT_STAFF">
+    <index id="100" parent="72" name="PK_IT_STAFF">
       <Position>1</Position>
       <ColNames>id</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="100" parent="72" name="PK_IT_STAFF">
+    <key id="101" parent="72" name="PK_IT_STAFF">
       <ObjectId>5575058</ObjectId>
       <CreatedTimestamp>2023-07-09.23:27:25.473</CreatedTimestamp>
       <ModifiedTimestamp>2023-07-09.23:27:25.473</ModifiedTimestamp>
@@ -589,23 +594,23 @@ int</ExtendedProperties>
       <UnderlyingIndexName>PK_IT_STAFF</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="101" parent="73" name="ID">
+    <column id="102" parent="73" name="ID">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="102" parent="73" name="NUMBER">
+    <column id="103" parent="73" name="NUMBER">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="103" parent="73" name="PK_ROOM">
+    <index id="104" parent="73" name="PK_ROOM">
       <Position>1</Position>
       <ColNames>ID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="104" parent="73" name="PK_ROOM">
+    <key id="105" parent="73" name="PK_ROOM">
       <ObjectId>69575286</ObjectId>
       <CreatedTimestamp>2023-07-09.23:29:29.510</CreatedTimestamp>
       <ModifiedTimestamp>2023-07-09.23:29:29.510</ModifiedTimestamp>
@@ -613,23 +618,23 @@ int</ExtendedProperties>
       <UnderlyingIndexName>PK_ROOM</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="105" parent="74" name="ID">
+    <column id="106" parent="74" name="ID">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="106" parent="74" name="name">
+    <column id="107" parent="74" name="name">
       <Position>2</Position>
       <DataType>nvarchar(50 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="107" parent="74" name="PK_WORK_AREA">
+    <index id="108" parent="74" name="PK_WORK_AREA">
       <Position>1</Position>
       <ColNames>ID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="108" parent="74" name="PK_WORK_AREA">
+    <key id="109" parent="74" name="PK_WORK_AREA">
       <ObjectId>37575172</ObjectId>
       <CreatedTimestamp>2023-07-09.23:28:10.283</CreatedTimestamp>
       <ModifiedTimestamp>2023-07-09.23:28:10.283</ModifiedTimestamp>
@@ -637,24 +642,24 @@ int</ExtendedProperties>
       <UnderlyingIndexName>PK_WORK_AREA</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="109" parent="75" name="id">
+    <column id="110" parent="75" name="id">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="110" parent="75" name="name">
+    <column id="111" parent="75" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="111" parent="75" name="PK_devices">
+    <index id="112" parent="75" name="PK_devices">
       <Position>1</Position>
       <ColNames>id</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="112" parent="75" name="PK_devices">
+    <key id="113" parent="75" name="PK_devices">
       <ObjectId>629577281</ObjectId>
       <CreatedTimestamp>2023-07-27.00:14:12.740</CreatedTimestamp>
       <ModifiedTimestamp>2023-07-27.00:14:12.740</ModifiedTimestamp>
@@ -662,75 +667,75 @@ int</ExtendedProperties>
       <UnderlyingIndexName>PK_devices</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <argument id="113" parent="76">
+    <argument id="114" parent="76">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="114" parent="77" name="@diagramname">
+    <argument id="115" parent="77" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="115" parent="77" name="@owner_id">
+    <argument id="116" parent="77" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="116" parent="77" name="@version">
+    <argument id="117" parent="77" name="@version">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="117" parent="77" name="@definition">
+    <argument id="118" parent="77" name="@definition">
       <Position>4</Position>
       <DataType>varbinary(max)|0s</DataType>
     </argument>
-    <argument id="118" parent="78" name="@diagramname">
+    <argument id="119" parent="78" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="119" parent="78" name="@owner_id">
+    <argument id="120" parent="78" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="120" parent="78" name="@version">
+    <argument id="121" parent="78" name="@version">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="121" parent="78" name="@definition">
+    <argument id="122" parent="78" name="@definition">
       <Position>4</Position>
       <DataType>varbinary(max)|0s</DataType>
     </argument>
-    <argument id="122" parent="79" name="@diagramname">
+    <argument id="123" parent="79" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="123" parent="79" name="@owner_id">
+    <argument id="124" parent="79" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="124" parent="80" name="@diagramname">
+    <argument id="125" parent="80" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="125" parent="80" name="@owner_id">
+    <argument id="126" parent="80" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="126" parent="81" name="@diagramname">
+    <argument id="127" parent="81" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="127" parent="81" name="@owner_id">
+    <argument id="128" parent="81" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="128" parent="82" name="@diagramname">
+    <argument id="129" parent="82" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="129" parent="82" name="@owner_id">
+    <argument id="130" parent="82" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="130" parent="82" name="@new_diagramname">
+    <argument id="131" parent="82" name="@new_diagramname">
       <Position>3</Position>
       <DataType>sysname|0s</DataType>
     </argument>

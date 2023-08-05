@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Repaired findById method in Devices Classes">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +56,17 @@
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -121,14 +134,9 @@
       <workItem from="1691029744447" duration="978000" />
       <workItem from="1691083401136" duration="1223000" />
       <workItem from="1691165263722" duration="3940000" />
-      <workItem from="1691210364785" duration="1622000" />
-    </task>
-    <task id="LOCAL-00004" summary="Adding some new tables into DB">
-      <created>1688924799670</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1688924799670</updated>
+      <workItem from="1691210364785" duration="1843000" />
+      <workItem from="1691229723076" duration="585000" />
+      <workItem from="1691235062891" duration="1935000" />
     </task>
     <task id="LOCAL-00005" summary="Refactoring entity Persons to Employee">
       <created>1689011712684</created>
@@ -466,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691169153194</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff">
+      <created>1691213167246</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1691213167247</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +500,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored some entity fields&#10;Added some tags to Project_Default.xml" />
     <MESSAGE value="Refactored some entity fields in employee classes" />
     <MESSAGE value="Refactored some entity fields in itStaff classes" />
     <MESSAGE value="Refactored some entity fields in itStaff classes v2" />
@@ -510,6 +524,7 @@
     <MESSAGE value="Repaired findById method in ITStaff Classes" />
     <MESSAGE value="Repaired findById method in Employee Classes" />
     <MESSAGE value="Repaired findById method in Devices Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repaired findById method in Devices Classes" />
+    <MESSAGE value="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff" />
   </component>
 </project>

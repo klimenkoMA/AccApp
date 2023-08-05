@@ -1,6 +1,8 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Events;
+import accountingApp.service.DevicesService;
+import accountingApp.service.ITStaffService;
 import accountingApp.service.WorkAreaService;
 import accountingApp.service.EventsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +18,14 @@ public class EventsController {
 	EventsService eventsService;
 	@Autowired
 	WorkAreaService workAreaService;
+	@Autowired
+	ITStaffService itStaffService;
+	@Autowired
+	DevicesService devicesService;
 
-	@GetMapping("/events") //allRecreantsAegers
+	@GetMapping("/events")
 	public String getEvents(Model model) {
-		List<Events> eventsList = eventsService.findAllRecreantsAegers();
+		List<Events> eventsList = eventsService.findAllEvents();
 		model.addAttribute("eventsList", eventsList);
 		return "events";
 	}

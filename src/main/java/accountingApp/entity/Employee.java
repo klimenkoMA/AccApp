@@ -47,6 +47,14 @@ public class Employee {
         this.room = room;
     }
 
+    public Set<Events> getEvents() {
+        return events;
+    }
+
+    public void setEvents(Set<Events> events) {
+        this.events = events;
+    }
+
     public int getId() {
         return id;
     }
@@ -85,5 +93,11 @@ public class Employee {
 
     public void setRoom(String room) {
         this.room = room;
+    }
+
+    public void addEvent(Events event){
+        if (event != null){
+            events.add(event);
+        }
     }
 }
