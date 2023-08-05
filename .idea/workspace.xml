@@ -4,15 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Preparing for rebuild Events classes">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Devices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Devices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Events.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Events.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/ITStaff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/ITStaff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/EventsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/EventsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +70,6 @@
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -136,14 +139,7 @@
       <workItem from="1691165263722" duration="3940000" />
       <workItem from="1691210364785" duration="1843000" />
       <workItem from="1691229723076" duration="585000" />
-      <workItem from="1691235062891" duration="1935000" />
-    </task>
-    <task id="LOCAL-00005" summary="Refactoring entity Persons to Employee">
-      <created>1689011712684</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1689011712684</updated>
+      <workItem from="1691235062891" duration="9815000" />
     </task>
     <task id="LOCAL-00006" summary="Refactoring some classes`s names">
       <created>1689094825375</created>
@@ -481,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691213167247</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Preparing for rebuild Events classes">
+      <created>1691237399901</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1691237399901</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +503,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored some entity fields in employee classes" />
     <MESSAGE value="Refactored some entity fields in itStaff classes" />
     <MESSAGE value="Refactored some entity fields in itStaff classes v2" />
     <MESSAGE value="Ended refactoring itstaff classes" />
@@ -525,6 +527,7 @@
     <MESSAGE value="Repaired findById method in Employee Classes" />
     <MESSAGE value="Repaired findById method in Devices Classes" />
     <MESSAGE value="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff" />
+    <MESSAGE value="Preparing for rebuild Events classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preparing for rebuild Events classes" />
   </component>
 </project>

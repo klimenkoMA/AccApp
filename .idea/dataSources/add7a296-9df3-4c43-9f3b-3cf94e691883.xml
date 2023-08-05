@@ -293,7 +293,7 @@
 341576255|||0|execute|G
 341576255|||2|execute|D
 </Grants>
-      <IntrospectionTimestamp>2023-08-05.11:20:48.327</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-08-05.20:16:09.510</IntrospectionTimestamp>
       <Current>1</Current>
       <DescriptionsCheckSum>13001862419</DescriptionsCheckSum>
     </schema>
@@ -388,9 +388,9 @@
       <ModifiedTimestamp>2023-07-21.00:59:51.027</ModifiedTimestamp>
     </table>
     <table id="71" parent="53" name="EVENTS">
-      <ObjectId>741577680</ObjectId>
-      <CreatedTimestamp>2023-08-05.11:19:30.423</CreatedTimestamp>
-      <ModifiedTimestamp>2023-08-05.11:19:30.857</ModifiedTimestamp>
+      <ObjectId>773577794</ObjectId>
+      <CreatedTimestamp>2023-08-05.20:06:48.730</CreatedTimestamp>
+      <ModifiedTimestamp>2023-08-05.20:06:49.090</ModifiedTimestamp>
     </table>
     <table id="72" parent="53" name="ITSTAFF">
       <ObjectId>2137058649</ObjectId>
@@ -538,22 +538,22 @@ int</ExtendedProperties>
     </column>
     <column id="92" parent="71" name="date">
       <Position>2</Position>
-      <DataType>nvarchar(max)|0s</DataType>
+      <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="93" parent="71" name="deviceid">
       <Position>3</Position>
-      <DataType>nvarchar(max)|0s</DataType>
+      <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="94" parent="71" name="employeeid">
       <Position>4</Position>
-      <DataType>nvarchar(max)|0s</DataType>
+      <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="95" parent="71" name="itstaffid">
       <Position>5</Position>
-      <DataType>nvarchar(max)|0s</DataType>
+      <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="96" parent="71" name="PK_EVENTS">
@@ -563,9 +563,9 @@ int</ExtendedProperties>
       <Unique>1</Unique>
     </index>
     <key id="97" parent="71" name="PK_EVENTS">
-      <ObjectId>757577737</ObjectId>
-      <CreatedTimestamp>2023-08-05.11:19:30.857</CreatedTimestamp>
-      <ModifiedTimestamp>2023-08-05.11:19:30.857</ModifiedTimestamp>
+      <ObjectId>789577851</ObjectId>
+      <CreatedTimestamp>2023-08-05.20:06:49.090</CreatedTimestamp>
+      <ModifiedTimestamp>2023-08-05.20:06:49.090</ModifiedTimestamp>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>PK_EVENTS</UnderlyingIndexName>
       <Primary>1</Primary>

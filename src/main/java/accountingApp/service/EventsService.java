@@ -16,7 +16,7 @@ public class EventsService {
 		return eventsRepository.findAll();
 	}
 
-	public void addNewRecreantsAegers(Events events) {
+	public void addNewEvent(Events events) {
 		eventsRepository.save(events);
 	}
 

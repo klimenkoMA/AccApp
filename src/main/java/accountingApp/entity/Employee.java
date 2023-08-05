@@ -1,7 +1,7 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 /**
  * Сотрудники
@@ -27,7 +27,7 @@ public class Employee {
     private String room;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private Set<Events> events;
+    private List<Events> events;
 
     public Employee() {
     }
@@ -47,11 +47,11 @@ public class Employee {
         this.room = room;
     }
 
-    public Set<Events> getEvents() {
+    public List<Events> getEvents() {
         return events;
     }
 
-    public void setEvents(Set<Events> events) {
+    public void setEvents(List<Events> events) {
         this.events = events;
     }
 
@@ -99,5 +99,10 @@ public class Employee {
         if (event != null){
             events.add(event);
         }
+    }
+
+    @Override
+    public String toString() {
+        return fio;
     }
 }
