@@ -95,8 +95,8 @@ public class Employee {
         this.room = room;
     }
 
-    public void addEvent(Events event){
-        if (event != null){
+    public void addEvent(Events event) {
+        if (event != null) {
             events.add(event);
         }
     }

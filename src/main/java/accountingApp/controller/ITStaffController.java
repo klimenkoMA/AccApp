@@ -17,14 +17,14 @@ public class ITStaffController {
     @Autowired
     ITStaffService ITStaffService;
 
-    @GetMapping("/itstaff") //allPersonsProf
+    @GetMapping("/itstaff")
     public String getItStaff(Model model) {
         List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
         model.addAttribute("itStaffList", ITStaffList);
         return "itstaff";
     }
 
-    @PostMapping("/additstaff")//addpersonsprof
+    @PostMapping("/additstaff")
     public String addItStaff(@RequestParam String name,
                              Model model) {
         ITStaff ITStaff = new ITStaff(name);
@@ -57,7 +57,6 @@ public class ITStaffController {
     @PostMapping("/finditstaffbyid")
     public String findPersonById(@RequestParam int id,
                                  Model model) {
-
         List<ITStaff> ITStaffList;
         if (id > 0) {
             ITStaffList = ITStaffService.getITStaffById(id);
@@ -75,5 +74,4 @@ public class ITStaffController {
         model.addAttribute("itStaffList", ITStaffList);
         return "itstaff";
     }
-
 }

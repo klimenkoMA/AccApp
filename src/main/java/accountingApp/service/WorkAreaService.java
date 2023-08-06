@@ -7,28 +7,28 @@ import accountingApp.repository.WorkAreaRepository;
 
 import java.util.List;
 
-@Service 
+@Service
 public class WorkAreaService {
-	@Autowired
-	WorkAreaRepository workAreaRepository;
+    @Autowired
+    WorkAreaRepository workAreaRepository;
 
-	public List<WorkArea> findAllWorkArea() {
-		return workAreaRepository.findAll();
-	}
+    public List<WorkArea> findAllWorkArea() {
+        return workAreaRepository.findAll();
+    }
 
-	public void addNewWorkArea(WorkArea workArea) {
-		workAreaRepository.save(workArea);
-	}
+    public void addNewWorkArea(WorkArea workArea) {
+        workAreaRepository.save(workArea);
+    }
 
-	public void deleteWorkAreaById(int id) {
-		workAreaRepository.deleteById(id);
-	}
+    public void deleteWorkAreaById(int id) {
+        workAreaRepository.deleteById(id);
+    }
 
-	public void updateWorkArea(WorkArea workArea) {
-		workAreaRepository.save(workArea);
-	}
+    public void updateWorkArea(WorkArea workArea) {
+        workAreaRepository.save(workArea);
+    }
 
-	public List<WorkArea> getWorkAreaById(int id) {
-		return workAreaRepository.findAreaById(id);
-	}
+    public List<WorkArea> getWorkAreaById(int id) {
+        return workAreaRepository.findAreaById(id);
+    }
 }

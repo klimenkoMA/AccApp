@@ -11,7 +11,7 @@ public interface RoomRepository extends JpaRepository<Room, Integer> {
     @Override
     List<Room> findAll();
 
-	List<Room> findRoomById(int id);
+    List<Room> findRoomById(int id);
 
     void deleteById(int id);
 }

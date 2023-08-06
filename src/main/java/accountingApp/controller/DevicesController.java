@@ -15,12 +15,8 @@ import java.util.List;
 public class DevicesController {
     @Autowired
     DevicesService devicesService;
-//	@Autowired
-//	RecreantsService recreantsService;
-//	@Autowired
-//	RoomService roomService;
 
-    @GetMapping("/devices") //allProceduresAssigned
+    @GetMapping("/devices")
     public String getDevices(Model model) {
         List<Devices> devicesList = devicesService.findAllDevices();
         model.addAttribute("devicesList", devicesList);
@@ -37,7 +33,7 @@ public class DevicesController {
         return "devices";
     }
 
-    @PostMapping("/deletedevice")//deleteproceduresassigned
+    @PostMapping("/deletedevice")
     public String deleteDevice(@RequestParam Integer id,
                                Model model) {
         devicesService.deleteDeviceById(id);
@@ -57,19 +53,18 @@ public class DevicesController {
         return "devices";
     }
 
-	@PostMapping("/finddevicebyid")
-	public String findDevicesById(@RequestParam int id,
+    @PostMapping("/finddevicebyid")
+    public String findDevicesById(@RequestParam int id,
                                   Model model) {
-
         List<Devices> devicesList;
-        if(id > 0) {
+        if (id > 0) {
             devicesList = devicesService.getDevicesById(id);
         } else {
             devicesList = devicesService.findAllDevices();
         }
         model.addAttribute("devicesList", devicesList);
         return "devices";
-	}
+    }
 
     @PostMapping("/finddevicebyname")
     public String findDevicesById(@RequestParam String name,

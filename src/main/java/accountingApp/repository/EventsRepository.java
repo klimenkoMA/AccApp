@@ -8,11 +8,11 @@ import java.util.List;
 
 @Repository
 public interface EventsRepository extends JpaRepository<Events, Integer> {
-	@Override
-	List<Events> findAll();
+    @Override
+    List<Events> findAll();
 
-	List<Events> findById(int id);
+    List<Events> findById(int id);
 
-	@Override
-	void deleteById(Integer integer);
+    @Override
+    void deleteById(Integer integer);
 }

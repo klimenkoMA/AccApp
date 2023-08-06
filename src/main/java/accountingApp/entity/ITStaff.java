@@ -5,13 +5,11 @@ import java.util.List;
 
 
 /**
- * Виды
- * пользователей
+ * Программисты
  **/
 @Entity
 @Table(name = "itstaff")
 public class ITStaff {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

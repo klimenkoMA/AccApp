@@ -19,14 +19,14 @@ public class EmployeeController {
     @Autowired
     ITStaffService ITStaffService;
 
-    @GetMapping("/employee") //allPersons
+    @GetMapping("/employee")
     public String getEmployee(Model model) {
         List<Employee> employeeList = employeeService.getListEmployee();
         model.addAttribute("employeeList", employeeList);
         return "employee";
     }
 
-    @PostMapping("/addemployee") //allPersons
+    @PostMapping("/addemployee")
     public String addEmployee(@RequestParam String fio,
                               @RequestParam String dborn,
                               @RequestParam String workArea,
@@ -74,11 +74,9 @@ public class EmployeeController {
         return "employee";
     }
 
-
     @PostMapping("/findbyid")
     public String findEmployeeById(@RequestParam int id,
                                    Model model) {
-
         List<Employee> employeeList;
         if (id > 0) {
             employeeList = employeeService.findEmployeeById(id);

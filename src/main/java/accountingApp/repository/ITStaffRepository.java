@@ -8,12 +8,12 @@ import java.util.List;
 
 @Repository
 public interface ITStaffRepository extends JpaRepository<ITStaff, Integer> {
-	@Override
-	List<ITStaff> findAll();
+    @Override
+    List<ITStaff> findAll();
 
-	List<ITStaff> findITStaffById(int id);
+    List<ITStaff> findITStaffById(int id);
 
-	@Override
-	void deleteById(Integer integer);
+    @Override
+    void deleteById(Integer integer);
 
 }
