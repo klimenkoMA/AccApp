@@ -9,26 +9,26 @@ import java.util.List;
 
 @Service
 public class RoomService {
-	@Autowired
-	RoomRepository roomRepository;
+    @Autowired
+    RoomRepository roomRepository;
 
-	public List<Room> findAllRoom() {
-		return roomRepository.findAll();
-	}
+    public List<Room> findAllRoom() {
+        return roomRepository.findAll();
+    }
 
-	public void addNewRoom(Room room) {
-		roomRepository.save(room);
-	}
+    public void addNewRoom(Room room) {
+        roomRepository.save(room);
+    }
 
-	public void deleteRoomById(int id) {
-		roomRepository.deleteById(id);
-	}
+    public void deleteRoomById(int id) {
+        roomRepository.deleteById(id);
+    }
 
-	public void updateRoom(Room room) {
-		roomRepository.save(room);
-	}
+    public void updateRoom(Room room) {
+        roomRepository.save(room);
+    }
 
-	public List<Room> getRoomById(int id) {
-		return roomRepository.findRoomById(id);
-	}
+    public List<Room> getRoomById(int id) {
+        return roomRepository.findRoomById(id);
+    }
 }

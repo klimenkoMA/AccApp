@@ -13,56 +13,55 @@ import java.util.List;
 
 @Controller
 public class RoomController {
-	@Autowired
-	RoomService roomService;
+    @Autowired
+    RoomService roomService;
 
-	@GetMapping("/room") //allProcedCaptions
-	public String getRoom(Model model) {
-		List<Room> roomList = roomService.findAllRoom();
-		model.addAttribute("roomList", roomList);
-		return "room";
-	}
+    @GetMapping("/room")
+    public String getRoom(Model model) {
+        List<Room> roomList = roomService.findAllRoom();
+        model.addAttribute("roomList", roomList);
+        return "room";
+    }
 
-	@PostMapping("/addroom")//addprocedcaptions
-	public String addRoom(@RequestParam String number,
-						  Model model) {
-		Room room = new Room(number);
-		roomService.addNewRoom(room);
-		List<Room> roomList = roomService.findAllRoom();
-		model.addAttribute("roomList", roomList);
-		return "room";
-	}
+    @PostMapping("/addroom")
+    public String addRoom(@RequestParam String number,
+                          Model model) {
+        Room room = new Room(number);
+        roomService.addNewRoom(room);
+        List<Room> roomList = roomService.findAllRoom();
+        model.addAttribute("roomList", roomList);
+        return "room";
+    }
 
-	@PostMapping("/deleteroom")
-	public String deleteRoom(@RequestParam int id, Model model) {
-		roomService.deleteRoomById(id);
-		List<Room> roomList = roomService.findAllRoom();
-		model.addAttribute("roomList", roomList);
-		return "room";
-	}
+    @PostMapping("/deleteroom")
+    public String deleteRoom(@RequestParam int id, Model model) {
+        roomService.deleteRoomById(id);
+        List<Room> roomList = roomService.findAllRoom();
+        model.addAttribute("roomList", roomList);
+        return "room";
+    }
 
-	@PostMapping("/updateroom")
-	public String updateRoom(@RequestParam int id,
-							 @RequestParam String number,
-							 Model model) {
-		Room room = new Room(id, number);
-		roomService.updateRoom(room);
-		List<Room> roomList = roomService.findAllRoom();
-		model.addAttribute("roomList", roomList);
-		return "room";
-	}
+    @PostMapping("/updateroom")
+    public String updateRoom(@RequestParam int id,
+                             @RequestParam String number,
+                             Model model) {
+        Room room = new Room(id, number);
+        roomService.updateRoom(room);
+        List<Room> roomList = roomService.findAllRoom();
+        model.addAttribute("roomList", roomList);
+        return "room";
+    }
 
-	@PostMapping("/findroomyid")
-	public String findRoomById(@RequestParam int id,
-							   Model model) {
-
-		if(id > 0) {
-			List<Room> roomList = roomService.getRoomById(id);
-			model.addAttribute("roomList", roomList);
-		} else {
-			List<Room> roomList = roomService.findAllRoom();
-			model.addAttribute("roomList", roomList);
-		}
-		return "room";
-	}
+    @PostMapping("/findroomyid")
+    public String findRoomById(@RequestParam int id,
+                               Model model) {
+        if (id > 0) {
+            List<Room> roomList = roomService.getRoomById(id);
+            model.addAttribute("roomList", roomList);
+        } else {
+            List<Room> roomList = roomService.findAllRoom();
+            model.addAttribute("roomList", roomList);
+        }
+        return "room";
+    }
 }

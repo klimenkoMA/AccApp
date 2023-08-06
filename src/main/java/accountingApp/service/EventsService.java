@@ -9,26 +9,26 @@ import java.util.List;
 
 @Service
 public class EventsService {
-	@Autowired
-	EventsRepository eventsRepository;
+    @Autowired
+    EventsRepository eventsRepository;
 
-	public List<Events> findAllEvents() {
-		return eventsRepository.findAll();
-	}
+    public List<Events> findAllEvents() {
+        return eventsRepository.findAll();
+    }
 
-	public void addNewEvent(Events events) {
-		eventsRepository.save(events);
-	}
+    public void addNewEvent(Events events) {
+        eventsRepository.save(events);
+    }
 
-	public void deleteEventsById(int id) {
-		eventsRepository.deleteById(id);
-	}
+    public void deleteEventsById(int id) {
+        eventsRepository.deleteById(id);
+    }
 
-	public void updateEvent(Events events) {
-		eventsRepository.save(events);
-	}
+    public void updateEvent(Events events) {
+        eventsRepository.save(events);
+    }
 
-	public List<Events> getEventById(int id) {
-		return eventsRepository.findById(id);
-	}
+    public List<Events> getEventById(int id) {
+        return eventsRepository.findById(id);
+    }
 }

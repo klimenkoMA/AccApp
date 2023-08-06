@@ -8,13 +8,13 @@ import java.util.List;
 
 @Repository
 public interface DevicesRepository extends JpaRepository<Devices, Integer> {
-	@Override
-	List<Devices> findAll();
+    @Override
+    List<Devices> findAll();
 
-	List<Devices> findByid(int id);
+    List<Devices> findByid(int id);
 
-	List<Devices> findByName(String name);
+    List<Devices> findByName(String name);
 
-	@Override
-	void deleteById(Integer integer);
+    @Override
+    void deleteById(Integer integer);
 }

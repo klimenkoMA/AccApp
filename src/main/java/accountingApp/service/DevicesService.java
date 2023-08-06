@@ -10,43 +10,42 @@ import java.util.List;
 
 @Service
 public class DevicesService {
-	@Autowired
-	DevicesRepository devicesRepository;
+    @Autowired
+    DevicesRepository devicesRepository;
 
-	public List<Devices> findAllDevices() {
-		return devicesRepository.findAll();
-	}
+    public List<Devices> findAllDevices() {
+        return devicesRepository.findAll();
+    }
 
-	public void addNewDevice(Devices devices) {
-		devicesRepository.save(devices);
-	}
+    public void addNewDevice(Devices devices) {
+        devicesRepository.save(devices);
+    }
 
-	public void deleteDeviceById(Integer id) {
-		devicesRepository.deleteById(id);
-	}
+    public void deleteDeviceById(Integer id) {
+        devicesRepository.deleteById(id);
+    }
 
-	public void updateDevice(Devices devices) {
-		devicesRepository.save(devices);
-	}
+    public void updateDevice(Devices devices) {
+        devicesRepository.save(devices);
+    }
 
-	public List<Devices> getDevicesByName(String name){
+    public List<Devices> getDevicesByName(String name) {
+        List<Devices> devicesList = devicesRepository.findAll();
+        List<Devices> cloneDevices = new ArrayList<>();
+        for (Devices d : devicesList
+        ) {
+            if (d.getName().equals(name)) {
+                cloneDevices.add(d);
+            }
+        }
+        if (!cloneDevices.isEmpty()) {
+            return cloneDevices;
+        } else {
+            return devicesRepository.findAll();
+        }
+    }
 
-		List<Devices> devicesList = devicesRepository.findAll();
-		List<Devices> cloneDevices = new ArrayList<>();
-		for (Devices d : devicesList
-			 ) {
-			if (d.getName().equals(name)){
-				cloneDevices.add(d);
-			}
-		}
-		if (!cloneDevices.isEmpty()){
-			return cloneDevices;
-		}else{
-			return devicesRepository.findAll();
-		}
-	}
-
-	public List<Devices> getDevicesById(int id) {
-		return devicesRepository.findByid(id);
-	}
+    public List<Devices> getDevicesById(int id) {
+        return devicesRepository.findByid(id);
+    }
 }

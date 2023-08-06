@@ -3,16 +3,16 @@ package accountingApp.entity;
 import javax.persistence.*;
 
 /**
- * Название заболевания
+ * Филиалы
  */
 @Entity
-@Table(name = "WORK_AREA") //aeger_captions
+@Table(name = "WORK_AREA")
 public class WorkArea {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID") //c_aeger
+    @Column(name = "ID")
     private int id;
-    @Column(name = "name") //caption
+    @Column(name = "name")
     private String name;
 
     public WorkArea() {

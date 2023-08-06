@@ -1,10 +1,8 @@
 package accountingApp.service;
 
-import accountingApp.entity.Devices;
 import accountingApp.entity.ITStaff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import accountingApp.entity.Employee;
 import accountingApp.repository.ITStaffRepository;
 import accountingApp.repository.EmployeeRepository;
 
@@ -39,19 +37,18 @@ public class ITStaffService {
         return ITStaffRepository.findITStaffById(id);
     }
 
-    public List<ITStaff> getITStaffByName(String name){
-
+    public List<ITStaff> getITStaffByName(String name) {
         List<ITStaff> itStaffList = ITStaffRepository.findAll();
         List<ITStaff> cloneITStaff = new ArrayList<>();
         for (ITStaff d : itStaffList
         ) {
-            if (d.getName().equals(name)){
+            if (d.getName().equals(name)) {
                 cloneITStaff.add(d);
             }
         }
-        if (!cloneITStaff.isEmpty()){
+        if (!cloneITStaff.isEmpty()) {
             return cloneITStaff;
-        }else{
+        } else {
             return ITStaffRepository.findAll();
         }
     }

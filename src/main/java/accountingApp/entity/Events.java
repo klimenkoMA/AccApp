@@ -3,7 +3,7 @@ package accountingApp.entity;
 import javax.persistence.*;
 
 /**
- * Диагноз
+ * События
  */
 @Entity
 @Table(name = "EVENTS")
