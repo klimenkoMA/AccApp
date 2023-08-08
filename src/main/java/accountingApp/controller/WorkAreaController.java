@@ -54,14 +54,22 @@ public class WorkAreaController {
     }
 
     @PostMapping("findworkareabyid")
-    public String findAegerCaptionsById(@RequestParam int id,
-                                        Model model) {
+    public String findAreaById(@RequestParam int id,
+                               Model model) {
         List<WorkArea> workAreaList;
         if (id > 0) {
             workAreaList = workAreaService.getWorkAreaById(id);
         } else {
             workAreaList = workAreaService.findAllWorkArea();
         }
+        model.addAttribute("workAreaList", workAreaList);
+        return "workarea";
+    }
+
+    @PostMapping("/findworkareabyname")
+    public String findAreaByName(@RequestParam String name,
+                                 Model model){
+        List<WorkArea> workAreaList = workAreaService.getWorkAreaByName(name);
         model.addAttribute("workAreaList", workAreaList);
         return "workarea";
     }

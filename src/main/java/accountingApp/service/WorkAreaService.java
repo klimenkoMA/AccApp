@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import accountingApp.repository.WorkAreaRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -30,5 +31,22 @@ public class WorkAreaService {
 
     public List<WorkArea> getWorkAreaById(int id) {
         return workAreaRepository.findAreaById(id);
+    }
+
+    public List<WorkArea> getWorkAreaByName(String name){
+        List<WorkArea> workAreaList = workAreaRepository.findAll();
+        List<WorkArea> cloneArea = new ArrayList<>();
+        for (WorkArea d : workAreaList
+        ) {
+            if (d.getName().equals(name)) {
+                cloneArea.add(d);
+            }
+        }
+        if (!cloneArea.isEmpty()) {
+            return cloneArea;
+        } else {
+            return workAreaRepository.findAll();
+        }
+
     }
 }
