@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Fixed some little problems">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/WorkAreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/WorkAreaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Added findAreaByName() method in WorkAreaController">
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/ITStaff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/ITStaff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/ITStaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/ITStaffService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/WorkAreaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/WorkAreaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,14 +148,7 @@
       <workItem from="1691332967599" duration="1375000" />
       <workItem from="1691334591393" duration="1145000" />
       <workItem from="1691378129180" duration="222000" />
-      <workItem from="1691463708480" duration="919000" />
-    </task>
-    <task id="LOCAL-00011" summary="Committing all controller classes">
-      <created>1689398210232</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1689398210232</updated>
+      <workItem from="1691463708480" duration="1141000" />
     </task>
     <task id="LOCAL-00012" summary="Committing all service classes and repo classes. The server was up at this step">
       <created>1689399369039</created>
@@ -483,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691334784861</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Added findAreaByName() method in WorkAreaController">
+      <created>1691464794327</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1691464794327</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +512,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Connected to another DB" />
     <MESSAGE value="Tried to solve delete method in devices" />
     <MESSAGE value="Repaired delete method in DevicesController" />
     <MESSAGE value="Repaired delete method in EmployeeController" />
@@ -527,6 +536,7 @@
     <MESSAGE value="Rebuild deleteEvent() method in EventsController class" />
     <MESSAGE value="Rebuild updateEvent() &amp; findEventsByID() methods in EventsController class" />
     <MESSAGE value="Fixed some little problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some little problems" />
+    <MESSAGE value="Added findAreaByName() method in WorkAreaController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added findAreaByName() method in WorkAreaController" />
   </component>
 </project>
