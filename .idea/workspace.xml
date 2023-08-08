@@ -4,32 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild updateEvent() &amp; findEventsByID() methods in EventsController class">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Fixed some little problems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/WorkArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/WorkArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EventsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EventsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EventsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/WorkAreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/WorkAreaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +52,17 @@
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -146,13 +136,9 @@
       <workItem from="1691245728236" duration="358000" />
       <workItem from="1691251421719" duration="5771000" />
       <workItem from="1691332967599" duration="1375000" />
-    </task>
-    <task id="LOCAL-00010" summary="New deep changing in all classes">
-      <created>1689271816547</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1689271816547</updated>
+      <workItem from="1691334591393" duration="1145000" />
+      <workItem from="1691378129180" duration="222000" />
+      <workItem from="1691463708480" duration="919000" />
     </task>
     <task id="LOCAL-00011" summary="Committing all controller classes">
       <created>1689398210232</created>
@@ -490,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691257193988</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Fixed some little problems">
+      <created>1691334784860</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1691334784861</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +502,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tried to finish devices.html" />
     <MESSAGE value="Connected to another DB" />
     <MESSAGE value="Tried to solve delete method in devices" />
     <MESSAGE value="Repaired delete method in DevicesController" />
@@ -534,6 +526,7 @@
     <MESSAGE value="Finished to rebuild addNewEvent() method in EventsController class" />
     <MESSAGE value="Rebuild deleteEvent() method in EventsController class" />
     <MESSAGE value="Rebuild updateEvent() &amp; findEventsByID() methods in EventsController class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuild updateEvent() &amp; findEventsByID() methods in EventsController class" />
+    <MESSAGE value="Fixed some little problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some little problems" />
   </component>
 </project>

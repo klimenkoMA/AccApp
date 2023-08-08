@@ -74,6 +74,15 @@
     <button type="submit">Найти</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
+
+<form method="post" action="findworkareabyname">
+    <label>
+        <input type="text" name="name" placeholder="Введите название филиала"/>
+    </label>
+    <button type="submit">Найти</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
 <table align="center" bgcolor="#a9a9a9" width="400" style="columns: max-content">
     <tr>
         <th>ID филиала</th>
