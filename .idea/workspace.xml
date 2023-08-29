@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Fixed some little problems">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Added findAreaByName() method in WorkAreaController">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_08_2023_21_05__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/WorkAreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/WorkAreaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/security/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/security/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +54,15 @@
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,21 +142,10 @@
       <workItem from="1691332967599" duration="1375000" />
       <workItem from="1691334591393" duration="1145000" />
       <workItem from="1691378129180" duration="222000" />
-      <workItem from="1691463708480" duration="919000" />
-    </task>
-    <task id="LOCAL-00011" summary="Committing all controller classes">
-      <created>1689398210232</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1689398210232</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Committing all service classes and repo classes. The server was up at this step">
-      <created>1689399369039</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1689399369039</updated>
+      <workItem from="1691463708480" duration="1141000" />
+      <workItem from="1691518049367" duration="84000" />
+      <workItem from="1693242695721" duration="1195000" />
+      <workItem from="1693320149779" duration="630000" />
     </task>
     <task id="LOCAL-00013" summary="Renamed all controller`s classes methods, rebuild devices.html">
       <created>1689443927565</created>
@@ -483,7 +476,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691334784861</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Added findAreaByName() method in WorkAreaController">
+      <created>1691464794327</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1691464794327</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Some cosmetic changes">
+      <created>1691518115327</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1691518115327</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,8 +509,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Connected to another DB" />
-    <MESSAGE value="Tried to solve delete method in devices" />
     <MESSAGE value="Repaired delete method in DevicesController" />
     <MESSAGE value="Repaired delete method in EmployeeController" />
     <MESSAGE value="Repaired delete method in ITStaffController" />
@@ -527,6 +532,8 @@
     <MESSAGE value="Rebuild deleteEvent() method in EventsController class" />
     <MESSAGE value="Rebuild updateEvent() &amp; findEventsByID() methods in EventsController class" />
     <MESSAGE value="Fixed some little problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some little problems" />
+    <MESSAGE value="Added findAreaByName() method in WorkAreaController" />
+    <MESSAGE value="Some cosmetic changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some cosmetic changes" />
   </component>
 </project>
