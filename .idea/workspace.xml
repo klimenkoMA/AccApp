@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Added findAreaByName() method in WorkAreaController">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_08_2023_21_05__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Deleted some files">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/security/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/security/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +15,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -32,6 +35,7 @@
   <component name="ProjectId" id="2SIa9ZsRcTmaJS9C7vImjVszo0H" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,6 +43,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -54,15 +59,13 @@
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,14 +148,8 @@
       <workItem from="1691463708480" duration="1141000" />
       <workItem from="1691518049367" duration="84000" />
       <workItem from="1693242695721" duration="1195000" />
-      <workItem from="1693320149779" duration="630000" />
-    </task>
-    <task id="LOCAL-00013" summary="Renamed all controller`s classes methods, rebuild devices.html">
-      <created>1689443927565</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1689443927565</updated>
+      <workItem from="1693320149779" duration="794000" />
+      <workItem from="1694448904006" duration="255000" />
     </task>
     <task id="LOCAL-00014" summary="Deleted some tags from devices.html">
       <created>1689500140189</created>
@@ -490,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691518115327</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Deleted some files">
+      <created>1693327348983</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1693327348983</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +513,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Repaired delete method in DevicesController" />
     <MESSAGE value="Repaired delete method in EmployeeController" />
     <MESSAGE value="Repaired delete method in ITStaffController" />
     <MESSAGE value="Added security part with some new classes" />
@@ -534,6 +537,7 @@
     <MESSAGE value="Fixed some little problems" />
     <MESSAGE value="Added findAreaByName() method in WorkAreaController" />
     <MESSAGE value="Some cosmetic changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some cosmetic changes" />
+    <MESSAGE value="Deleted some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted some files" />
   </component>
 </project>
