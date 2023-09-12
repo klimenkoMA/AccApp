@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Deleted some files">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
     </list>
@@ -59,6 +60,17 @@
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -139,14 +151,8 @@
       <workItem from="1693242695721" duration="1195000" />
       <workItem from="1693320149779" duration="794000" />
       <workItem from="1694448904006" duration="1057000" />
-      <workItem from="1694486949634" duration="515000" />
-    </task>
-    <task id="LOCAL-00015" summary="Deleted some tags from employee.html">
-      <created>1689501874818</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1689501874819</updated>
+      <workItem from="1694486949634" duration="1315000" />
+      <workItem from="1694540286878" duration="799000" />
     </task>
     <task id="LOCAL-00016" summary="Deleted some tags from events.html">
       <created>1689504282320</created>
@@ -484,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694449386669</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Added some tags in main page">
+      <created>1694488598268</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1694488598268</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +516,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Repaired delete method in ITStaffController" />
     <MESSAGE value="Added security part with some new classes" />
     <MESSAGE value="Repaired delete method in Room Classes" />
     <MESSAGE value="Repaired delete method in Work Area Classes" />
@@ -528,6 +540,7 @@
     <MESSAGE value="Some cosmetic changes" />
     <MESSAGE value="Deleted some files" />
     <MESSAGE value="Added main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added main page" />
+    <MESSAGE value="Added some tags in main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some tags in main page" />
   </component>
 </project>
