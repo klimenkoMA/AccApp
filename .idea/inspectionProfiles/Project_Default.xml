@@ -14,10 +14,12 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="3">
+          <list size="5">
             <item index="0" class="java.lang.String" itemvalue="charset" />
             <item index="1" class="java.lang.String" itemvalue="placeholder" />
             <item index="2" class="java.lang.String" itemvalue="th:each" />
+            <item index="3" class="java.lang.String" itemvalue="width" />
+            <item index="4" class="java.lang.String" itemvalue="cols" />
           </list>
         </value>
       </option>
@@ -26,7 +28,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="12">
+          <list size="18">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -39,6 +41,12 @@
             <item index="9" class="java.lang.String" itemvalue="input" />
             <item index="10" class="java.lang.String" itemvalue="col" />
             <item index="11" class="java.lang.String" itemvalue="td" />
+            <item index="12" class="java.lang.String" itemvalue="header" />
+            <item index="13" class="java.lang.String" itemvalue="nav" />
+            <item index="14" class="java.lang.String" itemvalue="section" />
+            <item index="15" class="java.lang.String" itemvalue="article" />
+            <item index="16" class="java.lang.String" itemvalue="aside" />
+            <item index="17" class="java.lang.String" itemvalue="footer" />
           </list>
         </value>
       </option>
