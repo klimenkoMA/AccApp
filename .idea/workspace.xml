@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Deleted some files">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/error/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,18 +55,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\public" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,14 +159,8 @@
       <workItem from="1693320149779" duration="794000" />
       <workItem from="1694448904006" duration="1057000" />
       <workItem from="1694486949634" duration="1315000" />
-      <workItem from="1694540286878" duration="799000" />
-    </task>
-    <task id="LOCAL-00016" summary="Deleted some tags from events.html">
-      <created>1689504282320</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1689504282320</updated>
+      <workItem from="1694540286878" duration="1061000" />
+      <workItem from="1694574044848" duration="728000" />
     </task>
     <task id="LOCAL-00017" summary="Deleted some tags from itstaff.html and room.html">
       <created>1689506876493</created>
@@ -497,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694488598268</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Tried to rebuild main page">
+      <created>1694541209152</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1694541209152</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +524,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added security part with some new classes" />
     <MESSAGE value="Repaired delete method in Room Classes" />
     <MESSAGE value="Repaired delete method in Work Area Classes" />
     <MESSAGE value="Repaired update method in WorkArea Classes" />
@@ -541,6 +548,7 @@
     <MESSAGE value="Deleted some files" />
     <MESSAGE value="Added main page" />
     <MESSAGE value="Added some tags in main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some tags in main page" />
+    <MESSAGE value="Tried to rebuild main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to rebuild main page" />
   </component>
 </project>
