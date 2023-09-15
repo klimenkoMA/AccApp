@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Deleted some files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,19 +65,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -169,14 +149,8 @@
       <workItem from="1694540286878" duration="1061000" />
       <workItem from="1694574044848" duration="1096000" />
       <workItem from="1694658601660" duration="2250000" />
-      <workItem from="1694710980757" duration="664000" />
-    </task>
-    <task id="LOCAL-00019" summary="Rebuilt all device classes&#10;Added addDevice() method in controller">
-      <created>1689531497135</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1689531497135</updated>
+      <workItem from="1694710980757" duration="1113000" />
+      <workItem from="1694746019868" duration="1433000" />
     </task>
     <task id="LOCAL-00020" summary="Changed the tag in events.html">
       <created>1689563532447</created>
@@ -514,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694661672676</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Refactored all pages">
+      <created>1694712118677</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1694712118678</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +514,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Repaired update method in WorkArea Classes" />
     <MESSAGE value="Repaired update method in WorkArea, Room Classes" />
     <MESSAGE value="Repaired update method in ITStaff Classes" />
     <MESSAGE value="Repaired update method in Employee Classes" />
@@ -558,6 +538,7 @@
     <MESSAGE value="Tried to rebuild main page" />
     <MESSAGE value="Added 404.html and repaired main.html" />
     <MESSAGE value="Connected all pages with main.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connected all pages with main.html" />
+    <MESSAGE value="Refactored all pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored all pages" />
   </component>
 </project>
