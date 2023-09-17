@@ -4,47 +4,34 @@
 <head>
     <meta charset="UTF-8" content="">
     <title>DEVICES</title>
+    <style type="text/css">
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0c739d;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
 </head>
 <body>
-<table align="left" cellspacing="15" width="100%">
-
-    <td>
-        <h5 style="width: 50px;">
+<header class="site-header">
+    <nav class="nav">
+        <h5>
             <a href="http://localhost/main.html">Главная</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
             <a href="http://localhost/employee">Сотрудник</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
             <a href="http://localhost/itstaff">Инженер-программист</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
             <a href="http://localhost/workarea">Филиал</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
             <a href="http://localhost/room">Кабинет</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
             <a href="http://localhost/events">Событие</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
             <a href="http://localhost/devices">Оборудование</a>
         </h5>
-    </td>
-</table>
-
+    </nav>
+</header>
 <table>
     <td>
         <form method="post" action="/adddevice">
