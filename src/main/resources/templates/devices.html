@@ -7,8 +7,9 @@
     <style type="text/css">
         .site-header {
             display: flex;
-            justify-content: normal;
-            align-items: center;
+            flex-direction: row;
+            flex-basis: 100%;
+            justify-content: space-between;
             background-color: #0791ca;
             height: 100px;
         }
@@ -16,7 +17,7 @@
         .nav {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -29,7 +30,7 @@
         <a href="http://localhost/workarea">Филиал</a> |
         <a href="http://localhost/room">Кабинет</a> |
         <a href="http://localhost/events">Событие</a> |
-        <a href="http://localhost/devices">Оборудование</a> |
+        <a href="http://localhost/devices">Оборудование</a>
     </nav>
 </header>
 <table>
