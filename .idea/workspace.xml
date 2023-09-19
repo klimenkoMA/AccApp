@@ -7,7 +7,6 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Deleted some files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,14 +158,8 @@
       <workItem from="1694922947328" duration="4142000" />
       <workItem from="1694968438805" duration="1736000" />
       <workItem from="1695005031405" duration="1579000" />
-      <workItem from="1695056158072" duration="2600000" />
-    </task>
-    <task id="LOCAL-00026" summary="Refactored some entity fields in itStaff classes v2">
-      <created>1690049895520</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1690049895520</updated>
+      <workItem from="1695056158072" duration="2788000" />
+      <workItem from="1695091824637" duration="861000" />
     </task>
     <task id="LOCAL-00027" summary="Ended refactoring itstaff classes">
       <created>1690094087887</created>
@@ -504,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695007072414</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Some attempts to correct nav in devices.html">
+      <created>1695058996621</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1695058996622</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +523,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Repaired findById method in ITStaff Classes" />
     <MESSAGE value="Repaired findById method in Employee Classes" />
     <MESSAGE value="Repaired findById method in Devices Classes" />
     <MESSAGE value="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff" />
@@ -548,6 +547,7 @@
     <MESSAGE value="Added background into header in devices.html" />
     <MESSAGE value="Rebuild header in devices.html" />
     <MESSAGE value="Rebuild nav tag in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuild nav tag in devices.html" />
+    <MESSAGE value="Some attempts to correct nav in devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some attempts to correct nav in devices.html" />
   </component>
 </project>
