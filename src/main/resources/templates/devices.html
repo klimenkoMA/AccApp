@@ -11,8 +11,25 @@
             justify-content: space-evenly;
             align-items: flex-end;
             height: 100px;
-            background-image: url("/img/headerBlue.jpg");
+            background: #4676D7;
             font-size: larger;
+        }
+
+        .button {
+            appearance: none;
+            border: 0;
+            border-radius: 3px;
+            background: #4676D7;
+            color: #fff;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
+        .button:hover{
+            color: #4655F9;
+        }
+        .button:focus{
+            outline: 0;
+            box-shadow: 0 0 0 4px #4676D7;
         }
     </style>
 </head>
@@ -32,7 +49,7 @@
             <label>
                 <input type="text" name="name" placeholder="Название оборудования"/>
             </label>
-            <button type="submit">Добавить</button>
+            <button class="button" type="submit">Добавить</button>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
@@ -40,7 +57,7 @@
             <label>
                 <input type="text" name="id" placeholder="Введите id оборудования"/>
             </label>
-            <button type="submit">Удалить</button>
+            <button class="button" type="submit">Удалить</button>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
@@ -49,7 +66,7 @@
                 <input type="text" name="id" placeholder="ID оборудования"/>
                 <input type="text" name="name" placeholder="Название оборудования"/>
             </label>
-            <button type="submit">Обновить</button>
+            <button class="button" type="submit">Обновить</button>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
@@ -57,7 +74,7 @@
             <label>
                 <input type="text" name="id" placeholder="Введите id оборудования"/>
             </label>
-            <button type="submit">Найти</button>
+            <button class="button" type="submit">Найти</button>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
@@ -65,7 +82,7 @@
             <label>
                 <input type="text" name="name" placeholder="Введите название оборудования"/>
             </label>
-            <button type="submit">Найти</button>
+            <button class="button" type="submit">Найти</button>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
     </td>
