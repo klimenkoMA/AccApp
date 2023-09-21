@@ -4,70 +4,77 @@
 <head>
     <meta charset="UTF-8" content="">
     <title>ROOM</title>
+    <style type="text/css">
+        .site-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            height: 100px;
+            background: #4676D7;
+            font-size: larger;
+            cursor: pointer;
+        }
+
+        .button {
+            appearance: none;
+            border: 0;
+            border-radius: 3px;
+            background: #4676D7;
+            color: #fff;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
+
+        .button:hover {
+            color: #4655F9;
+            cursor: pointer;
+        }
+
+        .button:focus {
+            outline: 0;
+            box-shadow: 0 0 0 4px #4676D7;
+        }
+    </style>
 </head>
 <body>
-<table align="left" cellspacing="15" width="100%">
+<header class="site-header">
+    <a href="http://localhost/main.html" style="color: antiquewhite">Главная</a>
+    <a href="http://localhost/employee" style="color: antiquewhite">Сотрудник</a>
+    <a href="http://localhost/itstaff" style="color: antiquewhite">Программист</a>
+    <a href="http://localhost/workarea" style="color: antiquewhite">Филиал</a>
+    <a href="http://localhost/room" style="color: antiquewhite">Кабинет</a>
+    <a href="http://localhost/events" style="color: antiquewhite">Событие</a>
+    <a href="http://localhost/devices" style="color: antiquewhite">Оборудование</a>
+</header>
+<table>
+    <td>
+        <form method="post" action="/addroom">
+            <input type="text" name="number" placeholder="Номер кабинета">
+            <button class="button" type="submit">Добавить</button>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
 
-    <td>
-        <h5 style="width: 50px;">
-            <a href="http://localhost/main.html">Главная</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
-            <a href="http://localhost/employee">Сотрудник</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
-            <a href="http://localhost/itstaff">Инженер-программист</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
-            <a href="http://localhost/workarea">Филиал</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
-            <a href="http://localhost/room">Кабинет</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
-            <a href="http://localhost/events">Событие</a>
-        </h5>
-    </td>
-    <td>
-        <h5 style="width: 50px;">
-            <a href="http://localhost/devices">Оборудование</a>
-        </h5>
+        <form method="post" action="/deleteroom">
+            <input type="text" name="id" placeholder="ID кабинета">
+            <button class="button" type="submit">Удалить</button>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
+
+        <form method="post" action="/updateroom">
+            <input type="text" name="id" placeholder="ID кабинета">
+            <input type="text" name="number" placeholder="Номер кабинета">
+            <button class="button" type="submit">Обновить</button>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
+
+        <form method="post" action="findroomyid">
+            <input type="text" name="id" placeholder="Введите id кабинета">
+            <button class="button" type="submit">Найти</button>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
     </td>
 </table>
-<form method="post" action="/addroom">
-    <input type="text" name="number" placeholder="Номер кабинета">
-    <button type="submit">Добавить</button>
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-</form>
-
-<form method="post" action="/deleteroom">
-    <input type="text" name="id" placeholder="ID кабинета">
-    <button type="submit">Удалить</button>
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-</form>
-
-<form method="post" action="/updateroom">
-    <input type="text" name="id" placeholder="ID кабинета">
-    <input type="text" name="number" placeholder="Номер кабинета">
-    <button type="submit">Обновить</button>
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-</form>
-
-<form method="post" action="findroomyid">
-    <input type="text" name="id" placeholder="Введите id кабинета">
-    <button type="submit">Найти</button>
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-</form>
 <table align="center" bgcolor="#a9a9a9" width="400" style="columns: max-content">
     <tr>
         <th>ID кабинета</th>
