@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Deleted some files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,17 +71,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -175,14 +166,8 @@
       <workItem from="1695091824637" duration="1092000" />
       <workItem from="1695141024995" duration="3677000" />
       <workItem from="1695176775015" duration="1669000" />
-      <workItem from="1695227839039" duration="2481000" />
-    </task>
-    <task id="LOCAL-00030" summary="Connected to another DB">
-      <created>1690396860207</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1690396860208</updated>
+      <workItem from="1695227839039" duration="2934000" />
+      <workItem from="1695264395808" duration="773000" />
     </task>
     <task id="LOCAL-00031" summary="Tried to solve delete method in devices">
       <created>1690482959619</created>
@@ -520,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695178949628</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Rebuild buttons in devices.html and employee.html">
+      <created>1695230946650</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1695230946650</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +531,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Preparing for rebuild Events classes" />
     <MESSAGE value="Global rebuild almost all classes" />
     <MESSAGE value="Finished to rebuild addNewEvent() method in EventsController class" />
     <MESSAGE value="Rebuild deleteEvent() method in EventsController class" />
@@ -564,6 +555,7 @@
     <MESSAGE value="Used justify-content and align-items for nav in devices.html" />
     <MESSAGE value="Changed font`s color in nav devices.html" />
     <MESSAGE value="Changed font's size for nav in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed font's size for nav in devices.html" />
+    <MESSAGE value="Rebuild buttons in devices.html and employee.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild buttons in devices.html and employee.html" />
   </component>
 </project>
