@@ -7,8 +7,6 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Deleted some files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,14 +165,8 @@
       <workItem from="1695227839039" duration="2934000" />
       <workItem from="1695264395808" duration="1348000" />
       <workItem from="1695313092967" duration="4720000" />
-      <workItem from="1695349503775" duration="2738000" />
-    </task>
-    <task id="LOCAL-00033" summary="Repaired delete method in EmployeeController">
-      <created>1690652209400</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1690652209400</updated>
+      <workItem from="1695349503775" duration="3060000" />
+      <workItem from="1695448936956" duration="1518000" />
     </task>
     <task id="LOCAL-00034" summary="Repaired delete method in ITStaffController">
       <created>1690735959465</created>
@@ -512,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695317961759</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Tried to correct devices.html">
+      <created>1695352757555</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1695352757557</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +530,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rebuild deleteEvent() method in EventsController class" />
     <MESSAGE value="Rebuild updateEvent() &amp; findEventsByID() methods in EventsController class" />
     <MESSAGE value="Fixed some little problems" />
     <MESSAGE value="Added findAreaByName() method in WorkAreaController" />
@@ -556,6 +554,7 @@
     <MESSAGE value="Rebuild buttons in devices.html and employee.html" />
     <MESSAGE value="Rebuild buttons and nav in all pages" />
     <MESSAGE value="Added some css styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some css styles" />
+    <MESSAGE value="Tried to correct devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to correct devices.html" />
   </component>
 </project>
