@@ -7,6 +7,12 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Deleted some files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,14 +172,8 @@
       <workItem from="1695264395808" duration="1348000" />
       <workItem from="1695313092967" duration="4720000" />
       <workItem from="1695349503775" duration="3060000" />
-      <workItem from="1695448936956" duration="1518000" />
-    </task>
-    <task id="LOCAL-00034" summary="Repaired delete method in ITStaffController">
-      <created>1690735959465</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1690735959465</updated>
+      <workItem from="1695448936956" duration="1861000" />
+      <workItem from="1695456139040" duration="4490000" />
     </task>
     <task id="LOCAL-00035" summary="Added security part with some new classes">
       <created>1690825215247</created>
@@ -511,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695352757557</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Rebuilt devices.html: soft colors, cursors etc.">
+      <created>1695450829497</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1695450829498</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +537,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rebuild updateEvent() &amp; findEventsByID() methods in EventsController class" />
     <MESSAGE value="Fixed some little problems" />
     <MESSAGE value="Added findAreaByName() method in WorkAreaController" />
     <MESSAGE value="Some cosmetic changes" />
@@ -555,6 +561,7 @@
     <MESSAGE value="Rebuild buttons and nav in all pages" />
     <MESSAGE value="Added some css styles" />
     <MESSAGE value="Tried to correct devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to correct devices.html" />
+    <MESSAGE value="Rebuilt devices.html: soft colors, cursors etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt devices.html: soft colors, cursors etc." />
   </component>
 </project>
