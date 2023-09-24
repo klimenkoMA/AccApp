@@ -8,12 +8,14 @@
         html, body {
             height: 99%;
         }
+
         .wrapper {
             min-height: 99%;
             display: flex;
             flex-direction: column;
 
         }
+
         .header {
             display: flex;
             flex-direction: row;
@@ -22,11 +24,14 @@
             min-height: 80px;
             background: #62a0f6;
             font-size: larger;
+            outline: none;
         }
+
         .main {
             flex: 1 1 auto;
             padding: 20px;
         }
+
         .footer {
             background: #62a0f6;
             font-size: 16px;
@@ -34,22 +39,42 @@
             text-align: center;
             padding: 20px;
         }
+
         button {
             appearance: none;
             border: 0;
-            border-radius: 3px;
+            border-radius: 5px;
             background: #62a0f6;
             color: #fcf6f6;
             padding: 2px 5px;
             font-size: 12px;
         }
+
         .button:hover {
             color: #fade7d;
             cursor: pointer;
         }
+
         .button:focus {
             outline: 4px;
             box-shadow: 0 0 0 4px #4676D7;
+        }
+
+        input[type="text"] {
+            appearance: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: inherit;
+            margin: 4px 0;
+            padding: 2px;
+            box-shadow: 0 0 3px 1px #4676D7;
+            border-radius: 5px;
+            border: 0 #4676D7;
+        }
+
+        *, *:before, *:after {
+            box-sizing: border-box;
         }
     </style>
 </head>
