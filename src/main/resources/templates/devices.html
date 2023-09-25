@@ -32,6 +32,20 @@
             padding: 20px;
         }
 
+        .crud_buttons {
+            display: flex;
+            flex-direction: row;
+            border: 0;
+            padding: 5px;
+        }
+
+        .crud_button_and_text {
+            display: flex;
+            flex-direction: row;
+            border: 0;
+            padding: 5px;
+        }
+
         .footer {
             background: #62a0f6;
             font-size: 16px;
@@ -90,46 +104,73 @@
         <a href="http://localhost/devices" style="color: #fcf6f6">Оборудование</a>
     </header>
     <main class="main">
-        <table>
+        <table class="crud_buttons">
             <td>
                 <form method="post" action="/adddevice">
-                    <label>
-                        <input type="text" name="name" placeholder="Название оборудования"/>
-                    </label>
-                    <button class="button" type="submit">Добавить</button>
+                    <div>
+                        <label>
+                            <input type="text" name="name" placeholder="Название оборудования"/>
+                        </label>
+                    </div>
+                    <div>
+
+                        <button class="button" type="submit">Добавить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
                 </form>
 
+            </td>
+            <td>
                 <form method="post" action="/deletedevice">
-                    <label>
-                        <input type="text" name="id" placeholder="Введите id оборудования"/>
-                    </label>
-                    <button class="button" type="submit">Удалить</button>
+                    <div>
+                        <label>
+                            <input type="text" name="id" placeholder="Введите id оборудования"/>
+                        </label>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Удалить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/updatedevice">
-                    <label>
-                        <input type="text" name="id" placeholder="ID оборудования"/>
-                        <input type="text" name="name" placeholder="Название оборудования"/>
-                    </label>
-                    <button class="button" type="submit">Обновить</button>
+                    <div>
+                        <label>
+                            <input type="text" name="id" placeholder="ID оборудования"/>
+                            <input type="text" name="name" placeholder="Название оборудования"/>
+                        </label>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Обновить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/finddevicebyid">
-                    <label>
-                        <input type="text" name="id" placeholder="Введите id оборудования"/>
-                    </label>
-                    <button class="button" type="submit">Найти</button>
+                    <div>
+                        <label>
+                            <input type="text" name="id" placeholder="Введите id оборудования"/>
+                        </label>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Найти</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/finddevicebyname">
-                    <label>
-                        <input type="text" name="name" placeholder="Введите название оборудования"/>
-                    </label>
-                    <button class="button" type="submit">Найти</button>
+                    <div>
+                        <label>
+                            <input type="text" name="name" placeholder="Введите название оборудования"/>
+                        </label>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Найти</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
             </td>
