@@ -7,6 +7,7 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Added some args in css styles in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,14 +171,8 @@
       <workItem from="1695456139040" duration="4642000" />
       <workItem from="1695534047465" duration="3736000" />
       <workItem from="1695565116774" duration="960000" />
-      <workItem from="1695608020844" duration="2086000" />
-    </task>
-    <task id="LOCAL-00038" summary="Repaired delete method in Work Area Classes">
-      <created>1690946309578</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1690946309578</updated>
+      <workItem from="1695608020844" duration="2242000" />
+      <workItem from="1695658219330" duration="3377000" />
     </task>
     <task id="LOCAL-00039" summary="Repaired update method in WorkArea Classes">
       <created>1690991704170</created>
@@ -515,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695566083762</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Rebuilt buttons in devices.html">
+      <created>1695611945414</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1695611945415</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +536,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted some files" />
     <MESSAGE value="Added main page" />
     <MESSAGE value="Added some tags in main page" />
     <MESSAGE value="Tried to rebuild main page" />
@@ -559,6 +560,7 @@
     <MESSAGE value="Rebuilt all pages: soft colors, added footer" />
     <MESSAGE value="Added input css style in devices.html" />
     <MESSAGE value="Added some args in css styles in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some args in css styles in devices.html" />
+    <MESSAGE value="Rebuilt buttons in devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt buttons in devices.html" />
   </component>
 </project>
