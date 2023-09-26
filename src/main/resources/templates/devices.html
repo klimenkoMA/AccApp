@@ -22,7 +22,7 @@
             justify-content: space-evenly;
             align-items: flex-end;
             min-height: 80px;
-            background: #62a0f6;
+            background: #002349;
             font-size: larger;
             outline: none;
         }
@@ -38,11 +38,14 @@
             flex-direction: row;
             justify-content: space-evenly;
         }
+        .db_values{
+            border-image: url("/static/img/leafboard.jpg");
+        }
 
         .footer {
-            background: #62a0f6;
+            background: #002349;
             font-size: 16px;
-            color: #fcf6f6;
+            color: #a78b45;
             text-align: center;
             padding: 20px;
         }
@@ -51,20 +54,20 @@
             appearance: none;
             border: 0;
             border-radius: 5px;
-            background: #62a0f6;
-            color: #fcf6f6;
+            background: #002349;
+            color: #e9c363;
             padding: 2px 5px;
             font-size: 12px;
         }
 
         .button:hover {
-            color: #fade7d;
+            color: #564827;
             cursor: pointer;
         }
 
         .button:focus {
             outline: 4px;
-            box-shadow: 0 0 0 4px #4676D7;
+            box-shadow: 0 0 0 4px #002349;
         }
 
         input[type="text"] {
@@ -75,9 +78,9 @@
             line-height: inherit;
             margin: 4px 0;
             padding: 2px;
-            box-shadow: 0 0 3px 1px #4676D7;
+            box-shadow: 0 0 3px 1px #002349;
             border-radius: 5px;
-            border: 0 #4676D7;
+            border: 0 #002349;
         }
 
         *, *:before, *:after {
@@ -88,13 +91,13 @@
 <body>
 <div class="wrapper">
     <header class="header">
-        <a href="http://localhost/main.html" style="color: #fcf6f6">Главная</a>
-        <a href="http://localhost/employee" style="color: #fcf6f6">Сотрудник</a>
-        <a href="http://localhost/itstaff" style="color: #fcf6f6">Программист</a>
-        <a href="http://localhost/workarea" style="color: #fcf6f6">Филиал</a>
-        <a href="http://localhost/room" style="color: #fcf6f6">Кабинет</a>
-        <a href="http://localhost/events" style="color: #fcf6f6">Событие</a>
-        <a href="http://localhost/devices" style="color: #fcf6f6">Оборудование</a>
+        <a href="http://localhost/main.html" style="color: #a78b45">Главная</a>
+        <a href="http://localhost/employee" style="color: #a78b45">Сотрудник</a>
+        <a href="http://localhost/itstaff" style="color: #a78b45">Программист</a>
+        <a href="http://localhost/workarea" style="color: #a78b45">Филиал</a>
+        <a href="http://localhost/room" style="color: #a78b45">Кабинет</a>
+        <a href="http://localhost/events" style="color: #a78b45">Событие</a>
+        <a href="http://localhost/devices" style="color: #a78b45">Оборудование</a>
     </header>
     <main class="main">
         <table class="crud_buttons" cellpadding="25px">
@@ -168,7 +171,7 @@
                 </form>
             </td>
         </table>
-        <table align="center" bgcolor="#d3d3d3" width="700" style="columns: max-content">
+        <table class="db_values" align="center" bgcolor="#d3d3d3" width="700" style="columns: max-content">
             <tr>
                 <th>ID оборудования</th>
                 <th>Название оборудования</th>
