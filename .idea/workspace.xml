@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Added some args in css styles in devices.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/leafboard.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
     </list>
@@ -68,17 +67,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -184,14 +172,8 @@
       <workItem from="1695565116774" duration="960000" />
       <workItem from="1695608020844" duration="2242000" />
       <workItem from="1695658219330" duration="3597000" />
-      <workItem from="1695694858590" duration="2955000" />
-    </task>
-    <task id="LOCAL-00040" summary="Repaired update method in WorkArea, Room Classes">
-      <created>1690992307617</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1690992307617</updated>
+      <workItem from="1695694858590" duration="3073000" />
+      <workItem from="1695743849056" duration="2171000" />
     </task>
     <task id="LOCAL-00041" summary="Repaired update method in ITStaff Classes">
       <created>1690993495631</created>
@@ -529,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695665618019</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Rebuilt devices.html">
+      <created>1695698305936</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1695698305937</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +537,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added main page" />
     <MESSAGE value="Added some tags in main page" />
     <MESSAGE value="Tried to rebuild main page" />
     <MESSAGE value="Added 404.html and repaired main.html" />
@@ -573,6 +561,7 @@
     <MESSAGE value="Added input css style in devices.html" />
     <MESSAGE value="Added some args in css styles in devices.html" />
     <MESSAGE value="Rebuilt buttons in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt buttons in devices.html" />
+    <MESSAGE value="Rebuilt devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt devices.html" />
   </component>
 </project>
