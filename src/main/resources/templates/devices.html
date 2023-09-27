@@ -33,6 +33,12 @@
             min-width: 99vmin;
         }
 
+        .content_part {
+            display: flex;
+            flex-direction: row;
+            min-width: 70%;
+        }
+
         .crud_buttons {
             display: flex;
             flex-direction: row;
@@ -40,11 +46,20 @@
         }
 
         .db_values {
+            display: flex;
+            flex-direction: row;
+            align-items: end;
             width: min-content;
             border: 2px solid #002349;
             border-radius: 5px;
             padding: 10px;
             box-shadow: 0 0 0 2px #a78b45;
+        }
+
+        .db_table {
+            max-width: min-content;
+            background-color: #909bfa;
+            font-palette: #a78b45;
         }
 
         .footer {
@@ -176,8 +191,12 @@
                 </form>
             </td>
         </table>
+        <div class="content_part">
+
+        </div>
         <div class="db_values">
-            <table align="center" bgcolor="#d3d3d3" width="700" style="columns: max-content">
+            <!--            <table align="center" bgcolor="#d3d3d3" width="700" style="columns: max-content">-->
+            <table class="db_table">
                 <tr>
                     <th>ID оборудования</th>
                     <th>Название оборудования</th>
