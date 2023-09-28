@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Added some args in css styles in devices.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/notebook.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,14 +177,8 @@
       <workItem from="1695694858590" duration="3073000" />
       <workItem from="1695743849056" duration="2409000" />
       <workItem from="1695781895515" duration="2648000" />
-      <workItem from="1695834425731" duration="746000" />
-    </task>
-    <task id="LOCAL-00043" summary="Repaired update method in Employee Classes">
-      <created>1690997425622</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1690997425623</updated>
+      <workItem from="1695834425731" duration="939000" />
+      <workItem from="1695868059695" duration="2496000" />
     </task>
     <task id="LOCAL-00044" summary="Repaired update method in Employee, Devices Classes">
       <created>1690997903037</created>
@@ -520,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695783953952</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Some little changes in devices.html">
+      <created>1695835314520</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1695835314520</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +542,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added 404.html and repaired main.html" />
     <MESSAGE value="Connected all pages with main.html" />
     <MESSAGE value="Refactored all pages" />
     <MESSAGE value="Rebuild some tags in devices.html" />
@@ -564,6 +566,7 @@
     <MESSAGE value="Rebuilt devices.html" />
     <MESSAGE value="Added border into db values table in devices.html" />
     <MESSAGE value="Some changes in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes in devices.html" />
+    <MESSAGE value="Some little changes in devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some little changes in devices.html" />
   </component>
 </project>

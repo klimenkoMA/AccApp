@@ -33,11 +33,6 @@
             min-width: 99vmin;
         }
 
-        .content_part {
-            display: flex;
-            flex-direction: row;
-            min-width: 70%;
-        }
 
         .crud_buttons {
             display: flex;
@@ -45,21 +40,35 @@
             justify-content: space-evenly;
         }
 
-        .db_values {
+        .mid_part {
+            display: flex;
+            flex-direction: row;
+            max-width: 99%;
+            min-width: 95%;
+        }
+
+        .content_part {
+            display: flex;
+            flex-direction: row;
+            min-width: 59%;
+            background-image: url("/img/notebook.jpeg");
+        }
+
+        .db_table_border {
             display: flex;
             flex-direction: row;
             align-items: end;
             width: min-content;
             border: 2px solid #002349;
             border-radius: 5px;
-            padding: 10px;
+            padding: 5px;
             box-shadow: 0 0 0 2px #a78b45;
         }
 
         .db_table {
-            max-width: min-content;
-            background-color: #909bfa;
-            font-palette: #a78b45;
+            min-width: 40vw;
+            background-color: #002349;
+            color: #e9c363;
         }
 
         .footer {
@@ -191,30 +200,30 @@
                 </form>
             </td>
         </table>
-        <div class="content_part">
-
-        </div>
-        <div class="db_values">
-            <!--            <table align="center" bgcolor="#d3d3d3" width="700" style="columns: max-content">-->
-            <table class="db_table">
-                <tr>
-                    <th>ID оборудования</th>
-                    <th>Название оборудования</th>
-                </tr>
-                <div th:each="element : ${devicesList}" class="row m-1">
-                    <div class="col-8">
-                        <tr align="center">
-                            <td>
-                                <div>[[${element.id}]]</div>
-                            </td>
-                            <td>
-                                <div>[[${element.name}]]</div>
-                            </td>
-                        </tr>
+        <div class="mid_part">
+            <div class="content_part">
+            </div>
+            <div class="db_table_border">
+                <table class="db_table">
+                    <tr>
+                        <th>ID оборудования</th>
+                        <th>Название оборудования</th>
+                    </tr>
+                    <div th:each="element : ${devicesList}" class="row m-1">
+                        <div class="col-8">
+                            <tr align="center">
+                                <td>
+                                    <div>[[${element.id}]]</div>
+                                </td>
+                                <td>
+                                    <div>[[${element.name}]]</div>
+                                </td>
+                            </tr>
+                        </div>
                     </div>
-                </div>
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            </table>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </table>
+            </div>
         </div>
     </main>
     <footer class="footer">
