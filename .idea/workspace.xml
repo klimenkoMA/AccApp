@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Added some args in css styles in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,17 +70,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -190,14 +180,8 @@
       <workItem from="1695781895515" duration="2648000" />
       <workItem from="1695834425731" duration="939000" />
       <workItem from="1695868059695" duration="2811000" />
-      <workItem from="1695918127080" duration="3544000" />
-    </task>
-    <task id="LOCAL-00045" summary="Repaired findById method in WorkArea Classes">
-      <created>1691083979948</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1691083979948</updated>
+      <workItem from="1695918127080" duration="3740000" />
+      <workItem from="1695954542739" duration="1230000" />
     </task>
     <task id="LOCAL-00046" summary="Repaired findById method in WorkArea Classes">
       <created>1691087140584</created>
@@ -535,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695871378588</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Rebuild employee.html">
+      <created>1695921934778</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1695921934779</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +545,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Connected all pages with main.html" />
     <MESSAGE value="Refactored all pages" />
     <MESSAGE value="Rebuild some tags in devices.html" />
     <MESSAGE value="Rebuild bread crumbs in all pages" />
@@ -579,6 +569,7 @@
     <MESSAGE value="Added border into db values table in devices.html" />
     <MESSAGE value="Some little changes in devices.html" />
     <MESSAGE value="Some changes in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes in devices.html" />
+    <MESSAGE value="Rebuild employee.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild employee.html" />
   </component>
 </project>
