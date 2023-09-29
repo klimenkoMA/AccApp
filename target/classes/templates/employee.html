@@ -5,6 +5,9 @@
     <meta charset="UTF-8" content="">
     <title>EMPLOYEE</title>
     <style type="text/css">
+        a {
+            text-decoration: none;
+        }
         html, body {
             height: 99%;
         }
@@ -24,11 +27,47 @@
             min-height: 80px;
             background: #62a0f6;
             font-size: larger;
+            outline: none;
+            text-shadow: #002349 2px 3px 4px;
         }
 
         .main {
             flex: 1 1 auto;
             padding: 20px;
+            min-width: 99vmin;
+        }
+
+
+        .crud_buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .mid_part {
+            display: flex;
+            flex-direction: row;
+            max-width: 99%;
+            min-width: 95%;
+        }
+
+        .content_part {
+            min-width: 29%;
+        }
+
+        .db_table_border {
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            width: min-content;
+            border: 2px solid #62a0f6;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 0 0 0 2px #15467a;
+        }
+
+        .db_table {
+            min-width: 40vw;
         }
 
         .footer {
@@ -37,26 +76,45 @@
             color: #fcf6f6;
             text-align: center;
             padding: 20px;
+            text-shadow: #002349 2px 3px 4px;
         }
 
         button {
             appearance: none;
             border: 0;
-            border-radius: 3px;
+            border-radius: 5px;
             background: #62a0f6;
             color: #fcf6f6;
             padding: 2px 5px;
             font-size: 12px;
+            text-shadow: #002349 2px 3px 4px;
         }
 
         .button:hover {
-            color: #fade7d;
+            color: #564827;
             cursor: pointer;
         }
 
         .button:focus {
             outline: 4px;
-            box-shadow: 0 0 0 4px #4676D7;
+            box-shadow: 0 0 0 4px #62a0f6;
+        }
+
+        input[type="text"] {
+            appearance: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: inherit;
+            margin: 4px 0;
+            padding: 2px;
+            box-shadow: 0 0 3px 1px #62a0f6;
+            border-radius: 5px;
+            border: 0 #62a0f6;
+        }
+
+        *, *:before, *:after {
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -72,71 +130,99 @@
         <a href="http://localhost/devices" style="color: #fcf6f6">Оборудование</a>
     </header>
     <main class="main">
-        <table>
+        <table class="crud_buttons" cellpadding="25px">
             <td>
                 <form method="post" action="/addemployee">
-                    <label>
-                        <input type="text" name="fio" placeholder="Введите ФИО сотрудника"/>
-                    </label>
-                    <label>
-                        <input type="text" name="dborn" placeholder="Введите дату рождения"/>
-                    </label>
-                    <label>
-                        <input type="text" name="workArea" placeholder="Введите филиал"/>
-                    </label>
-                    <label>
-                        <input type="text" name="room" placeholder="Введите кабинет"/>
-                    </label>
-                    <button class="button" type="submit">Добавить</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="fio" placeholder="Введите ФИО сотрудника"/>
+                        </label>
+                        <label>
+                            <input type="text" name="dborn" placeholder="Введите дату рождения"/>
+                        </label>
+                        <label>
+                            <input type="text" name="workArea" placeholder="Введите филиал"/>
+                        </label>
+                        <label>
+                            <input type="text" name="room" placeholder="Введите кабинет"/>
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Добавить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/deleteemployee">
-                    <label>
-                        <input type="text" name="id" placeholder="Введите id сотрудника">
-                    </label>
-                    <button class="button" type="submit">Удалить</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="Введите id сотрудника">
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Удалить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/updateemployee">
-                    <label>
-                        <input type="text" name="id" placeholder="Введите id сотрудника">
-                    </label>
-                    <label>
-                        <input type="text" name="fio" placeholder="Введите ФИО"/>
-                    </label>
-                    <label>
-                        <input type="text" name="dborn" placeholder="Введите дату рождения"/>
-                    </label>
-                    <label>
-                        <input type="text" name="workarea" placeholder="Введите филиал"/>
-                    </label>
-                    <label>
-                        <input type="text" name="room" placeholder="Введите кабинет"/>
-                    </label>
-                    <button class="button" type="submit">Обновить</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="Введите id сотрудника">
+                        </label>
+                        <label>
+                            <input type="text" name="fio" placeholder="Введите ФИО"/>
+                        </label>
+                        <label>
+                            <input type="text" name="dborn" placeholder="Введите дату рождения"/>
+                        </label>
+                        <label>
+                            <input type="text" name="workarea" placeholder="Введите филиал"/>
+                        </label>
+                        <label>
+                            <input type="text" name="room" placeholder="Введите кабинет"/>
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Обновить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/findbyfio">
-                    <label>
-                        <input type="text" name="fio" placeholder="Введите ФИО сотрудника">
-                    </label>
-                    <button class="button" type="submit">Найти</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="fio" placeholder="Введите ФИО сотрудника">
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Найти</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/findbyid">
-                    <label>
-                        <input type="text" name="id" placeholder="Введите ID сотрудника">
-                    </label>
-                    <button class="button" type="submit">Найти</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="Введите ID сотрудника">
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Найти</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
             </td>
         </table>
-        <table align="center" bgcolor="#d3d3d3" width="700" style="columns: max-content">
+        <div class="mid_part">
+            <div class="content_part">
+            </div>
+            <div class="db_table_border">
+                <table class="db_table">
             <tr>
                 <th>ID сотрудника</th>
                 <th>Фамилия Имя Отчество</th>
@@ -167,6 +253,8 @@
             </div>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </table>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div align="center">MK Copyright 2023</div>
