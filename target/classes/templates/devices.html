@@ -11,6 +11,7 @@
 
         html, body {
             height: 99%;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .wrapper {
@@ -22,37 +23,55 @@
 
         .header {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-evenly;
-            align-items: flex-end;
+            align-items: start;
             min-height: 80px;
-            background: #002349;
-            font-size: larger;
+            max-height: 100px;
+            background: #62a0f6;
             outline: none;
-            text-shadow: #000003 2px 3px 4px;
+            text-shadow: #002349 2px 3px 4px;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .page-name {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            text-shadow: #002349 2px 3px 4px;
+        }
+
+        .navigation-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            min-width: 99%;
+            font-size: larger;
         }
 
         .main {
             flex: 1 1 auto;
-            padding: 20px;
-            min-width: 99vmin;
-        }
+            min-width: 99%;
 
+        }
 
         .crud_buttons {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            max-width: 99%;
+            min-width: 99%;
+            padding: 20px 8%;
         }
 
         .mid_part {
             display: flex;
             flex-direction: row;
             max-width: 99%;
-            min-width: 95%;
+            min-width: 99%;
         }
 
-        .content_part {
+        .like_button_container {
             min-width: 29%;
         }
 
@@ -61,10 +80,10 @@
             flex-direction: row;
             align-items: end;
             width: min-content;
-            border: 2px solid #002349;
+            border: 2px solid #62a0f6;
             border-radius: 5px;
             padding: 5px;
-            box-shadow: 0 0 0 2px #a78b45;
+            box-shadow: 0 0 0 2px #15467a;
         }
 
         .db_table {
@@ -72,23 +91,23 @@
         }
 
         .footer {
-            background: #002349;
+            background: #62a0f6;
             font-size: 16px;
-            color: #a78b45;
+            color: #fcf6f6;
             text-align: center;
             padding: 20px;
-            text-shadow: #000003 2px 3px 4px;
+            text-shadow: #002349 2px 3px 4px;
         }
 
         button {
             appearance: none;
             border: 0;
             border-radius: 5px;
-            background: #002349;
-            color: #e9c363;
+            background: #62a0f6;
+            color: #fcf6f6;
             padding: 2px 5px;
             font-size: 12px;
-            text-shadow: #000003 2px 3px 4px;
+            text-shadow: #002349 2px 3px 4px;
         }
 
         .button:hover {
@@ -98,7 +117,7 @@
 
         .button:focus {
             outline: 4px;
-            box-shadow: 0 0 0 4px #002349;
+            box-shadow: 0 0 0 4px #62a0f6;
         }
 
         input[type="text"] {
@@ -109,9 +128,9 @@
             line-height: inherit;
             margin: 4px 0;
             padding: 2px;
-            box-shadow: 0 0 3px 1px #002349;
+            box-shadow: 0 0 3px 1px #62a0f6;
             border-radius: 5px;
-            border: 0 #002349;
+            border: 0 #62a0f6;
         }
 
         *, *:before, *:after {
@@ -122,13 +141,32 @@
 <body>
 <div class="wrapper">
     <header class="header">
-        <a href="http://localhost/main.html" style="color: #a78b45">Главная</a>
-        <a href="http://localhost/employee" style="color: #a78b45">Сотрудник</a>
-        <a href="http://localhost/itstaff" style="color: #a78b45">Программист</a>
-        <a href="http://localhost/workarea" style="color: #a78b45">Филиал</a>
-        <a href="http://localhost/room" style="color: #a78b45">Кабинет</a>
-        <a href="http://localhost/events" style="color: #a78b45">Событие</a>
-        <a href="http://localhost/devices" style="color: #a78b45">Оборудование</a>
+        <div class="page-name">
+            <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ОБОРУДОВАНИЕ</h3>
+        </div>
+        <div class="navigation-box">
+            <div class="navigation-link">
+                <a href="http://localhost/main.html" style="color: #fcf6f6">Главная</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/employee" style="color: #fcf6f6">Сотрудники</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/itstaff" style="color: #fcf6f6">Программисты</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/workarea" style="color: #fcf6f6">Филиалы</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/room" style="color: #fcf6f6">Кабинеты</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/events" style="color: #fcf6f6">События</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/devices" style="color: #fcf6f6">Оборудование</a>
+            </div>
+        </div>
     </header>
     <main class="main">
         <table class="crud_buttons" cellpadding="25px">
@@ -203,7 +241,8 @@
             </td>
         </table>
         <div class="mid_part">
-            <div class="content_part">
+            <div class="like_button_container">
+
             </div>
             <div class="db_table_border">
                 <table class="db_table">
@@ -232,5 +271,8 @@
         <div align="center">MK Copyright 2023</div>
     </footer>
 </div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="/like_button.js"></script>
 </body>
 </html>
