@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Added some args in css styles in devices.html">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +57,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Images/headerBlue.jpg" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
@@ -181,14 +184,9 @@
       <workItem from="1695954542739" duration="1591000" />
       <workItem from="1696007207232" duration="1351000" />
       <workItem from="1696055949529" duration="620000" />
-      <workItem from="1696075791508" duration="6937000" />
-    </task>
-    <task id="LOCAL-00048" summary="Repaired findById method in ITStaff Classes">
-      <created>1691166621425</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1691166621425</updated>
+      <workItem from="1696075791508" duration="7076000" />
+      <workItem from="1696095121042" duration="924000" />
+      <workItem from="1696135780349" duration="1368000" />
     </task>
     <task id="LOCAL-00049" summary="Repaired findById method in ITStaff Classes">
       <created>1691167017453</created>
@@ -526,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696056569247</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Edited employee.html">
+      <created>1696084043989</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1696084043989</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +550,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rebuild bread crumbs in all pages" />
     <MESSAGE value="Corrected a view of logo`s in main.html" />
     <MESSAGE value="Added background into header in devices.html" />
     <MESSAGE value="Rebuild header in devices.html" />
@@ -570,6 +574,7 @@
     <MESSAGE value="Rebuild employee.html" />
     <MESSAGE value="Changed border`s color in employee.html" />
     <MESSAGE value="Rebuilt employee.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt employee.html" />
+    <MESSAGE value="Edited employee.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited employee.html" />
   </component>
 </project>
