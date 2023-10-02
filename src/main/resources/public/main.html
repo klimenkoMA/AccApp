@@ -5,85 +5,203 @@
     <meta charset="UTF-8" content="">
     <title>Главная</title>
     <style type="text/css">
+        a {
+            text-decoration: none;
+        }
+
+        html, body {
+            height: 99%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wrapper {
+            min-height: 99%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: start;
+            min-height: 80px;
+            max-height: 100px;
+            background: #62a0f6;
+            outline: none;
+            color: blanchedalmond;
+            text-shadow: #002349 2px 3px 4px;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .page-name {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            text-shadow: #002349 2px 3px 4px;
+        }
+
+        .navigation-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            min-width: 99%;
+            font-size: larger;
+        }
+
+        .main {
+            flex: 1 1 auto;
+            min-width: 99%;
+
+        }
+
+        .crud_buttons {
+            display: flex;
+            flex-direction: row;
+            max-width: 99%;
+            min-width: 99%;
+            padding: 20px 8%;
+        }
+
+        .mid_part {
+            display: flex;
+            flex-direction: row;
+            max-width: 99%;
+            min-width: 99%;
+        }
+
+        .content_part {
+            min-width: 29%;
+        }
+
+        .db_table_border {
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            width: fit-content;
+            border: 2px solid #62a0f6;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 0 0 0 2px #15467a;
+        }
+
+        .db_table {
+            min-width: 55%;
+        }
+
         .footer {
-            margin: 10%;
+            background: #62a0f6;
+            font-size: 16px;
+            color: #fcf6f6;
+            text-align: center;
+            padding: 20px;
+            text-shadow: #002349 2px 3px 4px;
+        }
+
+        button {
+            appearance: none;
+            border: 0;
+            border-radius: 5px;
+            background: #62a0f6;
+            color: #fcf6f6;
+            padding: 2px 5px;
+            font-size: 12px;
+            text-shadow: #002349 2px 3px 4px;
+        }
+
+        .button:hover {
+            color: #564827;
+            cursor: pointer;
+        }
+
+        .button:focus {
+            outline: 4px;
+            box-shadow: 0 0 0 4px #62a0f6;
+        }
+
+        input[type="text"] {
+            appearance: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: inherit;
+            margin: 4px 0;
+            padding: 2px;
+            box-shadow: 0 0 3px 1px #62a0f6;
+            border-radius: 5px;
+            border: 0 #62a0f6;
+        }
+
+        *, *:before, *:after {
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-<header>
-    <div style="width: 100%;margin: auto;">
-        <img src="/img/html5.jpg" alt="Логотип"
-             width="100%" height="108">
+<div class="wrapper">
+<header class="header">
+
         <h2 style="width: 60%; margin: auto;">
             Информационная система с использованием гетерогенных БД
         </h2>
-    </div>
 </header>
-<table>
-    <col align="center" span="1" width="20%">
-    <td>
-        <nav>
-            <h5 style="width: 190px;">
-                <a href="http://localhost/workarea">Филиалы</a>
-            </h5>
-            <h5 style="width: 190px;">
-                <a href="http://localhost/devices">Оборудование</a>
-            </h5>
-            <h5 style="width: 190px;">
-                <a href="http://localhost/employee">Сотрудники</a>
-            </h5>
-            <h5 style="width: 190px;">
-                <a href="http://localhost/events">События</a>
-            </h5>
-            <h5 style="width: 190px;">
-                <a href="http://localhost/itstaff">Программисты</a>
-            </h5>
-            <h5 style="width: 190px;">
-                <a href="http://localhost/room">Кабинеты</a>
-            </h5>
-        </nav>
-    </td>
-    <td>
-        <section>
-            Hello world!
-            <div style="text-align: center;">
-                <p>Здесь много текста по теме курсового проекта
+<main class="main">
+    <table>
+        <col align="center" span="1" width="20%">
+        <td>
+            <nav>
+                <h5 style="width: 190px;">
+                    <a href="http://localhost/workarea">Филиалы</a>
+                </h5>
+                <h5 style="width: 190px;">
+                    <a href="http://localhost/devices">Оборудование</a>
+                </h5>
+                <h5 style="width: 190px;">
+                    <a href="http://localhost/employee">Сотрудники</a>
+                </h5>
+                <h5 style="width: 190px;">
+                    <a href="http://localhost/events">События</a>
+                </h5>
+                <h5 style="width: 190px;">
+                    <a href="http://localhost/itstaff">Программисты</a>
+                </h5>
+                <h5 style="width: 190px;">
+                    <a href="http://localhost/room">Кабинеты</a>
+                </h5>
+            </nav>
+        </td>
+        <td>
+            <section>
+                Hello world!
+                <div style="text-align: center;">
+                    <p>Здесь много текста по теме курсового проекта
+                    </p>
+                </div>
+
+                <p> И тут тоже
                 </p>
-            </div>
+            </section>
 
-            <p> И тут тоже
-            </p>
-        </section>
-
-    </td>
-    <td>
-        <article>
-            <p> Сопутствующая инфа
-            </p>
-        </article>
-        <aside>Здесь могла быть ваша реклама</aside>
-    </td>
-</table>
-
-
-<footer class="footer">
-    <table align="center" cols="1" width="100%">
-        <col align="center" width="100%">
-        <tr align="center" width="100%">
-            <td align="center" width="100%">
-                <h2>
-                    Подвал сайта
-                </h2>
-                <p>Copyright@ 2023 M K Web Practice
-                    <img src="/img/tux.png"
-                         style="float: right;"
-                         height="50" width="50" alt="Линь">
+        </td>
+        <td>
+            <article>
+                <p> Сопутствующая инфа
                 </p>
-                <address>FAR FAR AWAY</address>
-            </td>
-        </tr>
+            </article>
+            <aside>Здесь могла быть ваша реклама</aside>
+        </td>
     </table>
+</main>
+<footer class="footer">
+    <p>Copyright@ 2023 M K Web Practice
+        <img src="/img/tux.png"
+             style="float: right;"
+             height="50" width="50" alt="Линь">
+    </p>
+    <address>FAR FAR AWAY</address>
 </footer>
+</div>
 </body>
 </html>
