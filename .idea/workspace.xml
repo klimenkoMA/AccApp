@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/like_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/like_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +68,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img\js" />
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\public" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -191,14 +206,8 @@
       <workItem from="1696135780349" duration="2319000" />
       <workItem from="1696148446990" duration="705000" />
       <workItem from="1696163399277" duration="5430000" />
-      <workItem from="1696214929791" duration="1258000" />
-    </task>
-    <task id="LOCAL-00051" summary="Repaired findById method in Devices Classes">
-      <created>1691169016863</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1691169016863</updated>
+      <workItem from="1696214929791" duration="1422000" />
+      <workItem from="1696266430147" duration="1297000" />
     </task>
     <task id="LOCAL-00052" summary="Repaired findById method in Devices Classes">
       <created>1691169153194</created>
@@ -536,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696178914825</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Rebuilt main.html">
+      <created>1696216365668</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1696216365668</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +572,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added background into header in devices.html" />
     <MESSAGE value="Rebuild header in devices.html" />
     <MESSAGE value="Rebuild nav tag in devices.html" />
     <MESSAGE value="Some attempts to correct nav in devices.html" />
@@ -581,6 +596,7 @@
     <MESSAGE value="Edited employee.html" />
     <MESSAGE value="Rebuilt devices.html" />
     <MESSAGE value="Added React.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added React.js" />
+    <MESSAGE value="Rebuilt main.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt main.html" />
   </component>
 </project>
