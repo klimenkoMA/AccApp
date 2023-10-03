@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt devices.html">
+      <change afterPath="$PROJECT_DIR$/frontend/public/like_button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Images/headerBlue.jpg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/public" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -68,6 +68,9 @@
     <property name="ts.external.directory.path" value="D:\JAVA\IntelliJ IDEA 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
@@ -76,16 +79,14 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.App.test.js">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,14 +223,8 @@
       <workItem from="1696163399277" duration="5430000" />
       <workItem from="1696214929791" duration="1422000" />
       <workItem from="1696266430147" duration="1491000" />
-      <workItem from="1696299995063" duration="1393000" />
-    </task>
-    <task id="LOCAL-00053" summary="Rebuild Events.java, added @OneToMany and @ManyToOne in Devices, Employee, ITStaff">
-      <created>1691213167246</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1691213167247</updated>
+      <workItem from="1696299995063" duration="2197000" />
+      <workItem from="1696351036544" duration="2389000" />
     </task>
     <task id="LOCAL-00054" summary="Preparing for rebuild Events classes">
       <created>1691237399901</created>
@@ -567,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696268430075</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Tried to start React scripts in devices.html">
+      <created>1696302768786</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1696302768786</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +589,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuild nav tag in devices.html" />
     <MESSAGE value="Some attempts to correct nav in devices.html" />
     <MESSAGE value="Used justify-content and align-items for nav in devices.html" />
     <MESSAGE value="Changed font`s color in nav devices.html" />
@@ -612,6 +613,7 @@
     <MESSAGE value="Added React.js" />
     <MESSAGE value="Rebuilt main.html" />
     <MESSAGE value="Rebuilt js package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt js package" />
+    <MESSAGE value="Tried to start React scripts in devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to start React scripts in devices.html" />
   </component>
 </project>
