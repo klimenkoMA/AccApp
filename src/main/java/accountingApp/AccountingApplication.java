@@ -14,7 +14,8 @@ public class AccountingApplication implements WebMvcConfigurer {
     private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
             "classpath:/META-INF/resources/", "classpath:/resources/",
             "classpath:/static/", "classpath:/public/",
-            "classpath:/static/js"
+            "classpath:/static/js/", "classpath:/js/",
+            "classpath:/resources/static/js/","classpath:/resources/static/"
     };
 
     public static void main(String[] args) {
