@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/public/like_button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,17 +78,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -224,14 +211,8 @@
       <workItem from="1696214929791" duration="1422000" />
       <workItem from="1696266430147" duration="1491000" />
       <workItem from="1696299995063" duration="2197000" />
-      <workItem from="1696351036544" duration="2389000" />
-    </task>
-    <task id="LOCAL-00054" summary="Preparing for rebuild Events classes">
-      <created>1691237399901</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1691237399901</updated>
+      <workItem from="1696351036544" duration="3073000" />
+      <workItem from="1696387007928" duration="460000" />
     </task>
     <task id="LOCAL-00055" summary="Global rebuild almost all classes">
       <created>1691245894512</created>
@@ -569,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696302768786</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Rebuilt events.html">
+      <created>1696353762958</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1696353762959</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Some attempts to correct nav in devices.html" />
     <MESSAGE value="Used justify-content and align-items for nav in devices.html" />
     <MESSAGE value="Changed font`s color in nav devices.html" />
     <MESSAGE value="Changed font's size for nav in devices.html" />
@@ -614,6 +601,7 @@
     <MESSAGE value="Rebuilt main.html" />
     <MESSAGE value="Rebuilt js package" />
     <MESSAGE value="Tried to start React scripts in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to start React scripts in devices.html" />
+    <MESSAGE value="Rebuilt events.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt events.html" />
   </component>
 </project>
