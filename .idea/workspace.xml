@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt devices.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/like_button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,14 +80,25 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\css" />
+      <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img\js" />
-      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
-      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\public" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -212,14 +233,9 @@
       <workItem from="1696266430147" duration="1491000" />
       <workItem from="1696299995063" duration="2197000" />
       <workItem from="1696351036544" duration="3073000" />
-      <workItem from="1696387007928" duration="460000" />
-    </task>
-    <task id="LOCAL-00055" summary="Global rebuild almost all classes">
-      <created>1691245894512</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1691245894513</updated>
+      <workItem from="1696387007928" duration="960000" />
+      <workItem from="1696388932836" duration="575000" />
+      <workItem from="1696435538646" duration="4677000" />
     </task>
     <task id="LOCAL-00056" summary="Finished to rebuild addNewEvent() method in EventsController class">
       <created>1691254785990</created>
@@ -557,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696353762959</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Rebuilt itstaff.html">
+      <created>1696387572095</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1696387572095</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +600,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Used justify-content and align-items for nav in devices.html" />
     <MESSAGE value="Changed font`s color in nav devices.html" />
     <MESSAGE value="Changed font's size for nav in devices.html" />
     <MESSAGE value="Rebuild buttons in devices.html and employee.html" />
@@ -602,6 +624,7 @@
     <MESSAGE value="Rebuilt js package" />
     <MESSAGE value="Tried to start React scripts in devices.html" />
     <MESSAGE value="Rebuilt events.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt events.html" />
+    <MESSAGE value="Rebuilt itstaff.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt itstaff.html" />
   </component>
 </project>
