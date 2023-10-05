@@ -62,25 +62,25 @@ html, body {
     flex-direction: row;
     max-width: 99%;
     min-width: 99%;
-}
-
-.content_part {
-    min-width: 29%;
+    padding: 30px 30%;
 }
 
 .db_table_border {
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: center;
+    justify-content: center;
     width: fit-content;
     border: 2px solid #62a0f6;
     border-radius: 5px;
-    padding: 5px;
     box-shadow: 0 0 0 2px #15467a;
 }
 
 .db_table {
-    min-width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 65%;
 }
 
 .footer {
