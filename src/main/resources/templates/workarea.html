@@ -9,80 +9,126 @@
 <body>
 <div class="wrapper">
     <header class="header">
-        <a href="http://localhost/main.html" style="color: #fcf6f6">Главная</a>
-        <a href="http://localhost/employee" style="color: #fcf6f6">Сотрудник</a>
-        <a href="http://localhost/itstaff" style="color: #fcf6f6">Программист</a>
-        <a href="http://localhost/workarea" style="color: #fcf6f6">Филиал</a>
-        <a href="http://localhost/room" style="color: #fcf6f6">Кабинет</a>
-        <a href="http://localhost/events" style="color: #fcf6f6">Событие</a>
-        <a href="http://localhost/devices" style="color: #fcf6f6">Оборудование</a>
+        <div class="page-name">
+            <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ФИЛИАЛЫ</h3>
+        </div>
+        <div class="navigation-box">
+            <div class="navigation-link">
+                <a href="http://localhost/main.html" style="color: #fcf6f6">Главная</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/employee" style="color: #fcf6f6">Сотрудники</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/itstaff" style="color: #fcf6f6">Программисты</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/workarea" style="color: #fcf6f6">Филиалы</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/room" style="color: #fcf6f6">Кабинеты</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/events" style="color: #fcf6f6">События</a>
+            </div>
+            <div class="navigation-link">
+                <a href="http://localhost/devices" style="color: #fcf6f6">Оборудование</a>
+            </div>
+        </div>
     </header>
     <main class="main">
-        <table>
+        <table class="crud_buttons" cellpadding="25px">
             <td>
                 <form method="post" action="/addworkarea">
-                    <label>
-                        <input type="text" name="name" placeholder="Название филиала"/>
-                    </label>
-                    <button type="submit">Добавить</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="name" placeholder="Название филиала"/>
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button type="submit">Добавить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/deleteworkarea">
-                    <label>
-                        <input type="text" name="id" placeholder="ID филиала"/>
-                    </label>
-                    <button class="button" type="submit">Удалить</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="ID филиала"/>
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Удалить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="/updateworkarea">
-                    <label>
-                        <input type="text" name="id" placeholder="ID филиала"/>
-                    </label>
-                    <label>
-                        <input type="text" name="name" placeholder="Название филиала"/>
-                    </label>
-                    <button class="button" type="submit">Обновить</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="ID филиала"/>
+                        </label>
+                        <label>
+                            <input type="text" name="name" placeholder="Название филиала"/>
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Обновить</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="findworkareabyid">
-                    <label>
-                        <input type="text" name="id" placeholder="Введите id филиала"/>
-                    </label>
-                    <button class="button" type="submit">Найти</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="Введите id филиала"/>
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Найти</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-
+            </td>
+            <td>
                 <form method="post" action="findworkareabyname">
-                    <label>
-                        <input type="text" name="name" placeholder="Введите название филиала"/>
-                    </label>
-                    <button class="button" type="submit">Найти</button>
+                    <div align="center">
+                        <label>
+                            <input type="text" name="name" placeholder="Введите название филиала"/>
+                        </label>
+                    </div>
+                    <div align="center">
+                        <button class="button" type="submit">Найти</button>
+                    </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
             </td>
         </table>
-
-        <table align="center" bgcolor="#d3d3d3" width="400" style="columns: max-content">
-            <tr>
-                <th>ID филиала</th>
-                <th>Филиалы</th>
-            </tr>
-            <div th:each="element : ${workAreaList}" class="row m-1">
-                <div class="col-8">
-                    <tr align="center">
-                        <td>
-                            <div>[[${element.id}]]</div>
-                        </td>
-                        <td>
-                            <div>[[${element.name}]]</div>
-                        </td>
+        <div class="mid_part">
+            <div class="db_table_border">
+                <table class="db_table">
+                    <tr>
+                        <th>ID филиала</th>
+                        <th>Филиалы</th>
                     </tr>
-                </div>
+                    <div th:each="element : ${workAreaList}" class="row m-1">
+                        <div class="col-8">
+                            <tr align="center">
+                                <td>
+                                    <div>[[${element.id}]]</div>
+                                </td>
+                                <td>
+                                    <div>[[${element.name}]]</div>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                </table>
             </div>
-        </table>
+        </div>
     </main>
     <footer class="footer">
         <div align="center">MK Copyright 2023</div>
