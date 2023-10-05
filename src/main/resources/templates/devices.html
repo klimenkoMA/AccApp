@@ -108,29 +108,29 @@
                 </form>
             </td>
         </table>
-        <div class="mid_part">
-<!--            <div class="content_part">-->
-<!--            </div>-->
-            <div class="db_table_border">
-                <table class="db_table">
-                    <tr>
-                        <th>ID оборудования</th>
-                        <th>Название оборудования</th>
-                    </tr>
-                    <div th:each="element : ${devicesList}" class="row m-1">
-                        <div class="col-8">
-                            <tr align="center">
-                                <td>
-                                    <div>[[${element.id}]]</div>
-                                </td>
-                                <td>
-                                    <div>[[${element.name}]]</div>
-                                </td>
-                            </tr>
+        <div class="mid_part_5">
+            <div class="content_part">
+                <div class="db_table_border">
+                    <table class="db_table">
+                        <tr>
+                            <th>ID оборудования</th>
+                            <th>Название оборудования</th>
+                        </tr>
+                        <div th:each="element : ${devicesList}" class="row m-1">
+                            <div class="col-2">
+                                <tr align="center">
+                                    <td>
+                                        <div>[[${element.id}]]</div>
+                                    </td>
+                                    <td>
+                                        <div>[[${element.name}]]</div>
+                                    </td>
+                                </tr>
+                            </div>
                         </div>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </table>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </table>
+                </div>
             </div>
         </div>
     </main>

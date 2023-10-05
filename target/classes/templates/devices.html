@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns:th="http://www.w3.org/1999/xhtml" lang="">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
     <meta charset="UTF-8" content="">
     <title>DEVICES</title>
@@ -108,30 +108,29 @@
                 </form>
             </td>
         </table>
-        <div class="mid_part">
-            <div class="like_button_container" id="like_button_container">
-
-            </div>
-            <div class="db_table_border">
-                <table class="db_table">
-                    <tr>
-                        <th>ID оборудования</th>
-                        <th>Название оборудования</th>
-                    </tr>
-                    <div th:each="element : ${devicesList}" class="row m-1">
-                        <div class="col-8">
-                            <tr align="center">
-                                <td>
-                                    <div>[[${element.id}]]</div>
-                                </td>
-                                <td>
-                                    <div>[[${element.name}]]</div>
-                                </td>
-                            </tr>
+        <div class="mid_part_5">
+            <div class="content_part">
+                <div class="db_table_border">
+                    <table class="db_table">
+                        <tr>
+                            <th>ID оборудования</th>
+                            <th>Название оборудования</th>
+                        </tr>
+                        <div th:each="element : ${devicesList}" class="row m-1">
+                            <div class="col-2">
+                                <tr align="center">
+                                    <td>
+                                        <div>[[${element.id}]]</div>
+                                    </td>
+                                    <td>
+                                        <div>[[${element.name}]]</div>
+                                    </td>
+                                </tr>
+                            </div>
                         </div>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </table>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
@@ -139,10 +138,5 @@
         <div align="center">MK Copyright 2023</div>
     </footer>
 </div>
-<script type="text/javascript" th:src="@{https://unpkg.com/react@18/umd/react.development.js}"
-        src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-<script type="text/javascript" th:src="@{https://unpkg.com/react-dom@18/umd/react-dom.development.js}"
-        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-<script type="text/javascript" th:src="@{/static/js/like_button.js}" src="/static/js/like_button.js"></script>
 </body>
 </html>

@@ -45,8 +45,9 @@ html, body {
 
 .main {
     flex: 1 1 auto;
-    min-width: 99%;
-
+    max-width: 99%;
+    align-items: center;
+    justify-content: center;
 }
 
 .crud_buttons {
@@ -60,9 +61,49 @@ html, body {
 .mid_part {
     display: flex;
     flex-direction: row;
-    max-width: 99%;
-    min-width: 99%;
-    padding: 30px 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.mid_part_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.mid_part_3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.mid_part_4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.mid_part_5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.mid_part_6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 8%;
 }
 
 .db_table_border {
@@ -70,7 +111,6 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: fit-content;
     border: 2px solid #62a0f6;
     border-radius: 5px;
     box-shadow: 0 0 0 2px #15467a;
@@ -80,7 +120,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 65%;
+    min-width: min-content;
 }
 
 .footer {
