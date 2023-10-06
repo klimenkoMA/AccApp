@@ -120,7 +120,8 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: min-content;
+    min-width: max-content;
+    border-spacing: 50px 5px;
 }
 
 .footer {
