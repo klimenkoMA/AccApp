@@ -14,25 +14,25 @@
         </div>
         <div class="navigation-box">
             <div class="navigation-link">
-                <a href="http://localhost/main.html" style="color: #fcf6f6">Главная</a>
+                <a href="http://192.168.0.101/main.html" style="color: #fcf6f6">Главная</a>
             </div>
             <div class="navigation-link">
-                <a href="http://localhost/employee" style="color: #fcf6f6">Сотрудники</a>
+                <a href="http://192.168.0.101/employee" style="color: #fcf6f6">Сотрудники</a>
             </div>
             <div class="navigation-link">
-                <a href="http://localhost/itstaff" style="color: #fcf6f6">Программисты</a>
+                <a href="http://192.168.0.101/itstaff" style="color: #fcf6f6">Программисты</a>
             </div>
             <div class="navigation-link">
-                <a href="http://localhost/workarea" style="color: #fcf6f6">Филиалы</a>
+                <a href="http://192.168.0.101/workarea" style="color: #fcf6f6">Филиалы</a>
             </div>
             <div class="navigation-link">
-                <a href="http://localhost/room" style="color: #fcf6f6">Кабинеты</a>
+                <a href="http://192.168.0.101/room" style="color: #fcf6f6">Кабинеты</a>
             </div>
             <div class="navigation-link">
-                <a href="http://localhost/events" style="color: #fcf6f6">События</a>
+                <a href="http://192.168.0.101/events" style="color: #fcf6f6">События</a>
             </div>
             <div class="navigation-link">
-                <a href="http://localhost/devices" style="color: #fcf6f6">Оборудование</a>
+                <a href="http://192.168.0.101/devices" style="color: #fcf6f6">Оборудование</a>
             </div>
         </div>
     </header>
@@ -109,28 +109,29 @@
             </td>
         </table>
         <div class="mid_part_5">
-            <div class="content_part">
-                <div class="db_table_border">
-                    <table class="db_table">
-                        <tr>
-                            <th>ID оборудования</th>
-                            <th>Название оборудования</th>
-                        </tr>
-                        <div th:each="element : ${devicesList}" class="row m-1">
-                            <div class="col-2">
-                                <tr align="center">
-                                    <td>
-                                        <div>[[${element.id}]]</div>
-                                    </td>
-                                    <td>
-                                        <div>[[${element.name}]]</div>
-                                    </td>
-                                </tr>
-                            </div>
+            <div id="demo" class="content_part">
+                <script type="text/javascript" src="js/custom.js"></script>
+            </div>
+            <div class="db_table_border">
+                <table class="db_table">
+                    <tr>
+                        <th>ID оборудования</th>
+                        <th>Название оборудования</th>
+                    </tr>
+                    <div th:each="element : ${devicesList}" class="row m-1">
+                        <div class="col-2">
+                            <tr align="center">
+                                <td>
+                                    <div>[[${element.id}]]</div>
+                                </td>
+                                <td>
+                                    <div>[[${element.name}]]</div>
+                                </td>
+                            </tr>
                         </div>
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    </table>
-                </div>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </table>
             </div>
         </div>
     </main>
