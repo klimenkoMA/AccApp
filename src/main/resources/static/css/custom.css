@@ -59,7 +59,13 @@ html, body {
     min-width: 99%;
     padding: 20px 8%;
 }
-
+.content_part{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 8%;
+}
 .mid_part {
     display: flex;
     flex-direction: row;
