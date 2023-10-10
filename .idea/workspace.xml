@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt devices.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/catPie.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +73,11 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\css" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
-      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img\js" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
@@ -224,14 +227,8 @@
       <workItem from="1696739303198" duration="1723000" />
       <workItem from="1696777221790" duration="3484000" />
       <workItem from="1696818218597" duration="2476000" />
-      <workItem from="1696868422378" duration="2936000" />
-    </task>
-    <task id="LOCAL-00065" summary="Tried to rebuild main page">
-      <created>1694541209152</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1694541209152</updated>
+      <workItem from="1696868422378" duration="3021000" />
+      <workItem from="1696904408190" duration="1451000" />
     </task>
     <task id="LOCAL-00066" summary="Added 404.html and repaired main.html">
       <created>1694575133349</created>
@@ -569,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696821486539</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Created moving popup in devices.html">
+      <created>1696873100018</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1696873100019</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +593,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added some args in css styles in devices.html" />
     <MESSAGE value="Rebuilt buttons in devices.html" />
     <MESSAGE value="Added border into db values table in devices.html" />
     <MESSAGE value="Some little changes in devices.html" />
@@ -614,6 +617,7 @@
     <MESSAGE value="Little changes in footer" />
     <MESSAGE value="Tried to use popup in devices.html" />
     <MESSAGE value="Tried again to make a popup in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried again to make a popup in devices.html" />
+    <MESSAGE value="Created moving popup in devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created moving popup in devices.html" />
   </component>
 </project>
