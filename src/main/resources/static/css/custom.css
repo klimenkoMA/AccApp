@@ -59,13 +59,51 @@ html, body {
     min-width: 99%;
     padding: 20px 8%;
 }
-.content_part{
+
+.content_part {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 20px 8%;
 }
+
+.popup_div {
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+.popup_try {
+    display: block; /* Это блоковый элемент */
+    margin: 0 auto;
+    width: 250px;
+    border: 2px solid rebeccapurple;
+    border-radius: 15px; /* Закругляем углы */
+    color: rebeccapurple;
+    text-transform: uppercase; /* Большие буквы */
+    cursor: pointer;
+    transition: .3s all; /* Плавный переход */
+}
+
+.popup_form {
+    display: block;
+    width: 260px;
+    border-radius: 15px; /* Закругляем углы */
+    background-color: rebeccapurple;
+    padding: 28px;
+    text-transform: uppercase;
+    color: white; /* Цвет текста */
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -999px;
+    transition: 0.5s all linear; /* Плавный переход */
+}
+
 .mid_part {
     display: flex;
     flex-direction: row;
