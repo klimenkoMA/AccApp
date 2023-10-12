@@ -104,6 +104,25 @@ html, body {
     transition: 0.5s all linear; /* Плавный переход */
 }
 
+#callback:checked ~ .popup_form {
+    top: -300px;
+    right: -300px;
+}
+
+#callback {
+    display: none;
+}
+
+.close {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg); /*Поворот плюса на 45 градусов*/
+    font-size: 30px;
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+}
+
 .mid_part {
     display: flex;
     flex-direction: row;

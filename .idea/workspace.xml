@@ -7,8 +7,7 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,17 +78,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -238,14 +226,8 @@
       <workItem from="1696818218597" duration="2476000" />
       <workItem from="1696868422378" duration="3021000" />
       <workItem from="1696904408190" duration="2085000" />
-      <workItem from="1696987387436" duration="4482000" />
-    </task>
-    <task id="LOCAL-00067" summary="Connected all pages with main.html">
-      <created>1694661672676</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1694661672676</updated>
+      <workItem from="1696987387436" duration="4601000" />
+      <workItem from="1697087264042" duration="1930000" />
     </task>
     <task id="LOCAL-00068" summary="Refactored all pages">
       <created>1694712118677</created>
@@ -583,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696907822083</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Tried to create popup checkbox in devices.html">
+      <created>1696993323897</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1696993323897</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added border into db values table in devices.html" />
     <MESSAGE value="Some little changes in devices.html" />
     <MESSAGE value="Some changes in devices.html" />
     <MESSAGE value="Rebuild employee.html" />
@@ -628,6 +616,7 @@
     <MESSAGE value="Tried again to make a popup in devices.html" />
     <MESSAGE value="Created moving popup in devices.html" />
     <MESSAGE value="Added sweet cat to popup in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sweet cat to popup in devices.html" />
+    <MESSAGE value="Tried to create popup checkbox in devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to create popup checkbox in devices.html" />
   </component>
 </project>
