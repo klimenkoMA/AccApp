@@ -79,20 +79,45 @@ html, body {
 .popup_try {
     display: block; /* Это блоковый элемент */
     margin: 0 auto;
-    width: 250px;
-    border: 2px solid rebeccapurple;
-    border-radius: 15px; /* Закругляем углы */
-    color: rebeccapurple;
-    text-transform: uppercase; /* Большие буквы */
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background-color:  #62a0f6;
+    width: 120px;
+    color: #fcf6f6;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-shadow: #002349 2px 3px 4px;
     cursor: pointer;
     transition: .3s all; /* Плавный переход */
 }
+
+.popup_try:hover{
+    color: #564827;
+    cursor: pointer;
+}
+
+.popup_try:focus{
+    outline: 4px;
+    box-shadow: 0 0 0 4px #62a0f6;
+}
+/*.popup_try {*/
+/*    display: block; !* Это блоковый элемент *!*/
+/*    margin: 0 auto;*/
+/*    width: 10%;*/
+/*    border: 2px solid  #62a0f6;*/
+/*    border-radius: 15px; !* Закругляем углы *!*/
+/*    color:  #62a0f6;*/
+/*    text-transform: uppercase; !* Большие буквы *!*/
+/*    cursor: pointer;*/
+/*    transition: .3s all; !* Плавный переход *!*/
+/*}*/
 
 .popup_form {
     display: block;
     width: 260px;
     border-radius: 15px; /* Закругляем углы */
-    background-color: rebeccapurple;
+    background-color:  #62a0f6;
     padding: 28px;
     text-transform: uppercase;
     color: white; /* Цвет текста */
