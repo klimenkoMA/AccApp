@@ -117,10 +117,12 @@ html, body {
     display: block;
     width: 260px;
     border-radius: 15px; /* Закругляем углы */
-    background-color:  #62a0f6;
+    background-color: #fcf6f6;
+    border: 2px solid #62a0f6;
+    box-shadow: 0 0 0 2px #15467a;
     padding: 28px;
     text-transform: uppercase;
-    color: white; /* Цвет текста */
+    color: #fcf6f6; /* Цвет текста */
     font-size: 15px;
     position: absolute;
     left: 50%;
