@@ -136,11 +136,12 @@
                 <div class="popup_div">
                     <input type="checkbox" id="callback">
                     <label class="popup_try" for="callback">Добавить</label>
-                    <form action="#" class="popup_form">
+                    <form class="popup_form" method="post" action="/adddevice" >
                         <label>
                             <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
                         </label>
                         <button class="button" type="submit">Добавить</button>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         <label class="close" for="callback">+</label>
                     </form>
                 </div>
