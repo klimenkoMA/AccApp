@@ -82,7 +82,7 @@ html, body {
     appearance: none;
     border: 0;
     border-radius: 5px;
-    background-color:  #62a0f6;
+    background-color: #62a0f6;
     width: 120px;
     color: #fcf6f6;
     padding: 2px 5px;
@@ -92,15 +92,16 @@ html, body {
     transition: .3s all; /* Плавный переход */
 }
 
-.popup_try:hover{
+.popup_try:hover {
     color: #564827;
     cursor: pointer;
 }
 
-.popup_try:focus{
+.popup_try:focus {
     outline: 4px;
     box-shadow: 0 0 0 4px #62a0f6;
 }
+
 /*.popup_try {*/
 /*    display: block; !* Это блоковый элемент *!*/
 /*    margin: 0 auto;*/
@@ -117,7 +118,7 @@ html, body {
     display: block;
     width: 260px;
     border-radius: 15px; /* Закругляем углы */
-    background-color: #fcf6f6;
+    background-color: #ffffff;
     border: 2px solid #62a0f6;
     box-shadow: 0 0 0 2px #15467a;
     padding: 28px;
@@ -128,15 +129,30 @@ html, body {
     left: 50%;
     transform: translate(-50%);
     top: -999px;
-    transition: 0.5s all linear; /* Плавный переход */
+    transition: 0.01s all linear; /* Плавный переход */
 }
 
 #callback:checked ~ .popup_form {
-    top: -300px;
-    right: -300px;
+    top: -60px;
 }
 
 #callback {
+    display: none;
+}
+
+#callback2:checked ~ .popup_form {
+    top: -60px;
+}
+
+#callback2 {
+    display: none;
+}
+
+#callback3:checked ~ .popup_form {
+    top: -60px;
+}
+
+#callback3 {
     display: none;
 }
 
@@ -148,6 +164,7 @@ html, body {
     top: 2px;
     right: 10px;
     cursor: pointer;
+    color: #62a0f6;
 }
 
 .mid_part {
