@@ -69,6 +69,7 @@ html, body {
 }
 
 .popup_div {
+    display: flex;
     max-width: 600px;
     margin: 40px auto;
     font-family: sans-serif;
@@ -83,11 +84,14 @@ html, body {
     border: 0;
     border-radius: 5px;
     background-color: #62a0f6;
-    width: 120px;
+    width: 130px;
+    height: 55px;
     color: #fcf6f6;
-    padding: 2px 5px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 14px;
     text-shadow: #002349 2px 3px 4px;
+    text-align: center;
+    vertical-align: middle;
     cursor: pointer;
     transition: .3s all; /* Плавный переход */
 }
@@ -116,7 +120,9 @@ html, body {
 
 .popup_form {
     display: block;
-    width: 260px;
+    width: min-content;
+    align-items: center;
+    justify-content: center;
     border-radius: 15px; /* Закругляем углы */
     background-color: #ffffff;
     border: 2px solid #62a0f6;
@@ -153,6 +159,22 @@ html, body {
 }
 
 #callback3 {
+    display: none;
+}
+
+#callback4:checked ~ .popup_form {
+    top: -60px;
+}
+
+#callback4 {
+    display: none;
+}
+
+#callback5:checked ~ .popup_form {
+    top: -60px;
+}
+
+#callback5 {
     display: none;
 }
 
