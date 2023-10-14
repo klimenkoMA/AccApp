@@ -38,75 +38,120 @@
         </div>
     </header>
     <main class="main">
-        <table class="crud_buttons" cellpadding="25px">
+        <table class="crud_buttons" cellpadding="40px">
             <td>
-                <form method="post" action="/adddevice">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
-                        </label>
-                    </div>
-                    <div align="center">
 
-                        <button class="button" type="submit">Добавить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <div class="popup_div">
+                    <input type="checkbox" id="callback">
+                    <label class="popup_try" for="callback">Добавить оборудование</label>
+                    <form class="popup_form" method="post" action="/adddevice">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Добавить</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <label class="close" for="callback">+</label>
+                    </form>
+                </div>
 
-                </form>
+            </td>
+            <td>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback2">
+                    <label class="popup_try" for="callback2">Удалить оборудование</label>
+                    <form action="/deletedevice" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" align="middle" placeholder="ID оборудования"/>
+                            </label>
+                        </div>
+                        <div>
+                            <button class="button" type="submit">Удалить</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <label class="close" for="callback2">+</label>
+                    </form>
+                </div>
 
             </td>
             <td>
-                <form method="post" action="/deletedevice">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" align="middle" placeholder="ID оборудования"/>
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Удалить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback3">
+                    <label class="popup_try" for="callback3">Обновить оборудование</label>
+                    <form action="/updatedevice" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" align="middle" placeholder="ID оборудования">
+                            </label>
+                            <label>
+                                <input type="text" name="name" align="middle" placeholder="Название оборудования">
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Обновить</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback3">+</label>
+                    </form>
+                </div>
+
             </td>
             <td>
-                <form method="post" action="/updatedevice">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" align="middle" placeholder="ID оборудования"/>
-                            <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Обновить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback4" align="middle">
+                    <label class="popup_try" for="callback4">Найти по ID</label>
+                    <form action="/finddevicebyid" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" align="middle" placeholder="ID оборудования">
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Найти</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback4">+</label>
+                    </form>
+                </div>
+
             </td>
             <td>
-                <form method="post" action="/finddevicebyid">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" align="middle" placeholder="ID оборудования"/>
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
-            </td>
-            <td>
-                <form method="post" action="/finddevicebyname">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="name" align="top" placeholder="Название оборудования"/>
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback5">
+                    <label class="popup_try" for="callback5">Найти по названию</label>
+                    <form action="/finddevicebyname" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="name" align="middle" placeholder="Название оборудования">
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Найти</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback5">+</label>
+                    </form>
+                </div>
+
+                <!--                <form method="post" action="/finddevicebyname">-->
+                <!--                    <div align="center">-->
+                <!--                        <label>-->
+                <!--                            <input type="text" name="name" align="top" placeholder="Название оборудования"/>-->
+                <!--                        </label>-->
+                <!--                    </div>-->
+                <!--                    <div align="center">-->
+                <!--                        <button class="button" type="submit">Найти</button>-->
+                <!--                    </div>-->
+                <!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+                <!--                </form>-->
             </td>
         </table>
         <div class="mid_part_5">
@@ -133,18 +178,6 @@
             </div>
             <div class="content_part">
                 <button class="button" id="pop" onclick="onclickTwice()">Скрипт</button>
-                <div class="popup_div">
-                    <input type="checkbox" id="callback">
-                    <label class="popup_try" for="callback">Добавить</label>
-                    <form class="popup_form" method="post" action="/adddevice" >
-                        <label>
-                            <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
-                        </label>
-                        <button class="button" type="submit">Добавить</button>
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                        <label class="close" for="callback">+</label>
-                    </form>
-                </div>
             </div>
         </div>
     </main>
