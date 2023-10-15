@@ -40,7 +40,6 @@
     <main class="main">
         <table class="crud_buttons" cellpadding="40px">
             <td>
-
                 <div class="popup_div">
                     <input type="checkbox" id="callback">
                     <label class="popup_try" for="callback">Добавить оборудование</label>
@@ -57,10 +56,8 @@
                         <label class="close" for="callback">+</label>
                     </form>
                 </div>
-
             </td>
             <td>
-
                 <div class="popup_div">
                     <input type="checkbox" id="callback2">
                     <label class="popup_try" for="callback2">Удалить оборудование</label>
@@ -77,10 +74,8 @@
                         <label class="close" for="callback2">+</label>
                     </form>
                 </div>
-
             </td>
             <td>
-
                 <div class="popup_div">
                     <input type="checkbox" id="callback3">
                     <label class="popup_try" for="callback3">Обновить оборудование</label>
@@ -100,13 +95,11 @@
                         <label class="close" for="callback3">+</label>
                     </form>
                 </div>
-
             </td>
             <td>
-
                 <div class="popup_div">
                     <input type="checkbox" id="callback4" align="middle">
-                    <label class="popup_try" for="callback4">Найти по ID</label>
+                    <label class="popup_try_1_row" for="callback4">Найти по ID</label>
                     <form action="/finddevicebyid" class="popup_form" method="post">
                         <div align="center">
                             <label>
@@ -120,10 +113,8 @@
                         <label class="close" for="callback4">+</label>
                     </form>
                 </div>
-
             </td>
             <td>
-
                 <div class="popup_div">
                     <input type="checkbox" id="callback5">
                     <label class="popup_try" for="callback5">Найти по названию</label>
@@ -140,18 +131,6 @@
                         <label class="close" for="callback5">+</label>
                     </form>
                 </div>
-
-                <!--                <form method="post" action="/finddevicebyname">-->
-                <!--                    <div align="center">-->
-                <!--                        <label>-->
-                <!--                            <input type="text" name="name" align="top" placeholder="Название оборудования"/>-->
-                <!--                        </label>-->
-                <!--                    </div>-->
-                <!--                    <div align="center">-->
-                <!--                        <button class="button" type="submit">Найти</button>-->
-                <!--                    </div>-->
-                <!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
-                <!--                </form>-->
             </td>
         </table>
         <div class="mid_part_5">
@@ -175,9 +154,6 @@
                     </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </table>
-            </div>
-            <div class="content_part">
-                <button class="button" id="pop" onclick="onclickTwice()">Скрипт</button>
             </div>
         </div>
     </main>
