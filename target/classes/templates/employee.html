@@ -37,41 +37,66 @@
         </div>
     </header>
     <main class="main">
-        <table class="crud_buttons" cellpadding="25px">
+        <table class="crud_buttons" cellpadding="40px">
             <td>
-                <form method="post" action="/addemployee">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="fio" placeholder="Введите ФИО сотрудника"/>
-                        </label>
-                        <label>
-                            <input type="text" name="dborn" placeholder="Введите дату рождения"/>
-                        </label>
-                        <label>
-                            <input type="text" name="workArea" placeholder="Введите филиал"/>
-                        </label>
-                        <label>
-                            <input type="text" name="room" placeholder="Введите кабинет"/>
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Добавить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback">
+                    <label class="popup_try" for="callback">Добавить сотрудника</label>
+                    <form class="popup_form" action="/addemployee" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="fio" align="middle" placeholder="Введите ФИО сотрудника">
+                            </label>
+                            <label>
+                                <input type="text" name="dborn" align="middle" placeholder="Введите дату рождения">
+                            </label>
+                            <label>
+                                <input type="text" name="workArea" align="middle" placeholder="Введите филиал">
+                            </label>
+                            <label>
+                                <input type="text" name="room" align="middle" placeholder="Введите номер кабинета">
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Добавить</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback">+</label>
+                    </form>
+                </div>
+
             </td>
             <td>
-                <form method="post" action="/deleteemployee">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="Введите id сотрудника">
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Удалить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback2">
+                    <label class="popup_try" for="callback2">Удалить сотрудника</label>
+                    <form action="/deleteemployee" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" placeholder="ID сотрудника">
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Удалить</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback2">+</label>
+                    </form>
+                </div>
+
+                <!--                <form method="post" action="/deleteemployee">-->
+                <!--                    <div align="center">-->
+                <!--                        <label>-->
+                <!--                            <input type="text" name="id" placeholder="Введите id сотрудника">-->
+                <!--                        </label>-->
+                <!--                    </div>-->
+                <!--                    <div align="center">-->
+                <!--                        <button class="button" type="submit">Удалить</button>-->
+                <!--                    </div>-->
+                <!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+                <!--                </form>-->
             </td>
             <td>
                 <form method="post" action="/updateemployee">
