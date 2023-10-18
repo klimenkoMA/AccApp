@@ -7,7 +7,6 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,14 +233,8 @@
       <workItem from="1697295759995" duration="4626000" />
       <workItem from="1697349506620" duration="4825000" />
       <workItem from="1697424251603" duration="2060000" />
-      <workItem from="1697509676246" duration="1032000" />
-    </task>
-    <task id="LOCAL-00075" summary="Some attempts to correct nav in devices.html">
-      <created>1695058996621</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1695058996622</updated>
+      <workItem from="1697509676246" duration="1661000" />
+      <workItem from="1697597036424" duration="622000" />
     </task>
     <task id="LOCAL-00076" summary="Used justify-content and align-items for nav in devices.html">
       <created>1695093470893</created>
@@ -579,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697426489025</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="Rebuilt delete button in employee.html">
+      <created>1697511815705</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1697511815706</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +599,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt devices.html" />
     <MESSAGE value="Added React.js" />
     <MESSAGE value="Rebuilt main.html" />
     <MESSAGE value="Rebuilt js package" />
@@ -624,6 +623,7 @@
     <MESSAGE value="Rebuilt all CRUD buttons in devices.html" />
     <MESSAGE value="Ended to rebuild CRUD buttons in devices.html" />
     <MESSAGE value="Rebuilt add button in employee.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt add button in employee.html" />
+    <MESSAGE value="Rebuilt delete button in employee.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt delete button in employee.html" />
   </component>
 </project>
