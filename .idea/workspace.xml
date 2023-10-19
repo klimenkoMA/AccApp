@@ -234,14 +234,8 @@
       <workItem from="1697349506620" duration="4825000" />
       <workItem from="1697424251603" duration="2060000" />
       <workItem from="1697509676246" duration="1661000" />
-      <workItem from="1697597036424" duration="622000" />
-    </task>
-    <task id="LOCAL-00076" summary="Used justify-content and align-items for nav in devices.html">
-      <created>1695093470893</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1695093470895</updated>
+      <workItem from="1697597036424" duration="1015000" />
+      <workItem from="1697682613869" duration="1249000" />
     </task>
     <task id="LOCAL-00077" summary="Changed font`s color in nav devices.html">
       <created>1695146165263</created>
@@ -579,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697511815706</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Rebuilt update buttoon in employee.html">
+      <created>1697598061476</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1697598061476</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +600,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added React.js" />
     <MESSAGE value="Rebuilt main.html" />
     <MESSAGE value="Rebuilt js package" />
     <MESSAGE value="Tried to start React scripts in devices.html" />
@@ -624,6 +624,7 @@
     <MESSAGE value="Ended to rebuild CRUD buttons in devices.html" />
     <MESSAGE value="Rebuilt add button in employee.html" />
     <MESSAGE value="Rebuilt delete button in employee.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt delete button in employee.html" />
+    <MESSAGE value="Rebuilt update buttoon in employee.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt update buttoon in employee.html" />
   </component>
 </project>
