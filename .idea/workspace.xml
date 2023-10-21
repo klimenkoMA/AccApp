@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +77,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -237,14 +247,8 @@
       <workItem from="1697509676246" duration="1661000" />
       <workItem from="1697597036424" duration="1015000" />
       <workItem from="1697682613869" duration="1315000" />
-      <workItem from="1697769066475" duration="990000" />
-    </task>
-    <task id="LOCAL-00078" summary="Changed font's size for nav in devices.html">
-      <created>1695178949625</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1695178949628</updated>
+      <workItem from="1697769066475" duration="1064000" />
+      <workItem from="1697859162585" duration="1569000" />
     </task>
     <task id="LOCAL-00079" summary="Rebuild buttons in devices.html and employee.html">
       <created>1695230946650</created>
@@ -582,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697683924669</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Rebuilt find by id button in employee.html">
+      <created>1697770125143</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1697770125144</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt js package" />
     <MESSAGE value="Tried to start React scripts in devices.html" />
     <MESSAGE value="Rebuilt events.html" />
     <MESSAGE value="Rebuilt itstaff.html" />
@@ -627,6 +637,7 @@
     <MESSAGE value="Rebuilt delete button in employee.html" />
     <MESSAGE value="Rebuilt update buttoon in employee.html" />
     <MESSAGE value="Rebuilt find by fio button in employee.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt find by fio button in employee.html" />
+    <MESSAGE value="Rebuilt find by id button in employee.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt find by id button in employee.html" />
   </component>
 </project>
