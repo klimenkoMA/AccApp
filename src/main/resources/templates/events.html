@@ -39,26 +39,51 @@
     <main class="main">
         <table class="crud_buttons" cellpadding="25px">
             <td>
-                <form method="post" action="/addevent">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="date" placeholder="Введите дату события"/>
-                        </label>
-                        <label>
-                            <input type="text" name="device" placeholder="Введите устройство"/>
-                        </label>
-                        <label>
-                            <input type="text" name="employeeid" placeholder="Введите ФИО сотрудника"/>
-                        </label>
-                        <label>
-                            <input type="text" name="itstaffid" placeholder="Введите ФИО программиста"/>
-                        </label>
-                    </div>
-                    <div align="center">
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback">
+                    <label class="popup_try" for="callback">Добавить событие</label>
+                    <form action="/addevent" method="post" class="popup_form">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="date" placeholder="Введите дату">
+                            </label>
+                            <label>
+                                <input type="text" name="device" placeholder="Название оборудования">
+                            </label>
+                            <label>
+                                <input type="text" name="employeeid" placeholder="ФИО сотрудника">
+                            </label>
+                            <label>
+                                <input type="text" name="itstaffid" placeholder="ФИО программиста">
+                            </label>
+                        </div>
                         <button class="button" type="submit">Добавить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback">+</label>
+                    </form>
+                </div>
+
+<!--                <form method="post" action="/addevent">-->
+<!--                    <div align="center">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="date" placeholder="Введите дату события"/>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <input type="text" name="device" placeholder="Введите устройство"/>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <input type="text" name="employeeid" placeholder="Введите ФИО сотрудника"/>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <input type="text" name="itstaffid" placeholder="Введите ФИО программиста"/>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div align="center">-->
+<!--                        <button class="button" type="submit">Добавить</button>-->
+<!--                    </div>-->
+<!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+<!--                </form>-->
             </td>
             <td>
                 <form method="post" action="/deleteevent">

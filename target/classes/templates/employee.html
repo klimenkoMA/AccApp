@@ -118,55 +118,55 @@
                     </form>
                 </div>
 
-                <!--                <form method="post" action="/updateemployee">-->
-                <!--                    <div align="center">-->
-                <!--                        <label>-->
-                <!--                            <input type="text" name="id" placeholder="Введите id сотрудника">-->
-                <!--                        </label>-->
-                <!--                        <label>-->
-                <!--                            <input type="text" name="fio" placeholder="Введите ФИО"/>-->
-                <!--                        </label>-->
-                <!--                        <label>-->
-                <!--                            <input type="text" name="dborn" placeholder="Введите дату рождения"/>-->
-                <!--                        </label>-->
-                <!--                        <label>-->
-                <!--                            <input type="text" name="workarea" placeholder="Введите филиал"/>-->
-                <!--                        </label>-->
-                <!--                        <label>-->
-                <!--                            <input type="text" name="room" placeholder="Введите кабинет"/>-->
-                <!--                        </label>-->
-                <!--                    </div>-->
-                <!--                    <div align="center">-->
-                <!--                        <button class="button" type="submit">Обновить</button>-->
-                <!--                    </div>-->
-                <!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
-                <!--                </form>-->
             </td>
             <td>
-                <form method="post" action="/findbyfio">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="fio" placeholder="Введите ФИО сотрудника">
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback4">
+                    <label class="popup_try_1_row" for="callback4">Найти по ФИО</label>
+                    <form action="/findbyfio" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="fio" placeholder="ФИО сотрудника">
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Найти</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback4">+</label>
+                    </form>
+                </div>
+
             </td>
             <td>
-                <form method="post" action="/findbyid">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="Введите ID сотрудника">
-                        </label>
-                    </div>
-                    <div align="center">
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback5">
+                    <label class="popup_try_1_row" for="callback5">Найти по ID</label>
+                    <form action="/findbyid" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" placeholder="Введите ID">
+                            </label>
+                        </div>
                         <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback5">+</label>
+                    </form>
+                </div>
+                
+<!--                <form method="post" action="/findbyid">-->
+<!--                    <div align="center">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="id" placeholder="Введите ID сотрудника">-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div align="center">-->
+<!--                        <button class="button" type="submit">Найти</button>-->
+<!--                    </div>-->
+<!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+<!--                </form>-->
             </td>
         </table>
         <div class="mid_part_4">
