@@ -239,14 +239,8 @@
       <workItem from="1697769066475" duration="1064000" />
       <workItem from="1697859162585" duration="2025000" />
       <workItem from="1697952572801" duration="1663000" />
-      <workItem from="1698077478963" duration="608000" />
-    </task>
-    <task id="LOCAL-00081" summary="Added some css styles">
-      <created>1695317961758</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1695317961759</updated>
+      <workItem from="1698077478963" duration="1356000" />
+      <workItem from="1698112472004" duration="295000" />
     </task>
     <task id="LOCAL-00082" summary="Tried to correct devices.html">
       <created>1695352757555</created>
@@ -584,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697954915677</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Rebuilt update button in events.html">
+      <created>1698078789001</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1698078789002</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +605,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt itstaff.html" />
     <MESSAGE value="Added css package and rebuilt all pages" />
     <MESSAGE value="Rebuilt all pages" />
     <MESSAGE value="The tables was put down in the middle of all the pages" />
@@ -629,6 +629,7 @@
     <MESSAGE value="Rebuilt find by id button in employee.html" />
     <MESSAGE value="Rebuilt add button in events.html" />
     <MESSAGE value="Rebuilt delete button in events.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt delete button in events.html" />
+    <MESSAGE value="Rebuilt update button in events.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt update button in events.html" />
   </component>
 </project>
