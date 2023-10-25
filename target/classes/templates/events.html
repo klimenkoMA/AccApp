@@ -112,42 +112,23 @@
                     </form>
                 </div>
 
-<!--                <form method="post" action="/updateevent">-->
-<!--                    <div align="center">-->
-<!--                        <label>-->
-<!--                            <input type="text" name="id" placeholder="Введите id события"/>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <input type="text" name="date" placeholder="Введите дату события"/>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <input type="text" name="device" placeholder="Введите устройство"/>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <input type="text" name="employeeid" placeholder="Введите ФИО сотрудника"/>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <input type="text" name="itstaffid" placeholder="Введите ФИО программиста"/>-->
-<!--                        </label>-->
-<!--                    </div>-->
-<!--                    <div align="center">-->
-<!--                        <button class="button" type="submit">Обновить</button>-->
-<!--                    </div>-->
-<!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
-<!--                </form>-->
             </td>
             <td>
-                <form method="post" action="/findeventbyid">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="Введите id события"/>
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback4">
+                    <label class="popup_try_1_row" for="callback4">Найти по ID</label>
+                    <form action="/findeventbyid" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" placeholder="ID события">
+                            </label>
+                        </div>
+                        <button type="submit" class="button">Найти</button>
+                        <label class="close" for="callback4">+</label>
+                    </form>
+                </div>
+
             </td>
         </table>
         <div class="mid_part_6">
