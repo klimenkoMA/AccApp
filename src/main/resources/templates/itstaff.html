@@ -55,30 +55,35 @@
                     </form>
                 </div>
 
-<!--                <form method="post" action="/additstaff">-->
+            </td>
+            <td>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback2">
+                    <label class="popup_try" for="callback2">Удалить программиста</label>
+                    <form action="/deleteitstaff" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" placeholder="ID программиста">
+                            </label>
+                        </div>
+                        <button class="button" type="submit">Удалить</button>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback2">+</label>
+                    </form>
+                </div>
+
+<!--                <form method="post" action="/deleteitstaff">-->
 <!--                    <div align="center">-->
 <!--                        <label>-->
-<!--                            <input type="text" name="name" placeholder="Введите ФИО программиста"/>-->
+<!--                            <input type="text" name="id" placeholder="Введите ID программиста">-->
 <!--                        </label>-->
 <!--                    </div>-->
 <!--                    <div align="center">-->
-<!--                        <button class="button" type="submit">Добавить</button>-->
+<!--                        <button class="button" type="submit">Удалить</button>-->
 <!--                    </div>-->
 <!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
 <!--                </form>-->
-            </td>
-            <td>
-                <form method="post" action="/deleteitstaff">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="Введите ID программиста">
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Удалить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
             </td>
             <td>
                 <form method="post" action="/updateitstaff">
