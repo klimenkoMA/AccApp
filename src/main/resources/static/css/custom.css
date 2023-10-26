@@ -58,6 +58,9 @@ html, body {
     flex-direction: row;
     padding: 10px 8%;
     max-height: 300px;
+    max-width: min-content;
+    align-items: center;
+    align-self: center;
 }
 
 .popup_div {
@@ -127,18 +130,6 @@ html, body {
     box-shadow: 0 0 0 4px #62a0f6;
 }
 
-/*.popup_try {*/
-/*    display: block; !* Это блоковый элемент *!*/
-/*    margin: 0 auto;*/
-/*    width: 10%;*/
-/*    border: 2px solid  #62a0f6;*/
-/*    border-radius: 15px; !* Закругляем углы *!*/
-/*    color:  #62a0f6;*/
-/*    text-transform: uppercase; !* Большие буквы *!*/
-/*    cursor: pointer;*/
-/*    transition: .3s all; !* Плавный переход *!*/
-/*}*/
-
 .popup_form {
     display: block;
     width: min-content;
@@ -147,7 +138,6 @@ html, body {
     border-radius: 15px; /* Закругляем углы */
     background-color: #ffffff;
     border: 2px solid #62a0f6;
-    /*box-shadow: 0 0 0 2px #15467a;*/
     padding: 28px;
     text-transform: uppercase;
     color: #fcf6f6; /* Цвет текста */
