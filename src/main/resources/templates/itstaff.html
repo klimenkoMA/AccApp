@@ -37,7 +37,7 @@
         </div>
     </header>
     <main class="main">
-        <table class="crud_buttons" cellpadding="35px">
+        <table class="crud_buttons" cellpadding="40px">
             <td>
 
                 <div class="popup_div">
@@ -96,17 +96,22 @@
 
             </td>
             <td>
-                <form method="post" action="/finditstaffbyid">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="Введите ID программиста">
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback4">
+                    <label class="popup_try_1_row" for="callback4">Найти по ID</label>
+                    <form action="/finditstaffbyid" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" placeholder="ID программиста">
+                            </label>
+                            <button class="button" type="submit">Найти</button>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                            <label class="close" for="callback4">+</label>
+                        </div>
+                    </form>
+                </div>
+
             </td>
             <td>
                 <form method="post" action="/finditstaffbyname">
