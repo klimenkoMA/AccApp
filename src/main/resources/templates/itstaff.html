@@ -114,17 +114,34 @@
 
             </td>
             <td>
-                <form method="post" action="/finditstaffbyname">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="name" placeholder="Введите фамилию программиста">
-                        </label>
-                    </div>
-                    <div align="center">
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback5">
+                    <label class="popup_try_1_row" for="callback5">Найти по ФИО</label>
+                    <form class="popup_form" action="/finditstaffbyname" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="name" placeholder="ФИО программиста">
+                            </label>
+                        </div>
                         <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback5">+</label>
+                    </form>
+                </div>
+
+<!--
+ <form method="post" action="/finditstaffbyname">-->
+<!--                    <div align="center">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="name" placeholder="Введите фамилию программиста">-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div align="center">-->
+<!--                        <button class="button" type="submit">Найти</button>-->
+<!--                    </div>-->
+<!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+<!--                </form>-->
             </td>
         </table>
         <div class="mid_part_3">

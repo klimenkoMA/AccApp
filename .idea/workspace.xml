@@ -7,7 +7,6 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,14 +252,8 @@
       <workItem from="1698201622446" duration="1112000" />
       <workItem from="1698287612006" duration="2230000" />
       <workItem from="1698373721435" duration="1188000" />
-      <workItem from="1698473188552" duration="1017000" />
-    </task>
-    <task id="LOCAL-00086" summary="Added some args in css styles in devices.html">
-      <created>1695566083761</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1695566083762</updated>
+      <workItem from="1698473188552" duration="1123000" />
+      <workItem from="1698569344705" duration="852000" />
     </task>
     <task id="LOCAL-00087" summary="Rebuilt buttons in devices.html">
       <created>1695611945414</created>
@@ -598,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698374949270</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="Rebuilt findByID button in itstaff.html">
+      <created>1698475916211</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1698475916211</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +618,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt nav links in all pages" />
     <MESSAGE value="Added some cosmetic changes" />
     <MESSAGE value="Little changes in footer" />
     <MESSAGE value="Tried to use popup in devices.html" />
@@ -643,6 +642,7 @@
     <MESSAGE value="Rebuilt add button in itstaff.html" />
     <MESSAGE value="Rebuilt delete button in itstaff.html" />
     <MESSAGE value="Rebuilt update button in itstaff.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt update button in itstaff.html" />
+    <MESSAGE value="Rebuilt findByID button in itstaff.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt findByID button in itstaff.html" />
   </component>
 </project>
