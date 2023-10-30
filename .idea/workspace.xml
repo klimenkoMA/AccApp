@@ -7,6 +7,8 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +87,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -253,14 +266,8 @@
       <workItem from="1698287612006" duration="2230000" />
       <workItem from="1698373721435" duration="1188000" />
       <workItem from="1698473188552" duration="1123000" />
-      <workItem from="1698569344705" duration="852000" />
-    </task>
-    <task id="LOCAL-00087" summary="Rebuilt buttons in devices.html">
-      <created>1695611945414</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1695611945415</updated>
+      <workItem from="1698569344705" duration="1011000" />
+      <workItem from="1698632942513" duration="880000" />
     </task>
     <task id="LOCAL-00088" summary="Rebuilt buttons in devices.html">
       <created>1695665618018</created>
@@ -598,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698475916211</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Rebuilt findByFio button in itstaff.html">
+      <created>1698570413636</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1698570413637</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +632,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added some cosmetic changes" />
     <MESSAGE value="Little changes in footer" />
     <MESSAGE value="Tried to use popup in devices.html" />
     <MESSAGE value="Tried again to make a popup in devices.html" />
@@ -643,6 +656,7 @@
     <MESSAGE value="Rebuilt delete button in itstaff.html" />
     <MESSAGE value="Rebuilt update button in itstaff.html" />
     <MESSAGE value="Rebuilt findByID button in itstaff.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt findByID button in itstaff.html" />
+    <MESSAGE value="Rebuilt findByFio button in itstaff.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt findByFio button in itstaff.html" />
   </component>
 </project>
