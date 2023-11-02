@@ -95,33 +95,35 @@
 
                 </div>
 
-                <!--                <form method="post" action="/updateroom">-->
-                <!--                    <div align="center">-->
-                <!--                        <label>-->
-                <!--                            <input type="text" name="id" placeholder="ID кабинета">-->
-                <!--                        </label>-->
-                <!--                        <label>-->
-                <!--                            <input type="text" name="number" placeholder="Номер кабинета">-->
-                <!--                        </label>-->
-                <!--                    </div>-->
-                <!--                    <div align="center">-->
-                <!--                        <button class="button" type="submit">Обновить</button>-->
-                <!--                    </div>-->
-                <!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
-                <!--                </form>-->
             </td>
             <td>
-                <form method="post" action="findroomyid">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="Введите id кабинета">
-                        </label>
-                    </div>
-                    <div align="center">
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback4">
+                    <label class="popup_try_1_row" for="callback4">Найти по ID</label>
+                    <form action="/findroomyid" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" placeholder="ID кабинета">
+                            </label>
+                        </div>
                         <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+                        <input type="hidden" name="${_csrf.parameterName}" value="csrf.token">
+                        <label class="close" for="callback4">+</label>
+                    </form>
+                </div>
+
+<!--                <form method="post" action="findroomyid">-->
+<!--                    <div align="center">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="id" placeholder="Введите id кабинета">-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div align="center">-->
+<!--                        <button class="button" type="submit">Найти</button>-->
+<!--                    </div>-->
+<!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+<!--                </form>-->
             </td>
         </table>
         <div class="mid_part_2">
