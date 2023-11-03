@@ -37,19 +37,35 @@
         </div>
     </header>
     <main class="main">
-        <table class="crud_buttons" cellpadding="25px">
+        <table class="crud_buttons" cellpadding="45px">
             <td>
-                <form method="post" action="/addworkarea">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="name" placeholder="Название филиала"/>
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button type="submit">Добавить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback">
+                    <label class="popup_try" for="callback">Добавить филиал</label>
+                    <form action="/addworkarea" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="name" placeholder="Название филиала">
+                            </label>
+                        </div>
+                        <button class="button" type="submit">Добавить</button>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback">+</label>
+                    </form>
+                </div>
+
+<!--                <form method="post" action="/addworkarea">-->
+<!--                    <div align="center">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="name" placeholder="Название филиала"/>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div align="center">-->
+<!--                        <button type="submit">Добавить</button>-->
+<!--                    </div>-->
+<!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+<!--                </form>-->
             </td>
             <td>
                 <form method="post" action="/deleteworkarea">
