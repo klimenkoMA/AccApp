@@ -7,6 +7,8 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,14 +259,9 @@
       <workItem from="1698632942513" duration="1008000" />
       <workItem from="1698721273420" duration="417000" />
       <workItem from="1698807480590" duration="1201000" />
-      <workItem from="1698893826805" duration="991000" />
-    </task>
-    <task id="LOCAL-00091" summary="Some changes in devices.html">
-      <created>1695783953951</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1695783953952</updated>
+      <workItem from="1698893826805" duration="1026000" />
+      <workItem from="1698947117353" duration="2760000" />
+      <workItem from="1698977622394" duration="912000" />
     </task>
     <task id="LOCAL-00092" summary="Some little changes in devices.html">
       <created>1695835314520</created>
@@ -602,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698808795112</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Rebuilt findById button in room.html">
+      <created>1698895303347</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1698895303348</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +626,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created moving popup in devices.html" />
     <MESSAGE value="Added sweet cat to popup in devices.html" />
     <MESSAGE value="Tried to create popup checkbox in devices.html" />
     <MESSAGE value="Added popup form in devices.html" />
@@ -647,6 +650,7 @@
     <MESSAGE value="Rebuilt add button in room.html" />
     <MESSAGE value="Rebuilt delete button in room.html" />
     <MESSAGE value="Rebuilt update button in room.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt update button in room.html" />
+    <MESSAGE value="Rebuilt findById button in room.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt findById button in room.html" />
   </component>
 </project>
