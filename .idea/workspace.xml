@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,14 +261,8 @@
       <workItem from="1698807480590" duration="1201000" />
       <workItem from="1698893826805" duration="1026000" />
       <workItem from="1698947117353" duration="2760000" />
-      <workItem from="1698977622394" duration="912000" />
-    </task>
-    <task id="LOCAL-00092" summary="Some little changes in devices.html">
-      <created>1695835314520</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1695835314520</updated>
+      <workItem from="1698977622394" duration="1021000" />
+      <workItem from="1699028454180" duration="2653000" />
     </task>
     <task id="LOCAL-00093" summary="Some changes in devices.html">
       <created>1695871378588</created>
@@ -606,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698895303348</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Rebuilt add button in workarea.html">
+      <created>1698981565059</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1698981565060</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,7 +627,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added sweet cat to popup in devices.html" />
     <MESSAGE value="Tried to create popup checkbox in devices.html" />
     <MESSAGE value="Added popup form in devices.html" />
     <MESSAGE value="Rebuilt popup form in devices.html" />
@@ -651,6 +651,7 @@
     <MESSAGE value="Rebuilt delete button in room.html" />
     <MESSAGE value="Rebuilt update button in room.html" />
     <MESSAGE value="Rebuilt findById button in room.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt findById button in room.html" />
+    <MESSAGE value="Rebuilt add button in workarea.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt add button in workarea.html" />
   </component>
 </project>
