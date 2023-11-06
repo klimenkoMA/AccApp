@@ -37,7 +37,7 @@
         </div>
     </header>
     <main class="main">
-        <table class="crud_buttons" cellpadding="40px">
+        <table class="crud_buttons" cellpadding="40px" align="center">
             <td>
 
                 <div class="popup_div">
@@ -57,33 +57,57 @@
 
             </td>
             <td>
-                <form method="post" action="/deleteworkarea">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID филиала"/>
-                        </label>
-                    </div>
-                    <div align="center">
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback2">
+                    <label class="popup_try_1_row" for="callback2">Удалить филиал</label>
+                    <form action="/deleteworkarea" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                               <input type="text" name="id" placeholder="ID филиала">
+                            </label>
+                        </div>
                         <button class="button" type="submit">Удалить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback2">+</label>
+                    </form>
+                </div>
+
             </td>
             <td>
-                <form method="post" action="/updateworkarea">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID филиала"/>
-                        </label>
-                        <label>
-                            <input type="text" name="name" placeholder="Название филиала"/>
-                        </label>
-                    </div>
-                    <div align="center">
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback3">
+                    <label class="popup_try" for="callback3">Обновить филиал</label>
+                    <form action="/updateworkarea" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" placeholder="ID филиала">
+                            </label>
+                            <label>
+                                <input type="text" name="name" placeholder="Номер филиала">
+                            </label>
+                        </div>
                         <button class="button" type="submit">Обновить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback3">+</label>
+                    </form>
+                </div>
+
+<!--                <form method="post" action="/updateworkarea">-->
+<!--                    <div align="center">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="id" placeholder="ID филиала"/>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <input type="text" name="name" placeholder="Название филиала"/>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div align="center">-->
+<!--                        <button class="button" type="submit">Обновить</button>-->
+<!--                    </div>-->
+<!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+<!--                </form>-->
             </td>
             <td>
                 <form method="post" action="findworkareabyid">
