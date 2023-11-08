@@ -112,10 +112,28 @@
                     </form>
                 </div>
 
-<!--                <form method="post" action="findworkareabyid">-->
+            </td>
+            <td>
+
+                <div class="popup_div">
+                    <input type="checkbox" id="callback5">
+                    <label class="popup_try" for="callback5">Найти по названию</label>
+                    <form action="/findworkareabyname" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="name" placeholder="Название филиала">
+                            </label>
+                        </div>
+                        <button class="button" type="submit">Найти</button>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback5">+</label>
+                    </form>
+                </div>
+
+<!--                <form method="post" action="findworkareabyname">-->
 <!--                    <div align="center">-->
 <!--                        <label>-->
-<!--                            <input type="text" name="id" placeholder="Введите id филиала"/>-->
+<!--                            <input type="text" name="name" placeholder="Введите название филиала"/>-->
 <!--                        </label>-->
 <!--                    </div>-->
 <!--                    <div align="center">-->
@@ -123,19 +141,6 @@
 <!--                    </div>-->
 <!--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
 <!--                </form>-->
-            </td>
-            <td>
-                <form method="post" action="findworkareabyname">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="name" placeholder="Введите название филиала"/>
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
             </td>
         </table>
         <div class="mid_part">

@@ -7,6 +7,7 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,14 +267,8 @@
       <workItem from="1699158753917" duration="1761000" />
       <workItem from="1699209645144" duration="578000" />
       <workItem from="1699256826520" duration="1848000" />
-      <workItem from="1699323562085" duration="2532000" />
-    </task>
-    <task id="LOCAL-00097" summary="Edited employee.html">
-      <created>1696084043989</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1696084043989</updated>
+      <workItem from="1699323562085" duration="2604000" />
+      <workItem from="1699410466816" duration="827000" />
     </task>
     <task id="LOCAL-00098" summary="Rebuilt devices.html">
       <created>1696137810060</created>
@@ -611,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699257495175</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="Rebuilt finById button in workarea.html">
+      <created>1699326580146</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1699326580148</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +633,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt all CRUD buttons in devices.html" />
     <MESSAGE value="Ended to rebuild CRUD buttons in devices.html" />
     <MESSAGE value="Rebuilt add button in employee.html" />
     <MESSAGE value="Rebuilt delete button in employee.html" />
@@ -656,6 +657,7 @@
     <MESSAGE value="Rebuilt button`s placement in room.html" />
     <MESSAGE value="Rebuilt delete button in workarea.html" />
     <MESSAGE value="Rebuilt update button in workarea.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt update button in workarea.html" />
+    <MESSAGE value="Rebuilt finById button in workarea.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt finById button in workarea.html" />
   </component>
 </project>
