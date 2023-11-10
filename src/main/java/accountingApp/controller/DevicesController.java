@@ -28,10 +28,12 @@ public class DevicesController {
     @PostMapping("/adddevice")
     public String addDevice(@RequestParam String name,
                             Model model) {
-        Devices devices = new Devices(name);
-        devicesService.addNewDevice(devices);
-        List<Devices> devicesList = devicesService.findAllDevices();
-        model.addAttribute("devicesList", devicesList);
+        if (name != null && !name.equals("") && !name.equals(" ")) {
+            Devices devices = new Devices(name);
+            devicesService.addNewDevice(devices);
+            List<Devices> devicesList = devicesService.findAllDevices();
+            model.addAttribute("devicesList", devicesList);
+        }
         return "devices";
     }
 
