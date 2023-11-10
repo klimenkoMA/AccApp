@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,13 +268,8 @@
       <workItem from="1699256826520" duration="1848000" />
       <workItem from="1699323562085" duration="2604000" />
       <workItem from="1699410466816" duration="885000" />
-    </task>
-    <task id="LOCAL-00099" summary="Added React.js">
-      <created>1696178914825</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1696178914825</updated>
+      <workItem from="1699496229926" duration="1237000" />
+      <workItem from="1699582922993" duration="1636000" />
     </task>
     <task id="LOCAL-00100" summary="Rebuilt main.html">
       <created>1696216365668</created>
@@ -611,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699412256075</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Some changes">
+      <created>1699497689695</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1699497689695</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +634,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt add button in employee.html" />
     <MESSAGE value="Rebuilt delete button in employee.html" />
     <MESSAGE value="Rebuilt update buttoon in employee.html" />
     <MESSAGE value="Rebuilt find by fio button in employee.html" />
@@ -656,6 +658,7 @@
     <MESSAGE value="Rebuilt update button in workarea.html" />
     <MESSAGE value="Rebuilt finById button in workarea.html" />
     <MESSAGE value="Rebuilt findByName button in workarea.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt findByName button in workarea.html" />
+    <MESSAGE value="Some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes" />
   </component>
 </project>
