@@ -28,7 +28,8 @@ public class DevicesController {
     @PostMapping("/adddevice")
     public String addDevice(@RequestParam String name,
                             Model model) {
-        if (name != null && !name.equals("") && !name.equals(" ")) {
+        String nameWithoutSpaces = name.trim();
+        if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
             Devices devices = new Devices(name);
             devicesService.addNewDevice(devices);
             List<Devices> devicesList = devicesService.findAllDevices();
@@ -47,13 +48,25 @@ public class DevicesController {
     }
 
     @PostMapping("/updatedevice")
-    public String updateProceduresAssigned(@RequestParam int id,
+    public String updateProceduresAssigned(@RequestParam String id,
                                            @RequestParam String name,
                                            Model model) {
-        Devices devices = new Devices(id, name);
-        devicesService.updateDevice(devices);
-        List<Devices> devicesList = devicesService.findAllDevices();
-        model.addAttribute("devicesList", devicesList);
+
+        try {
+            String nameWithoutSpaces = name.trim();
+            int idCheck = Integer.parseInt(id);
+            if (idCheck <= 0 || id.isEmpty() || id.matches("\\D*")) {
+                return "devices";
+            }
+            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+                Devices devices = new Devices(idCheck, name);
+                devicesService.updateDevice(devices);
+                List<Devices> devicesList = devicesService.findAllDevices();
+                model.addAttribute("devicesList", devicesList);
+            }
+        } catch (Exception e) {
+            return "devices";
+        }
         return "devices";
     }
 
