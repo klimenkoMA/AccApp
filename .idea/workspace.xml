@@ -7,6 +7,8 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,14 +271,8 @@
       <workItem from="1699323562085" duration="2604000" />
       <workItem from="1699410466816" duration="885000" />
       <workItem from="1699496229926" duration="1237000" />
-      <workItem from="1699582922993" duration="1636000" />
-    </task>
-    <task id="LOCAL-00100" summary="Rebuilt main.html">
-      <created>1696216365668</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1696216365668</updated>
+      <workItem from="1699582922993" duration="1940000" />
+      <workItem from="1699688560743" duration="6418000" />
     </task>
     <task id="LOCAL-00101" summary="Rebuilt js package">
       <created>1696268430075</created>
@@ -614,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699497689695</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="Added check null value in DevicesController.java">
+      <created>1699586290647</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1699586290647</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +637,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt delete button in employee.html" />
     <MESSAGE value="Rebuilt update buttoon in employee.html" />
     <MESSAGE value="Rebuilt find by fio button in employee.html" />
     <MESSAGE value="Rebuilt find by id button in employee.html" />
@@ -659,6 +661,7 @@
     <MESSAGE value="Rebuilt finById button in workarea.html" />
     <MESSAGE value="Rebuilt findByName button in workarea.html" />
     <MESSAGE value="Some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes" />
+    <MESSAGE value="Added check null value in DevicesController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added check null value in DevicesController.java" />
   </component>
 </project>
