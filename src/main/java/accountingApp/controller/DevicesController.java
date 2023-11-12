@@ -39,12 +39,20 @@ public class DevicesController {
     }
 
     @PostMapping("/deletedevice")
-    public String deleteDevice(@RequestParam Integer id,
+    public String deleteDevice(@RequestParam String id,
                                Model model) {
-        devicesService.deleteDeviceById(id);
-        List<Devices> devicesList = devicesService.findAllDevices();
-        model.addAttribute("devicesList", devicesList);
-        return "devices";
+        try {
+            int idCheck = Integer.parseInt(id);
+            if (idCheck <= 0) {
+                return "devices";
+            }
+            devicesService.deleteDeviceById(idCheck);
+            List<Devices> devicesList = devicesService.findAllDevices();
+            model.addAttribute("devicesList", devicesList);
+            return "devices";
+        } catch (Exception e) {
+            return "devices";
+        }
     }
 
     @PostMapping("/updatedevice")
