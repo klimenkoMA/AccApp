@@ -11,8 +11,13 @@
       <auth-provider>ms-sso</auth-provider>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
+          <node negative="1">
+            <node kind="database" qname="@">
+              <node kind="schema" qname="@" />
+            </node>
+            <node kind="database" qname="AccAppDB">
+              <node kind="schema" qname="dbo" />
+            </node>
           </node>
         </introspection-scope>
       </schema-mapping>
