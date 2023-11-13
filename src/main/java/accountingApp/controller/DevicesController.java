@@ -78,24 +78,23 @@ public class DevicesController {
         return "devices";
     }
 
-    @PostMapping("/finddevicebyid")
-    public String findDevicesById(@RequestParam int id,
-                                  Model model) {
-        List<Devices> devicesList;
-        if (id > 0) {
-            devicesList = devicesService.getDevicesById(id);
-        } else {
-            devicesList = devicesService.findAllDevices();
-        }
-        model.addAttribute("devicesList", devicesList);
-        return "devices";
-    }
-
     @PostMapping("/finddevicebyname")
     public String findDevicesById(@RequestParam String name,
                                   Model model) {
-        List<Devices> devicesList = devicesService.getDevicesByName(name);
-        model.addAttribute("devicesList", devicesList);
-        return "devices";
+        try {
+            int idCheck = Integer.parseInt(name);
+            if (idCheck <= 0 || name.isEmpty()) {
+                return "devices";
+            } else if (!name.matches("\\D*")) {
+                List<Devices> devicesList;
+                devicesList = devicesService.getDevicesById(idCheck);
+                model.addAttribute("devicesList", devicesList);
+            }
+            return "devices";
+        } catch (Exception e) {
+            List<Devices> devicesList = devicesService.getDevicesByName(name);
+            model.addAttribute("devicesList", devicesList);
+            return "devices";
+        }
     }
 }
