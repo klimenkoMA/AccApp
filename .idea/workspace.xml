@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,14 +272,8 @@
       <workItem from="1699496229926" duration="1237000" />
       <workItem from="1699582922993" duration="1940000" />
       <workItem from="1699688560743" duration="10723000" />
-      <workItem from="1699775349493" duration="3060000" />
-    </task>
-    <task id="LOCAL-00102" summary="Tried to start React scripts in devices.html">
-      <created>1696302768786</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1696302768786</updated>
+      <workItem from="1699775349493" duration="5157000" />
+      <workItem from="1699897263449" duration="3587000" />
     </task>
     <task id="LOCAL-00103" summary="Rebuilt events.html">
       <created>1696353762958</created>
@@ -620,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699697620317</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="Rebuilt DB and &quot;delete&quot; method in DevicesController.java">
+      <created>1699794911029</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1699794911029</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,7 +638,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt find by fio button in employee.html" />
     <MESSAGE value="Rebuilt find by id button in employee.html" />
     <MESSAGE value="Rebuilt add button in events.html" />
     <MESSAGE value="Rebuilt delete button in events.html" />
@@ -665,6 +662,7 @@
     <MESSAGE value="Some changes" />
     <MESSAGE value="Added check null value in DevicesController.java" />
     <MESSAGE value="Added a checking for wrong input in &quot;create&quot; and &quot;update&quot; methods in DevicesController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a checking for wrong input in &quot;create&quot; and &quot;update&quot; methods in DevicesController.java" />
+    <MESSAGE value="Rebuilt DB and &quot;delete&quot; method in DevicesController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt DB and &quot;delete&quot; method in DevicesController.java" />
   </component>
 </project>
