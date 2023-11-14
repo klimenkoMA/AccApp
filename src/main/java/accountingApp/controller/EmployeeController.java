@@ -32,10 +32,38 @@ public class EmployeeController {
                               @RequestParam String workArea,
                               @RequestParam String room,
                               Model model) {
-        Employee employee = new Employee(fio, dborn, workArea, room);
-        employeeService.addNewEmployee(employee);
-        List<Employee> employeeList = employeeService.getListEmployee();
-        model.addAttribute("employeeList", employeeList);
+        String fioWithoutSpaces = fio.trim();
+        String dbornWithoutSpaces = dborn.trim();
+        String workAreaWithoutSpaces = workArea.trim();
+        String roomWithoutSpaces = room.trim();
+        try {
+            int roomCheck = Integer.parseInt(roomWithoutSpaces);
+            int dbornCheck = Integer.parseInt(dbornWithoutSpaces);
+            if (roomCheck <= 0 || dbornCheck <= 0) {
+                System.out.println("*** ID or dborn <<<< 0***");
+                return "employee";
+            }
+        } catch (Exception e) {
+            System.out.println("***Wrong ID or dborn!***");
+            return "employee";
+        }
+        try {
+            if (!fioWithoutSpaces.equals("") ||
+                    dbornWithoutSpaces.equals("") ||
+                    workAreaWithoutSpaces.equals("")) {
+                Employee employee = new Employee(fioWithoutSpaces,
+                        dbornWithoutSpaces,
+                        workAreaWithoutSpaces,
+                        roomWithoutSpaces);
+                employeeService.addNewEmployee(employee);
+                List<Employee> employeeList = employeeService.getListEmployee();
+                model.addAttribute("employeeList", employeeList);
+                return "employee";
+            }
+        } catch (Exception e) {
+            System.out.println("|||Something wrong in DB|||");
+            return "employee";
+        }
         return "employee";
     }
 
