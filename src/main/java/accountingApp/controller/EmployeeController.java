@@ -68,14 +68,22 @@ public class EmployeeController {
     }
 
     @PostMapping("/deleteemployee")
-    public String deleteById(@RequestParam int id
+    public String deleteById(@RequestParam String id
             , Model model) {
-        if (id > 0) {
-            employeeService.deleteEmployeeById(id);
+
+        try {
+            int idCheck = Integer.parseInt(id);
+            if (idCheck > 0) {
+                employeeService.deleteEmployeeById(idCheck);
+            }
+            List<Employee> employeeList = employeeService.getListEmployee();
+            model.addAttribute("employeeList", employeeList);
+            return "employee";
+
+        }catch (Exception e){
+            System.out.println(e.toString() + "||| WRONG ID |||");
+            return "employee";
         }
-        List<Employee> employeeList = employeeService.getListEmployee();
-        model.addAttribute("employeeList", employeeList);
-        return "employee";
     }
 
     @PostMapping("/updateemployee")
