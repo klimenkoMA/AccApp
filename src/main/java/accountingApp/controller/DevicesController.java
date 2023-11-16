@@ -85,8 +85,10 @@ public class DevicesController {
             int idCheck = Integer.parseInt(name);
             if (idCheck <= 0 || name.isEmpty()) {
                 System.out.println("***SUB ZERO***");
+                List<Devices> devicesList = devicesService.findAllDevices();
+                model.addAttribute("devicesList", devicesList);
                 return "devices";
-            } else if (!name.matches("\\D*")) {
+            } else {
                 List<Devices> devicesList;
                 devicesList = devicesService.getDevicesById(idCheck);
                 model.addAttribute("devicesList", devicesList);
