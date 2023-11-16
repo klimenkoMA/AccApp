@@ -7,6 +7,7 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,14 +275,8 @@
       <workItem from="1699775349493" duration="5157000" />
       <workItem from="1699897263449" duration="4199000" />
       <workItem from="1699922644730" duration="5430000" />
-      <workItem from="1700014597064" duration="2021000" />
-    </task>
-    <task id="LOCAL-00105" summary="Added css package and rebuilt all pages">
-      <created>1696442310468</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1696442310470</updated>
+      <workItem from="1700014597064" duration="2206000" />
+      <workItem from="1700066530454" duration="4073000" />
     </task>
     <task id="LOCAL-00106" summary="Rebuilt all pages">
       <created>1696475895256</created>
@@ -619,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699928745313</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="Improved &quot;delete&quot; method in EmployeeController.java">
+      <created>1700017413326</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1700017413327</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -639,7 +641,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt delete button in events.html" />
     <MESSAGE value="Rebuilt update button in events.html" />
     <MESSAGE value="Rebuilt find button in events.html" />
     <MESSAGE value="Rebuilt add button in itstaff.html" />
@@ -664,6 +665,7 @@
     <MESSAGE value="Rebuilt DB and &quot;delete&quot; method in DevicesController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in DevicesController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in EmployeeController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;add&quot; method in EmployeeController.java" />
+    <MESSAGE value="Improved &quot;delete&quot; method in EmployeeController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;delete&quot; method in EmployeeController.java" />
   </component>
 </project>
