@@ -161,17 +161,4 @@ public class EmployeeController {
             return "employee";
         }
     }
-
-//    @PostMapping("/findbyid")
-//    public String findEmployeeById(@RequestParam int id,
-//                                   Model model) {
-//        List<Employee> employeeList;
-//        if (id > 0) {
-//            employeeList = employeeService.findEmployeeById(id);
-//        } else {
-//            employeeList = employeeService.getListEmployee();
-//        }
-//        model.addAttribute("employeeList", employeeList);
-//        return "employee";
-//    }
 }
