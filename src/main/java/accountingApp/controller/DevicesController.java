@@ -84,6 +84,7 @@ public class DevicesController {
         try {
             int idCheck = Integer.parseInt(name);
             if (idCheck <= 0 || name.isEmpty()) {
+                System.out.println("***SUB ZERO***");
                 return "devices";
             } else if (!name.matches("\\D*")) {
                 List<Devices> devicesList;
@@ -94,6 +95,7 @@ public class DevicesController {
         } catch (Exception e) {
             List<Devices> devicesList = devicesService.getDevicesByName(name);
             model.addAttribute("devicesList", devicesList);
+            System.out.println("*** FIND BY NAME ***");
             return "devices";
         }
     }

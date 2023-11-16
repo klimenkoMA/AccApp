@@ -37,7 +37,7 @@
         </div>
     </header>
     <main class="main">
-        <table class="crud_buttons" cellpadding="40px">
+        <table class="crud_buttons" cellpadding="40px" align="center">
             <td>
 
                 <div class="popup_div">
@@ -123,7 +123,7 @@
 
                 <div class="popup_div">
                     <input type="checkbox" id="callback4">
-                    <label class="popup_try_1_row" for="callback4">Найти по ФИО</label>
+                    <label class="popup_try" for="callback4">Найти сотрудника</label>
                     <form action="/findbyfio" class="popup_form" method="post">
                         <div align="center">
                             <label>
@@ -137,26 +137,8 @@
                         <label class="close" for="callback4">+</label>
                     </form>
                 </div>
-
             </td>
-            <td>
 
-                <div class="popup_div">
-                    <input type="checkbox" id="callback5">
-                    <label class="popup_try_1_row" for="callback5">Найти по ID</label>
-                    <form action="/findbyid" class="popup_form" method="post">
-                        <div align="center">
-                            <label>
-                                <input type="text" name="id" placeholder="Введите ID">
-                            </label>
-                        </div>
-                        <button class="button" type="submit">Найти</button>
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                        <label class="close" for="callback5">+</label>
-                    </form>
-                </div>
-
-            </td>
         </table>
         <div class="mid_part_4">
             <div class="db_table_border">

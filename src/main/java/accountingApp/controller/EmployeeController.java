@@ -142,21 +142,36 @@ public class EmployeeController {
     @PostMapping("/findbyfio")
     public String findEmployeeByFio(@RequestParam String fio,
                                     Model model) {
-        List<Employee> employeeList = employeeService.findEmployeeByFio(fio);
-        model.addAttribute("employeeList", employeeList);
-        return "employee";
+        String fioWithoutSpaces = fio.trim();
+        try{
+            List<Employee> employeeList;
+            int idCheck = Integer.parseInt(fioWithoutSpaces);
+            if (idCheck <= 0 || fioWithoutSpaces.isEmpty()){
+                System.out.println("***SUB ZERO***");
+                employeeList = employeeService.getListEmployee();
+            }else{
+                employeeList = employeeService.findEmployeeById(idCheck);
+            }
+            model.addAttribute("employeeList", employeeList);
+            return "employee";
+        }catch (Exception e){
+            List<Employee> employeeList = employeeService.findEmployeeByFio(fio);
+            model.addAttribute("employeeList", employeeList);
+            System.out.println("*** FIND BY NAME ***");
+            return "employee";
+        }
     }
 
-    @PostMapping("/findbyid")
-    public String findEmployeeById(@RequestParam int id,
-                                   Model model) {
-        List<Employee> employeeList;
-        if (id > 0) {
-            employeeList = employeeService.findEmployeeById(id);
-        } else {
-            employeeList = employeeService.getListEmployee();
-        }
-        model.addAttribute("employeeList", employeeList);
-        return "employee";
-    }
+//    @PostMapping("/findbyid")
+//    public String findEmployeeById(@RequestParam int id,
+//                                   Model model) {
+//        List<Employee> employeeList;
+//        if (id > 0) {
+//            employeeList = employeeService.findEmployeeById(id);
+//        } else {
+//            employeeList = employeeService.getListEmployee();
+//        }
+//        model.addAttribute("employeeList", employeeList);
+//        return "employee";
+//    }
 }
