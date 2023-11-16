@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -277,13 +279,7 @@
       <workItem from="1699922644730" duration="5430000" />
       <workItem from="1700014597064" duration="2206000" />
       <workItem from="1700066530454" duration="4073000" />
-    </task>
-    <task id="LOCAL-00106" summary="Rebuilt all pages">
-      <created>1696475895256</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1696475895256</updated>
+      <workItem from="1700101202047" duration="3244000" />
     </task>
     <task id="LOCAL-00107" summary="The tables was put down in the middle of all the pages">
       <created>1696527279423</created>
@@ -621,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700017413327</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="Improved &quot;update&quot; method in EmployeeController.java">
+      <created>1700101726924</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1700101726925</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +644,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt update button in events.html" />
     <MESSAGE value="Rebuilt find button in events.html" />
     <MESSAGE value="Rebuilt add button in itstaff.html" />
     <MESSAGE value="Rebuilt delete button in itstaff.html" />
@@ -666,6 +668,7 @@
     <MESSAGE value="Improved &quot;find&quot; method in DevicesController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;delete&quot; method in EmployeeController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;delete&quot; method in EmployeeController.java" />
+    <MESSAGE value="Improved &quot;update&quot; method in EmployeeController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;update&quot; method in EmployeeController.java" />
   </component>
 </project>
