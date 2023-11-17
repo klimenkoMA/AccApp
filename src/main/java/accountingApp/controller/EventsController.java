@@ -35,17 +35,31 @@ public class EventsController {
                               @RequestParam String employeeid,
                               @RequestParam String itstaffid,
                               Model model) {
-        List<Devices> devicesList = devicesService.getDevicesByName(device);
-        List<Employee> employeeList = employeeService.findEmployeeByFio(employeeid);
-        List<ITStaff> itStaffList = itStaffService.getITStaffByName(itstaffid);
-        Events events = new Events(date,
-                devicesList.get(0),
-                employeeList.get(0),
-                itStaffList.get(0));
-        eventsService.addNewEvent(events);
-        List<Events> eventsList = eventsService.findAllEvents();
-        model.addAttribute("eventsList", eventsList);
-        return "events";
+        String dateWithoutSpaces = date.trim();
+        String deviceWithoutSpaces = device.trim();
+        String employeeidWithoutSpaces = employeeid.trim();
+        String itstaffidWithoutSpaces = itstaffid.trim();
+        try {
+            int dateCheck = Integer.parseInt(dateWithoutSpaces);
+            if (dateCheck <= 0 || date.length() < 6) {
+                System.out.println("*** WRONG DATE ***");
+            } else {
+                List<Devices> devicesList = devicesService.getDevicesByName(deviceWithoutSpaces);
+                List<Employee> employeeList = employeeService.findEmployeeByFio(employeeidWithoutSpaces);
+                List<ITStaff> itStaffList = itStaffService.getITStaffByName(itstaffidWithoutSpaces);
+                Events events = new Events(date,
+                        devicesList.get(0),
+                        employeeList.get(0),
+                        itStaffList.get(0));
+                eventsService.addNewEvent(events);
+                List<Events> eventsList = eventsService.findAllEvents();
+                model.addAttribute("eventsList", eventsList);
+            }
+            return "events";
+        } catch (Exception e) {
+            System.out.println("*** WRONG DATE FORMAT ***");
+            return "events";
+        }
     }
 
     @PostMapping("/deleteevent")

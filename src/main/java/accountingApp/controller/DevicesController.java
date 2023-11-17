@@ -63,7 +63,7 @@ public class DevicesController {
         try {
             String nameWithoutSpaces = name.trim();
             int idCheck = Integer.parseInt(id);
-            if (idCheck <= 0 || id.isEmpty() || id.matches("\\D*")) {
+            if (idCheck <= 0 ) {
                 return "devices";
             }
             if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
@@ -83,12 +83,13 @@ public class DevicesController {
                                   Model model) {
         try {
             int idCheck = Integer.parseInt(name);
-            if (idCheck <= 0 || name.isEmpty()) {
+            if (idCheck <= 0) {
                 System.out.println("***SUB ZERO***");
                 List<Devices> devicesList = devicesService.findAllDevices();
                 model.addAttribute("devicesList", devicesList);
                 return "devices";
             } else {
+                System.out.println("*** FIND BY ID ***");
                 List<Devices> devicesList;
                 devicesList = devicesService.getDevicesById(idCheck);
                 model.addAttribute("devicesList", devicesList);

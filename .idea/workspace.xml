@@ -8,9 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,14 +279,8 @@
       <workItem from="1700014597064" duration="2206000" />
       <workItem from="1700066530454" duration="4073000" />
       <workItem from="1700101202047" duration="3749000" />
-      <workItem from="1700152760218" duration="802000" />
-    </task>
-    <task id="LOCAL-00108" summary="Added border-spacing in db_table in custom.css">
-      <created>1696561199289</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1696561199290</updated>
+      <workItem from="1700152760218" duration="2914000" />
+      <workItem from="1700186374159" duration="2413000" />
     </task>
     <task id="LOCAL-00109" summary="Rebuilt nav links in all pages">
       <created>1696612561387</created>
@@ -626,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700104911955</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="Some changes in DevicesController.java and EmployeeController.java">
+      <created>1700153618740</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1700153618742</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +645,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt add button in itstaff.html" />
     <MESSAGE value="Rebuilt delete button in itstaff.html" />
     <MESSAGE value="Rebuilt update button in itstaff.html" />
     <MESSAGE value="Rebuilt findByID button in itstaff.html" />
@@ -671,6 +669,7 @@
     <MESSAGE value="Improved &quot;delete&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;update&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in EmployeeController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;find&quot; method in EmployeeController.java" />
+    <MESSAGE value="Some changes in DevicesController.java and EmployeeController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes in DevicesController.java and EmployeeController.java" />
   </component>
 </project>
