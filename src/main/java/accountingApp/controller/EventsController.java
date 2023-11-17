@@ -63,33 +63,65 @@ public class EventsController {
     }
 
     @PostMapping("/deleteevent")
-    public String deleteEvent(@RequestParam int id,
+    public String deleteEvent(@RequestParam String id,
                               Model model) {
-        eventsService.deleteEventsById(id);
-        List<Events> eventsList = eventsService.findAllEvents();
-        model.addAttribute("eventsList", eventsList);
-        return "events";
+        try {
+            int idCheck = Integer.parseInt(id);
+            if (idCheck <= 0) {
+                System.out.println("*** SUB ZERO ID***");
+            } else {
+                eventsService.deleteEventsById(idCheck);
+                List<Events> eventsList = eventsService.findAllEvents();
+                model.addAttribute("eventsList", eventsList);
+            }
+            return "events";
+        } catch (Exception e) {
+            System.out.println("*** WRONG ID FORMAT***");
+            return "events";
+        }
+
     }
 
     @PostMapping("/updateevent")
-    public String updateEvent(@RequestParam int id,
+    public String updateEvent(@RequestParam String id,
                               @RequestParam String date,
                               @RequestParam String device,
                               @RequestParam String employeeid,
                               @RequestParam String itstaffid,
                               Model model) {
-        List<Devices> devicesList = devicesService.getDevicesByName(device);
-        List<Employee> employeeList = employeeService.findEmployeeByFio(employeeid);
-        List<ITStaff> itStaffList = itStaffService.getITStaffByName(itstaffid);
-        Events events = new Events(id,
-                date,
-                devicesList.get(0),
-                employeeList.get(0),
-                itStaffList.get(0));
-        eventsService.updateEvent(events);
-        List<Events> eventsList = eventsService.findAllEvents();
-        model.addAttribute("eventsList", eventsList);
-        return "events";
+
+        String idWithoutSpaces = id.trim();
+        String dateWithoutSpaces = date.trim();
+        String deviceWithoutSpaces = device.trim();
+        String employeeIdWithoutSpaces = employeeid.trim();
+        String itstaffIdWithoutSpaces = itstaffid.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("*** SUB ZERO ID***");
+                return "events";
+            } else if (!dateWithoutSpaces.equals("") &&
+                    !deviceWithoutSpaces.equals("") &&
+                    !employeeIdWithoutSpaces.equals("") &&
+                    !itstaffIdWithoutSpaces.equals("")) {
+                List<Devices> devicesList = devicesService.getDevicesByName(deviceWithoutSpaces);
+                List<Employee> employeeList = employeeService.findEmployeeByFio(employeeIdWithoutSpaces);
+                List<ITStaff> itStaffList = itStaffService.getITStaffByName(itstaffIdWithoutSpaces);
+                Events events = new Events(idCheck,
+                        dateWithoutSpaces,
+                        devicesList.get(0),
+                        employeeList.get(0),
+                        itStaffList.get(0));
+                eventsService.updateEvent(events);
+                List<Events> eventsList = eventsService.findAllEvents();
+                model.addAttribute("eventsList", eventsList);
+            }
+            return "events";
+
+        } catch (Exception e) {
+            System.out.println("*** WRONG ID FORMAT***");
+            return "events";
+        }
     }
 
     @PostMapping("/findeventbyid")
