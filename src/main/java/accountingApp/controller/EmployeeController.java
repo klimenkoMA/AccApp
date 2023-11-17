@@ -119,7 +119,7 @@ public class EmployeeController {
             int idCheck = Integer.parseInt(id);
             if (!fioWithoutSpaces.equals("") &&
                     !dbornWithoutSpaces.equals("") &&
-                   !workAreaWithoutSpaces.equals("")) {
+                    !workAreaWithoutSpaces.equals("")) {
 
                 Employee employee = new Employee(idCheck,
                         fioWithoutSpaces,
@@ -143,18 +143,18 @@ public class EmployeeController {
     public String findEmployeeByFio(@RequestParam String fio,
                                     Model model) {
         String fioWithoutSpaces = fio.trim();
-        try{
+        try {
             List<Employee> employeeList;
             int idCheck = Integer.parseInt(fioWithoutSpaces);
-            if (idCheck <= 0 || fioWithoutSpaces.isEmpty()){
+            if (idCheck <= 0 || fioWithoutSpaces.isEmpty()) {
                 System.out.println("***SUB ZERO***");
                 employeeList = employeeService.getListEmployee();
-            }else{
+            } else {
                 employeeList = employeeService.findEmployeeById(idCheck);
             }
             model.addAttribute("employeeList", employeeList);
             return "employee";
-        }catch (Exception e){
+        } catch (Exception e) {
             List<Employee> employeeList = employeeService.findEmployeeByFio(fio);
             model.addAttribute("employeeList", employeeList);
             System.out.println("*** FIND BY NAME ***");
