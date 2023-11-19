@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,21 +279,9 @@
       <workItem from="1700101202047" duration="3749000" />
       <workItem from="1700152760218" duration="2914000" />
       <workItem from="1700186374159" duration="4024000" />
-      <workItem from="1700232480402" duration="3893000" />
-    </task>
-    <task id="LOCAL-00110" summary="Added some cosmetic changes">
-      <created>1696658414885</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1696658414886</updated>
-    </task>
-    <task id="LOCAL-00111" summary="Little changes in footer">
-      <created>1696697746720</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1696697746721</updated>
+      <workItem from="1700232480402" duration="4270000" />
+      <workItem from="1700279313472" duration="7142000" />
+      <workItem from="1700323030464" duration="1501000" />
     </task>
     <task id="LOCAL-00112" summary="Tried to use popup in devices.html">
       <created>1696742520891</created>
@@ -627,7 +612,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700189116244</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="Improved &quot;delete&quot; and &quot;update&quot; methods in EventsController.java">
+      <created>1700243150984</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1700243150986</updated>
+    </task>
+    <task id="LOCAL-00160" summary="Improved &quot;find&quot; method in EventsController.java">
+      <created>1700287078500</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1700287078500</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -647,8 +646,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt update button in itstaff.html" />
-    <MESSAGE value="Rebuilt findByID button in itstaff.html" />
     <MESSAGE value="Rebuilt findByFio button in itstaff.html" />
     <MESSAGE value="Rebuilt add button in room.html" />
     <MESSAGE value="Rebuilt delete button in room.html" />
@@ -672,6 +669,8 @@
     <MESSAGE value="Improved &quot;find&quot; method in EmployeeController.java" />
     <MESSAGE value="Some changes in DevicesController.java and EmployeeController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in EventsController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;add&quot; method in EventsController.java" />
+    <MESSAGE value="Improved &quot;delete&quot; and &quot;update&quot; methods in EventsController.java" />
+    <MESSAGE value="Improved &quot;find&quot; method in EventsController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;find&quot; method in EventsController.java" />
   </component>
 </project>

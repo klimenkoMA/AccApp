@@ -125,15 +125,22 @@ public class EventsController {
     }
 
     @PostMapping("/findeventbyid")
-    public String findEventsById(@RequestParam int id,
+    public String findEventsById(@RequestParam String id,
                                  Model model) {
-        List<Events> eventsList;
-        if (id > 0) {
-            eventsList = eventsService.getEventById(id);
-        } else {
-            eventsList = eventsService.findAllEvents();
+        String idWithoutSpaces = id.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("*** SUB ZERO ID***");
+            } else {
+                List<Events> eventsList;
+                eventsList = eventsService.getEventById(idCheck);
+                model.addAttribute("eventsList", eventsList);
+            }
+            return "events";
+        } catch (Exception e) {
+            System.out.println("*** WRONG ID FORMAT***");
+            return "events";
         }
-        model.addAttribute("eventsList", eventsList);
-        return "events";
     }
 }

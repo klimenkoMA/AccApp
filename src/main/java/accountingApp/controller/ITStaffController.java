@@ -27,20 +27,41 @@ public class ITStaffController {
     @PostMapping("/additstaff")
     public String addItStaff(@RequestParam String name,
                              Model model) {
-        ITStaff ITStaff = new ITStaff(name);
-        ITStaffService.addNewItStaff(ITStaff);
-        List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
-        model.addAttribute("itStaffList", ITStaffList);
-        return "itstaff";
+
+        String nameWithoutSpaces = name.trim();
+        if (nameWithoutSpaces.equals("")) {
+            System.out.println("*** EMPTY NAME ***");
+            return "itstaff";
+        } else if (nameWithoutSpaces.matches("\\d*")) {
+            System.out.println("*** NAME MATCHES FIGURES ***");
+            return "itstaff";
+        } else {
+            ITStaff ITStaff = new ITStaff(name);
+            ITStaffService.addNewItStaff(ITStaff);
+            List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+            model.addAttribute("itStaffList", ITStaffList);
+            return "itstaff";
+        }
     }
 
     @PostMapping("/deleteitstaff")
-    public String deleteITStaff(@RequestParam int id,
+    public String deleteITStaff(@RequestParam String id,
                                 Model model) {
-        ITStaffService.deleteITStaffById(id);
-        List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
-        model.addAttribute("itStaffList", ITStaffList);
-        return "itstaff";
+        String idWithoutSpaces = id.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("||| SUB ZERO ID |||");
+            } else {
+                ITStaffService.deleteITStaffById(idCheck);
+                List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+                model.addAttribute("itStaffList", ITStaffList);
+            }
+            return "itstaff";
+        } catch (Exception e) {
+            System.out.println("||| WRONG ID TYPE|||");
+            return "itstaff";
+        }
     }
 
     @PostMapping("/updateitstaff")
