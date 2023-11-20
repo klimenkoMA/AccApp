@@ -32,7 +32,8 @@ public class ITStaffController {
         if (nameWithoutSpaces.equals("")) {
             System.out.println("*** EMPTY NAME ***");
             return "itstaff";
-        } else if (nameWithoutSpaces.matches("\\d*")) {
+        } else if (nameWithoutSpaces.matches("\\d*") ||
+                nameWithoutSpaces.matches("\\W*")) {
             System.out.println("*** NAME MATCHES FIGURES ***");
             return "itstaff";
         } else {
@@ -65,34 +66,57 @@ public class ITStaffController {
     }
 
     @PostMapping("/updateitstaff")
-    public String updateItStaff(@RequestParam int id,
+    public String updateItStaff(@RequestParam String id,
                                 @RequestParam String name,
                                 Model model) {
-        ITStaff ITStaff = new ITStaff(id, name);
-        ITStaffService.updateItStaff(ITStaff);
-        List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
-        model.addAttribute("itStaffList", ITStaffList);
-        return "itstaff";
+        String idWithoutSpaces = id.trim();
+        String nameWithoutSpaces = name.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("||| SUB ZERO ID |||");
+            } else if (nameWithoutSpaces.matches("\\d*") ||
+                    nameWithoutSpaces.matches("\\W*")) {
+                System.out.println("*** NAME MATCHES FIGURES ***");
+
+            } else {
+                ITStaff ITStaff = new ITStaff(idCheck, name);
+                ITStaffService.updateItStaff(ITStaff);
+                List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+                model.addAttribute("itStaffList", ITStaffList);
+            }
+            return "itstaff";
+
+        } catch (Exception e) {
+            System.out.println("||| WRONG ID TYPE|||");
+            return "itstaff";
+        }
     }
 
     @PostMapping("/finditstaffbyid")
-    public String findPersonById(@RequestParam int id,
+    public String findPersonById(@RequestParam String id,
                                  Model model) {
-        List<ITStaff> ITStaffList;
-        if (id > 0) {
-            ITStaffList = ITStaffService.getITStaffById(id);
-        } else {
-            ITStaffList = ITStaffService.getAllItStaff();
+        String idWithoutSpaces = id.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("||| SUB ZERO ID |||");
+            }else{
+                List<ITStaff> ITStaffList;
+                ITStaffList = ITStaffService.getITStaffById(idCheck);
+                model.addAttribute("itStaffList", ITStaffList);
+            }
+            return "itstaff";
+        } catch (Exception e) {
+            System.out.println("||| WRONG ID TYPE|||");
+            if (idWithoutSpaces.matches("\\d*") ||
+                    idWithoutSpaces.matches("\\W*")) {
+                System.out.println("*** NAME MATCHES FIGURES ***");
+                return "itstaff";
+            }
+            List<ITStaff> ITStaffList = ITStaffService.getITStaffByName(idWithoutSpaces);
+            model.addAttribute("itStaffList", ITStaffList);
+            return "itstaff";
         }
-        model.addAttribute("itStaffList", ITStaffList);
-        return "itstaff";
-    }
-
-    @PostMapping("/finditstaffbyname")
-    public String findITById(@RequestParam String name,
-                             Model model) {
-        List<ITStaff> ITStaffList = ITStaffService.getITStaffByName(name);
-        model.addAttribute("itStaffList", ITStaffList);
-        return "itstaff";
     }
 }
