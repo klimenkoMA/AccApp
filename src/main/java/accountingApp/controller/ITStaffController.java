@@ -117,6 +117,7 @@ public class ITStaffController {
             List<ITStaff> ITStaffList = ITStaffService.getITStaffByName(idWithoutSpaces);
             model.addAttribute("itStaffList", ITStaffList);
             return "itstaff";
+
         }
     }
 }
