@@ -75,8 +75,9 @@ public class ITStaffController {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
                 System.out.println("||| SUB ZERO ID |||");
-            } else if (nameWithoutSpaces.matches("\\d*") ||
-                    nameWithoutSpaces.matches("\\W*")) {
+            } else if (nameWithoutSpaces.matches("\\d*"))
+//                    || nameWithoutSpaces.matches("\\W*"))
+            {
                 System.out.println("*** NAME MATCHES FIGURES ***");
 
             } else {
@@ -101,7 +102,7 @@ public class ITStaffController {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
                 System.out.println("||| SUB ZERO ID |||");
-            }else{
+            } else {
                 List<ITStaff> ITStaffList;
                 ITStaffList = ITStaffService.getITStaffById(idCheck);
                 model.addAttribute("itStaffList", ITStaffList);
@@ -109,8 +110,9 @@ public class ITStaffController {
             return "itstaff";
         } catch (Exception e) {
             System.out.println("||| WRONG ID TYPE|||");
-            if (idWithoutSpaces.matches("\\d*") ||
-                    idWithoutSpaces.matches("\\W*")) {
+            if (idWithoutSpaces.matches("\\d*"))
+//                    || idWithoutSpaces.matches("\\W*"))
+            {
                 System.out.println("*** NAME MATCHES FIGURES ***");
                 return "itstaff";
             }

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,14 +284,8 @@
       <workItem from="1700323030464" duration="1501000" />
       <workItem from="1700370677919" duration="8571000" />
       <workItem from="1700447949181" duration="1604000" />
-      <workItem from="1700533166608" duration="520000" />
-    </task>
-    <task id="LOCAL-00114" summary="Created moving popup in devices.html">
-      <created>1696873100018</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1696873100019</updated>
+      <workItem from="1700533166608" duration="1308000" />
+      <workItem from="1700621448800" duration="379000" />
     </task>
     <task id="LOCAL-00115" summary="Added sweet cat to popup in devices.html">
       <created>1696907822083</created>
@@ -628,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700450227968</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="Some changes">
+      <created>1700535639326</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1700535639327</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -658,7 +660,6 @@
     <MESSAGE value="Rebuilt update button in workarea.html" />
     <MESSAGE value="Rebuilt finById button in workarea.html" />
     <MESSAGE value="Rebuilt findByName button in workarea.html" />
-    <MESSAGE value="Some changes" />
     <MESSAGE value="Added check null value in DevicesController.java" />
     <MESSAGE value="Added a checking for wrong input in &quot;create&quot; and &quot;update&quot; methods in DevicesController.java" />
     <MESSAGE value="Rebuilt DB and &quot;delete&quot; method in DevicesController.java" />
@@ -673,6 +674,7 @@
     <MESSAGE value="Improved &quot;find&quot; method in EventsController.java" />
     <MESSAGE value="Improved &quot;add&quot; and &quot;delete&quot; method in ITStaffController.java" />
     <MESSAGE value="Improved &quot;update&quot; method in ITStaffController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;update&quot; method in ITStaffController.java" />
+    <MESSAGE value="Some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes" />
   </component>
 </project>
