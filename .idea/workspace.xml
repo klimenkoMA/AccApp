@@ -7,6 +7,8 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,14 +289,9 @@
       <workItem from="1700533166608" duration="1308000" />
       <workItem from="1700621448800" duration="727000" />
       <workItem from="1700669703798" duration="2509000" />
-      <workItem from="1700705749055" duration="601000" />
-    </task>
-    <task id="LOCAL-00116" summary="Tried to create popup checkbox in devices.html">
-      <created>1696993323897</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1696993323897</updated>
+      <workItem from="1700705749055" duration="1502000" />
+      <workItem from="1700758389095" duration="3274000" />
+      <workItem from="1700792185872" duration="2133000" />
     </task>
     <task id="LOCAL-00117" summary="Added popup form in devices.html">
       <created>1697090498255</created>
@@ -632,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700622194316</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="Tech commit">
+      <created>1700708463541</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1700708463542</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,7 +656,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt update button in room.html" />
     <MESSAGE value="Rebuilt findById button in room.html" />
     <MESSAGE value="Rebuilt add button in workarea.html" />
     <MESSAGE value="Some cosmetic changes" />
@@ -677,6 +680,7 @@
     <MESSAGE value="Improved &quot;update&quot; method in ITStaffController.java" />
     <MESSAGE value="Some changes" />
     <MESSAGE value="Some checks in ITStaffController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some checks in ITStaffController.java" />
+    <MESSAGE value="Tech commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
   </component>
 </project>

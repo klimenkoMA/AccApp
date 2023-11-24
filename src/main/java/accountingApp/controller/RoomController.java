@@ -26,11 +26,25 @@ public class RoomController {
     @PostMapping("/addroom")
     public String addRoom(@RequestParam String number,
                           Model model) {
-        Room room = new Room(number);
-        roomService.addNewRoom(room);
-        List<Room> roomList = roomService.findAllRoom();
-        model.addAttribute("roomList", roomList);
-        return "room";
+        String numberWithoutSpaces = number.trim();
+        try {
+            int numberCheck = Integer.parseInt(numberWithoutSpaces);
+            if (numberCheck <= 0) {
+                System.out.println("*** SUB ZERO NUMBER***");
+                return "room";
+            } else {
+                Room room = new Room(numberWithoutSpaces);
+                roomService.addNewRoom(room);
+                List<Room> roomList = roomService.findAllRoom();
+                model.addAttribute("roomList", roomList);
+            }
+            return "room";
+        } catch (Exception e) {
+            System.out.println("*** WRONG NUMBER TYPE***");
+            return "room";
+        }
+
+
     }
 
     @PostMapping("/deleteroom")
