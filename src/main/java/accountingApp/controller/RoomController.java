@@ -48,11 +48,24 @@ public class RoomController {
     }
 
     @PostMapping("/deleteroom")
-    public String deleteRoom(@RequestParam int id, Model model) {
-        roomService.deleteRoomById(id);
-        List<Room> roomList = roomService.findAllRoom();
-        model.addAttribute("roomList", roomList);
-        return "room";
+    public String deleteRoom(@RequestParam String id,
+                             Model model) {
+        String idWithoutSpaces = id.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("*** SUB ZERO ID***");
+            } else {
+                roomService.deleteRoomById(idCheck);
+                List<Room> roomList = roomService.findAllRoom();
+                model.addAttribute("roomList", roomList);
+            }
+            return "room";
+        } catch (Exception e) {
+            System.out.println("*** WRONG ID TYPE***");
+            return "room";
+        }
+
     }
 
     @PostMapping("/updateroom")
