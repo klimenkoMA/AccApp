@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,14 +291,8 @@
       <workItem from="1700669703798" duration="2509000" />
       <workItem from="1700705749055" duration="1502000" />
       <workItem from="1700758389095" duration="3274000" />
-      <workItem from="1700792185872" duration="2133000" />
-    </task>
-    <task id="LOCAL-00117" summary="Added popup form in devices.html">
-      <created>1697090498255</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1697090498256</updated>
+      <workItem from="1700792185872" duration="2607000" />
+      <workItem from="1700895040107" duration="3904000" />
     </task>
     <task id="LOCAL-00118" summary="Rebuilt popup form in devices.html">
       <created>1697129015224</created>
@@ -636,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700708463542</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="Improved &quot;add&quot; method in RoomController.java">
+      <created>1700795520842</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1700795520842</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +657,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt findById button in room.html" />
     <MESSAGE value="Rebuilt add button in workarea.html" />
     <MESSAGE value="Some cosmetic changes" />
     <MESSAGE value="Rebuilt button`s placement in room.html" />
@@ -681,6 +681,7 @@
     <MESSAGE value="Some changes" />
     <MESSAGE value="Some checks in ITStaffController.java" />
     <MESSAGE value="Tech commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
+    <MESSAGE value="Improved &quot;add&quot; method in RoomController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;add&quot; method in RoomController.java" />
   </component>
 </project>
