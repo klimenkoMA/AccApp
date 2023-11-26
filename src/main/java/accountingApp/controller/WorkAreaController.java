@@ -26,7 +26,8 @@ public class WorkAreaController {
     @PostMapping("/addworkarea")
     public String addWorkArea(@RequestParam String name,
                               Model model) {
-        WorkArea workArea = new WorkArea(name);
+        String nameWithoutSpaces = name.trim();
+        WorkArea workArea = new WorkArea(nameWithoutSpaces);
         workAreaService.addNewWorkArea(workArea);
         List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
         model.addAttribute("workAreaList", workAreaList);
@@ -34,12 +35,24 @@ public class WorkAreaController {
     }
 
     @PostMapping("/deleteworkarea")
-    public String deleteWorkArea(@RequestParam int id,
+    public String deleteWorkArea(@RequestParam String id,
                                  Model model) {
-        workAreaService.deleteWorkAreaById(id);
-        List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
-        model.addAttribute("workAreaList", workAreaList);
-        return "workarea";
+        String idWithoutSpaces = id.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("*** SUB ZERO ID***");
+            } else {
+                workAreaService.deleteWorkAreaById(idCheck);
+                List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+                model.addAttribute("workAreaList", workAreaList);
+            }
+            return "workarea";
+
+        } catch (Exception e) {
+            System.out.println("*** WRONG ID TYPE ***");
+            return "workarea";
+        }
     }
 
     @PostMapping("/updateworkarea")
@@ -68,7 +81,7 @@ public class WorkAreaController {
 
     @PostMapping("/findworkareabyname")
     public String findAreaByName(@RequestParam String name,
-                                 Model model){
+                                 Model model) {
         List<WorkArea> workAreaList = workAreaService.getWorkAreaByName(name);
         model.addAttribute("workAreaList", workAreaList);
         return "workarea";

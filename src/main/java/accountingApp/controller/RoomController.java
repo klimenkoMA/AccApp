@@ -69,26 +69,45 @@ public class RoomController {
     }
 
     @PostMapping("/updateroom")
-    public String updateRoom(@RequestParam int id,
+    public String updateRoom(@RequestParam String id,
                              @RequestParam String number,
                              Model model) {
-        Room room = new Room(id, number);
-        roomService.updateRoom(room);
-        List<Room> roomList = roomService.findAllRoom();
-        model.addAttribute("roomList", roomList);
-        return "room";
+        String idWithoutSpaces = id.trim();
+        String numberWithoutSpaces = number.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            int numberCheck = Integer.parseInt(numberWithoutSpaces);
+            if (idCheck <= 0 || numberCheck <= 0) {
+                System.out.println("*** SUB ZERO ID OR NUMBER***");
+            } else {
+                Room room = new Room(idCheck, number);
+                roomService.updateRoom(room);
+                List<Room> roomList = roomService.findAllRoom();
+                model.addAttribute("roomList", roomList);
+            }
+            return "room";
+        } catch (Exception e) {
+            System.out.println("*** WRONG ID OR NUMBER TYPE***");
+            return "room";
+        }
     }
 
     @PostMapping("/findroomyid")
-    public String findRoomById(@RequestParam int id,
+    public String findRoomById(@RequestParam String id,
                                Model model) {
-        if (id > 0) {
-            List<Room> roomList = roomService.getRoomById(id);
-            model.addAttribute("roomList", roomList);
-        } else {
-            List<Room> roomList = roomService.findAllRoom();
-            model.addAttribute("roomList", roomList);
+        String idWithoutSpaces = id.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("*** SUB ZERO ID OR NUMBER***");
+            } else {
+                List<Room> roomList = roomService.getRoomById(idCheck);
+                model.addAttribute("roomList", roomList);
+            }
+            return "room";
+        } catch (Exception e) {
+            System.out.println("*** WRONG ID OR NUMBER TYPE***");
+            return "room";
         }
-        return "room";
     }
 }

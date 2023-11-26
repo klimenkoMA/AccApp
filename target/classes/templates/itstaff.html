@@ -37,7 +37,7 @@
         </div>
     </header>
     <main class="main">
-        <table class="crud_buttons" cellpadding="40px">
+        <table class="crud_buttons" cellpadding="40px" align="center">
             <td>
 
                 <div class="popup_div">
@@ -103,7 +103,7 @@
                     <form action="/finditstaffbyid" class="popup_form" method="post">
                         <div align="center">
                             <label>
-                                <input type="text" name="id" placeholder="ID программиста">
+                                <input type="text" name="id" placeholder="Найти программиста">
                             </label>
                             <button class="button" type="submit">Найти</button>
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
@@ -113,24 +113,24 @@
                 </div>
 
             </td>
-            <td>
+<!--            <td>-->
 
-                <div class="popup_div">
-                    <input type="checkbox" id="callback5">
-                    <label class="popup_try_1_row" for="callback5">Найти по ФИО</label>
-                    <form class="popup_form" action="/finditstaffbyname" method="post">
-                        <div align="center">
-                            <label>
-                                <input type="text" name="name" placeholder="ФИО программиста">
-                            </label>
-                        </div>
-                        <button class="button" type="submit">Найти</button>
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                        <label class="close" for="callback5">+</label>
-                    </form>
-                </div>
+<!--                <div class="popup_div">-->
+<!--                    <input type="checkbox" id="callback5">-->
+<!--                    <label class="popup_try_1_row" for="callback5">Найти по ФИО</label>-->
+<!--                    <form class="popup_form" action="/finditstaffbyname" method="post">-->
+<!--                        <div align="center">-->
+<!--                            <label>-->
+<!--                                <input type="text" name="name" placeholder="ФИО программиста">-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                        <button class="button" type="submit">Найти</button>-->
+<!--                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">-->
+<!--                        <label class="close" for="callback5">+</label>-->
+<!--                    </form>-->
+<!--                </div>-->
 
-            </td>
+<!--            </td>-->
         </table>
         <div class="mid_part_3">
             <div class="db_table_border">
