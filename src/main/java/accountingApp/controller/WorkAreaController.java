@@ -56,14 +56,26 @@ public class WorkAreaController {
     }
 
     @PostMapping("/updateworkarea")
-    public String updateWorkArea(@RequestParam int id,
+    public String updateWorkArea(@RequestParam String id,
                                  @RequestParam String name,
                                  Model model) {
-        WorkArea workArea = new WorkArea(id, name);
-        workAreaService.updateWorkArea(workArea);
-        List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
-        model.addAttribute("workAreaList", workAreaList);
-        return "workarea";
+        String idWithoutSpaces = id.trim();
+        String nameWithoutSpaces = name.trim();
+        try {
+            int idCheck = Integer.parseInt(idWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("*** SUB-ZERO ID ***");
+            } else {
+                WorkArea workArea = new WorkArea(idCheck, nameWithoutSpaces);
+                workAreaService.updateWorkArea(workArea);
+                List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+                model.addAttribute("workAreaList", workAreaList);
+            }
+            return "workarea";
+        } catch (Exception e) {
+            System.out.println("*** WRONG ID TYPE ***");
+            return "workarea";
+        }
     }
 
     @PostMapping("findworkareabyid")
