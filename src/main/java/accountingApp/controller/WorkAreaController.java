@@ -78,24 +78,26 @@ public class WorkAreaController {
         }
     }
 
-    @PostMapping("findworkareabyid")
-    public String findAreaById(@RequestParam int id,
-                               Model model) {
-        List<WorkArea> workAreaList;
-        if (id > 0) {
-            workAreaList = workAreaService.getWorkAreaById(id);
-        } else {
-            workAreaList = workAreaService.findAllWorkArea();
-        }
-        model.addAttribute("workAreaList", workAreaList);
-        return "workarea";
-    }
-
     @PostMapping("/findworkareabyname")
     public String findAreaByName(@RequestParam String name,
                                  Model model) {
-        List<WorkArea> workAreaList = workAreaService.getWorkAreaByName(name);
-        model.addAttribute("workAreaList", workAreaList);
-        return "workarea";
+        String nameWithoutSpaces = name.trim();
+        try {
+            int idCheck = Integer.parseInt(nameWithoutSpaces);
+            if (idCheck <= 0) {
+                System.out.println("*** SUB-ZERO ID ***");
+            } else {
+                System.out.println("*** FOUND BY ID ***");
+                List<WorkArea> workAreaList;
+                workAreaList = workAreaService.getWorkAreaById(idCheck);
+                model.addAttribute("workAreaList", workAreaList);
+            }
+            return "workarea";
+        } catch (Exception e) {
+            System.out.println("*** FOUND BY NAME ***");
+            List<WorkArea> workAreaList = workAreaService.getWorkAreaByName(name);
+            model.addAttribute("workAreaList", workAreaList);
+            return "workarea";
+        }
     }
 }
