@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/trash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,17 +86,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -305,13 +293,8 @@
       <workItem from="1700792185872" duration="2607000" />
       <workItem from="1700895040107" duration="10900000" />
       <workItem from="1700971979377" duration="14254000" />
-    </task>
-    <task id="LOCAL-00120" summary="Rebuilt add delete and update forms in devices.html">
-      <created>1697267201048</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1697267201048</updated>
+      <workItem from="1701053893712" duration="752000" />
+      <workItem from="1701105605256" duration="2721000" />
     </task>
     <task id="LOCAL-00121" summary="Rebuilt all CRUD buttons in devices.html">
       <created>1697300469147</created>
@@ -649,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700984388455</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Improved &quot;delete&quot; method in WorkAreaController.java">
+      <created>1701054594532</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1701054594532</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -669,7 +659,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt button`s placement in room.html" />
     <MESSAGE value="Rebuilt delete button in workarea.html" />
     <MESSAGE value="Rebuilt update button in workarea.html" />
     <MESSAGE value="Rebuilt finById button in workarea.html" />
@@ -694,6 +683,7 @@
     <MESSAGE value="Improved &quot;add&quot; method in RoomController.java" />
     <MESSAGE value="Rebuilt &quot;find&quot; button from itstaff.html and improved &quot;delete&quot; method in RoomController.java" />
     <MESSAGE value="Improved &quot;update&quot; method in WorkAreaController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;update&quot; method in WorkAreaController.java" />
+    <MESSAGE value="Improved &quot;delete&quot; method in WorkAreaController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved &quot;delete&quot; method in WorkAreaController.java" />
   </component>
 </project>
