@@ -127,6 +127,7 @@ public class EventsController {
     @PostMapping("/findeventbyid")
     public String findEventsById(@RequestParam String id,
                                  Model model) {
+
         String idWithoutSpaces = id.trim();
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);

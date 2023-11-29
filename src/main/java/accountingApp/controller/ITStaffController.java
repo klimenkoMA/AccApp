@@ -32,8 +32,8 @@ public class ITStaffController {
         if (nameWithoutSpaces.equals("")) {
             System.out.println("*** EMPTY NAME ***");
             return "itstaff";
-        } else if (nameWithoutSpaces.matches("\\d*")
-                || !nameWithoutSpaces.matches("\\W*"))
+        } else if (nameWithoutSpaces.matches("\\d*"))
+//                || !nameWithoutSpaces.matches("\\W*"))
         {
 
             System.out.println("*** NAME MATCHES FIGURES ***");

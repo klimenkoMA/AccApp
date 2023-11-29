@@ -43,8 +43,6 @@ public class RoomController {
             System.out.println("*** WRONG NUMBER TYPE***");
             return "room";
         }
-
-
     }
 
     @PostMapping("/deleteroom")
