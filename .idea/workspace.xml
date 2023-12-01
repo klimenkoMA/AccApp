@@ -20,6 +20,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,6 +85,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -296,13 +308,7 @@
       <workItem from="1701140001562" duration="997000" />
       <workItem from="1701224920340" duration="1540000" />
       <workItem from="1701276149391" duration="1845000" />
-    </task>
-    <task id="LOCAL-00123" summary="Rebuilt add button in employee.html">
-      <created>1697426489024</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1697426489025</updated>
+      <workItem from="1701311451522" duration="1357000" />
     </task>
     <task id="LOCAL-00124" summary="Rebuilt delete button in employee.html">
       <created>1697511815705</created>
@@ -640,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701227319449</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Created new class Document for the second DB">
+      <created>1701313375796</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1701313375796</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +673,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt update button in workarea.html" />
     <MESSAGE value="Rebuilt finById button in workarea.html" />
     <MESSAGE value="Rebuilt findByName button in workarea.html" />
     <MESSAGE value="Added check null value in DevicesController.java" />
@@ -685,6 +697,7 @@
     <MESSAGE value="Improved &quot;delete&quot; method in WorkAreaController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in WorkAreaController.java" />
     <MESSAGE value="Tech commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
+    <MESSAGE value="Created new class Document for the second DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new class Document for the second DB" />
   </component>
 </project>
