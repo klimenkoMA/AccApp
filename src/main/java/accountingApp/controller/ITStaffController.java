@@ -33,9 +33,7 @@ public class ITStaffController {
             System.out.println("*** EMPTY NAME ***");
             return "itstaff";
         } else if (nameWithoutSpaces.matches("\\d*"))
-//                || !nameWithoutSpaces.matches("\\W*"))
         {
-
             System.out.println("*** NAME MATCHES FIGURES ***");
             return "itstaff";
         } else {
@@ -78,7 +76,6 @@ public class ITStaffController {
             if (idCheck <= 0) {
                 System.out.println("||| SUB ZERO ID |||");
             } else if (nameWithoutSpaces.matches("\\d*"))
-//                    || nameWithoutSpaces.matches("\\W*"))
             {
                 System.out.println("*** NAME MATCHES FIGURES ***");
 
@@ -113,15 +110,14 @@ public class ITStaffController {
         } catch (Exception e) {
             System.out.println("||| WRONG ID TYPE|||");
             if (idWithoutSpaces.matches("\\d*"))
-//                    || idWithoutSpaces.matches("\\W*"))
             {
                 System.out.println("*** NAME MATCHES FIGURES ***");
                 return "itstaff";
             }
             List<ITStaff> ITStaffList = ITStaffService.getITStaffByName(idWithoutSpaces);
             model.addAttribute("itStaffList", ITStaffList);
+            System.out.println("*** SUCCESSFUL ITSTAFF VIEW ***");
             return "itstaff";
-
         }
     }
 }
