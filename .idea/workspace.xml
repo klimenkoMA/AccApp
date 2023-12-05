@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,13 +87,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -322,14 +315,8 @@
       <workItem from="1701311451522" duration="1357000" />
       <workItem from="1701398259448" duration="1271000" />
       <workItem from="1701447295805" duration="17151000" />
-      <workItem from="1701527837857" duration="34825000" />
-    </task>
-    <task id="LOCAL-00127" summary="Rebuilt find by id button in employee.html">
-      <created>1697770125143</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1697770125144</updated>
+      <workItem from="1701527837857" duration="34878000" />
+      <workItem from="1701705770440" duration="4655000" />
     </task>
     <task id="LOCAL-00128" summary="Rebuilt add button in events.html">
       <created>1697861529078</created>
@@ -667,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701575349412</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Added DocumentController package">
+      <created>1701658698940</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1701658698940</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +681,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added a checking for wrong input in &quot;create&quot; and &quot;update&quot; methods in DevicesController.java" />
     <MESSAGE value="Rebuilt DB and &quot;delete&quot; method in DevicesController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in DevicesController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in EmployeeController.java" />
@@ -712,6 +705,7 @@
     <MESSAGE value="Created new repository class for new DB" />
     <MESSAGE value="Added mongoDB dependency in pom.xml" />
     <MESSAGE value="Corrected the view of some buttons in html pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected the view of some buttons in html pages" />
+    <MESSAGE value="Added DocumentController package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DocumentController package" />
   </component>
 </project>
