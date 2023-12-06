@@ -1,4 +1,4 @@
 package accountingApp.documentController;
 
-public class DocumentController {
+public class DocumentControllerClass {
 }
