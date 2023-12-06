@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,15 +89,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -316,14 +316,8 @@
       <workItem from="1701398259448" duration="1271000" />
       <workItem from="1701447295805" duration="17151000" />
       <workItem from="1701527837857" duration="34878000" />
-      <workItem from="1701705770440" duration="4655000" />
-    </task>
-    <task id="LOCAL-00128" summary="Rebuilt add button in events.html">
-      <created>1697861529078</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1697861529079</updated>
+      <workItem from="1701705770440" duration="7247000" />
+      <workItem from="1701792035273" duration="7156000" />
     </task>
     <task id="LOCAL-00129" summary="Rebuilt delete button in events.html">
       <created>1697954915676</created>
@@ -661,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701658698940</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="Added documentClass package">
+      <created>1701743169746</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1701743169746</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +682,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt DB and &quot;delete&quot; method in DevicesController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in DevicesController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;delete&quot; method in EmployeeController.java" />
@@ -706,6 +706,7 @@
     <MESSAGE value="Added mongoDB dependency in pom.xml" />
     <MESSAGE value="Corrected the view of some buttons in html pages" />
     <MESSAGE value="Added DocumentController package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DocumentController package" />
+    <MESSAGE value="Added documentClass package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added documentClass package" />
   </component>
 </project>

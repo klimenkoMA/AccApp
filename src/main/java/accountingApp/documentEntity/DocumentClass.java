@@ -1,4 +1,4 @@
 package accountingApp.documentEntity;
 
-public class Document {
+public class DocumentClass {
 }
