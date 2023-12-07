@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,17 +87,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -317,14 +304,8 @@
       <workItem from="1701447295805" duration="17151000" />
       <workItem from="1701527837857" duration="34878000" />
       <workItem from="1701705770440" duration="7247000" />
-      <workItem from="1701792035273" duration="7156000" />
-    </task>
-    <task id="LOCAL-00129" summary="Rebuilt delete button in events.html">
-      <created>1697954915676</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1697954915677</updated>
+      <workItem from="1701792035273" duration="9572000" />
+      <workItem from="1701882133282" duration="9971000" />
     </task>
     <task id="LOCAL-00130" summary="Rebuilt update button in events.html">
       <created>1698078789001</created>
@@ -662,7 +643,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701743169746</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="Renamed all mongoDB classes">
+      <created>1701829765345</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1701829765346</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +670,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improved &quot;find&quot; method in DevicesController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;delete&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;update&quot; method in EmployeeController.java" />
@@ -707,6 +694,7 @@
     <MESSAGE value="Corrected the view of some buttons in html pages" />
     <MESSAGE value="Added DocumentController package" />
     <MESSAGE value="Added documentClass package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added documentClass package" />
+    <MESSAGE value="Renamed all mongoDB classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed all mongoDB classes" />
   </component>
 </project>

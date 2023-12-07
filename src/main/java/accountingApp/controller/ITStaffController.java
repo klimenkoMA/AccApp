@@ -32,8 +32,7 @@ public class ITStaffController {
         if (nameWithoutSpaces.equals("")) {
             System.out.println("*** EMPTY NAME ***");
             return "itstaff";
-        } else if (nameWithoutSpaces.matches("\\d*"))
-        {
+        } else if (nameWithoutSpaces.matches("\\d*")) {
             System.out.println("*** NAME MATCHES FIGURES ***");
             return "itstaff";
         } else {
@@ -75,8 +74,7 @@ public class ITStaffController {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
                 System.out.println("||| SUB ZERO ID |||");
-            } else if (nameWithoutSpaces.matches("\\d*"))
-            {
+            } else if (nameWithoutSpaces.matches("\\d*")) {
                 System.out.println("*** NAME MATCHES FIGURES ***");
 
             } else {
@@ -109,8 +107,7 @@ public class ITStaffController {
             return "itstaff";
         } catch (Exception e) {
             System.out.println("||| WRONG ID TYPE|||");
-            if (idWithoutSpaces.matches("\\d*"))
-            {
+            if (idWithoutSpaces.matches("\\d*")) {
                 System.out.println("*** NAME MATCHES FIGURES ***");
                 return "itstaff";
             }
@@ -121,3 +118,4 @@ public class ITStaffController {
         }
     }
 }
+
