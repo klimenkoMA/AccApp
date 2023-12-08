@@ -42,4 +42,12 @@ public class DocumentClass {
     public void setId(ObjectId id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "DocumentClass{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

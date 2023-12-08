@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,14 +305,9 @@
       <workItem from="1701527837857" duration="34878000" />
       <workItem from="1701705770440" duration="7247000" />
       <workItem from="1701792035273" duration="9572000" />
-      <workItem from="1701882133282" duration="9971000" />
-    </task>
-    <task id="LOCAL-00130" summary="Rebuilt update button in events.html">
-      <created>1698078789001</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1698078789002</updated>
+      <workItem from="1701882133282" duration="10324000" />
+      <workItem from="1701965998801" duration="4142000" />
+      <workItem from="1702002174815" duration="1196000" />
     </task>
     <task id="LOCAL-00131" summary="Rebuilt find button in events.html">
       <created>1698112928993</created>
@@ -650,7 +645,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701829765346</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="Created fields in DocumentClass.java">
+      <created>1701919328899</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1701919328900</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +672,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improved &quot;add&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;delete&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;update&quot; method in EmployeeController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in EmployeeController.java" />
@@ -695,6 +696,7 @@
     <MESSAGE value="Added DocumentController package" />
     <MESSAGE value="Added documentClass package" />
     <MESSAGE value="Renamed all mongoDB classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed all mongoDB classes" />
+    <MESSAGE value="Created fields in DocumentClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created fields in DocumentClass.java" />
   </component>
 </project>
