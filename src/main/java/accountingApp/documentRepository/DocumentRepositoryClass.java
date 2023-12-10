@@ -9,4 +9,6 @@ public interface DocumentRepositoryClass extends MongoRepository <DocumentClass,
     @Query ("{'name' : {$regex: ?0, $options: 'i' }}")
     DocumentClass findByName (String name);
 
+
+
 }

@@ -12,6 +12,10 @@ public class DocumentServiceClass {
 
     public void addDocument(DocumentClass doc){
 
+
+    }
+
+    public void deleteDocument(DocumentClass doc){
+
     }
 }
-
