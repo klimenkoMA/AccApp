@@ -10,12 +10,16 @@ public class DocumentServiceClass {
     @Autowired
     DocumentRepositoryClass documentRepositoryClass;
 
-    public void addDocument(DocumentClass doc){
+    public void addDocument(DocumentClass doc) {
 
 
     }
 
-    public void deleteDocument(DocumentClass doc){
+    public void deleteDocument(DocumentClass doc) {
+
+    }
+
+    public void findDocument(DocumentClass doc){
 
     }
 }
