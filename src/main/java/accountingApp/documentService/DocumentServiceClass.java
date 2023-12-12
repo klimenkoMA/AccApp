@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class DocumentServiceClass {
 
+
     @Autowired
     DocumentRepositoryClass documentRepositoryClass;
 
     public void addDocument(DocumentClass doc) {
-
 
     }
 
@@ -22,4 +22,9 @@ public class DocumentServiceClass {
     public void findDocument(DocumentClass doc){
 
     }
+
+    public void updateDocument(DocumentClass doc){
+
+    }
+
 }
