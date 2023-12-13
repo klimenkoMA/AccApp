@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -310,14 +311,9 @@
       <workItem from="1702002174815" duration="1237000" />
       <workItem from="1702047940679" duration="32306000" />
       <workItem from="1702187082419" duration="22212000" />
-      <workItem from="1702260954317" duration="11814000" />
-    </task>
-    <task id="LOCAL-00135" summary="Rebuilt findByID button in itstaff.html">
-      <created>1698475916211</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1698475916211</updated>
+      <workItem from="1702260954317" duration="11989000" />
+      <workItem from="1702435908982" duration="1659000" />
+      <workItem from="1702485543777" duration="2616000" />
     </task>
     <task id="LOCAL-00136" summary="Rebuilt findByFio button in itstaff.html">
       <created>1698570413636</created>
@@ -655,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702313695920</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Added updateDocument method in DocumentServiceClass.java">
+      <created>1702349784318</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1702349784318</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +678,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Some changes in DevicesController.java and EmployeeController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in EventsController.java" />
     <MESSAGE value="Improved &quot;delete&quot; and &quot;update&quot; methods in EventsController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in EventsController.java" />
@@ -700,6 +702,7 @@
     <MESSAGE value="Tech commit" />
     <MESSAGE value="Added deleteDocument method in DocumentServiceClass.java" />
     <MESSAGE value="Added findDocument method in DocumentServiceClass.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added findDocument method in DocumentServiceClass.java" />
+    <MESSAGE value="Added updateDocument method in DocumentServiceClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added updateDocument method in DocumentServiceClass.java" />
   </component>
 </project>
