@@ -11,4 +11,8 @@ public class DocumentControllerClass {
     public String addNewDocument(String doc){
         return "page";
     }
+
+    public String deleteSomeDocument(String doc){
+        return "page";
+    }
 }
