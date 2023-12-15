@@ -313,14 +313,8 @@
       <workItem from="1702260954317" duration="11989000" />
       <workItem from="1702435908982" duration="1659000" />
       <workItem from="1702485543777" duration="2945000" />
-      <workItem from="1702520068841" duration="1737000" />
-    </task>
-    <task id="LOCAL-00137" summary="Rebuilt add button in room.html">
-      <created>1698634311684</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1698634311685</updated>
+      <workItem from="1702520068841" duration="3052000" />
+      <workItem from="1702571075596" duration="5477000" />
     </task>
     <task id="LOCAL-00138" summary="Rebuilt delete button in room.html">
       <created>1698721691993</created>
@@ -658,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702490779428</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="Added delete method in DocumentControllerClass.java">
+      <created>1702523239879</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1702523239879</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +679,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improved &quot;delete&quot; and &quot;update&quot; methods in EventsController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in EventsController.java" />
     <MESSAGE value="Improved &quot;add&quot; and &quot;delete&quot; method in ITStaffController.java" />
     <MESSAGE value="Improved &quot;update&quot; method in ITStaffController.java" />
@@ -703,6 +703,7 @@
     <MESSAGE value="Added findDocument method in DocumentServiceClass.java" />
     <MESSAGE value="Added updateDocument method in DocumentServiceClass.java" />
     <MESSAGE value="Created add method in DocumentControllerClass" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created add method in DocumentControllerClass" />
+    <MESSAGE value="Added delete method in DocumentControllerClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added delete method in DocumentControllerClass.java" />
   </component>
 </project>
