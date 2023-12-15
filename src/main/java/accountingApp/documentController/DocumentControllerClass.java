@@ -8,11 +8,21 @@ public class DocumentControllerClass {
     @Autowired
     DocumentServiceClass documentServiceClass;
 
-    public String addNewDocument(String doc){
+    public String addNewDocument(String doc) {
         return "page";
     }
 
-    public String deleteSomeDocument(String doc){
+    public String deleteSomeDocument(String doc) {
+        return "page";
+
+    }
+
+    public String updateSomeDocument(String doc) {
+
         return "page";
     }
+
+
+
+
 }
