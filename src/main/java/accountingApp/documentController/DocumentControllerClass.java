@@ -22,7 +22,8 @@ public class DocumentControllerClass {
         return "page";
     }
 
-
-
+    public String findSomeDocument(String doc) {
+        return "page";
+    }
 
 }
