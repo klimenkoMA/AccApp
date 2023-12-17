@@ -1,7 +1,7 @@
 package accountingApp.documentController;
 
-import accountingApp.documentService.DocumentServiceClass;
-import org.springframework.beans.factory.annotation.Autowired;
+        import accountingApp.documentService.DocumentServiceClass;
+        import org.springframework.beans.factory.annotation.Autowired;
 
 public class DocumentControllerClass {
 
