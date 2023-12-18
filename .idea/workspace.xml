@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/trash" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/trash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +89,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -318,14 +329,8 @@
       <workItem from="1702520068841" duration="3052000" />
       <workItem from="1702571075596" duration="5724000" />
       <workItem from="1702647232238" duration="12385000" />
-      <workItem from="1702701893280" duration="41547000" />
-    </task>
-    <task id="LOCAL-00140" summary="Rebuilt findById button in room.html">
-      <created>1698895303347</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1698895303348</updated>
+      <workItem from="1702701893280" duration="58831000" />
+      <workItem from="1702865991649" duration="3322000" />
     </task>
     <task id="LOCAL-00141" summary="Rebuilt add button in workarea.html">
       <created>1698981565059</created>
@@ -663,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702713283667</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="Rebuilt pom.xml">
+      <created>1702805917674</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1702805917674</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +695,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improved &quot;update&quot; method in ITStaffController.java" />
     <MESSAGE value="Some changes" />
     <MESSAGE value="Some checks in ITStaffController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in RoomController.java" />
@@ -708,6 +719,7 @@
     <MESSAGE value="Added delete method in DocumentControllerClass.java" />
     <MESSAGE value="Added update method in DocumentControllerClass.java" />
     <MESSAGE value="Added find method in DocumentControllerClass.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added find method in DocumentControllerClass.java" />
+    <MESSAGE value="Rebuilt pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt pom.xml" />
   </component>
 </project>
