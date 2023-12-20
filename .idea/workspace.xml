@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,17 +88,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -329,14 +318,8 @@
       <workItem from="1702571075596" duration="5724000" />
       <workItem from="1702647232238" duration="12385000" />
       <workItem from="1702701893280" duration="58831000" />
-      <workItem from="1702865991649" duration="12292000" />
-    </task>
-    <task id="LOCAL-00142" summary="Some cosmetic changes">
-      <created>1699067374216</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1699067374216</updated>
+      <workItem from="1702865991649" duration="12932000" />
+      <workItem from="1703093524931" duration="2353000" />
     </task>
     <task id="LOCAL-00143" summary="Rebuilt button`s placement in room.html">
       <created>1699121365834</created>
@@ -674,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702915393942</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="Added new DB in application.properties">
+      <created>1702953658880</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1702953658880</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -694,7 +684,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Some checks in ITStaffController.java" />
     <MESSAGE value="Improved &quot;add&quot; method in RoomController.java" />
     <MESSAGE value="Rebuilt &quot;find&quot; button from itstaff.html and improved &quot;delete&quot; method in RoomController.java" />
     <MESSAGE value="Improved &quot;update&quot; method in WorkAreaController.java" />
@@ -719,6 +708,7 @@
     <MESSAGE value="Added find method in DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt pom.xml" />
     <MESSAGE value="Changed DB name in application.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed DB name in application.properties" />
+    <MESSAGE value="Added new DB in application.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new DB in application.properties" />
   </component>
 </project>

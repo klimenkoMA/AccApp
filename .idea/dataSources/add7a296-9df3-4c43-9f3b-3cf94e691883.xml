@@ -384,6 +384,7 @@
     </role>
     <table id="70" parent="53" name="EMPLOYEE">
       <ObjectId>453576654</ObjectId>
+      <Outdated>1</Outdated>
       <CreatedTimestamp>2023-07-21.00:57:31.560</CreatedTimestamp>
       <ModifiedTimestamp>2023-07-21.00:59:51.027</ModifiedTimestamp>
     </table>
