@@ -27,5 +27,9 @@ public class DocumentServiceClass {
 
     }
 
+    public void findDocumentByName(String name){
+
+    }
+
 
 }

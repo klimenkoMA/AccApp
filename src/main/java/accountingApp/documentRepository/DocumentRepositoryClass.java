@@ -11,4 +11,5 @@ public interface DocumentRepositoryClass extends MongoRepository <DocumentClass,
 
 
 
+
 }
