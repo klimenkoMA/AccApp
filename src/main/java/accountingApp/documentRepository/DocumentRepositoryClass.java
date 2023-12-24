@@ -10,4 +10,5 @@ public interface DocumentRepositoryClass extends MongoRepository <DocumentClass,
     DocumentClass findByName (String name);
 
     DocumentClass findAll(String name);
+
 }
