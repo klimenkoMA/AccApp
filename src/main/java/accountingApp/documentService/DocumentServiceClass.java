@@ -7,6 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class DocumentServiceClass {
 
+    /*
+    Класс для реализации основной логики методов CRUD.
+    Прослойка между репозиторием и контроллером.
+     */
+
 
     @Autowired
     DocumentRepositoryClass documentRepositoryClass;
