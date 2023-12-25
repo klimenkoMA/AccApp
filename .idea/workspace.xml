@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,14 +323,8 @@
       <workItem from="1703178639566" duration="1186000" />
       <workItem from="1703211676671" duration="1271000" />
       <workItem from="1703310810249" duration="6165000" />
-      <workItem from="1703398479564" duration="5548000" />
-    </task>
-    <task id="LOCAL-00146" summary="Rebuilt finById button in workarea.html">
-      <created>1699326580146</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1699326580148</updated>
+      <workItem from="1703398479564" duration="5908000" />
+      <workItem from="1703470593640" duration="1977000" />
     </task>
     <task id="LOCAL-00147" summary="Rebuilt findByName button in workarea.html">
       <created>1699412256074</created>
@@ -668,7 +662,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703351622177</updated>
     </task>
-    <option name="localTasksCounter" value="195" />
+    <task id="LOCAL-00195" summary="Added some comments in DocumentServiceClass.java">
+      <created>1703440644831</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1703440644832</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +689,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improved &quot;delete&quot; method in WorkAreaController.java" />
     <MESSAGE value="Improved &quot;find&quot; method in WorkAreaController.java" />
     <MESSAGE value="Created new class Document for the second DB" />
     <MESSAGE value="Created new repository class for new DB" />
@@ -713,6 +713,7 @@
     <MESSAGE value="Rebuilt application.properties" />
     <MESSAGE value="Added findByName method in DocumentServiceClass.java" />
     <MESSAGE value="Added findAll method in DocumentRepositoryClass.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added findAll method in DocumentRepositoryClass.java" />
+    <MESSAGE value="Added some comments in DocumentServiceClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some comments in DocumentServiceClass.java" />
   </component>
 </project>
