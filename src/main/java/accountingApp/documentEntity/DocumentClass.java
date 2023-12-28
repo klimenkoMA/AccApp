@@ -3,12 +3,11 @@ package accountingApp.documentEntity;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-/*
-Класс-объект, описывающий документ, который будет храниться в БД
- */
-
 import javax.persistence.Id;
+
+/**
+ * Класс-объект, описывающий документ, который будет храниться в БД
+ */
 
 @Document
 public class DocumentClass {
