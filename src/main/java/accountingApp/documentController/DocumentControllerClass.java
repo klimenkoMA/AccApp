@@ -2,6 +2,7 @@ package accountingApp.documentController;
 
         import accountingApp.documentService.DocumentServiceClass;
         import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * Класс для взаимодействия со слоем VIEW, непосредственно HTML-страницами.
@@ -15,6 +16,11 @@ public class DocumentControllerClass {
 
     @Autowired
     DocumentServiceClass documentServiceClass;
+
+    @GetMapping
+    public String getDocument(String doc){
+        return "page";
+    }
 
     public String addNewDocument(String doc) {
         return "page";
