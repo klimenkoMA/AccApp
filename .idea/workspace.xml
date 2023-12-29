@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/trash" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/trash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,14 +328,8 @@
       <workItem from="1703470593640" duration="1977000" />
       <workItem from="1703528266823" duration="104000" />
       <workItem from="1703607767117" duration="2316000" />
-      <workItem from="1703727495585" duration="409000" />
-    </task>
-    <task id="LOCAL-00150" summary="Added a checking for wrong input in &quot;create&quot; and &quot;update&quot; methods in DevicesController.java">
-      <created>1699697620316</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1699697620317</updated>
+      <workItem from="1703727495585" duration="1650000" />
+      <workItem from="1703826394078" duration="7695000" />
     </task>
     <task id="LOCAL-00151" summary="Rebuilt DB and &quot;delete&quot; method in DevicesController.java">
       <created>1699794911029</created>
@@ -672,7 +667,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703644773266</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="Some changes in DocumentClass.java">
+      <created>1703727953961</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1703727953961</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +694,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added mongoDB dependency in pom.xml" />
     <MESSAGE value="Corrected the view of some buttons in html pages" />
     <MESSAGE value="Added DocumentController package" />
     <MESSAGE value="Added documentClass package" />
@@ -717,6 +718,7 @@
     <MESSAGE value="Added comments in DocumentClass.java" />
     <MESSAGE value="Added comment in DocumentRepositoryClass.java" />
     <MESSAGE value="Added comment in DocumentControllerClass.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comment in DocumentControllerClass.java" />
+    <MESSAGE value="Some changes in DocumentClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes in DocumentClass.java" />
   </component>
 </project>
