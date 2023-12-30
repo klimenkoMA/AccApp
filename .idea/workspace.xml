@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/trash" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/trash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,14 +330,8 @@
       <workItem from="1703528266823" duration="104000" />
       <workItem from="1703607767117" duration="2316000" />
       <workItem from="1703727495585" duration="1650000" />
-      <workItem from="1703826394078" duration="7695000" />
-    </task>
-    <task id="LOCAL-00151" summary="Rebuilt DB and &quot;delete&quot; method in DevicesController.java">
-      <created>1699794911029</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1699794911029</updated>
+      <workItem from="1703826394078" duration="9238000" />
+      <workItem from="1703910669722" duration="1515000" />
     </task>
     <task id="LOCAL-00152" summary="Improved &quot;find&quot; method in DevicesController.java">
       <created>1699901503171</created>
@@ -674,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703727953961</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <task id="LOCAL-00200" summary="Added getDocument method in DocumentControllerClass.java">
+      <created>1703873860718</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1703873860718</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -694,7 +696,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrected the view of some buttons in html pages" />
     <MESSAGE value="Added DocumentController package" />
     <MESSAGE value="Added documentClass package" />
     <MESSAGE value="Renamed all mongoDB classes" />
@@ -719,6 +720,7 @@
     <MESSAGE value="Added comment in DocumentRepositoryClass.java" />
     <MESSAGE value="Added comment in DocumentControllerClass.java" />
     <MESSAGE value="Some changes in DocumentClass.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes in DocumentClass.java" />
+    <MESSAGE value="Added getDocument method in DocumentControllerClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getDocument method in DocumentControllerClass.java" />
   </component>
 </project>
