@@ -1,11 +1,10 @@
 package accountingApp.documentController;
 
-        import accountingApp.documentService.DocumentServiceClass;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.stereotype.Controller;
-        import org.springframework.web.bind.annotation.GetMapping;
-        import org.springframework.web.bind.annotation.PostMapping;
-        import org.springframework.web.bind.annotation.RequestMapping;
+import accountingApp.documentService.DocumentServiceClass;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
 
 /**
  * Класс для взаимодействия со слоем VIEW, непосредственно HTML-страницами.
@@ -22,7 +21,7 @@ public class DocumentControllerClass {
     DocumentServiceClass documentServiceClass;
 
     @GetMapping
-    public String getDocument(String doc){
+    public String getDocument(String doc) {
         return "page";
     }
 

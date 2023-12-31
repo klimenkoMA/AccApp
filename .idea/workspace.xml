@@ -331,14 +331,8 @@
       <workItem from="1703607767117" duration="2316000" />
       <workItem from="1703727495585" duration="1650000" />
       <workItem from="1703826394078" duration="9238000" />
-      <workItem from="1703910669722" duration="1515000" />
-    </task>
-    <task id="LOCAL-00152" summary="Improved &quot;find&quot; method in DevicesController.java">
-      <created>1699901503171</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1699901503172</updated>
+      <workItem from="1703910669722" duration="7952000" />
+      <workItem from="1703996673753" duration="1298000" />
     </task>
     <task id="LOCAL-00153" summary="Improved &quot;add&quot; method in EmployeeController.java">
       <created>1699928745312</created>
@@ -676,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703873860718</updated>
     </task>
-    <option name="localTasksCounter" value="201" />
+    <task id="LOCAL-00201" summary="Added some comments">
+      <created>1703912997816</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1703912997817</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +697,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added DocumentController package" />
     <MESSAGE value="Added documentClass package" />
     <MESSAGE value="Renamed all mongoDB classes" />
     <MESSAGE value="Created fields in DocumentClass.java" />
@@ -721,6 +721,7 @@
     <MESSAGE value="Added comment in DocumentControllerClass.java" />
     <MESSAGE value="Some changes in DocumentClass.java" />
     <MESSAGE value="Added getDocument method in DocumentControllerClass.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getDocument method in DocumentControllerClass.java" />
+    <MESSAGE value="Added some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some comments" />
   </component>
 </project>
