@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
+/**
+ * Класс для переадресации введенных пользователем данных в БД, получение ответа
+ * из БД, передача ответа для отображения на веб-странице
+ */
 @RequestMapping
 @Controller
 public class DevicesController {
