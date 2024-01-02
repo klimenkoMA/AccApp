@@ -6,6 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Интерфейс для связи с БД
+ */
+
 @Repository
 public interface DevicesRepository extends JpaRepository<Devices, Integer> {
     @Override
