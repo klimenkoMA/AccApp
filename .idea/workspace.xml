@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/trash" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/trash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,13 +332,8 @@
       <workItem from="1703826394078" duration="9238000" />
       <workItem from="1703910669722" duration="7952000" />
       <workItem from="1703996673753" duration="3229000" />
-    </task>
-    <task id="LOCAL-00154" summary="Improved &quot;delete&quot; method in EmployeeController.java">
-      <created>1700017413326</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1700017413327</updated>
+      <workItem from="1704126187699" duration="1525000" />
+      <workItem from="1704190786911" duration="2033000" />
     </task>
     <task id="LOCAL-00155" summary="Improved &quot;update&quot; method in EmployeeController.java">
       <created>1700101726924</created>
@@ -674,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704000765536</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="Another comment in DevicesController.java">
+      <created>1704127821956</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1704127821957</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -694,7 +698,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Renamed all mongoDB classes" />
     <MESSAGE value="Created fields in DocumentClass.java" />
     <MESSAGE value="Added toString() method in DocumentClass.java" />
     <MESSAGE value="Tech commit" />
@@ -719,6 +722,7 @@
     <MESSAGE value="Added getDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Added some comments" />
     <MESSAGE value="Some new comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some new comments" />
+    <MESSAGE value="Another comment in DevicesController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Another comment in DevicesController.java" />
   </component>
 </project>
