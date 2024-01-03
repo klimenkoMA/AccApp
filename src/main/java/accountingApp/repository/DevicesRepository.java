@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Интерфейс для связи с БД
+ * Интерфейс для связи с таблицей оборудования (Devices) в БД
  */
 
 @Repository
