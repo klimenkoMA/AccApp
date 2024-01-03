@@ -6,6 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Интерфейс для связи с таблицей сотрудников (Employees) в БД
+ */
+
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
