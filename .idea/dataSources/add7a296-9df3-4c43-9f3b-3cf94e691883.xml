@@ -96,7 +96,6 @@
     </database>
     <database id="13" parent="1" name="RecDB">
       <ObjectId>8</ObjectId>
-      <Collation>Cyrillic_General_CI_AS</Collation>
     </database>
     <database id="14" parent="1" name="ShiloDB">
       <ObjectId>15</ObjectId>
@@ -293,7 +292,7 @@
 341576255|||0|execute|G
 341576255|||2|execute|D
 </Grants>
-      <IntrospectionTimestamp>2023-11-12.18:36:56.107</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-01-03.22:57:02.207</IntrospectionTimestamp>
       <Current>1</Current>
       <DescriptionsCheckSum>13001862419</DescriptionsCheckSum>
     </schema>
@@ -383,37 +382,51 @@
       <AuthType>none</AuthType>
     </role>
     <table id="70" parent="53" name="EMPLOYEE">
-      <ObjectId>453576654</ObjectId>
-      <Outdated>1</Outdated>
-      <CreatedTimestamp>2023-07-21.00:57:31.560</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-21.00:59:51.027</ModifiedTimestamp>
+      <ObjectId>1157579162</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:14:43.300</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:14:43.897</ModifiedTimestamp>
     </table>
     <table id="71" parent="53" name="EVENTS">
-      <ObjectId>773577794</ObjectId>
-      <CreatedTimestamp>2023-08-05.20:06:48.730</CreatedTimestamp>
-      <ModifiedTimestamp>2023-08-05.20:06:49.090</ModifiedTimestamp>
+      <ObjectId>1269579561</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:16:44.423</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:16:44.770</ModifiedTimestamp>
     </table>
     <table id="72" parent="53" name="ITSTAFF">
-      <ObjectId>2137058649</ObjectId>
-      <CreatedTimestamp>2023-07-09.23:27:25.473</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-26.23:56:15.683</ModifiedTimestamp>
+      <ObjectId>1349579846</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:17:23.440</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:17:24.230</ModifiedTimestamp>
     </table>
     <table id="73" parent="53" name="ROOM">
-      <ObjectId>53575229</ObjectId>
-      <CreatedTimestamp>2023-07-09.23:29:29.507</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-09.23:29:29.517</ModifiedTimestamp>
+      <ObjectId>1397580017</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:17:59.463</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:17:59.583</ModifiedTimestamp>
     </table>
     <table id="74" parent="53" name="WORK_AREA">
-      <ObjectId>21575115</ObjectId>
-      <CreatedTimestamp>2023-07-09.23:28:10.283</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-19.00:09:32.263</ModifiedTimestamp>
+      <ObjectId>1429580131</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:18:25.080</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:18:25.193</ModifiedTimestamp>
     </table>
     <table id="75" parent="53" name="devices">
       <ObjectId>613577224</ObjectId>
       <CreatedTimestamp>2023-07-27.00:14:12.650</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-27.00:14:12.747</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-12-18.22:01:01.947</ModifiedTimestamp>
     </table>
-    <routine id="76" parent="53" name="fn_diagramobjects">
+    <table id="76" parent="53" name="devices_events">
+      <ObjectId>805577908</ObjectId>
+      <CreatedTimestamp>2023-12-18.22:01:01.180</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:16:44.773</ModifiedTimestamp>
+    </table>
+    <table id="77" parent="53" name="employee_events">
+      <ObjectId>837578022</ObjectId>
+      <CreatedTimestamp>2023-12-18.22:01:01.670</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:16:44.763</ModifiedTimestamp>
+    </table>
+    <table id="78" parent="53" name="itstaff_events">
+      <ObjectId>885578193</ObjectId>
+      <CreatedTimestamp>2023-12-18.22:01:01.707</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:17:24.233</ModifiedTimestamp>
+    </table>
+    <routine id="79" parent="53" name="fn_diagramobjects">
       <ObjectId>341576255</ObjectId>
       <SourceTextLength>1647</SourceTextLength>
       <ExtendedProperties>microsoft_database_tools_support
@@ -423,7 +436,7 @@ int</ExtendedProperties>
       <ModifiedTimestamp>2023-07-09.23:32:00.187</ModifiedTimestamp>
       <RoutineType>scalar-fun</RoutineType>
     </routine>
-    <routine id="77" parent="53" name="sp_alterdiagram">
+    <routine id="80" parent="53" name="sp_alterdiagram">
       <ObjectId>309576141</ObjectId>
       <SourceTextLength>1501</SourceTextLength>
       <ExtendedProperties>microsoft_database_tools_support
@@ -433,7 +446,7 @@ int</ExtendedProperties>
       <ModifiedTimestamp>2023-07-09.23:32:00.180</ModifiedTimestamp>
       <RoutineType>proc</RoutineType>
     </routine>
-    <routine id="78" parent="53" name="sp_creatediagram">
+    <routine id="81" parent="53" name="sp_creatediagram">
       <ObjectId>277576027</ObjectId>
       <SourceTextLength>1223</SourceTextLength>
       <ExtendedProperties>microsoft_database_tools_support
@@ -443,7 +456,7 @@ int</ExtendedProperties>
       <ModifiedTimestamp>2023-07-09.23:32:00.170</ModifiedTimestamp>
       <RoutineType>proc</RoutineType>
     </routine>
-    <routine id="79" parent="53" name="sp_dropdiagram">
+    <routine id="82" parent="53" name="sp_dropdiagram">
       <ObjectId>325576198</ObjectId>
       <SourceTextLength>896</SourceTextLength>
       <ExtendedProperties>microsoft_database_tools_support
@@ -453,7 +466,7 @@ int</ExtendedProperties>
       <ModifiedTimestamp>2023-07-09.23:32:00.180</ModifiedTimestamp>
       <RoutineType>proc</RoutineType>
     </routine>
-    <routine id="80" parent="53" name="sp_helpdiagramdefinition">
+    <routine id="83" parent="53" name="sp_helpdiagramdefinition">
       <ObjectId>261575970</ObjectId>
       <SourceTextLength>921</SourceTextLength>
       <ExtendedProperties>microsoft_database_tools_support
@@ -463,7 +476,7 @@ int</ExtendedProperties>
       <ModifiedTimestamp>2023-07-09.23:32:00.150</ModifiedTimestamp>
       <RoutineType>proc</RoutineType>
     </routine>
-    <routine id="81" parent="53" name="sp_helpdiagrams">
+    <routine id="84" parent="53" name="sp_helpdiagrams">
       <ObjectId>245575913</ObjectId>
       <SourceTextLength>658</SourceTextLength>
       <ExtendedProperties>microsoft_database_tools_support
@@ -473,7 +486,7 @@ int</ExtendedProperties>
       <ModifiedTimestamp>2023-07-09.23:32:00.147</ModifiedTimestamp>
       <RoutineType>proc</RoutineType>
     </routine>
-    <routine id="82" parent="53" name="sp_renamediagram">
+    <routine id="85" parent="53" name="sp_renamediagram">
       <ObjectId>293576084</ObjectId>
       <SourceTextLength>1721</SourceTextLength>
       <ExtendedProperties>microsoft_database_tools_support
@@ -483,7 +496,7 @@ int</ExtendedProperties>
       <ModifiedTimestamp>2023-07-09.23:32:00.177</ModifiedTimestamp>
       <RoutineType>proc</RoutineType>
     </routine>
-    <routine id="83" parent="53" name="sp_upgraddiagrams">
+    <routine id="86" parent="53" name="sp_upgraddiagrams">
       <ObjectId>149575571</ObjectId>
       <SourceTextLength>1463</SourceTextLength>
       <ExtendedProperties>microsoft_database_tools_support
@@ -493,174 +506,183 @@ int</ExtendedProperties>
       <ModifiedTimestamp>2023-07-09.23:32:00.113</ModifiedTimestamp>
       <RoutineType>proc</RoutineType>
     </routine>
-    <column id="84" parent="70" name="id">
-      <Position>1</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="85" parent="70" name="fio">
-      <Position>2</Position>
-      <DataType>nvarchar(max)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="86" parent="70" name="dborn">
-      <Position>3</Position>
-      <DataType>nvarchar(max)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="87" parent="70" name="workarea">
-      <Position>4</Position>
-      <DataType>nvarchar(max)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="88" parent="70" name="room">
-      <Position>5</Position>
-      <DataType>nvarchar(max)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="89" parent="70" name="PK_EMPLOYEE">
-      <Position>1</Position>
-      <ColNames>id</ColNames>
-      <Clustering>1</Clustering>
-      <Unique>1</Unique>
-    </index>
-    <key id="90" parent="70" name="PK_EMPLOYEE">
-      <ObjectId>469576711</ObjectId>
-      <CreatedTimestamp>2023-07-21.00:57:31.683</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-21.00:57:31.683</ModifiedTimestamp>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>PK_EMPLOYEE</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="91" parent="71" name="id">
-      <Position>1</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="92" parent="71" name="date">
-      <Position>2</Position>
-      <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="93" parent="71" name="deviceid">
-      <Position>3</Position>
-      <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="94" parent="71" name="employeeid">
-      <Position>4</Position>
-      <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="95" parent="71" name="itstaffid">
-      <Position>5</Position>
-      <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="96" parent="71" name="PK_EVENTS">
-      <Position>1</Position>
-      <ColNames>id</ColNames>
-      <Clustering>1</Clustering>
-      <Unique>1</Unique>
-    </index>
-    <key id="97" parent="71" name="PK_EVENTS">
-      <ObjectId>789577851</ObjectId>
-      <CreatedTimestamp>2023-08-05.20:06:49.090</CreatedTimestamp>
-      <ModifiedTimestamp>2023-08-05.20:06:49.090</ModifiedTimestamp>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>PK_EVENTS</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="98" parent="72" name="id">
-      <Position>1</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="99" parent="72" name="name">
-      <Position>2</Position>
-      <DataType>nvarchar(50 char)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="100" parent="72" name="PK_IT_STAFF">
-      <Position>1</Position>
-      <ColNames>id</ColNames>
-      <Clustering>1</Clustering>
-      <Unique>1</Unique>
-    </index>
-    <key id="101" parent="72" name="PK_IT_STAFF">
-      <ObjectId>5575058</ObjectId>
-      <CreatedTimestamp>2023-07-09.23:27:25.473</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-09.23:27:25.473</ModifiedTimestamp>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>PK_IT_STAFF</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="102" parent="73" name="ID">
-      <Position>1</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="103" parent="73" name="NUMBER">
-      <Position>2</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="104" parent="73" name="PK_ROOM">
-      <Position>1</Position>
-      <ColNames>ID</ColNames>
-      <Clustering>1</Clustering>
-      <Unique>1</Unique>
-    </index>
-    <key id="105" parent="73" name="PK_ROOM">
-      <ObjectId>69575286</ObjectId>
-      <CreatedTimestamp>2023-07-09.23:29:29.510</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-09.23:29:29.510</ModifiedTimestamp>
-      <ColNames>ID</ColNames>
-      <UnderlyingIndexName>PK_ROOM</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="106" parent="74" name="ID">
-      <Position>1</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="107" parent="74" name="name">
-      <Position>2</Position>
-      <DataType>nvarchar(50 char)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="108" parent="74" name="PK_WORK_AREA">
-      <Position>1</Position>
-      <ColNames>ID</ColNames>
-      <Clustering>1</Clustering>
-      <Unique>1</Unique>
-    </index>
-    <key id="109" parent="74" name="PK_WORK_AREA">
-      <ObjectId>37575172</ObjectId>
-      <CreatedTimestamp>2023-07-09.23:28:10.283</CreatedTimestamp>
-      <ModifiedTimestamp>2023-07-09.23:28:10.283</ModifiedTimestamp>
-      <ColNames>ID</ColNames>
-      <UnderlyingIndexName>PK_WORK_AREA</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="110" parent="75" name="id">
+    <column id="87" parent="70" name="id">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="111" parent="75" name="name">
+    <column id="88" parent="70" name="fio">
+      <Position>2</Position>
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="70" name="dborn">
+      <Position>3</Position>
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="70" name="workarea">
+      <Position>4</Position>
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="70" name="room">
+      <Position>5</Position>
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="92" parent="70" name="PK_EMPLOYEE">
+      <Position>1</Position>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+      <OptionPad>1</OptionPad>
+      <FillFactor>1</FillFactor>
+    </index>
+    <key id="93" parent="70" name="PK_EMPLOYEE">
+      <ObjectId>1173579219</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:14:43.657</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:14:43.657</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK_EMPLOYEE</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="94" parent="71" name="id">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="71" name="date">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="112" parent="75" name="PK_devices">
+    <column id="96" parent="71" name="deviceid">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="97" parent="71" name="employeeid">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="71" name="itstaffid">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="99" parent="71" name="PK_EVENTS">
+      <Position>1</Position>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+      <OptionPad>1</OptionPad>
+      <FillFactor>1</FillFactor>
+    </index>
+    <key id="100" parent="71" name="PK_EVENTS">
+      <ObjectId>1285579618</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:16:44.610</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:16:44.610</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK_EVENTS</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="101" parent="72" name="id">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="72" name="name">
+      <Position>2</Position>
+      <DataType>nvarchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="103" parent="72" name="PK_IT_STAFF">
       <Position>1</Position>
       <ColNames>id</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="113" parent="75" name="PK_devices">
+    <key id="104" parent="72" name="PK_IT_STAFF">
+      <ObjectId>1365579903</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:17:24.117</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:17:24.117</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK_IT_STAFF</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="105" parent="73" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="106" parent="73" name="NUMBER">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="107" parent="73" name="PK_ROOM">
+      <Position>1</Position>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="108" parent="73" name="PK_ROOM">
+      <ObjectId>1413580074</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:17:59.580</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:17:59.580</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK_ROOM</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="109" parent="74" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="74" name="name">
+      <Position>2</Position>
+      <DataType>nvarchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="111" parent="74" name="PK_WORK_AREA">
+      <Position>1</Position>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="112" parent="74" name="PK_WORK_AREA">
+      <ObjectId>1445580188</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:18:25.193</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:18:25.193</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK_WORK_AREA</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="113" parent="75" name="id">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="75" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="115" parent="75" name="PK_devices">
+      <Position>1</Position>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="116" parent="75" name="PK_devices">
       <ObjectId>629577281</ObjectId>
       <CreatedTimestamp>2023-07-27.00:14:12.740</CreatedTimestamp>
       <ModifiedTimestamp>2023-07-27.00:14:12.740</ModifiedTimestamp>
@@ -668,75 +690,201 @@ int</ExtendedProperties>
       <UnderlyingIndexName>PK_devices</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <argument id="114" parent="76">
+    <column id="117" parent="76" name="devices_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="118" parent="76" name="events_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="119" parent="76" name="UK_ci8dd2svu9jjh5l2a9hl6tgsu">
+      <Position>2</Position>
+      <ColNames>events_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="120" parent="76" name="UK_ci8dd2svu9jjh5l2a9hl6tgsu">
+      <ObjectId>933578364</ObjectId>
+      <CreatedTimestamp>2023-12-18.22:01:01.793</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-18.22:01:01.793</ModifiedTimestamp>
+      <ColNames>events_id</ColNames>
+      <UnderlyingIndexName>UK_ci8dd2svu9jjh5l2a9hl6tgsu</UnderlyingIndexName>
+    </key>
+    <foreign-key id="121" parent="76" name="FKky2sn5nhw7kg7vp7ko1lfue45">
+      <ObjectId>997578592</ObjectId>
+      <CreatedTimestamp>2023-12-18.22:01:01.947</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-18.22:01:01.947</ModifiedTimestamp>
+      <ColNames>devices_id</ColNames>
+      <RefTableId>613577224</RefTableId>
+      <RefTableName>devices</RefTableName>
+      <RefKeyName>PK_devices</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="122" parent="76" name="FKdgqq3m0qumqb3i1kprki36cks">
+      <ObjectId>1333579789</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:16:44.770</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:16:44.770</ModifiedTimestamp>
+      <ColNames>events_id</ColNames>
+      <RefTableId>1269579561</RefTableId>
+      <RefTableName>EVENTS</RefTableName>
+      <RefKeyName>PK_EVENTS</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="123" parent="77" name="employee_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="77" name="events_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="125" parent="77" name="UK_2cv6yvy1yk0sxuf3jmls3x88l">
+      <Position>2</Position>
+      <ColNames>events_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="126" parent="77" name="UK_2cv6yvy1yk0sxuf3jmls3x88l">
+      <ObjectId>949578421</ObjectId>
+      <CreatedTimestamp>2023-12-18.22:01:01.840</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-18.22:01:01.840</ModifiedTimestamp>
+      <ColNames>events_id</ColNames>
+      <UnderlyingIndexName>UK_2cv6yvy1yk0sxuf3jmls3x88l</UnderlyingIndexName>
+    </key>
+    <foreign-key id="127" parent="77" name="FKnlkviao824pl6yv859e6mea1s">
+      <ObjectId>1189579276</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:14:43.897</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:14:43.897</ModifiedTimestamp>
+      <ColNames>employee_id</ColNames>
+      <RefTableId>1157579162</RefTableId>
+      <RefTableName>EMPLOYEE</RefTableName>
+      <RefKeyName>PK_EMPLOYEE</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="128" parent="77" name="FKbi1q3lmoiabvbqcffens56br4">
+      <ObjectId>1317579732</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:16:44.760</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:16:44.760</ModifiedTimestamp>
+      <ColNames>events_id</ColNames>
+      <RefTableId>1269579561</RefTableId>
+      <RefTableName>EVENTS</RefTableName>
+      <RefKeyName>PK_EVENTS</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="129" parent="78" name="itstaff_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="130" parent="78" name="events_id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="131" parent="78" name="UK_bf8vc1a6lmo76ehgcx3rsqs9">
+      <Position>2</Position>
+      <ColNames>events_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="132" parent="78" name="UK_bf8vc1a6lmo76ehgcx3rsqs9">
+      <ObjectId>965578478</ObjectId>
+      <CreatedTimestamp>2023-12-18.22:01:01.847</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-18.22:01:01.847</ModifiedTimestamp>
+      <ColNames>events_id</ColNames>
+      <UnderlyingIndexName>UK_bf8vc1a6lmo76ehgcx3rsqs9</UnderlyingIndexName>
+    </key>
+    <foreign-key id="133" parent="78" name="FK8177okcbw7wb79bi1j98c4woe">
+      <ObjectId>1381579960</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:17:24.230</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:17:24.230</ModifiedTimestamp>
+      <ColNames>itstaff_id</ColNames>
+      <RefTableId>1349579846</RefTableId>
+      <RefTableName>ITSTAFF</RefTableName>
+      <RefKeyName>PK_IT_STAFF</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="134" parent="78" name="FK2mfoiy7fi827poidpjawshk2f">
+      <ObjectId>1301579675</ObjectId>
+      <CreatedTimestamp>2023-12-21.00:16:44.750</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-21.00:16:44.750</ModifiedTimestamp>
+      <ColNames>events_id</ColNames>
+      <RefTableId>1269579561</RefTableId>
+      <RefTableName>EVENTS</RefTableName>
+      <RefKeyName>PK_EVENTS</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <argument id="135" parent="79">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="115" parent="77" name="@diagramname">
+    <argument id="136" parent="80" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="116" parent="77" name="@owner_id">
+    <argument id="137" parent="80" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="117" parent="77" name="@version">
+    <argument id="138" parent="80" name="@version">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="118" parent="77" name="@definition">
+    <argument id="139" parent="80" name="@definition">
       <Position>4</Position>
       <DataType>varbinary(max)|0s</DataType>
     </argument>
-    <argument id="119" parent="78" name="@diagramname">
+    <argument id="140" parent="81" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="120" parent="78" name="@owner_id">
+    <argument id="141" parent="81" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="121" parent="78" name="@version">
+    <argument id="142" parent="81" name="@version">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="122" parent="78" name="@definition">
+    <argument id="143" parent="81" name="@definition">
       <Position>4</Position>
       <DataType>varbinary(max)|0s</DataType>
     </argument>
-    <argument id="123" parent="79" name="@diagramname">
+    <argument id="144" parent="82" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="124" parent="79" name="@owner_id">
+    <argument id="145" parent="82" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="125" parent="80" name="@diagramname">
+    <argument id="146" parent="83" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="126" parent="80" name="@owner_id">
+    <argument id="147" parent="83" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="127" parent="81" name="@diagramname">
+    <argument id="148" parent="84" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="128" parent="81" name="@owner_id">
+    <argument id="149" parent="84" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="129" parent="82" name="@diagramname">
+    <argument id="150" parent="85" name="@diagramname">
       <Position>1</Position>
       <DataType>sysname|0s</DataType>
     </argument>
-    <argument id="130" parent="82" name="@owner_id">
+    <argument id="151" parent="85" name="@owner_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="131" parent="82" name="@new_diagramname">
+    <argument id="152" parent="85" name="@new_diagramname">
       <Position>3</Position>
       <DataType>sysname|0s</DataType>
     </argument>
