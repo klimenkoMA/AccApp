@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/add7a296-9df3-4c43-9f3b-3cf94e691883/storage_v2/_src_/database/AccAppDB.fqLtgQ/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/trash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/DevicesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/DevicesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/EmployeeRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,14 +342,9 @@
       <workItem from="1703996673753" duration="3229000" />
       <workItem from="1704126187699" duration="1525000" />
       <workItem from="1704190786911" duration="2281000" />
-      <workItem from="1704257649380" duration="445000" />
-    </task>
-    <task id="LOCAL-00156" summary="Improved &quot;find&quot; method in EmployeeController.java">
-      <created>1700104911954</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1700104911955</updated>
+      <workItem from="1704257649380" duration="1353000" />
+      <workItem from="1704284779977" duration="2579000" />
+      <workItem from="1704346696465" duration="586000" />
     </task>
     <task id="LOCAL-00157" summary="Some changes in DevicesController.java and EmployeeController.java">
       <created>1700153618740</created>
@@ -679,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704209534032</updated>
     </task>
-    <option name="localTasksCounter" value="205" />
+    <task id="LOCAL-00205" summary="Added comment in EmployeeRepository.java">
+      <created>1704258147218</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1704258147219</updated>
+    </task>
+    <option name="localTasksCounter" value="206" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,7 +709,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added toString() method in DocumentClass.java" />
     <MESSAGE value="Tech commit" />
     <MESSAGE value="Added deleteDocument method in DocumentServiceClass.java" />
     <MESSAGE value="Added findDocument method in DocumentServiceClass.java" />
@@ -724,6 +733,7 @@
     <MESSAGE value="Some new comments" />
     <MESSAGE value="Another comment in DevicesController.java" />
     <MESSAGE value="New comment in DevicesRepository.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="New comment in DevicesRepository.java" />
+    <MESSAGE value="Added comment in EmployeeRepository.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comment in EmployeeRepository.java" />
   </component>
 </project>

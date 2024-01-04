@@ -17,32 +17,32 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 public class DocumentControllerClass {
 
-    @Autowired
+//    @Autowired
     DocumentServiceClass documentServiceClass;
 
-    @GetMapping
+//    @GetMapping
     public String getDocument(String doc) {
         return "page";
     }
 
-    @PostMapping
+//    @PostMapping
     public String addNewDocument(String doc) {
         return "page";
     }
 
-    @PostMapping
+//    @PostMapping
     public String deleteSomeDocument(String doc) {
         return "page";
 
     }
 
-    @PostMapping
+//    @PostMapping
     public String updateSomeDocument(String doc) {
 
         return "page";
     }
 
-    @PostMapping
+//    @PostMapping
     public String findSomeDocument(String doc) {
         return "page";
     }
