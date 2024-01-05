@@ -2,16 +2,20 @@ package accountingApp.documentService;
 
 
 import accountingApp.documentEntity.DocumentClass;
+import accountingApp.documentRepository.DocumentRepositoryClass;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Класс для реализации основной логики методов CRUD.
  * Прослойка между репозиторием и контроллером.
  */
+
+@Service
 public class DocumentServiceClass {
 
-//    @Autowired
-//    DocumentRepositoryClass documentRepositoryClass;
+    @Autowired
+    DocumentRepositoryClass documentRepositoryClass;
 
     public void addDocument(DocumentClass doc) {
 

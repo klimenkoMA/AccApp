@@ -2,6 +2,7 @@ package accountingApp.documentController;
 
 import accountingApp.documentService.DocumentServiceClass;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -14,10 +15,10 @@ import org.springframework.web.bind.annotation.PostMapping;
  * Полученный оттуда ответ возвращается пользователю в виде изменений на HTML-странице
  */
 
-
+@Controller
 public class DocumentControllerClass {
 
-//    @Autowired
+    @Autowired
     DocumentServiceClass documentServiceClass;
 
 //    @GetMapping

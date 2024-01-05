@@ -22,5 +22,18 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="MongoDB - upcdocs@localhost" uuid="42e616d2-6211-4c98-97e9-9f77f121534d">
+      <database-info product="Mongo DB" version="3.0.15" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.18" dbms="MONGO" exact-version="3.0.15" exact-driver-version="1.18" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="upcdocs" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
   </component>
 </project>
