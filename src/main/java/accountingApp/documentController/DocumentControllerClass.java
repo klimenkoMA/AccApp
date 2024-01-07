@@ -1,10 +1,14 @@
 package accountingApp.documentController;
 
+import accountingApp.documentEntity.DocumentClass;
 import accountingApp.documentService.DocumentServiceClass;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 
 /**
@@ -21,9 +25,11 @@ public class DocumentControllerClass {
     @Autowired
     DocumentServiceClass documentServiceClass;
 
-//    @GetMapping
-    public String getDocument(String doc) {
-        return "page";
+    @GetMapping("/documents")
+    public String getDocument(Model model) {
+        List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+        model.addAttribute("documentClassList", documentClassList);
+        return "documents";
     }
 
 //    @PostMapping

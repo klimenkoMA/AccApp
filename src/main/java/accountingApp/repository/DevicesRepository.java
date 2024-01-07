@@ -10,7 +10,7 @@ import java.util.List;
  * Интерфейс для связи с таблицей оборудования (Devices) в БД
  */
 
-//@Repository
+@Repository
 public interface DevicesRepository extends JpaRepository<Devices, Integer> {
     @Override
     List<Devices> findAll();
