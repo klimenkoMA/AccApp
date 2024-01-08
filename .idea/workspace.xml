@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,14 +351,7 @@
       <workItem from="1704284779977" duration="2579000" />
       <workItem from="1704346696465" duration="586000" />
       <workItem from="1704353147074" duration="12787000" />
-      <workItem from="1704525768263" duration="15694000" />
-    </task>
-    <task id="LOCAL-00161" summary="Improved &quot;add&quot; and &quot;delete&quot; method in ITStaffController.java">
-      <created>1700370899087</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1700370899088</updated>
+      <workItem from="1704525768263" duration="20935000" />
     </task>
     <task id="LOCAL-00162" summary="Improved &quot;update&quot; method in ITStaffController.java">
       <created>1700450227967</created>
@@ -701,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704607852179</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <task id="LOCAL-00210" summary="Rebuilt documents.html">
+      <created>1704638091681</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1704638091681</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,7 +716,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added updateDocument method in DocumentServiceClass.java" />
     <MESSAGE value="Created add method in DocumentControllerClass" />
     <MESSAGE value="Added delete method in DocumentControllerClass.java" />
     <MESSAGE value="Added update method in DocumentControllerClass.java" />
@@ -746,6 +740,7 @@
     <MESSAGE value="Added mongoDB connection to project" />
     <MESSAGE value="Added findAll method in DocumentRepositoryClass.java" />
     <MESSAGE value="Added findAll impl`s in some classes and created documents.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added findAll impl`s in some classes and created documents.html" />
+    <MESSAGE value="Rebuilt documents.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt documents.html" />
   </component>
 </project>

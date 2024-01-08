@@ -21,9 +21,20 @@ public class DocumentClass {
     @Indexed
     private String name;
 
+    @Field
+    @Indexed
+    private String content;
+
+
     public DocumentClass(ObjectId id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public DocumentClass(ObjectId id, String name, String content) {
+        this.id = id;
+        this.name = name;
+        this.content = content;
     }
 
     public DocumentClass() {
@@ -32,6 +43,20 @@ public class DocumentClass {
     public DocumentClass(String name) {
         this.name = name;
     }
+
+    public DocumentClass(String name, String content) {
+        this.name = name;
+        this.content = content;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
 
     public String getName() {
         return name;
@@ -54,6 +79,7 @@ public class DocumentClass {
         return "DocumentClass{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", content='" + content + '\'' +
                 '}';
     }
 }

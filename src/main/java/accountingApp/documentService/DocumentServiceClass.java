@@ -19,27 +19,27 @@ public class DocumentServiceClass {
     @Autowired
     DocumentRepositoryClass documentRepositoryClass;
 
-    public List<DocumentClass> findAllDocuments(){
+    public List<DocumentClass> findAllDocuments() {
         return documentRepositoryClass.findAll();
     }
 
     public void addDocument(DocumentClass doc) {
-
+        documentRepositoryClass.save(doc);
     }
 
     public void deleteDocument(DocumentClass doc) {
 
     }
 
-    public void findDocument(DocumentClass doc){
+    public void findDocument(DocumentClass doc) {
 
     }
 
-    public void updateDocument(DocumentClass doc){
+    public void updateDocument(DocumentClass doc) {
 
     }
 
-    public void findDocumentByName(String name){
+    public void findDocumentByName(String name) {
 
     }
 
