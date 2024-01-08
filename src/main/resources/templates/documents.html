@@ -46,11 +46,14 @@
             <td>
                 <div class="popup_div">
                     <input type="checkbox" id="callback">
-                    <label class="popup_try" for="callback">Добавить оборудование</label>
-                    <form class="popup_form" method="post" action="/adddevice">
+                    <label class="popup_try" for="callback">Добавить документ</label>
+                    <form class="popup_form" method="post" action="/adddocument">
                         <div align="center">
                             <label>
-                                <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
+                                <input type="text" name="name" align="middle" placeholder="Название документа"/>
+                            </label>
+                            <label>
+                                <input type="text" name="content" align="middle" placeholder="Содержимое"/>
                             </label>
                         </div>
                         <div align="center">
@@ -124,29 +127,21 @@
             <div class="db_table_border">
                 <table class="db_table">
                     <tr>
-                        <th>ID сотрудника</th>
-                        <th>Фамилия Имя Отчество</th>
-                        <th>Дата рождения</th>
-                        <th>Филиал</th>
-                        <th>Кабинет</th>
+                        <th>ID документа</th>
+                        <th>Название</th>
+                        <th>Содержимое</th>
                     </tr>
-                    <div th:each="element : ${employeeList}" class="row m-1">
+                    <div th:each="element : ${documentClassList}" class="row m-1">
                         <div class="col-8">
                             <tr align="center">
                                 <td>
                                     <div>[[${element.id}]]</div>
                                 </td>
                                 <td>
-                                    <div>[[${element.fio}]]</div>
+                                    <div>[[${element.name}]]</div>
                                 </td>
                                 <td>
-                                    <div>[[${element.dborn}]]</div>
-                                </td>
-                                <td>
-                                    <div>[[${element.workarea}]]</div>
-                                </td>
-                                <td>
-                                    <div>[[${element.room}]]</div>
+                                    <div>[[${element.content}]]</div>
                                 </td>
                             </tr>
                         </div>
