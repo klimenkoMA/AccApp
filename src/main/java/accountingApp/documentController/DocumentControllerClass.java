@@ -2,7 +2,6 @@ package accountingApp.documentController;
 
 import accountingApp.documentEntity.DocumentClass;
 import accountingApp.documentService.DocumentServiceClass;
-import accountingApp.entity.Devices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -49,9 +48,30 @@ public class DocumentControllerClass {
         return "documents";
     }
 
-    //    @PostMapping
-    public String deleteSomeDocument(String doc) {
-        return "page";
+    @PostMapping("/deletedocument")
+    public String deleteSomeDocument(@RequestParam String id,
+                                     @RequestParam String name,
+                                     Model model) {
+        String nameWithoutSpaces = name.trim();
+        String idWithoutSpaces = id.trim();
+
+        if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+            DocumentClass document = documentServiceClass.findDocumentByName(name);
+            documentServiceClass.deleteDocument(document);
+            List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+            model.addAttribute("documentClassList", documentClassList);
+            return "documents";
+        }
+
+        if (!idWithoutSpaces.isEmpty()) {
+            DocumentClass document = documentServiceClass.findDocumentById(id);
+            documentServiceClass.deleteDocument(document);
+            List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+            model.addAttribute("documentClassList", documentClassList);
+            return "documents";
+        }
+
+        return "documents";
 
     }
 

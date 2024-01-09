@@ -3,6 +3,7 @@ package accountingApp.documentService;
 
 import accountingApp.documentEntity.DocumentClass;
 import accountingApp.documentRepository.DocumentRepositoryClass;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,19 +29,40 @@ public class DocumentServiceClass {
     }
 
     public void deleteDocument(DocumentClass doc) {
+        documentRepositoryClass.delete(doc);
 
     }
 
-    public void findDocument(DocumentClass doc) {
+    public DocumentClass findDocumentById(String id) {
 
+        List<DocumentClass> documentList = documentRepositoryClass.findAll();
+
+        for (DocumentClass doc : documentList
+        ) {
+            if (doc.getId().toString().equals(id)) {
+                return doc;
+            }
+        }
+
+        return new DocumentClass(new ObjectId(),"Document not found","Document not found");
     }
 
     public void updateDocument(DocumentClass doc) {
 
     }
 
-    public void findDocumentByName(String name) {
+    public DocumentClass findDocumentByName(String name) {
 
+        List<DocumentClass> documentList = documentRepositoryClass.findAll();
+
+        for (DocumentClass doc : documentList
+        ) {
+            if (doc.getName().equals(name)) {
+                return doc;
+            }
+        }
+
+        return new DocumentClass(new ObjectId(),"Document not found","Document not found");
     }
 
 
