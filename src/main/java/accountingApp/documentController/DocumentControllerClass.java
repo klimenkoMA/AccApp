@@ -55,16 +55,21 @@ public class DocumentControllerClass {
         String nameWithoutSpaces = name.trim();
         String idWithoutSpaces = id.trim();
 
-        if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
-            DocumentClass document = documentServiceClass.findDocumentByName(name);
-            documentServiceClass.deleteDocument(document);
+        try {
+            if (!idWithoutSpaces.isEmpty()) {
+                DocumentClass document = documentServiceClass.findDocumentById(id);
+                documentServiceClass.deleteDocument(document);
+                List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+                model.addAttribute("documentClassList", documentClassList);
+                return "documents";
+            }
+        } catch (Exception e) {
             List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
             model.addAttribute("documentClassList", documentClassList);
             return "documents";
         }
-
-        if (!idWithoutSpaces.isEmpty()) {
-            DocumentClass document = documentServiceClass.findDocumentById(id);
+        if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+            DocumentClass document = documentServiceClass.findDocumentByName(name);
             documentServiceClass.deleteDocument(document);
             List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
             model.addAttribute("documentClassList", documentClassList);
