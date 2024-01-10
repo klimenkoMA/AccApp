@@ -89,17 +89,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -350,14 +339,8 @@
       <workItem from="1704284779977" duration="2579000" />
       <workItem from="1704346696465" duration="586000" />
       <workItem from="1704353147074" duration="12787000" />
-      <workItem from="1704525768263" duration="30411000" />
-    </task>
-    <task id="LOCAL-00163" summary="Some changes">
-      <created>1700535639326</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1700535639327</updated>
+      <workItem from="1704525768263" duration="31083000" />
+      <workItem from="1704853588955" duration="1456000" />
     </task>
     <task id="LOCAL-00164" summary="Some checks in ITStaffController.java">
       <created>1700622194316</created>
@@ -695,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704691931815</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="Added deleteDocument method in DocumentControllerClass.java">
+      <created>1704766574622</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1704766574622</updated>
+    </task>
+    <option name="localTasksCounter" value="213" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,7 +705,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added delete method in DocumentControllerClass.java" />
     <MESSAGE value="Added update method in DocumentControllerClass.java" />
     <MESSAGE value="Added find method in DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt pom.xml" />
@@ -740,6 +729,7 @@
     <MESSAGE value="Added findAll impl`s in some classes and created documents.html" />
     <MESSAGE value="Rebuilt documents.html" />
     <MESSAGE value="Added addNewDocument method in DocumentControllerClass.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added addNewDocument method in DocumentControllerClass.java" />
+    <MESSAGE value="Added deleteDocument method in DocumentControllerClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added deleteDocument method in DocumentControllerClass.java" />
   </component>
 </project>
