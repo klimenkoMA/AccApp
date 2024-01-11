@@ -49,34 +49,32 @@ public class DocumentControllerClass {
     }
 
     @PostMapping("/deletedocument")
-    public String deleteSomeDocument(@RequestParam String id,
-                                     @RequestParam String name,
+    public String deleteSomeDocument(@RequestParam String name,
                                      Model model) {
         String nameWithoutSpaces = name.trim();
-        String idWithoutSpaces = id.trim();
 
         try {
-            if (!idWithoutSpaces.isEmpty()) {
-                DocumentClass document = documentServiceClass.findDocumentById(id);
+            if (!nameWithoutSpaces.isEmpty()) {
+                DocumentClass document = documentServiceClass.findDocumentById(name);
                 documentServiceClass.deleteDocument(document);
                 List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
                 model.addAttribute("documentClassList", documentClassList);
                 return "documents";
             }
         } catch (Exception e) {
-            List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-            model.addAttribute("documentClassList", documentClassList);
-            return "documents";
-        }
-        if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
-            DocumentClass document = documentServiceClass.findDocumentByName(name);
-            documentServiceClass.deleteDocument(document);
-            List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-            model.addAttribute("documentClassList", documentClassList);
-            return "documents";
+            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+                DocumentClass document = documentServiceClass.findDocumentByName(name);
+                documentServiceClass.deleteDocument(document);
+                List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+                model.addAttribute("documentClassList", documentClassList);
+                return "documents";
+            }
         }
 
+        List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+        model.addAttribute("documentClassList", documentClassList);
         return "documents";
+
 
     }
 
