@@ -44,7 +44,7 @@ public class DocumentServiceClass {
             }
         }
 
-        return new DocumentClass(new ObjectId("111"),"Document not found","Document not found");
+        return new DocumentClass(new ObjectId("111"), "Document not found", "Document not found");
     }
 
     public void updateDocument(DocumentClass doc) {
@@ -53,16 +53,8 @@ public class DocumentServiceClass {
 
     public DocumentClass findDocumentByName(String name) {
 
-        List<DocumentClass> documentList = documentRepositoryClass.findAll();
+        return documentRepositoryClass.findByName(name);
 
-        for (DocumentClass doc : documentList
-        ) {
-            if (doc.getName().equals(name)) {
-                return doc;
-            }
-        }
-
-        return new DocumentClass(new ObjectId("111"),"Document not found","Document not found");
     }
 
 
