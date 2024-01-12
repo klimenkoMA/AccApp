@@ -15,8 +15,9 @@ import java.util.List;
 @EnableMongoRepositories
 public interface DocumentRepositoryClass extends MongoRepository <DocumentClass, String> {
 
-//    @Query ("{'name' : {$regex: ?0, $options: 'i' }}")
-//    DocumentClass findByName (String name);
+
+    @Query ("{'name' : {$regex: ?0, $options: 'i' }}")
+    DocumentClass findByName (String name);
 
     @Override
     List<DocumentClass> findAll();
