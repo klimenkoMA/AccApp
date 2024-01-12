@@ -63,9 +63,15 @@ public class DocumentControllerClass {
             }
             throw new Exception("It`s not an ID!");
         } catch (Exception e) {
-            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
-                DocumentClass document = documentServiceClass.findDocumentByName(name);
-                documentServiceClass.deleteDocument(document);
+            try {
+                if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+                    DocumentClass document = documentServiceClass.findDocumentByName(name);
+                    documentServiceClass.deleteDocument(document);
+                    List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+                    model.addAttribute("documentClassList", documentClassList);
+                    return "documents";
+                }
+            }catch(Exception e1){
                 List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
                 model.addAttribute("documentClassList", documentClassList);
                 return "documents";

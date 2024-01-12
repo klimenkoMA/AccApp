@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MongoDB - upcdocs@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.20">
+    <root id="1">
+      <ServerVersion>3.0.15</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="itproger"/>
+    <schema id="3" parent="1" name="local"/>
+    <schema id="4" parent="1" name="upcdocs">
+      <Current>1</Current>
+    </schema>
+    <table id="5" parent="4" name="documents"/>
+  </database-model>
+</dataSource>

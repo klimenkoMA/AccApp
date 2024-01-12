@@ -7,8 +7,7 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,14 +341,8 @@
       <workItem from="1704525768263" duration="31083000" />
       <workItem from="1704853588955" duration="1883000" />
       <workItem from="1704939439420" duration="1546000" />
-      <workItem from="1705026256979" duration="1417000" />
-    </task>
-    <task id="LOCAL-00166" summary="Improved &quot;add&quot; method in RoomController.java">
-      <created>1700795520842</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1700795520842</updated>
+      <workItem from="1705026256979" duration="1798000" />
+      <workItem from="1705077274546" duration="820000" />
     </task>
     <task id="LOCAL-00167" summary="Rebuilt &quot;find&quot; button from itstaff.html and improved &quot;delete&quot; method in RoomController.java">
       <created>1700905941194</created>
@@ -687,7 +680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704939984356</updated>
     </task>
-    <option name="localTasksCounter" value="215" />
+    <task id="LOCAL-00215" summary="Added findByName method in DocumentRepositoryClass.java">
+      <created>1705029667819</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1705029667820</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +707,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt pom.xml" />
     <MESSAGE value="Changed DB name in application.properties" />
     <MESSAGE value="Added new DB in application.properties" />
     <MESSAGE value="Rebuilt application.properties" />
@@ -732,6 +731,7 @@
     <MESSAGE value="Added deleteDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt deleteDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt deletedocument method in DocumentControllerClass.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt deletedocument method in DocumentControllerClass.java" />
+    <MESSAGE value="Added findByName method in DocumentRepositoryClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added findByName method in DocumentRepositoryClass.java" />
   </component>
 </project>
