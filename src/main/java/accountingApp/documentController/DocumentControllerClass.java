@@ -71,7 +71,7 @@ public class DocumentControllerClass {
                     model.addAttribute("documentClassList", documentClassList);
                     return "documents";
                 }
-            }catch(Exception e1){
+            } catch (Exception e1) {
                 List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
                 model.addAttribute("documentClassList", documentClassList);
                 return "documents";
@@ -84,10 +84,32 @@ public class DocumentControllerClass {
 
     }
 
-    //    @PostMapping
-    public String updateSomeDocument(String doc) {
+    @PostMapping("/updatedocument")
+    public String updateSomeDocument(@RequestParam String id,
+                                     @RequestParam String name,
+                                     @RequestParam String content,
+                                     Model model) {
 
-        return "page";
+        String nameWithoutSpaces = name.trim();
+        String idWithoutSpaces = id.trim();
+
+       try{
+           if (!idWithoutSpaces.isEmpty()){
+               DocumentClass document = documentServiceClass.findDocumentById(idWithoutSpaces);
+
+           }
+       }catch (Exception e){
+
+       }
+        if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+            DocumentClass document = new DocumentClass(name, content);
+            documentServiceClass.addDocument(document);
+            List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+            model.addAttribute("documentClassList", documentClassList);
+        }
+
+
+        return "documents";
     }
 
     //    @PostMapping
