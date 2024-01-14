@@ -47,9 +47,10 @@ public class DocumentServiceClass {
         return new DocumentClass(new ObjectId("111"), "Document not found", "Document not found");
     }
 
-    public void updateDocument(DocumentClass doc) {
-
-    }
+//    public void updateDocument(DocumentClass doc) {
+//
+//
+//    }
 
     public DocumentClass findDocumentByName(String name) {
 
