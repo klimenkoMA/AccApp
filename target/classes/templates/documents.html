@@ -86,13 +86,16 @@
                 <div class="popup_div">
                     <input type="checkbox" id="callback3">
                     <label class="popup_try" for="callback3">Обновить документ</label>
-                    <form action="/updatedevice" class="popup_form" method="post">
+                    <form action="/updatedocument" class="popup_form" method="post">
                         <div align="center">
                             <label>
-                                <input type="text" name="id" align="middle" placeholder="ID оборудования">
+                                <input type="text" name="id" align="middle" placeholder="ID документа">
                             </label>
                             <label>
-                                <input type="text" name="name" align="middle" placeholder="Название оборудования">
+                                <input type="text" name="name" align="middle" placeholder="Название документа">
+                            </label>
+                            <label>
+                                <input type="text" name="content" align="middle" placeholder="Содержимое">
                             </label>
                         </div>
                         <div align="center">
