@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -111,9 +112,41 @@ public class DocumentControllerClass {
         return "documents";
     }
 
-    //    @PostMapping
-    public String findSomeDocument(String doc) {
-        return "page";
+    @PostMapping("/finddocument")
+    public String findSomeDocument(@RequestParam String name,
+                                   Model model) {
+
+        String nameWithoutSpaces = name.trim();
+
+        try {
+            if (!nameWithoutSpaces.isEmpty()) {
+                DocumentClass document = documentServiceClass.findDocumentById(name);
+                List<DocumentClass> documentClassList = new ArrayList<>();
+                documentClassList.add(document);
+                model.addAttribute("documentClassList", documentClassList);
+                return "documents";
+            }
+            throw new Exception("It`s not an ID!");
+        } catch (Exception e) {
+            try {
+                if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+                    DocumentClass document = documentServiceClass.findDocumentByName(name);
+                    List<DocumentClass> documentClassList = new ArrayList<>();
+                    documentClassList.add(document);
+                    model.addAttribute("documentClassList", documentClassList);
+                    return "documents";
+                }
+            } catch (Exception e1) {
+                List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+                model.addAttribute("documentClassList", documentClassList);
+                return "documents";
+            }
+        }
+
+        List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+        model.addAttribute("documentClassList", documentClassList);
+        return "documents";
+
     }
 
 }

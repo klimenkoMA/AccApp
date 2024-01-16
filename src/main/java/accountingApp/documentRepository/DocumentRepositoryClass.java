@@ -22,7 +22,4 @@ public interface DocumentRepositoryClass extends MongoRepository<DocumentClass, 
     @Override
     List<DocumentClass> findAll();
 
-//    @Query("{'_id' : {$regex: ?0, $options: 'i'}}")
-//    DocumentClass update(DocumentClass doc);
-
 }
