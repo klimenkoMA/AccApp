@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -419,14 +417,9 @@
       <workItem from="1705077274546" duration="1704000" />
       <workItem from="1705163973259" duration="831000" />
       <workItem from="1705208875383" duration="15772000" />
-      <workItem from="1705335206911" duration="1513000" />
-    </task>
-    <task id="LOCAL-00172" summary="Created new class Document for the second DB">
-      <created>1701313375796</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1701313375796</updated>
+      <workItem from="1705335206911" duration="1644000" />
+      <workItem from="1705375340837" duration="222000" />
+      <workItem from="1705421342146" duration="3062000" />
     </task>
     <task id="LOCAL-00173" summary="Created new repository class for new DB">
       <created>1701398423463</created>
@@ -764,7 +757,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705283776491</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="Added findSomeDocument method in DocumentControllerClass.java">
+      <created>1705375121282</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1705375121283</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,7 +784,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added some comments in DocumentServiceClass.java" />
     <MESSAGE value="Added comments in DocumentClass.java" />
     <MESSAGE value="Added comment in DocumentRepositoryClass.java" />
     <MESSAGE value="Added comment in DocumentControllerClass.java" />
@@ -809,7 +808,8 @@
     <MESSAGE value="Created updateSomeDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Finished updateSomeDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Added some Python files for a university task" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some Python files for a university task" />
+    <MESSAGE value="Added findSomeDocument method in DocumentControllerClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added findSomeDocument method in DocumentControllerClass.java" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AccApp$Network.coverage" NAME="Network Coverage Results" MODIFIED="1705244925827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
