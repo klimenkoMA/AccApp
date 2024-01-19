@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/security.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,17 +91,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
       <node-options value="" />
@@ -435,14 +420,8 @@
       <workItem from="1705335206911" duration="1644000" />
       <workItem from="1705375340837" duration="222000" />
       <workItem from="1705421342146" duration="3116000" />
-      <workItem from="1705509337573" duration="4558000" />
-    </task>
-    <task id="LOCAL-00174" summary="Added mongoDB dependency in pom.xml">
-      <created>1701541380437</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1701541380437</updated>
+      <workItem from="1705509337573" duration="5210000" />
+      <workItem from="1705593260442" duration="2758000" />
     </task>
     <task id="LOCAL-00175" summary="Corrected the view of some buttons in html pages">
       <created>1701575349412</created>
@@ -780,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705461794362</updated>
     </task>
-    <option name="localTasksCounter" value="223" />
+    <task id="LOCAL-00223" summary="Added some security files">
+      <created>1705546828858</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1705546828858</updated>
+    </task>
+    <option name="localTasksCounter" value="224" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -800,7 +786,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added comment in DocumentRepositoryClass.java" />
     <MESSAGE value="Added comment in DocumentControllerClass.java" />
     <MESSAGE value="Some changes in DocumentClass.java" />
     <MESSAGE value="Added getDocument method in DocumentControllerClass.java" />
@@ -825,7 +810,8 @@
     <MESSAGE value="Added some Python files for a university task" />
     <MESSAGE value="Added findSomeDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Tech commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
+    <MESSAGE value="Added some security files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some security files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AccApp$Network.coverage" NAME="Network Coverage Results" MODIFIED="1705244925827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
