@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/repository/DevicesRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/security.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/repository/EmployeeProfRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/repository/EmployeeRepositoryTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,15 +24,12 @@
       <list>
         <option value="JavaScript File" />
         <option value="Interface" />
-        <option value="Python Script" />
-        <option value="CSS File" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="AccAppWorkBranch" />
@@ -48,6 +45,11 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="AccApp/invalid/Python" />
+    </ignored-facets>
   </component>
   <component name="ProjectId" id="2SIa9ZsRcTmaJS9C7vImjVszo0H" />
   <component name="ProjectLevelVcsManager">
@@ -73,14 +75,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/public" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
     <property name="ts.external.directory.path" value="D:\JAVA\IntelliJ IDEA 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -89,11 +87,11 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\css" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
@@ -121,72 +119,6 @@
     <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Dijkstra" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/frontend/pythonlabs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/frontend/pythonlabs/Dijkstra.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Graph" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/frontend/pythonlabs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/frontend/pythonlabs/Graph.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Network" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/frontend/pythonlabs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/frontend/pythonlabs/Network.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="RecProjApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="AccApp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="accountingApp.AccountingApplication" />
@@ -196,9 +128,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Dijkstra" />
-        <item itemvalue="Python.Graph" />
-        <item itemvalue="Python.Network" />
         <item itemvalue="Jest.App.test.js" />
         <item itemvalue="JavaScript Debug.employee.html" />
       </list>
@@ -429,17 +358,105 @@
       <workItem from="1704353147074" duration="12787000" />
       <workItem from="1704525768263" duration="31083000" />
       <workItem from="1704853588955" duration="1883000" />
-      <workItem from="1704939439420" duration="1546000" />
-      <workItem from="1705026256979" duration="1798000" />
-      <workItem from="1705077274546" duration="1704000" />
-      <workItem from="1705163973259" duration="831000" />
-      <workItem from="1705208875383" duration="15772000" />
-      <workItem from="1705335206911" duration="1644000" />
-      <workItem from="1705375340837" duration="222000" />
-      <workItem from="1705421342146" duration="3116000" />
-      <workItem from="1705509337573" duration="5210000" />
-      <workItem from="1705593260442" duration="3690000" />
-      <workItem from="1705680275466" duration="19649000" />
+      <workItem from="1704939439420" duration="452000" />
+    </task>
+    <task id="LOCAL-00165" summary="Tech commit">
+      <created>1700708463541</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1700708463542</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Improved &quot;add&quot; method in RoomController.java">
+      <created>1700795520842</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1700795520842</updated>
+    </task>
+    <task id="LOCAL-00167" summary="Rebuilt &quot;find&quot; button from itstaff.html and improved &quot;delete&quot; method in RoomController.java">
+      <created>1700905941194</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1700905941195</updated>
+    </task>
+    <task id="LOCAL-00168" summary="Improved &quot;update&quot; method in WorkAreaController.java">
+      <created>1700984388455</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1700984388455</updated>
+    </task>
+    <task id="LOCAL-00169" summary="Improved &quot;delete&quot; method in WorkAreaController.java">
+      <created>1701054594532</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1701054594532</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Improved &quot;find&quot; method in WorkAreaController.java">
+      <created>1701140353548</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1701140353548</updated>
+    </task>
+    <task id="LOCAL-00171" summary="Tech commit">
+      <created>1701227319446</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1701227319449</updated>
+    </task>
+    <task id="LOCAL-00172" summary="Created new class Document for the second DB">
+      <created>1701313375796</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1701313375796</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Created new repository class for new DB">
+      <created>1701398423463</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1701398423463</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Added mongoDB dependency in pom.xml">
+      <created>1701541380437</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1701541380437</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Corrected the view of some buttons in html pages">
+      <created>1701575349412</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1701575349412</updated>
+    </task>
+    <task id="LOCAL-00176" summary="Added DocumentController package">
+      <created>1701658698940</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1701658698940</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Added documentClass package">
+      <created>1701743169746</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1701743169746</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Renamed all mongoDB classes">
+      <created>1701829765345</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1701829765346</updated>
     </task>
     <task id="LOCAL-00179" summary="Created fields in DocumentClass.java">
       <created>1701919328899</created>
@@ -686,105 +703,7 @@
       <option name="project" value="LOCAL" />
       <updated>1704856889514</updated>
     </task>
-    <task id="LOCAL-00214" summary="Rebuilt deletedocument method in DocumentControllerClass.java">
-      <created>1704939984356</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1704939984356</updated>
-    </task>
-    <task id="LOCAL-00215" summary="Added findByName method in DocumentRepositoryClass.java">
-      <created>1705029667819</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1705029667820</updated>
-    </task>
-    <task id="LOCAL-00216" summary="Rebuilt deleteSomeDocument method in DocumentControllerClass.java">
-      <created>1705080635449</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1705080635449</updated>
-    </task>
-    <task id="LOCAL-00217" summary="Rebuilt deleteSomeDocument method in DocumentControllerClass.java">
-      <created>1705080822772</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1705080822772</updated>
-    </task>
-    <task id="LOCAL-00218" summary="Created updateSomeDocument method in DocumentControllerClass.java">
-      <created>1705164734961</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
-      <option name="project" value="LOCAL" />
-      <updated>1705164734961</updated>
-    </task>
-    <task id="LOCAL-00219" summary="Finished updateSomeDocument method in DocumentControllerClass.java">
-      <created>1705213735999</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1705213735999</updated>
-    </task>
-    <task id="LOCAL-00220" summary="Added some Python files for a university task">
-      <created>1705283776491</created>
-      <option name="number" value="00220" />
-      <option name="presentableId" value="LOCAL-00220" />
-      <option name="project" value="LOCAL" />
-      <updated>1705283776491</updated>
-    </task>
-    <task id="LOCAL-00221" summary="Added findSomeDocument method in DocumentControllerClass.java">
-      <created>1705375121282</created>
-      <option name="number" value="00221" />
-      <option name="presentableId" value="LOCAL-00221" />
-      <option name="project" value="LOCAL" />
-      <updated>1705375121283</updated>
-    </task>
-    <task id="LOCAL-00222" summary="Tech commit">
-      <created>1705461794362</created>
-      <option name="number" value="00222" />
-      <option name="presentableId" value="LOCAL-00222" />
-      <option name="project" value="LOCAL" />
-      <updated>1705461794362</updated>
-    </task>
-    <task id="LOCAL-00223" summary="Added some security files">
-      <created>1705546828858</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1705546828858</updated>
-    </task>
-    <task id="LOCAL-00224" summary="Added web security dependency">
-      <created>1705633638180</created>
-      <option name="number" value="00224" />
-      <option name="presentableId" value="LOCAL-00224" />
-      <option name="project" value="LOCAL" />
-      <updated>1705633638181</updated>
-    </task>
-    <task id="LOCAL-00225" summary="Created login.html and WebSecurityConfig.java">
-      <created>1705683745107</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1705683745107</updated>
-    </task>
-    <task id="LOCAL-00226" summary="Added logout button in home.html">
-      <created>1705744409704</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1705744409705</updated>
-    </task>
-    <task id="LOCAL-00227" summary="Added logout button in main.html">
-      <created>1705848717031</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
-      <option name="project" value="LOCAL" />
-      <updated>1705848717058</updated>
-    </task>
-    <option name="localTasksCounter" value="228" />
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -804,6 +723,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added find method in DocumentControllerClass.java" />
+    <MESSAGE value="Rebuilt pom.xml" />
+    <MESSAGE value="Changed DB name in application.properties" />
+    <MESSAGE value="Added new DB in application.properties" />
+    <MESSAGE value="Rebuilt application.properties" />
+    <MESSAGE value="Added findByName method in DocumentServiceClass.java" />
+    <MESSAGE value="Added some comments in DocumentServiceClass.java" />
+    <MESSAGE value="Added comments in DocumentClass.java" />
+    <MESSAGE value="Added comment in DocumentRepositoryClass.java" />
+    <MESSAGE value="Added comment in DocumentControllerClass.java" />
+    <MESSAGE value="Some changes in DocumentClass.java" />
+    <MESSAGE value="Added getDocument method in DocumentControllerClass.java" />
+    <MESSAGE value="Added some comments" />
     <MESSAGE value="Some new comments" />
     <MESSAGE value="Another comment in DevicesController.java" />
     <MESSAGE value="New comment in DevicesRepository.java" />
@@ -816,24 +748,6 @@
     <MESSAGE value="Added addNewDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Added deleteDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt deleteDocument method in DocumentControllerClass.java" />
-    <MESSAGE value="Rebuilt deletedocument method in DocumentControllerClass.java" />
-    <MESSAGE value="Added findByName method in DocumentRepositoryClass.java" />
-    <MESSAGE value="Rebuilt deleteSomeDocument method in DocumentControllerClass.java" />
-    <MESSAGE value="Created updateSomeDocument method in DocumentControllerClass.java" />
-    <MESSAGE value="Finished updateSomeDocument method in DocumentControllerClass.java" />
-    <MESSAGE value="Added some Python files for a university task" />
-    <MESSAGE value="Added findSomeDocument method in DocumentControllerClass.java" />
-    <MESSAGE value="Tech commit" />
-    <MESSAGE value="Added some security files" />
-    <MESSAGE value="Added web security dependency" />
-    <MESSAGE value="Created login.html and WebSecurityConfig.java" />
-    <MESSAGE value="Added logout button in home.html" />
-    <MESSAGE value="Added logout button in main.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logout button in main.html" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AccApp$Network.coverage" NAME="Network Coverage Results" MODIFIED="1705244925827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
-    <SUITE FILE_PATH="coverage/AccApp$Graph.coverage" NAME="Graph Coverage Results" MODIFIED="1705248257409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
-    <SUITE FILE_PATH="coverage/AccApp$Dijkstra.coverage" NAME="Dijkstra Coverage Results" MODIFIED="1705282624620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt deleteDocument method in DocumentControllerClass.java" />
   </component>
 </project>
