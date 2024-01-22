@@ -5,19 +5,23 @@
     <meta charset="UTF-8" content="">
     <title>Главная</title>
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/security.css" rel="stylesheet">
     <script type="text/javascript" src="js/custom.js"></script>
 </head>
 <body>
 <div class="wrapper">
     <header class="header">
-        <h2 style="width: 60%; margin: auto; color: #fcf6f6">
+        <h2 style="width: 70%; margin: auto; color: #fcf6f6">
             Информационная система с использованием гетерогенных БД
         </h2>
+        <div class="headerquit">
+            <form th:action="@{/login}" method="post">
+                <button class="buttonsec" type="submit" value="Sign Out">Выйти</button>
+            </form>
+        </div>
     </header>
     <main class="main">
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
+
         <table>
             <col align="center" span="1" width="20%">
             <td>
