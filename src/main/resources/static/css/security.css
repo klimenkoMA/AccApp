@@ -15,8 +15,8 @@ html, body {
     justify-content: right;
     align-items: center;
     min-width: 100%;
-    padding-left: 10%;
-    padding-right: 3%;
+    /*padding-left: 50%;    */
+    padding-bottom: 1%;
 }
 
 .buttonsec {
