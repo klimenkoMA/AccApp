@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/repository/DevicesControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/repository/EmployeeControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/repository/EventsControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_14_57__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_14_57__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_15_15__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_15_15__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_15_15__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_15_15__Default_Changelist_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2024_14_49__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2024_14_49__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2024_19_18__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2024_19_18__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_01_2024_11_18__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_01_2024_11_18__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/security.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/repository/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/repository/DevicesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/repository/DevicesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/repository/DevicesControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,15 +99,28 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.DevicesControllerTest.mustReturnDevicesList">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DevicesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="accountingApp.repository" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.repository.DevicesControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,6 +164,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList" />
+        <item itemvalue="JUnit.DevicesControllerTest" />
         <item itemvalue="Jest.App.test.js" />
         <item itemvalue="JavaScript Debug.employee.html" />
       </list>
@@ -774,5 +786,10 @@
     <MESSAGE value="Added deleteDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt deleteDocument method in DocumentControllerClass.java" />
     <option name="LAST_COMMIT_MESSAGE" value="Rebuilt deleteDocument method in DocumentControllerClass.java" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AccApp$Network.coverage" NAME="Network Coverage Results" MODIFIED="1705244925827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
+    <SUITE FILE_PATH="coverage/AccApp$Graph.coverage" NAME="Graph Coverage Results" MODIFIED="1705248257409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
+    <SUITE FILE_PATH="coverage/AccApp$Dijkstra.coverage" NAME="Dijkstra Coverage Results" MODIFIED="1705282624620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
   </component>
 </project>

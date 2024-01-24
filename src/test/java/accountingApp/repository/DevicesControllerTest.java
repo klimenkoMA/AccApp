@@ -31,11 +31,14 @@ public class DevicesControllerTest {
     @Autowired
     DevicesService service;
 
+    @Autowired
+    DevicesController controller;
+
 
     private List<Devices> getDevices() {
-        Devices dev1 = new Devices(1, "Kyocera");
-        Devices dev2 = new Devices(2, "Acer");
-        Devices dev3 = new Devices(3, "Canon");
+        Devices dev1 = new Devices( "Kyocera");
+        Devices dev2 = new Devices( "Acer");
+        Devices dev3 = new Devices("Canon");
 
         List<Devices> devices = new ArrayList<>();
         devices.add(dev1);
