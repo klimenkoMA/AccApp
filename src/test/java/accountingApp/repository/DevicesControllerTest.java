@@ -34,6 +34,9 @@ public class DevicesControllerTest {
     @Autowired
     DevicesController controller;
 
+    @Autowired
+    DevicesRepository repository;
+
 
     private List<Devices> getDevices() {
         Devices dev1 = new Devices( "Kyocera");
@@ -54,7 +57,7 @@ public class DevicesControllerTest {
 
         Mockito.when(this.service.findAllDevices()).thenReturn(getDevices());
 
-        mvc.perform(get("/devices"))
+        mvc.perform(get("devices"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()").value(3));
     }
