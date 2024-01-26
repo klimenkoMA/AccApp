@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns:th="http://www.w3.org/1999/xhtml" lang="">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
     <meta charset="UTF-8" content="">
     <title>Главная</title>
@@ -15,7 +15,7 @@
             Информационная система с использованием гетерогенных БД
         </h2>
         <div class="headerquit">
-            <form th:action="@{/login}" method="post">
+            <form th:action="@{/logout}" method="post">
                 <button class="buttonsec" type="submit" value="Sign Out">Выйти</button>
             </form>
         </div>
@@ -73,7 +73,7 @@
     </main>
     <footer class="footer">
         <p> MK Web Practice &copy 2023
-            <img src="/img/tux.png"
+            <img src="/static/img/tux.png"
                  style="float: right;"
                  height="50" width="50" alt="Линь">
         </p>

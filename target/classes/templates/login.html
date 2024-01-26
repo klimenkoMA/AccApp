@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">-->
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
+    <meta charset="UTF-8" content="">
     <title>Login </title>
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/security.css" rel="stylesheet">
 </head>
 <body>
-<div th:if="${param.error}">
-    Invalid username and password.
+<div class="wrapper">
+    <header class="header">
+        <h2 style="width: 70%; margin: auto; color: #fcf6f6">
+            Информационная система учета компьютерного оборудования
+        </h2>
+    </header>
+    <div th:if="${param.error}">
+        Invalid username and password.
+    </div>
+    <div th:if="${param.logout}">
+        You have been logged out.
+    </div>
+    <form th:action="@{/login}" method="post">
+        <div><label> User Name : <input type="text" name="username"/> </label></div>
+        <div><label> Password: <input type="password" name="password"/> </label></div>
+        <div><input type="submit" value="Войти"/></div>
+    </form>
+    <footer class="footer">
+        <div align="center">MK &copy 2023</div>
+    </footer>
 </div>
-<div th:if="${param.logout}">
-    You have been logged out.
-</div>
-<form th:action="@{/login}" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
-</form>
 </body>
 </html>
