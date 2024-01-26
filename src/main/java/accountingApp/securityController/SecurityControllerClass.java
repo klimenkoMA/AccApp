@@ -9,6 +9,6 @@ public class SecurityControllerClass {
     @GetMapping("/")
     public String getHome(){
 
-        return "home";
+        return "main";
     }
 }
