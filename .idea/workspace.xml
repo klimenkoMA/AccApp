@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -397,21 +382,8 @@
       <workItem from="1704939439420" duration="452000" />
       <workItem from="1706112375583" duration="4845000" />
       <workItem from="1706198823923" duration="2613000" />
-      <workItem from="1706237636324" duration="1057000" />
-    </task>
-    <task id="LOCAL-00167" summary="Rebuilt &quot;find&quot; button from itstaff.html and improved &quot;delete&quot; method in RoomController.java">
-      <created>1700905941194</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1700905941195</updated>
-    </task>
-    <task id="LOCAL-00168" summary="Improved &quot;update&quot; method in WorkAreaController.java">
-      <created>1700984388455</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1700984388455</updated>
+      <workItem from="1706237636324" duration="1438000" />
+      <workItem from="1706276473601" duration="4366000" />
     </task>
     <task id="LOCAL-00169" summary="Improved &quot;delete&quot; method in WorkAreaController.java">
       <created>1701054594532</created>
@@ -742,7 +714,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706150178532</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="Added new links for main.html in lot`s of pages">
+      <created>1706239011718</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1706239011718</updated>
+    </task>
+    <task id="LOCAL-00217" summary="Added new links for main.html in lot`s of pages">
+      <created>1706239027462</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1706239027462</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -762,7 +748,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed DB name in application.properties" />
     <MESSAGE value="Added new DB in application.properties" />
     <MESSAGE value="Rebuilt application.properties" />
     <MESSAGE value="Added findByName method in DocumentServiceClass.java" />
@@ -787,7 +772,8 @@
     <MESSAGE value="Rebuilt deleteDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Tried to solve test issues in DevicesControllerTest.class" />
     <MESSAGE value="Added new frontend in login.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new frontend in login.html" />
+    <MESSAGE value="Added new links for main.html in lot`s of pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new links for main.html in lot`s of pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
