@@ -15,17 +15,23 @@
             Информационная система учета компьютерного оборудования
         </h2>
     </header>
-    <div th:if="${param.error}">
-        Invalid username and password.
-    </div>
-    <div th:if="${param.logout}">
-        You have been logged out.
-    </div>
-    <form th:action="@{/login}" method="post">
-        <div><label> User Name : <input type="text" name="username"/> </label></div>
-        <div><label> Password: <input type="password" name="password"/> </label></div>
-        <div><input type="submit" value="Войти"/></div>
-    </form>
+    <main class="main">
+        <div class="mid_part_sec">
+            <div th:if="${param.error}">
+                Invalid username and password.
+            </div>
+            <div th:if="${param.logout}">
+                You have been logged out.
+            </div>
+            <form th:action="@{/login}" method="post">
+                <div><label> <input type="text" name="username" placeholder="Логин"/> </label></div>
+                <div><label> <input type="password" name="password" placeholder="Пароль"/> </label></div>
+                <div align="center">
+                    <button class="button" type="submit">Войти</button>
+                </div>
+            </form>
+        </div>
+    </main>
     <footer class="footer">
         <div align="center">MK &copy 2023</div>
     </footer>

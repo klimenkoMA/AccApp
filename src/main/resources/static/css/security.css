@@ -15,8 +15,15 @@ html, body {
     justify-content: right;
     align-items: center;
     min-width: 100%;
-    /*padding-left: 50%;    */
     padding-bottom: 1%;
+}
+
+.mid_part_sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 8%;
 }
 
 .buttonsec {
@@ -39,4 +46,18 @@ html, body {
 .buttonsec:focus {
     outline: 4px;
     box-shadow: 0 0 0 4px #62a0f6;
+}
+
+input[type="password"] {
+    appearance: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: inherit;
+    align-items: center;
+    margin: 4px 0;
+    padding: 2px;
+    box-shadow: 0 0 3px 1px #62a0f6;
+    border-radius: 5px;
+    border: 0 #62a0f6;
 }
