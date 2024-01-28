@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/security.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -386,14 +387,7 @@
       <workItem from="1706198823923" duration="2613000" />
       <workItem from="1706237636324" duration="1438000" />
       <workItem from="1706276473601" duration="4675000" />
-      <workItem from="1706339668159" duration="2734000" />
-    </task>
-    <task id="LOCAL-00170" summary="Improved &quot;find&quot; method in WorkAreaController.java">
-      <created>1701140353548</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1701140353548</updated>
+      <workItem from="1706339668159" duration="11351000" />
     </task>
     <task id="LOCAL-00171" summary="Tech commit">
       <created>1701227319446</created>
@@ -731,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706290703632</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="Solved some issues with css styles in login.html">
+      <created>1706359998153</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1706359998153</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -751,7 +752,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt application.properties" />
     <MESSAGE value="Added findByName method in DocumentServiceClass.java" />
     <MESSAGE value="Added some comments in DocumentServiceClass.java" />
     <MESSAGE value="Added comments in DocumentClass.java" />
@@ -776,7 +776,8 @@
     <MESSAGE value="Added new frontend in login.html" />
     <MESSAGE value="Added new links for main.html in lot`s of pages" />
     <MESSAGE value="Fixed some login issues in login.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some login issues in login.html" />
+    <MESSAGE value="Solved some issues with css styles in login.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved some issues with css styles in login.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
