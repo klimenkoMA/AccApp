@@ -23,7 +23,9 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px 8%;
+    padding-top: 14%;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 .buttonsec {
@@ -44,6 +46,28 @@ html, body {
 }
 
 .buttonsec:focus {
+    outline: 4px;
+    box-shadow: 0 0 0 4px #62a0f6;
+}
+
+.buttonin {
+    display: flex;
+    appearance: none;
+    border: 0;
+    /*border-radius: 5px;*/
+    background: #62a0f6;
+    color: #fcf6f6;
+    /*padding: 2px 5px;*/
+    font-size: 16px;
+    text-shadow: #002349 2px 3px 4px;
+}
+
+.buttonin:hover {
+    color: #564827;
+    cursor: pointer;
+}
+
+.buttonin:focus {
     outline: 4px;
     box-shadow: 0 0 0 4px #62a0f6;
 }
