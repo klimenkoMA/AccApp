@@ -19,7 +19,7 @@ html, body {
 .header {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: start;
     min-height: 80px;
     max-height: 110px;

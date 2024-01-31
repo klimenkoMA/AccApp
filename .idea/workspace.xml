@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_14_57_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_14_57__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_15_15_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_15_15_[Default_Changelist]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_15_15__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_01_2024_15_15__Default_Changelist_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2024_19_18_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2024_19_18__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_01_2024_11_18_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_01_2024_11_18__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/security.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/security.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,14 +391,8 @@
       <workItem from="1706237636324" duration="1438000" />
       <workItem from="1706276473601" duration="4675000" />
       <workItem from="1706339668159" duration="18832000" />
-      <workItem from="1706544323428" duration="5289000" />
-    </task>
-    <task id="LOCAL-00173" summary="Created new repository class for new DB">
-      <created>1701398423463</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1701398423463</updated>
+      <workItem from="1706544323428" duration="6052000" />
+      <workItem from="1706631721406" duration="3144000" />
     </task>
     <task id="LOCAL-00174" summary="Added mongoDB dependency in pom.xml">
       <created>1701541380437</created>
@@ -736,7 +730,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706494626366</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="Solved csrf issue in WebSecurityConfig.java">
+      <created>1706581169200</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1706581169201</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -756,7 +757,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added comments in DocumentClass.java" />
     <MESSAGE value="Added comment in DocumentRepositoryClass.java" />
     <MESSAGE value="Added comment in DocumentControllerClass.java" />
     <MESSAGE value="Some changes in DocumentClass.java" />
@@ -781,7 +781,8 @@
     <MESSAGE value="Solved some issues with css styles in login.html" />
     <MESSAGE value="Rebuilt input`s and button html and css in login.html" />
     <MESSAGE value="Tried to solve issues with JPA and Web Security" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to solve issues with JPA and Web Security" />
+    <MESSAGE value="Solved csrf issue in WebSecurityConfig.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved csrf issue in WebSecurityConfig.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
