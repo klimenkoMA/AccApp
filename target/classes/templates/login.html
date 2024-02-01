@@ -10,19 +10,19 @@
 </head>
 <body>
 <div class="wrapper">
-    <header class="header">
-        <h2 style="width: 70%; margin: auto; color: #fcf6f6">
-            Информационная система учета компьютерного оборудования
-        </h2>
+    <header class="headerlogin">
+            <h2 style="width: 70%; text-align: center; color: #fcf6f6">
+                Информационная система учета компьютерного оборудования
+            </h2>
     </header>
     <main class="main">
         <div class="mid_part_sec">
             <div th:if="${param.error}">
                 Invalid username and password.
             </div>
-<!--            <div th:if="${param.logout}">-->
-<!--                You have been logged out.-->
-<!--            </div>         -->
+            <!--            <div th:if="${param.logout}">-->
+            <!--                You have been logged out.-->
+            <!--            </div>         -->
             <form th:action="@{/login}" method="post">
                 <div><label> <input type="text" name="username" placeholder="Логин"/> </label></div>
                 <div><label> <input type="password" name="password" placeholder="Пароль"/> </label></div>

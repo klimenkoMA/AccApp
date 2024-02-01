@@ -19,8 +19,22 @@ html, body {
 .header {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: start;
+    min-height: 80px;
+    max-height: 110px;
+    background: #62a0f6;
+    outline: none;
+    text-shadow: #002349 2px 3px 4px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.headermain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 80px;
     max-height: 110px;
     background: #62a0f6;
