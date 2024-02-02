@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/index_js.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/security.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,11 +93,19 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.index.js">
-    <configuration name="index.js" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/frontend/src/index.js" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
+  <component name="RunManager" selected="Spring Boot.RecProjApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="DevicesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
@@ -405,14 +413,7 @@
       <workItem from="1706544323428" duration="6052000" />
       <workItem from="1706631721406" duration="3507000" />
       <workItem from="1706718305254" duration="4371000" />
-      <workItem from="1706841446206" duration="1723000" />
-    </task>
-    <task id="LOCAL-00176" summary="Added DocumentController package">
-      <created>1701658698940</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1701658698940</updated>
+      <workItem from="1706841446206" duration="5603000" />
     </task>
     <task id="LOCAL-00177" summary="Added documentClass package">
       <created>1701743169746</created>
@@ -750,7 +751,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706756373725</updated>
     </task>
-    <option name="localTasksCounter" value="225" />
+    <task id="LOCAL-00225" summary="Added new script in index.js">
+      <created>1706844014454</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1706844014455</updated>
+    </task>
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,7 +778,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Some changes in DocumentClass.java" />
     <MESSAGE value="Added getDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Added some comments" />
     <MESSAGE value="Some new comments" />
@@ -795,7 +802,8 @@
     <MESSAGE value="Solved csrf issue in WebSecurityConfig.java" />
     <MESSAGE value="Changed some css style`s attributes in login.html" />
     <MESSAGE value="Rebuilt some css styles and html tags in login.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt some css styles and html tags in login.html" />
+    <MESSAGE value="Added new script in index.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new script in index.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
