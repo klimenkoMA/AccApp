@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_01_2024_19_52_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_01_2024_19_52__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/security.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/security.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,17 +94,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Database Script.index.js">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.js" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/frontend/src/index.js" />
       <script-mode>FILE</script-mode>
@@ -171,12 +154,12 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Database Script.index.js" />
       <item itemvalue="JavaScript Debug.employee.html" />
       <item itemvalue="Jest.App.test.js" />
       <item itemvalue="JUnit.DevicesControllerTest" />
       <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList" />
       <item itemvalue="Spring Boot.RecProjApplication" />
-      <item itemvalue="Database Script.index.js" />
     </list>
     <recent_temporary>
       <list>
@@ -421,14 +404,8 @@
       <workItem from="1706339668159" duration="18832000" />
       <workItem from="1706544323428" duration="6052000" />
       <workItem from="1706631721406" duration="3507000" />
-      <workItem from="1706718305254" duration="4028000" />
-    </task>
-    <task id="LOCAL-00175" summary="Corrected the view of some buttons in html pages">
-      <created>1701575349412</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1701575349412</updated>
+      <workItem from="1706718305254" duration="4371000" />
+      <workItem from="1706841446206" duration="1723000" />
     </task>
     <task id="LOCAL-00176" summary="Added DocumentController package">
       <created>1701658698940</created>
@@ -766,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706669495928</updated>
     </task>
-    <option name="localTasksCounter" value="224" />
+    <task id="LOCAL-00224" summary="Rebuilt some css styles and html tags in login.html">
+      <created>1706756373724</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1706756373725</updated>
+    </task>
+    <option name="localTasksCounter" value="225" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -786,7 +770,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added comment in DocumentControllerClass.java" />
     <MESSAGE value="Some changes in DocumentClass.java" />
     <MESSAGE value="Added getDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Added some comments" />
@@ -811,7 +794,8 @@
     <MESSAGE value="Tried to solve issues with JPA and Web Security" />
     <MESSAGE value="Solved csrf issue in WebSecurityConfig.java" />
     <MESSAGE value="Changed some css style`s attributes in login.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed some css style`s attributes in login.html" />
+    <MESSAGE value="Rebuilt some css styles and html tags in login.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt some css styles and html tags in login.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
