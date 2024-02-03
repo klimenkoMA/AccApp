@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/index_js.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,19 +93,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DevicesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <extension name="coverage">
@@ -171,7 +157,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Database Script.index.js" />
         <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList" />
         <item itemvalue="JUnit.DevicesControllerTest" />
         <item itemvalue="Jest.App.test.js" />
@@ -413,14 +398,8 @@
       <workItem from="1706544323428" duration="6052000" />
       <workItem from="1706631721406" duration="3507000" />
       <workItem from="1706718305254" duration="4371000" />
-      <workItem from="1706841446206" duration="5603000" />
-    </task>
-    <task id="LOCAL-00177" summary="Added documentClass package">
-      <created>1701743169746</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1701743169746</updated>
+      <workItem from="1706841446206" duration="5824000" />
+      <workItem from="1706939901858" duration="2396000" />
     </task>
     <task id="LOCAL-00178" summary="Renamed all mongoDB classes">
       <created>1701829765345</created>
@@ -758,7 +737,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706844014455</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="Added starting of Node.js server in AccountingApplication.java">
+      <created>1706896599280</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1706896599280</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -778,7 +764,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added getDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Added some comments" />
     <MESSAGE value="Some new comments" />
     <MESSAGE value="Another comment in DevicesController.java" />
@@ -803,7 +788,8 @@
     <MESSAGE value="Changed some css style`s attributes in login.html" />
     <MESSAGE value="Rebuilt some css styles and html tags in login.html" />
     <MESSAGE value="Added new script in index.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new script in index.js" />
+    <MESSAGE value="Added starting of Node.js server in AccountingApplication.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added starting of Node.js server in AccountingApplication.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
