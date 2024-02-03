@@ -25,24 +25,26 @@ public class AccountingApplication implements WebMvcConfigurer {
 
     public static void main(String[] args) {
         SpringApplication.run(AccountingApplication.class, args);
+
+        /*Starting of index.js script,the part of React.js*/
         try {
-            // Создаем объект ProcessBuilder с командой, которую нужно выполнить
+            //Create a ProcessBuilder object with the command to be executed
             ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", "node D:\\JAVA\\REPOSITORY\\AccApp\\frontend\\src\\index.js");
 
-            // Устанавливаем рабочий каталог для команды
+            //Set the working directory for the command
             processBuilder.directory(new File("C:\\"));
 
-            // Запускаем процесс
+            //Start the process
             Process process = processBuilder.start();
 
-            // Читаем вывод команды
+            //Reading the command`s output
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             while ((line = reader.readLine()) != null) {
-                System.out.println();
+                System.out.println(line);
             }
 
-            // Ждем завершения процесса
+            //Waiting for the process finishing
             int exitCode = process.waitFor();
             System.out.println("Exit Code: " + exitCode);
 
@@ -55,10 +57,6 @@ public class AccountingApplication implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
     }
-
-
-
-
 
 
 }
