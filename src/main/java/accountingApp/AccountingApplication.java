@@ -31,22 +31,31 @@ public class AccountingApplication implements WebMvcConfigurer {
             //Create a ProcessBuilder object with the command to be executed
             ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", "node D:\\JAVA\\REPOSITORY\\AccApp\\frontend\\src\\index.js");
 
+            // Задаем путь к исполняемому файлу mongod
+            String mongoDBPath = "C:\\mongod.exe.lnk";
+
             //Set the working directory for the command
             processBuilder.directory(new File("C:\\"));
+
+            // Создаем ProcessBuilder
+            ProcessBuilder processBuilder2 = new ProcessBuilder("cmd.exe", "/c", mongoDBPath);
+
+            // Запускаем процесс
+            Process process2 = processBuilder2.start();
 
             //Start the process
             Process process = processBuilder.start();
 
-            //Reading the command`s output
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-
             //Waiting for the process finishing
             int exitCode = process.waitFor();
+            // Ждем, пока процесс не завершится
+            int exitCode2 = process2.waitFor();
             System.out.println("Exit Code: " + exitCode);
+            if (exitCode2 == 0) {
+                System.out.println("mongod успешно запущен!");
+            } else {
+                System.out.println("Ошибка при запуске mongod: " + exitCode2);
+            }
 
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();

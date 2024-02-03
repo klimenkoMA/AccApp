@@ -1,6 +1,20 @@
 {
-  "name": "AccApp",
+  "name": "accapp",
   "lockfileVersion": 2,
   "requires": true,
-  "packages": {}
+  "packages": {},
+  "description": "Institute project, application for accounting of computer equipment",
+  "version": "1.0.0",
+  "main": "D:\\JAVA\\REPOSITORY\\AccApp\\frontend\\src\\index.js",
+  "type": "module",
+  "scripts": {
+    "start": "D:\\JAVA\\REPOSITORY\\AccApp\\frontend\\src\\index.js",
+    "start:dev": "nodemon D:\\JAVA\\REPOSITORY\\AccApp\\frontend\\src\\training.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
 }
