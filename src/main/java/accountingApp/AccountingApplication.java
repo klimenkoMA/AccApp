@@ -28,9 +28,13 @@ public class AccountingApplication implements WebMvcConfigurer {
 
         /*Starting of index.js script,the part of React.js*/
         try {
-            //Create a ProcessBuilder object with the command to be executed
-            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", "node D:\\JAVA\\REPOSITORY\\AccApp\\frontend\\src\\index.js");
 
+            String npmPath = "C:\\npmstart.bat.lnk";
+            // D:\JAVA\REPOSITORY\AccApp\frontend\src\training.js
+            System.out.println("npm run start:dev");
+
+            //Create a ProcessBuilder object with the command to be executed
+            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", npmPath);
             // Задаем путь к исполняемому файлу mongod
             String mongoDBPath = "C:\\mongod.exe.lnk";
 
@@ -46,18 +50,9 @@ public class AccountingApplication implements WebMvcConfigurer {
             //Start the process
             Process process = processBuilder.start();
 
-            //Waiting for the process finishing
-            int exitCode = process.waitFor();
-            // Ждем, пока процесс не завершится
-            int exitCode2 = process2.waitFor();
-            System.out.println("Exit Code: " + exitCode);
-            if (exitCode2 == 0) {
-                System.out.println("mongod успешно запущен!");
-            } else {
-                System.out.println("Ошибка при запуске mongod: " + exitCode2);
-            }
-
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException
+//                | InterruptedException
+                e) {
             e.printStackTrace();
         }
     }
