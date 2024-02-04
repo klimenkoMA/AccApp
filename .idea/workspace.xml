@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npmstart.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" afterDir="false" />
     </list>
@@ -68,6 +64,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlserver&#10;mongo" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -81,6 +78,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
@@ -99,19 +99,83 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RecProjApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:4444/auth/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:80/api/item" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="id" />
+                <option name="value" value="99" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AccountingApplication">
+    <configuration name="AccountingApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="accountingApp.AccountingApplication" />
+      <module name="AccApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="DevicesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -145,45 +209,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="$PROJECT_DIR$/../../../Install/Node.js/node" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/frontend" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/frontend/src/App.test.js" />
-      <method v="2" />
-    </configuration>
-    <configuration name="employee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccApp/templates/employee.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/frontend/src/index.js" working-dir="$PROJECT_DIR$/frontend/public">
       <method v="2" />
     </configuration>
-    <configuration name="RecProjApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="AccApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" editBeforeRun="true" singleton="false">
       <module name="AccApp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="accountingApp.AccountingApplication" />
+      <option name="DEBUG_MODE" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" singleton="false" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Application.AccountingApplication" />
       <item itemvalue="Database Script.index.js" />
-      <item itemvalue="JavaScript Debug.employee.html" />
-      <item itemvalue="Jest.App.test.js" />
+      <item itemvalue="HTTP Request.rest-api#1" />
+      <item itemvalue="HTTP Request.rest-api#2" />
       <item itemvalue="JUnit.DevicesControllerTest" />
       <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList" />
-      <item itemvalue="Spring Boot.RecProjApplication" />
-      <item itemvalue="HTTP Request.rest-api#1" />
+      <item itemvalue="npm.start:dev" />
+      <item itemvalue="Spring Boot.AccApp" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.rest-api#1" />
+        <item itemvalue="HTTP Request.rest-api#2" />
         <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList" />
         <item itemvalue="JUnit.DevicesControllerTest" />
-        <item itemvalue="Jest.App.test.js" />
-        <item itemvalue="JavaScript Debug.employee.html" />
       </list>
     </recent_temporary>
   </component>
@@ -422,21 +485,8 @@
       <workItem from="1706631721406" duration="3507000" />
       <workItem from="1706718305254" duration="4371000" />
       <workItem from="1706841446206" duration="5824000" />
-      <workItem from="1706939901858" duration="14413000" />
-    </task>
-    <task id="LOCAL-00179" summary="Created fields in DocumentClass.java">
-      <created>1701919328899</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1701919328900</updated>
-    </task>
-    <task id="LOCAL-00180" summary="Added toString() method in DocumentClass.java">
-      <created>1702005424063</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1702005424064</updated>
+      <workItem from="1706939901858" duration="14735000" />
+      <workItem from="1707025787856" duration="11318000" />
     </task>
     <task id="LOCAL-00181" summary="Tech commit">
       <created>1702126139771</created>
@@ -767,7 +817,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706944090825</updated>
     </task>
-    <option name="localTasksCounter" value="228" />
+    <task id="LOCAL-00228" summary="Created training.js and added express and nodemon lib`s into it">
+      <created>1706983426794</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1706983426794</updated>
+    </task>
+    <task id="LOCAL-00229" summary="Created training.js and added express and nodemon lib`s into it">
+      <created>1706983438554</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1706983438554</updated>
+    </task>
+    <option name="localTasksCounter" value="230" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -787,7 +851,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Some new comments" />
     <MESSAGE value="Another comment in DevicesController.java" />
     <MESSAGE value="New comment in DevicesRepository.java" />
     <MESSAGE value="Added comment in EmployeeRepository.java" />
@@ -812,7 +875,8 @@
     <MESSAGE value="Added new script in index.js" />
     <MESSAGE value="Added starting of Node.js server in AccountingApplication.java" />
     <MESSAGE value="Rebuilt comments in AccountingApplication.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt comments in AccountingApplication.java" />
+    <MESSAGE value="Created training.js and added express and nodemon lib`s into it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created training.js and added express and nodemon lib`s into it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

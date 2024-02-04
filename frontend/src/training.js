@@ -5,7 +5,8 @@ console.log("bugaga");
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Сайт для кисиных томатиков! В процессе разработки ' +
+        'Вот томатик, и вот томатик!');
 });
 
 app.post('/auth/login', (req, res) => {
