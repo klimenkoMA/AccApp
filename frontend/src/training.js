@@ -1,8 +1,11 @@
 import express from 'express';
+import jwt from 'jsonwebtoken';
 
 console.log("bugaga");
 
 const app = express();
+
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('Сайт для кисиных томатиков! В процессе разработки ' +
@@ -10,6 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/auth/login', (req, res) => {
+    console.log(req.body);
     res.json({
        success:true,
     });
