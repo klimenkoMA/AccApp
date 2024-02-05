@@ -29,30 +29,19 @@ public class AccountingApplication implements WebMvcConfigurer {
         /*Starting of index.js script,the part of React.js*/
         try {
 
+            //Set the working directory for the command`s
             String npmPath = "C:\\npmstart.bat.lnk";
-            // D:\JAVA\REPOSITORY\AccApp\frontend\src\training.js
-            System.out.println("npm run start:dev");
-
-            //Create a ProcessBuilder object with the command to be executed
-            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", npmPath);
-            // Задаем путь к исполняемому файлу mongod
             String mongoDBPath = "C:\\mongod.exe.lnk";
 
-            //Set the working directory for the command
-            processBuilder.directory(new File("C:\\"));
-
-            // Создаем ProcessBuilder
+            //Create a ProcessBuilder objects with the command to be executed
+            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", npmPath);
             ProcessBuilder processBuilder2 = new ProcessBuilder("cmd.exe", "/c", mongoDBPath);
 
-            // Запускаем процесс
-            Process process2 = processBuilder2.start();
+            //Start the processes
+            processBuilder.start();
+            processBuilder2.start();
 
-            //Start the process
-            Process process = processBuilder.start();
-
-        } catch (IOException
-//                | InterruptedException
-                e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
