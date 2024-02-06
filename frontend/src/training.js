@@ -1,5 +1,12 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
+import mongoose from 'mongoose';
+
+mongoose.connect('mongodb://localhost:27017/upcdocs')
+    .then(() => {
+        console.log('DB connected')
+            .catch(() => 'DB error', err);
+    });
 
 console.log("bugaga");
 
@@ -14,8 +21,16 @@ app.get('/', (req, res) => {
 
 app.post('/auth/login', (req, res) => {
     console.log(req.body);
+
+    const token = jwt.sign({
+            email: req.body.email,
+            fullName: "Vasya Pupkin"
+        }, 'secret123',
+    );
+
     res.json({
-       success:true,
+        success: true,
+        token
     });
 
 });
