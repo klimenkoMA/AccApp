@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +116,22 @@
             </list>
           </option>
           <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;test@test.ru&quot;,&#10;  &quot;password&quot;: &quot;123456&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:4444/auth/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="{&#10;&quot;email&quot;: &quot;test@test.ru&quot;,&#10;  &quot;password&quot;: &quot;123456&quot;&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
@@ -173,19 +188,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -504,14 +506,8 @@
       <workItem from="1706718305254" duration="4371000" />
       <workItem from="1706841446206" duration="5824000" />
       <workItem from="1706939901858" duration="14735000" />
-      <workItem from="1707025787856" duration="17889000" />
-    </task>
-    <task id="LOCAL-00182" summary="Added deleteDocument method in DocumentServiceClass.java">
-      <created>1702216812581</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1702216812582</updated>
+      <workItem from="1707025787856" duration="18537000" />
+      <workItem from="1707149924819" duration="3359000" />
     </task>
     <task id="LOCAL-00183" summary="Added findDocument method in DocumentServiceClass.java">
       <created>1702313695919</created>
@@ -849,7 +845,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707052572625</updated>
     </task>
-    <option name="localTasksCounter" value="231" />
+    <task id="LOCAL-00231" summary="Added jsonwebtoken lib into training.js">
+      <created>1707102882633</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1707102882634</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -869,7 +872,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="New comment in DevicesRepository.java" />
     <MESSAGE value="Added comment in EmployeeRepository.java" />
     <MESSAGE value="Made a lot of changes to start a web-server" />
     <MESSAGE value="Added mongoDB connection to project" />
@@ -894,7 +896,8 @@
     <MESSAGE value="Rebuilt comments in AccountingApplication.java" />
     <MESSAGE value="Created training.js and added express and nodemon lib`s into it" />
     <MESSAGE value="Solved issue with parallel working AccountingApplication and training.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solved issue with parallel working AccountingApplication and training.js" />
+    <MESSAGE value="Added jsonwebtoken lib into training.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added jsonwebtoken lib into training.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
