@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,6 +183,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -505,14 +515,7 @@
       <workItem from="1707025787856" duration="18537000" />
       <workItem from="1707149924819" duration="4867000" />
       <workItem from="1707320832369" duration="2538000" />
-      <workItem from="1707326675477" duration="328000" />
-    </task>
-    <task id="LOCAL-00185" summary="Created add method in DocumentControllerClass">
-      <created>1702490779427</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1702490779428</updated>
+      <workItem from="1707326675477" duration="1572000" />
     </task>
     <task id="LOCAL-00186" summary="Added delete method in DocumentControllerClass.java">
       <created>1702523239879</created>
@@ -850,7 +853,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707326896994</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="Downloaded some node js files">
+      <created>1707327378758</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1707327378758</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -870,7 +880,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added mongoDB connection to project" />
     <MESSAGE value="Added findAll method in DocumentRepositoryClass.java" />
     <MESSAGE value="Added findAll impl`s in some classes and created documents.html" />
     <MESSAGE value="Rebuilt documents.html" />
@@ -895,7 +904,8 @@
     <MESSAGE value="Added jsonwebtoken lib into training.js" />
     <MESSAGE value="Added connection to MongoDB in training.js" />
     <MESSAGE value="Tried to change node js version to solve mongoDb connection issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to change node js version to solve mongoDb connection issue" />
+    <MESSAGE value="Downloaded some node js files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Downloaded some node js files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
