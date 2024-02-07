@@ -7,10 +7,6 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -507,14 +503,8 @@
       <workItem from="1706841446206" duration="5824000" />
       <workItem from="1706939901858" duration="14735000" />
       <workItem from="1707025787856" duration="18537000" />
-      <workItem from="1707149924819" duration="3359000" />
-    </task>
-    <task id="LOCAL-00183" summary="Added findDocument method in DocumentServiceClass.java">
-      <created>1702313695919</created>
-      <option name="number" value="00183" />
-      <option name="presentableId" value="LOCAL-00183" />
-      <option name="project" value="LOCAL" />
-      <updated>1702313695920</updated>
+      <workItem from="1707149924819" duration="4867000" />
+      <workItem from="1707320832369" duration="2538000" />
     </task>
     <task id="LOCAL-00184" summary="Added updateDocument method in DocumentServiceClass.java">
       <created>1702349784318</created>
@@ -852,7 +842,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707102882634</updated>
     </task>
-    <option name="localTasksCounter" value="232" />
+    <task id="LOCAL-00232" summary="Added connection to MongoDB in training.js">
+      <created>1707190079507</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1707190079507</updated>
+    </task>
+    <option name="localTasksCounter" value="233" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -872,7 +869,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added comment in EmployeeRepository.java" />
     <MESSAGE value="Made a lot of changes to start a web-server" />
     <MESSAGE value="Added mongoDB connection to project" />
     <MESSAGE value="Added findAll method in DocumentRepositoryClass.java" />
@@ -897,7 +893,8 @@
     <MESSAGE value="Created training.js and added express and nodemon lib`s into it" />
     <MESSAGE value="Solved issue with parallel working AccountingApplication and training.js" />
     <MESSAGE value="Added jsonwebtoken lib into training.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added jsonwebtoken lib into training.js" />
+    <MESSAGE value="Added connection to MongoDB in training.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added connection to MongoDB in training.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

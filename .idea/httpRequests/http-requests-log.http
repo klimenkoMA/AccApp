@@ -6,6 +6,52 @@ Content-Type: application/json
   "password": "123456"
 }
 
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "123456"
+}
+
+<> 2024-02-07T201148.200.json
+
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "123456"
+}
+
+<> 2024-02-07T200253.200.json
+
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "123456"
+}
+
+<> 2024-02-07T194251.200.json
+
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "123456"
+}
+
 <> 2024-02-06T054545.200.json
 
 ###
