@@ -2,7 +2,7 @@ import express from 'express';
 import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://localhost:27017/upcdocs')
+mongoose.connect('mongodb://localhost:27018/upcdocs')
     .then(() => {
         console.log('DB connected')
             .catch(() => 'DB error', err);
