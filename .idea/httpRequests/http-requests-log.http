@@ -1,3 +1,97 @@
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "12398989",
+  "fullName": "Bobrik Bober Bobrovich",
+  "avatarUrl": "https://theprogs.ru/wp-content/uploads/chatgpt-social-theprogs-ru.jpg"
+}
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "12398989",
+  "fullName": "Bobrik Bober Bobrovich",
+  "avatarUrl": "https://theprogs.ru/wp-content/uploads/chatgpt-social-theprogs-ru.jpg"
+}
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "testtest.ru",
+  "password": "12398989",
+  "fullName": "Bobrik Bober Bobrovich",
+  "avatarUrl": "https://theprogs.ru/wp-content/uploads/chatgpt-social-theprogs-ru.jpg"
+}
+
+<> 2024-02-09T200806.400.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "123",
+  "fullName": "Bobrik Bober Bobrovich",
+  "avatarUrl": "https://theprogs.ru/wp-content/uploads/chatgpt-social-theprogs-ru.jpg"
+}
+
+<> 2024-02-09T200757.400.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "12398985",
+  "fullName": "Bobrik Bober Bobrovich",
+  "avatarUrl": "https://theprogs.ru/wp-content/uploads/chatgpt-social-theprogs-ru.jpg"
+}
+
+<> 2024-02-09T200416.200.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "123",
+  "fullName": "Bobrik Bober Bobrovich",
+  "avatarUrl": "https://theprogs.ru/wp-content/uploads/chatgpt-social-theprogs-ru.jpg"
+}
+
+<> 2024-02-09T200359.400.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.ru",
+  "password": "123456",
+  "fullName": "Bobrik Bober Bobrovich",
+  "avatarUrl": "https://theprogs.ru/wp-content/uploads/chatgpt-social-theprogs-ru.jpg"
+}
+
+<> 2024-02-09T200132.200.json
+
+###
+
 POST http://localhost:4444/auth/login
 Content-Type: application/json
 
