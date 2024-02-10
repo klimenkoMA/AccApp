@@ -1193,14 +1193,7 @@
       <workItem from="1707326675477" duration="3681000" />
       <workItem from="1707359432360" duration="1099000" />
       <workItem from="1707411330772" duration="2722000" />
-      <workItem from="1707491435920" duration="13186000" />
-    </task>
-    <task id="LOCAL-00191" summary="Added new DB in application.properties">
-      <created>1702953658880</created>
-      <option name="number" value="00191" />
-      <option name="presentableId" value="LOCAL-00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1702953658880</updated>
+      <workItem from="1707491435920" duration="13555000" />
     </task>
     <task id="LOCAL-00192" summary="Rebuilt application.properties">
       <created>1703097144233</created>
@@ -1538,7 +1531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707449091336</updated>
     </task>
-    <option name="localTasksCounter" value="240" />
+    <task id="LOCAL-00240" summary="Changed versions of node js and mongoose">
+      <created>1707557276626</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1707557276630</updated>
+    </task>
+    <option name="localTasksCounter" value="241" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1558,7 +1558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added deleteDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt deleteDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Tried to solve test issues in DevicesControllerTest.class" />
     <MESSAGE value="Added new frontend in login.html" />
@@ -1583,7 +1582,8 @@
     <MESSAGE value="Solved issue with node js and mongoDB connection + added some node js files" />
     <MESSAGE value="Added new port to connection mongoDB in training.js" />
     <MESSAGE value="Solved a new issue from mongoose" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solved a new issue from mongoose" />
+    <MESSAGE value="Changed versions of node js and mongoose" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed versions of node js and mongoose" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
