@@ -5,11 +5,11 @@ import {registerValidation} from "./validations/auth.js";
 import {validationResult} from 'express-validator';
 import UserModel from "./models/User.js";
 
+
 mongoose.connect('mongodb://localhost:27017/reactdb')
-// mongoose.connect('localhost:27017/reactdb')
     .then(() => {
-        console.log('DB connected')
-            .catch(() => 'DB error', err);
+        console.log('DB connected');
+            // .catch(() => 'DB error', err);
     });
 
 const app = express();
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
         'Вот томатик, и вот томатик!');
 });
 
-app.post('/auth/register', registerValidation,async (req, res) => {
+app.post('/auth/register', registerValidation, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json(errors.array());
@@ -40,8 +40,6 @@ app.post('/auth/register', registerValidation,async (req, res) => {
 
     const user = await doc.save();
 });
-
-
 
 app.listen(4444, (err) => {
     if (err) {
