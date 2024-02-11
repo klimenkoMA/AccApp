@@ -935,14 +935,7 @@
       <workItem from="1707359432360" duration="1099000" />
       <workItem from="1707411330772" duration="2722000" />
       <workItem from="1707491435920" duration="18811000" />
-      <workItem from="1707633199083" duration="4134000" />
-    </task>
-    <task id="LOCAL-00193" summary="Added findByName method in DocumentServiceClass.java">
-      <created>1703214908810</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1703214908811</updated>
+      <workItem from="1707633199083" duration="4495000" />
     </task>
     <task id="LOCAL-00194" summary="Added findAll method in DocumentRepositoryClass.java">
       <created>1703351622175</created>
@@ -1280,7 +1273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707557410604</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="Installed new mongoDB version">
+      <created>1707644369734</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1707644369734</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1300,7 +1300,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt deleteDocument method in DocumentControllerClass.java" />
     <MESSAGE value="Tried to solve test issues in DevicesControllerTest.class" />
     <MESSAGE value="Added new frontend in login.html" />
     <MESSAGE value="Added new links for main.html in lot`s of pages" />
@@ -1325,7 +1324,8 @@
     <MESSAGE value="Added new port to connection mongoDB in training.js" />
     <MESSAGE value="Solved a new issue from mongoose" />
     <MESSAGE value="Changed versions of node js and mongoose" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed versions of node js and mongoose" />
+    <MESSAGE value="Installed new mongoDB version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Installed new mongoDB version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
