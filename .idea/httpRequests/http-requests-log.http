@@ -2,6 +2,42 @@ POST http://localhost:4444/auth/register
 Content-Type: application/json
 
 {
+  "email": "testik23@test.ru",
+  "password": "233454353452",
+  "fullName": "Abram Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "testik23@test.ru",
+  "password": "233454353452",
+  "fullName": "Abram Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Abram Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
   "email": "test@test.ru",
   "password": "12398989",
   "fullName": "Bobrik Bober Bobrovich",

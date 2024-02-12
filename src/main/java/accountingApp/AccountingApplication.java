@@ -26,7 +26,7 @@ public class AccountingApplication implements WebMvcConfigurer {
     public static void main(String[] args) {
         SpringApplication.run(AccountingApplication.class, args);
 
-        /*Starting of index.js script,the part of React.js*/
+        /*Starting of index.cjs script,the part of React.js*/
         try {
 
             //Set the working directory for the command`s

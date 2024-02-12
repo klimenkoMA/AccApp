@@ -39,7 +39,9 @@ app.post('/auth/register', registerValidation, async (req, res) => {
     });
 
     const user = await doc.save();
+    console.log("User successfully logged");
 });
+
 
 app.listen(4444, (err) => {
     if (err) {
