@@ -1,3 +1,9 @@
 Иди сначала пройди React sneakers, потом react Pizza, только потом этот урок
 
 
+{
+  "email": "testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Abram Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
