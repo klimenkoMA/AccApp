@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -586,13 +581,7 @@
       <workItem from="1707411330772" duration="2722000" />
       <workItem from="1707491435920" duration="18811000" />
       <workItem from="1707633199083" duration="6966000" />
-    </task>
-    <task id="LOCAL-00195" summary="Added some comments in DocumentServiceClass.java">
-      <created>1703440644831</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1703440644832</updated>
+      <workItem from="1707757766768" duration="3016000" />
     </task>
     <task id="LOCAL-00196" summary="Added comments in DocumentClass.java">
       <created>1703528388737</created>
@@ -930,7 +919,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707644509075</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="Rebuilt index.js to index.cjs">
+      <created>1707758452866</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1707758452867</updated>
+    </task>
+    <option name="localTasksCounter" value="245" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -950,7 +946,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to solve test issues in DevicesControllerTest.class" />
     <MESSAGE value="Added new frontend in login.html" />
     <MESSAGE value="Added new links for main.html in lot`s of pages" />
     <MESSAGE value="Fixed some login issues in login.html" />
@@ -975,7 +970,8 @@
     <MESSAGE value="Solved a new issue from mongoose" />
     <MESSAGE value="Changed versions of node js and mongoose" />
     <MESSAGE value="Installed new mongoDB version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Installed new mongoDB version" />
+    <MESSAGE value="Rebuilt index.js to index.cjs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt index.js to index.cjs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
