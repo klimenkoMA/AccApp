@@ -2,6 +2,92 @@ POST http://localhost:4444/auth/register
 Content-Type: application/json
 
 {
+  "email": "testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Abram Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+<> 2024-02-13T213829.200.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Abram Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+<> 2024-02-13T212555.200.json
+
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+  "email": "testik@test.ru",
+  "password": "233454353452"
+}
+
+<> 2024-02-13T205739.200.json
+
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+  "email": "testik@test.ru",
+  "password": "233454353452"
+}
+
+<> 2024-02-13T205523.200.json
+
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+  "email": "testik@test.ru",
+  "password": "233454353452"
+}
+
+<> 2024-02-13T205127.200.json
+
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+
+}
+
+<> 2024-02-13T205052.200.json
+
+###
+
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+
+}
+
+<> 2024-02-13T204806.200.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
   "email": "testik23@test.ru",
   "password": "233454353452",
   "fullName": "Abram Sara Goha",
