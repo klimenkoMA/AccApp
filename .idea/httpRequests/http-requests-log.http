@@ -1,3 +1,83 @@
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+  "email": "111testik@test.ru",
+  "password": "233454353452"
+}
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "111testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Papapa Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+<> 2024-02-14T201258.200.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "111testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Papapa Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+<> 2024-02-14T200947.200.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "111testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Papapa Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+<> 2024-02-14T200214.200.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Abram Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+<> 2024-02-14T200059.500.json
+
+###
+
+POST http://localhost:4444/auth/register
+Content-Type: application/json
+
+{
+  "email": "testik@test.ru",
+  "password": "233454353452",
+  "fullName": "Abram Sara Goha",
+  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
+}
+
+<> 2024-02-14T195910.500.json
+
+###
+
 POST http://localhost:4444/auth/register
 Content-Type: application/json
 
