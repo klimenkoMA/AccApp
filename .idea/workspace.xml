@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/validations/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/validations/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +102,22 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:4444/auth/register" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;111testik@test.ru&quot;,&#10;  &quot;password&quot;: &quot;233454353452&quot;,&#10;  &quot;fullName&quot;: &quot;Papapa Sara Goha&quot;,&#10;  &quot;avatarUrl&quot;: &quot;https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="POST" />
           <option name="urlBase" value="http://localhost:4444/auth/register" />
@@ -648,14 +663,8 @@
       <workItem from="1707491435920" duration="18811000" />
       <workItem from="1707633199083" duration="6966000" />
       <workItem from="1707757766768" duration="3058000" />
-      <workItem from="1707844318737" duration="3981000" />
-    </task>
-    <task id="LOCAL-00197" summary="Added comment in DocumentRepositoryClass.java">
-      <created>1703608254350</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1703608254350</updated>
+      <workItem from="1707844318737" duration="4878000" />
+      <workItem from="1707927071749" duration="5986000" />
     </task>
     <task id="LOCAL-00198" summary="Added comment in DocumentControllerClass.java">
       <created>1703644773266</created>
@@ -993,7 +1002,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707793433440</updated>
     </task>
-    <option name="localTasksCounter" value="246" />
+    <task id="LOCAL-00246" summary="Rebuilt some js files">
+      <created>1707879957027</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1707879957046</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1013,7 +1029,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new links for main.html in lot`s of pages" />
     <MESSAGE value="Fixed some login issues in login.html" />
     <MESSAGE value="Solved some issues with css styles in login.html" />
     <MESSAGE value="Rebuilt input`s and button html and css in login.html" />
@@ -1038,7 +1053,8 @@
     <MESSAGE value="Installed new mongoDB version" />
     <MESSAGE value="Rebuilt index.js to index.cjs" />
     <MESSAGE value="Rebuilt training.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt training.js" />
+    <MESSAGE value="Rebuilt some js files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt some js files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
