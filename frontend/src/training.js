@@ -16,7 +16,7 @@ const app = express();
 
 app.use(express.json());
 
-app.post('/auth/login', async (res, req) => {
+app.post('/auth/login', async (req, res) => {
     try {
 
         const user = await UserModel.findOne({
@@ -24,7 +24,7 @@ app.post('/auth/login', async (res, req) => {
         });
 
         if (!user) {
-            return req.status(404).json({
+            return res.status(404).json({
                 message: 'User not found',
             });
         }
@@ -32,7 +32,7 @@ app.post('/auth/login', async (res, req) => {
         const isValidPass = await bcrypt.compare(req.body.password, user._doc.passwordHash);
 
         if (!isValidPass) {
-            return req.status(404).json({
+            return res.status(400).json({
                 message: 'Login or password is invalid',
             });
         }
@@ -48,7 +48,7 @@ app.post('/auth/login', async (res, req) => {
 
         const {passwordHash, ...userData} = user._doc;
 
-        await res.json({
+       res.json({
             ...userData,
             token,
         });
@@ -102,6 +102,14 @@ app.post('/auth/register', registerValidation, async (req, res) => {
             message: 'Authorisation`s failure',
         });
     }
+});
+
+app.get('/auth/me', (req,res) => {
+   try{
+       
+   } catch (err) {
+
+   }
 });
 
 
