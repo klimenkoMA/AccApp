@@ -104,6 +104,38 @@
       <list>
         <RestClientRequest>
           <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:4444/auth/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;111testik@test.ru&quot;,&#10;  &quot;password&quot;: &quot;2334543534521&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:4444/auth/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;111testik@test.ru&quot;,&#10;  &quot;password&quot;: &quot;233454353452&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
           <option name="urlBase" value="http://localhost:4444/auth/register" />
           <option name="urlPath" value="" />
           <option name="headers">
@@ -664,14 +696,8 @@
       <workItem from="1707633199083" duration="6966000" />
       <workItem from="1707757766768" duration="3058000" />
       <workItem from="1707844318737" duration="4878000" />
-      <workItem from="1707927071749" duration="5986000" />
-    </task>
-    <task id="LOCAL-00198" summary="Added comment in DocumentControllerClass.java">
-      <created>1703644773266</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1703644773266</updated>
+      <workItem from="1707927071749" duration="7833000" />
+      <workItem from="1708019960121" duration="1688000" />
     </task>
     <task id="LOCAL-00199" summary="Some changes in DocumentClass.java">
       <created>1703727953961</created>
@@ -1009,7 +1035,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707879957046</updated>
     </task>
-    <option name="localTasksCounter" value="247" />
+    <task id="LOCAL-00247" summary="Continued to code backend in training.js">
+      <created>1707962592868</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1707962592869</updated>
+    </task>
+    <option name="localTasksCounter" value="248" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1029,7 +1062,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed some login issues in login.html" />
     <MESSAGE value="Solved some issues with css styles in login.html" />
     <MESSAGE value="Rebuilt input`s and button html and css in login.html" />
     <MESSAGE value="Tried to solve issues with JPA and Web Security" />
@@ -1054,7 +1086,8 @@
     <MESSAGE value="Rebuilt index.js to index.cjs" />
     <MESSAGE value="Rebuilt training.js" />
     <MESSAGE value="Rebuilt some js files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt some js files" />
+    <MESSAGE value="Continued to code backend in training.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continued to code backend in training.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
