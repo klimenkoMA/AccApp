@@ -5,6 +5,7 @@ import * as mongoose from "mongoose";
 import {registerValidation} from './validations/auth.js';
 import {validationResult} from "express-validator";
 import UserModel from './models/User.js';
+import checkAuth from './utils/checkAuth.js';
 
 
 mongoose.connect('mongodb://localhost:27017/nodedb')
@@ -104,10 +105,11 @@ app.post('/auth/register', registerValidation, async (req, res) => {
     }
 });
 
-app.get('/auth/me', (req,res) => {
+app.get('/auth/me', checkAuth, (req,res) => {
    try{
        
    } catch (err) {
+
 
    }
 });
