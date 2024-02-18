@@ -1,6 +1,74 @@
 GET http://localhost:4444/auth/me
 Accept: application/json
 
+<> 2024-02-17T192301.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+<> 2024-02-17T192136.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+<> 2024-02-17T191756.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+<> 2024-02-17T185949.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+<> 2024-02-17T185850.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+<> 2024-02-17T185820.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+<> 2024-02-17T185711.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+<> 2024-02-17T185120.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+<> 2024-02-17T184958.403.json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
+###
+
+GET http://localhost:4444/auth/me
+Accept: application/json
+
 ###
 
 GET http://localhost:4444/auth/me
@@ -475,75 +543,6 @@ Content-Type: application/json
   "email": "test@test.ru",
   "password": "123456"
 }
-
-###
-
-POST http://localhost:4444/auth/login
-Content-Type: application/json
-
-{
-"email": "test@test.ru",
-  "password": "123456"
-}
-
-<> 2024-02-04T210519.200.json
-
-###
-
-POST http://localhost:4444/auth/login
-Content-Type: application/json
-
-{}
-
-<> 2024-02-04T210305.200.json
-
-###
-
-POST http://localhost:4444/auth/login
-Content-Type: application/json
-
-{}
-
-<> 2024-02-04T205806.200.json
-
-###
-
-POST http://localhost:4444/auth/login
-Content-Type: application/json
-
-{}
-
-<> 2024-02-04T154211.200.json
-
-###
-
-GET http://localhost:80/api/item?id=99
-Accept: application/json
-
-<> 2024-02-04T091859.200.html
-
-###
-
-POST http://localhost:4444/auth/login
-Content-Type: application/json
-
-{}
-
-###
-
-POST http://localhost:4444/auth/login
-Content-Type: application/json
-
-{}
-
-###
-
-POST http://localhost:4444/auth/login
-Content-Type: application/json
-
-{}
-
-<> 2024-02-03T210127.200.json
 
 ###
 

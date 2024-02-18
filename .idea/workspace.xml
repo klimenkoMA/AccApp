@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/controllers/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-03T210127.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T091859.200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T154211.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T205806.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T210305.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T210519.200.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/validations/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/validations.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +102,10 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\css" />
-      <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
     </key>
   </component>
@@ -725,14 +734,7 @@
       <workItem from="1707844318737" duration="4878000" />
       <workItem from="1707927071749" duration="7833000" />
       <workItem from="1708019960121" duration="1890000" />
-      <workItem from="1708105436003" duration="3865000" />
-    </task>
-    <task id="LOCAL-00200" summary="Added getDocument method in DocumentControllerClass.java">
-      <created>1703873860718</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1703873860718</updated>
+      <workItem from="1708105436003" duration="12225000" />
     </task>
     <task id="LOCAL-00201" summary="Added some comments">
       <created>1703912997816</created>
@@ -1070,7 +1072,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708053358552</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="Added checkAuth.js">
+      <created>1708166440682</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1708166440683</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1090,7 +1099,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt input`s and button html and css in login.html" />
     <MESSAGE value="Tried to solve issues with JPA and Web Security" />
     <MESSAGE value="Solved csrf issue in WebSecurityConfig.java" />
     <MESSAGE value="Changed some css style`s attributes in login.html" />
@@ -1115,7 +1123,8 @@
     <MESSAGE value="Rebuilt some js files" />
     <MESSAGE value="Continued to code backend in training.js" />
     <MESSAGE value="Added app.get(/auth/me) in training.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added app.get(/auth/me) in training.js" />
+    <MESSAGE value="Added checkAuth.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added checkAuth.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
