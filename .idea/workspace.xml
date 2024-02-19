@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/controllers/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-03T210127.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T091859.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T154211.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T205806.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T210305.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-04T210519.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/models/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/validations/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/validations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +78,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -388,17 +378,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -734,14 +713,8 @@
       <workItem from="1707844318737" duration="4878000" />
       <workItem from="1707927071749" duration="7833000" />
       <workItem from="1708019960121" duration="1890000" />
-      <workItem from="1708105436003" duration="12225000" />
-    </task>
-    <task id="LOCAL-00201" summary="Added some comments">
-      <created>1703912997816</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1703912997817</updated>
+      <workItem from="1708105436003" duration="15646000" />
+      <workItem from="1708309818394" duration="596000" />
     </task>
     <task id="LOCAL-00202" summary="Some new comments">
       <created>1704000765535</created>
@@ -1079,7 +1052,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708166440683</updated>
     </task>
-    <option name="localTasksCounter" value="250" />
+    <task id="LOCAL-00250" summary="Added some new js files and corrected training.js">
+      <created>1708233894883</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1708233894884</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1099,7 +1079,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to solve issues with JPA and Web Security" />
     <MESSAGE value="Solved csrf issue in WebSecurityConfig.java" />
     <MESSAGE value="Changed some css style`s attributes in login.html" />
     <MESSAGE value="Rebuilt some css styles and html tags in login.html" />
@@ -1124,7 +1103,8 @@
     <MESSAGE value="Continued to code backend in training.js" />
     <MESSAGE value="Added app.get(/auth/me) in training.js" />
     <MESSAGE value="Added checkAuth.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added checkAuth.js" />
+    <MESSAGE value="Added some new js files and corrected training.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some new js files and corrected training.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
