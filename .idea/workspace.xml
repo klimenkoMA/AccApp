@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/src/models/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,6 +367,20 @@
       </list>
     </option>
   </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 36 services " type="9abd1fc8:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 36 services " type="9abd1fc8:RestServiceStructure$RootNode" />
+          <item name="AccApp" type="296880de:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="RunManager" selected="Application.AccountingApplication">
     <configuration name="AccountingApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="accountingApp.AccountingApplication" />
@@ -714,14 +727,8 @@
       <workItem from="1707927071749" duration="7833000" />
       <workItem from="1708019960121" duration="1890000" />
       <workItem from="1708105436003" duration="15646000" />
-      <workItem from="1708309818394" duration="596000" />
-    </task>
-    <task id="LOCAL-00202" summary="Some new comments">
-      <created>1704000765535</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1704000765536</updated>
+      <workItem from="1708309818394" duration="3072000" />
+      <workItem from="1708362592851" duration="3320000" />
     </task>
     <task id="LOCAL-00203" summary="Another comment in DevicesController.java">
       <created>1704127821956</created>
@@ -1059,7 +1066,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708233894884</updated>
     </task>
-    <option name="localTasksCounter" value="251" />
+    <task id="LOCAL-00251" summary="Added Post.js">
+      <created>1708311759450</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1708311759450</updated>
+    </task>
+    <option name="localTasksCounter" value="252" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1079,7 +1093,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Solved csrf issue in WebSecurityConfig.java" />
     <MESSAGE value="Changed some css style`s attributes in login.html" />
     <MESSAGE value="Rebuilt some css styles and html tags in login.html" />
     <MESSAGE value="Added new script in index.js" />
@@ -1104,7 +1117,8 @@
     <MESSAGE value="Added app.get(/auth/me) in training.js" />
     <MESSAGE value="Added checkAuth.js" />
     <MESSAGE value="Added some new js files and corrected training.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some new js files and corrected training.js" />
+    <MESSAGE value="Added Post.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Post.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
