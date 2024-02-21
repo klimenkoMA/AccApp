@@ -3,7 +3,6 @@ import jwt from 'jsonwebtoken';
 export default (req, res, next) => {
 
     const token = (req.headers.authorization || '').replace(/Bearer\s?/, '');
-    // const token = req.headers.authorization || '';
 
     console.log(token);
     if (token) {
