@@ -4,7 +4,6 @@ export default (req, res, next) => {
 
     const token = (req.headers.authorization || '').replace(/Bearer\s?/, '');
 
-    console.log(token);
     if (token) {
         try {
             const decoded = jwt.verify(token, 'secret123');
@@ -13,7 +12,7 @@ export default (req, res, next) => {
         } catch (err) {
             console.log(err);
             return res.status(403).json({
-                message: 'No access no access'
+                message: 'Sorry, no access'
             });
         }
     } else {
