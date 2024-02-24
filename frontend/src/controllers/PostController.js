@@ -1,8 +1,22 @@
 import PostModel from '../models/Post.js';
 
-export const create = async (req, res) => {
+export const getAll = async (req, res) => {
+    try {
 
-    console.log('start in postController');
+        const posts = await PostModel.find();
+
+        res.json(posts);
+
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({
+            message: "Could not get the articles",
+        });
+    }
+}
+
+export const create = async (req, res)  => {
+
     try {
         const doc = new PostModel({
             title: req.body.title,
@@ -12,15 +26,9 @@ export const create = async (req, res) => {
             user: req.userId,
         });
 
-
-
-        console.log(doc);
-
         const post = await doc.save();
 
-        console.log(post);
         res.json(post);
-
     } catch (err) {
         console.log(err);
         res.status(500).json({

@@ -14,9 +14,9 @@ export const loginValidation = [
 ];
 
 export const postCreateValidation = [
-    body('title', 'Input a header of article').isLength({min: 3}).isString(),
-    body('text', 'Input a text of article').isLength({min: 10}).isString(),
-    body('tags', "Wrong tags format: (point an string)").optional().isString,
-    body('imageUrl', 'Wrong image link').optional().isString(),
+    body('title', 'Input a header of article').isLength({min: 3}),
+    body('text', 'Input a text of article').isLength({min: 10}),
+    body('tags', "Wrong tags format: point an string").optional(),
+    body('imageUrl', 'Wrong image link').optional(),
 ];
 
