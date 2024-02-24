@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controllers/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/models/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -730,14 +730,7 @@
       <workItem from="1708019960121" duration="1890000" />
       <workItem from="1708105436003" duration="15646000" />
       <workItem from="1708309818394" duration="3072000" />
-      <workItem from="1708362592851" duration="21684000" />
-    </task>
-    <task id="LOCAL-00206" summary="Made a lot of changes to start a web-server">
-      <created>1704353412187</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
-      <option name="project" value="LOCAL" />
-      <updated>1704353412187</updated>
+      <workItem from="1708362592851" duration="33362000" />
     </task>
     <task id="LOCAL-00207" summary="Added mongoDB connection to project">
       <created>1704455378505</created>
@@ -1075,7 +1068,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708570998170</updated>
     </task>
-    <option name="localTasksCounter" value="255" />
+    <task id="LOCAL-00255" summary="Tried to fix some problems with REST v2">
+      <created>1708689454913</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1708689454914</updated>
+    </task>
+    <option name="localTasksCounter" value="256" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1095,7 +1095,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added starting of Node.js server in AccountingApplication.java" />
     <MESSAGE value="Rebuilt comments in AccountingApplication.java" />
     <MESSAGE value="Created training.js and added express and nodemon lib`s into it" />
     <MESSAGE value="Solved issue with parallel working AccountingApplication and training.js" />
@@ -1120,7 +1119,8 @@
     <MESSAGE value="Added PostController.create in training.js" />
     <MESSAGE value="Added some methods in training.js to check REST in Insomnia" />
     <MESSAGE value="Tried to fix some problems with REST" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to fix some problems with REST" />
+    <MESSAGE value="Tried to fix some problems with REST v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to fix some problems with REST v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

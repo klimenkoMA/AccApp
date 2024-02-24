@@ -1,6 +1,7 @@
 import PostModel from '../models/Post.js';
 
 export const create = async (req, res) => {
+
     console.log('start in postController');
     try {
         const doc = new PostModel({
@@ -11,7 +12,10 @@ export const create = async (req, res) => {
             user: req.userId,
         });
 
+
+
         console.log(doc);
+
         const post = await doc.save();
 
         console.log(post);
