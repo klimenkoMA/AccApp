@@ -109,7 +109,7 @@ export const getMe = async (req, res) => {
     } catch (err) {
         console.log(err);
         res.json({
-            success: fail,
+           message: "fail in getMe",
         });
 
     }

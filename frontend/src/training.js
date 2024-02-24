@@ -7,7 +7,6 @@ import * as PostController from './controllers/PostController.js'
 import jwt from "jsonwebtoken";
 
 
-
 mongoose.connect('mongodb://localhost:27017/nodedb')
     .then(() => console.log('DB ok'))
     .catch((err) => console.log('DB error', err));
@@ -17,19 +16,19 @@ const app = express();
 app.use(express.json());
 
 //for checking in insomnia
-app.get('/', (req, res) =>{
-   console.log(req.body);
+app.get('/', (req, res) => {
+    console.log(req.body);
 
-   res.json({
-       success: true,
-   });
+    res.json({
+        success: true,
+    });
 });
 //for checking in insomnia
-app.post('/test', (req, res) =>{
+app.post('/test', (req, res) => {
     const token = jwt.sign({
-        email: req.body.email,
-        fullName: 'Vasya Pupkin',
-    }, 'secret123',
+            email: req.body.email,
+            fullName: 'Vasya Pupkin',
+        }, 'secret123',
     );
 
     res.json({
@@ -39,7 +38,7 @@ app.post('/test', (req, res) =>{
 });
 
 
-// app.get('/posts', PostController.getAll);
+app.get('/posts', PostController.getAll);
 // app.get('/posts/:id', PostController.getOne);
 app.post('/posts', checkAuth, postCreateValidation, PostController.create);
 // app.delete('/posts, PostController.remove');
