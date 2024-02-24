@@ -1,6 +1,7 @@
 import {validationResult} from "express-validator";
 import bcrypt from "bcrypt";
 import UserModel from "../models/User.js";
+import jwt from 'jsonwebtoken';
 
 
 export const register = async (req, res) => {
@@ -50,7 +51,7 @@ export const login = async (req, res) => {
     try {
 
         const user = await UserModel.findOne({
-            email: req.body.email,
+            email: req.body.email
         });
 
         if (!user) {
@@ -92,6 +93,7 @@ export const login = async (req, res) => {
 }
 
 export const getMe = async (req, res) => {
+
     try {
         const user = await UserModel.findById(req.userId);
 
@@ -103,6 +105,7 @@ export const getMe = async (req, res) => {
 
         const {passwordHash, ...userData} = user._doc;
 
+        res.json(userData);
     } catch (err) {
         console.log(err);
         res.json({
