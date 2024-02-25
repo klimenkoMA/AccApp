@@ -3,7 +3,7 @@ import PostModel from '../models/Post.js';
 export const getAll = async (req, res) => {
     try {
 
-        const posts = await PostModel.find();
+        const posts = await PostModel.find().populate('user').exec();
 
         res.json(posts);
 
@@ -15,7 +15,7 @@ export const getAll = async (req, res) => {
     }
 }
 
-export const create = async (req, res)  => {
+export const create = async (req, res) => {
 
     try {
         const doc = new PostModel({
@@ -36,3 +36,44 @@ export const create = async (req, res)  => {
         });
     }
 };
+
+export const getOne = async (req, res) => {
+    try {
+        const postId = req.params.id;
+
+        PostModel.findOneAndUpdate({
+                _id: postId,
+
+            }, {
+                $inc: {
+                    viewsCount: 1
+                }
+            },
+            {
+                returnDocument: 'after'
+            },
+            (err, doc) => {
+                if (err) {
+                    console.status(500).log(err);
+                    return res.json({
+                        message: 'Failed to response the article'
+                    });
+                }
+                if (!doc) {
+                    return res.status(404).json({
+                        message: "Document not found"
+                    });
+                }
+
+                res.json(doc);
+            }
+        );
+
+    } catch (e) {
+        console.log(e);
+        res.status(500).json({
+            message: "Failed to get article",
+        });
+    }
+
+}
