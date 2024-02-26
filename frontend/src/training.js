@@ -4,8 +4,6 @@ import {registerValidation, loginValidation, postCreateValidation} from './valid
 import checkAuth from './utils/checkAuth.js';
 import * as UserController from './controllers/UserController.js'
 import * as PostController from './controllers/PostController.js'
-import jwt from "jsonwebtoken";
-
 
 mongoose.connect('mongodb://localhost:27017/nodedb')
     .then(() => console.log('DB ok'))
@@ -15,39 +13,14 @@ const app = express();
 
 app.use(express.json());
 
-//for checking in insomnia
-app.get('/', (req, res) => {
-    console.log(req.body);
-
-    res.json({
-        success: true,
-    });
-});
-//for checking in insomnia
-app.post('/test', (req, res) => {
-    const token = jwt.sign({
-            email: req.body.email,
-            fullName: 'Vasya Pupkin',
-        }, 'secret123',
-    );
-
-    res.json({
-        success: true,
-        token,
-    });
-});
-
-
 app.get('/posts', PostController.getAll);
 app.get('/posts/:id', PostController.getOne);
 app.post('/posts', checkAuth, postCreateValidation, PostController.create);
-// app.delete('/posts, PostController.remove');
-// app.patch('/posts, PostController.update');
+app.delete('/posts/:id', checkAuth, PostController.remove);
+app.patch('/posts/:id', checkAuth, PostController.update);
 
 app.post('/auth/login', loginValidation, UserController.login);
-
 app.post('/auth/register', registerValidation, UserController.register);
-
 app.get('/auth/me', checkAuth, UserController.getMe);
 
 
