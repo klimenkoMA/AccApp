@@ -3,7 +3,7 @@ import PostModel from '../models/Post.js';
 export const getAll = async (req, res) => {
     try {
 
-        const posts = await PostModel.find().populate('user').exec();
+        const posts = await PostModel.find().populate('userId').exec();
 
         res.json(posts);
 
@@ -23,7 +23,7 @@ export const create = async (req, res) => {
             text: req.body.text,
             imageUrl: req.body.imageUrl,
             tags: req.body.tags,
-            user: req.userId,
+            userId: req.userId,
         });
 
         const post = await doc.save();
@@ -76,4 +76,68 @@ export const getOne = async (req, res) => {
         });
     }
 
+}
+
+export const remove = async (req, res) => {
+    try {
+
+        const postId = req.params.id;
+        PostModel.findOneAndDelete({
+                _id: postId
+            }, {
+                returnDocument: 'after'
+            },
+            (err, doc) => {
+                if (err) {
+                    return res.status(500).json({
+                        message: "Something wrong with removing the article"
+                    });
+                }
+
+                if (!doc) {
+                    return res.status(404).json({
+                        message: "Could not find the article"
+                    });
+                }
+
+                res.json({
+                    success: true,
+                });
+            }
+        );
+
+    } catch (e) {
+        console.log(e);
+        res.status(500).json({
+            message: 'Something wrong with removing the article'
+        });
+    }
+
+}
+
+export const update = async (req, res) => {
+
+    try {
+        const postId = req.params.id;
+
+        await PostModel.updateOne({
+                _id: postId
+            },
+            {
+                title: req.body.title,
+                text: req.body.text,
+                imageUrl: req.body.imageUrl,
+                tags: req.body.tags,
+                userId: req.userId,
+            });
+
+        res.json({
+            success: true,
+        });
+    } catch (e) {
+        console.log(e);
+        res.status(500).json({
+            message: "Could not update the article",
+        });
+    }
 }

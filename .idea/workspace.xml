@@ -7,8 +7,9 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/models/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -730,14 +731,7 @@
       <workItem from="1708019960121" duration="1890000" />
       <workItem from="1708105436003" duration="15646000" />
       <workItem from="1708309818394" duration="3072000" />
-      <workItem from="1708362592851" duration="45144000" />
-    </task>
-    <task id="LOCAL-00209" summary="Added findAll impl`s in some classes and created documents.html">
-      <created>1704607852179</created>
-      <option name="number" value="00209" />
-      <option name="presentableId" value="LOCAL-00209" />
-      <option name="project" value="LOCAL" />
-      <updated>1704607852179</updated>
+      <workItem from="1708362592851" duration="53508000" />
     </task>
     <task id="LOCAL-00210" summary="Rebuilt documents.html">
       <created>1704638091681</created>
@@ -1075,7 +1069,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708794937914</updated>
     </task>
-    <option name="localTasksCounter" value="258" />
+    <task id="LOCAL-00258" summary="Added 'findOne article' route in PostController.js">
+      <created>1708858185504</created>
+      <option name="number" value="00258" />
+      <option name="presentableId" value="LOCAL-00258" />
+      <option name="project" value="LOCAL" />
+      <updated>1708858185505</updated>
+    </task>
+    <option name="localTasksCounter" value="259" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1095,7 +1096,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Solved issue with parallel working AccountingApplication and training.js" />
     <MESSAGE value="Added jsonwebtoken lib into training.js" />
     <MESSAGE value="Added connection to MongoDB in training.js" />
     <MESSAGE value="Tried to change node js version to solve mongoDb connection issue" />
@@ -1120,7 +1120,8 @@
     <MESSAGE value="Tried to fix some problems with REST v2" />
     <MESSAGE value="Tried to fix some problems with REST v3" />
     <MESSAGE value="Fixed REST problem in create article route&#10;Added getAll articles route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed REST problem in create article route&#10;Added getAll articles route" />
+    <MESSAGE value="Added 'findOne article' route in PostController.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 'findOne article' route in PostController.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
