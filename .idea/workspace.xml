@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controllers/PostController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/models/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/checkAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -731,14 +731,7 @@
       <workItem from="1708019960121" duration="1890000" />
       <workItem from="1708105436003" duration="15646000" />
       <workItem from="1708309818394" duration="3072000" />
-      <workItem from="1708362592851" duration="53508000" />
-    </task>
-    <task id="LOCAL-00210" summary="Rebuilt documents.html">
-      <created>1704638091681</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1704638091681</updated>
+      <workItem from="1708362592851" duration="56012000" />
     </task>
     <task id="LOCAL-00211" summary="Added addNewDocument method in DocumentControllerClass.java">
       <created>1704691931815</created>
@@ -1076,7 +1069,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708858185505</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="Added 'remove and update article' routes in PostController.js">
+      <created>1708917014397</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1708917014398</updated>
+    </task>
+    <option name="localTasksCounter" value="260" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1096,7 +1096,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added jsonwebtoken lib into training.js" />
     <MESSAGE value="Added connection to MongoDB in training.js" />
     <MESSAGE value="Tried to change node js version to solve mongoDb connection issue" />
     <MESSAGE value="Downloaded some node js files" />
@@ -1121,7 +1120,8 @@
     <MESSAGE value="Tried to fix some problems with REST v3" />
     <MESSAGE value="Fixed REST problem in create article route&#10;Added getAll articles route" />
     <MESSAGE value="Added 'findOne article' route in PostController.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 'findOne article' route in PostController.js" />
+    <MESSAGE value="Added 'remove and update article' routes in PostController.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 'remove and update article' routes in PostController.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

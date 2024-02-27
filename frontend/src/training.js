@@ -1,4 +1,5 @@
 import express from 'express';
+import multer from 'multer';
 import * as mongoose from "mongoose";
 import {registerValidation, loginValidation, postCreateValidation} from './validations.js';
 import checkAuth from './utils/checkAuth.js';
@@ -10,6 +11,12 @@ mongoose.connect('mongodb://localhost:27017/nodedb')
     .catch((err) => console.log('DB error', err));
 
 const app = express();
+
+const storage = multer.diskStorage({
+    destination: (_, __, cb) =>{
+        cb(null, 'uploads');
+    }
+});
 
 app.use(express.json());
 
