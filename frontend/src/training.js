@@ -13,10 +13,15 @@ mongoose.connect('mongodb://localhost:27017/nodedb')
 const app = express();
 
 const storage = multer.diskStorage({
-    destination: (_, __, cb) =>{
+    destination: (_, __, cb) => {
         cb(null, 'uploads');
+    },
+    filename: (_, file, cb) => {
+        cb(null, file.originalname);
     }
 });
+
+const upload = multer({ storage });
 
 app.use(express.json());
 
@@ -25,6 +30,14 @@ app.get('/posts/:id', PostController.getOne);
 app.post('/posts', checkAuth, postCreateValidation, PostController.create);
 app.delete('/posts/:id', checkAuth, PostController.remove);
 app.patch('/posts/:id', checkAuth, PostController.update);
+
+app.post('/upload', checkAuth, upload.single('image'), (req, res) => {
+    res.json({
+
+        url: '/uploads/${req.file.originalname}',
+
+    });
+});
 
 app.post('/auth/login', loginValidation, UserController.login);
 app.post('/auth/register', registerValidation, UserController.register);
