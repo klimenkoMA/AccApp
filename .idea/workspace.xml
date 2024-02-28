@@ -7,9 +7,6 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -731,14 +728,7 @@
       <workItem from="1708019960121" duration="1890000" />
       <workItem from="1708105436003" duration="15646000" />
       <workItem from="1708309818394" duration="3072000" />
-      <workItem from="1708362592851" duration="56012000" />
-    </task>
-    <task id="LOCAL-00211" summary="Added addNewDocument method in DocumentControllerClass.java">
-      <created>1704691931815</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1704691931815</updated>
+      <workItem from="1708362592851" duration="59383000" />
     </task>
     <task id="LOCAL-00212" summary="Added deleteDocument method in DocumentControllerClass.java">
       <created>1704766574622</created>
@@ -1076,7 +1066,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708917014398</updated>
     </task>
-    <option name="localTasksCounter" value="260" />
+    <task id="LOCAL-00260" summary="Added storage for images in training.js">
+      <created>1709002741831</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1709002741832</updated>
+    </task>
+    <option name="localTasksCounter" value="261" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1096,7 +1093,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added connection to MongoDB in training.js" />
     <MESSAGE value="Tried to change node js version to solve mongoDb connection issue" />
     <MESSAGE value="Downloaded some node js files" />
     <MESSAGE value="Solved issue with node js and mongoDB connection" />
@@ -1121,7 +1117,8 @@
     <MESSAGE value="Fixed REST problem in create article route&#10;Added getAll articles route" />
     <MESSAGE value="Added 'findOne article' route in PostController.js" />
     <MESSAGE value="Added 'remove and update article' routes in PostController.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 'remove and update article' routes in PostController.js" />
+    <MESSAGE value="Added storage for images in training.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added storage for images in training.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
