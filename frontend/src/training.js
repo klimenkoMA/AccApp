@@ -33,9 +33,7 @@ app.patch('/posts/:id', checkAuth, PostController.update);
 
 app.post('/upload', checkAuth, upload.single('image'), (req, res) => {
     res.json({
-
         url: '/uploads/${req.file.originalname}',
-
     });
 });
 
