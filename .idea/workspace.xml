@@ -74,7 +74,7 @@
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.14.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="13.13.52" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/uploads" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -87,6 +87,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src\uploads" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
     </key>
@@ -391,6 +392,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -728,14 +740,7 @@
       <workItem from="1708019960121" duration="1890000" />
       <workItem from="1708105436003" duration="15646000" />
       <workItem from="1708309818394" duration="3072000" />
-      <workItem from="1708362592851" duration="59383000" />
-    </task>
-    <task id="LOCAL-00212" summary="Added deleteDocument method in DocumentControllerClass.java">
-      <created>1704766574622</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
-      <option name="project" value="LOCAL" />
-      <updated>1704766574622</updated>
+      <workItem from="1708362592851" duration="63594000" />
     </task>
     <task id="LOCAL-00213" summary="Rebuilt deleteDocument method in DocumentControllerClass.java">
       <created>1704856889513</created>
@@ -1073,7 +1078,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709002741832</updated>
     </task>
-    <option name="localTasksCounter" value="261" />
+    <task id="LOCAL-00261" summary="Tried to fix issue with upload images in training.js">
+      <created>1709090416675</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
+      <option name="project" value="LOCAL" />
+      <updated>1709090416717</updated>
+    </task>
+    <option name="localTasksCounter" value="262" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1093,7 +1105,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to change node js version to solve mongoDb connection issue" />
     <MESSAGE value="Downloaded some node js files" />
     <MESSAGE value="Solved issue with node js and mongoDB connection" />
     <MESSAGE value="Solved issue with node js and mongoDB connection + added some node js files" />
@@ -1118,7 +1129,8 @@
     <MESSAGE value="Added 'findOne article' route in PostController.js" />
     <MESSAGE value="Added 'remove and update article' routes in PostController.js" />
     <MESSAGE value="Added storage for images in training.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added storage for images in training.js" />
+    <MESSAGE value="Tried to fix issue with upload images in training.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to fix issue with upload images in training.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
