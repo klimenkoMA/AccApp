@@ -6,6 +6,8 @@ import checkAuth from './utils/checkAuth.js';
 import * as UserController from './controllers/UserController.js'
 import * as PostController from './controllers/PostController.js'
 
+mongoose.set('strictQuery', false);
+
 mongoose.connect('mongodb://localhost:27017/nodedb')
     .then(() => console.log('DB ok'))
     .catch((err) => console.log('DB error', err));
@@ -14,14 +16,14 @@ const app = express();
 
 const storage = multer.diskStorage({
     destination: (_, __, cb) => {
-        cb(null, 'uploads');
+        cb(null, 'D:\\JAVA\\REPOSITORY\\AccApp\\frontend\\src\\uploads');
     },
     filename: (_, file, cb) => {
         cb(null, file.originalname);
     }
 });
 
-const upload = multer({ storage });
+const upload = multer({ storage: storage });
 
 app.use(express.json());
 
