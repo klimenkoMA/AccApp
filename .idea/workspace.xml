@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/src/uploads/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
     </list>
@@ -741,14 +740,7 @@
       <workItem from="1708019960121" duration="1890000" />
       <workItem from="1708105436003" duration="15646000" />
       <workItem from="1708309818394" duration="3072000" />
-      <workItem from="1708362592851" duration="68548000" />
-    </task>
-    <task id="LOCAL-00214" summary="Tried to solve test issues in DevicesControllerTest.class">
-      <created>1706066040932</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1706066040932</updated>
+      <workItem from="1708362592851" duration="75312000" />
     </task>
     <task id="LOCAL-00215" summary="Added new frontend in login.html">
       <created>1706150178532</created>
@@ -1086,7 +1078,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709175266524</updated>
     </task>
-    <option name="localTasksCounter" value="263" />
+    <task id="LOCAL-00263" summary="Tried to fix issue with upload images in training.js v3">
+      <created>1709260342005</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
+      <option name="project" value="LOCAL" />
+      <updated>1709260342005</updated>
+    </task>
+    <option name="localTasksCounter" value="264" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1106,7 +1105,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Solved issue with node js and mongoDB connection" />
     <MESSAGE value="Solved issue with node js and mongoDB connection + added some node js files" />
     <MESSAGE value="Added new port to connection mongoDB in training.js" />
     <MESSAGE value="Solved a new issue from mongoose" />
@@ -1131,7 +1129,8 @@
     <MESSAGE value="Added storage for images in training.js" />
     <MESSAGE value="Tried to fix issue with upload images in training.js" />
     <MESSAGE value="Tried to fix issue with upload images in training.js v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to fix issue with upload images in training.js v2" />
+    <MESSAGE value="Tried to fix issue with upload images in training.js v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to fix issue with upload images in training.js v3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
