@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/frontend/src/controllers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/handleValidationErrors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/controllers/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/training.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +42,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/klimenkoMA/AccApp" />
+      </set>
+    </option>
+  </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
       <facet id="AccApp/invalid/Python" />
@@ -76,9 +78,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="javascript.nodejs.core.library.configured.version" value="13.14.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="13.13.52" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/uploads" />
+    <property name="javascript.nodejs.core.library.configured.version" value="21.7.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="20.12.13" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -400,15 +402,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -747,14 +747,10 @@
       <workItem from="1708105436003" duration="15646000" />
       <workItem from="1708309818394" duration="3072000" />
       <workItem from="1708362592851" duration="79577000" />
-      <workItem from="1709397218820" duration="2717000" />
-    </task>
-    <task id="LOCAL-00216" summary="Added new links for main.html in lot`s of pages">
-      <created>1706239011718</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1706239011718</updated>
+      <workItem from="1709397218820" duration="4601000" />
+      <workItem from="1709460610864" duration="896000" />
+      <workItem from="1717123403772" duration="1263000" />
+      <workItem from="1718247363306" duration="5133000" />
     </task>
     <task id="LOCAL-00217" summary="Added new links for main.html in lot`s of pages">
       <created>1706239027462</created>
@@ -1092,7 +1088,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709360676327</updated>
     </task>
-    <option name="localTasksCounter" value="265" />
+    <task id="LOCAL-00265" summary="Solved issue with upload images, refactored training.js">
+      <created>1709440376734</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1709440376734</updated>
+    </task>
+    <option name="localTasksCounter" value="266" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1112,7 +1115,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new port to connection mongoDB in training.js" />
     <MESSAGE value="Solved a new issue from mongoose" />
     <MESSAGE value="Changed versions of node js and mongoose" />
     <MESSAGE value="Installed new mongoDB version" />
@@ -1137,7 +1139,8 @@
     <MESSAGE value="Tried to fix issue with upload images in training.js v2" />
     <MESSAGE value="Tried to fix issue with upload images in training.js v3" />
     <MESSAGE value="Tried to fix issue with upload images in training.js v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to fix issue with upload images in training.js v4" />
+    <MESSAGE value="Solved issue with upload images, refactored training.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved issue with upload images, refactored training.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1152,10 +1155,5 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AccApp$Network.coverage" NAME="Network Coverage Results" MODIFIED="1705244925827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
-    <SUITE FILE_PATH="coverage/AccApp$Graph.coverage" NAME="Graph Coverage Results" MODIFIED="1705248257409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
-    <SUITE FILE_PATH="coverage/AccApp$Dijkstra.coverage" NAME="Dijkstra Coverage Results" MODIFIED="1705282624620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend/pythonlabs" />
   </component>
 </project>
