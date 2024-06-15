@@ -30,8 +30,8 @@ public class AccountingApplication implements WebMvcConfigurer {
         try {
 
             //Set the working directory for the command`s
-            String npmPath = "C:\\npmstart.bat.lnk";
-            String mongoDBPath = "C:\\mongod.exe.lnk";
+            String npmPath = "E:\\npmstart.bat.lnk";
+            String mongoDBPath = "E:\\mongod.exe.lnk";
 
             //Create a ProcessBuilder objects with the command to be executed
             ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", npmPath);
