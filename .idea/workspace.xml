@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="sqlserver&#10;mongo" />
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;mongo&#10;postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -398,17 +401,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -751,13 +743,8 @@
       <workItem from="1709460610864" duration="896000" />
       <workItem from="1717123403772" duration="1263000" />
       <workItem from="1718247363306" duration="5133000" />
-    </task>
-    <task id="LOCAL-00217" summary="Added new links for main.html in lot`s of pages">
-      <created>1706239027462</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1706239027462</updated>
+      <workItem from="1718468567359" duration="1251000" />
+      <workItem from="1718592701352" duration="811000" />
     </task>
     <task id="LOCAL-00218" summary="Fixed some login issues in login.html">
       <created>1706290703631</created>
@@ -1095,7 +1082,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709440376734</updated>
     </task>
-    <option name="localTasksCounter" value="266" />
+    <task id="LOCAL-00266" summary="Set a new working directory for mongod">
+      <created>1718476399225</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1718476399227</updated>
+    </task>
+    <option name="localTasksCounter" value="267" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1115,7 +1109,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Solved a new issue from mongoose" />
     <MESSAGE value="Changed versions of node js and mongoose" />
     <MESSAGE value="Installed new mongoDB version" />
     <MESSAGE value="Rebuilt index.js to index.cjs" />
@@ -1140,7 +1133,8 @@
     <MESSAGE value="Tried to fix issue with upload images in training.js v3" />
     <MESSAGE value="Tried to fix issue with upload images in training.js v4" />
     <MESSAGE value="Solved issue with upload images, refactored training.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solved issue with upload images, refactored training.js" />
+    <MESSAGE value="Set a new working directory for mongod" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set a new working directory for mongod" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
