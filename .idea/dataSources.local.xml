@@ -35,5 +35,10 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="postgres@localhost" uuid="cf3ed28f-ed99-461f-81dc-7bd26f9b9334">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
