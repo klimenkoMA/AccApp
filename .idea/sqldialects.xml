@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="PROJECT" dialect="TSQL" />
+    <file url="PROJECT" dialect="PostgreSQL" />
+  </component>
+  <component name="SqlResolveMappings">
+    <file url="PROJECT" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;42e616d2-6211-4c98-97e9-9f77f121534d&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;@negative&quot;:&quot;1&quot;     }    }   },   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;cf3ed28f-ed99-461f-81dc-7bd26f9b9334&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;database&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;BDAccApp&quot;      },      &quot;group&quot;:{       &quot;@kind&quot;:&quot;schema&quot;,       &quot;node&quot;:{        &quot;@negative&quot;:&quot;1&quot;       }      }     }    }   }  } }}" />
   </component>
 </project>

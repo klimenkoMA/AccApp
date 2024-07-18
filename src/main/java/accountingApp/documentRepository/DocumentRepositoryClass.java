@@ -12,7 +12,8 @@ import java.util.List;
  * Стандартный класс-интерфейс для связи с БД
  */
 @Repository
-@EnableMongoRepositories
+//@EnableMongoRepositories
+
 public interface DocumentRepositoryClass extends MongoRepository<DocumentClass, String> {
 
 

@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +98,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Console" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
     <property name="ts.external.directory.path" value="D:\JAVA\IntelliJ IDEA 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -391,7 +403,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.AccountingApplication">
+  <component name="RunManager" selected="Spring Boot.AccApp">
     <configuration name="AccountingApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="accountingApp.AccountingApplication" />
       <module name="AccApp" />
@@ -448,10 +460,12 @@
     <configuration default="true" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/frontend/src/index.js" working-dir="$PROJECT_DIR$/frontend/public">
       <method v="2" />
     </configuration>
-    <configuration name="AccApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" editBeforeRun="true" singleton="false">
+    <configuration name="AccApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
       <module name="AccApp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="accountingApp.AccountingApplication" />
       <option name="DEBUG_MODE" value="true" />
+      <option name="ENABLE_LAUNCH_OPTIMIZATION" value="false" />
+      <option name="HIDE_BANNER" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -744,14 +758,19 @@
       <workItem from="1717123403772" duration="1263000" />
       <workItem from="1718247363306" duration="5133000" />
       <workItem from="1718468567359" duration="1251000" />
-      <workItem from="1718592701352" duration="811000" />
-    </task>
-    <task id="LOCAL-00218" summary="Fixed some login issues in login.html">
-      <created>1706290703631</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
-      <option name="project" value="LOCAL" />
-      <updated>1706290703632</updated>
+      <workItem from="1718592701352" duration="892000" />
+      <workItem from="1718852931414" duration="632000" />
+      <workItem from="1718900437706" duration="233000" />
+      <workItem from="1719074845475" duration="4956000" />
+      <workItem from="1719197946842" duration="262000" />
+      <workItem from="1719504277595" duration="577000" />
+      <workItem from="1719675591830" duration="3646000" />
+      <workItem from="1720060839445" duration="154000" />
+      <workItem from="1720109221472" duration="1909000" />
+      <workItem from="1720491201844" duration="11607000" />
+      <workItem from="1721067035836" duration="282000" />
+      <workItem from="1721067379112" duration="3209000" />
+      <workItem from="1721270164214" duration="3902000" />
     </task>
     <task id="LOCAL-00219" summary="Solved some issues with css styles in login.html">
       <created>1706359998153</created>
@@ -1089,7 +1108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718476399227</updated>
     </task>
-    <option name="localTasksCounter" value="267" />
+    <task id="LOCAL-00267" summary="Added Postgres DB properties in application.properties">
+      <created>1718593577772</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
+      <option name="project" value="LOCAL" />
+      <updated>1718593577772</updated>
+    </task>
+    <option name="localTasksCounter" value="268" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1109,7 +1135,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed versions of node js and mongoose" />
     <MESSAGE value="Installed new mongoDB version" />
     <MESSAGE value="Rebuilt index.js to index.cjs" />
     <MESSAGE value="Rebuilt training.js" />
@@ -1134,7 +1159,8 @@
     <MESSAGE value="Tried to fix issue with upload images in training.js v4" />
     <MESSAGE value="Solved issue with upload images, refactored training.js" />
     <MESSAGE value="Set a new working directory for mongod" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set a new working directory for mongod" />
+    <MESSAGE value="Added Postgres DB properties in application.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Postgres DB properties in application.properties" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

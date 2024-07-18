@@ -27,23 +27,23 @@ public class AccountingApplication implements WebMvcConfigurer {
         SpringApplication.run(AccountingApplication.class, args);
 
         /*Starting of index.cjs script,the part of React.js*/
-        try {
-
-            //Set the working directory for the command`s
-            String npmPath = "E:\\npmstart.bat.lnk";
-            String mongoDBPath = "E:\\mongod.exe.lnk";
-
-            //Create a ProcessBuilder objects with the command to be executed
-            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", npmPath);
-            ProcessBuilder processBuilder2 = new ProcessBuilder("cmd.exe", "/c", mongoDBPath);
-
-            //Start the processes
-            processBuilder.start();
-            processBuilder2.start();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//
+//            //Set the working directory for the command`s
+//            String npmPath = "D:\\npmstart.bat.lnk";
+//            String mongoDBPath = "D:\\mongod.exe.lnk";
+//
+//            //Create a ProcessBuilder objects with the command to be executed
+//            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", npmPath);
+//            ProcessBuilder processBuilder2 = new ProcessBuilder("cmd.exe", "/c", mongoDBPath);
+//
+//            //Start the processes
+//            processBuilder.start();
+//            processBuilder2.start();
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @Override
