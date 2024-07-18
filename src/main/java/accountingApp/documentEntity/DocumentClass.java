@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
@@ -12,6 +13,7 @@ import javax.persistence.Id;
  */
 
 @Document(collection = "documents")
+//@Entity
 public class DocumentClass {
 
     @Id
