@@ -1,2 +1,5 @@
 /src/SomeErrors
 /.idea/sonarlint/issuestore/index.pb
+/node_modules/
+/target/classes/META-INF/
+/.idea/dataSources/
