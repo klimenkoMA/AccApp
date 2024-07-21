@@ -3,7 +3,7 @@ onclickTwice = function () {
     let mainWidth = document.documentElement.offsetWidth;
     let mainHeight = document.documentElement.offsetHeight;
     let params = `width=500,height=400,left=${mainWidth / 2 - 500 / 2},top=${mainHeight / 2 - 400 / 2}`;
-    let popup = window.open('http://192.168.0.101/img/catPie.jpg', 'Popup', params);
+    let popup = window.open('http://192.168.0.101:8080/img/catPie.jpg', 'Popup', params);
 
 
     popup.focus();
