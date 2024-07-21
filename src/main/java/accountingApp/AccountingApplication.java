@@ -20,7 +20,8 @@ public class AccountingApplication implements WebMvcConfigurer {
             "classpath:/META-INF/resources/", "classpath:/resources/",
             "classpath:/static/", "classpath:/public/",
             "classpath:/static/js/", "classpath:/js/",
-            "classpath:/resources/static/js/", "classpath:/resources/static/"
+            "classpath:/resources/static/js/", "classpath:/resources/static/",
+            "classpath:/resources/img/", "classpath:/resources/css/"
     };
 
     public static void main(String[] args) {

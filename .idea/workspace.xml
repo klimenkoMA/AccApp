@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,6 +408,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -766,21 +774,7 @@
       <workItem from="1721067379112" duration="3209000" />
       <workItem from="1721270164214" duration="4750000" />
       <workItem from="1721410204770" duration="175000" />
-      <workItem from="1721410750348" duration="2222000" />
-    </task>
-    <task id="LOCAL-00221" summary="Tried to solve issues with JPA and Web Security">
-      <created>1706494626366</created>
-      <option name="number" value="00221" />
-      <option name="presentableId" value="LOCAL-00221" />
-      <option name="project" value="LOCAL" />
-      <updated>1706494626366</updated>
-    </task>
-    <task id="LOCAL-00222" summary="Solved csrf issue in WebSecurityConfig.java">
-      <created>1706581169200</created>
-      <option name="number" value="00222" />
-      <option name="presentableId" value="LOCAL-00222" />
-      <option name="project" value="LOCAL" />
-      <updated>1706581169201</updated>
+      <workItem from="1721410750348" duration="3436000" />
     </task>
     <task id="LOCAL-00223" summary="Changed some css style`s attributes in login.html">
       <created>1706669495927</created>
@@ -1111,7 +1105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1721412184355</updated>
     </task>
-    <option name="localTasksCounter" value="270" />
+    <task id="LOCAL-00270" summary="Changed application.properties">
+      <created>1721493019962</created>
+      <option name="number" value="00270" />
+      <option name="presentableId" value="LOCAL-00270" />
+      <option name="project" value="LOCAL" />
+      <updated>1721493019963</updated>
+    </task>
+    <task id="LOCAL-00271" summary="Changed gitignore">
+      <created>1721493125571</created>
+      <option name="number" value="00271" />
+      <option name="presentableId" value="LOCAL-00271" />
+      <option name="project" value="LOCAL" />
+      <updated>1721493125571</updated>
+    </task>
+    <option name="localTasksCounter" value="272" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1131,8 +1139,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt training.js" />
-    <MESSAGE value="Rebuilt some js files" />
     <MESSAGE value="Continued to code backend in training.js" />
     <MESSAGE value="Added app.get(/auth/me) in training.js" />
     <MESSAGE value="Added checkAuth.js" />
@@ -1156,7 +1162,9 @@
     <MESSAGE value="Added Postgres DB properties in application.properties" />
     <MESSAGE value="Some big changes closely connected with moving to another OS." />
     <MESSAGE value="Changed web port in some pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed web port in some pages" />
+    <MESSAGE value="Changed application.properties" />
+    <MESSAGE value="Changed gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
