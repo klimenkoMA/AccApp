@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/AccountingApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -774,14 +772,7 @@
       <workItem from="1721067379112" duration="3209000" />
       <workItem from="1721270164214" duration="4750000" />
       <workItem from="1721410204770" duration="175000" />
-      <workItem from="1721410750348" duration="3436000" />
-    </task>
-    <task id="LOCAL-00223" summary="Changed some css style`s attributes in login.html">
-      <created>1706669495927</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1706669495928</updated>
+      <workItem from="1721410750348" duration="21307000" />
     </task>
     <task id="LOCAL-00224" summary="Rebuilt some css styles and html tags in login.html">
       <created>1706756373724</created>
@@ -1119,7 +1110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721493125571</updated>
     </task>
-    <option name="localTasksCounter" value="272" />
+    <task id="LOCAL-00272" summary="Corrected some links">
+      <created>1721546919977</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1721546919978</updated>
+    </task>
+    <option name="localTasksCounter" value="273" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1139,7 +1137,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Continued to code backend in training.js" />
     <MESSAGE value="Added app.get(/auth/me) in training.js" />
     <MESSAGE value="Added checkAuth.js" />
     <MESSAGE value="Added some new js files and corrected training.js" />
@@ -1164,7 +1161,8 @@
     <MESSAGE value="Changed web port in some pages" />
     <MESSAGE value="Changed application.properties" />
     <MESSAGE value="Changed gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed gitignore" />
+    <MESSAGE value="Corrected some links" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected some links" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
