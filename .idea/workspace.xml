@@ -7,6 +7,7 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -770,14 +771,7 @@
       <workItem from="1721067379112" duration="3209000" />
       <workItem from="1721270164214" duration="4750000" />
       <workItem from="1721410204770" duration="175000" />
-      <workItem from="1721410750348" duration="26305000" />
-    </task>
-    <task id="LOCAL-00226" summary="Added starting of Node.js server in AccountingApplication.java">
-      <created>1706896599280</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1706896599280</updated>
+      <workItem from="1721410750348" duration="27160000" />
     </task>
     <task id="LOCAL-00227" summary="Rebuilt comments in AccountingApplication.java">
       <created>1706944090824</created>
@@ -1115,7 +1109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721841885100</updated>
     </task>
-    <option name="localTasksCounter" value="275" />
+    <task id="LOCAL-00275" summary="Changed &lt;p&gt; tag size in main.html">
+      <created>1721873986931</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1721873986931</updated>
+    </task>
+    <option name="localTasksCounter" value="276" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1135,7 +1136,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added some new js files and corrected training.js" />
     <MESSAGE value="Added Post.js" />
     <MESSAGE value="Added PostController.create in training.js" />
     <MESSAGE value="Added some methods in training.js to check REST in Insomnia" />
@@ -1160,7 +1160,8 @@
     <MESSAGE value="Corrected some links" />
     <MESSAGE value="Changed section`s style (size)" />
     <MESSAGE value="Added some content in main.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some content in main.html" />
+    <MESSAGE value="Changed &lt;p&gt; tag size in main.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed &lt;p&gt; tag size in main.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
