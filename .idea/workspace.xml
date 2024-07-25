@@ -770,14 +770,7 @@
       <workItem from="1721067379112" duration="3209000" />
       <workItem from="1721270164214" duration="4750000" />
       <workItem from="1721410204770" duration="175000" />
-      <workItem from="1721410750348" duration="25369000" />
-    </task>
-    <task id="LOCAL-00225" summary="Added new script in index.js">
-      <created>1706844014454</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1706844014455</updated>
+      <workItem from="1721410750348" duration="26305000" />
     </task>
     <task id="LOCAL-00226" summary="Added starting of Node.js server in AccountingApplication.java">
       <created>1706896599280</created>
@@ -1115,7 +1108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721701397063</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="Added some content in main.html">
+      <created>1721841885099</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1721841885100</updated>
+    </task>
+    <option name="localTasksCounter" value="275" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1135,7 +1135,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added checkAuth.js" />
     <MESSAGE value="Added some new js files and corrected training.js" />
     <MESSAGE value="Added Post.js" />
     <MESSAGE value="Added PostController.create in training.js" />
@@ -1160,7 +1159,8 @@
     <MESSAGE value="Changed gitignore" />
     <MESSAGE value="Corrected some links" />
     <MESSAGE value="Changed section`s style (size)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed section`s style (size)" />
+    <MESSAGE value="Added some content in main.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some content in main.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
