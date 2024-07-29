@@ -770,14 +770,7 @@
       <workItem from="1721067379112" duration="3209000" />
       <workItem from="1721270164214" duration="4750000" />
       <workItem from="1721410204770" duration="175000" />
-      <workItem from="1721410750348" duration="32821000" />
-    </task>
-    <task id="LOCAL-00230" summary="Solved issue with parallel working AccountingApplication and training.js">
-      <created>1707052572624</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1707052572625</updated>
+      <workItem from="1721410750348" duration="34159000" />
     </task>
     <task id="LOCAL-00231" summary="Added jsonwebtoken lib into training.js">
       <created>1707102882633</created>
@@ -1115,7 +1108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722098769006</updated>
     </task>
-    <option name="localTasksCounter" value="279" />
+    <task id="LOCAL-00279" summary="Changed &lt;p&gt; tag size in main.html v5">
+      <created>1722156136646</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1722156136647</updated>
+    </task>
+    <option name="localTasksCounter" value="280" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1135,7 +1135,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to fix some problems with REST" />
     <MESSAGE value="Tried to fix some problems with REST v2" />
     <MESSAGE value="Tried to fix some problems with REST v3" />
     <MESSAGE value="Fixed REST problem in create article route&#10;Added getAll articles route" />
@@ -1160,7 +1159,8 @@
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v2" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v3" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed &lt;p&gt; tag size in main.html v4" />
+    <MESSAGE value="Changed &lt;p&gt; tag size in main.html v5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed &lt;p&gt; tag size in main.html v5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
