@@ -7,6 +7,7 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -770,14 +771,7 @@
       <workItem from="1721067379112" duration="3209000" />
       <workItem from="1721270164214" duration="4750000" />
       <workItem from="1721410204770" duration="175000" />
-      <workItem from="1721410750348" duration="34159000" />
-    </task>
-    <task id="LOCAL-00231" summary="Added jsonwebtoken lib into training.js">
-      <created>1707102882633</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1707102882634</updated>
+      <workItem from="1721410750348" duration="34956000" />
     </task>
     <task id="LOCAL-00232" summary="Added connection to MongoDB in training.js">
       <created>1707190079507</created>
@@ -1115,7 +1109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722156136647</updated>
     </task>
-    <option name="localTasksCounter" value="280" />
+    <task id="LOCAL-00280" summary="Added new &lt;td&gt; in main.html">
+      <created>1722220975606</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1722220975606</updated>
+    </task>
+    <option name="localTasksCounter" value="281" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1135,7 +1136,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to fix some problems with REST v2" />
     <MESSAGE value="Tried to fix some problems with REST v3" />
     <MESSAGE value="Fixed REST problem in create article route&#10;Added getAll articles route" />
     <MESSAGE value="Added 'findOne article' route in PostController.js" />
@@ -1160,7 +1160,8 @@
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v3" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v4" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed &lt;p&gt; tag size in main.html v5" />
+    <MESSAGE value="Added new &lt;td&gt; in main.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new &lt;td&gt; in main.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
