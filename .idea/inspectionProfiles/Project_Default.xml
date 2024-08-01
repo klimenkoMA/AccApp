@@ -2,11 +2,7 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="DanglingJavadoc" enabled="false" level="WARNING" enabled_by_default="false" />
-    <inspection_tool class="DuplicatedCode" enabled="false" level="WEAK WARNING" enabled_by_default="false">
-      <Languages>
-        <language minSize="58" name="Python" />
-      </Languages>
-    </inspection_tool>
+    <inspection_tool class="DuplicatedCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="FieldCanBeLocal" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="EXCLUDE_ANNOS">
         <value>
@@ -20,7 +16,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="12">
+          <list size="13">
             <item index="0" class="java.lang.String" itemvalue="charset" />
             <item index="1" class="java.lang.String" itemvalue="placeholder" />
             <item index="2" class="java.lang.String" itemvalue="th:each" />
@@ -33,6 +29,7 @@
             <item index="9" class="java.lang.String" itemvalue="for" />
             <item index="10" class="java.lang.String" itemvalue="th:action" />
             <item index="11" class="java.lang.String" itemvalue="th:if" />
+            <item index="12" class="java.lang.String" itemvalue="integrity" />
           </list>
         </value>
       </option>
