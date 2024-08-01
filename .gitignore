@@ -3,3 +3,4 @@
 /node_modules/
 /target/classes/META-INF/
 /.idea/dataSources/
+/target/classes/templates/parts/common.ftl
