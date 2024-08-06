@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -101,11 +104,11 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates\fragments" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
+      <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\css" />
-      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -405,13 +408,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -772,6 +777,7 @@
       <workItem from="1721270164214" duration="4750000" />
       <workItem from="1721410204770" duration="175000" />
       <workItem from="1721410750348" duration="50841000" />
+      <workItem from="1722911893373" duration="3056000" />
     </task>
     <task id="LOCAL-00237" summary="Added new port to connection mongoDB in training.js">
       <created>1707362544064</created>
