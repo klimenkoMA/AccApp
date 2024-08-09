@@ -17,32 +17,7 @@
         <div class="page-name">
             <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: КАБИНЕТЫ</h3>
         </div>
-        <div class="navigation-box">
-            <div class="navigation-link">
-                <a href="http://192.168.0.101:8080/" style="color: #fcf6f6">Главная</a>
-            </div>
-            <div class="navigation-link">
-                <a href="http://192.168.0.101:8080/employee" style="color: #fcf6f6">Сотрудники</a>
-            </div>
-            <div class="navigation-link">
-                <a href="http://192.168.0.101:8080/itstaff" style="color: #fcf6f6">Программисты</a>
-            </div>
-            <div class="navigation-link">
-                <a href="http://192.168.0.101:8080/workarea" style="color: #fcf6f6">Филиалы</a>
-            </div>
-            <div class="navigation-link">
-                <a href="http://192.168.0.101:8080/room" style="color: #fcf6f6">Кабинеты</a>
-            </div>
-            <div class="navigation-link">
-                <a href="http://192.168.0.101:8080/events" style="color: #fcf6f6">События</a>
-            </div>
-            <div class="navigation-link">
-                <a href="http://192.168.0.101:8080/devices" style="color: #fcf6f6">Оборудование</a>
-            </div>
-            <div class="navigation-link">
-                <a href="http://192.168.0.101:8080/documents" style="color: #fcf6f6">Документы</a>
-            </div>
-        </div>
+        <div th:replace="fragments/navigation :: navigation"></div>
     </header>
     <main class="main">
         <table class="crud_buttons" cellpadding="40px" align="center">
