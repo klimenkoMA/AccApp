@@ -1,6 +1,5 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="index.js" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
-    <script-file value="$PROJECT_DIR$/frontend/src/index.js" />
     <script-mode>FILE</script-mode>
     <method v="2" />
   </configuration>
