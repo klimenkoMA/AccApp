@@ -5,3 +5,6 @@
 /.idea/dataSources/
 /target/classes/templates/parts/common.ftl
 /target/AccApp-1.0-SNAPSHOT.jar
+/target/test-classes/accountingApp/repository/DevicesControllerTest.class
+/target/test-classes/accountingApp/repository/EmployeeControllerTest.class
+/target/test-classes/accountingApp/repository/EventsControllerTest.class
