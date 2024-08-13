@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="">
+<head>
+    <meta charset="UTF-8" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DOCUMENTS</title>
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="page-name">
+            <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ДОКУМЕНТЫ</h3>
+        </div>
+        <div th:replace="fragments/navigation :: navigation"></div>
+    </header>
+    <main class="main">
+        <table class="crud_buttons" cellpadding="40px" align="center">
+
+            <td>
+                <div class="popup_div">
+                    <input type="checkbox" id="callback">
+                    <label class="popup_try" for="callback">Добавить документ</label>
+                    <form class="popup_form" method="post" action="/adddocument">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="name" align="middle" placeholder="Название документа"/>
+                            </label>
+                            <label>
+                                <input type="text" name="content" align="middle" placeholder="Содержимое"/>
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Добавить</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <label class="close" for="callback">+</label>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div class="popup_div">
+                    <input type="checkbox" id="callback2">
+                    <label class="popup_try" for="callback2">Удалить документ</label>
+                    <form action="/deletedocument" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="name" align="middle" placeholder="Название или ID документа"/>
+                            </label>
+                        </div>
+                        <div>
+                            <button class="button" type="submit">Удалить</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <label class="close" for="callback2">+</label>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div class="popup_div">
+                    <input type="checkbox" id="callback3">
+                    <label class="popup_try" for="callback3">Обновить документ</label>
+                    <form action="/updatedocument" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="id" align="middle" placeholder="ID документа">
+                            </label>
+                            <label>
+                                <input type="text" name="name" align="middle" placeholder="Название документа">
+                            </label>
+                            <label>
+                                <input type="text" name="content" align="middle" placeholder="Содержимое">
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Обновить</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback3">+</label>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div class="popup_div">
+                    <input type="checkbox" id="callback5">
+                    <label class="popup_try_1_row" for="callback5">Найти документ</label>
+                    <form action="/finddocument" class="popup_form" method="post">
+                        <div align="center">
+                            <label>
+                                <input type="text" name="name" align="middle" placeholder="Название документа">
+                            </label>
+                        </div>
+                        <div align="center">
+                            <button class="button" type="submit">Найти</button>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <label class="close" for="callback5">+</label>
+                    </form>
+                </div>
+            </td>
+
+        </table>
+        <div class="mid_part_4">
+            <div class="db_table_border">
+                <table class="db_table">
+                    <tr>
+                        <th>ID документа</th>
+                        <th>Название</th>
+                        <th>Содержимое</th>
+                    </tr>
+                    <div th:each="element : ${documentClassList}" class="row m-1">
+                        <div class="col-8">
+                            <tr align="center">
+                                <td>
+                                    <div>[[${element.id}]]</div>
+                                </td>
+                                <td>
+                                    <div>[[${element.name}]]</div>
+                                </td>
+                                <td>
+                                    <div>[[${element.content}]]</div>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div align="center">MK &copy 2023</div>
+    </footer>
+</div>
+</body>
+</html>

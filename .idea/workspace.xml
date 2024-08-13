@@ -5,6 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/META-INF/maven/org.example/AccApp/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/META-INF/maven/org.example/AccApp/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/AccountingApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/config/MvcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/controller/EmployeeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/controller/EventsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/controller/ITStaffController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/controller/RoomController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/controller/WorkAreaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/documentController/DocumentControllerClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/documentEntity/DocumentClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/documentRepository/DocumentRepositoryClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/documentService/DocumentServiceClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/entity/Devices.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/entity/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/entity/Events.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/entity/ITStaff.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/entity/Room.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/entity/WorkArea.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/repository/DevicesRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/repository/EmployeeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/repository/EventsRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/repository/ITStaffRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/repository/RoomRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/repository/WorkAreaRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/service/DevicesService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/service/EmployeeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/service/EventsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/service/ITStaffService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/service/RoomService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/accountingApp/service/WorkAreaService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/public/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/public/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/css/security.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/img/catPie.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/img/headerBlue.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/img/html5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/img/leafboard.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/img/notebook.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/img/sea.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/img/tux.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/static/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/devices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/documents.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/employee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/events.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/fragments/navigation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/itstaff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/room.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AccApp-1.0-SNAPSHOT/templates/workarea.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -104,11 +163,11 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\test" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates\fragments" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
-      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\css" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -408,13 +467,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -773,14 +834,8 @@
       <workItem from="1722911893373" duration="9700000" />
       <workItem from="1723226429284" duration="6549000" />
       <workItem from="1723306149791" duration="650000" />
-      <workItem from="1723346737779" duration="3165000" />
-    </task>
-    <task id="LOCAL-00243" summary="Installed new mongoDB version">
-      <created>1707644509075</created>
-      <option name="number" value="00243" />
-      <option name="presentableId" value="LOCAL-00243" />
-      <option name="project" value="LOCAL" />
-      <updated>1707644509075</updated>
+      <workItem from="1723346737779" duration="5997000" />
+      <workItem from="1723566225234" duration="2774000" />
     </task>
     <task id="LOCAL-00244" summary="Rebuilt index.js to index.cjs">
       <created>1707758452866</created>
@@ -1118,7 +1173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723382883318</updated>
     </task>
-    <option name="localTasksCounter" value="292" />
+    <task id="LOCAL-00292" summary="Rebuilt POM.xml">
+      <created>1723427636510</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1723427636510</updated>
+    </task>
+    <option name="localTasksCounter" value="293" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1138,7 +1200,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Set a new working directory for mongod" />
     <MESSAGE value="Added Postgres DB properties in application.properties" />
     <MESSAGE value="Some big changes closely connected with moving to another OS." />
     <MESSAGE value="Changed web port in some pages" />
@@ -1163,7 +1224,8 @@
     <MESSAGE value="Made a huge changes in pom.xml&#10;deleted node elements" />
     <MESSAGE value="Changed pom.xml and created first .jar file" />
     <MESSAGE value="Rebuilt target directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt target directory" />
+    <MESSAGE value="Rebuilt POM.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt POM.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
