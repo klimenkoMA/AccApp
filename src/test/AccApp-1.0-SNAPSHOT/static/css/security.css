@@ -1,0 +1,99 @@
+a {
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.headerlogin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    min-height: 80px;
+    max-height: 110px;
+    background: #62a0f6;
+    outline: none;
+    text-shadow: #002349 2px 3px 4px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.headerquit{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    min-width: 100%;
+    padding-bottom: 10px;
+}
+
+.mid_part_sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.buttonsec {
+    display: flex;
+    appearance: none;
+    border: 0;
+    background: #62a0f6;
+    color: #fcf6f6;
+    padding: 2px 5px;
+    font-size: 14px;
+    text-shadow: #002349 2px 3px 4px;
+}
+
+.buttonsec:hover {
+    color: #564827;
+    cursor: pointer;
+}
+
+.buttonsec:focus {
+    outline: 4px;
+    box-shadow: 0 0 0 4px #62a0f6;
+}
+
+.buttonin {
+    display: flex;
+    appearance: none;
+    border: 0;
+    background: #62a0f6;
+    color: #fcf6f6;
+    padding: 2px 5px;
+    font-size: 16px;
+    text-shadow: #002349 2px 3px 4px;
+}
+
+.buttonin:hover {
+    color: #564827;
+    cursor: pointer;
+}
+
+.buttonin:focus {
+    outline: 4px;
+    box-shadow: 0 0 0 4px #62a0f6;
+}
+
+input[type="password"] {
+    appearance: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: inherit;
+    align-items: center;
+    margin: 4px 0;
+    padding: 2px;
+    box-shadow: 0 0 3px 1px #62a0f6;
+    border-radius: 5px;
+    border: 0 #62a0f6;
+}

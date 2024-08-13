@@ -113,19 +113,26 @@
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <version>${spring-boot.version}</version>-->
                 <version>2.4.5</version>
                 <configuration>
-                        <mainClass>src.main.java.accountingApp.AccountingApplication</mainClass>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-<!--                <version>2.4.5</version> &lt;!&ndash; Убедитесь, что версия плагина совместима с вашими требованиями &ndash;&gt;-->
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <manifest>
+                        <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        <mainClass>src/main/java/accountingApp/AccountingApplication.java</mainClass>
+                        <attributes>
+                            <attribute>
+                                <name>Implementation-Version</name>
+                                <value>1</value>
+                            </attribute>
+                            <attribute>
+                                <name>Implementation-Vendor</name>
+                                <value>Your Company</value>
+                            </attribute>
+                        </attributes>
+                    </manifest>
                 </configuration>
             </plugin>
         </plugins>

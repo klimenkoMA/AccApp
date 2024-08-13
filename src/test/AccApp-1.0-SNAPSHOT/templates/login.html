@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login </title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/security.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="wrapper">
+    <header class="headerlogin">
+            <h2 style="width: 70%; text-align: center; color: #fcf6f6">
+                Информационная система учета компьютерного оборудования
+            </h2>
+    </header>
+    <main class="main">
+        <div class="mid_part_sec">
+            <div th:if="${param.error}">
+                Invalid username and password.
+            </div>
+            <!--            <div th:if="${param.logout}">-->
+            <!--                You have been logged out.-->
+            <!--            </div>         -->
+            <form th:action="@{/login}" method="post">
+                <div><label> <input type="text" name="username" placeholder="Логин"/> </label></div>
+                <div><label> <input type="password" name="password" placeholder="Пароль"/> </label></div>
+                <div align="center">
+                    <button class="buttonin" type="submit">Войти</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div align="center">MK &copy 2023</div>
+    </footer>
+</div>
+</body>
+</html>
