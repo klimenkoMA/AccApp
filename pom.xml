@@ -116,13 +116,12 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.4.5</version>
                 <configuration>
-                        <mainClass>src.main.java.accountingApp.AccountingApplication</mainClass>
+                        <mainClass>accountingApp.AccountingApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-<!--                <version>2.4.5</version> &lt;!&ndash; Убедитесь, что версия плагина совместима с вашими требованиями &ndash;&gt;-->
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
