@@ -32,16 +32,16 @@ html, body {
 
 .headermain {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 80px;
     max-height: 110px;
+    min-width: 99%;
     background: #62a0f6;
     outline: none;
     text-shadow: #002349 2px 3px 4px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 0 5%;
 }
 
 .page-name {
