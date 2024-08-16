@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/security.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/security.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -777,14 +782,7 @@
       <workItem from="1723226429284" duration="6549000" />
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
-      <workItem from="1723566225234" duration="6715000" />
-    </task>
-    <task id="LOCAL-00246" summary="Rebuilt some js files">
-      <created>1707879957027</created>
-      <option name="number" value="00246" />
-      <option name="presentableId" value="LOCAL-00246" />
-      <option name="project" value="LOCAL" />
-      <updated>1707879957046</updated>
+      <workItem from="1723566225234" duration="15069000" />
     </task>
     <task id="LOCAL-00247" summary="Continued to code backend in training.js">
       <created>1707962592868</created>
@@ -1122,7 +1120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723602060886</updated>
     </task>
-    <option name="localTasksCounter" value="295" />
+    <task id="LOCAL-00295" summary="Rebuilt nav links with bootstrap styles in navigation.html">
+      <created>1723687031300</created>
+      <option name="number" value="00295" />
+      <option name="presentableId" value="LOCAL-00295" />
+      <option name="project" value="LOCAL" />
+      <updated>1723687031300</updated>
+    </task>
+    <option name="localTasksCounter" value="296" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1142,7 +1147,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed web port in some pages" />
     <MESSAGE value="Changed application.properties" />
     <MESSAGE value="Changed gitignore" />
     <MESSAGE value="Corrected some links" />
@@ -1167,7 +1171,8 @@
     <MESSAGE value="Rebuilt POM.xml" />
     <MESSAGE value="Recompiled project and cleaned the caches" />
     <MESSAGE value="Rebuilt pom.xml for correct package .jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt pom.xml for correct package .jar" />
+    <MESSAGE value="Rebuilt nav links with bootstrap styles in navigation.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt nav links with bootstrap styles in navigation.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
