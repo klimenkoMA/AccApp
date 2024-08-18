@@ -777,14 +777,7 @@
       <workItem from="1723226429284" duration="6549000" />
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
-      <workItem from="1723566225234" duration="19384000" />
-    </task>
-    <task id="LOCAL-00248" summary="Added app.get(/auth/me) in training.js">
-      <created>1708053358551</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1708053358552</updated>
+      <workItem from="1723566225234" duration="22053000" />
     </task>
     <task id="LOCAL-00249" summary="Added checkAuth.js">
       <created>1708166440682</created>
@@ -1122,7 +1115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723776192622</updated>
     </task>
-    <option name="localTasksCounter" value="297" />
+    <task id="LOCAL-00297" summary="Rebuilt header title in main.html">
+      <created>1723915147693</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1723915147693</updated>
+    </task>
+    <option name="localTasksCounter" value="298" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1142,7 +1142,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed gitignore" />
     <MESSAGE value="Corrected some links" />
     <MESSAGE value="Changed section`s style (size)" />
     <MESSAGE value="Added some content in main.html" />
@@ -1167,7 +1166,8 @@
     <MESSAGE value="Rebuilt pom.xml for correct package .jar" />
     <MESSAGE value="Rebuilt nav links with bootstrap styles in navigation.html" />
     <MESSAGE value="Rebuilt header styles in main.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt header styles in main.html" />
+    <MESSAGE value="Rebuilt header title in main.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt header title in main.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
