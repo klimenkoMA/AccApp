@@ -15,12 +15,15 @@
 <body>
 <div class="wrapper">
     <header class="headermain">
-        <div class="w-100 p-4 p-3">
-            <h2 style="text-align: center; color: #fcf6f6">
+        <div class="w-auto">
+
+        </div>
+        <div class="w-50 p-4">
+            <h2 style="text-align: left; color: #fcf6f6">
                 Информационная система для учета компьютерной техники с использованием гетерогенной БД
             </h2>
         </div>
-        <div class="p-5">
+        <div class="w-auto p-5 align-content-end">
             <form th:action="@{/logout}" method="post">
                 <button class="navbar-toggler text-white"
                         data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -130,7 +133,9 @@
                     для оценки эффективности обучения и производственных процессов.
                 </p>
             </td>
+            <td class="w-25">
 
+            </td>
         </table>
         <div class="content_part">
             <button class="button" id="pop" onclick="onclickTwice()">Круассан</button>
