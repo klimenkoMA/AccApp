@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/building.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/buildings.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/coders.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/employees.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/events.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/laptop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/rooms.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/headerBlue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/html5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/leafboard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/notebook.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/sea.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/headerBlue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/html5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/leafboard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/notebook.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/sea.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -790,14 +782,7 @@
       <workItem from="1723226429284" duration="6549000" />
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
-      <workItem from="1723566225234" duration="33424000" />
-    </task>
-    <task id="LOCAL-00251" summary="Added Post.js">
-      <created>1708311759450</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1708311759450</updated>
+      <workItem from="1723566225234" duration="38120000" />
     </task>
     <task id="LOCAL-00252" summary="Added PostController.create in training.js">
       <created>1708399026790</created>
@@ -1135,7 +1120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724033449130</updated>
     </task>
-    <option name="localTasksCounter" value="300" />
+    <task id="LOCAL-00300" summary="Rebuilt &lt;main&gt; in  main.html v3">
+      <created>1724174199310</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1724174199311</updated>
+    </task>
+    <option name="localTasksCounter" value="301" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1155,7 +1147,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added some content in main.html" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v2" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v3" />
@@ -1180,7 +1171,8 @@
     <MESSAGE value="Rebuilt header title in main.html" />
     <MESSAGE value="Rebuilt &lt;main&gt; in  main.html" />
     <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt &lt;main&gt; in  main.html v2" />
+    <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt &lt;main&gt; in  main.html v3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
