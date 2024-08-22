@@ -30,20 +30,6 @@ html, body {
     padding-right: 10%;
 }
 
-.headermain {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 80px;
-    max-height: 110px;
-    min-width: 99%;
-    background: #62a0f6;
-    outline: none;
-    text-shadow: #002349 2px 3px 4px;
-    padding: 0 5%;
-}
-
 .page-name {
     display: flex;
     flex-direction: row;
