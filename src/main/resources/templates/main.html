@@ -14,23 +14,15 @@
 </head>
 <body>
 <div class="wrapper">
-    <header class="modal-header bg-primary sticky-top container">
-        <div class="w-auto" data-bs-theme="light">
+    <header class="modal-header bg-primary sticky-top container row-cols-2" style="height: 10%">
+        <!--        <div class="w-auto" data-bs-theme="light">-->
 
+        <!--        </div>-->
+        <div class="w-auto container text-center text-light fs-2">
+            Информационная система для учета компьютерной техники с использованием гетерогенной БД
         </div>
-        <div class="w-50 container">
-            <h3 style="text-align: left; color: #fcf6f6">
-                Информационная система для учета компьютерной техники с использованием гетерогенной БД
-            </h3>
-        </div>
-        <div class="w-auto p-5 align-content-end">
-            <form th:action="@{/logout}" method="post">
-                <button class="navbar-toggler text-white"
-                        data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-                        aria-expanded="false" type="submit"
-                        value="Sign Out">Выйти
-                </button>
-            </form>
+        <div class="w-auto p-5 align-content-end" style="float: right;">
+
         </div>
     </header>
     <main class="main">
@@ -160,14 +152,22 @@
         </table>
 
     </main>
-    <footer class="modal-footer bg-primary container ">
+    <footer class="modal-footer bg-primary container " style="height: 8%; max-height: 10%">
         <div class="container align-content-center">
-            <p class="text-center text-white"> MK Web Practice &copy 2023 <img src="../img/tux.png"
-                                                                               style="float: right;"
-                                                                               height="50" width="50" alt="Линь"></p>
-            <address class="text-center text-white">FAR FAR AWAY </address>
-        </div>
+            <p class="text-center text-light p-3 fs-5"> MK Web Practice &copy 2023
+            <form th:action="@{/logout}" method="post" style="float: right; align-items: center; width: 15%;
+                                                              padding-bottom: 3%">
+                <button class="navbar-toggler fs-2"
+                        data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false" type="submit"
+                        value="Sign Out"><img src="../img/tux.png"
+                                              height="40" width="40"
+                                              alt="Линь">
+                </button>
+            </form>
+            </p>
 
+        </div>
     </footer>
 </div>
 </body>
