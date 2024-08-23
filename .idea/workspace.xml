@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -767,21 +766,7 @@
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
       <workItem from="1723566225234" duration="44508000" />
-      <workItem from="1724264612167" duration="945000" />
-    </task>
-    <task id="LOCAL-00253" summary="Added some methods in training.js to check REST in Insomnia">
-      <created>1708482253591</created>
-      <option name="number" value="00253" />
-      <option name="presentableId" value="LOCAL-00253" />
-      <option name="project" value="LOCAL" />
-      <updated>1708482253591</updated>
-    </task>
-    <task id="LOCAL-00254" summary="Tried to fix some problems with REST">
-      <created>1708570998170</created>
-      <option name="number" value="00254" />
-      <option name="presentableId" value="LOCAL-00254" />
-      <option name="project" value="LOCAL" />
-      <updated>1708570998170</updated>
+      <workItem from="1724264612167" duration="11513000" />
     </task>
     <task id="LOCAL-00255" summary="Tried to fix some problems with REST v2">
       <created>1708689454913</created>
@@ -1112,7 +1097,21 @@
       <option name="project" value="LOCAL" />
       <updated>1724205396714</updated>
     </task>
-    <option name="localTasksCounter" value="302" />
+    <task id="LOCAL-00302" summary="Rebuilt main.html">
+      <created>1724292326411</created>
+      <option name="number" value="00302" />
+      <option name="presentableId" value="LOCAL-00302" />
+      <option name="project" value="LOCAL" />
+      <updated>1724292326411</updated>
+    </task>
+    <task id="LOCAL-00303" summary="Rebuilt main.html v2">
+      <created>1724294673844</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1724294673844</updated>
+    </task>
+    <option name="localTasksCounter" value="304" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1132,8 +1131,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed &lt;p&gt; tag size in main.html v2" />
-    <MESSAGE value="Changed &lt;p&gt; tag size in main.html v3" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v4" />
     <MESSAGE value="Changed &lt;p&gt; tag size in main.html v5" />
     <MESSAGE value="Added new &lt;td&gt; in main.html" />
@@ -1157,7 +1154,9 @@
     <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v2" />
     <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v3" />
     <MESSAGE value="Rebuilt nav links in main.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt nav links in main.html" />
+    <MESSAGE value="Rebuilt main.html" />
+    <MESSAGE value="Rebuilt main.html v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt main.html v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

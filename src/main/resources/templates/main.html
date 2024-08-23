@@ -14,23 +14,15 @@
 </head>
 <body>
 <div class="wrapper">
-    <header class="modal-header bg-primary sticky-top container">
-        <div class="w-auto" data-bs-theme="light">
+    <header class="modal-header bg-primary sticky-top container row-cols-2" style="height: 10%">
+        <!--        <div class="w-auto" data-bs-theme="light">-->
 
+        <!--        </div>-->
+        <div class="w-auto container text-center text-light fs-2">
+            Информационная система для учета компьютерной техники с использованием гетерогенной БД
         </div>
-        <div class="w-50 container">
-            <h3 style="text-align: left; color: #fcf6f6">
-                Информационная система для учета компьютерной техники с использованием гетерогенной БД
-            </h3>
-        </div>
-        <div class="w-auto p-5 align-content-end">
-            <form th:action="@{/logout}" method="post">
-                <button class="navbar-toggler text-white"
-                        data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-                        aria-expanded="false" type="submit"
-                        value="Sign Out">Выйти
-                </button>
-            </form>
+        <div class="w-auto p-5 align-content-end" style="float: right;">
+
         </div>
     </header>
     <main class="main">
@@ -43,7 +35,7 @@
                         <div class="card-body d-grid gap-2">
                             <h5 class="card-title">Подразделения предприятия</h5>
                             <p class="card-text">Дочерние филиалы и бэк-офисы</p>
-                            <a href="http://192.168.0.101:8080/workarea" class="btn btn-primary stretched-link ">
+                            <a th:href="@{/workarea}" class="btn btn-primary stretched-link ">
                                 Филиалы
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                      class="bi bi-buildings" viewBox="0 0 18 18">
@@ -65,7 +57,7 @@
                     <div class="card-body d-grid gap-2">
                         <h5 class="card-title">Устройства</h5>
                         <p class="card-text">Используемые устройства и оборудование</p>
-                        <a href="http://192.168.0.101:8080/devices" class="btn btn-primary stretched-link">
+                        <a th:href="@{/devices}" class="btn btn-primary stretched-link">
                             Оборудование
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                  class="bi bi-laptop" viewBox="0 0 18 18">
@@ -84,7 +76,7 @@
                     <div class="card-body d-grid gap-2">
                         <h5 class="card-title">Сотрудники предприятия</h5>
                         <p class="card-text">Служащие организации</p>
-                        <a href="http://192.168.0.101:8080/employee" class="btn btn-primary stretched-link">
+                        <a th:href="@{/employee}" class="btn btn-primary stretched-link">
                             Сотрудники
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                  class="bi bi-people-fill" viewBox="0 0 18 18">
@@ -102,7 +94,7 @@
                     <div class="card-body d-grid gap-2">
                         <h5 class="card-title">Движение ТМЦ</h5>
                         <p class="card-text">История использования оборудования</p>
-                        <a href="http://192.168.0.101:8080/events" class="btn btn-primary stretched-link">
+                        <a th:href="@{/events}" class="btn btn-primary stretched-link">
                             События
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-calendar2-week-fill" viewBox="0 0 16 16">
@@ -122,7 +114,7 @@
                     <div class="card-body d-grid gap-2">
                         <h5 class="card-title">Специалисты IT</h5>
                         <p class="card-text">Сотрудники IT-отдела</p>
-                        <a href="http://192.168.0.101:8080/itstaff" class="btn btn-primary stretched-link">
+                        <a th:href="@{/itstaff}" class="btn btn-primary stretched-link">
                             IT-отдел
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-robot" viewBox="0 0 16 16">
@@ -146,7 +138,7 @@
                     <div class="card-body d-grid gap-2">
                         <h5 class="card-title">Кабинеты предприятия</h5>
                         <p class="card-text">Рабочие помещения</p>
-                        <a href="http://192.168.0.101:8080/room" class="btn btn-primary stretched-link">
+                        <a th:href="@{/room}" class="btn btn-primary stretched-link">
                             Кабинеты
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                  class="bi bi-door-closed-fill" viewBox="0 0 18 18">
@@ -160,14 +152,22 @@
         </table>
 
     </main>
-    <footer class="modal-footer bg-primary container ">
+    <footer class="modal-footer bg-primary container " style="height: 8%; max-height: 10%">
         <div class="container align-content-center">
-            <p class="text-center text-white"> MK Web Practice &copy 2023</p>
-            <address class="text-center text-white">FAR FAR AWAY <img src="../img/tux.png"
-                                                                      style="float: right;"
-                                                                      height="50" width="50" alt="Линь"></address>
-        </div>
+            <p class="text-center text-light p-3 fs-5"> MK Web Practice &copy 2023
+            <form th:action="@{/logout}" method="post" style="float: right; align-items: center; width: 15%;
+                                                              padding-bottom: 3%">
+                <button class="navbar-toggler fs-2"
+                        data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false" type="submit"
+                        value="Sign Out"><img src="../img/tux.png"
+                                              height="40" width="40"
+                                              alt="Линь">
+                </button>
+            </form>
+            </p>
 
+        </div>
     </footer>
 </div>
 </body>
