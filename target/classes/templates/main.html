@@ -152,11 +152,14 @@
         </table>
 
     </main>
-    <footer class="modal-footer bg-primary container " style="height: 8%; max-height: 10%">
-        <div class="container align-content-center">
-            <p class="text-center text-light p-3 fs-5"> MK Web Practice &copy 2023
+    <footer class="modal-footer bg-primary container " style="height: 8%; max-height: 10%; padding-left: 15%">
+
+        <div class="w-75 align-items-center text-center">
+            <p class="text-light m-3 p-3"> MK Web Practice &copy 2023</p>
+        </div>
+        <div class="w-25 align-items-center">
             <form th:action="@{/logout}" method="post" style="float: right; align-items: center; width: 15%;
-                                                              padding-bottom: 3%">
+                                                              padding-bottom: 1%">
                 <button class="navbar-toggler fs-2"
                         data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
                         aria-expanded="false" type="submit"
@@ -165,8 +168,6 @@
                                               alt="Линь">
                 </button>
             </form>
-            </p>
-
         </div>
     </footer>
 </div>
