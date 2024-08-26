@@ -15,16 +15,16 @@
 <body>
 <div class="wrapper">
     <header class="modal-header bg-primary sticky-top container" style="height: 10%">
-        <div class="w-auto container text-start text-light fs-2 p-1" style="background-image:
-             url('../img/logo.png'); background-size: cover;
-             max-height: 10rem; max-width: 10rem;
-             align-self: start">
+        <div class="w-100 container text-center text-light fs-2 p-1 h-100">
+            <!--             style="background-image:-->
+            <!--             url('../img/logo.png'); background-size: cover;-->
+            <!--             max-height: 10rem; max-width: 10rem;"-->
 
 
-            <!--            <img src="../img/logo.png" class="card-img-overlay" style="max-height: 10rem; max-width: 10rem;-->
-            <!--            " alt="Logo">-->
-            <div class="text-start w-auto" style="width: content-box">
-                Информационная система для учета компьютерной техники с использованием гетерогенной БД
+            <img src="../img/logo.png" class="card-img-overlay align-self-baseline" style="max-height: 10rem; max-width: 12rem;
+                        padding-left: 1%" alt="Logo">
+            <div class="text-center w-100 position-sticky" style="padding-left: 2%">
+                Информационная система учета компьютерной техники с использованием гетерогенной БД
             </div>
         </div>
     </header>
@@ -158,11 +158,11 @@
     <footer class="modal-footer bg-primary container " style="height: 8%; max-height: 10%; padding-left: 15%">
 
         <div class="w-75 align-items-center text-center">
-            <p class="text-light m-3 p-3"> MK Web Practice &copy 2023</p>
+            <p class="text-light m-3 p-3"> AccApp &copy 2023-2024</p>
         </div>
-        <div class="w-25 align-items-center">
+        <div class="w-25 align-items-center" style="padding-right: 2%">
             <form th:action="@{/logout}" method="post" style="float: right; align-items: center; width: 15%;
-                                                              padding-bottom: 1%">
+                                                              padding-bottom: 1%;">
                 <button class="navbar-toggler fs-2"
                         data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
                         aria-expanded="false" type="submit"
