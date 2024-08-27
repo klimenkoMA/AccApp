@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -767,14 +768,7 @@
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
       <workItem from="1723566225234" duration="44508000" />
-      <workItem from="1724264612167" duration="37676000" />
-    </task>
-    <task id="LOCAL-00258" summary="Added 'findOne article' route in PostController.js">
-      <created>1708858185504</created>
-      <option name="number" value="00258" />
-      <option name="presentableId" value="LOCAL-00258" />
-      <option name="project" value="LOCAL" />
-      <updated>1708858185505</updated>
+      <workItem from="1724264612167" duration="41683000" />
     </task>
     <task id="LOCAL-00259" summary="Added 'remove and update article' routes in PostController.js">
       <created>1708917014397</created>
@@ -1112,7 +1106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724580550768</updated>
     </task>
-    <option name="localTasksCounter" value="307" />
+    <task id="LOCAL-00307" summary="Corrected header and footer in main.html and in login.html">
+      <created>1724639824916</created>
+      <option name="number" value="00307" />
+      <option name="presentableId" value="LOCAL-00307" />
+      <option name="project" value="LOCAL" />
+      <updated>1724639824916</updated>
+    </task>
+    <option name="localTasksCounter" value="308" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1132,7 +1133,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="some micro changes in main.html" />
     <MESSAGE value="some micro changes in main.html v2" />
     <MESSAGE value="Started to use bootstrap in main.html" />
     <MESSAGE value="Started to use bootstrap in all useful pages" />
@@ -1157,7 +1157,8 @@
     <MESSAGE value="Rebuilt header and footer in main.html" />
     <MESSAGE value="Corrected footer in main.html" />
     <MESSAGE value="Corrected header in main.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected header in main.html" />
+    <MESSAGE value="Corrected header and footer in main.html and in login.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected header and footer in main.html and in login.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
