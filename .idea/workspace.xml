@@ -765,14 +765,7 @@
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
       <workItem from="1723566225234" duration="44508000" />
-      <workItem from="1724264612167" duration="72602000" />
-    </task>
-    <task id="LOCAL-00263" summary="Tried to fix issue with upload images in training.js v3">
-      <created>1709260342005</created>
-      <option name="number" value="00263" />
-      <option name="presentableId" value="LOCAL-00263" />
-      <option name="project" value="LOCAL" />
-      <updated>1709260342005</updated>
+      <workItem from="1724264612167" duration="86220000" />
     </task>
     <task id="LOCAL-00264" summary="Tried to fix issue with upload images in training.js v4">
       <created>1709360676327</created>
@@ -1110,7 +1103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724982406233</updated>
     </task>
-    <option name="localTasksCounter" value="312" />
+    <task id="LOCAL-00312" summary="Corrected a main.html">
+      <created>1725115178230</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1725115178230</updated>
+    </task>
+    <option name="localTasksCounter" value="313" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1130,7 +1130,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added navigation.html and rebuilt devices.html`s nav" />
     <MESSAGE value="Rebuilt navigation in several pages" />
     <MESSAGE value="Made a huge changes in pom.xml&#10;deleted node elements" />
     <MESSAGE value="Changed pom.xml and created first .jar file" />
@@ -1155,7 +1154,8 @@
     <MESSAGE value="Built a carousel in main.html" />
     <MESSAGE value="Corrected a carousel in main.html v2" />
     <MESSAGE value="Corrected a carousel in main.html v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected a carousel in main.html v3" />
+    <MESSAGE value="Corrected a main.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected a main.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
