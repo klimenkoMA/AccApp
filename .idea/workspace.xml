@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -765,14 +767,7 @@
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
       <workItem from="1723566225234" duration="44508000" />
-      <workItem from="1724264612167" duration="86220000" />
-    </task>
-    <task id="LOCAL-00264" summary="Tried to fix issue with upload images in training.js v4">
-      <created>1709360676327</created>
-      <option name="number" value="00264" />
-      <option name="presentableId" value="LOCAL-00264" />
-      <option name="project" value="LOCAL" />
-      <updated>1709360676327</updated>
+      <workItem from="1724264612167" duration="91606000" />
     </task>
     <task id="LOCAL-00265" summary="Solved issue with upload images, refactored training.js">
       <created>1709440376734</created>
@@ -1110,7 +1105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725115178230</updated>
     </task>
-    <option name="localTasksCounter" value="313" />
+    <task id="LOCAL-00313" summary="Corrected a main.html v2">
+      <created>1725177460515</created>
+      <option name="number" value="00313" />
+      <option name="presentableId" value="LOCAL-00313" />
+      <option name="project" value="LOCAL" />
+      <updated>1725177460515</updated>
+    </task>
+    <option name="localTasksCounter" value="314" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1130,7 +1132,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt navigation in several pages" />
     <MESSAGE value="Made a huge changes in pom.xml&#10;deleted node elements" />
     <MESSAGE value="Changed pom.xml and created first .jar file" />
     <MESSAGE value="Rebuilt target directory" />
@@ -1155,7 +1156,8 @@
     <MESSAGE value="Corrected a carousel in main.html v2" />
     <MESSAGE value="Corrected a carousel in main.html v3" />
     <MESSAGE value="Corrected a main.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected a main.html" />
+    <MESSAGE value="Corrected a main.html v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected a main.html v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

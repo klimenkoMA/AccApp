@@ -12,6 +12,12 @@
           rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"
+            type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"
+            type="text/javascript"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -23,18 +29,18 @@
     </header>
     <main class="main">
         <div class="mid_part_sec">
-            <div th:if="${param.error}">
-                Invalid username and password.
+            <div class="fs-2 text-danger" th:if="${param.error}">
+                Неправильное имя или пароль.
             </div>
-            <!--            <div th:if="${param.logout}">-->
-            <!--                You have been logged out.-->
-            <!--            </div>         -->
-            <form th:action="@{/login}" method="post">
-                <div><label> <input type="text" name="username" placeholder="Логин"/> </label></div>
-                <div><label> <input type="password" name="password" placeholder="Пароль"/> </label></div>
-                <div align="center">
-<!--                    <button class="buttonin" type="submit">Войти</button>-->
-                    <button class="btn btn-primary" type="submit">Войти</button>
+            <form th:action="@{/login}" method="post" style="display: grid">
+                <div style="justify-self: center"><label> <input type="text" name="username" placeholder="Логин" style="width: 15rem;
+                        margin-bottom: 4%"/> </label></div>
+                <div style="justify-self: center"><label> <input type="password" name="password" placeholder="Пароль"
+                                                                 style="width: 15rem; margin-bottom: 4%"/> </label>
+                </div>
+                <div align="center" style="justify-self: center">
+                    <!--                    <button class="buttonin" type="submit">Войти</button>-->
+                    <button class="btn btn-primary gap-2" type="submit" style="margin-top: 5%">Войти</button>
                 </div>
             </form>
         </div>
