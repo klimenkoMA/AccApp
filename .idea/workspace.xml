@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
@@ -411,6 +413,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -767,14 +780,7 @@
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
       <workItem from="1723566225234" duration="44508000" />
-      <workItem from="1724264612167" duration="91606000" />
-    </task>
-    <task id="LOCAL-00265" summary="Solved issue with upload images, refactored training.js">
-      <created>1709440376734</created>
-      <option name="number" value="00265" />
-      <option name="presentableId" value="LOCAL-00265" />
-      <option name="project" value="LOCAL" />
-      <updated>1709440376734</updated>
+      <workItem from="1724264612167" duration="96162000" />
     </task>
     <task id="LOCAL-00266" summary="Set a new working directory for mongod">
       <created>1718476399225</created>
@@ -1112,7 +1118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725177460515</updated>
     </task>
-    <option name="localTasksCounter" value="314" />
+    <task id="LOCAL-00314" summary="Corrected a main.html  and a login.html">
+      <created>1725243066836</created>
+      <option name="number" value="00314" />
+      <option name="presentableId" value="LOCAL-00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1725243066837</updated>
+    </task>
+    <option name="localTasksCounter" value="315" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1132,7 +1145,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Made a huge changes in pom.xml&#10;deleted node elements" />
     <MESSAGE value="Changed pom.xml and created first .jar file" />
     <MESSAGE value="Rebuilt target directory" />
     <MESSAGE value="Rebuilt POM.xml" />
@@ -1157,7 +1169,8 @@
     <MESSAGE value="Corrected a carousel in main.html v3" />
     <MESSAGE value="Corrected a main.html" />
     <MESSAGE value="Corrected a main.html v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected a main.html v2" />
+    <MESSAGE value="Corrected a main.html  and a login.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected a main.html  and a login.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
