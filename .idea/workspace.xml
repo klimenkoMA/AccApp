@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/AccountingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +27,7 @@
         <option value="Class" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="UML Activity" />
       </list>
     </option>
   </component>
@@ -78,6 +78,7 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="DatabaseDriversLRU" value="sqlserver&#10;mongo&#10;postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="DefaultPlantUmlFileTemplate" value="UML Activity" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -98,7 +99,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="Console" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
     <property name="ts.external.directory.path" value="D:\JAVA\IntelliJ IDEA 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -409,17 +410,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -780,14 +770,9 @@
       <workItem from="1723306149791" duration="650000" />
       <workItem from="1723346737779" duration="5997000" />
       <workItem from="1723566225234" duration="44508000" />
-      <workItem from="1724264612167" duration="96162000" />
-    </task>
-    <task id="LOCAL-00266" summary="Set a new working directory for mongod">
-      <created>1718476399225</created>
-      <option name="number" value="00266" />
-      <option name="presentableId" value="LOCAL-00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1718476399227</updated>
+      <workItem from="1724264612167" duration="98747000" />
+      <workItem from="1725414967530" duration="292000" />
+      <workItem from="1725415303270" duration="727000" />
     </task>
     <task id="LOCAL-00267" summary="Added Postgres DB properties in application.properties">
       <created>1718593577772</created>
@@ -1125,11 +1110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1725243066837</updated>
     </task>
-    <option name="localTasksCounter" value="315" />
+    <task id="LOCAL-00315" summary="Created a advantage.html">
+      <created>1725331365694</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1725331365694</updated>
+    </task>
+    <option name="localTasksCounter" value="316" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.puml" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1145,7 +1140,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed pom.xml and created first .jar file" />
     <MESSAGE value="Rebuilt target directory" />
     <MESSAGE value="Rebuilt POM.xml" />
     <MESSAGE value="Recompiled project and cleaned the caches" />
@@ -1170,7 +1164,8 @@
     <MESSAGE value="Corrected a main.html" />
     <MESSAGE value="Corrected a main.html v2" />
     <MESSAGE value="Corrected a main.html  and a login.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected a main.html  and a login.html" />
+    <MESSAGE value="Created a advantage.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a advantage.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
