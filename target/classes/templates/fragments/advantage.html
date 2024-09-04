@@ -13,15 +13,130 @@
             integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"
             type="text/javascript"></script>
 </head>
-    <div class="container modal-body h-100 w-100 row-cols-2" style="margin-bottom: 1rem;
-          display: grid; border-radius: 1rem; background-color: #62a0f6;" th:fragment="advantage">
-        <div class="container text-center text-light w-75">
-            Часть про достижения
+    <table class="container modal-body h-100 w-100" style="margin-bottom: 1rem;
+          display: grid; border-radius: 1rem; background-color: #62a0f6; margin-top: 1rem;"
+           th:fragment="advantage">
+        <td class="container text-center text-light w-75">
+            <div>
+                Часть про достижения
+            </div>
+
+        </td>
+        <td class="container bg-primary text-center text-light w-25">
+            <div>
+                Ссылки
+            </div>
+        </td>
+        <div class="row">
+            <div class="col w-75">
+                <div style="min-height:30px; position: relative;">
+                    <div class="div-image-middle collection-item avatar">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Программа сделана в России (русскоязычная поддержка, программа и документация на русском языке, ПО в <b>реестре российского ПО Минцифры</b>).
+                        Наше ПО успешно конкурирует с импортными системами инвентаризации ИТ инфраструктуры и может использоваться в процессе <b>импортозамещения</b>.<br>
+                        !! Если вы ищете российские аналоги ПО для замены Spiceworks, TNI, Network Inventory Advisor, Lansweeper, PDQ Inventory, обратите внимание на нашу программу.</p>
+                </div>
+                <div style="min-height:30px; position: relative;">
+                    <div class="div-image-middle collection-item avatar">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Управление ИТ-активами предприятия (ITAM).</p>
+                </div>
+                <div style="min-height:30px; position: relative;">
+                    <div class="div-image-middle collection-item avatar">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Сбор информации без установки дополнительного ПО на компьютеры сети (через <a href="help/wmi-remote-information.shtml">WMI</a> и Active Directory).</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle collection-item avatar">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Фоновый сбор информации по расписанию.</p>
+                </div>
+                <div style="min-height:30px; position: relative;">
+                    <div class="div-image-middle collection-item avatar">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Сканирование компьютеров по сети на Windows, <a href="help/linux.shtml">Linux, MacOS</a>, <a href="help/snmpdevices.shtml">SNMP</a>, а также Android-устройств (по <a href="help/android.shtml">SSH</a>).</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Мониторинг изменений в программах и оборудовании на компьютерах.</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Диагностика проблем на компьютерах сети и оповещение администратора.</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Более 100 готовых <a href="otchet-po-kompyuteram.shtml">отчётов по установленному ПО и "железу"</a>, экспорт в PDF, Word, Excel, HTML.</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">SAM-справочник на 100+ тысяч программ в <a href="pro.shtml">Pro-версии программы</a> для проведения SAM/ITAM.</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Учет компьютерной техники и оргтехники, ведение склада запчастей, ведение истории обслуживания компьютеров.</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list"><a href="help/license-audit.shtml">Управление лицензиями и контроль использования лицензий</a></p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Поддерживает несколько способов сбора информации (для доменов, рабочих групп и ПК без сети).</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Веб-интерфейс для удаленного доступа к инвентарной базе.</p>
+                </div>
+                <div style="min-height:30px;">
+                    <div class="div-image-middle">
+                        <img loading="lazy" src="/img/icon/check.png" width="24" height="24">
+                    </div>
+                    <p class="promo-list">Работаем на рынке ПО с 1998 года (25 лет
+                        ). Разработка программы инвентаризации ведется
+                        17 лет с 2006 года!</p>
+                </div>
+            </div>
+            <div class="col s12 m-4 l-4 align-self-baseline" style="justify-self: right">
+                <ul class="collection with-header">
+                    <li class="collection-header"><strong>Дополнительная информация:</strong></li>
+                    <li><a href="history.shtml" class="collection-item indigo-text text-darken-3">История версий</a></li>
+                    <li><a href="order.shtml" class="collection-item indigo-text text-darken-3">Узнать цены</a></li>
+                    <li><a href="pro.shtml" class="collection-item indigo-text text-darken-3">Версия Pro - в чем разница?</a></li>
+                    <li><a href="screenshots.shtml" class="collection-item indigo-text text-darken-3">Скриншоты</a></li>
+                    <li><a href="video/" class="collection-item indigo-text text-darken-3">Видеоролики</a></li>
+                    <li><a href="help/" class="collection-item indigo-text text-darken-3">Документация</a></li>
+                    <li><a href="faq.shtml" class="collection-item indigo-text text-darken-3">FAQ (частые вопросы и ответы)</a></li>
+                    <li><font size="+1"><a href="ask.php" class="collection-item indigo-text text-darken-3">Задайте нам вопрос! <img src="/img/support32.png" width="32" height="32" align="absmiddle"></a></font></li>
+                </ul>
+            </div>
         </div>
-        <div class="container text-center text-light w-25">
-            Ссылки
-        </div>
-    </div>
+
+
+
+
+    </table>
 
 
 </html>
