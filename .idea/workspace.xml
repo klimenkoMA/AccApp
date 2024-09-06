@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/support32.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
@@ -769,14 +771,7 @@
       <workItem from="1723566225234" duration="44508000" />
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
-      <workItem from="1725415303270" duration="19278000" />
-    </task>
-    <task id="LOCAL-00268" summary="Some big changes closely connected with moving to another OS.">
-      <created>1721325240373</created>
-      <option name="number" value="00268" />
-      <option name="presentableId" value="LOCAL-00268" />
-      <option name="project" value="LOCAL" />
-      <updated>1721325240374</updated>
+      <workItem from="1725415303270" duration="24968000" />
     </task>
     <task id="LOCAL-00269" summary="Changed web port in some pages">
       <created>1721412184354</created>
@@ -1114,7 +1109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725464666379</updated>
     </task>
-    <option name="localTasksCounter" value="317" />
+    <task id="LOCAL-00317" summary="Rebuilt advantage.html v1">
+      <created>1725502732038</created>
+      <option name="number" value="00317" />
+      <option name="presentableId" value="LOCAL-00317" />
+      <option name="project" value="LOCAL" />
+      <updated>1725502732039</updated>
+    </task>
+    <option name="localTasksCounter" value="318" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1137,7 +1139,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt POM.xml" />
     <MESSAGE value="Recompiled project and cleaned the caches" />
     <MESSAGE value="Rebuilt pom.xml for correct package .jar" />
     <MESSAGE value="Rebuilt nav links with bootstrap styles in navigation.html" />
@@ -1162,7 +1163,8 @@
     <MESSAGE value="Corrected a main.html  and a login.html" />
     <MESSAGE value="Created a advantage.html" />
     <MESSAGE value="Rebuilt advantage.html and main.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt advantage.html and main.html" />
+    <MESSAGE value="Rebuilt advantage.html v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt advantage.html v1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
