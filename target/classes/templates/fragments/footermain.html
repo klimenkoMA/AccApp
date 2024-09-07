@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+    <div th:replace="fragments/head :: head"></div>
+</head>
+<div class="modal-footer container bg-primary" style="height: 8%; max-height: 10%; padding-left: 15%;
+        margin-top: 1rem; border-radius: 1rem;" th:fragment="footermain">
+    <div class="w-75 align-items-center text-center">
+        <p class="text-light m-3 p-3"> AccApp &copy 2024</p>
+    </div>
+    <div class="w-25 align-items-center" style="padding-right: 2%">
+        <form th:action="@{/logout}" method="post" style="float: right; align-items: center; width: 15%;
+                                                              padding-bottom: 1%;">
+            <button class="navbar-toggler fs-2"
+                    data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" type="submit"
+                    value="Sign Out"><img src="../img/tux.png"
+                                          height="40" width="40"
+                                          alt="Линь">
+            </button>
+        </form>
+    </div>
+</div>
+</html>
