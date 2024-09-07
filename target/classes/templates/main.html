@@ -19,14 +19,9 @@
 <body>
 <div class="wrapper">
     <header class="modal-header bg-primary container" style="height: 10%; margin-bottom: 1rem;
-                                                                 display: grid; border-radius: 1rem;
-                                                                 /*background-color: #62a0f6*/
-">
+                                                                 display: grid; border-radius: 1rem;">
         <div class="container text-center text-light fs-2 h-100" style="justify-self: center; display: grid">
 
-            <!--            <img src="../img/logo.png" class="card-img-overlay align-self-baseline"-->
-            <!--                 style="max-height: 4rem; max-width: 5rem;-->
-            <!--                        margin-top: 1rem; margin-left: 2rem" alt="Logo">-->
             <div class="text-center position-sticky text fw-bold" style="width: 72%; padding-top: 1%;
                                                                 justify-self: center">
                 Информационная система учета компьютерной техники
@@ -39,70 +34,15 @@
     </header>
     <main class="main">
 
-        <div class="container row-cols-1">
-            <div class="container modal-body text-center position-static">
-                <div class="row justify-content-center" style="background-color: #62a0f6; border-radius: 1rem">
-                    <div id="carousel-example-captions" class="carousel slide"
-                         style="width: 80%; height: 12rem; margin-top: 1rem; margin-bottom: 1rem"
-                         data-bs-interval="5000" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carousel-example-captions" data-bs-slide-to="0"
-                                    class="active"
-                                    aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carousel-example-captions" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carousel-example-captions" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner" style="padding-top: 5%">
-                            <div class="carousel-item active">
-                                <img src="../img/events.png" class="d-block h-100" alt="First">
-                                <div class="carousel-caption d-none d-md-block justify-content-center">
-                                    <h5 style="margin-top: 1rem">Метка первого слайда</h5>
-                                    <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/building.png" class="d-block h-100" alt="Second">
-                                <div class="carousel-caption d-none d-md-block justify-content-center">
-                                    <h5 style="margin-top: 1rem">Метка второго слайда</h5>
-                                    <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/laptop.png" class="d-block h-100" alt="Third">
-                                <div class="carousel-caption d-none d-md-block justify-content-center">
-                                    <h5 style="margin-top: 1rem">Метка третьего слайда</h5>
-                                    <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carousel-example-captions"
-                                data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Предыдущий</span>
-                        </button>
-                        <button class="carousel-control-next" type="button"
-                                data-bs-target="#carousel-example-captions"
-                                data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Следующий</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <div th:replace="fragments/carousel :: carousel"></div>
 
-            <div th:replace="fragments/advantage :: advantage"></div>
+        <div th:replace="fragments/advantage :: advantage"></div>
 
-            <div th:replace="fragments/cards :: cards"></div>
+        <div th:replace="fragments/cards :: cards"></div>
 
-        </div>
     </main>
     <footer class="modal-footer container bg-primary" style="height: 8%; max-height: 10%; padding-left: 15%;
-                                                        margin-top: 1rem; border-radius: 1rem;
-                                                        /*background-color: #62a0f6*/
-">
+                                                        margin-top: 1rem; border-radius: 1rem;">
         <div class="w-75 align-items-center text-center">
             <p class="text-light m-3 p-3"> AccApp &copy 2024</p>
         </div>
