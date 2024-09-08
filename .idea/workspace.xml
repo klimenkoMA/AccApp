@@ -5,38 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footerbd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footermain.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/headermain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/cards.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/carousel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/cards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/carousel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -440,17 +412,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -809,14 +770,8 @@
       <workItem from="1723566225234" duration="44508000" />
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
-      <workItem from="1725415303270" duration="43828000" />
-    </task>
-    <task id="LOCAL-00274" summary="Added some content in main.html">
-      <created>1721841885099</created>
-      <option name="number" value="00274" />
-      <option name="presentableId" value="LOCAL-00274" />
-      <option name="project" value="LOCAL" />
-      <updated>1721841885100</updated>
+      <workItem from="1725415303270" duration="44509000" />
+      <workItem from="1725780155969" duration="5546000" />
     </task>
     <task id="LOCAL-00275" summary="Changed &lt;p&gt; tag size in main.html">
       <created>1721873986931</created>
@@ -1154,7 +1109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725698880657</updated>
     </task>
-    <option name="localTasksCounter" value="323" />
+    <task id="LOCAL-00323" summary="Created a lot of new html files and rebuilt others">
+      <created>1725733828307</created>
+      <option name="number" value="00323" />
+      <option name="presentableId" value="LOCAL-00323" />
+      <option name="project" value="LOCAL" />
+      <updated>1725733828307</updated>
+    </task>
+    <option name="localTasksCounter" value="324" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1177,7 +1139,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt header title in main.html" />
     <MESSAGE value="Rebuilt &lt;main&gt; in  main.html" />
     <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v2" />
     <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v3" />
@@ -1202,7 +1163,8 @@
     <MESSAGE value="Added new icons in advantage.html" />
     <MESSAGE value="Created cards.html" />
     <MESSAGE value="Created carousel.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created carousel.html" />
+    <MESSAGE value="Created a lot of new html files and rebuilt others" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a lot of new html files and rebuilt others" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
