@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/carousel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footerbd.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footerbd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footermain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footermain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/headermain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/headermain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/carousel.html" afterDir="false" />
-    </list>
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -777,14 +766,7 @@
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
-      <workItem from="1725780155969" duration="9741000" />
-    </task>
-    <task id="LOCAL-00276" summary="Changed &lt;p&gt; tag size in main.html v2">
-      <created>1721875102526</created>
-      <option name="number" value="00276" />
-      <option name="presentableId" value="LOCAL-00276" />
-      <option name="project" value="LOCAL" />
-      <updated>1721875102526</updated>
+      <workItem from="1725780155969" duration="10439000" />
     </task>
     <task id="LOCAL-00277" summary="Changed &lt;p&gt; tag size in main.html v3">
       <created>1721960908205</created>
@@ -1122,7 +1104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725809962859</updated>
     </task>
-    <option name="localTasksCounter" value="325" />
+    <task id="LOCAL-00325" summary="Rebuilt some pages">
+      <created>1725849819126</created>
+      <option name="number" value="00325" />
+      <option name="presentableId" value="LOCAL-00325" />
+      <option name="project" value="LOCAL" />
+      <updated>1725849819126</updated>
+    </task>
+    <option name="localTasksCounter" value="326" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1145,7 +1134,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v2" />
     <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v3" />
     <MESSAGE value="Rebuilt nav links in main.html" />
     <MESSAGE value="Rebuilt main.html" />
@@ -1170,7 +1158,8 @@
     <MESSAGE value="Created carousel.html" />
     <MESSAGE value="Created a lot of new html files and rebuilt others" />
     <MESSAGE value="Rebuilt carousel.html and advantage.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt carousel.html and advantage.html" />
+    <MESSAGE value="Rebuilt some pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt some pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
