@@ -1,24 +1,92 @@
-Иди сначала пройди React sneakers, потом react Pizza, только потом этот урок
-
-
-{
-  "email": "testik@test.ru",
-  "password": "233454353452",
-  "fullName": "Abram Sara Goha",
-  "avatarUrl": "https://i.ytimg.com/vi/21D9CwKDeDA/maxresdefault.jpg?7857057827"
-}
-
-https://bitbucket.org/ilakhmotkin/front-end-assesment-ru/src/master/
 
 Zxcvbzxcvb postgr
 
 
 1. Добавить в хэдер логотип по теме приложения +++
-2. Добавить карусель с описанием возможностей программы, вставить в слайды тематические картинки +-
-3. Сделать под каруселью две колонки - большая колонка рассказывает о преимуществах программы, +-
+2. Добавить карусель с описанием возможностей программы, вставить в слайды тематические картинки ++
+3. Сделать под каруселью две колонки - большая колонка рассказывает о преимуществах программы, ++
    маленькая колонка будет формой с сылками на дополнительную информацию++
 4. Дальше внизу вставить ролик с обзором программы
 5. Под роликом тематические скриншоты
 6. Аккордеон по используемому стеку технологий
 7. Достижения разработчика
 8. Футер
+
+
+
+
+
+В Bootstrap для воспроизведения видео на веб-странице можно использовать встроенные компоненты,
+такие как `iframe`, `video` или обертки с классами Bootstrap для создания карточек содержимого.
+Вот несколько способов, как это можно сделать:
+
+### 1. Использование HTML5 Video Tag
+
+Вы можете использовать HTML5 `<video>` тег для встраивания видео на страницу. Вот пример:
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Video Example</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Моё видео</h1>
+        <video width="100%" controls>
+            <source src="path/to/your/video.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+```
+
+### 2. Использование YouTube Video Embed
+
+Если вы хотите встроить видео с YouTube, вы можете использовать `iframe`. Вот пример:
+
+```html
+<div class="container mt-5">
+    <h1>Моё видео с YouTube</h1>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+    </div>
+</div>
+```
+
+### 3. Использование Card для видео
+
+Вы также можете создать карточку с видео:
+
+```html
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Моё видео</h5>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+### Объяснение классов
+
+- `embed-responsive`: используется для создания отзывчивого контейнера.
+- `embed-responsive-16by9`: указывает соотношение сторон 16:9 для видео.
+- `controls`: добавляет элементы управления воспроизведением видео.
+
+### Заключение
+
+Выше приведены способы воспроизведения видео на веб-странице с использованием Bootstrap.
+Выберите тот способ, который лучше всего соответствует вашим потребностям. Не забывайте менять
+`src` на фактический путь к вашему видео или ID видео с YouTube.
