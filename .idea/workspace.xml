@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt popup form in devices.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/video/AccAppPresentation.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/videomain.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/carousel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/carousel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,6 +415,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -770,14 +787,7 @@
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
-      <workItem from="1725780155969" duration="15807000" />
-    </task>
-    <task id="LOCAL-00278" summary="Changed &lt;p&gt; tag size in main.html v4">
-      <created>1722098769005</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1722098769006</updated>
+      <workItem from="1725780155969" duration="18843000" />
     </task>
     <task id="LOCAL-00279" summary="Changed &lt;p&gt; tag size in main.html v5">
       <created>1722156136646</created>
@@ -1115,7 +1125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725897170854</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="Rebuilt notes in carousel.html slides">
+      <created>1725935971079</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1725935971079</updated>
+    </task>
+    <option name="localTasksCounter" value="328" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1138,7 +1155,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt &lt;main&gt; in  main.html v3" />
     <MESSAGE value="Rebuilt nav links in main.html" />
     <MESSAGE value="Rebuilt main.html" />
     <MESSAGE value="Rebuilt main.html v2" />
@@ -1163,7 +1179,8 @@
     <MESSAGE value="Created a lot of new html files and rebuilt others" />
     <MESSAGE value="Rebuilt carousel.html and advantage.html" />
     <MESSAGE value="Rebuilt some pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt some pages" />
+    <MESSAGE value="Rebuilt notes in carousel.html slides" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt notes in carousel.html slides" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

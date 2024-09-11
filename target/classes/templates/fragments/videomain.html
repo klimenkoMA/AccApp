@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+    <div th:replace="fragments/head :: head"></div>
+</head>
+<div class="container mt-5" th:fragment="videomain">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Моё видео</h5>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="../video/AccAppPresentation.mp4"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
