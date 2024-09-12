@@ -5,15 +5,22 @@
 <head>
     <div th:replace="fragments/head :: head"></div>
 </head>
-<div class="container mt-5" th:fragment="videomain">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Моё видео</h5>
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="../video/AccAppPresentation.mp4"
-                        allowfullscreen></iframe>
+<div class="modal-body m-2" th:fragment="videomain">
+    <div class="container" style="display: grid">
+        <div class="card" style="align-self: center; justify-self: center;
+            background-color: #62a0f6">
+            <div class="card-body" style="display: grid; align-self: center">
+                <h5 class="card-title text-light" style="justify-self: center">ВИДЕООБЗОР ПРИЛОЖЕНИЯ</h5>
+                <div class="container" style="display: grid">
+                    <video width="50%" controls style="justify-self: center">
+                        <source src="../video/AccAppPresentation.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
             </div>
         </div>
     </div>
 </div>
 </html>
+
+
