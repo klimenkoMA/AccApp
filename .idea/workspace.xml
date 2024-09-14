@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt videomain.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Created accordion.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/accordion.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -785,14 +783,7 @@
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
-      <workItem from="1725780155969" duration="29149000" />
-    </task>
-    <task id="LOCAL-00281" summary="some micro changes in main.html">
-      <created>1722306736772</created>
-      <option name="number" value="00281" />
-      <option name="presentableId" value="LOCAL-00281" />
-      <option name="project" value="LOCAL" />
-      <updated>1722306736773</updated>
+      <workItem from="1725780155969" duration="31750000" />
     </task>
     <task id="LOCAL-00282" summary="some micro changes in main.html v2">
       <created>1722444203189</created>
@@ -1130,7 +1121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726108783609</updated>
     </task>
-    <option name="localTasksCounter" value="330" />
+    <task id="LOCAL-00330" summary="Created accordion.html">
+      <created>1726193938947</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1726193938948</updated>
+    </task>
+    <option name="localTasksCounter" value="331" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1153,7 +1151,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt main.html v2" />
     <MESSAGE value="Rebuilt header and footer in main.html" />
     <MESSAGE value="Corrected footer in main.html" />
     <MESSAGE value="Corrected header in main.html" />
@@ -1178,7 +1175,8 @@
     <MESSAGE value="Rebuilt notes in carousel.html slides" />
     <MESSAGE value="Added videomain.html" />
     <MESSAGE value="Rebuilt videomain.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt videomain.html" />
+    <MESSAGE value="Created accordion.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created accordion.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
