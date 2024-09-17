@@ -3,54 +3,58 @@
 <head>
     <div th:replace="fragments/head :: head"></div>
 </head>
-<div class="modal-header p-2 m-2 text-center" style="display: flex" th:fragment="accordion">
-    <div class="accordion text-center" id="accordionExample"
-         style="display: flex;justify-self: center; max-width: 81rem;flex-direction: row; justify-content: center;
-                border-radius: 10% 10% 10% 10%">
-        <div class="accordion-item text-center col m-1"
-             style="min-width: 26rem; justify-self: center;text-shadow: 0 0 black; border-radius: 10% 10% 10% 10%">
-            <h2 class="accordion-header text-center">
-                <button class="accordion-button collapsed text-center fs-4" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false" aria-controls="collapseOne" style="max-width: 26rem;
-                                text-shadow: 0 0 black; border-radius: 10% 10% 10% 10%">
+<div class="modal-header p-2 m-2 text-center d-flex rounded-pill justify-content-center" th:fragment="accordion"
+        style="max-width: 70%; justify-self: center; text-shadow: none">
+    <div class="accordion text-center rounded-pill justify-content-center d-flex row" id="accordionExample">
+        <div class="accordion-item text-center col m-1 rounded-pill">
+            <h2 class="accordion-header justify-content-center border border-0">
+                <button class="accordion-button collapsed rounded-pill fs-4 justify-content-center
+                            border border-primary-subtle shadow mb-2 bg-body-tertiary"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        aria-expanded="false" aria-controls="collapseOne" style="text-shadow: none">
                     Технологии разработки приложения: <strong>FRONTEND</strong>
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse fs-4" data-bs-parent="#accordionExample">
-                <div class="accordion-body fs-4">
+            <div id="collapseOne" class="accordion-collapse collapse fs-4 rounded-pill justify-content-center
+                    border border-0"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body fs-4justify-content-center border border-0">
                     <strong>HTML</strong> <strong>CSS</strong> <strong>JavaScript</strong> <strong>Bootstrap</strong>
                     <strong>ThemeLeaf</strong>
                 </div>
             </div>
         </div>
-        <div class="accordion-item col m-1" style="min-width: 26rem; justify-self: center;text-shadow: 0 0 black;
-                        border-radius: 10% 10% 10% 10%">
-            <h2 class="accordion-header text-center">
-                <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-                        style="text-shadow: 0 0 black; border-radius: 10% 10% 10% 10%">
+        <div class="accordion-item col m-1 rounded-pill text-center">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-4 rounded-pill justify-content-center
+                            border border-primary-subtle shadow mb-2 bg-body-tertiary"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo" style="text-shadow: none">
                     Технологии разработки приложения: <strong>BACKEND</strong>
                 </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body fs-4">
+            <div id="collapseTwo" class="accordion-collapse collapse rounded-pill justify-content-center
+                    border border-0"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body fs-4 justify-content-center border border-0">
                     <strong>Java</strong> <strong>Hibernate</strong> <strong>Spring Boot</strong>
                     <strong>REST</strong> <strong>CRUD</strong>
                 </div>
             </div>
         </div>
-        <div class="accordion-item col m-1" style="min-width: 26rem; justify-self: center;text-shadow: 0 0 black;
-                border-radius: 10% 10% 10% 10%">
+        <div class="accordion-item col m-1 rounded-pill text-center">
             <h2 class="accordion-header text-center">
-                <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-                        style="text-shadow: 0 0 black; border-radius: 10% 10% 10% 10%">
-                    Технологии разработки приложения: <strong>DATA BASES</strong>
+                <button class="accordion-button collapsed fs-4 rounded-pill  justify-content-center
+                            border border-primary-subtle shadow mb-2 bg-body-tertiary"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree" style="text-shadow: none">
+                    Технологии разработки приложения: <strong>DATABASE</strong>
                 </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body fs-4">
+            <div id="collapseThree" class="accordion-collapse collapse rounded-pill justify-content-center
+                    border border-0"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body fs-4 rounded-pill justify-content-center border border-0">
                     <strong>Postgres SQL</strong> <strong>MongoDB</strong> <strong>Compass</strong>
                     <strong>PgAdmin</strong>
                 </div>
