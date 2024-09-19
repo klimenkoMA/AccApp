@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt accordion.html v4">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/backend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/db.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/frontend.png" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt accordion.html v5">
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/db.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footermain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footermain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/accordion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/footermain.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/footermain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -786,14 +792,7 @@
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
-      <workItem from="1725780155969" duration="55535000" />
-    </task>
-    <task id="LOCAL-00286" summary="Added navigation.html and rebuilt devices.html`s nav">
-      <created>1722966771042</created>
-      <option name="number" value="00286" />
-      <option name="presentableId" value="LOCAL-00286" />
-      <option name="project" value="LOCAL" />
-      <updated>1722966771044</updated>
+      <workItem from="1725780155969" duration="59906000" />
     </task>
     <task id="LOCAL-00287" summary="Added navigation.html and rebuilt devices.html`s nav">
       <created>1722996596135</created>
@@ -1131,7 +1130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726541124316</updated>
     </task>
-    <option name="localTasksCounter" value="335" />
+    <task id="LOCAL-00335" summary="Rebuilt accordion.html v5">
+      <created>1726627427127</created>
+      <option name="number" value="00335" />
+      <option name="presentableId" value="LOCAL-00335" />
+      <option name="project" value="LOCAL" />
+      <updated>1726627427127</updated>
+    </task>
+    <option name="localTasksCounter" value="336" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1154,7 +1160,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrected header and footer in main.html and in login.html v2" />
     <MESSAGE value="Built a carousel in main.html" />
     <MESSAGE value="Corrected a carousel in main.html v2" />
     <MESSAGE value="Corrected a carousel in main.html v3" />
@@ -1179,7 +1184,8 @@
     <MESSAGE value="Rebuilt accordion.html v2" />
     <MESSAGE value="Rebuilt accordion.html v3" />
     <MESSAGE value="Rebuilt accordion.html v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt accordion.html v4" />
+    <MESSAGE value="Rebuilt accordion.html v5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt accordion.html v5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
