@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru" style="overflow-y: scroll">
+
+<head>
+    <div th:replace="fragments/head :: head"></div>
+</head>
+<div th:fragment="about">
+
+    <button class="btn border border-0 text-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight" style="text-shadow: none">О разработчике
+    </button>
+
+    <div class="offcanvas offcanvas-end border border-0 d-flex" tabindex="-1" id="offcanvasRight"
+         aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header text-center border border-0 ">
+            <img src="../img/photo/a2.jpg" class="justify-content-center" style="border-radius: 20%;
+                max-height: 10vh; max-width: 10vh" alt="author">
+            <h5 class="offcanvas-title " id="offcanvasRightLabel">
+                <strong>Cтудент группы 22-ЗКМ-ПР1 Клименко Михаил Александрович</strong></h5>
+        </div>
+        <div class="offcanvas-body border border-0 d-flex row" style="min-height: 100vh;">
+           ///
+
+        </div>
+    </div>
+</div>
+</html>
