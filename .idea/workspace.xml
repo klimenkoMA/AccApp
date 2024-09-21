@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt accordion.html v6">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt accordion.html and advantage.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/photo/a2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/photo/author.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/carousel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/accordion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/carousel.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -786,14 +789,7 @@
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
-      <workItem from="1725780155969" duration="63900000" />
-    </task>
-    <task id="LOCAL-00288" summary="Rebuilt navigation in several pages">
-      <created>1723083626302</created>
-      <option name="number" value="00288" />
-      <option name="presentableId" value="LOCAL-00288" />
-      <option name="project" value="LOCAL" />
-      <updated>1723083626302</updated>
+      <workItem from="1725780155969" duration="84493000" />
     </task>
     <task id="LOCAL-00289" summary="Made a huge changes in pom.xml&#10;deleted node elements">
       <created>1723169961500</created>
@@ -1131,7 +1127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726712180316</updated>
     </task>
-    <option name="localTasksCounter" value="337" />
+    <task id="LOCAL-00337" summary="Rebuilt accordion.html and advantage.html">
+      <created>1726809404600</created>
+      <option name="number" value="00337" />
+      <option name="presentableId" value="LOCAL-00337" />
+      <option name="project" value="LOCAL" />
+      <updated>1726809404600</updated>
+    </task>
+    <option name="localTasksCounter" value="338" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1154,7 +1157,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrected a carousel in main.html v2" />
     <MESSAGE value="Corrected a carousel in main.html v3" />
     <MESSAGE value="Corrected a main.html" />
     <MESSAGE value="Corrected a main.html v2" />
@@ -1179,7 +1181,8 @@
     <MESSAGE value="Rebuilt accordion.html v4" />
     <MESSAGE value="Rebuilt accordion.html v5" />
     <MESSAGE value="Rebuilt accordion.html v6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt accordion.html v6" />
+    <MESSAGE value="Rebuilt accordion.html and advantage.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt accordion.html and advantage.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
