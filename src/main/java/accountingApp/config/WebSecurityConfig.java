@@ -27,13 +27,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/resources/**", "/static/**", "/css/**", "/video/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .csrf().disable()
+//                .csrf().disable()
                 .formLogin()
                 .loginPage("/login")
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll();
+                .permitAll()
+                .and()
+                .exceptionHandling()
+                    .authenticationEntryPoint((request, response, authException) ->{
+                        response.sendRedirect("/login");
+                    })
+                    .and()
+                    .csrf().disable();
     }
 
     @Bean
