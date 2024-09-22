@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Created about.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/photo/a1.jpg" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt about.html v1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/photo/a2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/photo/a2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/photo/a2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/photo/a2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/photo/author.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -791,14 +782,7 @@
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
-      <workItem from="1725780155969" duration="96532000" />
-    </task>
-    <task id="LOCAL-00290" summary="Changed pom.xml and created first .jar file">
-      <created>1723301665009</created>
-      <option name="number" value="00290" />
-      <option name="presentableId" value="LOCAL-00290" />
-      <option name="project" value="LOCAL" />
-      <updated>1723301665010</updated>
+      <workItem from="1725780155969" duration="98257000" />
     </task>
     <task id="LOCAL-00291" summary="Rebuilt target directory">
       <created>1723382883318</created>
@@ -1136,7 +1120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726903168384</updated>
     </task>
-    <option name="localTasksCounter" value="339" />
+    <task id="LOCAL-00339" summary="Rebuilt about.html v1">
+      <created>1726942198883</created>
+      <option name="number" value="00339" />
+      <option name="presentableId" value="LOCAL-00339" />
+      <option name="project" value="LOCAL" />
+      <updated>1726942198884</updated>
+    </task>
+    <option name="localTasksCounter" value="340" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1159,7 +1150,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrected a main.html" />
     <MESSAGE value="Corrected a main.html v2" />
     <MESSAGE value="Corrected a main.html  and a login.html" />
     <MESSAGE value="Created a advantage.html" />
@@ -1184,7 +1174,8 @@
     <MESSAGE value="Rebuilt accordion.html v6" />
     <MESSAGE value="Rebuilt accordion.html and advantage.html" />
     <MESSAGE value="Created about.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created about.html" />
+    <MESSAGE value="Rebuilt about.html v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt about.html v1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
