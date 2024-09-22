@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+    <div th:fragment="screenshots">
+
+        <button class="btn border border-0 text-primary" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRightfaq"
+                aria-controls="offcanvasRightfaq" style="text-shadow: none;
+                text-align: left">Требования для работы приложения
+        </button>
+
+        <div class="card col offcanvas offcanvas-end border border-0"
+             tabindex="-1" id="offcanvasRightfaq" aria-labelledby="offcanvasRightLabel" style="width: 40vh">
+            <img src="../img/faq.png" class="card-img-top" alt="FAQ" style="max-height: 25vh; max-width: 20vh;
+                border-radius: 30%; align-self: center">
+            <div class="card-body d-grid gap-2 offcanvas-title bg-light" id="offcanvasRightLabel"
+                 style="min-height: 100vh; align-content: start">
+                <h5 class="card-title text-center" style="height: 3vh">Минимальные требования</h5>
+                <p class="card-text offcanvas-body align-self-start"><strong>Аппаратные</strong>
+                    - Процессор: минимально двуядерный.
+                    Оперативная память: минимум 4 ГБ (рекомендуется 8 ГБ и выше).
+                    Свободное дисковое пространство: не менее 1 ГБ.
+                    Доступ к сети: стабильное подключение к локальной сети.
+                    <br><strong>Программные</strong> - Операционная система: Windows, macOS, Linux (в зависимости от
+                    целевой аудитории).
+                    Веб-браузер: актуальные версии Yandex, Firefox, Safari, Edge (рекомендуется использовать последние
+                    версии).
+                    <br><strong>Безопасность</strong> - Аутентификация пользователей (логин и пароль).
+                    Ограничение доступа на уровне пользователя или группы.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</html>
