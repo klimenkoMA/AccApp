@@ -15,9 +15,11 @@
                 <div class="col" style="max-width: min-content">
                     <img loading="lazy" src="../img/check.png">
                 </div>
-                <p class="col align-self-baseline">Программа сделана в России (русскоязычная поддержка, программа и документация на
+                <p class="col align-self-baseline">Программа сделана в России (русскоязычная поддержка, программа и
+                    документация на
                     русском языке).
-                    Наше ПО способно успешно конкурировать с импортными системами инвентаризации ИТ инфраструктуры и может
+                    Наше ПО способно успешно конкурировать с импортными системами инвентаризации ИТ инфраструктуры и
+                    может
                     использоваться в процессе <b>импортозамещения</b>.<br>
                 </p>
             </div>
@@ -54,15 +56,12 @@
         <div class="col s12 m-2 l-4 align-self-baseline card" style="display: grid; max-width: 23%">
             <ul class="collection with-header" style="justify-self: end">
                 <li class="collection-header fs-5"><strong>Дополнительная информация:</strong></li>
-                <li><a th:replace="fragments/about :: about" class="collection-item indigo-text text-darken-3">О разработчике</a></li>
-                <li><a href="screenshots.shtml" class="collection-item indigo-text text-darken-3">Скриншоты</a></li>
-                <li><a th:href="@{/documents}" class="collection-item indigo-text text-darken-3">Документация</a></li>
-                <li><a href="faq.shtml" class="collection-item indigo-text text-darken-3">FAQ (частые вопросы и
-                    ответы)</a>
-                </li>
-                <li class="fs-6"><a href="ask.php" class="collection-item indigo-text text-darken-3">Задайте нам
-                    вопрос!
-                    <img src="../img/support32.png" width="32" height="32" align="absmiddle"></a></li>
+                <li><a th:replace="fragments/about :: about">О разработчике</a></li>
+                <li><a th:replace="/fragments/screenshots :: screenshots">Требования для работы приложения</a></li>
+                <li><a th:href="@{/documents}" class="btn border border-0 text-primary">Документация</a></li>
+                <li><a th:replace="fragments/feedback :: feedback" class="collection-item indigo-text text-darken-3">Задайте
+                    нам вопрос!
+                    <img src="../img/support32.png" width="32" height="32" align="absmiddle" alt="feedback"></a></li>
             </ul>
         </div>
     </div>
