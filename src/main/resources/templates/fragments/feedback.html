@@ -21,12 +21,19 @@
         <div class="card-body d-grid gap-2 offcanvas-title bg-light" id="offcanvasRightLabel"
              style="min-height: 100vh; align-content: start">
             <h5 class="card-title text-center" style="height: 3vh">Напишите нам!</h5>
-            <p class="card-text offcanvas-body align-self-start"><strong>Ваше имя</strong>
+            <p class="card-text offcanvas-body align-self-start">
+                <label for="name"><strong>Ваше имя</strong></label>
                 <br>
+                <input type="text" class="text-start" id="name" style="min-width: 90%">
                 <br>
+                <label for="email"><strong>Электронная почта</strong></label>
+                <input type="text" class="text-start" id="email" required style="min-width: 90%">
                 <br>
-                <strong>Ваше сообщение</strong>
-
+                <label for="message"><strong>Ваше сообщение</strong></label>
+                <textarea class="form-control" id="message" rows="6" required
+                    style="border: 1px solid #62a0f6;  box-shadow: 0 0 0 1px #bcd3e9;"></textarea>
+                <br>
+                <button type="submit" class="btn btn-primary">Отправить</button>
             </p>
         </div>
     </div>

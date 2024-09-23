@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt security for redirect unauthorized visitors to login.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/faq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/letter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/feedback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/screenshots.html" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Created feedback.html and screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/photo/a1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/accordion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footerbd.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footerbd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/photo/a1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/accordion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/footerbd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/footerbd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/screenshots.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/screenshots.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/screenshots.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/screenshots.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -796,14 +785,7 @@
       <workItem from="1724264612167" duration="98747000" />
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
-      <workItem from="1725780155969" duration="106735000" />
-    </task>
-    <task id="LOCAL-00292" summary="Rebuilt POM.xml">
-      <created>1723427636510</created>
-      <option name="number" value="00292" />
-      <option name="presentableId" value="LOCAL-00292" />
-      <option name="project" value="LOCAL" />
-      <updated>1723427636510</updated>
+      <workItem from="1725780155969" duration="112207000" />
     </task>
     <task id="LOCAL-00293" summary="Recompiled project and cleaned the caches">
       <created>1723569926099</created>
@@ -1141,7 +1123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726980783555</updated>
     </task>
-    <option name="localTasksCounter" value="341" />
+    <task id="LOCAL-00341" summary="Created feedback.html and screenshots.html">
+      <created>1726994679819</created>
+      <option name="number" value="00341" />
+      <option name="presentableId" value="LOCAL-00341" />
+      <option name="project" value="LOCAL" />
+      <updated>1726994679819</updated>
+    </task>
+    <option name="localTasksCounter" value="342" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1164,7 +1153,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrected a main.html  and a login.html" />
     <MESSAGE value="Created a advantage.html" />
     <MESSAGE value="Rebuilt advantage.html and main.html" />
     <MESSAGE value="Rebuilt advantage.html v1" />
@@ -1189,7 +1177,8 @@
     <MESSAGE value="Created about.html" />
     <MESSAGE value="Rebuilt about.html v1" />
     <MESSAGE value="Rebuilt security for redirect unauthorized visitors to login.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt security for redirect unauthorized visitors to login.html" />
+    <MESSAGE value="Created feedback.html and screenshots.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created feedback.html and screenshots.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
