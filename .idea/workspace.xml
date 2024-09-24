@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Feedback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/FeedbackRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/FeedbackService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/feedback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/feedback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/screenshots.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/screenshots.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -426,19 +412,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -799,13 +772,7 @@
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
-    </task>
-    <task id="LOCAL-00294" summary="Rebuilt pom.xml for correct package .jar">
-      <created>1723602060886</created>
-      <option name="number" value="00294" />
-      <option name="presentableId" value="LOCAL-00294" />
-      <option name="project" value="LOCAL" />
-      <updated>1723602060886</updated>
+      <workItem from="1727146953008" duration="1082000" />
     </task>
     <task id="LOCAL-00295" summary="Rebuilt nav links with bootstrap styles in navigation.html">
       <created>1723687031300</created>
@@ -1143,7 +1110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727071833266</updated>
     </task>
-    <option name="localTasksCounter" value="343" />
+    <task id="LOCAL-00343" summary="Created a new entity feedback">
+      <created>1727147102475</created>
+      <option name="number" value="00343" />
+      <option name="presentableId" value="LOCAL-00343" />
+      <option name="project" value="LOCAL" />
+      <updated>1727147102476</updated>
+    </task>
+    <option name="localTasksCounter" value="344" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1166,7 +1140,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt advantage.html and main.html" />
     <MESSAGE value="Rebuilt advantage.html v1" />
     <MESSAGE value="Rebuilt advantage.html v2" />
     <MESSAGE value="Added new icons in advantage.html" />
@@ -1191,7 +1164,8 @@
     <MESSAGE value="Rebuilt security for redirect unauthorized visitors to login.html" />
     <MESSAGE value="Created feedback.html and screenshots.html" />
     <MESSAGE value="Rebuilt screenshots.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt screenshots.html" />
+    <MESSAGE value="Created a new entity feedback" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a new entity feedback" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
