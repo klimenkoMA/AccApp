@@ -38,6 +38,6 @@ public class FeedbackController {
             List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
             model.addAttribute("feedbackList", feedbackList);
         }
-        return "feedbacks";
+        return "main";
     }
 }

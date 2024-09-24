@@ -21,7 +21,7 @@
         <div  class="card-body d-grid gap-2 offcanvas-title bg-light" id="offcanvasRightLabel"
              style="min-height: 100vh; align-content: start">
             <h5 class="card-title text-center" style="height: 3vh">Напишите нам!</h5>
-            <p action="/addfeedback" method="post" class="card-text offcanvas-body align-self-start">
+            <form action="/addfeedback" method="post" class="card-text offcanvas-body align-self-start">
                 <label for="name"><strong>Ваше имя</strong></label>
                 <br>
                 <input type="text" class="text-start" name="name" id="name" style="min-width: 90%">
@@ -36,7 +36,7 @@
                 <button type="submit" class="btn" style="background-color: #62a0f6; text-shadow: none;
                         color: white">Отправить</button>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-            </p>
+            </form>
         </div>
     </div>
 
