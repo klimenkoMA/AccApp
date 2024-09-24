@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+    <title>Feedbacks</title>
+    <div th:replace="fragments/head :: head"></div>
+</head>
+<body>
+ <div class="wrapper">
+     <header class="header">
+         <div class="page-name">
+             <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ОБРАТНАЯ СВЯЗЬ</h3>
+         </div>
+         <div th:replace="fragments/navigation :: navigation"></div>
+     </header>
+     <main>
+
+         <table class="crud_buttons" cellpadding="40px" align="center">
+             <td>
+                 <div class="popup_div">
+                     <input type="checkbox" id="callback">
+                     <label class="popup_try" for="callback">Добавить отзыв</label>
+                     <form class="popup_form" method="post" action="/addfeedback">
+                         <div align="center">
+                             <label>
+                                 <input type="text" name="name" align="middle" placeholder="Название отзыва"/>
+                             </label>
+                             <label>
+                                 <input type="text" name="email" align="middle" placeholder="email"/>
+                             </label>
+                             <label>
+                              <textarea class="form-control" name="message" id="message" rows="6" required
+                                style="border: 1px solid #62a0f6;  box-shadow: 0 0 0 1px #bcd3e9;"></textarea>
+                             </label>
+                         </div>
+                         <div align="center">
+                             <button class="button" type="submit">Добавить</button>
+                         </div>
+                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                         <label class="close" for="callback">+</label>
+                     </form>
+                 </div>
+             </td>
+         </table>
+         <div class="mid_part_4">
+             <div class="db_table_border">
+                 <table class="db_table">
+                     <tr>
+                         <th>ID отзыва</th>
+                         <th>Имя</th>
+                         <th>E-mail</th>
+                         <th>Отзыв</th>
+                     </tr>
+                     <div th:each="element : ${feedbackList}" class="row m-1">
+                         <div class="col-8">
+                             <tr align="center">
+                                 <td>
+                                     <div>[[${element.id}]]</div>
+                                 </td>
+                                 <td>
+                                     <div>[[${element.name}]]</div>
+                                 </td>
+                                 <td>
+                                     <div>[[${element.email}]]</div>
+                                 </td>
+                                 <td>
+                                     <div>[[${element.message}]]</div>
+                                 </td>
+                             </tr>
+                         </div>
+                     </div>
+                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                 </table>
+             </div>
+         </div>
+
+     </main>
+ </div>
+
+</body>
+</html>
