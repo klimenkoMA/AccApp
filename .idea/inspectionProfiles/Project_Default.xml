@@ -16,7 +16,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="31">
+          <list size="32">
             <item index="0" class="java.lang.String" itemvalue="charset" />
             <item index="1" class="java.lang.String" itemvalue="placeholder" />
             <item index="2" class="java.lang.String" itemvalue="th:each" />
@@ -48,6 +48,7 @@
             <item index="28" class="java.lang.String" itemvalue="data-bs-ride" />
             <item index="29" class="java.lang.String" itemvalue="loading" />
             <item index="30" class="java.lang.String" itemvalue="style" />
+            <item index="31" class="java.lang.String" itemvalue="action" />
           </list>
         </value>
       </option>
