@@ -1,6 +1,5 @@
 package accountingApp.controller;
 
-import accountingApp.documentEntity.DocumentClass;
 import accountingApp.entity.Feedback;
 import accountingApp.service.FeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
