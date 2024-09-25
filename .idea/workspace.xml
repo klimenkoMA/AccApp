@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/feedback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -772,14 +774,7 @@
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
-      <workItem from="1727146953008" duration="1082000" />
-    </task>
-    <task id="LOCAL-00295" summary="Rebuilt nav links with bootstrap styles in navigation.html">
-      <created>1723687031300</created>
-      <option name="number" value="00295" />
-      <option name="presentableId" value="LOCAL-00295" />
-      <option name="project" value="LOCAL" />
-      <updated>1723687031300</updated>
+      <workItem from="1727146953008" duration="8261000" />
     </task>
     <task id="LOCAL-00296" summary="Rebuilt header styles in main.html">
       <created>1723776192622</created>
@@ -1117,7 +1112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727147102476</updated>
     </task>
-    <option name="localTasksCounter" value="344" />
+    <task id="LOCAL-00344" summary="Corrected a feedback's view and logic">
+      <created>1727149809605</created>
+      <option name="number" value="00344" />
+      <option name="presentableId" value="LOCAL-00344" />
+      <option name="project" value="LOCAL" />
+      <updated>1727149809605</updated>
+    </task>
+    <option name="localTasksCounter" value="345" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1140,7 +1142,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt advantage.html v1" />
     <MESSAGE value="Rebuilt advantage.html v2" />
     <MESSAGE value="Added new icons in advantage.html" />
     <MESSAGE value="Created cards.html" />
@@ -1165,7 +1166,8 @@
     <MESSAGE value="Created feedback.html and screenshots.html" />
     <MESSAGE value="Rebuilt screenshots.html" />
     <MESSAGE value="Created a new entity feedback" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a new entity feedback" />
+    <MESSAGE value="Corrected a feedback's view and logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected a feedback's view and logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
