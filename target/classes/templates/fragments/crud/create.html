@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+    <div th:replace="fragments/head :: head"></div>
+</head>
+<div class="d-flex justify-content-center" th:fragment="create">
+    <button class="btn border border-0 text-primary" type="submit" style="text-shadow: none;
+                text-align: left"><img src="../img/crud/create.png" width="32" height="32" align="absmiddle">
+    </button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+</div>
+</html>
