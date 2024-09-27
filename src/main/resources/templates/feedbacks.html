@@ -25,21 +25,43 @@
                     <th class="border border-1 border-dark p-2 m-2 text-center" style="width: 20vh">Имя</th>
                     <th class="border border-1 border-dark p-2 m-2 text-center" style="width: 20vh">E-mail</th>
                     <th class="border border-1 border-dark p-2 m-2 text-center" style="width: 45vh">Отзыв</th>
-                    <th class="border border-1 border-dark p-2 m-2 text-center" style="width: 10vh">Работа с данными</th>
+                    <th class="border border-1 border-dark p-2 m-2 text-center" style="width: 10vh">Работа с данными
+                    </th>
                 </tr>
 
-                <tr>
-                    <td class="border border-1 border-dark p-2 m-2 text-center"><h6>...</h6></td>
-                    <td class="border border-1 border-dark p-2 m-2 text-center"><h6>...</h6></td>
-                    <td class="border border-1 border-dark p-2 m-2 text-center"><h6>...</h6></td>
-                    <td class="border border-1 border-dark p-2 m-2 text-center"><h6>...</h6></td>
-                    <td class="border border-1 border-dark p-2 m-2 text-center"><h6>...</h6></td>
-                </tr>
+                <form action="/addfeedback" method="post">
+                    <td class="border border-1 border-dark text-center p-1">
+                        <label class="text-start border border-0">
+                            <input type="text" class="text-start border border-0" name="id" id="id" style="min-width: 99%">
+                        </label>
+                    </td>
+                    <td class="border border-1 border-dark text-center p-1">
+                        <label class="text-start border border-0">
+                            <input type="text" class="text-start border border-0" name="name" id="name" style="min-width: 99%">
+                        </label>
+                    </td>
+                    <td class="border border-1 border-dark text-center p-1">
+                        <label class="text-start border border-0">
+                            <input type="text" class="text-start border border-0" name="email" id="email" required
+                                   style="min-width: 99%">
+                        </label>
+                    </td>
+                    <td class="border border-1 border-dark text-center p-1">
+                        <label class="text-start border border-0">
+                            <textarea class="form-control border border-0" name="message" id="message" rows="1" required></textarea>
+                        </label>
+                    </td>
+                    <td class="border border-1 border-dark text-center p-1">
+                        <label class="text-start border border-0">
+                            <div th:replace="fragments/crud/create :: create"></div>
+                        </label>
+                    </td>
+                </form>
 
                 <div th:each="element : ${feedbackList}">
                     <div class="col-8">
                         <tr style="align-self: center">
-                            <td class="border border-1 border-dark p-2 m-2 text-center" >
+                            <td class="border border-1 border-dark p-2 m-2 text-center">
                                 <div>[[${element.id}]]</div>
                             </td>
                             <td class="border border-1 border-dark p-2 m-2 text-center">

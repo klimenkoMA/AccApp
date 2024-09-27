@@ -259,6 +259,10 @@ html, body {
     box-shadow: 0 0 0 2px #15467a;
 }
 
+tr:nth-of-type(even) {
+    background-color: #d0dede;
+}
+
 .db_table {
     display: flex;
     align-items: center;
