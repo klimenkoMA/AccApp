@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/crud/create.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/crud/create.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/crud/create.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/crud/create.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/crud/create.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -786,14 +784,7 @@
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
-      <workItem from="1727146953008" duration="19102000" />
-    </task>
-    <task id="LOCAL-00298" summary="Rebuilt &lt;main&gt; in  main.html">
-      <created>1723989787637</created>
-      <option name="number" value="00298" />
-      <option name="presentableId" value="LOCAL-00298" />
-      <option name="project" value="LOCAL" />
-      <updated>1723989787638</updated>
+      <workItem from="1727146953008" duration="24599000" />
     </task>
     <task id="LOCAL-00299" summary="Rebuilt &lt;main&gt; in  main.html v2">
       <created>1724033449129</created>
@@ -1131,7 +1122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727318490024</updated>
     </task>
-    <option name="localTasksCounter" value="347" />
+    <task id="LOCAL-00347" summary="Create a create.html">
+      <created>1727404816045</created>
+      <option name="number" value="00347" />
+      <option name="presentableId" value="LOCAL-00347" />
+      <option name="project" value="LOCAL" />
+      <updated>1727404816045</updated>
+    </task>
+    <option name="localTasksCounter" value="348" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1154,7 +1152,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created cards.html" />
     <MESSAGE value="Created carousel.html" />
     <MESSAGE value="Created a lot of new html files and rebuilt others" />
     <MESSAGE value="Rebuilt carousel.html and advantage.html" />
@@ -1179,7 +1176,8 @@
     <MESSAGE value="Corrected a feedback's view and logic" />
     <MESSAGE value="Corrected a feedbacks.html's view" />
     <MESSAGE value="Rebuilt feedbacks.html's table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt feedbacks.html's table" />
+    <MESSAGE value="Create a create.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a create.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
