@@ -6,12 +6,15 @@
     <div th:replace="fragments/head :: head"></div>
 </head>
 <body>
-<div class="wrapper">
-    <header class="header">
-        <div class="page-name">
+<div class="wrapper d-flex justify-content-center" style="align-self: center">
+    <header class="modal-header bg-primary container row"
+            style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center">
+
+        <div class="col">
             <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ДОКУМЕНТЫ</h3>
         </div>
-        <div th:replace="fragments/navigation :: navigation"></div>
+        <div class="col" th:replace="fragments/navigation :: navigation"></div>
+
     </header>
     <main class="main">
         <table class="crud_buttons" cellpadding="40px" align="center">
@@ -128,7 +131,7 @@
         </div>
     </main>
     <footer>
-        <div th:replace="fragments/footerbd :: footerbd"></div>
+        <div th:replace="fragments/footermain :: footermain"></div>
     </footer>
 </div>
 </body>
