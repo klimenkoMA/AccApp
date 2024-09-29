@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footermain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footermain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -785,14 +787,7 @@
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
-      <workItem from="1727146953008" duration="31809000" />
-    </task>
-    <task id="LOCAL-00300" summary="Rebuilt &lt;main&gt; in  main.html v3">
-      <created>1724174199310</created>
-      <option name="number" value="00300" />
-      <option name="presentableId" value="LOCAL-00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1724174199311</updated>
+      <workItem from="1727146953008" duration="45709000" />
     </task>
     <task id="LOCAL-00301" summary="Rebuilt nav links in main.html">
       <created>1724205396713</created>
@@ -1130,7 +1125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727507815241</updated>
     </task>
-    <option name="localTasksCounter" value="349" />
+    <task id="LOCAL-00349" summary="Rebuilt a couple of things in frontend">
+      <created>1727534013730</created>
+      <option name="number" value="00349" />
+      <option name="presentableId" value="LOCAL-00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1727534013730</updated>
+    </task>
+    <option name="localTasksCounter" value="350" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1153,7 +1155,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created a lot of new html files and rebuilt others" />
     <MESSAGE value="Rebuilt carousel.html and advantage.html" />
     <MESSAGE value="Rebuilt some pages" />
     <MESSAGE value="Rebuilt notes in carousel.html slides" />
@@ -1178,7 +1179,8 @@
     <MESSAGE value="Rebuilt feedbacks.html's table" />
     <MESSAGE value="Create a create.html" />
     <MESSAGE value="Rebuilt a feedbacks.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a feedbacks.html" />
+    <MESSAGE value="Rebuilt a couple of things in frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a couple of things in frontend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
