@@ -6,135 +6,61 @@
     <div th:replace="fragments/head :: head"></div>
 </head>
 <body>
-<div class="wrapper">
-    <header class="header">
-        <div class="page-name">
+<div class="wrapper d-flex justify-content-center" style="align-self: center">
+    <header class="modal-header bg-primary container row"
+            style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center">
+
+        <div class="col">
             <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ПРОГРАММИСТЫ</h3>
         </div>
-        <div th:replace="fragments/navigation :: navigation"></div>
+        <div class="col" th:replace="fragments/navigation :: navigation"></div>
+
     </header>
-    <main class="main">
-        <table class="crud_buttons" cellpadding="40px" align="center">
-            <td>
+    <main class="main d-flex row" style="align-content: baseline">
 
-                <div class="popup_div">
-                    <input type="checkbox" id="callback">
-                    <label class="popup_try" for="callback">Добавить программиста</label>
-                    <form action="/additstaff" method="post" class="popup_form">
-                        <div align="center">
-                            <label>
-                                <input type="text" name="name" placeholder="ФИО программиста">
-                            </label>
-                        </div>
-                        <button class="button" type="submit">Добавить</button>
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                        <label class="close" for="callback">+</label>
-                    </form>
-                </div>
+        <div class="col" th:replace="fragments/crud/cruditstaff :: cruditstaff"></div>
 
-            </td>
-            <td>
+        <div class="d-flex" style="max-width: min-content; margin-top: 3vh; justify-content: center;
+                    align-content: baseline; max-height: min-content">
+            <table class="p-3 m-3 col" style="align-self: center">
 
-                <div class="popup_div">
-                    <input type="checkbox" id="callback2">
-                    <label class="popup_try" for="callback2">Удалить программиста</label>
-                    <form action="/deleteitstaff" class="popup_form" method="post">
-                        <div align="center">
-                            <label>
-                                <input type="text" name="id" placeholder="ID программиста">
-                            </label>
-                        </div>
-                        <button class="button" type="submit">Удалить</button>
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                        <label class="close" for="callback2">+</label>
-                    </form>
-                </div>
+                <tr class="text-light fs-5" style="background-color: #62a0f6">
+                    <th class="p-1 m-1 text-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">ID документа
+                    </th>
+                    <th class="p-1 m-1 text-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">Фамилия Имя Отчество
+                    </th>
+                </tr>
 
-            </td>
-            <td>
+                <form>
+                    <td class="text-center p-1" style="background-color: white">
 
-                <div class="popup_div">
-                    <input type="checkbox" id="callback3">
-                    <label class="popup_try" for="callback3">Обновить программиста</label>
-                    <form action="/updateitstaff" class="popup_form" method="post">
-                        <div align="center">
-                            <label>
-                                <input type="text" name="id" placeholder="ID программиста">
-                            </label>
-                            <label>
-                                <input type="text" name="name" placeholder="ФИО программиста">
-                            </label>
-                        </div>
-                        <button class="button" type="submit">Обновить</button>
-                        <input type="hidden" name="${_csrf.parameterName" value="${_csrf.token}">
-                        <label class="close" for="callback3">+</label>
-                    </form>
-                </div>
+                    </td>
+                </form>
 
-            </td>
-            <td>
-
-                <div class="popup_div">
-                    <input type="checkbox" id="callback4">
-                    <label class="popup_try" for="callback4">Найти программиста</label>
-                    <form action="/finditstaffbyid" class="popup_form" method="post">
-                        <div align="center">
-                            <label>
-                                <input type="text" name="id" placeholder="Найти программиста">
-                            </label>
-                            <button class="button" type="submit">Найти</button>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                            <label class="close" for="callback4">+</label>
-                        </div>
-                    </form>
-                </div>
-
-            </td>
-            <!--            <td>-->
-
-            <!--                <div class="popup_div">-->
-            <!--                    <input type="checkbox" id="callback5">-->
-            <!--                    <label class="popup_try_1_row" for="callback5">Найти по ФИО</label>-->
-            <!--                    <form class="popup_form" action="/finditstaffbyname" method="post">-->
-            <!--                        <div align="center">-->
-            <!--                            <label>-->
-            <!--                                <input type="text" name="name" placeholder="ФИО программиста">-->
-            <!--                            </label>-->
-            <!--                        </div>-->
-            <!--                        <button class="button" type="submit">Найти</button>-->
-            <!--                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">-->
-            <!--                        <label class="close" for="callback5">+</label>-->
-            <!--                    </form>-->
-            <!--                </div>-->
-
-            <!--            </td>-->
-        </table>
-        <div class="mid_part_3">
-            <div class="db_table_border">
-                <table class="db_table">
-                    <tr>
-                        <th>ID программиста</th>
-                        <th>ФИО программиста</th>
-                    </tr>
-                    <div th:each="element : ${itStaffList}" class="row m-1">
-                        <div class="col-8">
-                            <tr align="center">
-                                <td>
-                                    <div>[[${element.id}]]</div>
-                                </td>
-                                <td>
-                                    <div>[[${element.name}]]</div>
-                                </td>
-                            </tr>
-                        </div>
+                <div th:each="element : ${itStaffList}">
+                    <div class="col">
+                        <tr style="align-self: center">
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 5vh">
+                                <div>[[${element.id}]]</div>
+                            </td>
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 70vh">
+                                <div>[[${element.name}]]</div>
+                            </td>
+                        </tr>
                     </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </table>
-            </div>
+                </div>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+            </table>
         </div>
+
     </main>
     <footer>
-        <div th:replace="fragments/footerbd :: footerbd"></div>
+        <div th:replace="fragments/footermain :: footermain"></div>
     </footer>
 </div>
 </body>
