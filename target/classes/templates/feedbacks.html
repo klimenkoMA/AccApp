@@ -8,12 +8,12 @@
 <body>
 <div class="wrapper d-flex justify-content-center" style="align-self: center">
     <header class="modal-header bg-primary container row"
-        style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center">
+            style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center">
 
-            <div class="col">
-                <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ОБРАТНАЯ СВЯЗЬ</h3>
-            </div>
-            <div class="col" th:replace="fragments/navigation :: navigation"></div>
+        <div class="col">
+            <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ОБРАТНАЯ СВЯЗЬ</h3>
+        </div>
+        <div class="col" th:replace="fragments/navigation :: navigation"></div>
 
     </header>
     <main class="main">
@@ -26,44 +26,13 @@
                     <th class="p-1 m-1 text-center" style="width: 5vh">ID отзыва</th>
                     <th class="p-1 m-1 text-center" style="width: 20vh">Имя</th>
                     <th class="p-1 m-1 text-center" style="width: 20vh">E-mail</th>
-                    <th class="p-1 m-1 text-center" style="width: 45vh">Отзыв</th>
-                    <th class="p-1 m-1 text-center" style="width: 10vh">Работа с данными
+                    <th class="p-1 m-1 text-center" style="width: 55vh">Отзыв</th>
                     </th>
                 </tr>
 
-                <form action="/addfeedback" method="post">
+                <form>
                     <td class="text-center p-1" style="background-color: white">
-                        <label class="text-start border border-0 fs-5">
-                            <input type="hidden" class="text-start border border-1 shadow shadow-none" name="id" id="id"
-                                   style="min-width: 99%;
-                                min-height: 99%; box-shadow: none" placeholder="Введите ID">
-                        </label>
-                    </td>
-                    <td class="text-center p-1" style="background-color: white">
-                        <label class="text-start border border-0 fs-5">
-                            <input type="text" class="text-start border border-1 shadow shadow-none" name="name"
-                                   id="name"
-                                   style="min-width: 99%; min-height: 99%" placeholder="Введите имя">
-                        </label>
-                    </td>
-                    <td class="text-center p-1" style="background-color: white">
-                        <label class="text-start border border-0 fs-5">
-                            <input type="text" class="text-start border border-1 shadow shadow-none" name="email"
-                                   id="email" required
-                                   style="min-width: 99%; min-height: 99%" placeholder="Введите e-mail">
-                        </label>
-                    </td>
-                    <td class="text-center p-1" style="background-color: white">
-                        <label class="text-start border border-0 shadow shadow-none fs-5">
-                            <input type="text" class="text-start border border-1 shadow shadow-none" name="message"
-                                   id="message" required
-                                   style="min-width: 99%; min-height: 99%" placeholder="Введите сообщение">
-                        </label>
-                    </td>
-                    <td class="text-center p-1" style="background-color: white">
-                        <label class="text-start border border-0">
-                            <div th:replace="fragments/crud/create :: create"></div>
-                        </label>
+
                     </td>
                 </form>
 
@@ -81,9 +50,6 @@
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark">
                                 <div>[[${element.message}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark">
-                                ...
                             </td>
                         </tr>
                     </div>
