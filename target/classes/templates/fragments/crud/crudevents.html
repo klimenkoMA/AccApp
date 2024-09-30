@@ -6,7 +6,7 @@
     <div th:replace="fragments/head :: head"></div>
 </head>
 
-<div class="d-flex p-3 m-3" style="min-width: max-content;justify-content: center;
+<div class="d-flex p-3 m-3" style="justify-content: center;
                 max-height: min-content" th:fragment="crudevents">
     <table class="crud_buttons" cellpadding="40px" align="center">
         <td>
@@ -101,7 +101,27 @@
             </div>
 
         </td>
+
     </table>
+    <td style="margin-right: 15vh">
+        <div class="card col text-center" style="max-width: min-content; min-height: 10vh;">
+            <img src="../img/events.png" class="card-img-top" alt="События">
+            <div class="card-body d-grid gap-2">
+                <h6 class="card-title">Движение ТМЦ</h6>
+                <a th:href="@{/events}" class="col btn stretched-link text-light" style="background-color: #62a0f6
+                      ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center">
+                    Все события
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-calendar2-week-fill" viewBox="0 0 16 16">
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1
+                                .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zM8.5 7a.5.5 0 0 0-.5.5v1a.5.5
+                                0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM3 10.5v1a.5.5
+                                0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </td>
 </div>
 
 </html>
