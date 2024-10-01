@@ -133,6 +133,7 @@ public class EventsController {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
                 System.out.println("*** SUB ZERO ID***");
+                this.getEvents(model);
             } else {
                 List<Events> eventsList;
                 eventsList = eventsService.getEventById(idCheck);
@@ -141,7 +142,9 @@ public class EventsController {
             return "events";
         } catch (Exception e) {
             System.out.println("*** WRONG ID FORMAT***");
+            this.getEvents(model);
             return "events";
         }
+
     }
 }

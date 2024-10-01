@@ -56,7 +56,7 @@ html, body {
 .crud_buttons {
     display: flex;
     flex-direction: row;
-    padding: 10px 8%;
+    padding: 10px;
     max-height: 300px;
     max-width: min-content;
     align-items: center;
