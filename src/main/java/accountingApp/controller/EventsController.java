@@ -55,10 +55,10 @@ public class EventsController {
                 List<Events> eventsList = eventsService.findAllEvents();
                 model.addAttribute("eventsList", eventsList);
             }
-            return "events";
+            return this.getEvents(model);
         } catch (Exception e) {
             System.out.println("*** WRONG DATE FORMAT ***");
-            return "events";
+           return this.getEvents(model);
         }
     }
 
@@ -74,10 +74,10 @@ public class EventsController {
                 List<Events> eventsList = eventsService.findAllEvents();
                 model.addAttribute("eventsList", eventsList);
             }
-            return "events";
+            return this.getEvents(model);
         } catch (Exception e) {
             System.out.println("*** WRONG ID FORMAT***");
-            return "events";
+            return this.getEvents(model);
         }
 
     }
@@ -99,7 +99,7 @@ public class EventsController {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
                 System.out.println("*** SUB ZERO ID***");
-                return "events";
+                return this.getEvents(model);
             } else if (!dateWithoutSpaces.equals("") &&
                     !deviceWithoutSpaces.equals("") &&
                     !employeeIdWithoutSpaces.equals("") &&
@@ -116,11 +116,12 @@ public class EventsController {
                 List<Events> eventsList = eventsService.findAllEvents();
                 model.addAttribute("eventsList", eventsList);
             }
-            return "events";
+            return this.getEvents(model);
 
         } catch (Exception e) {
             System.out.println("*** WRONG ID FORMAT***");
-            return "events";
+            this.getEvents(model);
+            return this.getEvents(model);
         }
     }
 
@@ -142,8 +143,7 @@ public class EventsController {
             return "events";
         } catch (Exception e) {
             System.out.println("*** WRONG ID FORMAT***");
-            this.getEvents(model);
-            return "events";
+            return this.getEvents(model);
         }
 
     }

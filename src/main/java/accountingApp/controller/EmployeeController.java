@@ -41,11 +41,11 @@ public class EmployeeController {
             int dbornCheck = Integer.parseInt(dbornWithoutSpaces);
             if (roomCheck <= 0 || dbornCheck <= 0) {
                 System.out.println("*** ID or dborn <<<< 0***");
-                return "employee";
+                return this.getEmployee(model);
             }
         } catch (Exception e) {
             System.out.println("***Wrong ID or dborn!***");
-            return "employee";
+            return this.getEmployee(model);
         }
         try {
             if (!fioWithoutSpaces.equals("") &&
@@ -58,13 +58,13 @@ public class EmployeeController {
                 employeeService.addNewEmployee(employee);
                 List<Employee> employeeList = employeeService.getListEmployee();
                 model.addAttribute("employeeList", employeeList);
-                return "employee";
+                return this.getEmployee(model);
             }
         } catch (Exception e) {
             System.out.println("|||Something wrong in DB|||");
-            return "employee";
+            return this.getEmployee(model);
         }
-        return "employee";
+        return this.getEmployee(model);
     }
 
     @PostMapping("/deleteemployee")
@@ -78,11 +78,11 @@ public class EmployeeController {
             }
             List<Employee> employeeList = employeeService.getListEmployee();
             model.addAttribute("employeeList", employeeList);
-            return "employee";
+            return this.getEmployee(model);
 
         } catch (Exception e) {
             System.out.println(e.toString() + "||| WRONG ID |||");
-            return "employee";
+            return this.getEmployee(model);
         }
     }
 
@@ -108,11 +108,11 @@ public class EmployeeController {
                     dbornCheck <= 0 ||
                     roomCheck <= 0) {
                 System.out.println("*** SUB ZERO ***");
-                return "employee";
+                return this.getEmployee(model);
             }
         } catch (Exception e) {
             System.out.println("*** WRONG ID OR DBORN OR ROOM ***");
-            return "employee";
+            return this.getEmployee(model);
         }
 
         try {
@@ -129,13 +129,13 @@ public class EmployeeController {
                 employeeService.updateEmployee(employee);
                 List<Employee> employeeList = employeeService.getListEmployee();
                 model.addAttribute("employeeList", employeeList);
-                return "employee";
+                return this.getEmployee(model);
             }
         } catch (Exception e) {
             System.out.println("|||Something wrong in DB|||");
-            return "employee";
+            return this.getEmployee(model);
         }
-        return "employee";
+        return this.getEmployee(model);
     }
 
 
@@ -158,7 +158,7 @@ public class EmployeeController {
             List<Employee> employeeList = employeeService.findEmployeeByFio(fio);
             model.addAttribute("employeeList", employeeList);
             System.out.println("*** FIND BY NAME ***");
-            return "employee";
+            return this.getEmployee(model);
         }
     }
 }

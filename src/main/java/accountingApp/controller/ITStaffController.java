@@ -31,16 +31,16 @@ public class ITStaffController {
         String nameWithoutSpaces = name.trim();
         if (nameWithoutSpaces.equals("")) {
             System.out.println("*** EMPTY NAME ***");
-            return "itstaff";
+            return this.getItStaff(model);
         } else if (nameWithoutSpaces.matches("\\d*")) {
             System.out.println("*** NAME MATCHES FIGURES ***");
-            return "itstaff";
+            return this.getItStaff(model);
         } else {
             ITStaff ITStaff = new ITStaff(name);
             ITStaffService.addNewItStaff(ITStaff);
             List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
             model.addAttribute("itStaffList", ITStaffList);
-            return "itstaff";
+            return this.getItStaff(model);
         }
     }
 
@@ -57,10 +57,10 @@ public class ITStaffController {
                 List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
                 model.addAttribute("itStaffList", ITStaffList);
             }
-            return "itstaff";
+            return this.getItStaff(model);
         } catch (Exception e) {
             System.out.println("||| WRONG ID TYPE|||");
-            return "itstaff";
+            return this.getItStaff(model);
         }
     }
 
@@ -83,11 +83,11 @@ public class ITStaffController {
                 List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
                 model.addAttribute("itStaffList", ITStaffList);
             }
-            return "itstaff";
+            return this.getItStaff(model);
 
         } catch (Exception e) {
             System.out.println("||| WRONG ID TYPE|||");
-            return "itstaff";
+            return this.getItStaff(model);
         }
     }
 
@@ -109,7 +109,7 @@ public class ITStaffController {
             System.out.println("||| WRONG ID TYPE|||");
             if (idWithoutSpaces.matches("\\d*")) {
                 System.out.println("*** NAME MATCHES FIGURES ***");
-                return "itstaff";
+                return this.getItStaff(model);
             }
             List<ITStaff> ITStaffList = ITStaffService.getITStaffByName(idWithoutSpaces);
             model.addAttribute("itStaffList", ITStaffList);

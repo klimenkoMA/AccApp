@@ -27,11 +27,14 @@ public class WorkAreaController {
     public String addWorkArea(@RequestParam String name,
                               Model model) {
         String nameWithoutSpaces = name.trim();
+        if (nameWithoutSpaces.equals("")){
+            return this.getWorkArea(model);
+        }
         WorkArea workArea = new WorkArea(nameWithoutSpaces);
         workAreaService.addNewWorkArea(workArea);
         List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
         model.addAttribute("workAreaList", workAreaList);
-        return "workarea";
+        return this.getWorkArea(model);
     }
 
     @PostMapping("/deleteworkarea")
@@ -47,11 +50,11 @@ public class WorkAreaController {
                 List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
                 model.addAttribute("workAreaList", workAreaList);
             }
-            return "workarea";
+            return this.getWorkArea(model);
 
         } catch (Exception e) {
             System.out.println("*** WRONG ID TYPE ***");
-            return "workarea";
+            return this.getWorkArea(model);
         }
     }
 
@@ -71,10 +74,10 @@ public class WorkAreaController {
                 List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
                 model.addAttribute("workAreaList", workAreaList);
             }
-            return "workarea";
+            return this.getWorkArea(model);
         } catch (Exception e) {
             System.out.println("*** WRONG ID TYPE ***");
-            return "workarea";
+            return this.getWorkArea(model);
         }
     }
 
@@ -99,5 +102,6 @@ public class WorkAreaController {
             model.addAttribute("workAreaList", workAreaList);
             return "workarea";
         }
+
     }
 }
