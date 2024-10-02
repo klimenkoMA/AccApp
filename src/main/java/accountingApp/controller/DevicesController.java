@@ -39,7 +39,7 @@ public class DevicesController {
             List<Devices> devicesList = devicesService.findAllDevices();
             model.addAttribute("devicesList", devicesList);
         }
-        return "devices";
+        return this.getDevices(model);
     }
 
     @PostMapping("/deletedevice")
@@ -48,14 +48,14 @@ public class DevicesController {
         try {
             int idCheck = Integer.parseInt(id);
             if (idCheck <= 0) {
-                return "devices";
+                return this.getDevices(model);
             }
             devicesService.deleteDeviceById(idCheck);
             List<Devices> devicesList = devicesService.findAllDevices();
             model.addAttribute("devicesList", devicesList);
-            return "devices";
+            return this.getDevices(model);
         } catch (Exception e) {
-            return "devices";
+            return this.getDevices(model);
         }
     }
 
@@ -68,7 +68,7 @@ public class DevicesController {
             String nameWithoutSpaces = name.trim();
             int idCheck = Integer.parseInt(id);
             if (idCheck <= 0 ) {
-                return "devices";
+                return this.getDevices(model);
             }
             if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
                 Devices devices = new Devices(idCheck, name);
@@ -77,9 +77,9 @@ public class DevicesController {
                 model.addAttribute("devicesList", devicesList);
             }
         } catch (Exception e) {
-            return "devices";
+            return this.getDevices(model);
         }
-        return "devices";
+        return this.getDevices(model);
     }
 
     @PostMapping("/finddevicebyname")
@@ -103,7 +103,7 @@ public class DevicesController {
             List<Devices> devicesList = devicesService.getDevicesByName(name);
             model.addAttribute("devicesList", devicesList);
             System.out.println("*** FIND BY NAME ***");
-            return "devices";
+            return this.getDevices(model);
         }
     }
 }

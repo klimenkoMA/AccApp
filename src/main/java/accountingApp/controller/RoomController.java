@@ -31,17 +31,17 @@ public class RoomController {
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
             if (numberCheck <= 0) {
                 System.out.println("*** SUB ZERO NUMBER***");
-                return "room";
+                return this.getRoom(model);
             } else {
                 Room room = new Room(numberWithoutSpaces);
                 roomService.addNewRoom(room);
                 List<Room> roomList = roomService.findAllRoom();
                 model.addAttribute("roomList", roomList);
             }
-            return "room";
+            return this.getRoom(model);
         } catch (Exception e) {
             System.out.println("*** WRONG NUMBER TYPE***");
-            return "room";
+            return this.getRoom(model);
         }
     }
 
@@ -58,10 +58,10 @@ public class RoomController {
                 List<Room> roomList = roomService.findAllRoom();
                 model.addAttribute("roomList", roomList);
             }
-            return "room";
+            return this.getRoom(model);
         } catch (Exception e) {
             System.out.println("*** WRONG ID TYPE***");
-            return "room";
+            return this.getRoom(model);
         }
 
     }
@@ -83,10 +83,10 @@ public class RoomController {
                 List<Room> roomList = roomService.findAllRoom();
                 model.addAttribute("roomList", roomList);
             }
-            return "room";
+            return this.getRoom(model);
         } catch (Exception e) {
             System.out.println("*** WRONG ID OR NUMBER TYPE***");
-            return "room";
+            return this.getRoom(model);
         }
     }
 
@@ -105,7 +105,7 @@ public class RoomController {
             return "room";
         } catch (Exception e) {
             System.out.println("*** WRONG ID OR NUMBER TYPE***");
-            return "room";
+            return this.getRoom(model);
         }
     }
 }
