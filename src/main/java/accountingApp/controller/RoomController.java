@@ -101,6 +101,9 @@ public class RoomController {
             } else {
                 List<Room> roomList = roomService.getRoomById(idCheck);
                 model.addAttribute("roomList", roomList);
+                if(roomList.isEmpty()){
+                    return this.getRoom(model);
+                }
             }
             return "room";
         } catch (Exception e) {

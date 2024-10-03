@@ -99,6 +99,10 @@ public class WorkAreaController {
         } catch (Exception e) {
             System.out.println("*** FOUND BY NAME ***");
             List<WorkArea> workAreaList = workAreaService.getWorkAreaByName(name);
+
+            if (workAreaList.isEmpty()){
+                return this.getWorkArea(model);
+            }
             model.addAttribute("workAreaList", workAreaList);
             return "workarea";
         }

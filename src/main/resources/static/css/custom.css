@@ -269,6 +269,9 @@ tr:nth-of-type(even) {
     background-color: #d0dede;
 }
 
+tr:nth-of-type(odd) {
+    background-color: #f8fafa;
+}
 .db_table {
     display: flex;
     align-items: center;
