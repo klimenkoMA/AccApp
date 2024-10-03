@@ -8,7 +8,8 @@
 <body>
 <div class="wrapper d-flex justify-content-center" style="align-self: center">
     <header class="modal-header bg-primary container row"
-            style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center">
+            style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center;
+                margin-bottom: 1vh">
 
         <div class="col">
             <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: СОБЫТИЯ</h3>
@@ -17,9 +18,9 @@
 
     </header>
     <main class="main d-flex row" style="align-content: baseline;
-        background-image: url('../img/events.png');
-        background-repeat: no-repeat;
-        background-position-y: 3vh; background-position-x: 83%">
+        background-image: url('../img/bg/bdfon.jpg');
+        background-repeat: no-repeat; align-self: center;
+        max-width: 67%; border-radius: 1rem">
 
         <div class="col" th:replace="fragments/crud/crudevents :: crudevents"></div>
 
@@ -29,10 +30,10 @@
 
                 <tr class="text-light fs-5" style="background-color: #62a0f6">
                     <th class="p-1 m-1 text-center"
-                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">ID
+                        style="border-color: #62a0f6">ID
                     </th>
                     <th class="p-1 m-1 text-center"
-                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">Дата события
+                        style="border-color: #62a0f6">Дата события
                     </th>
                     <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
                         Оборудование
@@ -44,12 +45,7 @@
                         ФИО программиста
                     </th>
                 </tr>
-
-                <form>
-                    <td class="text-center p-1" style="background-color: white">
-
-                    </td>
-                </form>
+                    <td class="p-1 bg-dark-subtle"></td>
 
                 <div th:each="element : ${eventsList}">
                     <div class="col">
