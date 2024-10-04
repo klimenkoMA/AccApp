@@ -45,6 +45,12 @@ html, body {
     font-size: larger;
 }
 
+.active-link {
+    background-color: #c16825; /* Цвет фона для выделенной ссылки */
+    color: #022902; /* Цвет текста для выделенной ссылки */
+    font-size: 20px;
+}
+
 .main {
     flex: 1 1 auto;
     max-width: 100%;

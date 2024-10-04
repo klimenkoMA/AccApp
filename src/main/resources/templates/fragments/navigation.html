@@ -7,41 +7,55 @@
 </head>
 
 <div class="navigation-box" style="text-shadow: 2px 2px 4px black" th:fragment="navigation">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var title = document.title; // Получаем текущий title страницы
+            var link = document.getElementById("programmersLink"); // Ссылку по ID
+
+            if (title === "itstaff") { // Если title соответствует "itstaff"
+                link.style.color = "#6de9de"; // Устанавливаем новый цвет
+                link.style.fontSize = "20px"; // Устанавливаем новый размер шрифта
+            }
+        });
+    </script>
+
     <div>
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/}" style="color: #fcf6f6">Главная</a>
     </div>
     <div class="navigation-link">
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/employee}" style="color: #fcf6f6">Сотрудники</a>
     </div>
     <div class="navigation-link">
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a id="programmersLink" class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/itstaff}" style="color: #fcf6f6">Программисты</a>
     </div>
     <div class="navigation-link">
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/workarea}" style="color: #fcf6f6">Филиалы</a>
     </div>
     <div class="navigation-link">
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/room}" style="color: #fcf6f6">Кабинеты</a>
     </div>
     <div class="navigation-link">
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/events}" style="color: #fcf6f6">События</a>
     </div>
     <div class="navigation-link">
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/devices}" style="color: #fcf6f6">Оборудование</a>
     </div>
     <div class="navigation-link">
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/documents}" style="color: #fcf6f6">Документы</a>
     </div>
     <div class="navigation-link">
-        <a class="link-offset-2 link-underline link-underline-opacity-0"
+        <a class="link-offset-2 link-underline link-underline-opacity-0 nav-link"
            th:href="@{/feedbacks}" style="color: #fcf6f6">Обратная связь</a>
     </div>
 </div>
+
+
 </html>

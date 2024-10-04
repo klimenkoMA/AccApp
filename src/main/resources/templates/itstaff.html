@@ -6,6 +6,18 @@
     <div th:replace="fragments/head :: head"></div>
 </head>
 <body>
+
+<script type="javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        var title = document.title; // Получаем текущий title страницы
+        var link = document.getElementById("programmersLink"); // Ссылку по ID
+
+        if (title === "itstaff") { // Если title соответствует "itstaff"
+            link.style.color = "#6de9de"; // Устанавливаем новый цвет
+            link.style.fontSize = "20px"; // Устанавливаем новый размер шрифта
+        }
+    });
+</script>
 <div class="wrapper d-flex justify-content-center" style="align-self: center">
     <header class="modal-header bg-primary container row"
             style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center;
@@ -15,10 +27,9 @@
             <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: ПРОГРАММИСТЫ</h3>
         </div>
         <div class="col" th:replace="fragments/navigation :: navigation"></div>
-
     </header>
     <main class="main d-flex row" style="align-content: baseline;
-        background-image: url('../img/bg/bdfon.jpg');
+        background-image: url('../img/bg/bdfon2.jpg');
         background-repeat: no-repeat; align-self: center;
         max-width: 67%; border-radius: 1rem">
 
@@ -30,7 +41,7 @@
 
                 <tr class="text-light fs-5" style="background-color: #62a0f6">
                     <th class="p-1 m-1 text-center"
-                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">ID документа
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">ID
                     </th>
                     <th class="p-1 m-1 text-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">Фамилия Имя Отчество
