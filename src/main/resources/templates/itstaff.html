@@ -7,17 +7,7 @@
 </head>
 <body>
 
-<script type="javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        var title = document.title; // Получаем текущий title страницы
-        var link = document.getElementById("programmersLink"); // Ссылку по ID
 
-        if (title === "itstaff") { // Если title соответствует "itstaff"
-            link.style.color = "#6de9de"; // Устанавливаем новый цвет
-            link.style.fontSize = "20px"; // Устанавливаем новый размер шрифта
-        }
-    });
-</script>
 <div class="wrapper d-flex justify-content-center" style="align-self: center">
     <header class="modal-header bg-primary container row"
             style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center;
@@ -31,7 +21,7 @@
     <main class="main d-flex row" style="align-content: baseline;
         background-image: url('../img/bg/bdfon2.jpg');
         background-repeat: no-repeat; align-self: center;
-        max-width: 67%; border-radius: 1rem">
+        width: 80rem; border-radius: 1rem">
 
         <div class="col" th:replace="fragments/crud/cruditstaff :: cruditstaff"></div>
 
