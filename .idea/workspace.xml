@@ -5,28 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/bg/bdfon3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navigation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navigation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -801,14 +788,7 @@
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
-      <workItem from="1727146953008" duration="95636000" />
-    </task>
-    <task id="LOCAL-00308" summary="Corrected header and footer in main.html and in login.html v2">
-      <created>1724726477169</created>
-      <option name="number" value="00308" />
-      <option name="presentableId" value="LOCAL-00308" />
-      <option name="project" value="LOCAL" />
-      <updated>1724726477169</updated>
+      <workItem from="1727146953008" duration="111759000" />
     </task>
     <task id="LOCAL-00309" summary="Built a carousel in main.html">
       <created>1724811467701</created>
@@ -1146,7 +1126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727923293724</updated>
     </task>
-    <option name="localTasksCounter" value="357" />
+    <task id="LOCAL-00357" summary="Rebuild a couple things in frontend">
+      <created>1728009727751</created>
+      <option name="number" value="00357" />
+      <option name="presentableId" value="LOCAL-00357" />
+      <option name="project" value="LOCAL" />
+      <updated>1728009727751</updated>
+    </task>
+    <option name="localTasksCounter" value="358" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1169,7 +1156,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt accordion.html v2" />
     <MESSAGE value="Rebuilt accordion.html v3" />
     <MESSAGE value="Rebuilt accordion.html v4" />
     <MESSAGE value="Rebuilt accordion.html v5" />
@@ -1194,7 +1180,8 @@
     <MESSAGE value="Rebuilt a couple of things in frontend v6" />
     <MESSAGE value="Reworked the logic for processing CRUD requests" />
     <MESSAGE value="Rebuild a lot of frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuild a lot of frontend" />
+    <MESSAGE value="Rebuild a couple things in frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild a couple things in frontend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
