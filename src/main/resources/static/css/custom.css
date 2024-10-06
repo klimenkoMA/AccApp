@@ -9,10 +9,6 @@ html, body {
     padding: 0;
 }
 
-/*html:active .navbar .nav-link{*/
-/*    color: #62a0f6;*/
-/*    font-size: 110%;*/
-/*}*/
 
 .wrapper {
     min-height: 100%;
@@ -50,23 +46,9 @@ html, body {
     font-size: larger;
 }
 
-/*.active-link {*/
-/*    background-color: #c16825; !* Цвет фона для выделенной ссылки *!*/
-/*    color: #022902; !* Цвет текста для выделенной ссылки *!*/
-/*    font-size: 20px;*/
-/*}*/
-
-/*.large-font {*/
-/*    font-size: 200%; !* Увеличиваем размер шрифта в два раза *!*/
-/*}*/
-
-/*.navbar .nav-link{*/
-/*    transition: transform 1.1s ease;*/
-/*}*/
-
 .navbar .nav-link:hover{
-    color: #62a0f6;
-    transition: font-size 0.3s;
+    color: grey;
+    transition: font-size 2s ease-in-out;
     transform: scale(1.2);
 }
 

@@ -9,23 +9,20 @@
 <div class="wrapper d-flex justify-content-center" style="align-self: center">
     <header class="modal-header bg-primary container row"
             style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center;
-                margin-bottom: 1vh">
+                margin-bottom: 1rem">
 
-        <div class="col">
-            <h3 style="color: #fcf6f6">УЧЕБНЫЙ ЦЕНТР: СОБЫТИЯ</h3>
-        </div>
-        <div class="col" th:replace="fragments/navigation :: navigation"></div>
+        <div class="col" th:replace="fragments/nav/navevents :: navevents"></div>
 
     </header>
     <main class="main d-flex row" style="align-content: baseline;
         background-image: url('../img/bg/bdfon2.jpg');
         background-repeat: no-repeat; align-self: center;
-        max-width: 67%; border-radius: 1rem">
+        max-width: 80rem; border-radius: 1rem">
 
         <div class="col" th:replace="fragments/crud/crudevents :: crudevents"></div>
 
-        <div class="d-flex col" style="max-width: min-content; margin-top: 3vh; justify-content: center;
-                    align-content: baseline; max-height: min-content">
+        <div class="d-flex col" style="max-width: min-content; justify-content: center;
+                    align-content: baseline; max-height: min-content; margin-top: 2.2rem">
             <table class="p-3 m-3 col" style="align-self: center">
 
                 <tr class="text-light fs-5" style="background-color: #62a0f6">
@@ -51,7 +48,7 @@
                     <div class="col">
                         <tr style="align-self: center">
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 5vh">
+                                style="min-width: 10vh">
                                 <div>[[${element.id}]]</div>
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark"
