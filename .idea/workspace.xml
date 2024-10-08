@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
+      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/repository/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/repository/DevicesRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/repository/DevicesRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/repository/EmployeeControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/repository/EventsControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +118,9 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\img" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -394,7 +406,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccApp">
+  <component name="RunManager" selected="JUnit.DevicesControllerTest.mustReturnDevicesList (1)">
     <configuration name="AccountingApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="accountingApp.AccountingApplication" />
       <module name="AccApp" />
@@ -408,13 +420,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -428,17 +442,18 @@
     <configuration name="rest-api#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="DevicesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DevicesControllerTest.mustReturnDevicesList (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="accountingApp.repository.*" />
+          <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="accountingApp.repository" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.repository.DevicesControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
+      <option name="METHOD_NAME" value="mustReturnDevicesList" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -447,12 +462,12 @@
       <module name="AccApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="accountingApp.repository.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="accountingApp.repository" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.repository.DevicesControllerTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DevicesControllerTest" />
       <option name="METHOD_NAME" value="mustReturnDevicesList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -485,17 +500,17 @@
       <item itemvalue="HTTP Request.rest-api#1" />
       <item itemvalue="HTTP Request.rest-api#2" />
       <item itemvalue="HTTP Request.rest-api_1#1" />
-      <item itemvalue="JUnit.DevicesControllerTest" />
       <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList" />
       <item itemvalue="Spring Boot.AccApp" />
+      <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList (1)" />
+        <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList" />
         <item itemvalue="HTTP Request.rest-api_1#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api#2" />
-        <item itemvalue="JUnit.DevicesControllerTest.mustReturnDevicesList" />
-        <item itemvalue="JUnit.DevicesControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -779,14 +794,8 @@
       <workItem from="1725414967530" duration="292000" />
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
-      <workItem from="1727146953008" duration="137845000" />
-    </task>
-    <task id="LOCAL-00311" summary="Corrected a carousel in main.html v3">
-      <created>1724982406232</created>
-      <option name="number" value="00311" />
-      <option name="presentableId" value="LOCAL-00311" />
-      <option name="project" value="LOCAL" />
-      <updated>1724982406233</updated>
+      <workItem from="1727146953008" duration="143635000" />
+      <workItem from="1728351985138" duration="2538000" />
     </task>
     <task id="LOCAL-00312" summary="Corrected a main.html">
       <created>1725115178230</created>
@@ -1124,7 +1133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728203570163</updated>
     </task>
-    <option name="localTasksCounter" value="360" />
+    <task id="LOCAL-00360" summary="Added new users in App">
+      <created>1728267438723</created>
+      <option name="number" value="00360" />
+      <option name="presentableId" value="LOCAL-00360" />
+      <option name="project" value="LOCAL" />
+      <updated>1728267438723</updated>
+    </task>
+    <option name="localTasksCounter" value="361" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1147,7 +1163,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt accordion.html v5" />
     <MESSAGE value="Rebuilt accordion.html v6" />
     <MESSAGE value="Rebuilt accordion.html and advantage.html" />
     <MESSAGE value="Created about.html" />
@@ -1172,7 +1187,8 @@
     <MESSAGE value="Rebuild a couple things in frontend" />
     <MESSAGE value="Tried to fix size of nav links in active phase" />
     <MESSAGE value="Added a few nav elements for all DB pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a few nav elements for all DB pages" />
+    <MESSAGE value="Added new users in App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new users in App" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

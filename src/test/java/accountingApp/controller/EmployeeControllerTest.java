@@ -1,7 +1,6 @@
-package accountingApp.repository;
+package accountingApp.controller;
 
 
-import accountingApp.controller.EmployeeController;
 import accountingApp.entity.Employee;
 import accountingApp.service.EmployeeService;
 import org.junit.jupiter.api.Test;

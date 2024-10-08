@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/resources/**", "/static/**", "/css/**", "/video/**").permitAll()
+                .antMatchers("/feedbacks").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -38,9 +40,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .exceptionHandling()
+                    .accessDeniedHandler((request, response, accessDeniedException) -> {
+                        // Проверяем, есть ли у пользователя роль ADMIN
+                        if (request.isUserInRole("ADMIN")) {
+                            response.sendRedirect("/feedbacks");
+                        } else {
+                            response.sendRedirect("/");
+                        }
+                    })
                     .authenticationEntryPoint((request, response, authException) ->{
                         response.sendRedirect("/login");
                     })
+                    .defaultAuthenticationEntryPointFor((request, response, authException) -> {
+                        response.sendRedirect("/");
+                    }, new AntPathRequestMatcher("/**"))
                     .and()
                     .csrf().disable();
     }
