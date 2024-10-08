@@ -1,4 +1,4 @@
-package accountingApp.repository;
+package accountingApp.controller;
 
 
 import accountingApp.controller.EventsController;
