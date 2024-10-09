@@ -19,6 +19,7 @@ import java.util.List;
 @RequestMapping
 @Controller
 public class DevicesController {
+
     @Autowired
     DevicesService devicesService;
 
