@@ -1,12 +1,16 @@
-package accountingApp.repository;
+package accountingApp.controller;
 
-import accountingApp.controller.DevicesController;
+
 import accountingApp.entity.Devices;
+import accountingApp.repository.DevicesRepository;
 import accountingApp.service.DevicesService;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
@@ -17,6 +21,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(DevicesController.class)
+@RunWith(SpringRunner.class)
+//@SpringBootTest(
+//        webEnvironment = SpringBootTest.WebEnvironment.MOCK,
+//        classes = DevicesController.class)
 public class DevicesControllerTest {
 
     //test getDevices
@@ -26,19 +34,22 @@ public class DevicesControllerTest {
     //test findDeviceByID
 
     @Autowired
-    MockMvc mvc;
+    public MockMvc mvc;
 
     @Autowired
-    DevicesService service;
+    @Qualifier("devicesService")
+    public DevicesService service;
 
-    @Autowired
-    DevicesController controller;
+//    @Autowired
+//    @Qualifier("devicesController")
+//    public DevicesController controller;
+//
+//    @Autowired
+//    @Qualifier("devicesRepository")
+//    public DevicesRepository repository;
 
-    @Autowired
-    DevicesRepository repository;
 
-
-    private List<Devices> getDevices() {
+    public List<Devices> getDevices() {
         Devices dev1 = new Devices( "Kyocera");
         Devices dev2 = new Devices( "Acer");
         Devices dev3 = new Devices("Canon");
@@ -53,9 +64,10 @@ public class DevicesControllerTest {
 
 
     @Test //getDevices
-    void mustReturnDevicesList() throws Exception {
+   public void mustReturnDevicesList() throws Exception {
 
-        Mockito.when(this.service.findAllDevices()).thenReturn(getDevices());
+        service = Mockito.mock(DevicesService.class);
+        Mockito.when(service.findAllDevices()).thenReturn(getDevices());
 
         mvc.perform(get("devices"))
                 .andExpect(status().isOk())
@@ -63,7 +75,7 @@ public class DevicesControllerTest {
     }
 
     @Test
-    void mustAddDeviceToBD() throws Exception {
+   public void mustAddDeviceToBD() throws Exception {
 
         Devices dev1 = new Devices(4,"HP");
 //        Mockito.when(this.service.addNewDevice()).thenReturn(getDevices());
