@@ -1,84 +1,65 @@
 package accountingApp.controller;
 
-
 import accountingApp.entity.Devices;
-import accountingApp.repository.DevicesRepository;
 import accountingApp.service.DevicesService;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.ui.Model;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
-@WebMvcTest(DevicesController.class)
-@RunWith(SpringRunner.class)
-//@SpringBootTest(
-//        webEnvironment = SpringBootTest.WebEnvironment.MOCK,
-//        classes = DevicesController.class)
-public class DevicesControllerTest {
+class DevicesControllerTest {
 
-    //test getDevices
-    //test addDevice
-    //test deleteDevice
-    //test updateDevice
-    //test findDeviceByID
+    @InjectMocks
+    private DevicesController devicesController;
 
-    @Autowired
-    public MockMvc mvc;
+    @Mock
+    private DevicesService devicesService;
 
-    @Autowired
-    @Qualifier("devicesService")
-    public DevicesService service;
+    @Mock
+    private Model model;
 
-//    @Autowired
-//    @Qualifier("devicesController")
-//    public DevicesController controller;
-//
-//    @Autowired
-//    @Qualifier("devicesRepository")
-//    public DevicesRepository repository;
-
-
-    public List<Devices> getDevices() {
-        Devices dev1 = new Devices( "Kyocera");
-        Devices dev2 = new Devices( "Acer");
-        Devices dev3 = new Devices("Canon");
-
-        List<Devices> devices = new ArrayList<>();
-        devices.add(dev1);
-        devices.add(dev2);
-        devices.add(dev3);
-
-        return devices;
-    }
-
-
-    @Test //getDevices
-   public void mustReturnDevicesList() throws Exception {
-
-        service = Mockito.mock(DevicesService.class);
-        Mockito.when(service.findAllDevices()).thenReturn(getDevices());
-
-        mvc.perform(get("devices"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.length()").value(3));
+    /**
+     * Инициализация моков перед каждым тестом
+     */
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
-   public void mustAddDeviceToBD() throws Exception {
+    void getDevicesShouldReturnDevicesList() {
 
-        Devices dev1 = new Devices(4,"HP");
-//        Mockito.when(this.service.addNewDevice()).thenReturn(getDevices());
+        // Arrange: Подготовка данных для теста
+        Devices device1 = new Devices();
+        Devices device2 = new Devices();
+
+        // Создаем список устройств
+        List<Devices> mockDevicesList = Arrays.asList(device1, device2);
+
+        // Настраиваем поведение мока
+        when(devicesService.findAllDevices()).thenReturn(mockDevicesList);
+
+        // Act: Вызов тестируемого метода
+        String viewName = devicesController.getDevices(model);
+
+        // Assert: Проверяем результаты
+        // Проверяем, что возвращаемое имя представления правильно
+        Assertions.assertEquals("devices", viewName);
+
+        // Убеждаемся, что список устройств добавлен в модель
+        verify(model).addAttribute("devicesList", mockDevicesList);
+
+        // Проверяем, что сервис был вызван
+        verify(devicesService).findAllDevices();
+
     }
-
 }
