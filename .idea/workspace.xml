@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
-      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/documentController/DocumentControllerClassTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/accountingApp/securityController/SecurityControllerClassTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +125,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="accountingApp.securityController" />
       <recent name="accountingApp.controller" />
       <recent name="accountingApp.documentController" />
     </key>
@@ -410,7 +413,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.WorkAreaControllerTest">
+  <component name="RunManager" selected="JUnit.SecurityControllerClassTest.testGetHome_WithoutAuthenticatedUser">
     <configuration name="AccountingApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AccountingApplication" />
       <module name="AccApp" />
@@ -453,38 +456,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocumentControllerClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.documentController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="accountingApp.documentController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.documentController.DocumentControllerClassTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DocumentControllerClassTest.getDocumentShouldReturnDocumentList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.documentController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="accountingApp.documentController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.documentController.DocumentControllerClassTest" />
-      <option name="METHOD_NAME" value="getDocumentShouldReturnDocumentList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <extension name="coverage">
         <pattern>
@@ -493,13 +465,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeedbackControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <extension name="coverage">
         <pattern>
@@ -508,13 +480,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest.getWorkAreaShouldReturnWorkAreaList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ITStaffControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <extension name="coverage">
         <pattern>
@@ -523,8 +495,38 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="getWorkAreaShouldReturnWorkAreaList" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.ITStaffControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecurityControllerClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.securityController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="accountingApp.securityController" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.securityController.SecurityControllerClassTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecurityControllerClassTest.testGetHome_WithoutAuthenticatedUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.securityController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="accountingApp.securityController" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.securityController.SecurityControllerClassTest" />
+      <option name="METHOD_NAME" value="testGetHome_WithoutAuthenticatedUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -562,19 +564,19 @@
       <item itemvalue="Database Script.index.js" />
       <item itemvalue="Spring Boot.AccApp" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.EmployeeControllerTest" />
-      <item itemvalue="JUnit.DocumentControllerClassTest" />
-      <item itemvalue="JUnit.DocumentControllerClassTest.getDocumentShouldReturnDocumentList" />
-      <item itemvalue="JUnit.WorkAreaControllerTest" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.getWorkAreaShouldReturnWorkAreaList" />
+      <item itemvalue="JUnit.EventsControllerTest" />
+      <item itemvalue="JUnit.FeedbackControllerTest" />
+      <item itemvalue="JUnit.ITStaffControllerTest" />
+      <item itemvalue="JUnit.SecurityControllerClassTest" />
+      <item itemvalue="JUnit.SecurityControllerClassTest.testGetHome_WithoutAuthenticatedUser" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WorkAreaControllerTest" />
-        <item itemvalue="JUnit.WorkAreaControllerTest.getWorkAreaShouldReturnWorkAreaList" />
-        <item itemvalue="JUnit.DocumentControllerClassTest.getDocumentShouldReturnDocumentList" />
-        <item itemvalue="JUnit.DocumentControllerClassTest" />
-        <item itemvalue="JUnit.EmployeeControllerTest" />
+        <item itemvalue="JUnit.SecurityControllerClassTest.testGetHome_WithoutAuthenticatedUser" />
+        <item itemvalue="JUnit.SecurityControllerClassTest" />
+        <item itemvalue="JUnit.ITStaffControllerTest" />
+        <item itemvalue="JUnit.FeedbackControllerTest" />
+        <item itemvalue="JUnit.EventsControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -859,14 +861,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="19176000" />
-    </task>
-    <task id="LOCAL-00316" summary="Rebuilt advantage.html and main.html">
-      <created>1725464666378</created>
-      <option name="number" value="00316" />
-      <option name="presentableId" value="LOCAL-00316" />
-      <option name="project" value="LOCAL" />
-      <updated>1725464666379</updated>
+      <workItem from="1728351985138" duration="27481000" />
     </task>
     <task id="LOCAL-00317" summary="Rebuilt advantage.html v1">
       <created>1725502732038</created>
@@ -1204,7 +1199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728528286100</updated>
     </task>
-    <option name="localTasksCounter" value="365" />
+    <task id="LOCAL-00365" summary="Built a couple of success tests v2">
+      <created>1728613803857</created>
+      <option name="number" value="00365" />
+      <option name="presentableId" value="LOCAL-00365" />
+      <option name="project" value="LOCAL" />
+      <updated>1728613803858</updated>
+    </task>
+    <option name="localTasksCounter" value="366" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1227,7 +1229,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt about.html v1" />
     <MESSAGE value="Rebuilt security for redirect unauthorized visitors to login.html" />
     <MESSAGE value="Created feedback.html and screenshots.html" />
     <MESSAGE value="Rebuilt screenshots.html" />
@@ -1252,7 +1253,8 @@
     <MESSAGE value="Finished spelling WebSecurityConfig and starting created test classes" />
     <MESSAGE value="Tried to run tests" />
     <MESSAGE value="Built a couple of success tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Built a couple of success tests" />
+    <MESSAGE value="Built a couple of success tests v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Built a couple of success tests v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
