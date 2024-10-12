@@ -1,9 +1,10 @@
-package accountingApp.securityController;
+package accountingApp.controller.securityController;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
+import accountingApp.securityController.SecurityControllerClass;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +18,6 @@ class SecurityControllerClassTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @BeforeEach
-    void setUp() {
-        // Вы можете использовать этот метод для подготовки любых общих данных или конфигурации перед выполнением тестов
-    }
 
     @Test
     @WithMockUser // Создаем пользователя, который будет аутентифицирован

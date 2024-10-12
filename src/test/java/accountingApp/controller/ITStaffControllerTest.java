@@ -29,17 +29,23 @@ class ITStaffControllerTest {
     @Mock
     private ITStaffService itStaffService;
 
+    private final List<ITStaff> itStaffList;
+
+    {
+        ITStaff i1 = new ITStaff();
+        ITStaff i2 = new ITStaff();
+        ITStaff i3 = new ITStaff();
+        itStaffList = Arrays.asList(i1, i2, i3);
+    }
+
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
     void getItStaffShouldReturnITStaffList() {
-        ITStaff i1 = new ITStaff();
-        ITStaff i2 = new ITStaff();
-        ITStaff i3 = new ITStaff();
-        List<ITStaff> itStaffList = Arrays.asList(i1,i2,i3);
+
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 

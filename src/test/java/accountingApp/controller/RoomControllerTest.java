@@ -29,6 +29,16 @@ class RoomControllerTest {
     @Mock
     private Model model;
 
+    private final List<Room> roomList;
+
+    {
+        Room r1 = new Room();
+        Room r2 = new Room();
+        Room r3 = new Room();
+        Room r4 = new Room();
+
+        roomList = Arrays.asList(r1, r2, r3, r4);
+    }
 
     @BeforeEach
     public void setUp() {
@@ -37,13 +47,6 @@ class RoomControllerTest {
 
     @Test
     void getRoomShouldReturnRoomList() {
-
-        Room r1 = new Room();
-        Room r2 = new Room();
-        Room r3 = new Room();
-        Room r4 = new Room();
-
-        List<Room> roomList = Arrays.asList(r1, r2, r3, r4);
 
         Mockito.when(roomService.findAllRoom()).thenReturn(roomList);
 
