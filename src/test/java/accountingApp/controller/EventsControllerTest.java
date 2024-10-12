@@ -26,19 +26,14 @@ class EventsControllerTest {
     private EventsController eventsController;
 
     @Mock
-    Model model;
+    private Model model;
 
     @Mock
     private EventsService eventsService;
 
-    @BeforeEach
-    public void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
+    private final List<Events> eventsList;
 
-    @Test
-    void getEventsShouldReturnEventsList() {
-
+    {
         Employee emp1 = new Employee(1, "08061974", "Сатурнов", "ПТЦ", "105");
         Employee emp2 = new Employee(2, "17111984", "Букина", "ФГУ", "205");
         Employee emp3 = new Employee(3, "22011994", "Загаев", "МГУ", "1");
@@ -54,10 +49,20 @@ class EventsControllerTest {
         Events ev2 = new Events(2, "15012024", dev2, emp2, it1);
         Events ev3 = new Events(3, "31112023", dev3, emp3, it2);
 
-        List<Events> eventsList = new ArrayList<>();
+        eventsList = new ArrayList<>();
         eventsList.add(ev1);
         eventsList.add(ev2);
         eventsList.add(ev3);
+    }
+
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    void getEventsShouldReturnEventsList() {
+
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 

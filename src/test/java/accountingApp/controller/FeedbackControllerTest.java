@@ -28,6 +28,16 @@ class FeedbackControllerTest {
     @Mock
     Model model;
 
+    private final List<Feedback> feedbackList;
+
+    {
+        Feedback f1 = new Feedback();
+        Feedback f2 = new Feedback();
+        Feedback f3 = new Feedback();
+
+        feedbackList = Arrays.asList(f1, f2, f3);
+    }
+
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);
@@ -36,11 +46,6 @@ class FeedbackControllerTest {
     @Test
     void getFeedbacks() {
 
-        Feedback f1 = new Feedback();
-        Feedback f2 = new Feedback();
-        Feedback f3 = new Feedback();
-
-        List<Feedback> feedbackList = Arrays.asList(f1, f2, f3);
 
         Mockito.when(feedbackService.findAllFeedbacks()).thenReturn(feedbackList);
 

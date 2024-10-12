@@ -1,5 +1,6 @@
-package accountingApp.documentController;
+package accountingApp.controller.documentController;
 
+import accountingApp.documentController.DocumentControllerClass;
 import accountingApp.documentEntity.DocumentClass;
 import accountingApp.documentService.DocumentServiceClass;
 import org.junit.jupiter.api.Assertions;
@@ -28,6 +29,16 @@ class DocumentControllerClassTest {
     @Mock
     Model model;
 
+    private final List<DocumentClass> documentClassList;
+
+    {
+        DocumentClass doc1 = new DocumentClass();
+        DocumentClass doc2 = new DocumentClass();
+        DocumentClass doc3 = new DocumentClass();
+
+        documentClassList = Arrays.asList(doc1, doc2, doc3);
+    }
+
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
@@ -35,11 +46,7 @@ class DocumentControllerClassTest {
 
     @Test
     void getDocumentShouldReturnDocumentList() {
-        DocumentClass doc1 = new DocumentClass();
-        DocumentClass doc2 = new DocumentClass();
-        DocumentClass doc3 = new DocumentClass();
 
-        List<DocumentClass> documentClassList = Arrays.asList(doc1, doc2, doc3);
 
         Mockito.when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 

@@ -20,13 +20,23 @@ class WorkAreaControllerTest {
 
 
     @InjectMocks
-    WorkAreaController workAreaController;
+    private WorkAreaController workAreaController;
 
     @Mock
-    WorkAreaService workAreaService;
+    private WorkAreaService workAreaService;
 
     @Mock
-    Model model;
+    private Model model;
+
+    private final List<WorkArea> workAreaList;
+
+    {
+        WorkArea w1 = new WorkArea();
+        WorkArea w2 = new WorkArea();
+        WorkArea w3 = new WorkArea();
+        WorkArea w4 = new WorkArea();
+        workAreaList = Arrays.asList(w1, w2, w3, w4);
+    }
 
     @BeforeEach
     public void setUp() {
@@ -35,11 +45,6 @@ class WorkAreaControllerTest {
 
     @Test
     void getWorkAreaShouldReturnWorkAreaList() {
-        WorkArea w1 = new WorkArea();
-        WorkArea w2 = new WorkArea();
-        WorkArea w3 = new WorkArea();
-        WorkArea w4 = new WorkArea();
-        List<WorkArea> workAreaList = Arrays.asList(w1, w2, w3, w4);
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
