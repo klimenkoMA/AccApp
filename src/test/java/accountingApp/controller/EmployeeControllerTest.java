@@ -72,13 +72,12 @@ public class EmployeeControllerTest {
         String employeeWorkArea = "МГУ";
         String employeeRoom = "115";
 
-        Employee newEmployee = new Employee(employeeFio, employeeDborn, employeeWorkArea,
-                employeeRoom);
+        String viewName = employeeController.addEmployee(employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom, model);
 
         when(employeeService.getListEmployee()).thenReturn(new ArrayList<>());
 
-        String viewName = employeeController.addEmployee(employeeFio, employeeDborn, employeeWorkArea,
-                employeeRoom, model);
+        Assertions.assertEquals("employee", viewName);
 
         verify(employeeService).addNewEmployee(any(Employee.class));
 
