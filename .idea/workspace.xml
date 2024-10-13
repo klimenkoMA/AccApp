@@ -8,22 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/documentController/DocumentControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/securityController/SecurityControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/securityController/SecurityControllerClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/FeedbackControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/FeedbackControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/ITStaffControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/ITStaffControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RoomControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RoomControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/documentController/DocumentControllerClassTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/securityController/SecurityControllerClassTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -425,7 +410,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeControllerTest">
+  <component name="RunManager" selected="JUnit.DevicesControllerTest">
     <configuration name="AccountingApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AccountingApplication" />
       <module name="AccApp" />
@@ -585,8 +570,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EmployeeControllerTest" />
         <item itemvalue="JUnit.DevicesControllerTest" />
+        <item itemvalue="JUnit.EmployeeControllerTest" />
         <item itemvalue="JUnit.EmployeeControllerTest.addEmployeeValidNameEmployeeAdded" />
         <item itemvalue="JUnit.DevicesControllerTest.addDeviceValidNameDeviceAdded" />
         <item itemvalue="JUnit.RoomControllerTest" />
@@ -874,14 +859,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="39326000" />
-    </task>
-    <task id="LOCAL-00318" summary="Rebuilt advantage.html v2">
-      <created>1725590644220</created>
-      <option name="number" value="00318" />
-      <option name="presentableId" value="LOCAL-00318" />
-      <option name="project" value="LOCAL" />
-      <updated>1725590644220</updated>
+      <workItem from="1728351985138" duration="42264000" />
     </task>
     <task id="LOCAL-00319" summary="Added new icons in advantage.html">
       <created>1725639659305</created>
@@ -1219,7 +1197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728720273897</updated>
     </task>
-    <option name="localTasksCounter" value="367" />
+    <task id="LOCAL-00367" summary="Rebuilt all tests">
+      <created>1728757272270</created>
+      <option name="number" value="00367" />
+      <option name="presentableId" value="LOCAL-00367" />
+      <option name="project" value="LOCAL" />
+      <updated>1728757272270</updated>
+    </task>
+    <option name="localTasksCounter" value="368" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1242,7 +1227,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created feedback.html and screenshots.html" />
     <MESSAGE value="Rebuilt screenshots.html" />
     <MESSAGE value="Created a new entity feedback" />
     <MESSAGE value="Corrected a feedback's view and logic" />
@@ -1267,7 +1251,8 @@
     <MESSAGE value="Built a couple of success tests" />
     <MESSAGE value="Built a couple of success tests v2" />
     <MESSAGE value="Built a couple of success tests v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Built a couple of success tests v3" />
+    <MESSAGE value="Rebuilt all tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt all tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

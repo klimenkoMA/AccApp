@@ -79,11 +79,9 @@ class DevicesControllerTest {
         String viewName = devicesController.addDevice(deviceName, model);
 
         // Assert
+        Assertions.assertEquals("devices", viewName);
+
         verify(devicesService).addNewDevice(any(Devices.class));
-
-
-        // Пример ожидаемого имени представления
-        // assertEquals("expectedViewName", viewName);
     }
 
     @Test
@@ -95,9 +93,10 @@ class DevicesControllerTest {
         String viewName = devicesController.addDevice(deviceName, model);
 
         // Assert
-        verify(devicesService, never()).addNewDevice(any(Devices.class));
         // Пример ожидаемого имени представления
-        // assertEquals("expectedViewName", viewName);
+        Assertions.assertEquals("devices", viewName);
+
+        verify(devicesService, never()).addNewDevice(any(Devices.class));
     }
 
     @Test
