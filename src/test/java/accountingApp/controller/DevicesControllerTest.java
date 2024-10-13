@@ -70,15 +70,15 @@ class DevicesControllerTest {
 
     @Test
     void addDeviceValidNameDeviceAdded() {
-        // Arrange
+        // Данные
         String deviceName = "TestDevice";
         Devices newDevice = new Devices(deviceName);
         when(devicesService.findAllDevices()).thenReturn(new ArrayList<>());
 
-        // Act
+        // Действие
         String viewName = devicesController.addDevice(deviceName, model);
 
-        // Assert
+        // Проверка
         Assertions.assertEquals("devices", viewName);
 
         verify(devicesService).addNewDevice(any(Devices.class));
@@ -86,13 +86,13 @@ class DevicesControllerTest {
 
     @Test
     void addDeviceEmptyNameNoDeviceAdded() {
-        // Arrange
+        // Данные
         String deviceName = " ";
 
-        // Act
+        // Действие
         String viewName = devicesController.addDevice(deviceName, model);
 
-        // Assert
+        // Проверка
         // Пример ожидаемого имени представления
         Assertions.assertEquals("devices", viewName);
 
@@ -145,10 +145,117 @@ class DevicesControllerTest {
     }
 
     @Test
-    void updateProceduresAssigned() {
+    void updateProceduresAssignedSuccessfulUpdateShouldReturnView() {
+        // Данные
+        String id = "1";
+        String name = "DeviceName";
+        Devices devices = new Devices(1, name);
+        List<Devices> devicesList = new ArrayList<>();
+        devicesList.add(devices);
+
+        when(devicesService.findAllDevices()).thenReturn(devicesList);
+
+        // Действие
+        String result = devicesController.updateProceduresAssigned(id, name, model);
+
+        // Проверка
+        Assertions.assertEquals("devices", result);
+
+        verify(devicesService).updateDevice(any(Devices.class));
     }
 
     @Test
-    void findDevicesById() {
+    void updateProceduresAssignedInvalidIdShouldReturnView() {
+        // Данные
+        String id = "-1";
+        String name = "DeviceName";
+
+        // Действие
+        String result = devicesController.updateProceduresAssigned(id, name, model);
+
+        // Проверка
+        Assertions.assertEquals("devices", result);
+
+        verify(devicesService, never()).updateDevice(any());  // метод не должен быть вызван
+    }
+
+    @Test
+    void updateProceduresAssignedEmptyNameShouldReturnView() {
+        // Данные
+        String id = "1";
+        String name = "  "; // после очистки от пробелов значение будет пустым
+
+        // Действие
+        String result = devicesController.updateProceduresAssigned(id, name, model);
+
+        // Проверка
+        Assertions.assertEquals("devices", result);
+
+        verify(devicesService, never()).updateDevice(any());  // метод не должен быть вызван
+    }
+
+    @Test
+    void updateProceduresAssignedExceptionThrownShouldReturnView() {
+        // Данные
+        String id = "1";
+        String name = "DeviceName";
+
+        //Симуляция выброса исключения
+        doThrow(new RuntimeException()).when(devicesService).updateDevice(any());
+
+        // Действие
+        String result = devicesController.updateProceduresAssigned(id, name, model);
+
+        // Проверка
+        Assertions.assertEquals("devices", result);
+    }
+
+    @Test
+    void testFindDevicesByIdValidId() {
+        String name = "1";
+        int id = Integer.parseInt(name);
+        Devices device = new Devices();
+
+        List<Devices> devicesList = Arrays.asList(device);
+
+        when(devicesService.getDevicesById(1)).thenReturn(devicesList);
+
+        String viewName = devicesController.findDevicesById(name, model);
+
+        Assertions.assertEquals("devices", viewName);
+
+        verify(model).addAttribute("devicesList", devicesList);
+
+        verify(devicesService).getDevicesById(id);
+    }
+
+    @Test
+    void testFindDevicesByIdSubZero() {
+        String name = "0";
+
+        List<Devices> devicesList = new ArrayList<>();
+
+        when(devicesService.findAllDevices()).thenReturn(devicesList);
+
+        String viewName = devicesController.findDevicesById(name, model);
+
+        Assertions.assertEquals("devices", viewName);
+
+        verify(model).addAttribute("devicesList", devicesList);
+    }
+
+    @Test
+    void testFindDevicesByIdInvalidId() {
+        String name = "invalid";
+        Devices device = new Devices();
+        List<Devices> devicesList = Arrays.asList(device);
+
+        when(devicesService.getDevicesByName(name)).thenReturn(devicesList);
+
+        String viewName = devicesController.findDevicesById(name, model);
+
+        Assertions.assertEquals("devices", viewName);
+
+        verify(model).addAttribute("devicesList", devicesList);
     }
 }
