@@ -7,8 +7,7 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -452,22 +451,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DevicesControllerTest.addDeviceValidNameDeviceAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
-      <option name="METHOD_NAME" value="addDeviceValidNameDeviceAdded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DevicesControllerTest.mustReturnDevicesList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <extension name="coverage">
@@ -484,6 +467,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DevicesControllerTest.testFindDevicesByIdSubZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
+      <option name="METHOD_NAME" value="testFindDevicesByIdSubZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DevicesControllerTest.testFindDevicesByIdValidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
+      <option name="METHOD_NAME" value="testFindDevicesByIdValidId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DevicesControllerTest.testFindDevicesById_InvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
+      <option name="METHOD_NAME" value="testFindDevicesById_InvalidId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmployeeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <extension name="coverage">
@@ -494,37 +525,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeControllerTest.addEmployeeValidNameEmployeeAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
-      <option name="METHOD_NAME" value="addEmployeeValidNameEmployeeAdded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoomControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RoomControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -562,19 +562,19 @@
       <item itemvalue="Database Script.index.js" />
       <item itemvalue="Spring Boot.AccApp" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.RoomControllerTest" />
       <item itemvalue="JUnit.EmployeeControllerTest" />
       <item itemvalue="JUnit.DevicesControllerTest" />
-      <item itemvalue="JUnit.DevicesControllerTest.addDeviceValidNameDeviceAdded" />
-      <item itemvalue="JUnit.EmployeeControllerTest.addEmployeeValidNameEmployeeAdded" />
+      <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesByIdValidId" />
+      <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesByIdSubZero" />
+      <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesById_InvalidId" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DevicesControllerTest" />
+        <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesById_InvalidId" />
+        <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesByIdSubZero" />
+        <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesByIdValidId" />
         <item itemvalue="JUnit.EmployeeControllerTest" />
-        <item itemvalue="JUnit.EmployeeControllerTest.addEmployeeValidNameEmployeeAdded" />
-        <item itemvalue="JUnit.DevicesControllerTest.addDeviceValidNameDeviceAdded" />
-        <item itemvalue="JUnit.RoomControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -859,14 +859,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="42264000" />
-    </task>
-    <task id="LOCAL-00319" summary="Added new icons in advantage.html">
-      <created>1725639659305</created>
-      <option name="number" value="00319" />
-      <option name="presentableId" value="LOCAL-00319" />
-      <option name="project" value="LOCAL" />
-      <updated>1725639659305</updated>
+      <workItem from="1728351985138" duration="45893000" />
     </task>
     <task id="LOCAL-00320" summary="Created cards.html">
       <created>1725691732233</created>
@@ -1204,7 +1197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728757272270</updated>
     </task>
-    <option name="localTasksCounter" value="368" />
+    <task id="LOCAL-00368" summary="Rebuilt some tests">
+      <created>1728801705113</created>
+      <option name="number" value="00368" />
+      <option name="presentableId" value="LOCAL-00368" />
+      <option name="project" value="LOCAL" />
+      <updated>1728801705114</updated>
+    </task>
+    <option name="localTasksCounter" value="369" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1227,7 +1227,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt screenshots.html" />
     <MESSAGE value="Created a new entity feedback" />
     <MESSAGE value="Corrected a feedback's view and logic" />
     <MESSAGE value="Corrected a feedbacks.html's view" />
@@ -1252,7 +1251,8 @@
     <MESSAGE value="Built a couple of success tests v2" />
     <MESSAGE value="Built a couple of success tests v3" />
     <MESSAGE value="Rebuilt all tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt all tests" />
+    <MESSAGE value="Rebuilt some tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt some tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1267,5 +1267,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AccApp$DevicesControllerTest_testFindDevicesByIdValidId.ic" NAME="DevicesControllerTest.testFindDevicesByIdValidId Coverage Results" MODIFIED="1728804916820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>accountingApp.controller.*</FILTER>
+    </SUITE>
   </component>
 </project>
