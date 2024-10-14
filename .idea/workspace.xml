@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/index_js.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/repository/DevicesRepositoryTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/repository/DevicesRepositoryTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +83,6 @@
     <property name="DatabaseDriversLRU" value="sqlserver&#10;mongo&#10;postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="DefaultPlantUmlFileTemplate" value="UML Activity" />
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -92,7 +100,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/fragments/nav" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -409,20 +417,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.DevicesControllerTest">
-    <configuration name="AccountingApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AccountingApplication" />
-      <module name="AccApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.EventsControllerTest.updateEventsSuccess">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -432,21 +427,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DevicesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -467,65 +447,136 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DevicesControllerTest.testFindDevicesByIdSubZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventsControllerTest.addEventsFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
-      <option name="METHOD_NAME" value="testFindDevicesByIdSubZero" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
+      <option name="METHOD_NAME" value="addEventsFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DevicesControllerTest.testFindDevicesByIdValidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventsControllerTest.deleteEventsFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
-      <option name="METHOD_NAME" value="testFindDevicesByIdValidId" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
+      <option name="METHOD_NAME" value="deleteEventsFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DevicesControllerTest.testFindDevicesById_InvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventsControllerTest.deleteEventsFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
-      <option name="METHOD_NAME" value="testFindDevicesById_InvalidId" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
+      <option name="METHOD_NAME" value="deleteEventsFailWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventsControllerTest.deleteEventsSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
+      <option name="METHOD_NAME" value="deleteEventsSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventsControllerTest.updateEventsSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
+      <option name="METHOD_NAME" value="updateEventsSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="accountingAppWithTests" type="JUnit" factoryName="JUnit">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -533,22 +584,12 @@
     <configuration default="true" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/frontend/src/index.js" working-dir="$PROJECT_DIR$/frontend/public">
       <method v="2" />
     </configuration>
-    <configuration name="AccApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
-      <module name="AccApp" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="AccountingApplication" />
-      <option name="DEBUG_MODE" value="true" />
-      <option name="ENABLE_LAUNCH_OPTIMIZATION" value="false" />
-      <option name="HIDE_BANNER" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AccountingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="AccApp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="accountingApp.AccountingApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="accountingAppWithTests" run_configuration_type="JUnit" />
       </method>
     </configuration>
     <configuration default="true" type="js.build_tools.npm">
@@ -558,23 +599,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.AccountingApplication" />
-      <item itemvalue="Database Script.index.js" />
-      <item itemvalue="Spring Boot.AccApp" />
+      <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.EmployeeControllerTest" />
-      <item itemvalue="JUnit.DevicesControllerTest" />
-      <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesByIdValidId" />
-      <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesByIdSubZero" />
-      <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesById_InvalidId" />
+      <item itemvalue="JUnit.EventsControllerTest.addEventsFail" />
+      <item itemvalue="JUnit.EventsControllerTest.deleteEventsFail" />
+      <item itemvalue="JUnit.EventsControllerTest.deleteEventsSuccess" />
+      <item itemvalue="JUnit.EventsControllerTest.deleteEventsFailWithException" />
+      <item itemvalue="JUnit.EventsControllerTest.updateEventsSuccess" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DevicesControllerTest" />
-        <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesById_InvalidId" />
-        <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesByIdSubZero" />
-        <item itemvalue="JUnit.DevicesControllerTest.testFindDevicesByIdValidId" />
-        <item itemvalue="JUnit.EmployeeControllerTest" />
+        <item itemvalue="JUnit.EventsControllerTest.updateEventsSuccess" />
+        <item itemvalue="JUnit.EventsControllerTest.deleteEventsFailWithException" />
+        <item itemvalue="JUnit.EventsControllerTest.deleteEventsSuccess" />
+        <item itemvalue="JUnit.EventsControllerTest.addEventsFail" />
+        <item itemvalue="JUnit.EventsControllerTest.deleteEventsFail" />
       </list>
     </recent_temporary>
   </component>
@@ -859,14 +898,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="45893000" />
-    </task>
-    <task id="LOCAL-00320" summary="Created cards.html">
-      <created>1725691732233</created>
-      <option name="number" value="00320" />
-      <option name="presentableId" value="LOCAL-00320" />
-      <option name="project" value="LOCAL" />
-      <updated>1725691732248</updated>
+      <workItem from="1728351985138" duration="62190000" />
     </task>
     <task id="LOCAL-00321" summary="Created carousel.html">
       <created>1725692676811</created>
@@ -1204,7 +1236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728801705114</updated>
     </task>
-    <option name="localTasksCounter" value="369" />
+    <task id="LOCAL-00369" summary="Finished to create tests for DevicesControllerTest.class">
+      <created>1728805434324</created>
+      <option name="number" value="00369" />
+      <option name="presentableId" value="LOCAL-00369" />
+      <option name="project" value="LOCAL" />
+      <updated>1728805434324</updated>
+    </task>
+    <option name="localTasksCounter" value="370" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1227,7 +1266,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created a new entity feedback" />
     <MESSAGE value="Corrected a feedback's view and logic" />
     <MESSAGE value="Corrected a feedbacks.html's view" />
     <MESSAGE value="Rebuilt feedbacks.html's table" />
@@ -1252,7 +1290,8 @@
     <MESSAGE value="Built a couple of success tests v3" />
     <MESSAGE value="Rebuilt all tests" />
     <MESSAGE value="Rebuilt some tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt some tests" />
+    <MESSAGE value="Finished to create tests for DevicesControllerTest.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished to create tests for DevicesControllerTest.class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

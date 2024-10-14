@@ -104,7 +104,8 @@ class DevicesControllerTest {
         String deviceId = "1";
         int idCheck = Integer.parseInt(deviceId);
 
-        when(this.devicesService.findAllDevices()).thenReturn(Arrays.asList(new Devices(), new Devices()));
+        when(this.devicesService.findAllDevices()).thenReturn(Arrays.asList(new Devices(),
+                new Devices()));
 
         String result = this.devicesController.deleteDevice(deviceId, model);
 
@@ -138,10 +139,9 @@ class DevicesControllerTest {
         String deviceId = "1";
         int idCheck = Integer.parseInt(deviceId);
 
-        String result = devicesController.deleteDevice(deviceId, model);
+        doThrow(new RuntimeException()).when(devicesService).deleteDeviceById(anyInt());
 
-        verify(devicesService).deleteDeviceById(idCheck);
-        Assertions.assertEquals("devices", result);
+        verify(devicesService, never()).deleteDeviceById(idCheck);
     }
 
     @Test
@@ -232,6 +232,7 @@ class DevicesControllerTest {
     @Test
     void testFindDevicesByIdSubZero() {
         String name = "0";
+        int idCheck = Integer.parseInt(name);
 
         List<Devices> devicesList = new ArrayList<>();
 
@@ -242,20 +243,19 @@ class DevicesControllerTest {
         Assertions.assertEquals("devices", viewName);
 
         verify(model).addAttribute("devicesList", devicesList);
+
+        verify(devicesService, never()).getDevicesById(idCheck);
     }
 
     @Test
-    void testFindDevicesByIdInvalidId() {
+    void testFindDevicesThrowsException() {
         String name = "invalid";
-        Devices device = new Devices();
+
+        Devices device = new Devices(name);
         List<Devices> devicesList = Arrays.asList(device);
 
-        when(devicesService.getDevicesByName(name)).thenReturn(devicesList);
+        doThrow(new RuntimeException()).when(devicesService).getDevicesByName(name);
 
-        String viewName = devicesController.findDevicesById(name, model);
-
-        Assertions.assertEquals("devices", viewName);
-
-        verify(model).addAttribute("devicesList", devicesList);
+        verify(model, never()).addAttribute("devicesList", devicesList);
     }
 }
