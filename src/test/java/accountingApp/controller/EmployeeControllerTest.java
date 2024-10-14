@@ -14,6 +14,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
@@ -84,14 +85,222 @@ public class EmployeeControllerTest {
     }
 
     @Test
-    void deleteById() {
+    void addEmployeeEmptyAttributesOfEmployeeAdded() {
+
+        String employeeFio = " ";
+        String employeeDborn = " ";
+        String employeeWorkArea = " ";
+        String employeeRoom = " ";
+
+        String viewName = employeeController.addEmployee(employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom, model);
+
+        when(employeeService.getListEmployee()).thenReturn(new ArrayList<>());
+
+        Assertions.assertEquals("employee", viewName);
+
+        verify(employeeService, never()).addNewEmployee(any(Employee.class));
+
     }
 
     @Test
-    void updateEmployee() {
+    void deleteEmployeeDeletedEmployeeSuccess() {
+
+        String employeeId = "1";
+        int idCheck = Integer.parseInt(employeeId);
+
+        when(this.employeeService.getListEmployee()).thenReturn(Arrays.asList(new Employee(),
+                new Employee()));
+
+        String result = this.employeeController.deleteById(employeeId, model);
+
+        verify(employeeService).deleteEmployeeById(idCheck);
+
+        Assertions.assertEquals("employee", result);
+
     }
 
     @Test
-    void findEmployeeByFio() {
+    void deleteEmployeeDeletedEmployeeFail() {
+
+        String employeeId = "0";
+        int idCheck = Integer.parseInt(employeeId);
+
+        String result = this.employeeController.deleteById(employeeId, model);
+
+        verify(employeeService, never()).deleteEmployeeById(idCheck);
+
+        Assertions.assertEquals("employee", result);
+
+    }
+
+    @Test
+    void deleteEmployeeDeletedNoNumericId() {
+
+        String employeeId = "abc";
+
+        String result = this.employeeController.deleteById(employeeId, model);
+
+        verify(employeeService, never()).deleteEmployeeById(anyInt());
+
+        Assertions.assertEquals("employee", result);
+
+    }
+
+    @Test
+    void deleteEmployeeWithException() {
+
+        String employeeId = "1";
+        int idCheck = Integer.parseInt(employeeId);
+
+        doThrow(new RuntimeException()).when(employeeService).deleteEmployeeById(idCheck);
+
+        verify(employeeService, never()).deleteEmployeeById(anyInt());
+    }
+
+    @Test
+    void updateEmployeeValid() {
+
+        String employeeId = "1";
+        int idCheck = Integer.parseInt(employeeId);
+        String employeeFio = "TestName";
+        String employeeDborn = "11051988";
+        String employeeWorkArea = "МГУ";
+        String employeeRoom = "115";
+
+        List<Employee> employees = Arrays.asList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom));
+
+        when(employeeService.getListEmployee()).thenReturn(employees);
+
+        String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom, model);
+
+        Assertions.assertEquals("employee", result);
+
+        verify(employeeService).updateEmployee(any(Employee.class));
+    }
+
+    @Test
+    void updateEmployeeFail() {
+
+        String employeeId = "-1";
+        int idCheck = Integer.parseInt(employeeId);
+        String employeeFio = "TestName";
+        String employeeDborn = "11051988";
+        String employeeWorkArea = "МГУ";
+        String employeeRoom = "115";
+
+        List<Employee> employees = Arrays.asList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom));
+
+        when(employeeService.getListEmployee()).thenReturn(employees);
+
+        String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom, model);
+
+        Assertions.assertEquals("employee", result);
+
+        verify(employeeService, never()).updateEmployee(any(Employee.class));
+    }
+
+    @Test
+    void updateEmployeeFailWithEmptyAttributes() {
+
+        String employeeId = "1";
+        int idCheck = Integer.parseInt(employeeId);
+        String employeeFio = " ";
+        String employeeDborn = " ";
+        String employeeWorkArea = " ";
+        String employeeRoom = " ";
+
+        List<Employee> employees = Arrays.asList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom));
+
+        when(employeeService.getListEmployee()).thenReturn(employees);
+
+        String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom, model);
+
+        Assertions.assertEquals("employee", result);
+
+        verify(employeeService, never()).updateEmployee(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom));
+    }
+
+    @Test
+    void updateEmployeeFailWithException() {
+
+        String employeeId = "1";
+        int idCheck = Integer.parseInt(employeeId);
+        String employeeFio = " ";
+        String employeeDborn = " ";
+        String employeeWorkArea = " ";
+        String employeeRoom = " ";
+
+        List<Employee> employees = Arrays.asList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom));
+
+        when(employeeService.getListEmployee()).thenReturn(employees);
+
+        String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom, model);
+
+        Assertions.assertEquals("employee", result);
+
+        verify(employeeService, never()).updateEmployee(any(Employee.class));
+    }
+
+    @Test
+    void findEmployeeValid() {
+
+        String employeeId = "1";
+        int idCheck = Integer.parseInt(employeeId);
+
+        List<Employee> employees = Arrays.asList(new Employee());
+
+        when(employeeService.findEmployeeById(idCheck)).thenReturn(employees);
+
+        String result = this.employeeController.findEmployeeByFio(employeeId, model);
+
+        Assertions.assertEquals("employee", result);
+
+        verify(model).addAttribute("employeeList", employees);
+
+        verify(employeeService).findEmployeeById(idCheck);
+    }
+
+    @Test
+    void findEmployeeInvalidBySubZeroId() {
+
+        String employeeId = "-100";
+        int idCheck = Integer.parseInt(employeeId);
+
+        List<Employee> employees = Arrays.asList(new Employee());
+
+        when(employeeService.findEmployeeById(idCheck)).thenReturn(employees);
+
+        String result = this.employeeController.findEmployeeByFio(employeeId, model);
+
+        Assertions.assertEquals("employee", result);
+
+        verify(model, never()).addAttribute("employeeList", employees);
+
+        verify(employeeService, never()).findEmployeeById(idCheck);
+    }
+
+    @Test
+    void findEmployeeThrowsException() {
+
+        String employeeId = "100";
+        int idCheck = Integer.parseInt(employeeId);
+
+        List<Employee> employees = Arrays.asList(new Employee());
+
+        doThrow(new RuntimeException()).when(employeeService).findEmployeeById(idCheck);
+
+        verify(model, never()).addAttribute("employeeList", employees);
+
+        verify(employeeService, never()).findEmployeeById(idCheck);
     }
 }

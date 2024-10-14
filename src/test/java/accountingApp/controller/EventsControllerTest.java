@@ -31,6 +31,15 @@ class EventsControllerTest {
     @Mock
     private EventsService eventsService;
 
+    @Mock
+    private EmployeeController employeeController;
+
+    @Mock
+    private ITStaffController itStaffController;
+
+    @Mock
+    private DevicesController devicesController;
+
     private final List<Events> eventsList;
 
     {
@@ -63,7 +72,6 @@ class EventsControllerTest {
     @Test
     void getEventsShouldReturnEventsList() {
 
-
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
         String viewName = eventsController.getEvents(model);
@@ -76,5 +84,107 @@ class EventsControllerTest {
 
     }
 
+    @Test
+    void addEventsSuccess() {
 
+        String dateWithoutSpaces = "5201995";
+        String deviceWithoutSpaces = "printer";
+        String employeeidWithoutSpaces = "Дапниев";
+        String itstaffidWithoutSpaces = "Элинская";
+
+        Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
+
+        String viewName = eventsController.addNewEvent(dateWithoutSpaces, deviceWithoutSpaces,
+                employeeidWithoutSpaces, itstaffidWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
+    }
+
+    @Test
+    void addEventsFail() {
+
+        String dateWithoutSpaces = " ";
+        String deviceWithoutSpaces = " ";
+        String employeeidWithoutSpaces = " ";
+        String itstaffidWithoutSpaces = " ";
+
+        Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
+
+        String viewName = eventsController.addNewEvent(dateWithoutSpaces, deviceWithoutSpaces,
+                employeeidWithoutSpaces, itstaffidWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
+
+        verify(eventsService, never()).addNewEvent(any(Events.class));
+    }
+
+    @Test
+    void deleteEventsSuccess() {
+
+        String dateWithoutSpaces = "1";
+        int idCheck = Integer.parseInt(dateWithoutSpaces);
+
+        Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
+
+        String viewName = eventsController.deleteEvent(dateWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
+
+        verify(eventsService).deleteEventsById(idCheck);
+    }
+
+    @Test
+    void deleteEventsFail() {
+
+        String dateWithoutSpaces = "0";
+        int idCheck = Integer.parseInt(dateWithoutSpaces);
+
+        Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
+
+        String viewName = eventsController.deleteEvent(dateWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
+
+        verify(eventsService, never()).deleteEventsById(idCheck);
+    }
+
+    @Test
+    void deleteEventsFailWithException() {
+
+        String dateWithoutSpaces = "1";
+        int idCheck = Integer.parseInt(dateWithoutSpaces);
+
+        Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
+
+        doThrow(new RuntimeException()).when(eventsService).deleteEventsById(idCheck);
+
+        verify(eventsService, never()).deleteEventsById(idCheck);
+    }
+
+    @Test
+    void updateEventsSuccess() {
+
+        String eventsId = "1";
+        String dateWithoutSpaces = "5201995";
+        String deviceWithoutSpaces = "printer";
+        String employeeidWithoutSpaces = "Дапниев";
+        String itstaffidWithoutSpaces = "Элинская";
+
+        int idCheck = Integer.parseInt(eventsId);
+        int dateCheck = Integer.parseInt(dateWithoutSpaces);
+
+        Events event = new Events(idCheck, dateWithoutSpaces, new Devices(),
+                new Employee(), new ITStaff());
+
+        eventsService.addNewEvent(event);
+
+        Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
+
+        String viewName = eventsController.updateEvent(eventsId, dateWithoutSpaces, deviceWithoutSpaces,
+                employeeidWithoutSpaces, itstaffidWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
+
+//        verify(eventsService).updateEvent(event);
+    }
 }
