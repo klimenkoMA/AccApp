@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
@@ -72,7 +73,7 @@ class DevicesControllerTest {
     void addDeviceValidNameDeviceAdded() {
         // Данные
         String deviceName = "TestDevice";
-        Devices newDevice = new Devices(deviceName);
+
         when(devicesService.findAllDevices()).thenReturn(new ArrayList<>());
 
         // Действие
@@ -216,7 +217,7 @@ class DevicesControllerTest {
         int id = Integer.parseInt(name);
         Devices device = new Devices();
 
-        List<Devices> devicesList = Arrays.asList(device);
+        List<Devices> devicesList = Collections.singletonList(device);
 
         when(devicesService.getDevicesById(1)).thenReturn(devicesList);
 
@@ -252,7 +253,7 @@ class DevicesControllerTest {
         String name = "invalid";
 
         Devices device = new Devices(name);
-        List<Devices> devicesList = Arrays.asList(device);
+        List<Devices> devicesList = Collections.singletonList(device);
 
         doThrow(new RuntimeException()).when(devicesService).getDevicesByName(name);
 

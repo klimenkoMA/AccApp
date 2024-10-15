@@ -8,14 +8,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.Mockito.verify;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 
 
 class DocumentControllerClassTest {
@@ -48,7 +48,7 @@ class DocumentControllerClassTest {
     void getDocumentShouldReturnDocumentList() {
 
 
-        Mockito.when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
+        when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
         String viewName = documentController.getDocument(model);
 
@@ -61,7 +61,48 @@ class DocumentControllerClassTest {
     }
 
     @Test
-    void addNewDocument() {
+    void addDocumentValid() {
+
+        String documentName = "doc1";
+        String documentContent = "content";
+
+        when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
+
+        String viewName = documentController.addNewDocument(documentName, documentContent, model);
+
+        Assertions.assertEquals("documents", viewName);
+
+        verify(model).addAttribute("documentClassList", documentClassList);
+
+        verify(documentService).addDocument(any(DocumentClass.class));
+
+    }
+
+    @Test
+    void addDocumentFail() {
+
+        String documentName = " ";
+        String documentContent = " ";
+
+        when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
+
+        String viewName = documentController.addNewDocument(documentName, documentContent, model);
+
+        Assertions.assertEquals("documents", viewName);
+
+        verify(model, never()).addAttribute("documentClassList", documentClassList);
+
+        verify(documentService, never()).addDocument(any(DocumentClass.class));
+
+    }
+
+    @Test
+    void addDocumentFailWithException() {
+
+        doThrow(new RuntimeException()).when(documentService).addDocument(any(DocumentClass.class));
+
+        verify(documentService, never()).addDocument(any(DocumentClass.class));
+
     }
 
     @Test

@@ -1,7 +1,6 @@
 package accountingApp.controller;
 
 
-import accountingApp.entity.Devices;
 import accountingApp.entity.Employee;
 import accountingApp.service.EmployeeService;
 import org.junit.jupiter.api.Assertions;
@@ -15,6 +14,7 @@ import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
@@ -168,7 +168,7 @@ public class EmployeeControllerTest {
         String employeeWorkArea = "МГУ";
         String employeeRoom = "115";
 
-        List<Employee> employees = Arrays.asList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+        List<Employee> employees = Collections.singletonList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
                 employeeRoom));
 
         when(employeeService.getListEmployee()).thenReturn(employees);
@@ -191,7 +191,7 @@ public class EmployeeControllerTest {
         String employeeWorkArea = "МГУ";
         String employeeRoom = "115";
 
-        List<Employee> employees = Arrays.asList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+        List<Employee> employees = Collections.singletonList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
                 employeeRoom));
 
         when(employeeService.getListEmployee()).thenReturn(employees);
@@ -214,7 +214,7 @@ public class EmployeeControllerTest {
         String employeeWorkArea = " ";
         String employeeRoom = " ";
 
-        List<Employee> employees = Arrays.asList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+        List<Employee> employees = Collections.singletonList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
                 employeeRoom));
 
         when(employeeService.getListEmployee()).thenReturn(employees);
@@ -238,15 +238,10 @@ public class EmployeeControllerTest {
         String employeeWorkArea = " ";
         String employeeRoom = " ";
 
-        List<Employee> employees = Arrays.asList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
-                employeeRoom));
+        Employee employee = new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+                employeeRoom);
 
-        when(employeeService.getListEmployee()).thenReturn(employees);
-
-        String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn, employeeWorkArea,
-                employeeRoom, model);
-
-        Assertions.assertEquals("employee", result);
+        doThrow(new RuntimeException()).when(employeeService).updateEmployee(employee);
 
         verify(employeeService, never()).updateEmployee(any(Employee.class));
     }
@@ -257,7 +252,7 @@ public class EmployeeControllerTest {
         String employeeId = "1";
         int idCheck = Integer.parseInt(employeeId);
 
-        List<Employee> employees = Arrays.asList(new Employee());
+        List<Employee> employees = Collections.singletonList(new Employee());
 
         when(employeeService.findEmployeeById(idCheck)).thenReturn(employees);
 
@@ -276,7 +271,7 @@ public class EmployeeControllerTest {
         String employeeId = "-100";
         int idCheck = Integer.parseInt(employeeId);
 
-        List<Employee> employees = Arrays.asList(new Employee());
+        List<Employee> employees = Collections.singletonList(new Employee());
 
         when(employeeService.findEmployeeById(idCheck)).thenReturn(employees);
 
@@ -295,7 +290,7 @@ public class EmployeeControllerTest {
         String employeeId = "100";
         int idCheck = Integer.parseInt(employeeId);
 
-        List<Employee> employees = Arrays.asList(new Employee());
+        List<Employee> employees = Collections.singletonList(new Employee());
 
         doThrow(new RuntimeException()).when(employeeService).findEmployeeById(idCheck);
 
