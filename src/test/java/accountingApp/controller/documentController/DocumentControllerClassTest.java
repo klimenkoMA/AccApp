@@ -106,7 +106,39 @@ class DocumentControllerClassTest {
     }
 
     @Test
-    void deleteSomeDocument() {
+    void deleteDocumentValid() {
+
+        String documentName = "doc1";
+
+        String viewName = documentController.deleteSomeDocument(documentName, model);
+
+        Assertions.assertEquals("documents", viewName);
+
+        verify(documentService).deleteDocument(any());
+    }
+
+    @Test
+    void deleteDocumentFail() {
+
+        String documentName = " ";
+
+        String viewName = documentController.deleteSomeDocument(documentName, model);
+
+        Assertions.assertEquals("documents", viewName);
+
+        verify(documentService, never()).deleteDocument(any());
+    }
+
+    @Test
+    void deleteDocumentFailWithException() {
+
+        String documentName = "gfdddf";
+
+        doThrow(new RuntimeException()).when(documentService).deleteDocument(any());
+
+        verify(model, never()).addAttribute("documentClassList", documentClassList);
+
+        verify(documentService, never()).deleteDocument(any());
     }
 
     @Test
