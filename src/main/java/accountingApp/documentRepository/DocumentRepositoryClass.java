@@ -23,4 +23,5 @@ public interface DocumentRepositoryClass extends MongoRepository<DocumentClass, 
     @Override
     List<DocumentClass> findAll();
 
+
 }

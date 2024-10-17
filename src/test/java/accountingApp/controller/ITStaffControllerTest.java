@@ -60,7 +60,22 @@ class ITStaffControllerTest {
     }
 
     @Test
-    void addItStaff() {
+    void addItStaffValid() {
+
+        String itStaffFio = "Mikl First";
+
+        ITStaff itStaff = new ITStaff(itStaffFio);
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+        String viewName = itStaffController.addItStaff( itStaffFio, model);
+
+        Assertions.assertEquals("itstaff", viewName);
+
+        verify(model).addAttribute("itStaffList", itStaffList);
+
+        verify(itStaffService).getAllItStaff();
+
     }
 
     @Test
