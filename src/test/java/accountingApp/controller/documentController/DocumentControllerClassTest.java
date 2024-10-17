@@ -142,10 +142,40 @@ class DocumentControllerClassTest {
     }
 
     @Test
-    void updateSomeDocument() {
+    void findDocumentValid() {
+
+        String documentId = "1";
+
+        String viewName = documentController.findSomeDocument(documentId, model);
+
+        Assertions.assertEquals("documents", viewName);
+
+        verify(documentService).findDocumentById(documentId);
+
     }
 
     @Test
-    void findSomeDocument() {
+    void findDocumentFail() {
+
+        String documentId = "";
+
+        String viewName = documentController.findSomeDocument(documentId, model);
+
+        Assertions.assertEquals("documents", viewName);
+
+        verify(documentService, never()).findDocumentById(documentId);
+
     }
+
+    @Test
+    void findDocumentFailWithException() {
+
+        String documentId = "1212";
+
+       doThrow(new RuntimeException()).when(documentService).findDocumentById(documentId);
+
+        verify(documentService, never()).findDocumentById(documentId);
+
+    }
+
 }

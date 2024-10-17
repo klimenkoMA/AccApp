@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" afterDir="false" />
     </list>
@@ -408,7 +410,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.DocumentControllerClassTest.deleteDocumentFailWithException">
+  <component name="RunManager" selected="JUnit.DocumentControllerClassTest.findDocumentFailWithException">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -433,27 +435,6 @@
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.DevicesControllerTest" />
       <option name="METHOD_NAME" value="mustReturnDevicesList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DocumentControllerClassTest.addDocumentFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
-      <option name="METHOD_NAME" value="addDocumentFailWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -501,7 +482,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocumentControllerClassTest.deleteDocumentValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DocumentControllerClassTest.findDocumentFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -516,28 +497,49 @@
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
-      <option name="METHOD_NAME" value="deleteDocumentValid" />
+      <option name="METHOD_NAME" value="findDocumentFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EventsControllerTest.addEventsSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DocumentControllerClassTest.findDocumentFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
       </selectedOptions>
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
-      <option name="METHOD_NAME" value="addEventsSuccess" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
+      <option name="METHOD_NAME" value="findDocumentFailWithException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DocumentControllerClassTest.findDocumentValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
+      <option name="METHOD_NAME" value="findDocumentValid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -592,19 +594,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentFailWithException" />
-      <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentValid" />
-      <item itemvalue="JUnit.EventsControllerTest.addEventsSuccess" />
       <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentFail" />
       <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentFailWithException" />
+      <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentValid" />
+      <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentFail" />
+      <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentFailWithException" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentFailWithException" />
+        <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentFail" />
+        <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentValid" />
         <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentFailWithException" />
         <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentFail" />
-        <item itemvalue="JUnit.EventsControllerTest.addEventsSuccess" />
-        <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentValid" />
-        <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentFailWithException" />
       </list>
     </recent_temporary>
   </component>
@@ -889,14 +891,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="70587000" />
-    </task>
-    <task id="LOCAL-00323" summary="Created a lot of new html files and rebuilt others">
-      <created>1725733828307</created>
-      <option name="number" value="00323" />
-      <option name="presentableId" value="LOCAL-00323" />
-      <option name="project" value="LOCAL" />
-      <updated>1725733828307</updated>
+      <workItem from="1728351985138" duration="74734000" />
     </task>
     <task id="LOCAL-00324" summary="Rebuilt carousel.html and advantage.html">
       <created>1725809962858</created>
@@ -1234,7 +1229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728960780944</updated>
     </task>
-    <option name="localTasksCounter" value="372" />
+    <task id="LOCAL-00372" summary="Added some new test's methods v3">
+      <created>1729046812214</created>
+      <option name="number" value="00372" />
+      <option name="presentableId" value="LOCAL-00372" />
+      <option name="project" value="LOCAL" />
+      <updated>1729046812214</updated>
+    </task>
+    <option name="localTasksCounter" value="373" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1257,7 +1259,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt feedbacks.html's table" />
     <MESSAGE value="Create a create.html" />
     <MESSAGE value="Rebuilt a feedbacks.html" />
     <MESSAGE value="Rebuilt a couple of things in frontend" />
@@ -1282,7 +1283,8 @@
     <MESSAGE value="Finished to create tests for DevicesControllerTest.class" />
     <MESSAGE value="Added some new test's methods" />
     <MESSAGE value="Added some new test's methods v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some new test's methods v2" />
+    <MESSAGE value="Added some new test's methods v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some new test's methods v3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
