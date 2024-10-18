@@ -31,6 +31,7 @@ public class FeedbackController {
                                  Model model) {
 
         String nameWithoutSpaces = name.trim();
+
         if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
             Feedback feedback = new Feedback(name, email, message);
             feedbackService.addFeedback(feedback);
@@ -38,5 +39,28 @@ public class FeedbackController {
             model.addAttribute("feedbackList", feedbackList);
         }
         return "main";
+    }
+
+    @PostMapping("/deletefeedback")
+    public String deleteFeedback(@RequestParam String id,
+                                 Model model) {
+
+        String idWithoutSpaces = id.trim();
+        List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
+        Feedback feedback = new Feedback();
+
+        for (Feedback feedback1 : feedbackList) {
+            if (feedback1.getId().toString().equals(idWithoutSpaces)) {
+                feedback = feedback1;
+                break;
+            }
+        }
+
+        if (!idWithoutSpaces.equals("") && !idWithoutSpaces.equals(" ")) {
+            feedbackService.deleteFeedback(feedback);
+            feedbackList = feedbackService.findAllFeedbacks();
+            model.addAttribute("feedbackList", feedbackList);
+        }
+        return this.getFeedbacks(model);
     }
 }
