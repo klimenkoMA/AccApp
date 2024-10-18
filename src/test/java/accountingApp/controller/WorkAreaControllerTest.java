@@ -14,7 +14,7 @@ import org.springframework.ui.Model;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 class WorkAreaControllerTest {
 
@@ -58,7 +58,48 @@ class WorkAreaControllerTest {
     }
 
     @Test
-    void addWorkArea() {
+    void addWorkAreaValid() {
+        String nameWA = "BGU";
+
+        Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
+
+        String viewName = workAreaController.addWorkArea(nameWA, model);
+
+        Assertions.assertEquals("workarea", viewName);
+
+        verify(model, times(2)).addAttribute("workAreaList", workAreaList);
+
+        verify(workAreaService).addNewWorkArea(any());
+    }
+
+    @Test
+    void addWorkAreaFail() {
+        String nameWA = " ";
+
+        Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
+
+        String viewName = workAreaController.addWorkArea(nameWA, model);
+
+        Assertions.assertEquals("workarea", viewName);
+
+        verify(model, times(1)).addAttribute("workAreaList", workAreaList);
+
+        verify(workAreaService, never()).addNewWorkArea(any());
+    }
+
+    @Test
+    void addWorkAreaFailWithException() {
+        String nameWA = " ";
+
+        Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
+
+        String viewName = workAreaController.addWorkArea(nameWA, model);
+
+        doThrow(new RuntimeException()).when(workAreaService).addNewWorkArea(any());
+
+        verify(model, times(1)).addAttribute("workAreaList", workAreaList);
+
+        verify(workAreaService, never()).addNewWorkArea(any());
     }
 
     @Test

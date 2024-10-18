@@ -68,25 +68,177 @@ class ITStaffControllerTest {
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
-        String viewName = itStaffController.addItStaff( itStaffFio, model);
+        String viewName = itStaffController.addItStaff(itStaffFio, model);
 
         Assertions.assertEquals("itstaff", viewName);
 
-        verify(model).addAttribute("itStaffList", itStaffList);
-
-        verify(itStaffService).getAllItStaff();
+        verify(itStaffService).addNewItStaff(any());
 
     }
 
     @Test
-    void deleteITStaff() {
+    void addItStaffFail() {
+
+        String itStaffFio = "4";
+
+        ITStaff itStaff = new ITStaff(itStaffFio);
+
+        String viewName = itStaffController.addItStaff(itStaffFio, model);
+
+        Assertions.assertEquals("itstaff", viewName);
+
+        verify(model, never()).addAttribute("itStaffList", itStaffList);
+
+        verify(itStaffService, never()).addNewItStaff(itStaff);
+
     }
 
     @Test
-    void updateItStaff() {
+    void addItStaffFailWithException() {
+
+        String itStaffFio = "name";
+
+        ITStaff itStaff = new ITStaff(itStaffFio);
+
+        doThrow(new RuntimeException()).when(itStaffService).addNewItStaff(any());
+
+        verify(model, never()).addAttribute("itStaffList", itStaffList);
+
+        verify(itStaffService, never()).addNewItStaff(itStaff);
+
     }
 
     @Test
-    void findPersonById() {
+    void deleteItStaffValid() {
+
+        String itStaffId= "15";
+        int idCheck = Integer.parseInt(itStaffId);
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+        String viewName = itStaffController.deleteITStaff(itStaffId, model);
+
+        Assertions.assertEquals("itstaff", viewName);
+
+        verify(itStaffService).deleteITStaffById(idCheck);
+
+    }
+
+    @Test
+    void deleteItStaffFail() {
+
+        String itStaffId= "-15";
+        int idCheck = Integer.parseInt(itStaffId);
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+        String viewName = itStaffController.deleteITStaff(itStaffId, model);
+
+        Assertions.assertEquals("itstaff", viewName);
+
+        verify(itStaffService, never()).deleteITStaffById(idCheck);
+
+    }
+
+    @Test
+    void deleteItStaffFailWithException() {
+
+        String itStaffId= "15";
+        int idCheck = Integer.parseInt(itStaffId);
+
+        doThrow(new RuntimeException()).when(itStaffService).deleteITStaffById(idCheck);
+
+        verify(itStaffService, never()).deleteITStaffById(idCheck);
+
+    }
+
+    @Test
+    void updateItStaffValid() {
+
+        String itStaffId= "15";
+        String fio = "Mikl First";
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+        String viewName = itStaffController.updateItStaff(itStaffId, fio, model);
+
+        Assertions.assertEquals("itstaff", viewName);
+
+        verify(itStaffService).updateItStaff(any());
+
+    }
+
+    @Test
+    void updateItStaffFail() {
+
+        String itStaffId= "-15";
+        String fio = "Mikl First";
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+        String viewName = itStaffController.updateItStaff(itStaffId, fio, model);
+
+        Assertions.assertEquals("itstaff", viewName);
+
+        verify(itStaffService, never()).updateItStaff(any());
+
+    }
+
+    @Test
+    void updateItStaffFailWithException() {
+
+        String itStaffId= "15";
+        String fio = "Mikl First";
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+       doThrow(new RuntimeException()).when(itStaffService).updateItStaff(any());
+
+        verify(itStaffService, never()).updateItStaff(any());
+
+    }
+
+    @Test
+    void findItStaffValid() {
+
+        String itStaffId= "15";
+        int idCheck = Integer.parseInt(itStaffId);
+
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+        String viewName = itStaffController.findPersonById(itStaffId, model);
+
+        Assertions.assertEquals("itstaff", viewName);
+
+        verify(itStaffService).getITStaffById(idCheck);
+    }
+
+    @Test
+    void findItStaffFail() {
+
+        String itStaffId= "-15";
+        int idCheck = Integer.parseInt(itStaffId);
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+        String viewName = itStaffController.findPersonById(itStaffId, model);
+
+        Assertions.assertEquals("itstaff", viewName);
+
+        verify(itStaffService, never()).getITStaffById(idCheck);
+    }
+
+    @Test
+    void findItStaffValidWithException() {
+
+        String itStaffId= "15";
+        int idCheck = Integer.parseInt(itStaffId);
+
+        Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
+
+        doThrow(new RuntimeException()).when(itStaffService).getITStaffById(idCheck);
+
+        verify(itStaffService, never()).getITStaffById(idCheck);
     }
 }
