@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+    <div th:replace="fragments/head :: head"></div>
+</head>
+
+<div class="d-flex p-3 m-3" style="justify-content: center; max-width: min-content;
+                max-height: min-content" th:fragment="crudfeedbacks">
+
+    <table class="crud_buttons" cellpadding="40px" align="center">
+
+        <td>
+
+            <div class="popup_div">
+                <input type="checkbox" id="callback">
+                <label class="popup_try" for="callback">Добавить</label>
+                <form action="/addfeedback" method="post" class="popup_form">
+                    <div align="center">
+                        <label>
+                            <input type="text" name="name" placeholder="Введите имя">
+                        </label>
+                        <label>
+                            <input type="text" name="email" placeholder="e-mail">
+                        </label>
+                        <label>
+                            <input type="text" name="message" placeholder="Сообщение">
+                        </label>
+                    </div>
+                    <button class="button" type="submit">Добавить</button>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <label class="close" for="callback">+</label>
+                </form>
+            </div>
+
+        </td>
+        <td>
+
+            <div class="popup_div">
+                <input type="checkbox" id="callback2">
+                <label class="popup_try" for="callback2">Удалить</label>
+                <form class="popup_form" method="post" action="/deletefeedback">
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="ID отзыва">
+                        </label>
+                    </div>
+                    <button class="button" type="submit">Удалить</button>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <label class="close" for="callback2">+</label>
+                </form>
+            </div>
+
+        </td>
+        <td>
+
+            <div class="popup_div">
+                <input type="checkbox" id="callback3">
+                <label class="popup_try" for="callback3">Обновить</label>
+                <form action="/updateevent" class="popup_form" method="post">
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="ID события">
+                        </label>
+                        <label>
+                            <input type="text" name="date" placeholder="Дата события">
+                        </label>
+                        <label>
+                            <input type="text" name="device" placeholder="Название оборудования">
+                        </label>
+                        <label>
+                            <input type="text" name="employeeid" placeholder="ФИО сотрудника">
+                        </label>
+                        <label>
+                            <input type="text" name="itstaffid" placeholder="ФИО программиста">
+                        </label>
+                    </div>
+                    <button class="button" type="submit">Обновить</button>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                    <label class="close" for="callback3">+</label>
+                </form>
+            </div>
+
+        </td>
+        <td>
+
+            <div class="popup_div">
+                <input type="checkbox" id="callback4">
+                <label class="popup_try" for="callback4">Найти</label>
+                <form action="/findeventbyid" class="popup_form" method="post">
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="ID события">
+                        </label>
+                    </div>
+                    <button type="submit" class="button">Найти</button>
+                    <label class="close" for="callback4">+</label>
+                </form>
+            </div>
+
+        </td>
+
+    </table>
+
+</div>
+
+</html>

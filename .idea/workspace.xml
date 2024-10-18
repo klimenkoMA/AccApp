@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudfeedbacks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/ITStaffControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/ITStaffControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +93,7 @@
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="javascript.nodejs.core.library.configured.version" value="21.7.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="20.12.13" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/fragments/nav" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/fragments/crud" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -103,6 +106,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates\fragments\crud" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates\fragments\nav" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src\uploads" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\src" />
@@ -410,7 +414,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.WorkAreaControllerTest.addWorkAreaFailWithException">
+  <component name="RunManager" selected="Spring Boot.AccountingApplication">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -440,49 +444,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ITStaffControllerTest.findItStaffFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.ITStaffControllerTest" />
-      <option name="METHOD_NAME" value="findItStaffFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ITStaffControllerTest.findItStaffValidWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.ITStaffControllerTest" />
-      <option name="METHOD_NAME" value="findItStaffValidWithException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WorkAreaControllerTest.addWorkAreaFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WorkAreaControllerTest.findWorkAreaFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -497,13 +459,13 @@
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="addWorkAreaFail" />
+      <option name="METHOD_NAME" value="findWorkAreaFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest.addWorkAreaFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WorkAreaControllerTest.findWorkAreaFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -518,13 +480,13 @@
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="addWorkAreaFailWithException" />
+      <option name="METHOD_NAME" value="findWorkAreaFailWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest.addWorkAreaValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WorkAreaControllerTest.findWorkAreaValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -539,7 +501,49 @@
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="addWorkAreaValid" />
+      <option name="METHOD_NAME" value="findWorkAreaValid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkAreaControllerTest.updateWorkAreaFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
+      <option name="METHOD_NAME" value="updateWorkAreaFail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkAreaControllerTest.updateWorkAreaFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
+      <option name="METHOD_NAME" value="updateWorkAreaFailWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -594,19 +598,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.ITStaffControllerTest.findItStaffFail" />
-      <item itemvalue="JUnit.ITStaffControllerTest.findItStaffValidWithException" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaValid" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaFail" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaFailWithException" />
+      <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaFail" />
+      <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaFailWithException" />
+      <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaValid" />
+      <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaFail" />
+      <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaFailWithException" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaFailWithException" />
-        <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaFail" />
-        <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaValid" />
-        <item itemvalue="JUnit.ITStaffControllerTest.findItStaffValidWithException" />
-        <item itemvalue="JUnit.ITStaffControllerTest.findItStaffFail" />
+        <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaFailWithException" />
+        <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaFail" />
+        <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaValid" />
+        <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaFailWithException" />
+        <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaFail" />
       </list>
     </recent_temporary>
   </component>
@@ -891,14 +895,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="80720000" />
-    </task>
-    <task id="LOCAL-00325" summary="Rebuilt some pages">
-      <created>1725849819126</created>
-      <option name="number" value="00325" />
-      <option name="presentableId" value="LOCAL-00325" />
-      <option name="project" value="LOCAL" />
-      <updated>1725849819126</updated>
+      <workItem from="1728351985138" duration="86217000" />
     </task>
     <task id="LOCAL-00326" summary="Rebuilt some pages">
       <created>1725897170854</created>
@@ -1236,7 +1233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729134109653</updated>
     </task>
-    <option name="localTasksCounter" value="374" />
+    <task id="LOCAL-00374" summary="Added some new test's methods v5">
+      <created>1729220179692</created>
+      <option name="number" value="00374" />
+      <option name="presentableId" value="LOCAL-00374" />
+      <option name="project" value="LOCAL" />
+      <updated>1729220179692</updated>
+    </task>
+    <option name="localTasksCounter" value="375" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1259,7 +1263,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt a feedbacks.html" />
     <MESSAGE value="Rebuilt a couple of things in frontend" />
     <MESSAGE value="Rebuilt a couple of things in frontend v2" />
     <MESSAGE value="Rebuilt a couple of things in frontend v3" />
@@ -1284,7 +1287,8 @@
     <MESSAGE value="Added some new test's methods v2" />
     <MESSAGE value="Added some new test's methods v3" />
     <MESSAGE value="Added some new test's methods v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some new test's methods v4" />
+    <MESSAGE value="Added some new test's methods v5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some new test's methods v5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
