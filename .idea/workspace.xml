@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentRepository/DocumentRepositoryClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/ITStaffControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/ITStaffControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -410,7 +410,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.DocumentControllerClassTest.findDocumentFailWithException">
+  <component name="RunManager" selected="JUnit.WorkAreaControllerTest.addWorkAreaFailWithException">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -440,106 +440,106 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocumentControllerClassTest.deleteDocumentFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ITStaffControllerTest.findItStaffFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
       </selectedOptions>
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
+          <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
-      <option name="METHOD_NAME" value="deleteDocumentFail" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.ITStaffControllerTest" />
+      <option name="METHOD_NAME" value="findItStaffFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocumentControllerClassTest.deleteDocumentFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ITStaffControllerTest.findItStaffValidWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
       </selectedOptions>
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
+          <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
-      <option name="METHOD_NAME" value="deleteDocumentFailWithException" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.ITStaffControllerTest" />
+      <option name="METHOD_NAME" value="findItStaffValidWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocumentControllerClassTest.findDocumentFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WorkAreaControllerTest.addWorkAreaFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
       </selectedOptions>
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
+          <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
-      <option name="METHOD_NAME" value="findDocumentFail" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
+      <option name="METHOD_NAME" value="addWorkAreaFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocumentControllerClassTest.findDocumentFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WorkAreaControllerTest.addWorkAreaFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
       </selectedOptions>
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
+          <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
-      <option name="METHOD_NAME" value="findDocumentFailWithException" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
+      <option name="METHOD_NAME" value="addWorkAreaFailWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocumentControllerClassTest.findDocumentValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WorkAreaControllerTest.addWorkAreaValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
       </selectedOptions>
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
+          <option name="PATTERN" value="accountingApp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
-      <option name="METHOD_NAME" value="findDocumentValid" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
+      <option name="METHOD_NAME" value="addWorkAreaValid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -594,19 +594,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentFail" />
-      <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentFailWithException" />
-      <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentValid" />
-      <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentFail" />
-      <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentFailWithException" />
+      <item itemvalue="JUnit.ITStaffControllerTest.findItStaffFail" />
+      <item itemvalue="JUnit.ITStaffControllerTest.findItStaffValidWithException" />
+      <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaValid" />
+      <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaFail" />
+      <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaFailWithException" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentFailWithException" />
-        <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentFail" />
-        <item itemvalue="JUnit.DocumentControllerClassTest.findDocumentValid" />
-        <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentFailWithException" />
-        <item itemvalue="JUnit.DocumentControllerClassTest.deleteDocumentFail" />
+        <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaFailWithException" />
+        <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaFail" />
+        <item itemvalue="JUnit.WorkAreaControllerTest.addWorkAreaValid" />
+        <item itemvalue="JUnit.ITStaffControllerTest.findItStaffValidWithException" />
+        <item itemvalue="JUnit.ITStaffControllerTest.findItStaffFail" />
       </list>
     </recent_temporary>
   </component>
@@ -891,14 +891,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="74734000" />
-    </task>
-    <task id="LOCAL-00324" summary="Rebuilt carousel.html and advantage.html">
-      <created>1725809962858</created>
-      <option name="number" value="00324" />
-      <option name="presentableId" value="LOCAL-00324" />
-      <option name="project" value="LOCAL" />
-      <updated>1725809962859</updated>
+      <workItem from="1728351985138" duration="80720000" />
     </task>
     <task id="LOCAL-00325" summary="Rebuilt some pages">
       <created>1725849819126</created>
@@ -1236,7 +1229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729046812214</updated>
     </task>
-    <option name="localTasksCounter" value="373" />
+    <task id="LOCAL-00373" summary="Added some new test's methods v4">
+      <created>1729134109653</created>
+      <option name="number" value="00373" />
+      <option name="presentableId" value="LOCAL-00373" />
+      <option name="project" value="LOCAL" />
+      <updated>1729134109653</updated>
+    </task>
+    <option name="localTasksCounter" value="374" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1259,7 +1259,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Create a create.html" />
     <MESSAGE value="Rebuilt a feedbacks.html" />
     <MESSAGE value="Rebuilt a couple of things in frontend" />
     <MESSAGE value="Rebuilt a couple of things in frontend v2" />
@@ -1284,7 +1283,8 @@
     <MESSAGE value="Added some new test's methods" />
     <MESSAGE value="Added some new test's methods v2" />
     <MESSAGE value="Added some new test's methods v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some new test's methods v3" />
+    <MESSAGE value="Added some new test's methods v4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some new test's methods v4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
