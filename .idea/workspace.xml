@@ -7,10 +7,9 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudfeedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudfeedbacks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudfeedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudfeedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/FeedbackControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/FeedbackControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,7 +411,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountingApplication">
+  <component name="RunManager" selected="JUnit.FeedbackControllerTest.deleteFeedbackFailWithException">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -442,7 +441,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest.findWorkAreaFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeedbackControllerTest.addFeedbackFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -456,14 +455,14 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="findWorkAreaFail" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
+      <option name="METHOD_NAME" value="addFeedbackFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest.findWorkAreaFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeedbackControllerTest.addFeedbackFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -477,14 +476,14 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="findWorkAreaFailWithException" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
+      <option name="METHOD_NAME" value="addFeedbackFailWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest.findWorkAreaValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeedbackControllerTest.deleteFeedbackFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -498,14 +497,14 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="findWorkAreaValid" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
+      <option name="METHOD_NAME" value="deleteFeedbackFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest.updateWorkAreaFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeedbackControllerTest.deleteFeedbackFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -519,14 +518,14 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="updateWorkAreaFail" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
+      <option name="METHOD_NAME" value="deleteFeedbackFailWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkAreaControllerTest.updateWorkAreaFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeedbackControllerTest.deleteFeedbackValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -540,8 +539,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.WorkAreaControllerTest" />
-      <option name="METHOD_NAME" value="updateWorkAreaFailWithException" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
+      <option name="METHOD_NAME" value="deleteFeedbackValid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -596,19 +595,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaFail" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaFailWithException" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaValid" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaFail" />
-      <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaFailWithException" />
+      <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackFail" />
+      <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackFailWithException" />
+      <item itemvalue="JUnit.FeedbackControllerTest.deleteFeedbackValid" />
+      <item itemvalue="JUnit.FeedbackControllerTest.deleteFeedbackFail" />
+      <item itemvalue="JUnit.FeedbackControllerTest.deleteFeedbackFailWithException" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaFailWithException" />
-        <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaFail" />
-        <item itemvalue="JUnit.WorkAreaControllerTest.findWorkAreaValid" />
-        <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaFailWithException" />
-        <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaFail" />
+        <item itemvalue="JUnit.FeedbackControllerTest.deleteFeedbackFailWithException" />
+        <item itemvalue="JUnit.FeedbackControllerTest.deleteFeedbackFail" />
+        <item itemvalue="JUnit.FeedbackControllerTest.deleteFeedbackValid" />
+        <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackFailWithException" />
+        <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackFail" />
       </list>
     </recent_temporary>
   </component>
@@ -893,14 +892,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="90227000" />
-    </task>
-    <task id="LOCAL-00327" summary="Rebuilt notes in carousel.html slides">
-      <created>1725935971079</created>
-      <option name="number" value="00327" />
-      <option name="presentableId" value="LOCAL-00327" />
-      <option name="project" value="LOCAL" />
-      <updated>1725935971079</updated>
+      <workItem from="1728351985138" duration="94582000" />
     </task>
     <task id="LOCAL-00328" summary="Added videomain.html">
       <created>1726022278071</created>
@@ -1238,7 +1230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729271617372</updated>
     </task>
-    <option name="localTasksCounter" value="376" />
+    <task id="LOCAL-00376" summary="Added CRUD buttons into feedbacks.html and created some unit tests v2">
+      <created>1729318779095</created>
+      <option name="number" value="00376" />
+      <option name="presentableId" value="LOCAL-00376" />
+      <option name="project" value="LOCAL" />
+      <updated>1729318779096</updated>
+    </task>
+    <option name="localTasksCounter" value="377" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1261,7 +1260,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt a couple of things in frontend v2" />
     <MESSAGE value="Rebuilt a couple of things in frontend v3" />
     <MESSAGE value="Rebuilt a couple of things in frontend v4" />
     <MESSAGE value="Rebuilt a couple of things in frontend v5" />
@@ -1286,7 +1284,8 @@
     <MESSAGE value="Added some new test's methods v4" />
     <MESSAGE value="Added some new test's methods v5" />
     <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CRUD buttons into feedbacks.html and created some unit tests" />
+    <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CRUD buttons into feedbacks.html and created some unit tests v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
