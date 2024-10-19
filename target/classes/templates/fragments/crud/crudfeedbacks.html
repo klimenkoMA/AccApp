@@ -58,22 +58,19 @@
             <div class="popup_div">
                 <input type="checkbox" id="callback3">
                 <label class="popup_try" for="callback3">Обновить</label>
-                <form action="/updateevent" class="popup_form" method="post">
+                <form action="/updatefeedback" class="popup_form" method="post">
                     <div align="center">
                         <label>
-                            <input type="text" name="id" placeholder="ID события">
+                            <input type="text" name="id" placeholder="ID отзыва">
                         </label>
                         <label>
-                            <input type="text" name="date" placeholder="Дата события">
+                            <input type="text" name="name" placeholder="Имя">
                         </label>
                         <label>
-                            <input type="text" name="device" placeholder="Название оборудования">
+                            <input type="text" name="email" placeholder="e-mail">
                         </label>
                         <label>
-                            <input type="text" name="employeeid" placeholder="ФИО сотрудника">
-                        </label>
-                        <label>
-                            <input type="text" name="itstaffid" placeholder="ФИО программиста">
+                            <input type="text" name="message" placeholder="Отзыв">
                         </label>
                     </div>
                     <button class="button" type="submit">Обновить</button>
@@ -88,10 +85,10 @@
             <div class="popup_div">
                 <input type="checkbox" id="callback4">
                 <label class="popup_try" for="callback4">Найти</label>
-                <form action="/findeventbyid" class="popup_form" method="post">
+                <form action="/findfeedbackbyid" class="popup_form" method="post">
                     <div align="center">
                         <label>
-                            <input type="text" name="id" placeholder="ID события">
+                            <input type="text" name="id" placeholder="ID отзыва">
                         </label>
                     </div>
                     <button type="submit" class="button">Найти</button>

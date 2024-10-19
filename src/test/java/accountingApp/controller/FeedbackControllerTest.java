@@ -46,7 +46,6 @@ class FeedbackControllerTest {
     @Test
     void getFeedbacks() {
 
-
         Mockito.when(feedbackService.findAllFeedbacks()).thenReturn(feedbackList);
 
         String viewName = feedbackController.getFeedbacks(model);
