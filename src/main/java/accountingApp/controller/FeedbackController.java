@@ -34,14 +34,19 @@ public class FeedbackController {
 
         try {
             String nameWithoutSpaces = name.trim();
+            String emailWithoutSpaces = email.trim();
+            String messageWithoutSpaces = message.trim();
 
-            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
+                    && !emailWithoutSpaces.equals("") && !emailWithoutSpaces.equals(" ")
+                    && !messageWithoutSpaces.equals("") && !messageWithoutSpaces.equals(" ")) {
                 Feedback feedback = new Feedback(name, email, message);
                 feedbackService.addFeedback(feedback);
                 List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
                 model.addAttribute("feedbackList", feedbackList);
+                return "main";
             }
-            return "main";
+            throw new Exception("");
         } catch (Exception e) {
             return "main";
         }
