@@ -42,16 +42,20 @@
                 <div th:each="element : ${feedbackList}">
                     <div class="col-8">
                         <tr style="align-self: center">
-                            <td class="p-2 m-2 text-center border border-1 border-dark">
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 10vh">
                                 <div>[[${element.id}]]</div>
                             </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark">
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 20vh">
                                 <div>[[${element.name}]]</div>
                             </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark">
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 20vh">
                                 <div>[[${element.email}]]</div>
                             </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark">
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 40vh">
                                 <div>[[${element.message}]]</div>
                             </td>
                         </tr>

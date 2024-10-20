@@ -2,7 +2,6 @@ package accountingApp.controller;
 
 import accountingApp.entity.Feedback;
 import accountingApp.service.FeedbackService;
-import org.bson.types.ObjectId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -149,5 +148,95 @@ class FeedbackControllerTest {
         verify(model, times(2)).addAttribute("feedbackList", new ArrayList<Feedback>());
 
         verify(feedbackService, never()).deleteFeedback(new Feedback());
+    }
+
+    @Test
+    void updateFeedbackValid() {
+
+        String id = "15";
+        String name = "Name";
+        String email = "name@name.ru";
+        String message = "hello everyone bye everyone";
+
+        String viewName = feedbackController.updateFeedback(id, name, email, message, model);
+
+        Assertions.assertEquals("feedbacks", viewName);
+
+        verify(model).addAttribute("feedbackList", new ArrayList<Feedback>());
+
+    }
+
+    @Test
+    void updateFeedbackFail() {
+
+        String id = " ";
+        String name = " ";
+        String email = "   ";
+        String message = "       ";
+
+        String viewName = feedbackController.updateFeedback(id, name, email, message, model);
+
+        Assertions.assertEquals("feedbacks", viewName);
+
+        verify(model).addAttribute("feedbackList", new ArrayList<Feedback>());
+
+        verify(feedbackService, never()).addFeedback(new Feedback());
+    }
+
+    @Test
+    void updateFeedbackFailWithException() {
+
+        String id = "15";
+        String name = "Name";
+        String email = "name@name.ru";
+        String message = "hello everyone bye everyone";
+
+        String viewName = feedbackController.updateFeedback(id, name, email, message, model);
+
+        doThrow(new RuntimeException()).when(feedbackService).addFeedback(new Feedback());
+
+        Assertions.assertEquals("feedbacks", viewName);
+
+        verify(model).addAttribute("feedbackList", new ArrayList<Feedback>());
+
+        verify(feedbackService, never()).addFeedback(new Feedback());
+    }
+
+    @Test
+    void findFeedbackValid() {
+
+        String id = "Name";
+
+        String viewName = feedbackController.findFeedback(id, model);
+
+        Assertions.assertEquals("feedbacks", viewName);
+
+        verify(feedbackService, times(1)).findFeedbackById(any());
+    }
+
+    @Test
+    void findFeedbackFail() {
+
+        String id = " ";
+
+        String viewName = feedbackController.findFeedback(id, model);
+
+        Assertions.assertEquals("feedbacks", viewName);
+
+        verify(feedbackService, never()).findFeedbackById(any());
+    }
+
+    @Test
+    void findFeedbackFailWithException() {
+
+        String id = "name";
+
+        String viewName = feedbackController.findFeedback(id, model);
+
+        doThrow(new RuntimeException()).when(feedbackService).findFeedbackById(id);
+
+        Assertions.assertEquals("feedbacks", viewName);
+
+        verify(feedbackService, never()).findFeedbackById(new Feedback().toString());
     }
 }
