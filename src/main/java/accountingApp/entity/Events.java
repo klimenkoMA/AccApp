@@ -28,22 +28,53 @@ public class Events {
     @JoinColumn(name = "ITSTAFFID")
     private ITStaff itstaffid;
 
-    public Events() {
-    }
+    @ManyToOne
+    @JoinColumn(name = "WORKAREA")
+    private WorkArea workarea;
 
-    public Events(String date, Devices device, Employee employeeid, ITStaff itstaffid) {
+    @Column(name = "COMMENT")
+    private String comment;
+
+    public Events(String date, Devices device,
+                  Employee employeeid, ITStaff itstaffid,
+                  WorkArea workarea, String comment) {
         this.date = date;
         this.device = device;
         this.employeeid = employeeid;
         this.itstaffid = itstaffid;
+        this.workarea = workarea;
+        this.comment = comment;
     }
 
-    public Events(int id, String date, Devices device, Employee employeeid, ITStaff itstaffid) {
+    public Events(int id, String date, Devices device,
+                  Employee employeeid, ITStaff itstaffid,
+                  WorkArea workarea, String comment) {
         this.id = id;
         this.date = date;
         this.device = device;
         this.employeeid = employeeid;
         this.itstaffid = itstaffid;
+        this.workarea = workarea;
+        this.comment = comment;
+    }
+
+    public Events() {
+    }
+
+    public WorkArea getWorkarea() {
+        return workarea;
+    }
+
+    public void setWorkarea(WorkArea workarea) {
+        this.workarea = workarea;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public int getId() {

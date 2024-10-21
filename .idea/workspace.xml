@@ -6,11 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/FeedbackControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/FeedbackControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RoomControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RoomControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Events.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/WorkArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/WorkArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -442,6 +447,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EventsControllerTest.addEventsFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
+      <option name="METHOD_NAME" value="addEventsFail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventsControllerTest.addEventsSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
+      <option name="METHOD_NAME" value="addEventsSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoomControllerTest.findRoomFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -505,48 +552,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RoomControllerTest.updateRoomFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RoomControllerTest" />
-      <option name="METHOD_NAME" value="updateRoomFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoomControllerTest.updateRoomFailWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RoomControllerTest" />
-      <option name="METHOD_NAME" value="updateRoomFailWithException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <selectedOptions>
         <option name="module.classpath" />
@@ -596,19 +601,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.RoomControllerTest.updateRoomFail" />
-      <item itemvalue="JUnit.RoomControllerTest.updateRoomFailWithException" />
       <item itemvalue="JUnit.RoomControllerTest.findRoomValid" />
       <item itemvalue="JUnit.RoomControllerTest.findRoomFail" />
       <item itemvalue="JUnit.RoomControllerTest.findRoomFailWithException" />
+      <item itemvalue="JUnit.EventsControllerTest.addEventsSuccess" />
+      <item itemvalue="JUnit.EventsControllerTest.addEventsFail" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EventsControllerTest.addEventsFail" />
+        <item itemvalue="JUnit.EventsControllerTest.addEventsSuccess" />
         <item itemvalue="JUnit.RoomControllerTest.findRoomFailWithException" />
         <item itemvalue="JUnit.RoomControllerTest.findRoomFail" />
         <item itemvalue="JUnit.RoomControllerTest.findRoomValid" />
-        <item itemvalue="JUnit.RoomControllerTest.updateRoomFailWithException" />
-        <item itemvalue="JUnit.RoomControllerTest.updateRoomFail" />
       </list>
     </recent_temporary>
   </component>
@@ -893,14 +898,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="101210000" />
-    </task>
-    <task id="LOCAL-00329" summary="Rebuilt videomain.html">
-      <created>1726108783609</created>
-      <option name="number" value="00329" />
-      <option name="presentableId" value="LOCAL-00329" />
-      <option name="project" value="LOCAL" />
-      <updated>1726108783609</updated>
+      <workItem from="1728351985138" duration="109999000" />
     </task>
     <task id="LOCAL-00330" summary="Created accordion.html">
       <created>1726193938947</created>
@@ -1238,7 +1236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729328532734</updated>
     </task>
-    <option name="localTasksCounter" value="378" />
+    <task id="LOCAL-00378" summary="Finished to create unit tests">
+      <created>1729400358111</created>
+      <option name="number" value="00378" />
+      <option name="presentableId" value="LOCAL-00378" />
+      <option name="project" value="LOCAL" />
+      <updated>1729400358112</updated>
+    </task>
+    <option name="localTasksCounter" value="379" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1261,7 +1266,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt a couple of things in frontend v4" />
     <MESSAGE value="Rebuilt a couple of things in frontend v5" />
     <MESSAGE value="Rebuilt a couple of things in frontend v6" />
     <MESSAGE value="Reworked the logic for processing CRUD requests" />
@@ -1286,7 +1290,8 @@
     <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests" />
     <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests v2" />
     <MESSAGE value="Added some new test's into FeedbackControllerTest.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some new test's into FeedbackControllerTest.class" />
+    <MESSAGE value="Finished to create unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished to create unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -23,7 +23,8 @@
 
         <div class="d-flex col" style="max-width: min-content; justify-content: center;
                     align-content: baseline; max-height: min-content; margin-top: 2.2rem">
-            <table class="p-3 m-3 col" style="align-self: center">
+            <table class="p-3 m-3 col" style="align-self: center;
+                    max-width: 150vh;">
 
                 <tr class="text-light fs-5" style="background-color: #62a0f6">
                     <th class="p-1 m-1 text-center"
@@ -41,6 +42,12 @@
                     <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
                         ФИО программиста
                     </th>
+                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
+                        Филиал
+                    </th>
+                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
+                        Причина
+                    </th>
                 </tr>
                     <td class="p-1 bg-dark-subtle"></td>
 
@@ -56,16 +63,24 @@
                                 <div>[[${element.date}]]</div>
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 30vh">
+                                style="min-width: 20vh">
                                 <div>[[${element.device}]]</div>
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 30vh">
+                                style="min-width: 20vh">
                                 <div>[[${element.employeeid}]]</div>
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 30vh">
+                                style="min-width: 20vh">
                                 <div>[[${element.itstaffid}]]</div>
+                            </td>
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 10vh; max-width: 12vh">
+                                <div>[[${element.workarea}]]</div>
+                            </td>
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 50vh">
+                                <div>[[${element.comment}]]</div>
                             </td>
                         </tr>
                     </div>
