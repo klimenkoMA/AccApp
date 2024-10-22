@@ -16,7 +16,7 @@ public class WorkArea {
     @Column(name = "name")
     private String name;
     @ManyToOne
-    @Column(name = "room")
+    @JoinColumn(name = "room")
     private Room room;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
@@ -24,25 +24,30 @@ public class WorkArea {
     public WorkArea() {
     }
 
-    public WorkArea(String name) {
+    public WorkArea(String name, Room room) {
         this.name = name;
+        this.room = room;
     }
 
-    public WorkArea(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public WorkArea(int id, String name, Room room, List<Events> events) {
+    public WorkArea(int id, String name, Room room) {
         this.id = id;
         this.name = name;
         this.room = room;
-        this.events = events;
     }
 
-    public WorkArea(String name, Room room, List<Events> events) {
-        this.name = name;
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
         this.room = room;
+    }
+
+    public List<Events> getEvents() {
+        return events;
+    }
+
+    public void setEvents(List<Events> events) {
         this.events = events;
     }
 
