@@ -16,7 +16,7 @@ public class Room {
     private int id;
     @Column(name = "number")
     private String number;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<WorkArea> workAreaList;
 
 
@@ -50,6 +50,8 @@ public class Room {
     public void setWorkAreaList(List<WorkArea> workAreaList) {
         this.workAreaList = workAreaList;
     }
+
+
 
     public int getId() {
         return id;

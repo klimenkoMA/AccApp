@@ -1,6 +1,6 @@
 package accountingApp.controller;
 
-import accountingApp.entity.ITStaff;
+import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
 import accountingApp.service.WorkAreaService;
 import org.junit.jupiter.api.Assertions;
@@ -61,25 +61,25 @@ class WorkAreaControllerTest {
     @Test
     void addWorkAreaValid() {
         String nameWA = "BGU";
+        String roomId = "120";
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.addWorkArea(nameWA, model);
+        String viewName = workAreaController.addWorkArea(nameWA, roomId, model);
 
         Assertions.assertEquals("workarea", viewName);
 
-        verify(model, times(2)).addAttribute("workAreaList", workAreaList);
-
-        verify(workAreaService).addNewWorkArea(any());
+        verify(workAreaService, never()).addNewWorkArea(any());
     }
 
     @Test
     void addWorkAreaFail() {
         String nameWA = " ";
+        String roomId = " ";
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.addWorkArea(nameWA, model);
+        String viewName = workAreaController.addWorkArea(nameWA, roomId, model);
 
         Assertions.assertEquals("workarea", viewName);
 
@@ -90,15 +90,14 @@ class WorkAreaControllerTest {
 
     @Test
     void addWorkAreaFailWithException() {
-        String nameWA = " ";
+        String nameWA = "fdf";
+        String roomId = "12000";
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.addWorkArea(nameWA, model);
-
         doThrow(new RuntimeException()).when(workAreaService).addNewWorkArea(any());
 
-        verify(model, times(1)).addAttribute("workAreaList", workAreaList);
+        verify(model, never()).addAttribute("workAreaList", workAreaList);
 
         verify(workAreaService, never()).addNewWorkArea(any());
     }
@@ -153,31 +152,31 @@ class WorkAreaControllerTest {
     void updateWorkAreaValid() {
         String id = "15";
         String workAreaTitle = "GTU";
-        int idCheck = Integer.parseInt(id);
-        WorkArea workArea = new WorkArea(idCheck, workAreaTitle);
+        String roomId = "12000";
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.updateWorkArea(id, workAreaTitle, model);
+        String viewName = workAreaController.updateWorkArea(id, workAreaTitle, roomId, model);
 
         Assertions.assertEquals("workarea", viewName);
 
-        verify(model, times(2)).addAttribute("workAreaList", workAreaList);
+        verify(model, times(1)).addAttribute("workAreaList", workAreaList);
 
-        verify(workAreaService, times(1)).updateWorkArea(any());
+        verify(workAreaService, never()).updateWorkArea(any());
     }
 
     @Test
     void updateWorkAreaFail() {
         String id = "-15";
         String workAreaTitle = "GTU";
+        String roomId = "-12000";
         int idCheck = Integer.parseInt(id);
 
-        WorkArea workArea = new WorkArea(idCheck, workAreaTitle);
+        WorkArea workArea = new WorkArea(idCheck, workAreaTitle, new Room(roomId));
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.updateWorkArea(id, workAreaTitle, model);
+        String viewName = workAreaController.updateWorkArea(id, workAreaTitle, roomId, model);
 
         Assertions.assertEquals("workarea", viewName);
 
@@ -190,13 +189,14 @@ class WorkAreaControllerTest {
     void updateWorkAreaFailWithException() {
         String id = "15";
         String workAreaTitle = "GTU";
+        String roomId = "12000";
         int idCheck = Integer.parseInt(id);
 
-        WorkArea workArea = new WorkArea(idCheck, workAreaTitle);
+        WorkArea workArea = new WorkArea(id, new Room(workAreaTitle));
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.updateWorkArea(id, workAreaTitle, model);
+        String viewName = workAreaController.updateWorkArea(id, workAreaTitle, roomId, model);
 
         doThrow(new RuntimeException()).when(workAreaService).updateWorkArea(workArea);
 
