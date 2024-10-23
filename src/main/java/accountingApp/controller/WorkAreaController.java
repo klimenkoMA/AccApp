@@ -1,8 +1,6 @@
 package accountingApp.controller;
 
-import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
-import accountingApp.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,8 +15,6 @@ import java.util.List;
 public class WorkAreaController {
     @Autowired
     WorkAreaService workAreaService;
-    @Autowired
-    RoomService roomService;
 
 
     @GetMapping("/workarea")
@@ -30,24 +26,20 @@ public class WorkAreaController {
 
     @PostMapping("/addworkarea")
     public String addWorkArea(@RequestParam String name,
-                              @RequestParam String roomId,
                               Model model) {
         String nameWithoutSpaces = name.trim();
-        String roomWithoutSpaces = roomId.trim();
-        if (nameWithoutSpaces.equals("") || roomWithoutSpaces.equals("")
-                || nameWithoutSpaces.equals(" ") || roomWithoutSpaces.equals(" ")) {
+        if (nameWithoutSpaces.equals("") || nameWithoutSpaces.equals(" ")) {
             return this.getWorkArea(model);
         }
 
         try {
-            List<Room> roomList = roomService.getRoomById(Integer.parseInt(roomWithoutSpaces));
-            WorkArea workArea = new WorkArea(nameWithoutSpaces, roomList.get(0));
+            WorkArea workArea = new WorkArea(nameWithoutSpaces);
             workAreaService.addNewWorkArea(workArea);
 
             List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
             model.addAttribute("workAreaList", workAreaList);
             return this.getWorkArea(model);
-        }catch (Exception e){
+        } catch (Exception e) {
             return this.getWorkArea(model);
         }
     }
@@ -76,24 +68,20 @@ public class WorkAreaController {
     @PostMapping("/updateworkarea")
     public String updateWorkArea(@RequestParam String id,
                                  @RequestParam String name,
-                                 @RequestParam String roomId,
                                  Model model) {
         String nameWithoutSpaces = name.trim();
-        String roomWithoutSpaces = roomId.trim();
         String idWithoutSpaces = id.trim();
 
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
-            int roomIdCheck = Integer.parseInt(roomWithoutSpaces);
-            if (idCheck <= 0 || roomIdCheck <= 0) {
+            if (idCheck <= 0) {
                 System.out.println("*** SUB-ZERO ID OR ROOM ***");
             } else {
-                if (nameWithoutSpaces.equals("") || roomWithoutSpaces.equals("")
-                        || nameWithoutSpaces.equals(" ") || roomWithoutSpaces.equals(" ")) {
+                if (nameWithoutSpaces.equals("") || nameWithoutSpaces.equals(" ")) {
                     return this.getWorkArea(model);
                 }
-                List<Room> roomList = roomService.getRoomById(Integer.parseInt(roomWithoutSpaces));
-                WorkArea workArea = new WorkArea(idCheck, nameWithoutSpaces, roomList.get(0));
+
+                WorkArea workArea = new WorkArea(idCheck, nameWithoutSpaces);
                 workAreaService.updateWorkArea(workArea);
                 List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
                 model.addAttribute("workAreaList", workAreaList);

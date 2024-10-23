@@ -44,9 +44,9 @@ class EventsControllerTest {
         Devices dev2 = new Devices(2, "HP");
         Devices dev3 = new Devices(3, "Acer");
 
-        WorkArea wa1 = new WorkArea("BGU", new Room("1"));
-        WorkArea wa2 = new WorkArea("TTN", new Room("2"));
-        WorkArea wa3 = new WorkArea("KubSTU", new Room("3"));
+        WorkArea wa1 = new WorkArea("BGU");
+        WorkArea wa2 = new WorkArea("TTN");
+        WorkArea wa3 = new WorkArea("KubSTU");
 
         String r1 = "На курс лекций";
         String r2 = "Возврат";
@@ -184,7 +184,7 @@ class EventsControllerTest {
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
                 new Employee("1", "2", "3", "4"), new ITStaff("trrr"),
-                new WorkArea(workareaWithoutSpaces, new Room("55")), commentWithoutSpaces);
+                new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
 
@@ -213,7 +213,7 @@ class EventsControllerTest {
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
                 new Employee(" ", " ", " ", " "), new ITStaff(" "),
-                new WorkArea(workareaWithoutSpaces, new Room("55")), commentWithoutSpaces);
+                new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
 
@@ -243,7 +243,7 @@ class EventsControllerTest {
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
                 new Employee(employeeidWithoutSpaces, "fdf ", "12 ", " 32"),
-                new ITStaff(itstaffidWithoutSpaces), new WorkArea(workareaWithoutSpaces, new Room("55")), commentWithoutSpaces);
+                new ITStaff(itstaffidWithoutSpaces), new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         doThrow(new RuntimeException()).when(eventsService).updateEvent(event);
 
