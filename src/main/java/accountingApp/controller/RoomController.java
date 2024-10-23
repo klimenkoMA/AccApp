@@ -1,6 +1,8 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Room;
+import accountingApp.entity.WorkArea;
+import accountingApp.service.WorkAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,8 @@ import java.util.List;
 public class RoomController {
     @Autowired
     RoomService roomService;
+    @Autowired
+    WorkAreaService workAreaService;
 
     @GetMapping("/room")
     public String getRoom(Model model) {
@@ -25,15 +29,19 @@ public class RoomController {
 
     @PostMapping("/addroom")
     public String addRoom(@RequestParam String number,
+                          @RequestParam String workarea,
                           Model model) {
         String numberWithoutSpaces = number.trim();
+        String workAreaIdWithoutSpaces = workarea.trim();
         try {
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
-            if (numberCheck <= 0) {
-                System.out.println("*** SUB ZERO NUMBER***");
+            int workAreaIdCheck = Integer.parseInt(workAreaIdWithoutSpaces);
+            if (numberCheck <= 0 || workAreaIdCheck <= 0) {
+                System.out.println("*** SUB ZERO NUMBER OR WORKAREA ID***");
                 return this.getRoom(model);
             } else {
-                Room room = new Room(numberWithoutSpaces);
+                List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaIdCheck);
+                Room room = new Room(numberWithoutSpaces, workAreaList.get(0));
                 roomService.addNewRoom(room);
                 List<Room> roomList = roomService.findAllRoom();
                 model.addAttribute("roomList", roomList);
@@ -69,16 +77,20 @@ public class RoomController {
     @PostMapping("/updateroom")
     public String updateRoom(@RequestParam String id,
                              @RequestParam String number,
+                             @RequestParam String workarea,
                              Model model) {
         String idWithoutSpaces = id.trim();
         String numberWithoutSpaces = number.trim();
+        String workAreaIdWithoutSpaces = workarea.trim();
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
-            if (idCheck <= 0 || numberCheck <= 0) {
+            int workAreaIdCheck = Integer.parseInt(workAreaIdWithoutSpaces);
+            if (idCheck <= 0 || numberCheck <= 0 || workAreaIdCheck <= 0) {
                 System.out.println("*** SUB ZERO ID OR NUMBER***");
             } else {
-                Room room = new Room(idCheck, number);
+                List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaIdCheck);
+                Room room = new Room(idCheck, number, workAreaList.get(0));
                 roomService.updateRoom(room);
                 List<Room> roomList = roomService.findAllRoom();
                 model.addAttribute("roomList", roomList);
@@ -101,7 +113,7 @@ public class RoomController {
             } else {
                 List<Room> roomList = roomService.getRoomById(idCheck);
                 model.addAttribute("roomList", roomList);
-                if(roomList.isEmpty()){
+                if (roomList.isEmpty()) {
                     return this.getRoom(model);
                 }
             }

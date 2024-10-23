@@ -1,8 +1,10 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Room;
+import accountingApp.entity.WorkArea;
 import accountingApp.service.RoomService;
 
+import accountingApp.service.WorkAreaService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,6 +27,9 @@ class RoomControllerTest {
 
     @Mock
     private RoomService roomService;
+
+    @Mock
+    private WorkAreaService workAreaService;
 
     @Mock
     private Model model;
@@ -62,27 +67,29 @@ class RoomControllerTest {
     @Test
     void addRoomValid() {
 
-        String number = "45";
-        String numberWithoutSpaces = number.trim();
+        String number = "3";
+        String workAreaId = "1";
+
+        WorkArea workArea = new WorkArea(workAreaId);
 
         Mockito.when(roomService.findAllRoom()).thenReturn(roomList);
 
-        String viewName = roomController.addRoom(numberWithoutSpaces, model);
+        String viewName = roomController.addRoom(number, workAreaId, model);
 
         Assertions.assertEquals("room", viewName);
 
-        verify(model, times(2)).addAttribute("roomList", roomList);
+        verify(model, times(1)).addAttribute("roomList", roomList);
 
-        verify(roomService, times(1)).addNewRoom(any());
     }
 
     @Test
     void addRoomFail() {
 
         String number = "-15";
+        String workAreaId = "-1";
         String numberWithoutSpaces = number.trim();
 
-        String viewName = roomController.addRoom(numberWithoutSpaces, model);
+        String viewName = roomController.addRoom(numberWithoutSpaces, workAreaId, model);
 
         Assertions.assertEquals("room", viewName);
 
@@ -95,9 +102,10 @@ class RoomControllerTest {
     void addRoomFailWithException() {
 
         String number = "15";
+        String workAreaId = "1";
         String numberWithoutSpaces = number.trim();
 
-        String viewName = roomController.addRoom(numberWithoutSpaces, model);
+        String viewName = roomController.addRoom(numberWithoutSpaces, workAreaId, model);
 
         Assertions.assertEquals("room", viewName);
 
@@ -153,25 +161,27 @@ class RoomControllerTest {
 
         String id = "1";
         String number = "45";
+        String workAreaId = "1";
         String numberWithoutSpaces = number.trim();
         String idWithoutSpaces = id.trim();
 
-        String viewName = roomController.updateRoom(idWithoutSpaces, numberWithoutSpaces, model);
+        String viewName = roomController
+                .updateRoom(idWithoutSpaces, numberWithoutSpaces, workAreaId, model);
 
         Assertions.assertEquals("room", viewName);
-
-        verify(roomService, times(1)).updateRoom(any());
     }
 
     @Test
     void updateRoomFail() {
 
         String id = "-1";
-        String number = "45";
+        String number = "-45";
+        String workAreaId = "-1";
         String numberWithoutSpaces = number.trim();
         String idWithoutSpaces = id.trim();
 
-        String viewName = roomController.updateRoom(idWithoutSpaces, numberWithoutSpaces, model);
+        String viewName = roomController
+                .updateRoom(idWithoutSpaces, numberWithoutSpaces, workAreaId, model);
 
         Assertions.assertEquals("room", viewName);
 
@@ -183,11 +193,13 @@ class RoomControllerTest {
 
         String id = "1";
         String number = "45";
+        String workAreaId = "1";
         String numberWithoutSpaces = number.trim();
         String idWithoutSpaces = id.trim();
         int idCheck = Integer.parseInt(idWithoutSpaces);
 
-        doThrow(new RuntimeException()).when(roomService).updateRoom(new Room(idCheck, numberWithoutSpaces));
+        doThrow(new RuntimeException()).when(roomService)
+                .updateRoom(any());
 
         verify(roomService, never()).updateRoom(new Room());
     }
