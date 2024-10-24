@@ -33,9 +33,9 @@ class EventsControllerTest {
     private final List<Events> eventsList;
 
     {
-        Employee emp1 = new Employee(1, "08061974", "Сатурнов", "ПТЦ", "105");
-        Employee emp2 = new Employee(2, "17111984", "Букина", "ФГУ", "205");
-        Employee emp3 = new Employee(3, "22011994", "Загаев", "МГУ", "1");
+        Employee emp1 = new Employee(1, "08061974", "Сатурнов", "ПТЦ", new Room("111", new WorkArea()));
+        Employee emp2 = new Employee(2, "17111984", "Букина", "ФГУ", new Room("205", new WorkArea()));
+        Employee emp3 = new Employee(3, "22011994", "Загаев", "МГУ", new Room("15", new WorkArea()));
 
         ITStaff it1 = new ITStaff(1, "Клименко");
         ITStaff it2 = new ITStaff(2, "Плотникова");
@@ -183,7 +183,7 @@ class EventsControllerTest {
         int idCheck = Integer.parseInt(eventsId);
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
-                new Employee("1", "2", "3", "4"), new ITStaff("trrr"),
+                new Employee("1", "2", "3", new Room("1", new WorkArea())), new ITStaff("trrr"),
                 new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
@@ -212,7 +212,7 @@ class EventsControllerTest {
         int idCheck = Integer.parseInt(eventsId);
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
-                new Employee(" ", " ", " ", " "), new ITStaff(" "),
+                new Employee(" ", " ", " ", new Room(" ", new WorkArea())), new ITStaff(" "),
                 new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
@@ -242,7 +242,7 @@ class EventsControllerTest {
         int idCheck = Integer.parseInt(eventsId);
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
-                new Employee(employeeidWithoutSpaces, "fdf ", "12 ", " 32"),
+                new Employee(employeeidWithoutSpaces, "fdf ", "12 ", new Room("32", new WorkArea())),
                 new ITStaff(itstaffidWithoutSpaces), new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         doThrow(new RuntimeException()).when(eventsService).updateEvent(event);

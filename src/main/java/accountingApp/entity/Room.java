@@ -33,6 +33,7 @@ public class Room {
         this.workarea = workarea;
     }
 
+
     public WorkArea getWorkarea() {
         return workarea;
     }
@@ -55,6 +56,11 @@ public class Room {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return number ;
     }
 }
 
