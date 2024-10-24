@@ -1,6 +1,8 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Employee;
+import accountingApp.entity.Room;
+import accountingApp.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,8 @@ public class EmployeeController {
     EmployeeService employeeService;
     @Autowired
     ITStaffService ITStaffService;
+    @Autowired
+    RoomService roomService;
 
     @GetMapping("/employee")
     public String getEmployee(Model model) {
@@ -51,10 +55,11 @@ public class EmployeeController {
             if (!fioWithoutSpaces.equals("") &&
                     !dbornWithoutSpaces.equals("") &&
                     !workAreaWithoutSpaces.equals("")) {
+                List<Room> rooms = roomService.getRoomById(Integer.parseInt(roomWithoutSpaces));
                 Employee employee = new Employee(fioWithoutSpaces,
                         dbornWithoutSpaces,
                         workAreaWithoutSpaces,
-                        roomWithoutSpaces);
+                        rooms.get(0));
                 employeeService.addNewEmployee(employee);
                 List<Employee> employeeList = employeeService.getListEmployee();
                 model.addAttribute("employeeList", employeeList);
@@ -120,12 +125,12 @@ public class EmployeeController {
             if (!fioWithoutSpaces.equals("") &&
                     !dbornWithoutSpaces.equals("") &&
                     !workAreaWithoutSpaces.equals("")) {
-
+                List<Room> rooms = roomService.getRoomById(Integer.parseInt(roomWithoutSpaces));
                 Employee employee = new Employee(idCheck,
                         fioWithoutSpaces,
                         dbornWithoutSpaces,
                         workAreaWithoutSpaces,
-                        roomWithoutSpaces);
+                        rooms.get(0));
                 employeeService.updateEmployee(employee);
                 List<Employee> employeeList = employeeService.getListEmployee();
                 model.addAttribute("employeeList", employeeList);

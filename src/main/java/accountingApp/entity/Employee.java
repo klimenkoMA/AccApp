@@ -23,8 +23,9 @@ public class Employee {
     @Column(name = "workarea")
     private String workarea;
 
-    @Column(name = "room")
-    private String room;
+    @ManyToOne
+    @JoinColumn(name = "room")
+    private Room room;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
@@ -32,7 +33,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int id, String fio, String dborn, String workarea, String room) {
+    public Employee(int id, String fio, String dborn, String workarea, Room room) {
         this.id = id;
         this.fio = fio;
         this.dborn = dborn;
@@ -40,7 +41,7 @@ public class Employee {
         this.room = room;
     }
 
-    public Employee(String fio, String dborn, String workarea, String room) {
+    public Employee(String fio, String dborn, String workarea, Room room) {
         this.fio = fio;
         this.dborn = dborn;
         this.workarea = workarea;
@@ -87,11 +88,11 @@ public class Employee {
         this.workarea = workArea;
     }
 
-    public String getRoom() {
+    public Room getRoom() {
         return room;
     }
 
-    public void setRoom(String room) {
+    public void setRoom(Room room) {
         this.room = room;
     }
 

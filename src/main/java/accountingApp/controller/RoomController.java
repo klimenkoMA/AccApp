@@ -90,7 +90,7 @@ public class RoomController {
                 System.out.println("*** SUB ZERO ID OR NUMBER***");
             } else {
                 List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaIdCheck);
-                Room room = new Room(idCheck, number, workAreaList.get(0));
+                Room room = new Room(idCheck, numberWithoutSpaces, workAreaList.get(0));
                 roomService.updateRoom(room);
                 List<Room> roomList = roomService.findAllRoom();
                 model.addAttribute("roomList", roomList);

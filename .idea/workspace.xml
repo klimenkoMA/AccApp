@@ -6,23 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/WorkArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/WorkArea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/WorkArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/WorkArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RoomControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RoomControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -424,7 +422,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountingApplication">
+  <component name="RunManager" selected="JUnit.EmployeeControllerTest.updateEmployeeValid">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -454,6 +452,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmployeeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeControllerTest.updateEmployeeValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
+      <option name="METHOD_NAME" value="updateEmployeeValid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EventsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -471,48 +511,6 @@
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoomControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RoomControllerTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoomControllerTest.updateRoomValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RoomControllerTest" />
-      <option name="METHOD_NAME" value="updateRoomValid" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -608,19 +606,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.RoomControllerTest" />
-      <item itemvalue="JUnit.RoomControllerTest.updateRoomValid" />
       <item itemvalue="JUnit.EventsControllerTest" />
       <item itemvalue="JUnit.WorkAreaControllerTest" />
       <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaValid" />
+      <item itemvalue="JUnit.EmployeeControllerTest" />
+      <item itemvalue="JUnit.EmployeeControllerTest.updateEmployeeValid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeeControllerTest.updateEmployeeValid" />
+        <item itemvalue="JUnit.EmployeeControllerTest" />
+        <item itemvalue="JUnit.EventsControllerTest" />
         <item itemvalue="JUnit.WorkAreaControllerTest" />
         <item itemvalue="JUnit.WorkAreaControllerTest.updateWorkAreaValid" />
-        <item itemvalue="JUnit.EventsControllerTest" />
-        <item itemvalue="JUnit.RoomControllerTest.updateRoomValid" />
-        <item itemvalue="JUnit.RoomControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -905,14 +903,7 @@
       <workItem from="1725415303270" duration="44509000" />
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
-      <workItem from="1728351985138" duration="126330000" />
-    </task>
-    <task id="LOCAL-00332" summary="Rebuilt accordion.html v2">
-      <created>1726388213400</created>
-      <option name="number" value="00332" />
-      <option name="presentableId" value="LOCAL-00332" />
-      <option name="project" value="LOCAL" />
-      <updated>1726388213400</updated>
+      <workItem from="1728351985138" duration="130536000" />
     </task>
     <task id="LOCAL-00333" summary="Rebuilt accordion.html v3">
       <created>1726454602842</created>
@@ -1250,7 +1241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729566141373</updated>
     </task>
-    <option name="localTasksCounter" value="381" />
+    <task id="LOCAL-00381" summary="Rebuilt Room and WorkArea.java">
+      <created>1729652357947</created>
+      <option name="number" value="00381" />
+      <option name="presentableId" value="LOCAL-00381" />
+      <option name="project" value="LOCAL" />
+      <updated>1729652357947</updated>
+    </task>
+    <option name="localTasksCounter" value="382" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1273,7 +1271,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Reworked the logic for processing CRUD requests" />
     <MESSAGE value="Rebuild a lot of frontend" />
     <MESSAGE value="Rebuild a couple things in frontend" />
     <MESSAGE value="Tried to fix size of nav links in active phase" />
@@ -1298,7 +1295,8 @@
     <MESSAGE value="Finished to create unit tests" />
     <MESSAGE value="Added sone new fields in Events.java, Room.java, WorkArea.java" />
     <MESSAGE value="Added some new fields in Room.java, WorkArea.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some new fields in Room.java, WorkArea.java" />
+    <MESSAGE value="Rebuilt Room and WorkArea.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt Room and WorkArea.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1307,6 +1305,14 @@
           <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java</url>
+          <line>26</line>
+          <properties class="accountingApp.controller.EmployeeController" method="getEmployee">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
