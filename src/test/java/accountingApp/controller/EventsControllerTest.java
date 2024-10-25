@@ -33,9 +33,12 @@ class EventsControllerTest {
     private final List<Events> eventsList;
 
     {
-        Employee emp1 = new Employee(1, "08061974", "Сатурнов", "ПТЦ", new Room("111", new WorkArea()));
-        Employee emp2 = new Employee(2, "17111984", "Букина", "ФГУ", new Room("205", new WorkArea()));
-        Employee emp3 = new Employee(3, "22011994", "Загаев", "МГУ", new Room("15", new WorkArea()));
+        Employee emp1 = new Employee(1, "08061974", "Сатурнов"
+                , new WorkArea("ПТЦ"), new Room("111", new WorkArea()));
+        Employee emp2 = new Employee(2, "17111984", "Букина"
+                , new WorkArea("ФГУ"), new Room("205", new WorkArea()));
+        Employee emp3 = new Employee(3, "22011994", "Загаев"
+                , new WorkArea("МГУ"), new Room("15", new WorkArea()));
 
         ITStaff it1 = new ITStaff(1, "Клименко");
         ITStaff it2 = new ITStaff(2, "Плотникова");
@@ -183,7 +186,8 @@ class EventsControllerTest {
         int idCheck = Integer.parseInt(eventsId);
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
-                new Employee("1", "2", "3", new Room("1", new WorkArea())), new ITStaff("trrr"),
+                new Employee("1", "2", new WorkArea("3")
+                        , new Room("1", new WorkArea())), new ITStaff("trrr"),
                 new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
@@ -212,7 +216,8 @@ class EventsControllerTest {
         int idCheck = Integer.parseInt(eventsId);
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
-                new Employee(" ", " ", " ", new Room(" ", new WorkArea())), new ITStaff(" "),
+                new Employee(" ", " ", new WorkArea(" ")
+                        , new Room(" ", new WorkArea())), new ITStaff(" "),
                 new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
@@ -242,7 +247,8 @@ class EventsControllerTest {
         int idCheck = Integer.parseInt(eventsId);
 
         Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces),
-                new Employee(employeeidWithoutSpaces, "fdf ", "12 ", new Room("32", new WorkArea())),
+                new Employee(employeeidWithoutSpaces, "fdf "
+                        , new WorkArea("12 "), new Room("32", new WorkArea())),
                 new ITStaff(itstaffidWithoutSpaces), new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
 
         doThrow(new RuntimeException()).when(eventsService).updateEvent(event);

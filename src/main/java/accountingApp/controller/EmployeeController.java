@@ -2,7 +2,9 @@ package accountingApp.controller;
 
 import accountingApp.entity.Employee;
 import accountingApp.entity.Room;
+import accountingApp.entity.WorkArea;
 import accountingApp.service.RoomService;
+import accountingApp.service.WorkAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,8 @@ public class EmployeeController {
     ITStaffService ITStaffService;
     @Autowired
     RoomService roomService;
+    @Autowired
+    WorkAreaService workAreaService;
 
     @GetMapping("/employee")
     public String getEmployee(Model model) {
@@ -55,10 +59,13 @@ public class EmployeeController {
             if (!fioWithoutSpaces.equals("") &&
                     !dbornWithoutSpaces.equals("") &&
                     !workAreaWithoutSpaces.equals("")) {
-                List<Room> rooms = roomService.getRoomById(Integer.parseInt(roomWithoutSpaces));
+                List<Room> rooms = roomService
+                        .getRoomById(Integer.parseInt(roomWithoutSpaces));
+                List<WorkArea> workAreas = workAreaService
+                        .getWorkAreaByName(workAreaWithoutSpaces);
                 Employee employee = new Employee(fioWithoutSpaces,
                         dbornWithoutSpaces,
-                        workAreaWithoutSpaces,
+                        workAreas.get(0),
                         rooms.get(0));
                 employeeService.addNewEmployee(employee);
                 List<Employee> employeeList = employeeService.getListEmployee();
@@ -66,7 +73,7 @@ public class EmployeeController {
                 return this.getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("|||Something wrong in DB|||");
+            System.out.println("|||Something wrong in DB|||" + e.getMessage());
             return this.getEmployee(model);
         }
         return this.getEmployee(model);
@@ -125,11 +132,14 @@ public class EmployeeController {
             if (!fioWithoutSpaces.equals("") &&
                     !dbornWithoutSpaces.equals("") &&
                     !workAreaWithoutSpaces.equals("")) {
-                List<Room> rooms = roomService.getRoomById(Integer.parseInt(roomWithoutSpaces));
+                List<Room> rooms = roomService
+                        .getRoomById(Integer.parseInt(roomWithoutSpaces));
+                List<WorkArea> workAreas = workAreaService
+                        .getWorkAreaByName(workAreaWithoutSpaces);
                 Employee employee = new Employee(idCheck,
                         fioWithoutSpaces,
                         dbornWithoutSpaces,
-                        workAreaWithoutSpaces,
+                        workAreas.get(0),
                         rooms.get(0));
                 employeeService.updateEmployee(employee);
                 List<Employee> employeeList = employeeService.getListEmployee();

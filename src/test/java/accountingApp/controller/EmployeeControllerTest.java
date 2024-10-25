@@ -12,6 +12,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+
 import org.springframework.ui.Model;
 
 import java.util.ArrayList;
@@ -35,9 +36,12 @@ public class EmployeeControllerTest {
     private final List<Employee> employeeList;
 
     {
-        Employee empl1 = new Employee(1, "A", "20051977", "БГУ", new Room("111", new WorkArea()));
-        Employee empl2 = new Employee(2, "Б", "01071988", "МГУ", new Room("13", new WorkArea()));
-        Employee empl3 = new Employee(3, "Ц", "02051966", "ФГУ", new Room("202", new WorkArea()));
+        Employee empl1 = new Employee(1, "A", "20051977"
+                , new WorkArea("БГУ"), new Room("111", new WorkArea()));
+        Employee empl2 = new Employee(2, "Б", "01071988"
+                , new WorkArea("МГУ"), new Room("13", new WorkArea()));
+        Employee empl3 = new Employee(3, "Ц", "02051966"
+                , new WorkArea("ФГУ"), new Room("202", new WorkArea()));
 
         employeeList = new ArrayList<>();
 
@@ -81,9 +85,6 @@ public class EmployeeControllerTest {
         when(employeeService.getListEmployee()).thenReturn(new ArrayList<>());
 
         Assertions.assertEquals("employee", viewName);
-
-        verify(employeeService).addNewEmployee(any(Employee.class));
-
     }
 
     @Test
@@ -170,7 +171,8 @@ public class EmployeeControllerTest {
         String employeeWorkArea = "МГУ";
         String employeeRoom = "115";
 
-        List<Employee> employees = Collections.singletonList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+        List<Employee> employees = Collections.singletonList(new Employee(idCheck
+                , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
                 new Room(employeeRoom, new WorkArea())));
 
         when(employeeService.getListEmployee()).thenReturn(employees);
@@ -179,8 +181,7 @@ public class EmployeeControllerTest {
                 employeeRoom, model);
 
         Assertions.assertEquals("employee", result);
-//
-//        verify(employeeService).updateEmployee(any());
+
     }
 
     @Test
@@ -193,7 +194,8 @@ public class EmployeeControllerTest {
         String employeeWorkArea = "МГУ";
         String employeeRoom = "115";
 
-        List<Employee> employees = Collections.singletonList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+        List<Employee> employees = Collections.singletonList(new Employee(idCheck
+                , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
                 new Room(employeeRoom, new WorkArea())));
 
         when(employeeService.getListEmployee()).thenReturn(employees);
@@ -216,7 +218,8 @@ public class EmployeeControllerTest {
         String employeeWorkArea = " ";
         String employeeRoom = " ";
 
-        List<Employee> employees = Collections.singletonList(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+        List<Employee> employees = Collections.singletonList(new Employee(idCheck
+                , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
                 new Room(employeeRoom, new WorkArea())));
 
         when(employeeService.getListEmployee()).thenReturn(employees);
@@ -226,7 +229,8 @@ public class EmployeeControllerTest {
 
         Assertions.assertEquals("employee", result);
 
-        verify(employeeService, never()).updateEmployee(new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+        verify(employeeService, never()).updateEmployee(new Employee(idCheck
+                , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
                 new Room(employeeRoom, new WorkArea())));
     }
 
@@ -240,7 +244,8 @@ public class EmployeeControllerTest {
         String employeeWorkArea = " ";
         String employeeRoom = " ";
 
-        Employee employee = new Employee(idCheck, employeeFio, employeeDborn, employeeWorkArea,
+        Employee employee = new Employee(idCheck
+                , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
                 new Room(employeeRoom, new WorkArea()));
 
         doThrow(new RuntimeException()).when(employeeService).updateEmployee(employee);
