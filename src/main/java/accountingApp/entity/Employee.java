@@ -20,8 +20,9 @@ public class Employee {
     @Column(name = "dborn")
     private String dborn;
 
-    @Column(name = "workarea")
-    private String workarea;
+    @ManyToOne
+    @JoinColumn(name = "workarea")
+    private WorkArea workarea;
 
     @ManyToOne
     @JoinColumn(name = "room")
@@ -33,7 +34,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int id, String fio, String dborn, String workarea, Room room) {
+    public Employee(int id, String fio, String dborn, WorkArea workarea, Room room) {
         this.id = id;
         this.fio = fio;
         this.dborn = dborn;
@@ -41,7 +42,7 @@ public class Employee {
         this.room = room;
     }
 
-    public Employee(String fio, String dborn, String workarea, Room room) {
+    public Employee(String fio, String dborn, WorkArea workarea, Room room) {
         this.fio = fio;
         this.dborn = dborn;
         this.workarea = workarea;
@@ -80,11 +81,11 @@ public class Employee {
         this.dborn = dborn;
     }
 
-    public String getWorkarea() {
+    public WorkArea getWorkarea() {
         return workarea;
     }
 
-    public void setWorkarea(String workArea) {
+    public void setWorkarea(WorkArea workArea) {
         this.workarea = workArea;
     }
 
