@@ -23,16 +23,18 @@ public class RoomController {
     @GetMapping("/room")
     public String getRoom(Model model) {
         List<Room> roomList = roomService.findAllRoom();
+        List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
         model.addAttribute("roomList", roomList);
+        model.addAttribute("workAreaList", workAreaList);
         return "room";
     }
 
     @PostMapping("/addroom")
     public String addRoom(@RequestParam String number,
-                          @RequestParam String workarea,
+                          @RequestParam WorkArea workarea,
                           Model model) {
         String numberWithoutSpaces = number.trim();
-        String workAreaIdWithoutSpaces = workarea.trim();
+        String workAreaIdWithoutSpaces = workarea.getName();
         try {
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
             int workAreaIdCheck = Integer.parseInt(workAreaIdWithoutSpaces);
@@ -40,11 +42,13 @@ public class RoomController {
                 System.out.println("*** SUB ZERO NUMBER OR WORKAREA ID***");
                 return this.getRoom(model);
             } else {
-                List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaIdCheck);
-                Room room = new Room(numberWithoutSpaces, workAreaList.get(0));
+                List<WorkArea> workAreas = workAreaService.getWorkAreaById(workAreaIdCheck);
+                List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+                Room room = new Room(numberWithoutSpaces, workAreas.get(0));
                 roomService.addNewRoom(room);
                 List<Room> roomList = roomService.findAllRoom();
                 model.addAttribute("roomList", roomList);
+                model.addAttribute("workAreaList", workAreaList);
             }
             return this.getRoom(model);
         } catch (Exception e) {

@@ -19,9 +19,17 @@
                         <label>
                             <input type="text" name="number" placeholder="Номер кабинета">
                         </label>
+                        <!--                        <label><input type="text" name="workarea" placeholder="Филиал"></label>-->
                         <label>
-                            <input type="text" name="workarea" placeholder="Филиал">
+                            <select class="form-select">
+                                <option value="0">Филиал</option>
+                                <option th:each="element : ${workAreaList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"><input type="text" name="workarea"
+                                                                         placeholder="Филиал"></option>
+                            </select>
                         </label>
+
                     </div>
                     <button class="button" type="submit">Добавить</button>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
