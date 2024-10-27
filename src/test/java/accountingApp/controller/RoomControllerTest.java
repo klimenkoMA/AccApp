@@ -168,7 +168,7 @@ class RoomControllerTest {
         String idWithoutSpaces = id.trim();
 
         String viewName = roomController
-                .updateRoom(idWithoutSpaces, numberWithoutSpaces, workAreaId, model);
+                .updateRoom(idWithoutSpaces, numberWithoutSpaces, new WorkArea(workAreaId), model);
 
         Assertions.assertEquals("room", viewName);
     }
@@ -183,7 +183,7 @@ class RoomControllerTest {
         String idWithoutSpaces = id.trim();
 
         String viewName = roomController
-                .updateRoom(idWithoutSpaces, numberWithoutSpaces, workAreaId, model);
+                .updateRoom(idWithoutSpaces, numberWithoutSpaces,new WorkArea(workAreaId), model);
 
         Assertions.assertEquals("room", viewName);
 
@@ -195,10 +195,8 @@ class RoomControllerTest {
 
         String id = "1";
         String number = "45";
-        String workAreaId = "1";
-        String numberWithoutSpaces = number.trim();
         String idWithoutSpaces = id.trim();
-        int idCheck = Integer.parseInt(idWithoutSpaces);
+
 
         doThrow(new RuntimeException()).when(roomService)
                 .updateRoom(any());

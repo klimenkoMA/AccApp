@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import accountingApp.service.ITStaffService;
 import accountingApp.service.EmployeeService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,8 +20,6 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
     @Autowired
-    ITStaffService ITStaffService;
-    @Autowired
     RoomService roomService;
     @Autowired
     WorkAreaService workAreaService;
@@ -30,51 +27,55 @@ public class EmployeeController {
     @GetMapping("/employee")
     public String getEmployee(Model model) {
         List<Employee> employeeList = employeeService.getListEmployee();
+        List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+        List<Room> roomList = roomService.findAllRoom();
         model.addAttribute("employeeList", employeeList);
+        model.addAttribute("workAreaList", workAreaList);
+        model.addAttribute("roomList", roomList);
         return "employee";
     }
 
     @PostMapping("/addemployee")
     public String addEmployee(@RequestParam String fio,
                               @RequestParam String dborn,
-                              @RequestParam String workArea,
-                              @RequestParam String room,
+                              @RequestParam WorkArea workarea,
+                              @RequestParam Room room,
                               Model model) {
         String fioWithoutSpaces = fio.trim();
         String dbornWithoutSpaces = dborn.trim();
-        String workAreaWithoutSpaces = workArea.trim();
-        String roomWithoutSpaces = room.trim();
+        String workAreaWithoutSpaces = workarea.getName();
+        String roomWithoutSpaces = room.getNumber();
         try {
-            int roomCheck = Integer.parseInt(roomWithoutSpaces);
+
             int dbornCheck = Integer.parseInt(dbornWithoutSpaces);
-            if (roomCheck <= 0 || dbornCheck <= 0) {
-                System.out.println("*** ID or dborn <<<< 0***");
+            if (dbornCheck <= 0) {
+                System.out.println("*** dborn <<<< 0 ***");
                 return this.getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("***Wrong ID or dborn!***");
+            System.out.println("*** EmployeeController.addEmployee(): wrong dborn's type! ***");
+            System.out.println(e.getMessage());
             return this.getEmployee(model);
         }
         try {
-            if (!fioWithoutSpaces.equals("") &&
-                    !dbornWithoutSpaces.equals("") &&
-                    !workAreaWithoutSpaces.equals("")) {
-                List<Room> rooms = roomService
-                        .getRoomById(Integer.parseInt(roomWithoutSpaces));
-                List<WorkArea> workAreas = workAreaService
-                        .getWorkAreaByName(workAreaWithoutSpaces);
-                Employee employee = new Employee(fioWithoutSpaces,
-                        dbornWithoutSpaces,
-                        workAreas.get(0),
-                        rooms.get(0));
+            if (!fioWithoutSpaces.equals("")
+                    && !dbornWithoutSpaces.equals("")
+                    && !workAreaWithoutSpaces.equals("")
+                    && !roomWithoutSpaces.equals("")) {
+
+                Employee employee = new Employee(fioWithoutSpaces
+                        , dbornWithoutSpaces
+                        , workarea
+                        , room);
                 employeeService.addNewEmployee(employee);
                 List<Employee> employeeList = employeeService.getListEmployee();
                 model.addAttribute("employeeList", employeeList);
-                return this.getEmployee(model);
+                return getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("|||Something wrong in DB|||" + e.getMessage());
-            return this.getEmployee(model);
+            System.out.println("*** EmployeeController.addEmployee(): wrong DB's values! ***");
+            System.out.println(e.getMessage());
+            return getEmployee(model);
         }
         return this.getEmployee(model);
     }
@@ -93,7 +94,7 @@ public class EmployeeController {
             return this.getEmployee(model);
 
         } catch (Exception e) {
-            System.out.println(e.toString() + "||| WRONG ID |||");
+            System.out.println(e.toString() + "||| WRONG ID |||\n" + e.getMessage());
             return this.getEmployee(model);
         }
     }
@@ -123,7 +124,7 @@ public class EmployeeController {
                 return this.getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("*** WRONG ID OR DBORN OR ROOM ***");
+            System.out.println("*** WRONG ID OR DBORN OR ROOM ***\n" + e.getMessage());
             return this.getEmployee(model);
         }
 
@@ -147,7 +148,7 @@ public class EmployeeController {
                 return this.getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("|||Something wrong in DB|||");
+            System.out.println("|||Something wrong in DB|||\n" + e.getMessage());
             return this.getEmployee(model);
         }
         return this.getEmployee(model);
@@ -172,7 +173,7 @@ public class EmployeeController {
         } catch (Exception e) {
             List<Employee> employeeList = employeeService.findEmployeeByFio(fio);
             model.addAttribute("employeeList", employeeList);
-            System.out.println("*** FIND BY NAME ***");
+            System.out.println("*** FIND BY NAME ***\n" + e.getMessage());
             return this.getEmployee(model);
         }
     }

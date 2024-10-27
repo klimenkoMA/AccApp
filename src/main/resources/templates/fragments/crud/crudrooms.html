@@ -18,15 +18,18 @@
                     <div align="center">
                         <label>
                             <input type="text" name="number" placeholder="Номер кабинета">
+
                         </label>
-                        <!--                        <label><input type="text" name="workarea" placeholder="Филиал"></label>-->
-                        <label>
-                            <select class="form-select">
+
+                        <label class="d-flex justify-content-center align-items-center">
+                                <select class="form-select m-2" name="workarea"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Филиал</option>
                                 <option th:each="element : ${workAreaList}"
                                         th:value="${element.id}"
-                                        th:text="${element.name}"><input type="text" name="workarea"
-                                                                         placeholder="Филиал"></option>
+                                        th:text="${element.name}"></option>
                             </select>
                         </label>
 
@@ -69,8 +72,16 @@
                         <label>
                             <input type="text" name="number" placeholder="Номер кабинета">
                         </label>
-                        <label>
-                            <input type="text" name="workarea" placeholder="Филиал">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="workarea"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Филиал</option>
+                                <option th:each="element : ${workAreaList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
                         </label>
                     </div>
                     <button class="button" type="submit">Обновить</button>

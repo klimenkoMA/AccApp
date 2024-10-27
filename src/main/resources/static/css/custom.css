@@ -208,7 +208,7 @@ html, body {
 }
 
 input::placeholder {
-    font-size: 16px; /* Размер шрифта placeholder */
+    font-size: 14px; /* Размер шрифта placeholder */
     color: gray; /* Цвет текста в placeholder */
     text-align: center;
 }
