@@ -40,6 +40,7 @@ public class WorkAreaController {
             model.addAttribute("workAreaList", workAreaList);
             return this.getWorkArea(model);
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return this.getWorkArea(model);
         }
     }
@@ -61,6 +62,7 @@ public class WorkAreaController {
 
         } catch (Exception e) {
             System.out.println("*** WRONG ID TYPE ***");
+            System.out.println(e.getMessage());
             return this.getWorkArea(model);
         }
     }
@@ -89,6 +91,7 @@ public class WorkAreaController {
             return this.getWorkArea(model);
         } catch (Exception e) {
             System.out.println("*** WRONG ID TYPE ***");
+            System.out.println(e.getMessage());
             return this.getWorkArea(model);
         }
     }
@@ -110,6 +113,7 @@ public class WorkAreaController {
             return "workarea";
         } catch (Exception e) {
             System.out.println("*** FOUND BY NAME ***");
+            System.out.println(e.getMessage());
             List<WorkArea> workAreaList = workAreaService.getWorkAreaByName(name);
 
             if (workAreaList.isEmpty()) {

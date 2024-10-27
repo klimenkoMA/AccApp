@@ -33,26 +33,28 @@ public class RoomController {
     public String addRoom(@RequestParam String number,
                           @RequestParam WorkArea workarea,
                           Model model) {
+
         String numberWithoutSpaces = number.trim();
         String workAreaIdWithoutSpaces = workarea.getName();
+
         try {
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
-            int workAreaIdCheck = Integer.parseInt(workAreaIdWithoutSpaces);
-            if (numberCheck <= 0 || workAreaIdCheck <= 0) {
+
+            if (numberCheck <= 0 ) {
                 System.out.println("*** SUB ZERO NUMBER OR WORKAREA ID***");
                 return this.getRoom(model);
             } else {
-                List<WorkArea> workAreas = workAreaService.getWorkAreaById(workAreaIdCheck);
-                List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
+                List<WorkArea> workAreas = workAreaService
+                        .getWorkAreaByName(workAreaIdWithoutSpaces);
                 Room room = new Room(numberWithoutSpaces, workAreas.get(0));
                 roomService.addNewRoom(room);
                 List<Room> roomList = roomService.findAllRoom();
+
                 model.addAttribute("roomList", roomList);
-                model.addAttribute("workAreaList", workAreaList);
             }
             return this.getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** WRONG NUMBER TYPE***");
+            System.out.println("*** WRONG NUMBER TYPE***\n" + e.getMessage());
             return this.getRoom(model);
         }
     }
@@ -72,7 +74,7 @@ public class RoomController {
             }
             return this.getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** WRONG ID TYPE***");
+            System.out.println("*** WRONG ID TYPE***\n" + e.getMessage());
             return this.getRoom(model);
         }
 
@@ -81,19 +83,19 @@ public class RoomController {
     @PostMapping("/updateroom")
     public String updateRoom(@RequestParam String id,
                              @RequestParam String number,
-                             @RequestParam String workarea,
+                             @RequestParam WorkArea workarea,
                              Model model) {
         String idWithoutSpaces = id.trim();
         String numberWithoutSpaces = number.trim();
-        String workAreaIdWithoutSpaces = workarea.trim();
+        int workAreaId = workarea.getId();
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
-            int workAreaIdCheck = Integer.parseInt(workAreaIdWithoutSpaces);
-            if (idCheck <= 0 || numberCheck <= 0 || workAreaIdCheck <= 0) {
+
+            if (idCheck <= 0 || numberCheck <= 0) {
                 System.out.println("*** SUB ZERO ID OR NUMBER***");
             } else {
-                List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaIdCheck);
+                List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaId);
                 Room room = new Room(idCheck, numberWithoutSpaces, workAreaList.get(0));
                 roomService.updateRoom(room);
                 List<Room> roomList = roomService.findAllRoom();
@@ -101,7 +103,7 @@ public class RoomController {
             }
             return this.getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** WRONG ID OR NUMBER TYPE***");
+            System.out.println("*** WRONG ID OR NUMBER TYPE***\n" + e.getMessage());
             return this.getRoom(model);
         }
     }
@@ -123,7 +125,7 @@ public class RoomController {
             }
             return "room";
         } catch (Exception e) {
-            System.out.println("*** WRONG ID OR NUMBER TYPE***");
+            System.out.println("*** WRONG ID OR NUMBER TYPE***\n" + e.getMessage());
             return this.getRoom(model);
         }
     }
