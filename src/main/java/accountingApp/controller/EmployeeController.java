@@ -103,52 +103,51 @@ public class EmployeeController {
     public String updateEmployee(@RequestParam String id,
                                  @RequestParam String fio,
                                  @RequestParam String dborn,
-                                 @RequestParam String workarea,
-                                 @RequestParam String room,
+                                 @RequestParam WorkArea workarea,
+                                 @RequestParam Room room,
                                  Model model) {
 
         String idWithoutSpaces = id.trim();
         String fioWithoutSpaces = fio.trim();
         String dbornWithoutSpaces = dborn.trim();
-        String workAreaWithoutSpaces = workarea.trim();
-        String roomWithoutSpaces = room.trim();
+        String workAreaWithoutSpaces = workarea.getName();
+        String roomWithoutSpaces = room.getNumber();
 
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             int dbornCheck = Integer.parseInt(dbornWithoutSpaces);
-            int roomCheck = Integer.parseInt(roomWithoutSpaces);
-            if (idCheck <= 0 ||
-                    dbornCheck <= 0 ||
-                    roomCheck <= 0) {
-                System.out.println("*** SUB ZERO ***");
+
+            if (idCheck <= 0 || dbornCheck <= 0) {
+                System.out.println("*** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***");
                 return this.getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("*** WRONG ID OR DBORN OR ROOM ***\n" + e.getMessage());
+            System.out.println("*** EmployeeController.updateEmployee(): WRONG ID or dBorn values! *** "
+                    + e.getMessage());
             return this.getEmployee(model);
         }
 
         try {
             int idCheck = Integer.parseInt(id);
-            if (!fioWithoutSpaces.equals("") &&
-                    !dbornWithoutSpaces.equals("") &&
-                    !workAreaWithoutSpaces.equals("")) {
-                List<Room> rooms = roomService
-                        .getRoomById(Integer.parseInt(roomWithoutSpaces));
-                List<WorkArea> workAreas = workAreaService
-                        .getWorkAreaByName(workAreaWithoutSpaces);
+            if (!fioWithoutSpaces.equals("")
+                    && !dbornWithoutSpaces.equals("")
+                    && !roomWithoutSpaces.equals("")
+                    && !workAreaWithoutSpaces.equals("")) {
+
                 Employee employee = new Employee(idCheck,
                         fioWithoutSpaces,
                         dbornWithoutSpaces,
-                        workAreas.get(0),
-                        rooms.get(0));
+                        workarea,
+                        room);
+
                 employeeService.updateEmployee(employee);
                 List<Employee> employeeList = employeeService.getListEmployee();
                 model.addAttribute("employeeList", employeeList);
                 return this.getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("|||Something wrong in DB|||\n" + e.getMessage());
+            System.out.println("*** EmployeeController.updateEmployee(): WRONG DB values! *** "
+                    + e.getMessage());
             return this.getEmployee(model);
         }
         return this.getEmployee(model);
