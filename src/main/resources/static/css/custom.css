@@ -157,7 +157,7 @@ html, body {
 }
 
 #callback:checked ~ .popup_form {
-    top: -50px;
+    top: -70px;
 }
 
 #callback {
@@ -165,7 +165,7 @@ html, body {
 }
 
 #callback2:checked ~ .popup_form {
-    top: -50px;
+    top: -70px;
 }
 
 #callback2 {
@@ -173,7 +173,7 @@ html, body {
 }
 
 #callback3:checked ~ .popup_form {
-    top: -50px;
+    top: -70px;
 }
 
 #callback3 {
@@ -181,7 +181,7 @@ html, body {
 }
 
 #callback4:checked ~ .popup_form {
-    top: -50px;
+    top: -70px;
 }
 
 #callback4 {
@@ -189,10 +189,26 @@ html, body {
 }
 
 #callback5:checked ~ .popup_form {
-    top: -50px;
+    top: -70px;
 }
 
 #callback5 {
+    display: none;
+}
+
+#callbackLongUpdate:checked ~ .popup_form {
+    top: -110px;
+}
+
+#callbackLongUpdate {
+    display: none;
+}
+
+#callbackLongAdd:checked ~ .popup_form {
+    top: -110px;
+}
+
+#callbackLongAdd {
     display: none;
 }
 

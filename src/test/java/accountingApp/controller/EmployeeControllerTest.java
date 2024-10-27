@@ -200,8 +200,8 @@ public class EmployeeControllerTest {
 
         when(employeeService.getListEmployee()).thenReturn(employees);
         try {
-            String result = employeeController.updateEmployee(employeeId, employeeFio, employeeDborn, employeeWorkArea,
-                    employeeRoom, model);
+            String result = employeeController.updateEmployee(employeeId, employeeFio, employeeDborn
+                    , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model);
             Assertions.assertEquals("employee", result);
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -227,8 +227,8 @@ public class EmployeeControllerTest {
         when(employeeService.getListEmployee()).thenReturn(employees);
 
         try {
-            String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn, employeeWorkArea,
-                    employeeRoom, model);
+            String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn
+                    , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model);
             Assertions.assertEquals("employee", result);
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -255,8 +255,8 @@ public class EmployeeControllerTest {
         when(employeeService.getListEmployee()).thenReturn(employees);
 
         try {
-            String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn, employeeWorkArea,
-                    employeeRoom, model);
+            String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn
+                    , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model);
             Assertions.assertEquals("employee", result);
         } catch (Exception e) {
             System.out.println(e.getMessage());

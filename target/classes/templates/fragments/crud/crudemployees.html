@@ -8,7 +8,7 @@
 
 <div class="d-flex p-3 m-3" style="min-width: max-content;justify-content: center;
      max-height: min-content;" th:fragment="crudemployees">
-    <table class="crud_buttons col" cellpadding="40px" align="center">
+    <table class="crud_buttons col" cellpadding="45px" align="center">
         <td>
             <div class="popup_div">
                 <input type="checkbox" id="callback">
@@ -21,11 +21,28 @@
                         <label>
                             <input type="text" name="dborn" align="middle" placeholder="Введите дату рождения">
                         </label>
-                        <label>
-                            <input type="text" name="workArea" align="middle" placeholder="Введите филиал">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="workarea"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Филиал</option>
+                                <option th:each="element : ${workAreaList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
                         </label>
-                        <label>
-                            <input type="text" name="room" align="middle" placeholder="Введите номер кабинета">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="room"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Кабинет</option>
+                                <option th:each="element : ${roomList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.number}">
+                                </option>
+                            </select>
                         </label>
                     </div>
                     <div align="center">
@@ -60,9 +77,10 @@
         <td>
 
             <div class="popup_div">
-                <input type="checkbox" id="callback3">
-                <label class="popup_try" for="callback3">Обновить</label>
+                <input type="checkbox" id="callbackLongUpdate">
+                <label class="popup_try" for="callbackLongUpdate">Обновить</label>
                 <form action="/updateemployee" method="post" class="popup_form">
+
                     <div align="center">
                         <label>
                             <input type="text" name="id" placeholder="ID сотрудника">
@@ -73,18 +91,35 @@
                         <label>
                             <input type="text" name="dborn" placeholder="Дата рождения">
                         </label>
-                        <label>
-                            <input type="text" name="workarea" placeholder="Филиал">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="workarea"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Филиал</option>
+                                <option th:each="element : ${workAreaList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
                         </label>
-                        <label>
-                            <input type="text" name="room" placeholder="Кабинет">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="room"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Кабинет</option>
+                                <option th:each="element : ${roomList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.number}">
+                                </option>
+                            </select>
                         </label>
                     </div>
                     <div align="center">
                         <button class="button" type="submit">Обновить</button>
                     </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                    <label class="close" for="callback3">+</label>
+                    <label class="close" for="callbackLongUpdate">+</label>
                 </form>
             </div>
 
