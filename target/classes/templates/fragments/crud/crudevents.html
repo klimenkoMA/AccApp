@@ -14,32 +14,64 @@
         <td>
 
             <div class="popup_div">
-                <input type="checkbox" id="callback">
-                <label class="popup_try" for="callback">Добавить</label>
+                <input type="checkbox" id="callbackLongAdd">
+                <label class="popup_try" for="callbackLongAdd">Добавить</label>
                 <form action="/addevent" method="post" class="popup_form">
                     <div align="center">
                         <label>
                             <input type="text" name="date" placeholder="Введите дату">
                         </label>
-                        <label>
-                            <input type="text" name="device" placeholder="Название оборудования">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="device"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Оборудование</option>
+                                <option th:each="element : ${devicesList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="employee"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Сотрудник</option>
+                                <option th:each="element : ${employeeList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.fio}"></option>
+                            </select>
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="itstaff"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Программист</option>
+                                <option th:each="element : ${itStaffList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="workarea"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Филиал</option>
+                                <option th:each="element : ${workAreaList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
                         </label>
                         <label>
-                            <input type="text" name="employeeid" placeholder="ФИО сотрудника">
-                        </label>
-                        <label>
-                            <input type="text" name="itstaffid" placeholder="ФИО программиста">
-                        </label>
-                        <label>
-                            <input type="text" name="workarea" placeholder="ФИО программиста">
-                        </label>
-                        <label>
-                            <input type="text" name="comment" placeholder="ФИО программиста">
+                            <input type="text" name="comment" placeholder="Событие">
                         </label>
                     </div>
                     <button class="button" type="submit">Добавить</button>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <label class="close" for="callback">+</label>
+                    <label class="close" for="callbackLongAdd">+</label>
                 </form>
             </div>
 
@@ -65,8 +97,8 @@
         <td>
 
             <div class="popup_div">
-                <input type="checkbox" id="callback3">
-                <label class="popup_try" for="callback3">Обновить</label>
+                <input type="checkbox" id="callbackLongUpdate">
+                <label class="popup_try" for="callbackLongUpdate">Обновить</label>
                 <form action="/updateevent" class="popup_form" method="post">
                     <div align="center">
                         <label>
@@ -75,17 +107,49 @@
                         <label>
                             <input type="text" name="date" placeholder="Дата события">
                         </label>
-                        <label>
-                            <input type="text" name="device" placeholder="Название оборудования">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="device"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Оборудование</option>
+                                <option th:each="element : ${devicesList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
                         </label>
-                        <label>
-                            <input type="text" name="employeeid" placeholder="ФИО сотрудника">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="employee"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Сотрудник</option>
+                                <option th:each="element : ${employeeList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.fio}"></option>
+                            </select>
                         </label>
-                        <label>
-                            <input type="text" name="itstaffid" placeholder="ФИО программиста">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="itstaff"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Программист</option>
+                                <option th:each="element : ${itStaffList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
                         </label>
-                        <label>
-                            <input type="text" name="workarea" placeholder="Филиал">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="workarea"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 5vh; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Филиал</option>
+                                <option th:each="element : ${workAreaList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
+                            </select>
                         </label>
                         <label>
                             <input type="text" name="comment" placeholder="Причина">
@@ -93,7 +157,7 @@
                     </div>
                     <button class="button" type="submit">Обновить</button>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                    <label class="close" for="callback3">+</label>
+                    <label class="close" for="callbackLongUpdate">+</label>
                 </form>
             </div>
 
