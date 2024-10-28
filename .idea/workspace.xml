@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -874,14 +878,7 @@
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
       <workItem from="1728351985138" duration="134961000" />
-      <workItem from="1729822865411" duration="51382000" />
-    </task>
-    <task id="LOCAL-00339" summary="Rebuilt about.html v1">
-      <created>1726942198883</created>
-      <option name="number" value="00339" />
-      <option name="presentableId" value="LOCAL-00339" />
-      <option name="project" value="LOCAL" />
-      <updated>1726942198884</updated>
+      <workItem from="1729822865411" duration="62492000" />
     </task>
     <task id="LOCAL-00340" summary="Rebuilt security for redirect unauthorized visitors to login.html">
       <created>1726980783555</created>
@@ -1219,7 +1216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730035112783</updated>
     </task>
-    <option name="localTasksCounter" value="388" />
+    <task id="LOCAL-00388" summary="Tried to use a bootstrap-datepicker in head.html">
+      <created>1730093881527</created>
+      <option name="number" value="00388" />
+      <option name="presentableId" value="LOCAL-00388" />
+      <option name="project" value="LOCAL" />
+      <updated>1730093881527</updated>
+    </task>
+    <option name="localTasksCounter" value="389" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1242,7 +1246,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to run tests" />
     <MESSAGE value="Built a couple of success tests" />
     <MESSAGE value="Built a couple of success tests v2" />
     <MESSAGE value="Built a couple of success tests v3" />
@@ -1267,7 +1270,8 @@
     <MESSAGE value="Tried to use a dropdown list in a crudemployees.html" />
     <MESSAGE value="Tried to use a dropdown list in a crudevents.html" />
     <MESSAGE value="Finished to build a dropdown list in a crudevents.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished to build a dropdown list in a crudevents.html" />
+    <MESSAGE value="Tried to use a bootstrap-datepicker in head.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to use a bootstrap-datepicker in head.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
