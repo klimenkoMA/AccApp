@@ -15,16 +15,18 @@
                 <label class="popup_try" for="callback">Добавить</label>
                 <form class="popup_form" action="/addemployee" method="post">
                     <div align="center">
-                        <label>
-                            <input type="text" name="fio" align="middle" placeholder="Введите ФИО сотрудника">
+                        <label style="margin-bottom: 7px">
+                            <input type="text" name="fio" placeholder="ФИО сотрудника"
+                                   style="height: 30px">
                         </label>
-                        <label>
-                            <input type="text" name="dborn" align="middle" placeholder="Введите дату рождения">
+                        <label style="text-align: center; margin-bottom: 3px">
+                            <input type="text" name="dborn" value="01-01-2000"
+                                   style="text-align: center; height: 30px">
                         </label>
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="workarea"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Филиал</option>
                                 <option th:each="element : ${workAreaList}"
@@ -35,7 +37,7 @@
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="room"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Кабинет</option>
                                 <option th:each="element : ${roomList}"
@@ -45,7 +47,7 @@
                             </select>
                         </label>
                     </div>
-                    <div align="center">
+                    <div align="center" style="margin-top: 3px">
                         <button class="button" type="submit">Добавить</button>
                     </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
@@ -82,19 +84,22 @@
                 <form action="/updateemployee" method="post" class="popup_form">
 
                     <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID сотрудника">
+                        <label style="margin-bottom: 7px">
+                            <input type="text" name="id" placeholder="ID сотрудника"
+                                   style="height: 30px">
                         </label>
-                        <label>
-                            <input type="text" name="fio" placeholder="ФИО сотрудника">
+                        <label style="margin-bottom: 7px">
+                            <input type="text" name="fio" placeholder="ФИО сотрудника"
+                                   style="height: 30px">
                         </label>
-                        <label>
-                            <input type="text" name="dborn" placeholder="Дата рождения">
+                        <label style="text-align: center; margin-bottom: 3px">
+                            <input type="text" name="dborn" value="01-01-2000"
+                                   style="text-align: center; height: 30px">
                         </label>
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="workarea"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Филиал</option>
                                 <option th:each="element : ${workAreaList}"
@@ -105,7 +110,7 @@
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="room"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Кабинет</option>
                                 <option th:each="element : ${roomList}"
@@ -115,7 +120,7 @@
                             </select>
                         </label>
                     </div>
-                    <div align="center">
+                    <div align="center" style="margin-top: 3px">
                         <button class="button" type="submit">Обновить</button>
                     </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">

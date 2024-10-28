@@ -18,13 +18,14 @@
                 <label class="popup_try" for="callbackLongAdd">Добавить</label>
                 <form action="/addevent" method="post" class="popup_form">
                     <div align="center">
-                        <label>
-                            <input type="text" name="date" placeholder="Введите дату">
+                        <label style="text-align: center; margin-bottom: 7px">
+                            <input type="text" name="date" placeholder="Дата события" value="01-01-2000"
+                                   style="text-align: center;height: 30px">
                         </label>
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="device"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Оборудование</option>
                                 <option th:each="element : ${devicesList}"
@@ -35,7 +36,7 @@
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="employee"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Сотрудник</option>
                                 <option th:each="element : ${employeeList}"
@@ -46,7 +47,7 @@
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="itstaff"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Программист</option>
                                 <option th:each="element : ${itStaffList}"
@@ -57,7 +58,7 @@
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="workarea"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Филиал</option>
                                 <option th:each="element : ${workAreaList}"
@@ -65,8 +66,9 @@
                                         th:text="${element.name}"></option>
                             </select>
                         </label>
-                        <label>
-                            <input type="text" name="comment" placeholder="Событие">
+                        <label style="margin-bottom: 7px">
+                            <input type="text" name="comment" placeholder="Причина"
+                                   style="text-align: center; height: 30px">
                         </label>
                     </div>
                     <button class="button" type="submit">Добавить</button>
@@ -101,16 +103,18 @@
                 <label class="popup_try" for="callbackLongUpdate">Обновить</label>
                 <form action="/updateevent" class="popup_form" method="post">
                     <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID события">
+                        <label style="margin-bottom: 7px">
+                            <input type="text" name="id" placeholder="ID события"
+                                   style="height: 30px">
                         </label>
-                        <label>
-                            <input type="text" name="date" placeholder="Дата события">
+                        <label style="text-align: center; margin-bottom: 7px">
+                            <input type="text" name="date" placeholder="Дата события" value="01-01-2000"
+                                   style="text-align: center;height: 30px">
                         </label>
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="device"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Оборудование</option>
                                 <option th:each="element : ${devicesList}"
@@ -121,7 +125,7 @@
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="employee"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Сотрудник</option>
                                 <option th:each="element : ${employeeList}"
@@ -132,7 +136,7 @@
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="itstaff"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Программист</option>
                                 <option th:each="element : ${itStaffList}"
@@ -143,7 +147,7 @@
                         <label class="d-flex justify-content-center align-items-center">
                             <select class="form-select m-2" name="workarea"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 5vh; font-size: small;
+                                   max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
                                 <option value="0">Филиал</option>
                                 <option th:each="element : ${workAreaList}"
@@ -151,8 +155,9 @@
                                         th:text="${element.name}"></option>
                             </select>
                         </label>
-                        <label>
-                            <input type="text" name="comment" placeholder="Причина">
+                        <label style="margin-bottom: 7px">
+                            <input type="text" name="comment" placeholder="Причина"
+                                   style="text-align: center; height: 30px">
                         </label>
                     </div>
                     <button class="button" type="submit">Обновить</button>
