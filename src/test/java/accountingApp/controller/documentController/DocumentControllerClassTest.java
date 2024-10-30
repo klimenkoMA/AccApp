@@ -65,10 +65,11 @@ class DocumentControllerClassTest {
 
         String documentName = "doc1";
         String documentContent = "content";
+        String documentDescription = "descr";
 
         when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
-        String viewName = documentController.addNewDocument(documentName, documentContent, model);
+        String viewName = documentController.addNewDocument(documentName, documentContent,documentDescription, model);
 
         Assertions.assertEquals("documents", viewName);
 
@@ -83,14 +84,15 @@ class DocumentControllerClassTest {
 
         String documentName = " ";
         String documentContent = " ";
+        String documentDescription = " ";
 
         when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
-        String viewName = documentController.addNewDocument(documentName, documentContent, model);
+        String viewName = documentController.addNewDocument(documentName, documentContent, documentDescription, model);
 
         Assertions.assertEquals("documents", viewName);
 
-        verify(model, never()).addAttribute("documentClassList", documentClassList);
+        verify(model).addAttribute("documentClassList", documentClassList);
 
         verify(documentService, never()).addDocument(any(DocumentClass.class));
 

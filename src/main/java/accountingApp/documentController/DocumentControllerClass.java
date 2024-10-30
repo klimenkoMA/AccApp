@@ -37,84 +37,128 @@ public class DocumentControllerClass {
     @PostMapping("/adddocument")
     public String addNewDocument(@RequestParam String name,
                                  @RequestParam String content,
+                                 @RequestParam String description,
                                  Model model) {
 
-        String nameWithoutSpaces = name.trim();
-        if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
-            DocumentClass document = new DocumentClass(name, content);
-            documentServiceClass.addDocument(document);
-            List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-            model.addAttribute("documentClassList", documentClassList);
+        if (name == null
+                || content == null
+                || description == null
+        ) {
+            System.out.println("*** DocumentControllerClass.addNewDocument:" +
+                    "  Attribute has a null value! ***");
+            return getDocument(model);
         }
-        return "documents";
+
+        String nameWithoutSpaces = name.trim();
+        String contentWithoutSpaces = content.trim();
+        String descriptionWithoutSpaces = description.trim();
+
+        try {
+            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
+                    && !contentWithoutSpaces.equals("") && !contentWithoutSpaces.equals(" ")
+                    && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
+                DocumentClass document = new DocumentClass(name, content, description);
+                documentServiceClass.addDocument(document);
+                return getDocument(model);
+            }
+            throw new Exception("Attribute is empty!");
+        } catch (Exception e) {
+            System.out.println("*** DocumentControllerClass.addNewDocument:" +
+                    "  WRONG DB VALUES*** " + e.getMessage());
+            return getDocument(model);
+        }
     }
 
     @PostMapping("/deletedocument")
     public String deleteSomeDocument(@RequestParam String name,
                                      Model model) {
+
+        if (name == null) {
+            System.out.println("*** DocumentControllerClass.deleteSomeDocument:" +
+                    "  Attribute has a null value! ***");
+            return getDocument(model);
+        }
+
         String nameWithoutSpaces = name.trim();
 
         try {
-            if (!nameWithoutSpaces.isEmpty()) {
+            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+
                 DocumentClass document = documentServiceClass.findDocumentById(name);
                 documentServiceClass.deleteDocument(document);
-                List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-                model.addAttribute("documentClassList", documentClassList);
-                return "documents";
+                return getDocument(model);
             }
             throw new Exception("It`s not an ID!");
         } catch (Exception e) {
+            System.out.println("*** DocumentControllerClass.deleteSomeDocument: " +
+                    e.getMessage());
             try {
                 if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+
                     DocumentClass document = documentServiceClass.findDocumentByName(name);
                     documentServiceClass.deleteDocument(document);
-                    List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-                    model.addAttribute("documentClassList", documentClassList);
-                    return "documents";
+
+                    return getDocument(model);
                 }
+                throw new Exception("Attribute is empty!");
             } catch (Exception e1) {
-                List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-                model.addAttribute("documentClassList", documentClassList);
-                return "documents";
+                System.out.println("*** DocumentControllerClass.deleteSomeDocument:" +
+                        "  WRONG DB VALUES*** " + e.getMessage());
+                return getDocument(model);
             }
         }
-
-        List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-        model.addAttribute("documentClassList", documentClassList);
-        return "documents";
-
     }
 
     @PostMapping("/updatedocument")
     public String updateSomeDocument(@RequestParam String id,
                                      @RequestParam String name,
                                      @RequestParam String content,
+                                     @RequestParam String description,
                                      Model model) {
+        if (id == null
+                || name == null
+                || content == null
+                || description == null
+        ) {
+            System.out.println("*** DocumentControllerClass.updateSomeDocument:" +
+                    "  Attribute has a null value! ***");
+            return getDocument(model);
+        }
 
         String nameWithoutSpaces = name.trim();
         String idWithoutSpaces = id.trim();
+        String contentWithoutSpaces = content.trim();
+        String descriptionWithoutSpaces = description.trim();
 
         try {
-            if (!idWithoutSpaces.isEmpty()) {
+            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
+                    && !idWithoutSpaces.equals("") && !idWithoutSpaces.equals(" ")
+                    && !contentWithoutSpaces.equals("") && !contentWithoutSpaces.equals(" ")
+                    && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
                 DocumentClass document = documentServiceClass.findDocumentById(idWithoutSpaces);
                 document.setName(nameWithoutSpaces);
-                document.setContent(content);
+                document.setContent(contentWithoutSpaces);
+                document.setDescription(descriptionWithoutSpaces);
                 documentServiceClass.addDocument(document);
-                List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-                model.addAttribute("documentClassList", documentClassList);
-                return "documents";
+                return getDocument(model);
             }
+            throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-            model.addAttribute("documentClassList", documentClassList);
-            return "documents";
+            System.out.println("*** DocumentControllerClass.updateSomeDocument:" +
+                    "  WRONG DB VALUES*** " + e.getMessage());
+            return getDocument(model);
         }
-        return "documents";
     }
 
     @PostMapping("/finddocument")
     public String findSomeDocument(@RequestParam String name,
                                    Model model) {
+
+        if (name == null) {
+            System.out.println("*** DocumentControllerClass.findSomeDocument:" +
+                    "  Attribute has a null value! ***");
+            return getDocument(model);
+        }
 
         String nameWithoutSpaces = name.trim();
 
@@ -128,6 +172,8 @@ public class DocumentControllerClass {
             }
             throw new Exception("It`s not an ID!");
         } catch (Exception e) {
+            System.out.println("*** DocumentControllerClass.findSomeDocument: " +
+                    e.getMessage());
             try {
                 if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
                     DocumentClass document = documentServiceClass.findDocumentByName(name);
@@ -136,17 +182,13 @@ public class DocumentControllerClass {
                     model.addAttribute("documentClassList", documentClassList);
                     return "documents";
                 }
+                throw new Exception("Attribute is empty!");
             } catch (Exception e1) {
-                List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-                model.addAttribute("documentClassList", documentClassList);
-                return "documents";
+                System.out.println("*** DocumentControllerClass.findSomeDocument:" +
+                        "  WRONG DB VALUES*** " + e.getMessage());
+                return getDocument(model);
             }
         }
-
-        List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
-        model.addAttribute("documentClassList", documentClassList);
-        return "documents";
-
     }
 
 }

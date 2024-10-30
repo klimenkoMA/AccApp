@@ -34,6 +34,9 @@
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">Название
                     </th>
                     <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
+                        Документ
+                    </th>
+                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
                         Содержимое документа
                     </th>
                 </tr>
@@ -56,8 +59,12 @@
                                 <div>[[${element.name}]]</div>
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 45vh">
+                                style="min-width: 25vh">
                                 <div>[[${element.content}]]</div>
+                            </td>
+                            <td class="p-2 m-2 text-center border border-1 border-dark"
+                                style="min-width: 45vh">
+                                <div>[[${element.description}]]</div>
                             </td>
                         </tr>
                     </div>

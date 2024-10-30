@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,13 +419,36 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DocumentControllerClassTest.addDocumentFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
+      <option name="METHOD_NAME" value="addDocumentFail" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -443,27 +470,6 @@
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeControllerTest.addEmployeeEmptyAttributesOfEmployeeAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
-      <option name="METHOD_NAME" value="addEmployeeEmptyAttributesOfEmployeeAdded" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -581,18 +587,18 @@
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="JUnit.EmployeeControllerTest" />
       <item itemvalue="JUnit.EmployeeControllerTest.updateEmployeeValid" />
-      <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.EmployeeControllerTest.addEmployeeEmptyAttributesOfEmployeeAdded" />
       <item itemvalue="JUnit.EmployeeControllerTest.mustReturnEmployeesList" />
       <item itemvalue="JUnit.EventsControllerTest" />
+      <item itemvalue="Spring Boot.AccountingApplication" />
+      <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentFail" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentFail" />
         <item itemvalue="JUnit.EventsControllerTest" />
         <item itemvalue="JUnit.EmployeeControllerTest" />
         <item itemvalue="JUnit.EmployeeControllerTest.mustReturnEmployeesList" />
         <item itemvalue="JUnit.EmployeeControllerTest.updateEmployeeValid" />
-        <item itemvalue="JUnit.EmployeeControllerTest.addEmployeeEmptyAttributesOfEmployeeAdded" />
       </list>
     </recent_temporary>
   </component>
@@ -878,14 +884,8 @@
       <workItem from="1725780155969" duration="121449000" />
       <workItem from="1727146953008" duration="143635000" />
       <workItem from="1728351985138" duration="134961000" />
-      <workItem from="1729822865411" duration="62492000" />
-    </task>
-    <task id="LOCAL-00340" summary="Rebuilt security for redirect unauthorized visitors to login.html">
-      <created>1726980783555</created>
-      <option name="number" value="00340" />
-      <option name="presentableId" value="LOCAL-00340" />
-      <option name="project" value="LOCAL" />
-      <updated>1726980783555</updated>
+      <workItem from="1729822865411" duration="67179000" />
+      <workItem from="1730263088632" duration="3686000" />
     </task>
     <task id="LOCAL-00341" summary="Created feedback.html and screenshots.html">
       <created>1726994679819</created>
@@ -1223,7 +1223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730093881527</updated>
     </task>
-    <option name="localTasksCounter" value="389" />
+    <task id="LOCAL-00389" summary="Finished to build a bootstrap-datepicker in head.html">
+      <created>1730135428443</created>
+      <option name="number" value="00389" />
+      <option name="presentableId" value="LOCAL-00389" />
+      <option name="project" value="LOCAL" />
+      <updated>1730135428443</updated>
+    </task>
+    <option name="localTasksCounter" value="390" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1246,7 +1253,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Built a couple of success tests" />
     <MESSAGE value="Built a couple of success tests v2" />
     <MESSAGE value="Built a couple of success tests v3" />
     <MESSAGE value="Rebuilt all tests" />
@@ -1271,7 +1277,8 @@
     <MESSAGE value="Tried to use a dropdown list in a crudevents.html" />
     <MESSAGE value="Finished to build a dropdown list in a crudevents.html" />
     <MESSAGE value="Tried to use a bootstrap-datepicker in head.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to use a bootstrap-datepicker in head.html" />
+    <MESSAGE value="Finished to build a bootstrap-datepicker in head.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished to build a bootstrap-datepicker in head.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -26,28 +26,33 @@ public class DocumentClass {
     @Indexed
     private String content;
 
+    @Field
+    @Indexed
+    private String description;
 
-    public DocumentClass(ObjectId id, String name) {
-        this.id = id;
+
+    public DocumentClass(String name, String content, String description) {
         this.name = name;
+        this.content = content;
+        this.description = description;
     }
 
-    public DocumentClass(ObjectId id, String name, String content) {
+    public DocumentClass(ObjectId id, String name, String content, String description) {
         this.id = id;
         this.name = name;
         this.content = content;
+        this.description = description;
     }
 
     public DocumentClass() {
     }
 
-    public DocumentClass(String name) {
-        this.name = name;
+    public String getDescription() {
+        return description;
     }
 
-    public DocumentClass(String name, String content) {
-        this.name = name;
-        this.content = content;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getContent() {
@@ -81,6 +86,7 @@ public class DocumentClass {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", content='" + content + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
