@@ -33,78 +33,118 @@ public class DevicesController {
     @PostMapping("/adddevice")
     public String addDevice(@RequestParam String name,
                             Model model) {
-        String nameWithoutSpaces = name.trim();
-        if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
-            Devices devices = new Devices(name);
-            devicesService.addNewDevice(devices);
-            List<Devices> devicesList = devicesService.findAllDevices();
-            model.addAttribute("devicesList", devicesList);
+
+        if (name == null
+        ) {
+            System.out.println("*** DevicesController.addDevice():" +
+                    "  Attribute has a null value! ***");
+            return getDevices(model);
         }
-        return this.getDevices(model);
+
+        String nameWithoutSpaces = name.trim();
+        try {
+            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
+                Devices devices = new Devices(name);
+                devicesService.addNewDevice(devices);
+                return getDevices(model);
+            }
+            throw new Exception("Attribute is empty!");
+        } catch (Exception e) {
+            System.out.println("*** DevicesController.addDevice(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getDevices(model);
+        }
     }
 
     @PostMapping("/deletedevice")
     public String deleteDevice(@RequestParam String id,
                                Model model) {
+
+        if (id == null
+        ) {
+            System.out.println("*** DevicesController.deleteDevice():" +
+                    "  Attribute has a null value! ***");
+            return getDevices(model);
+        }
+
         try {
             int idCheck = Integer.parseInt(id);
             if (idCheck <= 0) {
-                return this.getDevices(model);
+                System.out.println("*** DevicesController.deleteDevice(): dborn <<<< 0 ***");
+                return getDevices(model);
             }
             devicesService.deleteDeviceById(idCheck);
-            List<Devices> devicesList = devicesService.findAllDevices();
-            model.addAttribute("devicesList", devicesList);
-            return this.getDevices(model);
+            return getDevices(model);
         } catch (Exception e) {
-            return this.getDevices(model);
+            System.out.println("*** DevicesController.deleteDevice(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getDevices(model);
         }
     }
 
     @PostMapping("/updatedevice")
-    public String updateProceduresAssigned(@RequestParam String id,
-                                           @RequestParam String name,
-                                           Model model) {
+    public String updateDevice(@RequestParam String id,
+                               @RequestParam String name,
+                               Model model) {
+
+        if (id == null
+                || name == null
+        ) {
+            System.out.println("*** DevicesController.updateDevice():" +
+                    "  Attribute has a null value! ***");
+            return getDevices(model);
+        }
 
         try {
             String nameWithoutSpaces = name.trim();
             int idCheck = Integer.parseInt(id);
-            if (idCheck <= 0 ) {
-                return this.getDevices(model);
+            if (idCheck <= 0) {
+                System.out.println("*** DevicesController.updateDevice(): dborn <<<< 0 ***");
+                return getDevices(model);
             }
             if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
                 Devices devices = new Devices(idCheck, name);
                 devicesService.updateDevice(devices);
-                List<Devices> devicesList = devicesService.findAllDevices();
-                model.addAttribute("devicesList", devicesList);
+                return getDevices(model);
             }
+            throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            return this.getDevices(model);
+            System.out.println("*** DevicesController.updateDevice(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getDevices(model);
         }
-        return this.getDevices(model);
     }
 
     @PostMapping("/finddevicebyname")
     public String findDevicesById(@RequestParam String name,
                                   Model model) {
+
+        if (name == null
+        ) {
+            System.out.println("*** DevicesController.findDevicesById():" +
+                    "  Attribute has a null value! ***");
+            return getDevices(model);
+        }
+
         try {
             int idCheck = Integer.parseInt(name);
             if (idCheck <= 0) {
-                System.out.println("***SUB ZERO***");
-                List<Devices> devicesList = devicesService.findAllDevices();
-                model.addAttribute("devicesList", devicesList);
-                return "devices";
+                System.out.println("*** DevicesController.findDevicesById(): dborn <<<< 0 ***");
+                return getDevices(model);
             } else {
-                System.out.println("*** FIND BY ID ***");
+                System.out.println("*** DevicesController.findDevicesById():" +
+                        "FOUND DEVICE BY ID ***");
                 List<Devices> devicesList;
                 devicesList = devicesService.getDevicesById(idCheck);
                 model.addAttribute("devicesList", devicesList);
+                return "devices";
             }
-            return "devices";
         } catch (Exception e) {
             List<Devices> devicesList = devicesService.getDevicesByName(name);
             model.addAttribute("devicesList", devicesList);
-            System.out.println("*** FIND BY NAME ***");
-            return this.getDevices(model);
+            System.out.println("*** DevicesController.findDevicesById():" +
+                    " FOUND DEVICE BY NAME *** " + e.getMessage());
+            return "devices";
         }
     }
 }

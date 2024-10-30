@@ -34,48 +34,59 @@ public class RoomController {
                           @RequestParam WorkArea workarea,
                           Model model) {
 
+        if (number == null
+                || workarea == null
+        ) {
+            System.out.println("*** RoomController.addRoom():  Attribute has a null value! ***");
+            return getRoom(model);
+        }
+
         String numberWithoutSpaces = number.trim();
         String workAreaIdWithoutSpaces = workarea.getName();
 
         try {
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
 
-            if (numberCheck <= 0 ) {
-                System.out.println("*** SUB ZERO NUMBER OR WORKAREA ID***");
-                return this.getRoom(model);
+            if (numberCheck <= 0) {
+                System.out.println("*** RoomController.addRoom(): NUMBER is SUBZERO***");
+                return getRoom(model);
             } else {
                 List<WorkArea> workAreas = workAreaService
                         .getWorkAreaByName(workAreaIdWithoutSpaces);
                 Room room = new Room(numberWithoutSpaces, workAreas.get(0));
                 roomService.addNewRoom(room);
-                List<Room> roomList = roomService.findAllRoom();
-
-                model.addAttribute("roomList", roomList);
             }
-            return this.getRoom(model);
+            return getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** WRONG NUMBER TYPE***\n" + e.getMessage());
-            return this.getRoom(model);
+            System.out.println("*** RoomController.addRoom():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getRoom(model);
         }
     }
 
     @PostMapping("/deleteroom")
     public String deleteRoom(@RequestParam String id,
                              Model model) {
+
+        if (id == null
+        ) {
+            System.out.println("*** RoomController.deleteRoom():  Attribute has a null value! ***");
+            return getRoom(model);
+        }
+
         String idWithoutSpaces = id.trim();
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** SUB ZERO ID***");
+                System.out.println("*** RoomController.deleteRoom(): NUMBER is SUBZERO***");
             } else {
                 roomService.deleteRoomById(idCheck);
-                List<Room> roomList = roomService.findAllRoom();
-                model.addAttribute("roomList", roomList);
             }
-            return this.getRoom(model);
+            return getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** WRONG ID TYPE***\n" + e.getMessage());
-            return this.getRoom(model);
+            System.out.println("*** RoomController.deleteRoom():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getRoom(model);
         }
 
     }
@@ -85,48 +96,65 @@ public class RoomController {
                              @RequestParam String number,
                              @RequestParam WorkArea workarea,
                              Model model) {
+
+        if (id == null
+                || number == null
+                || workarea == null
+        ) {
+            System.out.println("*** RoomController.updateRoom():  Attribute has a null value! ***");
+            return getRoom(model);
+        }
+
         String idWithoutSpaces = id.trim();
         String numberWithoutSpaces = number.trim();
-        int workAreaId = workarea.getId();
+
         try {
+            int workAreaId = workarea.getId();
             int idCheck = Integer.parseInt(idWithoutSpaces);
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
 
             if (idCheck <= 0 || numberCheck <= 0) {
-                System.out.println("*** SUB ZERO ID OR NUMBER***");
+                System.out.println("*** RoomController.updateRoom(): NUMBER or ID is SUBZERO***");
             } else {
                 List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaId);
                 Room room = new Room(idCheck, numberWithoutSpaces, workAreaList.get(0));
                 roomService.updateRoom(room);
-                List<Room> roomList = roomService.findAllRoom();
-                model.addAttribute("roomList", roomList);
             }
-            return this.getRoom(model);
+            return getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** WRONG ID OR NUMBER TYPE***\n" + e.getMessage());
-            return this.getRoom(model);
+            System.out.println("*** RoomController.updateRoom():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getRoom(model);
         }
     }
 
     @PostMapping("/findroomyid")
     public String findRoomById(@RequestParam String id,
                                Model model) {
+
+        if (id == null
+        ) {
+            System.out.println("*** RoomController.findRoomById():  Attribute has a null value! ***");
+            return getRoom(model);
+        }
+
         String idWithoutSpaces = id.trim();
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** SUB ZERO ID OR NUMBER***");
+                System.out.println("*** RoomController.findRoomById(): NUMBER or ID is SUBZERO***");
             } else {
                 List<Room> roomList = roomService.getRoomById(idCheck);
                 model.addAttribute("roomList", roomList);
                 if (roomList.isEmpty()) {
-                    return this.getRoom(model);
+                    return getRoom(model);
                 }
             }
             return "room";
         } catch (Exception e) {
-            System.out.println("*** WRONG ID OR NUMBER TYPE***\n" + e.getMessage());
-            return this.getRoom(model);
+            System.out.println("*** RoomController.findRoomById():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getRoom(model);
         }
     }
 }

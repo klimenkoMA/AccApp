@@ -7,16 +7,31 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/FeedbackControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/ITStaffControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -495,27 +510,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeControllerTest.updateEmployeeValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
-      <option name="METHOD_NAME" value="updateEmployeeValid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EventsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -533,6 +527,27 @@
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FeedbackControllerTest.addFeedbackValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
+      <option name="METHOD_NAME" value="addFeedbackValid" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -586,19 +601,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="JUnit.EmployeeControllerTest" />
-      <item itemvalue="JUnit.EmployeeControllerTest.updateEmployeeValid" />
       <item itemvalue="JUnit.EmployeeControllerTest.mustReturnEmployeesList" />
       <item itemvalue="JUnit.EventsControllerTest" />
       <item itemvalue="Spring Boot.AccountingApplication" />
       <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentFail" />
+      <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackValid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackValid" />
+        <item itemvalue="JUnit.EmployeeControllerTest" />
         <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentFail" />
         <item itemvalue="JUnit.EventsControllerTest" />
-        <item itemvalue="JUnit.EmployeeControllerTest" />
         <item itemvalue="JUnit.EmployeeControllerTest.mustReturnEmployeesList" />
-        <item itemvalue="JUnit.EmployeeControllerTest.updateEmployeeValid" />
       </list>
     </recent_temporary>
   </component>
@@ -885,14 +900,7 @@
       <workItem from="1727146953008" duration="143635000" />
       <workItem from="1728351985138" duration="134961000" />
       <workItem from="1729822865411" duration="67179000" />
-      <workItem from="1730263088632" duration="3686000" />
-    </task>
-    <task id="LOCAL-00341" summary="Created feedback.html and screenshots.html">
-      <created>1726994679819</created>
-      <option name="number" value="00341" />
-      <option name="presentableId" value="LOCAL-00341" />
-      <option name="project" value="LOCAL" />
-      <updated>1726994679819</updated>
+      <workItem from="1730263088632" duration="18000000" />
     </task>
     <task id="LOCAL-00342" summary="Rebuilt screenshots.html">
       <created>1727071833265</created>
@@ -1230,7 +1238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730135428443</updated>
     </task>
-    <option name="localTasksCounter" value="390" />
+    <task id="LOCAL-00390" summary="Added a new field into DocumentClass.java and rebuild DocumentControllerClass.java">
+      <created>1730268718235</created>
+      <option name="number" value="00390" />
+      <option name="presentableId" value="LOCAL-00390" />
+      <option name="project" value="LOCAL" />
+      <updated>1730268718236</updated>
+    </task>
+    <option name="localTasksCounter" value="391" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1253,7 +1268,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Built a couple of success tests v2" />
     <MESSAGE value="Built a couple of success tests v3" />
     <MESSAGE value="Rebuilt all tests" />
     <MESSAGE value="Rebuilt some tests" />
@@ -1278,7 +1292,8 @@
     <MESSAGE value="Finished to build a dropdown list in a crudevents.html" />
     <MESSAGE value="Tried to use a bootstrap-datepicker in head.html" />
     <MESSAGE value="Finished to build a bootstrap-datepicker in head.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished to build a bootstrap-datepicker in head.html" />
+    <MESSAGE value="Added a new field into DocumentClass.java and rebuild DocumentControllerClass.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a new field into DocumentClass.java and rebuild DocumentControllerClass.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
