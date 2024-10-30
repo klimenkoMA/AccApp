@@ -55,7 +55,7 @@ public class EventsController {
                 || workarea == null
                 || comment == null
         ) {
-            System.out.println("*** EventsController.addEvent:  Attribute has a null value! ***");
+            System.out.println("*** EventsController.addEvent():  Attribute has a null value! ***");
             return getEvents(model);
         }
 
@@ -66,30 +66,25 @@ public class EventsController {
         String workareaWithoutSpaces = workarea.getName();
         String commentWithoutSpaces = comment.trim();
         try {
-            int dateCheck = Integer.parseInt(dateWithoutSpaces);
-            if (dateCheck <= 0 || date.length() < 6) {
-                System.out.println("*** EventsController.addNewEvent:  WRONG DATE FORMAT***");
-            } else if (!dateWithoutSpaces.equals("")
+           if (!dateWithoutSpaces.equals("")
                     && !deviceWithoutSpaces.equals("")
                     && !employeeIdWithoutSpaces.equals("")
                     && !workareaWithoutSpaces.equals("")
                     && !itstaffIdWithoutSpaces.equals("")) {
 
-                Events events = new Events(date,
+                Events events = new Events(dateWithoutSpaces,
                         device,
                         employee,
                         itstaff,
                         workarea,
                         commentWithoutSpaces);
                 eventsService.addNewEvent(events);
-                List<Events> eventsList = eventsService.findAllEvents();
-                model.addAttribute("eventsList", eventsList);
             }
-            return this.getEvents(model);
+            return getEvents(model);
         } catch (Exception e) {
-            System.out.println("*** EventsController.addNewEvent:  WRONG DB VALUES*** "
+            System.out.println("*** EventsController.addNewEvent():  WRONG DB VALUES*** "
                     + e.getMessage());
-            return this.getEvents(model);
+            return getEvents(model);
         }
     }
 
@@ -98,26 +93,23 @@ public class EventsController {
                               Model model) {
         if (id == null
         ) {
-            System.out.println("*** EventsController.deleteEvent:  Attribute ID has a null value! ***");
+            System.out.println("*** EventsController.deleteEvent():  Attribute ID has a null value! ***");
             return getEvents(model);
         }
 
         try {
             int idCheck = Integer.parseInt(id);
             if (idCheck <= 0) {
-                System.out.println("*** EventsController.addNewEvent: ID is SUBZERO***");
+                System.out.println("*** EventsController.addNewEvent(): ID is SUBZERO***");
             } else {
                 eventsService.deleteEventsById(idCheck);
-                List<Events> eventsList = eventsService.findAllEvents();
-                model.addAttribute("eventsList", eventsList);
             }
             return getEvents(model);
         } catch (Exception e) {
-            System.out.println("*** EventsController.deleteEvent:  WRONG DB VALUES*** "
+            System.out.println("*** EventsController.deleteEvent():  WRONG DB VALUES*** "
                     + e.getMessage());
-            return this.getEvents(model);
+            return getEvents(model);
         }
-
     }
 
     @PostMapping("/updateevent")
@@ -138,8 +130,8 @@ public class EventsController {
                 || workarea == null
                 || comment == null
         ) {
-            System.out.println("*** EventsController.updateEvent:  Attribute has a null value! ***");
-            return this.getEvents(model);
+            System.out.println("*** EventsController.updateEvent():  Attribute has a null value! ***");
+            return getEvents(model);
         }
 
         String idWithoutSpaces = id.trim();
@@ -152,10 +144,9 @@ public class EventsController {
 
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
-            int dateCheck = Integer.parseInt(dateWithoutSpaces);
-            if (dateCheck <= 0 || date.length() < 6 || idCheck <= 0) {
-                System.out.println("*** EventsController.updateEvent:  WRONG DATE FORMAT or ID FORMAT***");
-                return this.getEvents(model);
+            if (idCheck <= 0) {
+                System.out.println("*** EventsController.updateEvent():  WRONG ID FORMAT***");
+                return getEvents(model);
             } else if (!dateWithoutSpaces.equals("")
                     && !deviceWithoutSpaces.equals("")
                     && !employeeIdWithoutSpaces.equals("")
@@ -170,15 +161,12 @@ public class EventsController {
                         workarea,
                         commentWithoutSpaces);
                 eventsService.updateEvent(events);
-                List<Events> eventsList = eventsService.findAllEvents();
-                model.addAttribute("eventsList", eventsList);
             }
-            return this.getEvents(model);
+            return getEvents(model);
 
         } catch (Exception e) {
-            System.out.println("*** EventsController.updateEvent:  WRONG DB VALUES*** "
+            System.out.println("*** EventsController.updateEvent():  WRONG DB VALUES*** "
                     + e.getMessage());
-            getEvents(model);
             return getEvents(model);
         }
     }
@@ -188,27 +176,25 @@ public class EventsController {
                                  Model model) {
         if (id == null
         ) {
-            System.out.println("*** EventsController.findEventsById:  Attribute ID has a null value! ***");
-            return this.getEvents(model);
+            System.out.println("*** EventsController.findEventsById():  Attribute ID has a null value! ***");
+            return getEvents(model);
         }
 
         String idWithoutSpaces = id.trim();
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** EventsController.fidEventById: ID is SUBZERO***");
-                this.getEvents(model);
+                System.out.println("*** EventsController.fidEventById(): ID is SUBZERO***");
+                return getEvents(model);
             } else {
-                List<Events> eventsList;
-                eventsList = eventsService.getEventById(idCheck);
+                List<Events> eventsList = eventsService.getEventById(idCheck);
                 model.addAttribute("eventsList", eventsList);
+                return "events";
             }
-            return "events";
         } catch (Exception e) {
-            System.out.println("*** EventsController.fidEventById:  WRONG DB VALUES*** "
+            System.out.println("*** EventsController.fidEventById():  WRONG DB VALUES*** "
                     + e.getMessage());
-            return this.getEvents(model);
+            return getEvents(model);
         }
-
     }
 }

@@ -14,8 +14,6 @@ import org.springframework.ui.Model;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import static org.mockito.Mockito.*;
 
 class ITStaffControllerTest {
@@ -207,7 +205,7 @@ class ITStaffControllerTest {
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
-        String viewName = itStaffController.findPersonById(itStaffId, model);
+        String viewName = itStaffController.findItStaffById(itStaffId, model);
 
         Assertions.assertEquals("itstaff", viewName);
 
@@ -222,7 +220,7 @@ class ITStaffControllerTest {
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
-        String viewName = itStaffController.findPersonById(itStaffId, model);
+        String viewName = itStaffController.findItStaffById(itStaffId, model);
 
         Assertions.assertEquals("itstaff", viewName);
 

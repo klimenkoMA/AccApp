@@ -32,6 +32,14 @@ public class FeedbackController {
                                  @RequestParam String message,
                                  Model model) {
 
+        if (name == null
+                || email == null
+                || message == null
+        ) {
+            System.out.println("*** FeedbackController.addNewFeedback():  Attribute has a null value! ***");
+            return "main";
+        }
+
         try {
             String nameWithoutSpaces = name.trim();
             String emailWithoutSpaces = email.trim();
@@ -42,12 +50,12 @@ public class FeedbackController {
                     && !messageWithoutSpaces.equals("") && !messageWithoutSpaces.equals(" ")) {
                 Feedback feedback = new Feedback(name, email, message);
                 feedbackService.addFeedback(feedback);
-                List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
-                model.addAttribute("feedbackList", feedbackList);
                 return "main";
             }
-            throw new Exception("");
+            throw new Exception("Attribute is empty!");
         } catch (Exception e) {
+            System.out.println("*** FeedbackController.addNewFeedback(): wrong DB's values! *** "
+                    + e.getMessage());
             return "main";
         }
     }
@@ -56,9 +64,18 @@ public class FeedbackController {
     public String deleteFeedback(@RequestParam String id,
                                  Model model) {
 
-        if (id.equals("") || id.equals(" ")) {
-            return this.getFeedbacks(model);
+        if (id == null
+        ) {
+            System.out.println("*** FeedbackController.deleteFeedback():  Attribute has a null value! ***");
+            return getFeedbacks(model);
         }
+
+        if (id.equals("") || id.equals(" ")) {
+            System.out.println("*** FeedbackController.deleteFeedback(): " +
+                    " Attribute is empty! ***");
+            return getFeedbacks(model);
+        }
+
         try {
             String idWithoutSpaces = id.trim();
             List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
@@ -71,14 +88,13 @@ public class FeedbackController {
                 }
             }
 
-            if (!idWithoutSpaces.equals("") && !idWithoutSpaces.equals(" ")) {
-                feedbackService.deleteFeedback(feedback);
-                feedbackList = feedbackService.findAllFeedbacks();
-                model.addAttribute("feedbackList", feedbackList);
-            }
-            return this.getFeedbacks(model);
+            feedbackService.deleteFeedback(feedback);
+
+            return getFeedbacks(model);
         } catch (Exception e) {
-            return this.getFeedbacks(model);
+            System.out.println("*** FeedbackController.deleteFeedback(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getFeedbacks(model);
         }
     }
 
@@ -89,10 +105,22 @@ public class FeedbackController {
                                  @RequestParam String message,
                                  Model model) {
 
+        if (id == null
+                || name == null
+                || email == null
+                || message == null
+        ) {
+            System.out.println("*** FeedbackController.updateFeedback():  Attribute has a null value! ***");
+            return getFeedbacks(model);
+        }
+
         if (id.equals("") || id.equals(" ")) {
-            return this.getFeedbacks(model);
+            System.out.println("*** FeedbackController.updateFeedback(): " +
+                    " Attribute ID is empty! ***");
+            return getFeedbacks(model);
         }
         try {
+            String idWithoutSpaces = id.trim();
             String nameWithoutSpaces = name.trim();
             String emailWithoutSpaces = email.trim();
             String messageWithoutSpaces = message.trim();
@@ -101,15 +129,16 @@ public class FeedbackController {
                     && !emailWithoutSpaces.equals("") && !emailWithoutSpaces.equals(" ")
                     && !messageWithoutSpaces.equals("") && !messageWithoutSpaces.equals(" ")
             ) {
-                Feedback feedback = new Feedback(new ObjectId(id), nameWithoutSpaces
+                Feedback feedback = new Feedback(new ObjectId(idWithoutSpaces), nameWithoutSpaces
                         , emailWithoutSpaces, messageWithoutSpaces);
                 feedbackService.addFeedback(feedback);
-                List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
-                model.addAttribute("feedbackList", feedbackList);
+                return getFeedbacks(model);
             }
-            return this.getFeedbacks(model);
+            throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            return this.getFeedbacks(model);
+            System.out.println("*** FeedbackController.updateFeedback(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getFeedbacks(model);
         }
     }
 
@@ -117,8 +146,16 @@ public class FeedbackController {
     public String findFeedback(@RequestParam String id,
                                Model model) {
 
+        if (id == null
+        ) {
+            System.out.println("*** FeedbackController.findFeedback():  Attribute has a null value! ***");
+            return getFeedbacks(model);
+        }
+
         if (id.equals("") || id.equals(" ")) {
-            return this.getFeedbacks(model);
+            System.out.println("*** FeedbackController.findFeedback(): " +
+                    " Attribute ID is empty! ***");
+            return getFeedbacks(model);
         }
         try {
             Feedback feedback = feedbackService.findFeedbackById(id);
@@ -128,7 +165,9 @@ public class FeedbackController {
             model.addAttribute("feedbackList", feedbackList);
             return "feedbacks";
         } catch (Exception e) {
-            return this.getFeedbacks(model);
+            System.out.println("*** FeedbackController.findFeedback(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getFeedbacks(model);
         }
     }
 }

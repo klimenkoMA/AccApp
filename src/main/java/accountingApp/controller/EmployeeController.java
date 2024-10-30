@@ -41,22 +41,22 @@ public class EmployeeController {
                               @RequestParam WorkArea workarea,
                               @RequestParam Room room,
                               Model model) {
+
+        if (fio == null
+                || dborn == null
+                || workarea == null
+                || room == null
+        ) {
+            System.out.println("*** EmployeeController.addEmployee():" +
+                    "  Attribute has a null value! ***");
+            return getEmployee(model);
+        }
+
         String fioWithoutSpaces = fio.trim();
         String dbornWithoutSpaces = dborn.trim();
         String workAreaWithoutSpaces = workarea.getName();
         String roomWithoutSpaces = room.getNumber();
-        try {
 
-            int dbornCheck = Integer.parseInt(dbornWithoutSpaces);
-            if (dbornCheck <= 0) {
-                System.out.println("*** dborn <<<< 0 ***");
-                return this.getEmployee(model);
-            }
-        } catch (Exception e) {
-            System.out.println("*** EmployeeController.addEmployee(): wrong dborn's type! ***");
-            System.out.println(e.getMessage());
-            return this.getEmployee(model);
-        }
         try {
             if (!fioWithoutSpaces.equals("")
                     && !dbornWithoutSpaces.equals("")
@@ -68,34 +68,38 @@ public class EmployeeController {
                         , workarea
                         , room);
                 employeeService.addNewEmployee(employee);
-                List<Employee> employeeList = employeeService.getListEmployee();
-                model.addAttribute("employeeList", employeeList);
+
                 return getEmployee(model);
             }
+            throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** EmployeeController.addEmployee(): wrong DB's values! ***");
-            System.out.println(e.getMessage());
+            System.out.println("*** EmployeeController.addEmployee(): wrong DB's values! *** "
+                    + e.getMessage());
             return getEmployee(model);
         }
-        return this.getEmployee(model);
     }
 
     @PostMapping("/deleteemployee")
     public String deleteById(@RequestParam String id
             , Model model) {
 
+        if (id == null
+        ) {
+            System.out.println("*** EmployeeController.deleteById():" +
+                    "  Attribute ID has a null value! ***");
+            return getEmployee(model);
+        }
+
         try {
             int idCheck = Integer.parseInt(id);
             if (idCheck > 0) {
                 employeeService.deleteEmployeeById(idCheck);
             }
-            List<Employee> employeeList = employeeService.getListEmployee();
-            model.addAttribute("employeeList", employeeList);
-            return this.getEmployee(model);
-
+            return getEmployee(model);
         } catch (Exception e) {
-            System.out.println(e.toString() + "||| WRONG ID |||\n" + e.getMessage());
-            return this.getEmployee(model);
+            System.out.println("*** EmployeeController.deleteById(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getEmployee(model);
         }
     }
 
@@ -107,6 +111,17 @@ public class EmployeeController {
                                  @RequestParam Room room,
                                  Model model) {
 
+        if (id == null
+                || fio == null
+                || dborn == null
+                || workarea == null
+                || room == null
+        ) {
+            System.out.println("*** EmployeeController.updateEmployee():" +
+                    "  Attribute has a null value! ***");
+            return getEmployee(model);
+        }
+
         String idWithoutSpaces = id.trim();
         String fioWithoutSpaces = fio.trim();
         String dbornWithoutSpaces = dborn.trim();
@@ -115,16 +130,15 @@ public class EmployeeController {
 
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
-            int dbornCheck = Integer.parseInt(dbornWithoutSpaces);
 
-            if (idCheck <= 0 || dbornCheck <= 0) {
-                System.out.println("*** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***");
-                return this.getEmployee(model);
+            if (idCheck <= 0) {
+                System.out.println("*** EmployeeController.updateEmployee(): sub-zero ID values! ***");
+                return getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("*** EmployeeController.updateEmployee(): WRONG ID or dBorn values! *** "
+            System.out.println("*** EmployeeController.updateEmployee(): WRONG ID values! *** "
                     + e.getMessage());
-            return this.getEmployee(model);
+            return getEmployee(model);
         }
 
         try {
@@ -134,46 +148,62 @@ public class EmployeeController {
                     && !roomWithoutSpaces.equals("")
                     && !workAreaWithoutSpaces.equals("")) {
 
-                Employee employee = new Employee(idCheck,
-                        fioWithoutSpaces,
-                        dbornWithoutSpaces,
-                        workarea,
-                        room);
+                Employee employee = new Employee(idCheck
+                        , fioWithoutSpaces
+                        , dbornWithoutSpaces
+                        , workarea
+                        , room);
 
                 employeeService.updateEmployee(employee);
-                List<Employee> employeeList = employeeService.getListEmployee();
-                model.addAttribute("employeeList", employeeList);
-                return this.getEmployee(model);
+
+                return getEmployee(model);
             }
+            throw new Exception("Attribute is empty!");
         } catch (Exception e) {
             System.out.println("*** EmployeeController.updateEmployee(): WRONG DB values! *** "
                     + e.getMessage());
-            return this.getEmployee(model);
+            return getEmployee(model);
         }
-        return this.getEmployee(model);
     }
 
 
     @PostMapping("/findbyfio")
     public String findEmployeeByFio(@RequestParam String fio,
                                     Model model) {
+
+        if (fio == null
+        ) {
+            System.out.println("*** EmployeeController.findEmployeeByFio():" +
+                    "  Attribute has a null value! ***");
+            return getEmployee(model);
+        }
+
         String fioWithoutSpaces = fio.trim();
         try {
-            List<Employee> employeeList;
+
             int idCheck = Integer.parseInt(fioWithoutSpaces);
             if (idCheck <= 0 || fioWithoutSpaces.isEmpty()) {
-                System.out.println("***SUB ZERO***");
-                employeeList = employeeService.getListEmployee();
+                System.out.println("*** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***");
+                return getEmployee(model);
             } else {
-                employeeList = employeeService.findEmployeeById(idCheck);
+                List<Employee> employeeList = employeeService.findEmployeeById(idCheck);
+                model.addAttribute("employeeList", employeeList);
+                System.out.println("*** EmployeeController.updateEmployee(): " +
+                        "found an employee by ID ***");
+                return "employee";
             }
-            model.addAttribute("employeeList", employeeList);
-            return "employee";
         } catch (Exception e) {
-            List<Employee> employeeList = employeeService.findEmployeeByFio(fio);
-            model.addAttribute("employeeList", employeeList);
-            System.out.println("*** FIND BY NAME ***\n" + e.getMessage());
-            return this.getEmployee(model);
+            try {
+                List<Employee> employeeList = employeeService.findEmployeeByFio(fioWithoutSpaces);
+                model.addAttribute("employeeList", employeeList);
+                System.out.println("EmployeeController.updateEmployee(): " +
+                        "found an employee by fio  *** " + e.getMessage());
+                return "employee";
+            } catch (Exception e1) {
+                System.out.println("*** EmployeeController.updateEmployee(): WRONG DB values! *** "
+                        + e1.getMessage());
+                return getEmployee(model);
+            }
         }
     }
 }

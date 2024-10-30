@@ -69,8 +69,6 @@ class FeedbackControllerTest {
 
         Assertions.assertEquals("main", viewName);
 
-        verify(model).addAttribute("feedbackList", new ArrayList<Feedback>());
-
         verify(feedbackService, times(1)).addFeedback(any());
     }
 
@@ -115,7 +113,7 @@ class FeedbackControllerTest {
 
         Assertions.assertEquals("feedbacks", viewName);
 
-        verify(model, times(2)).addAttribute("feedbackList", new ArrayList<Feedback>());
+        verify(model, times(1)).addAttribute("feedbackList", new ArrayList<Feedback>());
 
         verify(feedbackService, times(1)).deleteFeedback(any());
     }
@@ -145,7 +143,7 @@ class FeedbackControllerTest {
 
         Assertions.assertEquals("feedbacks", viewName);
 
-        verify(model, times(2)).addAttribute("feedbackList", new ArrayList<Feedback>());
+        verify(model, times(1)).addAttribute("feedbackList", new ArrayList<Feedback>());
 
         verify(feedbackService, never()).deleteFeedback(new Feedback());
     }

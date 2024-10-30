@@ -44,7 +44,7 @@ public class DocumentControllerClass {
                 || content == null
                 || description == null
         ) {
-            System.out.println("*** DocumentControllerClass.addNewDocument:" +
+            System.out.println("*** DocumentControllerClass.addNewDocument():" +
                     "  Attribute has a null value! ***");
             return getDocument(model);
         }
@@ -63,7 +63,7 @@ public class DocumentControllerClass {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** DocumentControllerClass.addNewDocument:" +
+            System.out.println("*** DocumentControllerClass.addNewDocument():" +
                     "  WRONG DB VALUES*** " + e.getMessage());
             return getDocument(model);
         }
@@ -74,7 +74,7 @@ public class DocumentControllerClass {
                                      Model model) {
 
         if (name == null) {
-            System.out.println("*** DocumentControllerClass.deleteSomeDocument:" +
+            System.out.println("*** DocumentControllerClass.deleteSomeDocument():" +
                     "  Attribute has a null value! ***");
             return getDocument(model);
         }
@@ -90,7 +90,7 @@ public class DocumentControllerClass {
             }
             throw new Exception("It`s not an ID!");
         } catch (Exception e) {
-            System.out.println("*** DocumentControllerClass.deleteSomeDocument: " +
+            System.out.println("*** DocumentControllerClass.deleteSomeDocument(): " +
                     e.getMessage());
             try {
                 if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
@@ -102,7 +102,7 @@ public class DocumentControllerClass {
                 }
                 throw new Exception("Attribute is empty!");
             } catch (Exception e1) {
-                System.out.println("*** DocumentControllerClass.deleteSomeDocument:" +
+                System.out.println("*** DocumentControllerClass.deleteSomeDocument():" +
                         "  WRONG DB VALUES*** " + e.getMessage());
                 return getDocument(model);
             }
@@ -120,7 +120,7 @@ public class DocumentControllerClass {
                 || content == null
                 || description == null
         ) {
-            System.out.println("*** DocumentControllerClass.updateSomeDocument:" +
+            System.out.println("*** DocumentControllerClass.updateSomeDocument():" +
                     "  Attribute has a null value! ***");
             return getDocument(model);
         }
@@ -144,7 +144,7 @@ public class DocumentControllerClass {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** DocumentControllerClass.updateSomeDocument:" +
+            System.out.println("*** DocumentControllerClass.updateSomeDocument():" +
                     "  WRONG DB VALUES*** " + e.getMessage());
             return getDocument(model);
         }
@@ -155,7 +155,7 @@ public class DocumentControllerClass {
                                    Model model) {
 
         if (name == null) {
-            System.out.println("*** DocumentControllerClass.findSomeDocument:" +
+            System.out.println("*** DocumentControllerClass.findSomeDocument():" +
                     "  Attribute has a null value! ***");
             return getDocument(model);
         }
@@ -172,7 +172,7 @@ public class DocumentControllerClass {
             }
             throw new Exception("It`s not an ID!");
         } catch (Exception e) {
-            System.out.println("*** DocumentControllerClass.findSomeDocument: " +
+            System.out.println("*** DocumentControllerClass.findSomeDocument(): " +
                     e.getMessage());
             try {
                 if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
@@ -184,7 +184,7 @@ public class DocumentControllerClass {
                 }
                 throw new Exception("Attribute is empty!");
             } catch (Exception e1) {
-                System.out.println("*** DocumentControllerClass.findSomeDocument:" +
+                System.out.println("*** DocumentControllerClass.findSomeDocument():" +
                         "  WRONG DB VALUES*** " + e.getMessage());
                 return getDocument(model);
             }

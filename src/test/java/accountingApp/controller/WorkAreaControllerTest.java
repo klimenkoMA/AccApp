@@ -109,7 +109,7 @@ class WorkAreaControllerTest {
 
         Assertions.assertEquals("workarea", viewName);
 
-        verify(model, times(2)).addAttribute("workAreaList", workAreaList);
+        verify(model, times(1)).addAttribute("workAreaList", workAreaList);
 
         verify(workAreaService, times(1)).deleteWorkAreaById(idCheck);
     }
@@ -155,7 +155,7 @@ class WorkAreaControllerTest {
 
         Assertions.assertEquals("workarea", viewName);
 
-        verify(model, times(2)).addAttribute("workAreaList", workAreaList);
+        verify(model, times(1)).addAttribute("workAreaList", workAreaList);
 
         verify(workAreaService, times(1)).updateWorkArea(any());
     }

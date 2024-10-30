@@ -157,7 +157,7 @@ class DevicesControllerTest {
         when(devicesService.findAllDevices()).thenReturn(devicesList);
 
         // Действие
-        String result = devicesController.updateProceduresAssigned(id, name, model);
+        String result = devicesController.updateDevice(id, name, model);
 
         // Проверка
         Assertions.assertEquals("devices", result);
@@ -172,7 +172,7 @@ class DevicesControllerTest {
         String name = "DeviceName";
 
         // Действие
-        String result = devicesController.updateProceduresAssigned(id, name, model);
+        String result = devicesController.updateDevice(id, name, model);
 
         // Проверка
         Assertions.assertEquals("devices", result);
@@ -187,7 +187,7 @@ class DevicesControllerTest {
         String name = "  "; // после очистки от пробелов значение будет пустым
 
         // Действие
-        String result = devicesController.updateProceduresAssigned(id, name, model);
+        String result = devicesController.updateDevice(id, name, model);
 
         // Проверка
         Assertions.assertEquals("devices", result);
@@ -205,7 +205,7 @@ class DevicesControllerTest {
         doThrow(new RuntimeException()).when(devicesService).updateDevice(any());
 
         // Действие
-        String result = devicesController.updateProceduresAssigned(id, name, model);
+        String result = devicesController.updateDevice(id, name, model);
 
         // Проверка
         Assertions.assertEquals("devices", result);
