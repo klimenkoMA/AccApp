@@ -56,7 +56,7 @@ public class EventsController {
                 || comment == null
         ) {
             System.out.println("*** EventsController.addEvent:  Attribute has a null value! ***");
-            return this.getEvents(model);
+            return getEvents(model);
         }
 
         String dateWithoutSpaces = date.trim();
@@ -99,7 +99,7 @@ public class EventsController {
         if (id == null
         ) {
             System.out.println("*** EventsController.deleteEvent:  Attribute ID has a null value! ***");
-            return this.getEvents(model);
+            return getEvents(model);
         }
 
         try {
@@ -111,7 +111,7 @@ public class EventsController {
                 List<Events> eventsList = eventsService.findAllEvents();
                 model.addAttribute("eventsList", eventsList);
             }
-            return this.getEvents(model);
+            return getEvents(model);
         } catch (Exception e) {
             System.out.println("*** EventsController.deleteEvent:  WRONG DB VALUES*** "
                     + e.getMessage());
