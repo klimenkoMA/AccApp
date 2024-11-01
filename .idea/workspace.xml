@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt screenshots.html">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Took off hibernates messages from console">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Check List" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/FeedbackControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/FeedbackControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/ITStaffControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/ITStaffControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -888,14 +878,7 @@
       <workItem from="1727146953008" duration="143635000" />
       <workItem from="1728351985138" duration="134961000" />
       <workItem from="1729822865411" duration="67179000" />
-      <workItem from="1730263088632" duration="21177000" />
-    </task>
-    <task id="LOCAL-00343" summary="Created a new entity feedback">
-      <created>1727147102475</created>
-      <option name="number" value="00343" />
-      <option name="presentableId" value="LOCAL-00343" />
-      <option name="project" value="LOCAL" />
-      <updated>1727147102476</updated>
+      <workItem from="1730263088632" duration="24033000" />
     </task>
     <task id="LOCAL-00344" summary="Corrected a feedback's view and logic">
       <created>1727149809605</created>
@@ -1233,7 +1216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730307591495</updated>
     </task>
-    <option name="localTasksCounter" value="392" />
+    <task id="LOCAL-00392" summary="Took off hibernates messages from console">
+      <created>1730359201601</created>
+      <option name="number" value="00392" />
+      <option name="presentableId" value="LOCAL-00392" />
+      <option name="project" value="LOCAL" />
+      <updated>1730359201601</updated>
+    </task>
+    <option name="localTasksCounter" value="393" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1256,7 +1246,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt all tests" />
     <MESSAGE value="Rebuilt some tests" />
     <MESSAGE value="Finished to create tests for DevicesControllerTest.class" />
     <MESSAGE value="Added some new test's methods" />
@@ -1281,7 +1270,8 @@
     <MESSAGE value="Finished to build a bootstrap-datepicker in head.html" />
     <MESSAGE value="Added a new field into DocumentClass.java and rebuild DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt all Controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt all Controllers" />
+    <MESSAGE value="Took off hibernates messages from console" />
+    <option name="LAST_COMMIT_MESSAGE" value="Took off hibernates messages from console" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
