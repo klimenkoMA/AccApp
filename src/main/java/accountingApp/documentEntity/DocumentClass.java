@@ -1,5 +1,6 @@
 package accountingApp.documentEntity;
 
+import accountingApp.entity.MultipartFileAdapter;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 
 @Document(collection = "documents")
 
-public class DocumentClass {
+public class DocumentClass extends MultipartFileAdapter {
 
     @Id
     private ObjectId id;
@@ -24,24 +25,28 @@ public class DocumentClass {
 
     @Field
     @Indexed
-    private String content;
+    private byte[] content;
 
     @Field
     @Indexed
     private String description;
 
 
-    public DocumentClass(String name, String content, String description) {
+    public DocumentClass(String name, byte[] content, String description) {
         this.name = name;
         this.content = content;
         this.description = description;
     }
 
-    public DocumentClass(ObjectId id, String name, String content, String description) {
+    public DocumentClass(ObjectId id, String name, byte[] content, String description) {
         this.id = id;
         this.name = name;
         this.content = content;
         this.description = description;
+    }
+
+    public DocumentClass(byte[] content) {
+        this.content = content;
     }
 
     public DocumentClass() {
@@ -55,11 +60,11 @@ public class DocumentClass {
         this.description = description;
     }
 
-    public String getContent() {
+    public byte[] getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent(byte[] content) {
         this.content = content;
     }
 
@@ -85,7 +90,7 @@ public class DocumentClass {
         return "DocumentClass{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", content='" + content + '\'' +
+                '\'' +
                 ", description='" + description + '\'' +
                 '}';
     }

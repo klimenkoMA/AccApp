@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class DocumentControllerClass {
 
     @PostMapping("/adddocument")
     public String addNewDocument(@RequestParam String name,
-                                 @RequestParam String content,
+                                 @RequestParam("content") MultipartFile content,
                                  @RequestParam String description,
                                  Model model) {
 
@@ -50,14 +51,14 @@ public class DocumentControllerClass {
         }
 
         String nameWithoutSpaces = name.trim();
-        String contentWithoutSpaces = content.trim();
+
         String descriptionWithoutSpaces = description.trim();
 
         try {
             if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
-                    && !contentWithoutSpaces.equals("") && !contentWithoutSpaces.equals(" ")
+                    && !content.isEmpty()
                     && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
-                DocumentClass document = new DocumentClass(name, content, description);
+                DocumentClass document = new DocumentClass(name, content.getBytes(), description);
                 documentServiceClass.addDocument(document);
                 return getDocument(model);
             }
@@ -112,7 +113,7 @@ public class DocumentControllerClass {
     @PostMapping("/updatedocument")
     public String updateSomeDocument(@RequestParam String id,
                                      @RequestParam String name,
-                                     @RequestParam String content,
+                                     @RequestParam("file") MultipartFile content,
                                      @RequestParam String description,
                                      Model model) {
         if (id == null
@@ -127,17 +128,17 @@ public class DocumentControllerClass {
 
         String nameWithoutSpaces = name.trim();
         String idWithoutSpaces = id.trim();
-        String contentWithoutSpaces = content.trim();
+
         String descriptionWithoutSpaces = description.trim();
 
         try {
             if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
                     && !idWithoutSpaces.equals("") && !idWithoutSpaces.equals(" ")
-                    && !contentWithoutSpaces.equals("") && !contentWithoutSpaces.equals(" ")
+                    && !content.isEmpty()
                     && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
                 DocumentClass document = documentServiceClass.findDocumentById(idWithoutSpaces);
                 document.setName(nameWithoutSpaces);
-                document.setContent(contentWithoutSpaces);
+                document.setContent(content.getBytes());
                 document.setDescription(descriptionWithoutSpaces);
                 documentServiceClass.addDocument(document);
                 return getDocument(model);
