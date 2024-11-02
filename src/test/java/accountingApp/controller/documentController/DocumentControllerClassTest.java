@@ -10,6 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Arrays;
 import java.util.List;
@@ -64,12 +65,12 @@ class DocumentControllerClassTest {
     void addDocumentValid() {
 
         String documentName = "doc1";
-        String documentContent = "content";
+        byte[] documentContent = "content".getBytes();
         String documentDescription = "descr";
 
         when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
-        String viewName = documentController.addNewDocument(documentName, documentContent,documentDescription, model);
+        String viewName = documentController.addNewDocument(documentName, new DocumentClass(documentContent),documentDescription, model);
 
         Assertions.assertEquals("documents", viewName);
 
@@ -83,12 +84,13 @@ class DocumentControllerClassTest {
     void addDocumentFail() {
 
         String documentName = " ";
-        String documentContent = " ";
+        byte[] documentContent = " ".getBytes();
         String documentDescription = " ";
 
         when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
-        String viewName = documentController.addNewDocument(documentName, documentContent, documentDescription, model);
+        String viewName = documentController.addNewDocument(documentName
+                , new DocumentClass(documentContent), documentDescription, model);
 
         Assertions.assertEquals("documents", viewName);
 

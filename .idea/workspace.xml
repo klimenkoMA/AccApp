@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Took off hibernates messages from console">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Tried to change input type from text into file in cruddoc.html">
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/MultipartFileAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +35,9 @@
         <option value="JavaScript File" />
         <option value="UML Activity" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -878,14 +889,7 @@
       <workItem from="1727146953008" duration="143635000" />
       <workItem from="1728351985138" duration="134961000" />
       <workItem from="1729822865411" duration="67179000" />
-      <workItem from="1730263088632" duration="24033000" />
-    </task>
-    <task id="LOCAL-00344" summary="Corrected a feedback's view and logic">
-      <created>1727149809605</created>
-      <option name="number" value="00344" />
-      <option name="presentableId" value="LOCAL-00344" />
-      <option name="project" value="LOCAL" />
-      <updated>1727149809605</updated>
+      <workItem from="1730263088632" duration="29583000" />
     </task>
     <task id="LOCAL-00345" summary="Corrected a feedbacks.html's view">
       <created>1727232185669</created>
@@ -1223,7 +1227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730359201601</updated>
     </task>
-    <option name="localTasksCounter" value="393" />
+    <task id="LOCAL-00393" summary="Tried to change input type from text into file in cruddoc.html">
+      <created>1730479617892</created>
+      <option name="number" value="00393" />
+      <option name="presentableId" value="LOCAL-00393" />
+      <option name="project" value="LOCAL" />
+      <updated>1730479617893</updated>
+    </task>
+    <option name="localTasksCounter" value="394" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1246,7 +1257,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt some tests" />
     <MESSAGE value="Finished to create tests for DevicesControllerTest.class" />
     <MESSAGE value="Added some new test's methods" />
     <MESSAGE value="Added some new test's methods v2" />
@@ -1271,7 +1281,8 @@
     <MESSAGE value="Added a new field into DocumentClass.java and rebuild DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt all Controllers" />
     <MESSAGE value="Took off hibernates messages from console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Took off hibernates messages from console" />
+    <MESSAGE value="Tried to change input type from text into file in cruddoc.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to change input type from text into file in cruddoc.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
