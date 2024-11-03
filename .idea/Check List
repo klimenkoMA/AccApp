@@ -1,0 +1,34 @@
+
+
+
+1. Добавить логгирование
+2.
+3.
+4. Продумать Инструкцию для пользователя
+5.
+6. Добавить в таблицу "Документы" файлы pdf
+7.
+
+
+
+    @GetMapping("/download/{id}")
+    public ResponseEntity<Resource> downloadDocument(@PathVariable String id) {
+        Document document = documentService.getDocumentById(id);
+        if (document != null) {
+            ByteArrayResource resource = new ByteArrayResource(document.getContent());
+            return ResponseEntity.ok()
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + document.getFilename() + "\"")
+                    .contentLength(document.getContent().length)
+                    .body(resource);
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
+
+        <ul>
+            <th:block th:each="document : ${documents}">
+                <li>
+                    <span th:text="${document.filename}"></span>
+                    <a th:href="@{/documents/download/{id}(id=${document.id})}">Download</a>
+                </li>
+            </th:block>
+        </ul>

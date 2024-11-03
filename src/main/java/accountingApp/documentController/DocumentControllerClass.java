@@ -3,9 +3,15 @@ package accountingApp.documentController;
 import accountingApp.documentEntity.DocumentClass;
 import accountingApp.documentService.DocumentServiceClass;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -113,7 +119,7 @@ public class DocumentControllerClass {
     @PostMapping("/updatedocument")
     public String updateSomeDocument(@RequestParam String id,
                                      @RequestParam String name,
-                                     @RequestParam("file") MultipartFile content,
+                                     @RequestParam("content") MultipartFile content,
                                      @RequestParam String description,
                                      Model model) {
         if (id == null
@@ -191,5 +197,19 @@ public class DocumentControllerClass {
             }
         }
     }
+
+    @GetMapping("/download/{id}")
+    public ResponseEntity<Resource> downloadDocument(@PathVariable String id) {
+        DocumentClass document = documentServiceClass.findDocumentById(id);
+        if (document != null) {
+            ByteArrayResource resource = new ByteArrayResource(document.getContent());
+            return ResponseEntity.ok()
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + document.getName() + "\"")
+                    .contentLength(document.getContent().length)
+                    .body(resource);
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
+
 
 }
