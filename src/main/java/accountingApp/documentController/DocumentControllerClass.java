@@ -2,12 +2,11 @@ package accountingApp.documentController;
 
 import accountingApp.documentEntity.DocumentClass;
 import accountingApp.documentService.DocumentServiceClass;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,13 +41,15 @@ public class DocumentControllerClass {
     }
 
     @PostMapping("/adddocument")
-    public String addNewDocument(@RequestParam String name,
+    public String addNewDocument(
+//            @RequestParam String name,
                                  @RequestParam("content") MultipartFile content,
                                  @RequestParam String description,
                                  Model model) {
 
-        if (name == null
-                || content == null
+        if (
+//                name == null
+                content == null
                 || description == null
         ) {
             System.out.println("*** DocumentControllerClass.addNewDocument():" +
@@ -56,15 +57,16 @@ public class DocumentControllerClass {
             return getDocument(model);
         }
 
-        String nameWithoutSpaces = name.trim();
+//        String nameWithoutSpaces = name.trim();
 
         String descriptionWithoutSpaces = description.trim();
 
         try {
-            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
-                    && !content.isEmpty()
+            if (
+//                    !nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
+                    !content.isEmpty()
                     && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
-                DocumentClass document = new DocumentClass(name, content.getBytes(), description);
+                DocumentClass document = new DocumentClass(content.getOriginalFilename(), content.getBytes(), description);
                 documentServiceClass.addDocument(document);
                 return getDocument(model);
             }
@@ -134,7 +136,6 @@ public class DocumentControllerClass {
 
         String nameWithoutSpaces = name.trim();
         String idWithoutSpaces = id.trim();
-
         String descriptionWithoutSpaces = description.trim();
 
         try {
@@ -142,12 +143,17 @@ public class DocumentControllerClass {
                     && !idWithoutSpaces.equals("") && !idWithoutSpaces.equals(" ")
                     && !content.isEmpty()
                     && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
-                DocumentClass document = documentServiceClass.findDocumentById(idWithoutSpaces);
-                document.setName(nameWithoutSpaces);
-                document.setContent(content.getBytes());
-                document.setDescription(descriptionWithoutSpaces);
-                documentServiceClass.addDocument(document);
-                return getDocument(model);
+                DocumentClass documentFromBD = documentServiceClass.findDocumentById(idWithoutSpaces);
+                if (documentFromBD != null) {
+
+                    DocumentClass documentToBD = new DocumentClass();
+                    documentToBD.setId(new ObjectId(idWithoutSpaces));
+                    documentToBD.setName(nameWithoutSpaces);
+                    documentToBD.setContent(content.getBytes());
+                    documentToBD.setDescription(descriptionWithoutSpaces);
+                    documentServiceClass.addDocument(documentToBD);
+                    return getDocument(model);
+                }
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
@@ -199,14 +205,21 @@ public class DocumentControllerClass {
     }
 
     @GetMapping("/download/{id}")
-    public ResponseEntity<Resource> downloadDocument(@PathVariable String id) {
+    public ResponseEntity<byte[]> downloadDocument(@PathVariable String id) {
         DocumentClass document = documentServiceClass.findDocumentById(id);
         if (document != null) {
-            ByteArrayResource resource = new ByteArrayResource(document.getContent());
-            return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + document.getName() + "\"")
-                    .contentLength(document.getContent().length)
-                    .body(resource);
+//            ByteArrayResource resource = new ByteArrayResource(document.getContent());
+//            return ResponseEntity.ok()
+//                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + document.getName() + "\"")
+//                    .contentLength(document.getContent().length)
+//                    .body(resource);
+//        }
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_PDF);
+            headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName() + ".pdf").build());
+            headers.setContentLength(document.getContent().length);
+
+            return new ResponseEntity<>(document.getContent(), headers, HttpStatus.OK);
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }

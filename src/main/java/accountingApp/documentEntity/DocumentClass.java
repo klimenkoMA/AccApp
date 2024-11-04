@@ -87,12 +87,7 @@ public class DocumentClass extends MultipartFileAdapter {
 
     @Override
     public String toString() {
-        return "DocumentClass{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        return name;
     }
 }
 
