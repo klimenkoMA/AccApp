@@ -70,7 +70,7 @@ class DocumentControllerClassTest {
 
         when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
-        String viewName = documentController.addNewDocument(documentName, new DocumentClass(documentContent),documentDescription, model);
+        String viewName = documentController.addNewDocument(new DocumentClass(documentContent),documentDescription, model);
 
         Assertions.assertEquals("documents", viewName);
 
@@ -89,8 +89,8 @@ class DocumentControllerClassTest {
 
         when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
-        String viewName = documentController.addNewDocument(documentName
-                , new DocumentClass(documentContent), documentDescription, model);
+        String viewName = documentController.addNewDocument(
+                new DocumentClass(documentContent), documentDescription, model);
 
         Assertions.assertEquals("documents", viewName);
 

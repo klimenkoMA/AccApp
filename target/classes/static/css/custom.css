@@ -229,6 +229,22 @@ input::placeholder {
     text-align: center;
 }
 
+.custom-file-upload {
+    appearance: none;
+    height: 30px;
+    width: 9.4rem;
+    border: 0;
+    border-radius: 5px;
+    background: #62a0f6;
+    color: #fcf6f6;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-shadow: #002349 2px 3px 4px;
+}
+input[type="file"] {
+    display: none; /* Скрыть стандартный элемент input */
+}
+
 .mid_part {
     display: flex;
     flex-direction: row;

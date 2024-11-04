@@ -16,14 +16,16 @@
                 <form class="popup_form" method="post" action="/adddocument"
                       enctype="multipart/form-data">
                     <div align="center">
-                        <label>
-                            <input type="text" name="name" align="middle" placeholder="Название документа"/>
-                        </label>
-                        <label>
+<!--                        <label style="text-align: center; margin-bottom: 7px">-->
+<!--                            <input type="text" name="name" align="middle" placeholder="Название документа"/>-->
+<!--                        </label>-->
+                        <label class="d-flex justify-content-center align-items-center
+                        button custom-file-upload" style="margin-bottom: 7px">
+                            Добавить файл
                             <input type="file" name="content" align="middle" placeholder="Документ"/>
                         </label>
-                        <label>
-                            <input type="text" name="description" align="middle" placeholder="Содержимое"/>
+                        <label style="text-align: center; margin-bottom: 7px">
+                            <input type="text" name="description" align="middle" placeholder="Описание"/>
                         </label>
                     </div>
                     <div align="center">
@@ -57,19 +59,22 @@
             <div class="popup_div">
                 <input type="checkbox" id="callback3">
                 <label class="popup_try" for="callback3">Обновить</label>
-                <form action="/updatedocument" class="popup_form" method="post">
+                <form action="/updatedocument" class="popup_form" method="post"
+                      enctype="multipart/form-data">
                     <div align="center">
-                        <label>
+                        <label style="text-align: center; margin-bottom: 7px">
                             <input type="text" name="id" align="middle" placeholder="ID документа">
                         </label>
-                        <label>
-                            <input type="text" name="name" align="middle" placeholder="Название документа">
+                        <label style="text-align: center; margin-bottom: 7px">
+                            <input type="text" name="name" align="middle" placeholder="Название документа"/>
                         </label>
-                        <label>
-                            <input type="text" name="content" align="middle" placeholder="Документ">
+                        <label class="d-flex justify-content-center align-items-center
+                        button custom-file-upload" style="margin-bottom: 7px">
+                            Добавить файл
+                            <input type="file" name="content" align="middle" placeholder="Документ"/>
                         </label>
-                        <label>
-                            <input type="text" name="description" align="middle" placeholder="Содержимое"/>
+                        <label style="text-align: center; margin-bottom: 7px">
+                            <input type="text" name="description" align="middle" placeholder="Описание"/>
                         </label>
                     </div>
                     <div align="center">
