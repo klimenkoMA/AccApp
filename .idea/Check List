@@ -2,33 +2,45 @@
 
 
 1. Добавить логгирование
-2.
-3.
-4. Продумать Инструкцию для пользователя
-5.
-6. Добавить в таблицу "Документы" файлы pdf
-7.
+2. Продумать Инструкцию для пользователя
 
 
+@GetMapping("/download/{id}")
+public ResponseEntity<byte[]> downloadDocument(@PathVariable String id) {
+    DocumentClass document = documentServiceClass.findDocumentById(id);
+    if (document != null) {
+        HttpHeaders headers = new HttpHeaders();
+        String docType = document.getContentType(); // Получаем тип контента из объекта документа
+        headers.setContentType(MediaType.parseMediaType(docType)); // Устанавливаем тип контента
+        headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName() + getFileExtension(docType)).build());
+        headers.setContentLength(document.getContent().length);
 
-    @GetMapping("/download/{id}")
-    public ResponseEntity<Resource> downloadDocument(@PathVariable String id) {
-        Document document = documentService.getDocumentById(id);
-        if (document != null) {
-            ByteArrayResource resource = new ByteArrayResource(document.getContent());
-            return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + document.getFilename() + "\"")
-                    .contentLength(document.getContent().length)
-                    .body(resource);
-        }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        return new ResponseEntity<>(document.getContent(), headers, HttpStatus.OK);
     }
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+}
 
-        <ul>
-            <th:block th:each="document : ${documents}">
-                <li>
-                    <span th:text="${document.filename}"></span>
-                    <a th:href="@{/documents/download/{id}(id=${document.id})}">Download</a>
-                </li>
-            </th:block>
-        </ul>
+// Метод для получения расширения файла на основе типа контента
+private String getFileExtension(String contentType) {
+    switch (contentType) {
+        case "application/pdf":
+            return ".pdf";
+        case "image/jpeg":
+            return ".jpg";
+        case "image/png":
+            return ".png";
+        case "application/msword":
+            return ".doc";
+        case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+            return ".docx";
+        case "application/vnd.ms-excel":
+            return ".xls";
+        case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+            return ".xlsx";
+        case "text/plain":
+            return ".txt";
+        // Добавьте другие необходимые случаи
+        default:
+            return ""; // Если расширение не найдено, возвращаем пустую строку
+    }
+}

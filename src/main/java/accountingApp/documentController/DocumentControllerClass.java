@@ -4,8 +4,6 @@ import accountingApp.documentEntity.DocumentClass;
 import accountingApp.documentService.DocumentServiceClass;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.core.io.Resource;
 import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -41,14 +39,11 @@ public class DocumentControllerClass {
     }
 
     @PostMapping("/adddocument")
-    public String addNewDocument(
-//            @RequestParam String name,
-                                 @RequestParam("content") MultipartFile content,
+    public String addNewDocument(@RequestParam("content") MultipartFile content,
                                  @RequestParam String description,
                                  Model model) {
 
         if (
-//                name == null
                 content == null
                 || description == null
         ) {
@@ -57,16 +52,14 @@ public class DocumentControllerClass {
             return getDocument(model);
         }
 
-//        String nameWithoutSpaces = name.trim();
-
         String descriptionWithoutSpaces = description.trim();
 
         try {
             if (
-//                    !nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
                     !content.isEmpty()
                     && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
-                DocumentClass document = new DocumentClass(content.getOriginalFilename(), content.getBytes(), description);
+                DocumentClass document = new DocumentClass(content.getOriginalFilename(), content.getBytes()
+                        , description, content.getContentType());
                 documentServiceClass.addDocument(document);
                 return getDocument(model);
             }
@@ -120,12 +113,10 @@ public class DocumentControllerClass {
 
     @PostMapping("/updatedocument")
     public String updateSomeDocument(@RequestParam String id,
-                                     @RequestParam String name,
                                      @RequestParam("content") MultipartFile content,
                                      @RequestParam String description,
                                      Model model) {
         if (id == null
-                || name == null
                 || content == null
                 || description == null
         ) {
@@ -134,13 +125,12 @@ public class DocumentControllerClass {
             return getDocument(model);
         }
 
-        String nameWithoutSpaces = name.trim();
+
         String idWithoutSpaces = id.trim();
         String descriptionWithoutSpaces = description.trim();
 
         try {
-            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
-                    && !idWithoutSpaces.equals("") && !idWithoutSpaces.equals(" ")
+            if (!idWithoutSpaces.equals("") && !idWithoutSpaces.equals(" ")
                     && !content.isEmpty()
                     && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
                 DocumentClass documentFromBD = documentServiceClass.findDocumentById(idWithoutSpaces);
@@ -148,9 +138,10 @@ public class DocumentControllerClass {
 
                     DocumentClass documentToBD = new DocumentClass();
                     documentToBD.setId(new ObjectId(idWithoutSpaces));
-                    documentToBD.setName(nameWithoutSpaces);
+                    documentToBD.setName(documentFromBD.getOriginalFilename());
                     documentToBD.setContent(content.getBytes());
                     documentToBD.setDescription(descriptionWithoutSpaces);
+                    documentToBD.setContentType(documentFromBD.getContentType());
                     documentServiceClass.addDocument(documentToBD);
                     return getDocument(model);
                 }
@@ -208,15 +199,13 @@ public class DocumentControllerClass {
     public ResponseEntity<byte[]> downloadDocument(@PathVariable String id) {
         DocumentClass document = documentServiceClass.findDocumentById(id);
         if (document != null) {
-//            ByteArrayResource resource = new ByteArrayResource(document.getContent());
-//            return ResponseEntity.ok()
-//                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + document.getName() + "\"")
-//                    .contentLength(document.getContent().length)
-//                    .body(resource);
-//        }
+
             HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.APPLICATION_PDF);
-            headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName() + ".pdf").build());
+            String docType = document.getContentType();
+            assert docType != null;
+            headers.setContentType(MediaType.parseMediaType(docType));
+//            headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName() + ".pdf").build());
+            headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName()).build());
             headers.setContentLength(document.getContent().length);
 
             return new ResponseEntity<>(document.getContent(), headers, HttpStatus.OK);
