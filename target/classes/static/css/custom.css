@@ -319,7 +319,7 @@ tr:nth-of-type(odd) {
 }
 
 .table-result-db{
-    height: 500px;
+    height: 450px;
     overflow-y: auto;
     display: block;
 }
