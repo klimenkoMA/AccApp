@@ -60,6 +60,11 @@ html, body {
     vertical-align: top;
 }
 
+.main-work{
+    flex: 1 1 auto;
+    height: 400px;
+}
+
 .crud_buttons {
     display: flex;
     flex-direction: row;
@@ -233,13 +238,14 @@ input::placeholder {
     appearance: none;
     height: 30px;
     width: 9.4rem;
-    border: 0;
+    border: 0 #62a0f6;
+    box-shadow: 0 0 3px 1px #62a0f6;
     border-radius: 5px;
-    background: #62a0f6;
-    color: #fcf6f6;
+    background: #fcf6f6;
+    color: gray;
     padding: 2px 5px;
-    font-size: 12px;
-    text-shadow: #002349 2px 3px 4px;
+    font-size: 14px;
+    text-transform: initial;
 }
 input[type="file"] {
     display: none; /* Скрыть стандартный элемент input */
@@ -310,6 +316,12 @@ tr:nth-of-type(even) {
 
 tr:nth-of-type(odd) {
     background-color: #f8fafa;
+}
+
+.table-result-db{
+    height: 500px;
+    overflow-y: auto;
+    display: block;
 }
 
 .db_table {

@@ -31,25 +31,39 @@ public class DocumentClass extends MultipartFileAdapter {
     @Indexed
     private String description;
 
+    @Field
+    @Indexed
+    private String contentType;
 
-    public DocumentClass(String name, byte[] content, String description) {
+    public DocumentClass(String name, byte[] content, String description, String contentType) {
         this.name = name;
         this.content = content;
         this.description = description;
+        this.contentType = contentType;
     }
 
-    public DocumentClass(ObjectId id, String name, byte[] content, String description) {
+    public DocumentClass(ObjectId id, String name, byte[] content, String description, String contentType) {
         this.id = id;
         this.name = name;
         this.content = content;
         this.description = description;
+        this.contentType = contentType;
     }
 
-    public DocumentClass(byte[] content) {
+    public DocumentClass(byte[] content, String contentType) {
         this.content = content;
+        this.contentType = contentType;
     }
 
     public DocumentClass() {
+    }
+
+    public String getContentType() {
+        return contentType;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
 
     public String getDescription() {

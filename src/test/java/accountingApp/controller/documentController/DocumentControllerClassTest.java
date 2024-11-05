@@ -10,7 +10,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Arrays;
 import java.util.List;
@@ -64,13 +63,14 @@ class DocumentControllerClassTest {
     @Test
     void addDocumentValid() {
 
-        String documentName = "doc1";
         byte[] documentContent = "content".getBytes();
         String documentDescription = "descr";
+        String contentType = "doc";
 
         when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
-        String viewName = documentController.addNewDocument(new DocumentClass(documentContent),documentDescription, model);
+        String viewName = documentController.addNewDocument(new DocumentClass(documentContent
+                , contentType), documentDescription, model);
 
         Assertions.assertEquals("documents", viewName);
 
@@ -83,14 +83,14 @@ class DocumentControllerClassTest {
     @Test
     void addDocumentFail() {
 
-        String documentName = " ";
         byte[] documentContent = " ".getBytes();
         String documentDescription = " ";
+        String contentType = " ";
 
         when(this.documentService.findAllDocuments()).thenReturn(documentClassList);
 
         String viewName = documentController.addNewDocument(
-                new DocumentClass(documentContent), documentDescription, model);
+                new DocumentClass(documentContent, contentType), documentDescription, model);
 
         Assertions.assertEquals("documents", viewName);
 
@@ -136,8 +136,6 @@ class DocumentControllerClassTest {
     @Test
     void deleteDocumentFailWithException() {
 
-        String documentName = "gfdddf";
-
         doThrow(new RuntimeException()).when(documentService).deleteDocument(any());
 
         verify(model, never()).addAttribute("documentClassList", documentClassList);
@@ -176,7 +174,7 @@ class DocumentControllerClassTest {
 
         String documentId = "1212";
 
-       doThrow(new RuntimeException()).when(documentService).findDocumentById(documentId);
+        doThrow(new RuntimeException()).when(documentService).findDocumentById(documentId);
 
         verify(documentService, never()).findDocumentById(documentId);
 
