@@ -22,49 +22,57 @@
 
         <div class="col" th:replace="fragments/crud/cruddoc :: cruddoc"></div>
 
-        <div class="d-flex" style="max-width: min-content; justify-content: center;
+        <table class="row" style=" justify-content: center; width: 77rem;
+                    align-content: center; height: 3vh; table-layout: fixed">
+
+            <tr class="text-light fs-5" style="background-color: #62a0f6">
+                <th class="p-2 m-2 text-center align-self-center"
+                    style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                    ; width: 25.1vh">
+                    ID документа
+                </th>
+                <th class="p-2 m-2 text-center align-self-center"
+                    style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                    ; width: 30vh">
+                    Название
+                </th>
+                <th class="p-2 m-2 text-center align-self-center"
+                    style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                    ; width: 25vh">
+                    Документ
+                </th>
+                <th class="p-2 m-2 text-center align-self-center"
+                    style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                    ; width: 48vh">
+                    Содержимое документа
+                </th>
+            </tr>
+        </table>
+
+        <div class="d-flex" style="justify-content: center;width: 78.5rem;
                     align-content: baseline; max-height: min-content">
-            <table class="p-3 m-3 col table-result-db" style="align-self: center">
 
-                <tr class="text-light fs-5" style="background-color: #62a0f6">
-                    <th class="p-1 m-1 text-center"
-                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">ID документа
-                    </th>
-                    <th class="p-1 m-1 text-center"
-                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6">Название
-                    </th>
-                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
-                        Документ
-                    </th>
-                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
-                        Содержимое документа
-                    </th>
-                </tr>
-
-                <form>
-                    <td class="text-center p-1" style="background-color: white">
-
-                    </td>
-                </form>
+            <table class="p-3 m-2 col table-result-db" style="align-self: center
+                ; table-layout: fixed">
 
                 <div th:each="element : ${documentClassList}">
                     <div class="col">
                         <tr style="align-self: center">
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 10vh">
+                                style="width: 20vh">
                                 <div>[[${element.id}]]</div>
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 20vh">
+                                style="width: 30vh">
                                 <div>[[${element.name}]]</div>
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 25vh">
+                                style="width: 25vh">
                                 <a th:href="@{/download/{id}(id=${element.id})}">Скачать документ</a>
 
                             </td>
                             <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 45vh">
+                                style="width: 55vh">
                                 <div>[[${element.description}]]</div>
                             </td>
                         </tr>

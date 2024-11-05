@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Tried to change input type from text into file in cruddoc.html v4">
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Finished changing input type from text into file in cruddoc.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentService/DocumentServiceClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/MultipartFileAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/MultipartFileAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentService/DocumentServiceClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/MultipartFileAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/MultipartFileAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/documentController/DocumentControllerClassTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -892,14 +879,7 @@
       <workItem from="1727146953008" duration="143635000" />
       <workItem from="1728351985138" duration="134961000" />
       <workItem from="1729822865411" duration="67179000" />
-      <workItem from="1730263088632" duration="62540000" />
-    </task>
-    <task id="LOCAL-00348" summary="Rebuilt a feedbacks.html">
-      <created>1727507815240</created>
-      <option name="number" value="00348" />
-      <option name="presentableId" value="LOCAL-00348" />
-      <option name="project" value="LOCAL" />
-      <updated>1727507815241</updated>
+      <workItem from="1730263088632" duration="70431000" />
     </task>
     <task id="LOCAL-00349" summary="Rebuilt a couple of things in frontend">
       <created>1727534013730</created>
@@ -1237,7 +1217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730710779206</updated>
     </task>
-    <option name="localTasksCounter" value="397" />
+    <task id="LOCAL-00397" summary="Finished changing input type from text into file in cruddoc.html">
+      <created>1730784874580</created>
+      <option name="number" value="00397" />
+      <option name="presentableId" value="LOCAL-00397" />
+      <option name="project" value="LOCAL" />
+      <updated>1730784874580</updated>
+    </task>
+    <option name="localTasksCounter" value="398" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1260,7 +1247,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added some new test's methods v3" />
     <MESSAGE value="Added some new test's methods v4" />
     <MESSAGE value="Added some new test's methods v5" />
     <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests" />
@@ -1285,7 +1271,8 @@
     <MESSAGE value="Tried to change input type from text into file in cruddoc.html v2" />
     <MESSAGE value="Tried to change input type from text into file in cruddoc.html v3" />
     <MESSAGE value="Tried to change input type from text into file in cruddoc.html v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to change input type from text into file in cruddoc.html v4" />
+    <MESSAGE value="Finished changing input type from text into file in cruddoc.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished changing input type from text into file in cruddoc.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
