@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Finished changing input type from text into file in cruddoc.html">
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild documents.html">
+      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
@@ -879,14 +880,7 @@
       <workItem from="1727146953008" duration="143635000" />
       <workItem from="1728351985138" duration="134961000" />
       <workItem from="1729822865411" duration="67179000" />
-      <workItem from="1730263088632" duration="70431000" />
-    </task>
-    <task id="LOCAL-00349" summary="Rebuilt a couple of things in frontend">
-      <created>1727534013730</created>
-      <option name="number" value="00349" />
-      <option name="presentableId" value="LOCAL-00349" />
-      <option name="project" value="LOCAL" />
-      <updated>1727534013730</updated>
+      <workItem from="1730263088632" duration="89458000" />
     </task>
     <task id="LOCAL-00350" summary="Rebuilt a couple of things in frontend v2">
       <created>1727592918623</created>
@@ -1224,7 +1218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730784874580</updated>
     </task>
-    <option name="localTasksCounter" value="398" />
+    <task id="LOCAL-00398" summary="Rebuild documents.html">
+      <created>1730794989558</created>
+      <option name="number" value="00398" />
+      <option name="presentableId" value="LOCAL-00398" />
+      <option name="project" value="LOCAL" />
+      <updated>1730794989558</updated>
+    </task>
+    <option name="localTasksCounter" value="399" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1247,7 +1248,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added some new test's methods v4" />
     <MESSAGE value="Added some new test's methods v5" />
     <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests" />
     <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests v2" />
@@ -1272,7 +1272,8 @@
     <MESSAGE value="Tried to change input type from text into file in cruddoc.html v3" />
     <MESSAGE value="Tried to change input type from text into file in cruddoc.html v4" />
     <MESSAGE value="Finished changing input type from text into file in cruddoc.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished changing input type from text into file in cruddoc.html" />
+    <MESSAGE value="Rebuild documents.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild documents.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
