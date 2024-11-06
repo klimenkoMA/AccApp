@@ -22,65 +22,65 @@
 
         <div class="col" th:replace="fragments/crud/cruddoc :: cruddoc"></div>
 
-        <table class="row" style=" justify-content: center; width: 77rem;
-                    align-content: center; height: 3vh; table-layout: fixed">
+        <div class="table-result-db" style="justify-content: center; max-height: min-content">
 
-            <tr class="text-light fs-5" style="background-color: #62a0f6">
-                <th class="p-2 m-2 text-center align-self-center"
-                    style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                    ; width: 25.1vh">
-                    ID документа
-                </th>
-                <th class="p-2 m-2 text-center align-self-center"
-                    style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                    ; width: 30vh">
-                    Название
-                </th>
-                <th class="p-2 m-2 text-center align-self-center"
-                    style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                    ; width: 25vh">
-                    Документ
-                </th>
-                <th class="p-2 m-2 text-center align-self-center"
-                    style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                    ; width: 48vh">
-                    Содержимое документа
-                </th>
-            </tr>
-        </table>
+            <table class="row" style=" justify-content: center;
+                  align-content: center; height: 3rem; table-layout: fixed">
 
-        <div class="d-flex" style="justify-content: center;width: 78.5rem;
-                    align-content: baseline; max-height: min-content">
-
-            <table class="p-3 m-2 col table-result-db" style="align-self: center
-                ; table-layout: fixed">
-
-                <div th:each="element : ${documentClassList}">
-                    <div class="col">
-                        <tr style="align-self: center">
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="width: 20vh">
-                                <div>[[${element.id}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="width: 30vh">
-                                <div>[[${element.name}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="width: 25vh">
-                                <a th:href="@{/download/{id}(id=${element.id})}">Скачать документ</a>
-
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="width: 55vh">
-                                <div>[[${element.description}]]</div>
-                            </td>
-                        </tr>
-                    </div>
-                </div>
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-
+                <tr class="text-light fs-5" style="background-color: #62a0f6">
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 15rem">
+                        ID документа
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 15rem">
+                        Название
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 15rem">
+                        Документ
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 35rem">
+                        Содержимое документа
+                    </th>
+                </tr>
             </table>
+
+            <div class="scroll-tbody">
+                <table class="col" style="align-self: center">
+
+                    <div th:each="element : ${documentClassList}">
+                        <div class="col">
+                            <tr style="align-self: center">
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 15rem">
+                                    <div>[[${element.id}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 15rem">
+                                    <div>[[${element.name}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 15rem">
+                                    <a th:href="@{/download/{id}(id=${element.id})}">Скачать документ</a>
+
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 35rem">
+                                    <div>[[${element.description}]]</div>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+                </table>
+            </div>
         </div>
     </main>
     <footer>

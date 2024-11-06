@@ -46,7 +46,7 @@ html, body {
     font-size: larger;
 }
 
-.navbar .nav-link:hover{
+.navbar .nav-link:hover {
     color: grey;
     transition: font-size 2s ease-in-out;
     transform: scale(1.2);
@@ -60,7 +60,7 @@ html, body {
     vertical-align: top;
 }
 
-.main-work{
+.main-work {
     flex: 1 1 auto;
     height: 400px;
 }
@@ -247,6 +247,7 @@ input::placeholder {
     font-size: 14px;
     text-transform: initial;
 }
+
 input[type="file"] {
     display: none; /* Скрыть стандартный элемент input */
 }
@@ -318,10 +319,35 @@ tr:nth-of-type(odd) {
     background-color: #f8fafa;
 }
 
-.table-result-db{
+.table-result-db {
+    /*height: 450px;*/
+    /*overflow-y: auto;*/
+    /*display: block;*/
+    width: 80rem;
+}
+
+.table-result-db table{
+    /*width:100%;*/
+    table-layout: fixed;
+    border: none;
+}
+
+.scroll-tbody {
     height: 450px;
     overflow-y: auto;
     display: block;
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Ширина скролл-бара */
+}
+
+/* Стиль для ползунка (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #d0dede; /* Цвет ползунка */
+    border-radius: 6px; /* Закругление углов */
+    scroll-margin: 5px;
+
 }
 
 .db_table {
