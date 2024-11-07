@@ -35,24 +35,7 @@
             </div>
 
         </td>
-        <td>
 
-            <div class="popup_div">
-                <input type="checkbox" id="callback2">
-                <label class="popup_try" for="callback2">Удалить</label>
-                <form class="popup_form" method="post" action="/deletefeedback">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID отзыва">
-                        </label>
-                    </div>
-                    <button class="button" type="submit">Удалить</button>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <label class="close" for="callback2">+</label>
-                </form>
-            </div>
-
-        </td>
         <td>
 
             <div class="popup_div">
@@ -93,6 +76,25 @@
                     </div>
                     <button type="submit" class="button">Найти</button>
                     <label class="close" for="callback4">+</label>
+                </form>
+            </div>
+
+        </td>
+
+        <td>
+
+            <div class="popup_div">
+                <input type="checkbox" id="callback2">
+                <label class="popup_try" for="callback2">Удалить</label>
+                <form class="popup_form" method="post" action="/deletefeedback">
+                    <div align="center">
+                        <label>
+                            <input type="text" name="id" placeholder="ID отзыва">
+                        </label>
+                    </div>
+                    <button class="button" type="submit">Удалить</button>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <label class="close" for="callback2">+</label>
                 </form>
             </div>
 
