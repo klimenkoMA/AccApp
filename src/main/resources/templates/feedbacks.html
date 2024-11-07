@@ -21,49 +21,65 @@
 
         <div class="col" th:replace="fragments/crud/crudfeedbacks :: crudfeedbacks"></div>
 
-        <div class="d-flex col" style="max-width: min-content; justify-content: center;
-                    align-content: baseline; max-height: min-content; margin-top: 2.2rem">
-            <table class="p-3 m-3" style="align-self: center;justify-items: center;">
+        <div class="table-result-db" style="justify-content: center; max-height: min-content">
+
+            <table class="row" style=" justify-content: center;
+                  align-content: center; height: 3rem; table-layout: fixed">
 
                 <tr class="text-light fs-5" style="background-color: #62a0f6">
-                    <th class="p-1 m-1 text-center" style="width: 5vh">ID отзыва</th>
-                    <th class="p-1 m-1 text-center" style="width: 20vh">Имя</th>
-                    <th class="p-1 m-1 text-center" style="width: 20vh">E-mail</th>
-                    <th class="p-1 m-1 text-center" style="width: 55vh; padding-right: 1vh">Отзыв</th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 15rem">
+                        ID отзыва
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 15rem">
+                        Имя
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 15rem">
+                        E-mail
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 35rem">
+                        Отзыв
+                    </th>
                     </th>
                 </tr>
-
-                <form>
-                    <td class="text-center p-1" style="background-color: white">
-
-                    </td>
-                </form>
-
-                <div th:each="element : ${feedbackList}">
-                    <div class="col-8">
-                        <tr style="align-self: center">
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 10vh">
-                                <div>[[${element.id}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 20vh">
-                                <div>[[${element.name}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 20vh">
-                                <div>[[${element.email}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 40vh">
-                                <div>[[${element.message}]]</div>
-                            </td>
-                        </tr>
-                    </div>
-                </div>
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-
             </table>
+
+            <div class="scroll-tbody">
+                <table class="col" style="align-self: center">
+
+                    <div th:each="element : ${feedbackList}">
+                        <div class="col-8">
+                            <tr style="align-self: center">
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 15rem">
+                                    <div>[[${element.id}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 15rem">
+                                    <div>[[${element.name}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 15rem">
+                                    <div>[[${element.email}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 35rem">
+                                    <div>[[${element.message}]]</div>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+                </table>
+            </div>
         </div>
 
     </main>
