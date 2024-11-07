@@ -34,25 +34,7 @@
                 </form>
             </div>
         </td>
-        <td>
-            <div class="popup_div">
-                <input type="checkbox" id="callback2">
-                <label class="popup_try" for="callback2">Удалить</label>
-                <form action="/deletedocument" class="popup_form" method="post">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="name" align="middle"
-                                   placeholder="Название или ID документа"/>
-                        </label>
-                    </div>
-                    <div>
-                        <button class="button" type="submit">Удалить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <label class="close" for="callback2">+</label>
-                </form>
-            </div>
-        </td>
+
         <td>
             <div class="popup_div">
                 <input type="checkbox" id="callback3">
@@ -100,6 +82,27 @@
                 </form>
             </div>
         </td>
+
+        <td>
+            <div class="popup_div">
+                <input type="checkbox" id="callback2">
+                <label class="popup_try" for="callback2">Удалить</label>
+                <form action="/deletedocument" class="popup_form" method="post">
+                    <div align="center">
+                        <label>
+                            <input type="text" name="name" align="middle"
+                                   placeholder="Название или ID документа"/>
+                        </label>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Удалить</button>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <label class="close" for="callback2">+</label>
+                </form>
+            </div>
+        </td>
+
     </table>
 </div>
 

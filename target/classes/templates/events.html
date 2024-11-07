@@ -21,77 +21,91 @@
 
         <div class="col" th:replace="fragments/crud/crudevents :: crudevents"></div>
 
-        <div class="d-flex col" style="max-width: min-content; justify-content: center;
-                    align-content: baseline; max-height: min-content; margin-top: 2.2rem">
-            <table class="p-3 m-3 col" style="align-self: center;
-                    max-width: 150vh;">
+        <div class="table-result-db" style="justify-content: center; max-height: min-content">
+
+            <table class="row" style=" justify-content: center;
+                  align-content: center; height: 3rem; table-layout: fixed">
 
                 <tr class="text-light fs-5" style="background-color: #62a0f6">
-                    <th class="p-1 m-1 text-center"
-                        style="border-color: #62a0f6">ID
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 6rem">
+                        ID
                     </th>
-                    <th class="p-1 m-1 text-center"
-                        style="border-color: #62a0f6">Дата события
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 8rem">
+                        Дата события
                     </th>
-                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 12rem">
                         Оборудование
                     </th>
-                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 10rem">
                         ФИО сотрудника
                     </th>
-                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width:10rem">
                         ФИО программиста
                     </th>
-                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 10rem">
                         Филиал
                     </th>
-                    <th class="p-1 m-1 text-center" style="border-color: #62a0f6">
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 23rem">
                         Причина
                     </th>
                 </tr>
-                <form>
-                    <td class="text-center p-1" style="background-color: white">
-
-                    </td>
-                </form>
-
-                <div th:each="element : ${eventsList}">
-                    <div class="col">
-                        <tr style="align-self: center">
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 10vh">
-                                <div>[[${element.id}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 12vh">
-                                <div>[[${element.date}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 20vh">
-                                <div>[[${element.device}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 20vh">
-                                <div>[[${element.employeeid}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 20vh">
-                                <div>[[${element.itstaffid}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 10vh; max-width: 12vh">
-                                <div>[[${element.workarea}]]</div>
-                            </td>
-                            <td class="p-2 m-2 text-center border border-1 border-dark"
-                                style="min-width: 50vh">
-                                <div>[[${element.comment}]]</div>
-                            </td>
-                        </tr>
-                    </div>
-                </div>
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </table>
 
+            <div class="scroll-tbody">
+                <table class="col" style="align-self: center; margin-top: 15px">
+
+                    <div th:each="element : ${eventsList}">
+                        <div class="col">
+                            <tr style="align-self: center">
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="min-width: 6rem">
+                                    <div>[[${element.id}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="min-width: 8rem">
+                                    <div>[[${element.date}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="min-width: 12rem">
+                                    <div>[[${element.device}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="min-width: 10rem">
+                                    <div>[[${element.employeeid}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="min-width: 10rem">
+                                    <div>[[${element.itstaffid}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="min-width: 10rem">
+                                    <div>[[${element.workarea}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="min-width: 22rem">
+                                    <div>[[${element.comment}]]</div>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </table>
+
+            </div>
         </div>
 
     </main>

@@ -320,14 +320,10 @@ tr:nth-of-type(odd) {
 }
 
 .table-result-db {
-    /*height: 450px;*/
-    /*overflow-y: auto;*/
-    /*display: block;*/
     width: 80rem;
 }
 
 .table-result-db table{
-    /*width:100%;*/
     table-layout: fixed;
     border: none;
 }
