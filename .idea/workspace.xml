@@ -4,33 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Finished rebuilding documents.html&#10;Added scroll-y bar">
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudfeedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudfeedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruditstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruditstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudfeedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudfeedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruditstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruditstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -434,15 +415,13 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -603,9 +582,9 @@
       <item itemvalue="JUnit.EmployeeControllerTest" />
       <item itemvalue="JUnit.EmployeeControllerTest.mustReturnEmployeesList" />
       <item itemvalue="JUnit.EventsControllerTest" />
-      <item itemvalue="Spring Boot.AccountingApplication" />
       <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentFail" />
       <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackValid" />
+      <item itemvalue="Spring Boot.AccountingApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -900,14 +879,8 @@
       <workItem from="1727146953008" duration="143635000" />
       <workItem from="1728351985138" duration="134961000" />
       <workItem from="1729822865411" duration="67179000" />
-      <workItem from="1730263088632" duration="97441000" />
-    </task>
-    <task id="LOCAL-00351" summary="Rebuilt a couple of things in frontend v3">
-      <created>1727611907900</created>
-      <option name="number" value="00351" />
-      <option name="presentableId" value="LOCAL-00351" />
-      <option name="project" value="LOCAL" />
-      <updated>1727611907900</updated>
+      <workItem from="1730263088632" duration="97779000" />
+      <workItem from="1730956711300" duration="8529000" />
     </task>
     <task id="LOCAL-00352" summary="Rebuilt a couple of things in frontend v4">
       <created>1727624968501</created>
@@ -1245,7 +1218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730911991296</updated>
     </task>
-    <option name="localTasksCounter" value="400" />
+    <task id="LOCAL-00400" summary="Rebuild all crud thymeleaf fragments">
+      <created>1730956534698</created>
+      <option name="number" value="00400" />
+      <option name="presentableId" value="LOCAL-00400" />
+      <option name="project" value="LOCAL" />
+      <updated>1730956534698</updated>
+    </task>
+    <option name="localTasksCounter" value="401" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1268,7 +1248,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests" />
     <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests v2" />
     <MESSAGE value="Added some new test's into FeedbackControllerTest.class" />
     <MESSAGE value="Finished to create unit tests" />
@@ -1293,7 +1272,8 @@
     <MESSAGE value="Finished changing input type from text into file in cruddoc.html" />
     <MESSAGE value="Rebuild documents.html" />
     <MESSAGE value="Finished rebuilding documents.html&#10;Added scroll-y bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished rebuilding documents.html&#10;Added scroll-y bar" />
+    <MESSAGE value="Rebuild all crud thymeleaf fragments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuild all crud thymeleaf fragments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
