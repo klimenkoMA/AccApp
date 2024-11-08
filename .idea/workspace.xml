@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,17 +417,6 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DocumentControllerClassTest.addDocumentFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -880,14 +871,8 @@
       <workItem from="1728351985138" duration="134961000" />
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
-      <workItem from="1730956711300" duration="8529000" />
-    </task>
-    <task id="LOCAL-00352" summary="Rebuilt a couple of things in frontend v4">
-      <created>1727624968501</created>
-      <option name="number" value="00352" />
-      <option name="presentableId" value="LOCAL-00352" />
-      <option name="project" value="LOCAL" />
-      <updated>1727624968501</updated>
+      <workItem from="1730956711300" duration="12635000" />
+      <workItem from="1731039432298" duration="2375000" />
     </task>
     <task id="LOCAL-00353" summary="Rebuilt a couple of things in frontend v5">
       <created>1727664150543</created>
@@ -1225,7 +1210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730956534698</updated>
     </task>
-    <option name="localTasksCounter" value="401" />
+    <task id="LOCAL-00401" summary="Corrected some cosmetic issues in all CRUD pages">
+      <created>1730972381705</created>
+      <option name="number" value="00401" />
+      <option name="presentableId" value="LOCAL-00401" />
+      <option name="project" value="LOCAL" />
+      <updated>1730972381705</updated>
+    </task>
+    <option name="localTasksCounter" value="402" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1248,7 +1240,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added CRUD buttons into feedbacks.html and created some unit tests v2" />
     <MESSAGE value="Added some new test's into FeedbackControllerTest.class" />
     <MESSAGE value="Finished to create unit tests" />
     <MESSAGE value="Added sone new fields in Events.java, Room.java, WorkArea.java" />
@@ -1273,7 +1264,8 @@
     <MESSAGE value="Rebuild documents.html" />
     <MESSAGE value="Finished rebuilding documents.html&#10;Added scroll-y bar" />
     <MESSAGE value="Rebuild all crud thymeleaf fragments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuild all crud thymeleaf fragments" />
+    <MESSAGE value="Corrected some cosmetic issues in all CRUD pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected some cosmetic issues in all CRUD pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
