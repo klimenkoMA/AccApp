@@ -3,6 +3,8 @@ package accountingApp.documentController;
 import accountingApp.documentEntity.DocumentClass;
 import accountingApp.documentService.DocumentServiceClass;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
@@ -28,6 +30,8 @@ import java.util.List;
 @Controller
 public class DocumentControllerClass {
 
+    final Logger logger = LoggerFactory.getLogger(DocumentControllerClass.class);
+
     @Autowired
     DocumentServiceClass documentServiceClass;
 
@@ -47,7 +51,7 @@ public class DocumentControllerClass {
                 content == null
                 || description == null
         ) {
-            System.out.println("*** DocumentControllerClass.addNewDocument():" +
+            logger.warn("*** DocumentControllerClass.addNewDocument():" +
                     "  Attribute has a null value! ***");
             return getDocument(model);
         }
@@ -65,7 +69,7 @@ public class DocumentControllerClass {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** DocumentControllerClass.addNewDocument():" +
+            logger.error("*** DocumentControllerClass.addNewDocument():" +
                     "  WRONG DB VALUES*** " + e.getMessage());
             return getDocument(model);
         }
@@ -76,7 +80,7 @@ public class DocumentControllerClass {
                                      Model model) {
 
         if (name == null) {
-            System.out.println("*** DocumentControllerClass.deleteSomeDocument():" +
+            logger.warn("*** DocumentControllerClass.deleteSomeDocument():" +
                     "  Attribute has a null value! ***");
             return getDocument(model);
         }
@@ -92,7 +96,7 @@ public class DocumentControllerClass {
             }
             throw new Exception("It`s not an ID!");
         } catch (Exception e) {
-            System.out.println("*** DocumentControllerClass.deleteSomeDocument(): " +
+            logger.warn("*** DocumentControllerClass.deleteSomeDocument(): " +
                     e.getMessage());
             try {
                 if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
@@ -104,7 +108,7 @@ public class DocumentControllerClass {
                 }
                 throw new Exception("Attribute is empty!");
             } catch (Exception e1) {
-                System.out.println("*** DocumentControllerClass.deleteSomeDocument():" +
+                logger.error("*** DocumentControllerClass.deleteSomeDocument():" +
                         "  WRONG DB VALUES*** " + e.getMessage());
                 return getDocument(model);
             }
@@ -120,7 +124,7 @@ public class DocumentControllerClass {
                 || content == null
                 || description == null
         ) {
-            System.out.println("*** DocumentControllerClass.updateSomeDocument():" +
+            logger.warn("*** DocumentControllerClass.updateSomeDocument():" +
                     "  Attribute has a null value! ***");
             return getDocument(model);
         }
@@ -148,7 +152,7 @@ public class DocumentControllerClass {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** DocumentControllerClass.updateSomeDocument():" +
+            logger.error("*** DocumentControllerClass.updateSomeDocument():" +
                     "  WRONG DB VALUES*** " + e.getMessage());
             return getDocument(model);
         }
@@ -159,7 +163,7 @@ public class DocumentControllerClass {
                                    Model model) {
 
         if (name == null) {
-            System.out.println("*** DocumentControllerClass.findSomeDocument():" +
+            logger.warn("*** DocumentControllerClass.findSomeDocument():" +
                     "  Attribute has a null value! ***");
             return getDocument(model);
         }
@@ -176,7 +180,7 @@ public class DocumentControllerClass {
             }
             throw new Exception("It`s not an ID!");
         } catch (Exception e) {
-            System.out.println("*** DocumentControllerClass.findSomeDocument(): " +
+            logger.debug("*** DocumentControllerClass.findSomeDocument(): " +
                     e.getMessage());
             try {
                 if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
@@ -188,7 +192,7 @@ public class DocumentControllerClass {
                 }
                 throw new Exception("Attribute is empty!");
             } catch (Exception e1) {
-                System.out.println("*** DocumentControllerClass.findSomeDocument():" +
+                logger.error("*** DocumentControllerClass.findSomeDocument():" +
                         "  WRONG DB VALUES*** " + e.getMessage());
                 return getDocument(model);
             }
@@ -204,7 +208,6 @@ public class DocumentControllerClass {
             String docType = document.getContentType();
             assert docType != null;
             headers.setContentType(MediaType.parseMediaType(docType));
-//            headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName() + ".pdf").build());
             headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName()).build());
             headers.setContentLength(document.getContent().length);
 
