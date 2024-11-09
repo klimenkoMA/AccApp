@@ -3,6 +3,8 @@ package accountingApp.controller;
 import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
 import accountingApp.service.WorkAreaService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,9 @@ import java.util.List;
 
 @Controller
 public class RoomController {
+
+    final Logger logger = LoggerFactory.getLogger(RoomController.class);
+
     @Autowired
     RoomService roomService;
     @Autowired
@@ -37,7 +42,7 @@ public class RoomController {
         if (number == null
                 || workarea == null
         ) {
-            System.out.println("*** RoomController.addRoom():  Attribute has a null value! ***");
+            logger.warn("*** RoomController.addRoom():  Attribute has a null value! ***");
             return getRoom(model);
         }
 
@@ -48,7 +53,7 @@ public class RoomController {
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
 
             if (numberCheck <= 0) {
-                System.out.println("*** RoomController.addRoom(): NUMBER is SUBZERO***");
+                logger.warn("*** RoomController.addRoom(): NUMBER is SUBZERO***");
                 return getRoom(model);
             } else {
                 List<WorkArea> workAreas = workAreaService
@@ -58,7 +63,7 @@ public class RoomController {
             }
             return getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** RoomController.addRoom():  WRONG DB VALUES*** "
+            logger.error("*** RoomController.addRoom():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getRoom(model);
         }
@@ -70,7 +75,7 @@ public class RoomController {
 
         if (id == null
         ) {
-            System.out.println("*** RoomController.deleteRoom():  Attribute has a null value! ***");
+            logger.warn("*** RoomController.deleteRoom():  Attribute has a null value! ***");
             return getRoom(model);
         }
 
@@ -78,13 +83,13 @@ public class RoomController {
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** RoomController.deleteRoom(): NUMBER is SUBZERO***");
+                logger.warn("*** RoomController.deleteRoom(): NUMBER is SUBZERO***");
             } else {
                 roomService.deleteRoomById(idCheck);
             }
             return getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** RoomController.deleteRoom():  WRONG DB VALUES*** "
+            logger.error("*** RoomController.deleteRoom():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getRoom(model);
         }
@@ -101,7 +106,7 @@ public class RoomController {
                 || number == null
                 || workarea == null
         ) {
-            System.out.println("*** RoomController.updateRoom():  Attribute has a null value! ***");
+            logger.warn("*** RoomController.updateRoom():  Attribute has a null value! ***");
             return getRoom(model);
         }
 
@@ -114,7 +119,7 @@ public class RoomController {
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
 
             if (idCheck <= 0 || numberCheck <= 0) {
-                System.out.println("*** RoomController.updateRoom(): NUMBER or ID is SUBZERO***");
+                logger.warn("*** RoomController.updateRoom(): NUMBER or ID is SUBZERO***");
             } else {
                 List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaId);
                 Room room = new Room(idCheck, numberWithoutSpaces, workAreaList.get(0));
@@ -122,7 +127,7 @@ public class RoomController {
             }
             return getRoom(model);
         } catch (Exception e) {
-            System.out.println("*** RoomController.updateRoom():  WRONG DB VALUES*** "
+            logger.error("*** RoomController.updateRoom():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getRoom(model);
         }
@@ -134,7 +139,7 @@ public class RoomController {
 
         if (id == null
         ) {
-            System.out.println("*** RoomController.findRoomById():  Attribute has a null value! ***");
+            logger.warn("*** RoomController.findRoomById():  Attribute has a null value! ***");
             return getRoom(model);
         }
 
@@ -142,8 +147,9 @@ public class RoomController {
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** RoomController.findRoomById(): NUMBER or ID is SUBZERO***");
+                logger.warn("*** RoomController.findRoomById(): NUMBER or ID is SUBZERO***");
             } else {
+                logger.debug("*** RoomController.findRoomById(): FOUND Room BY ID***");
                 List<Room> roomList = roomService.getRoomById(idCheck);
                 model.addAttribute("roomList", roomList);
                 if (roomList.isEmpty()) {
@@ -152,7 +158,7 @@ public class RoomController {
             }
             return "room";
         } catch (Exception e) {
-            System.out.println("*** RoomController.findRoomById():  WRONG DB VALUES*** "
+            logger.error("*** RoomController.findRoomById():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getRoom(model);
         }

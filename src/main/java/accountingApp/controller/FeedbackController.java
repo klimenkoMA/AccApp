@@ -3,6 +3,8 @@ package accountingApp.controller;
 import accountingApp.entity.Feedback;
 import accountingApp.service.FeedbackService;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,8 @@ import java.util.List;
 
 @Controller
 public class FeedbackController {
+
+    final Logger logger = LoggerFactory.getLogger(FeedbackController.class);
 
     @Autowired
     FeedbackService feedbackService;
@@ -36,7 +40,7 @@ public class FeedbackController {
                 || email == null
                 || message == null
         ) {
-            System.out.println("*** FeedbackController.addNewFeedback():  Attribute has a null value! ***");
+            logger.warn("*** FeedbackController.addNewFeedback():  Attribute has a null value! ***");
             return "main";
         }
 
@@ -54,7 +58,7 @@ public class FeedbackController {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** FeedbackController.addNewFeedback(): wrong DB's values! *** "
+            logger.error("*** FeedbackController.addNewFeedback(): wrong DB's values! *** "
                     + e.getMessage());
             return "main";
         }
@@ -66,12 +70,12 @@ public class FeedbackController {
 
         if (id == null
         ) {
-            System.out.println("*** FeedbackController.deleteFeedback():  Attribute has a null value! ***");
+            logger.warn("*** FeedbackController.deleteFeedback():  Attribute has a null value! ***");
             return getFeedbacks(model);
         }
 
         if (id.equals("") || id.equals(" ")) {
-            System.out.println("*** FeedbackController.deleteFeedback(): " +
+            logger.warn("*** FeedbackController.deleteFeedback(): " +
                     " Attribute is empty! ***");
             return getFeedbacks(model);
         }
@@ -92,7 +96,7 @@ public class FeedbackController {
 
             return getFeedbacks(model);
         } catch (Exception e) {
-            System.out.println("*** FeedbackController.deleteFeedback(): wrong DB's values! *** "
+            logger.error("*** FeedbackController.deleteFeedback(): wrong DB's values! *** "
                     + e.getMessage());
             return getFeedbacks(model);
         }
@@ -110,12 +114,12 @@ public class FeedbackController {
                 || email == null
                 || message == null
         ) {
-            System.out.println("*** FeedbackController.updateFeedback():  Attribute has a null value! ***");
+            logger.warn("*** FeedbackController.updateFeedback():  Attribute has a null value! ***");
             return getFeedbacks(model);
         }
 
         if (id.equals("") || id.equals(" ")) {
-            System.out.println("*** FeedbackController.updateFeedback(): " +
+            logger.warn("*** FeedbackController.updateFeedback(): " +
                     " Attribute ID is empty! ***");
             return getFeedbacks(model);
         }
@@ -136,7 +140,7 @@ public class FeedbackController {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** FeedbackController.updateFeedback(): wrong DB's values! *** "
+            logger.error("*** FeedbackController.updateFeedback(): wrong DB's values! *** "
                     + e.getMessage());
             return getFeedbacks(model);
         }
@@ -148,12 +152,12 @@ public class FeedbackController {
 
         if (id == null
         ) {
-            System.out.println("*** FeedbackController.findFeedback():  Attribute has a null value! ***");
+            logger.warn("*** FeedbackController.findFeedback():  Attribute has a null value! ***");
             return getFeedbacks(model);
         }
 
         if (id.equals("") || id.equals(" ")) {
-            System.out.println("*** FeedbackController.findFeedback(): " +
+            logger.warn("*** FeedbackController.findFeedback(): " +
                     " Attribute ID is empty! ***");
             return getFeedbacks(model);
         }
@@ -165,7 +169,7 @@ public class FeedbackController {
             model.addAttribute("feedbackList", feedbackList);
             return "feedbacks";
         } catch (Exception e) {
-            System.out.println("*** FeedbackController.findFeedback(): wrong DB's values! *** "
+            logger.error("*** FeedbackController.findFeedback(): wrong DB's values! *** "
                     + e.getMessage());
             return getFeedbacks(model);
         }

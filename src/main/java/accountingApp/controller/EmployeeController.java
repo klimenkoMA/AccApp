@@ -5,6 +5,8 @@ import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
 import accountingApp.service.RoomService;
 import accountingApp.service.WorkAreaService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +19,9 @@ import java.util.List;
 
 @Controller
 public class EmployeeController {
+
+    final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
+
     @Autowired
     EmployeeService employeeService;
     @Autowired
@@ -47,7 +52,7 @@ public class EmployeeController {
                 || workarea == null
                 || room == null
         ) {
-            System.out.println("*** EmployeeController.addEmployee():" +
+            logger.warn("*** EmployeeController.addEmployee():" +
                     "  Attribute has a null value! ***");
             return getEmployee(model);
         }
@@ -73,7 +78,7 @@ public class EmployeeController {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** EmployeeController.addEmployee(): wrong DB's values! *** "
+            logger.error("*** EmployeeController.addEmployee(): wrong DB's values! *** "
                     + e.getMessage());
             return getEmployee(model);
         }
@@ -85,7 +90,7 @@ public class EmployeeController {
 
         if (id == null
         ) {
-            System.out.println("*** EmployeeController.deleteById():" +
+            logger.warn("*** EmployeeController.deleteById():" +
                     "  Attribute ID has a null value! ***");
             return getEmployee(model);
         }
@@ -97,7 +102,7 @@ public class EmployeeController {
             }
             return getEmployee(model);
         } catch (Exception e) {
-            System.out.println("*** EmployeeController.deleteById(): wrong DB's values! *** "
+            logger.error("*** EmployeeController.deleteById(): wrong DB's values! *** "
                     + e.getMessage());
             return getEmployee(model);
         }
@@ -117,7 +122,7 @@ public class EmployeeController {
                 || workarea == null
                 || room == null
         ) {
-            System.out.println("*** EmployeeController.updateEmployee():" +
+            logger.warn("*** EmployeeController.updateEmployee():" +
                     "  Attribute has a null value! ***");
             return getEmployee(model);
         }
@@ -132,11 +137,11 @@ public class EmployeeController {
             int idCheck = Integer.parseInt(idWithoutSpaces);
 
             if (idCheck <= 0) {
-                System.out.println("*** EmployeeController.updateEmployee(): sub-zero ID values! ***");
+                logger.warn("*** EmployeeController.updateEmployee(): sub-zero ID values! ***");
                 return getEmployee(model);
             }
         } catch (Exception e) {
-            System.out.println("*** EmployeeController.updateEmployee(): WRONG ID values! *** "
+            logger.error("*** EmployeeController.updateEmployee(): WRONG ID values! *** "
                     + e.getMessage());
             return getEmployee(model);
         }
@@ -160,7 +165,7 @@ public class EmployeeController {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** EmployeeController.updateEmployee(): WRONG DB values! *** "
+            logger.error("*** EmployeeController.updateEmployee(): WRONG DB values! *** "
                     + e.getMessage());
             return getEmployee(model);
         }
@@ -173,7 +178,7 @@ public class EmployeeController {
 
         if (fio == null
         ) {
-            System.out.println("*** EmployeeController.findEmployeeByFio():" +
+            logger.warn("*** EmployeeController.findEmployeeByFio():" +
                     "  Attribute has a null value! ***");
             return getEmployee(model);
         }
@@ -183,12 +188,12 @@ public class EmployeeController {
 
             int idCheck = Integer.parseInt(fioWithoutSpaces);
             if (idCheck <= 0 || fioWithoutSpaces.isEmpty()) {
-                System.out.println("*** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***");
+                logger.warn("*** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***");
                 return getEmployee(model);
             } else {
                 List<Employee> employeeList = employeeService.findEmployeeById(idCheck);
                 model.addAttribute("employeeList", employeeList);
-                System.out.println("*** EmployeeController.updateEmployee(): " +
+                logger.debug("*** EmployeeController.updateEmployee(): " +
                         "found an employee by ID ***");
                 return "employee";
             }
@@ -196,11 +201,11 @@ public class EmployeeController {
             try {
                 List<Employee> employeeList = employeeService.findEmployeeByFio(fioWithoutSpaces);
                 model.addAttribute("employeeList", employeeList);
-                System.out.println("EmployeeController.updateEmployee(): " +
+                logger.debug("EmployeeController.updateEmployee(): " +
                         "found an employee by fio  *** " + e.getMessage());
                 return "employee";
             } catch (Exception e1) {
-                System.out.println("*** EmployeeController.updateEmployee(): WRONG DB values! *** "
+                logger.error("*** EmployeeController.updateEmployee(): WRONG DB values! *** "
                         + e1.getMessage());
                 return getEmployee(model);
             }

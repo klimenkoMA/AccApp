@@ -2,6 +2,8 @@ package accountingApp.controller;
 
 import accountingApp.entity.*;
 import accountingApp.service.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,9 @@ import java.util.List;
 
 @Controller
 public class EventsController {
+
+    final Logger logger = LoggerFactory.getLogger(EventsController.class);
+
     @Autowired
     EventsService eventsService;
     @Autowired
@@ -55,7 +60,7 @@ public class EventsController {
                 || workarea == null
                 || comment == null
         ) {
-            System.out.println("*** EventsController.addEvent():  Attribute has a null value! ***");
+            logger.warn("*** EventsController.addEvent():  Attribute has a null value! ***");
             return getEvents(model);
         }
 
@@ -82,7 +87,7 @@ public class EventsController {
             }
             return getEvents(model);
         } catch (Exception e) {
-            System.out.println("*** EventsController.addNewEvent():  WRONG DB VALUES*** "
+            logger.error("*** EventsController.addNewEvent():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getEvents(model);
         }
@@ -93,20 +98,20 @@ public class EventsController {
                               Model model) {
         if (id == null
         ) {
-            System.out.println("*** EventsController.deleteEvent():  Attribute ID has a null value! ***");
+            logger.warn("*** EventsController.deleteEvent():  Attribute ID has a null value! ***");
             return getEvents(model);
         }
 
         try {
             int idCheck = Integer.parseInt(id);
             if (idCheck <= 0) {
-                System.out.println("*** EventsController.addNewEvent(): ID is SUBZERO***");
+                logger.warn("*** EventsController.addNewEvent(): ID is SUBZERO***");
             } else {
                 eventsService.deleteEventsById(idCheck);
             }
             return getEvents(model);
         } catch (Exception e) {
-            System.out.println("*** EventsController.deleteEvent():  WRONG DB VALUES*** "
+            logger.error("*** EventsController.deleteEvent():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getEvents(model);
         }
@@ -130,7 +135,7 @@ public class EventsController {
                 || workarea == null
                 || comment == null
         ) {
-            System.out.println("*** EventsController.updateEvent():  Attribute has a null value! ***");
+            logger.warn("*** EventsController.updateEvent():  Attribute has a null value! ***");
             return getEvents(model);
         }
 
@@ -145,7 +150,7 @@ public class EventsController {
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** EventsController.updateEvent():  WRONG ID FORMAT***");
+                logger.warn("*** EventsController.updateEvent():  WRONG ID FORMAT***");
                 return getEvents(model);
             } else if (!dateWithoutSpaces.equals("")
                     && !deviceWithoutSpaces.equals("")
@@ -165,7 +170,7 @@ public class EventsController {
             return getEvents(model);
 
         } catch (Exception e) {
-            System.out.println("*** EventsController.updateEvent():  WRONG DB VALUES*** "
+            logger.error("*** EventsController.updateEvent():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getEvents(model);
         }
@@ -176,7 +181,7 @@ public class EventsController {
                                  Model model) {
         if (id == null
         ) {
-            System.out.println("*** EventsController.findEventsById():  Attribute ID has a null value! ***");
+            logger.warn("*** EventsController.findEventsById():  Attribute ID has a null value! ***");
             return getEvents(model);
         }
 
@@ -184,7 +189,7 @@ public class EventsController {
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** EventsController.fidEventById(): ID is SUBZERO***");
+                logger.warn("*** EventsController.fidEventById(): ID is SUBZERO***");
                 return getEvents(model);
             } else {
                 List<Events> eventsList = eventsService.getEventById(idCheck);
@@ -192,7 +197,7 @@ public class EventsController {
                 return "events";
             }
         } catch (Exception e) {
-            System.out.println("*** EventsController.fidEventById():  WRONG DB VALUES*** "
+            logger.error("*** EventsController.fidEventById():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getEvents(model);
         }
