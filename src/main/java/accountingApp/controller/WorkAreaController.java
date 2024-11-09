@@ -1,6 +1,8 @@
 package accountingApp.controller;
 
 import accountingApp.entity.WorkArea;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,9 @@ import java.util.List;
 
 @Controller
 public class WorkAreaController {
+
+    final Logger logger = LoggerFactory.getLogger(WorkAreaController.class);
+
     @Autowired
     WorkAreaService workAreaService;
 
@@ -30,13 +35,13 @@ public class WorkAreaController {
 
         if (name == null
         ) {
-            System.out.println("*** WorkAreaController.addWorkArea():  Attribute has a null value! ***");
+            logger.warn("*** WorkAreaController.addWorkArea():  Attribute has a null value! ***");
             return getWorkArea(model);
         }
 
         String nameWithoutSpaces = name.trim();
         if (nameWithoutSpaces.equals("") || nameWithoutSpaces.equals(" ")) {
-            System.out.println("*** WorkAreaController.addWorkArea(): EMPTY NAME ***");
+            logger.warn("*** WorkAreaController.addWorkArea(): EMPTY NAME ***");
             return getWorkArea(model);
         }
 
@@ -46,7 +51,7 @@ public class WorkAreaController {
 
             return getWorkArea(model);
         } catch (Exception e) {
-            System.out.println("*** WorkAreaController.addWorkArea():  WRONG DB VALUES*** "
+            logger.error("*** WorkAreaController.addWorkArea():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getWorkArea(model);
         }
@@ -58,7 +63,7 @@ public class WorkAreaController {
 
         if (id == null
         ) {
-            System.out.println("*** WorkAreaController.deleteWorkArea():  Attribute has a null value! ***");
+            logger.warn("*** WorkAreaController.deleteWorkArea():  Attribute has a null value! ***");
             return getWorkArea(model);
         }
 
@@ -66,14 +71,14 @@ public class WorkAreaController {
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** WorkAreaController.deleteWorkArea(): ID is SUBZERO***");
+                logger.warn("*** WorkAreaController.deleteWorkArea(): ID is SUBZERO***");
             } else {
                 workAreaService.deleteWorkAreaById(idCheck);
             }
             return getWorkArea(model);
 
         } catch (Exception e) {
-            System.out.println("*** WorkAreaController.deleteWorkArea():  WRONG DB VALUES*** "
+            logger.error("*** WorkAreaController.deleteWorkArea():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getWorkArea(model);
         }
@@ -87,7 +92,7 @@ public class WorkAreaController {
         if (id == null
                 || name == null
         ) {
-            System.out.println("*** WorkAreaController.updateWorkArea():  Attribute has a null value! ***");
+            logger.warn("*** WorkAreaController.updateWorkArea():  Attribute has a null value! ***");
             return getWorkArea(model);
         }
 
@@ -97,11 +102,11 @@ public class WorkAreaController {
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** WorkAreaController.updateWorkArea(): ID is SUBZERO***");
+                logger.warn("*** WorkAreaController.updateWorkArea(): ID is SUBZERO***");
                 return getWorkArea(model);
             } else {
                 if (nameWithoutSpaces.equals("") || nameWithoutSpaces.equals(" ")) {
-                    System.out.println("*** WorkAreaController.updateWorkArea(): NAME is EMPTY ***");
+                    logger.warn("*** WorkAreaController.updateWorkArea(): NAME is EMPTY ***");
                     return getWorkArea(model);
                 }
                 WorkArea workArea = new WorkArea(idCheck, nameWithoutSpaces);
@@ -109,7 +114,7 @@ public class WorkAreaController {
             }
             return getWorkArea(model);
         } catch (Exception e) {
-            System.out.println("*** WorkAreaController.updateWorkArea():  WRONG DB VALUES*** "
+            logger.error("*** WorkAreaController.updateWorkArea():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getWorkArea(model);
         }
@@ -121,7 +126,7 @@ public class WorkAreaController {
 
         if (name == null
         ) {
-            System.out.println("*** WorkAreaController.findAreaByName():  Attribute has a null value! ***");
+            logger.warn("*** WorkAreaController.findAreaByName():  Attribute has a null value! ***");
             return getWorkArea(model);
         }
 
@@ -129,10 +134,10 @@ public class WorkAreaController {
         try {
             int idCheck = Integer.parseInt(nameWithoutSpaces);
             if (idCheck <= 0) {
-                System.out.println("*** WorkAreaController.findAreaByName(): ID is SUBZERO***");
+                logger.warn("*** WorkAreaController.findAreaByName(): ID is SUBZERO***");
                 return getWorkArea(model);
             } else {
-                System.out.println("*** WorkAreaController.findAreaByName(): FOUND BY ID ***");
+                logger.debug("*** WorkAreaController.findAreaByName(): FOUND BY ID ***");
                 List<WorkArea> workAreaList;
                 workAreaList = workAreaService.getWorkAreaById(idCheck);
                 model.addAttribute("workAreaList", workAreaList);
@@ -140,8 +145,8 @@ public class WorkAreaController {
             return "workarea";
         } catch (Exception e) {
             try {
-                System.out.println("*** WorkAreaController.findAreaByName(): FOUND BY NAME ***");
-                System.out.println(e.getMessage());
+                logger.debug("*** WorkAreaController.findAreaByName(): FOUND BY NAME ***"
+                        + e.getMessage());
                 List<WorkArea> workAreaList = workAreaService.getWorkAreaByName(name);
 
                 if (workAreaList.isEmpty()) {
@@ -150,7 +155,7 @@ public class WorkAreaController {
                 model.addAttribute("workAreaList", workAreaList);
                 return "workarea";
             } catch (Exception e1) {
-                System.out.println("*** WorkAreaController.findAreaByName():  WRONG DB VALUES*** "
+                logger.error("*** WorkAreaController.findAreaByName():  WRONG DB VALUES*** "
                         + e1.getMessage());
                 return getWorkArea(model);
             }

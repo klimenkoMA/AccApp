@@ -2,6 +2,8 @@ package accountingApp.controller;
 
 import accountingApp.entity.Devices;
 import accountingApp.service.DevicesService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +22,8 @@ import java.util.List;
 @Controller
 public class DevicesController {
 
+    final Logger logger = LoggerFactory.getLogger(DevicesController.class);
+
     @Autowired
     DevicesService devicesService;
 
@@ -36,7 +40,7 @@ public class DevicesController {
 
         if (name == null
         ) {
-            System.out.println("*** DevicesController.addDevice():" +
+            logger.warn("*** DevicesController.addDevice():" +
                     "  Attribute has a null value! ***");
             return getDevices(model);
         }
@@ -50,7 +54,7 @@ public class DevicesController {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** DevicesController.addDevice(): wrong DB's values! *** "
+            logger.error("*** DevicesController.addDevice(): wrong DB's values! *** "
                     + e.getMessage());
             return getDevices(model);
         }
@@ -62,7 +66,7 @@ public class DevicesController {
 
         if (id == null
         ) {
-            System.out.println("*** DevicesController.deleteDevice():" +
+            logger.warn("*** DevicesController.deleteDevice():" +
                     "  Attribute has a null value! ***");
             return getDevices(model);
         }
@@ -70,13 +74,13 @@ public class DevicesController {
         try {
             int idCheck = Integer.parseInt(id);
             if (idCheck <= 0) {
-                System.out.println("*** DevicesController.deleteDevice(): dborn <<<< 0 ***");
+                logger.warn("*** DevicesController.deleteDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
             }
             devicesService.deleteDeviceById(idCheck);
             return getDevices(model);
         } catch (Exception e) {
-            System.out.println("*** DevicesController.deleteDevice(): wrong DB's values! *** "
+            logger.error("*** DevicesController.deleteDevice(): wrong DB's values! *** "
                     + e.getMessage());
             return getDevices(model);
         }
@@ -90,7 +94,7 @@ public class DevicesController {
         if (id == null
                 || name == null
         ) {
-            System.out.println("*** DevicesController.updateDevice():" +
+            logger.warn("*** DevicesController.updateDevice():" +
                     "  Attribute has a null value! ***");
             return getDevices(model);
         }
@@ -99,7 +103,7 @@ public class DevicesController {
             String nameWithoutSpaces = name.trim();
             int idCheck = Integer.parseInt(id);
             if (idCheck <= 0) {
-                System.out.println("*** DevicesController.updateDevice(): dborn <<<< 0 ***");
+                logger.warn("*** DevicesController.updateDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
             }
             if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
@@ -109,7 +113,7 @@ public class DevicesController {
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
-            System.out.println("*** DevicesController.updateDevice(): wrong DB's values! *** "
+            logger.error("*** DevicesController.updateDevice(): wrong DB's values! *** "
                     + e.getMessage());
             return getDevices(model);
         }
@@ -121,7 +125,7 @@ public class DevicesController {
 
         if (name == null
         ) {
-            System.out.println("*** DevicesController.findDevicesById():" +
+            logger.warn("*** DevicesController.findDevicesById():" +
                     "  Attribute has a null value! ***");
             return getDevices(model);
         }
@@ -129,10 +133,10 @@ public class DevicesController {
         try {
             int idCheck = Integer.parseInt(name);
             if (idCheck <= 0) {
-                System.out.println("*** DevicesController.findDevicesById(): dborn <<<< 0 ***");
+                logger.warn("*** DevicesController.findDevicesById(): dborn <<<< 0 ***");
                 return getDevices(model);
             } else {
-                System.out.println("*** DevicesController.findDevicesById():" +
+                logger.debug("*** DevicesController.findDevicesById():" +
                         "FOUND DEVICE BY ID ***");
                 List<Devices> devicesList;
                 devicesList = devicesService.getDevicesById(idCheck);
@@ -140,11 +144,17 @@ public class DevicesController {
                 return "devices";
             }
         } catch (Exception e) {
-            List<Devices> devicesList = devicesService.getDevicesByName(name);
-            model.addAttribute("devicesList", devicesList);
-            System.out.println("*** DevicesController.findDevicesById():" +
-                    " FOUND DEVICE BY NAME *** " + e.getMessage());
-            return "devices";
+            try {
+                List<Devices> devicesList = devicesService.getDevicesByName(name);
+                model.addAttribute("devicesList", devicesList);
+                logger.debug("*** DevicesController.findDevicesById():" +
+                        " FOUND DEVICE BY NAME *** " + e.getMessage());
+                return "devices";
+            } catch (Exception e1) {
+                logger.error("*** DevicesController.findDevicesById(): wrong DB's values! *** "
+                        + e1.getMessage());
+                return getDevices(model);
+            }
         }
     }
 }

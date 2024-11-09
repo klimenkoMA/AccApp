@@ -49,7 +49,7 @@ public class DocumentControllerClass {
 
         if (
                 content == null
-                || description == null
+                        || description == null
         ) {
             logger.warn("*** DocumentControllerClass.addNewDocument():" +
                     "  Attribute has a null value! ***");
@@ -61,7 +61,7 @@ public class DocumentControllerClass {
         try {
             if (
                     !content.isEmpty()
-                    && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
+                            && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
                 DocumentClass document = new DocumentClass(content.getOriginalFilename(), content.getBytes()
                         , description, content.getContentType());
                 documentServiceClass.addDocument(document);
@@ -201,20 +201,25 @@ public class DocumentControllerClass {
 
     @GetMapping("/download/{id}")
     public ResponseEntity<byte[]> downloadDocument(@PathVariable String id) {
-        DocumentClass document = documentServiceClass.findDocumentById(id);
-        if (document != null) {
+        try {
+            DocumentClass document = documentServiceClass.findDocumentById(id);
+            if (document != null) {
 
-            HttpHeaders headers = new HttpHeaders();
-            String docType = document.getContentType();
-            assert docType != null;
-            headers.setContentType(MediaType.parseMediaType(docType));
-            headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName()).build());
-            headers.setContentLength(document.getContent().length);
+                HttpHeaders headers = new HttpHeaders();
+                String docType = document.getContentType();
+                assert docType != null;
+                headers.setContentType(MediaType.parseMediaType(docType));
+                headers.setContentDisposition(ContentDisposition.attachment().filename(document.getName()).build());
+                headers.setContentLength(document.getContent().length);
 
-            return new ResponseEntity<>(document.getContent(), headers, HttpStatus.OK);
+                return new ResponseEntity<>(document.getContent(), headers, HttpStatus.OK);
+            }
+            throw new Exception("document is NULL");
+        } catch (Exception e) {
+            logger.error("*** DocumentControllerClass.downloadDocument():" +
+                    "  WRONG DB VALUES*** " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
-
 
 }
