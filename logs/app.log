@@ -1,0 +1,28 @@
+2024-11-09 22:10:01.626  WARN 16536 --- [main] o.s.security.core.userdetails.User       : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2024-11-09 22:10:01.770  WARN 16536 --- [main] o.s.security.core.userdetails.User       : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2024-11-09 22:10:01.877  WARN 16536 --- [main] o.s.security.core.userdetails.User       : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2024-11-09 22:10:05.925 ERROR 16536 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-11-09 22:10:06.082  WARN 16536 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-11-09 22:10:06.115  WARN 16536 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-11-09 22:10:06.126 ERROR 16536 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** Attribute is empty!
+2024-11-09 22:10:06.135 ERROR 16536 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Attribute is empty!
+2024-11-09 22:10:06.209 ERROR 16536 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** null
+2024-11-09 22:10:06.227  WARN 16536 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): dborn <<<< 0 ***
+2024-11-09 22:10:06.338 ERROR 16536 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-11-09 22:10:06.378 ERROR 16536 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-11-09 22:10:06.432  WARN 16536 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-11-09 22:10:06.433 ERROR 16536 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-11-09 22:10:06.555 ERROR 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG DB values! *** null
+2024-11-09 22:10:06.577 ERROR 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** null
+2024-11-09 22:10:06.601 ERROR 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG DB values! *** Attribute is empty!
+2024-11-09 22:10:06.614 ERROR 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** null
+2024-11-09 22:10:06.622 ERROR 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** null
+2024-11-09 22:10:06.640 ERROR 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-11-09 22:10:06.656  WARN 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***
+2024-11-09 22:10:06.663  WARN 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-11-09 22:10:06.665 ERROR 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG ID values! *** null
+2024-11-09 22:10:06.673 ERROR 16536 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** Attribute is empty!
+2024-11-09 22:10:17.262  WARN 15704 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-09 22:10:17.340  WARN 15704 --- [restartedMain] o.s.security.core.userdetails.User       : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2024-11-09 22:10:17.510  WARN 15704 --- [restartedMain] o.s.security.core.userdetails.User       : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2024-11-09 22:10:17.643  WARN 15704 --- [restartedMain] o.s.security.core.userdetails.User       : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
