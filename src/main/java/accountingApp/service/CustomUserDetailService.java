@@ -31,7 +31,7 @@ class CustomUserDetailsService implements UserDetailsService {
             return org.springframework.security.core.userdetails.User
                     .withUsername(appUser.getUserName())
                     .password(appUser.getUserPass())
-                    .roles(appUser.getRoles().split(",")) // предположим, что роли хранятся через запятую
+                    .roles(appUser.getRoles().toString()) // предположим, что роли хранятся через запятую
                     .build();
         }catch (Exception e){
             logger.error("User not found " + e.getMessage());

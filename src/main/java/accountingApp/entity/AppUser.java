@@ -2,9 +2,10 @@ package accountingApp.entity;
 
 import javax.persistence.*;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
-@Table(name="APPUSERS")
+@Table(name = "APPUSERS")
 public class AppUser {
 
     @Id
@@ -12,25 +13,51 @@ public class AppUser {
     @Column(name = "ID")
     private long id;
 
-    @Column(name="userlogin")
+    @Column(name = "userlogin")
     private String userName;
 
-    @Column(name="passwd")
+    @Column(name = "passwd")
     private String userPass;
 
-    @Column(name="roles")
-    private String roles;
+    @Column(name = "active")
+    private boolean isActive;
 
-    public AppUser(long id, String userName, String userPass, String roles) {
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_role", @JoinColumn(name = "user_id"))
+    @Enumerated(EnumType.STRING)
+    private Set<Role> roles;
+
+    public AppUser(long id, String userName, String userPass, boolean isActive, Set<Role> roles) {
         this.id = id;
         this.userName = userName;
         this.userPass = userPass;
+        this.isActive = isActive;
         this.roles = roles;
     }
 
-    public AppUser(String userName, String userPass, String roles) {
+    public AppUser(String userName, String userPass, boolean isActive, Set<Role> roles) {
         this.userName = userName;
         this.userPass = userPass;
+        this.isActive = isActive;
+        this.roles = roles;
+    }
+
+    public AppUser() {
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 
@@ -58,13 +85,6 @@ public class AppUser {
         this.userPass = userPass;
     }
 
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
 
     @Override
     public String toString() {
@@ -76,11 +96,11 @@ public class AppUser {
         if (this == o) return true;
         if (!(o instanceof AppUser)) return false;
         AppUser appUser = (AppUser) o;
-        return getId() == appUser.getId() && getUserName().equals(appUser.getUserName()) && getUserPass().equals(appUser.getUserPass()) && getRoles().equals(appUser.getRoles());
+        return getId() == appUser.getId() && isActive() == appUser.isActive() && Objects.equals(getUserName(), appUser.getUserName()) && Objects.equals(getUserPass(), appUser.getUserPass()) && Objects.equals(getRoles(), appUser.getRoles());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUserName(), getUserPass(), getRoles());
+        return Objects.hash(getId(), getUserName(), getUserPass(), isActive(), getRoles());
     }
 }
