@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,7 @@
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -880,14 +882,7 @@
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
       <workItem from="1730956711300" duration="12635000" />
-      <workItem from="1731039432298" duration="22171000" />
-    </task>
-    <task id="LOCAL-00356" summary="Rebuild a lot of frontend">
-      <created>1727923293724</created>
-      <option name="number" value="00356" />
-      <option name="presentableId" value="LOCAL-00356" />
-      <option name="project" value="LOCAL" />
-      <updated>1727923293724</updated>
+      <workItem from="1731039432298" duration="24419000" />
     </task>
     <task id="LOCAL-00357" summary="Rebuild a couple things in frontend">
       <created>1728009727751</created>
@@ -1225,7 +1220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731250328235</updated>
     </task>
-    <option name="localTasksCounter" value="405" />
+    <task id="LOCAL-00405" summary="Created a CustomUserDetailService.java">
+      <created>1731293801048</created>
+      <option name="number" value="00405" />
+      <option name="presentableId" value="LOCAL-00405" />
+      <option name="project" value="LOCAL" />
+      <updated>1731293801048</updated>
+    </task>
+    <option name="localTasksCounter" value="406" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1248,7 +1250,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added some new fields in Room.java, WorkArea.java" />
     <MESSAGE value="Rebuilt Room and WorkArea.java" />
     <MESSAGE value="Rebuilt Room, WorkArea and Employee.java" />
     <MESSAGE value="Changed field's type in WorkArea and Room.java" />
@@ -1273,7 +1274,8 @@
     <MESSAGE value="Tried to use logging in DocumentControllerClass.java" />
     <MESSAGE value="Added logging in all Controller classes" />
     <MESSAGE value="Rebuilt a security part. Trying to create a AppUser entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a security part. Trying to create a AppUser entity" />
+    <MESSAGE value="Created a CustomUserDetailService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a CustomUserDetailService.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
