@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
@@ -27,8 +27,8 @@
         <option value="HTML File" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -882,14 +882,7 @@
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
       <workItem from="1730956711300" duration="12635000" />
-      <workItem from="1731039432298" duration="24419000" />
-    </task>
-    <task id="LOCAL-00357" summary="Rebuild a couple things in frontend">
-      <created>1728009727751</created>
-      <option name="number" value="00357" />
-      <option name="presentableId" value="LOCAL-00357" />
-      <option name="project" value="LOCAL" />
-      <updated>1728009727751</updated>
+      <workItem from="1731039432298" duration="29386000" />
     </task>
     <task id="LOCAL-00358" summary="Tried to fix size of nav links in active phase">
       <created>1728143215561</created>
@@ -1227,7 +1220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731293801048</updated>
     </task>
-    <option name="localTasksCounter" value="406" />
+    <task id="LOCAL-00406" summary="Created a Role.class">
+      <created>1731380624047</created>
+      <option name="number" value="00406" />
+      <option name="presentableId" value="LOCAL-00406" />
+      <option name="project" value="LOCAL" />
+      <updated>1731380624047</updated>
+    </task>
+    <option name="localTasksCounter" value="407" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1250,7 +1250,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt Room and WorkArea.java" />
     <MESSAGE value="Rebuilt Room, WorkArea and Employee.java" />
     <MESSAGE value="Changed field's type in WorkArea and Room.java" />
     <MESSAGE value="Tried to use a dropdown list in a crudrooms.html" />
@@ -1275,7 +1274,8 @@
     <MESSAGE value="Added logging in all Controller classes" />
     <MESSAGE value="Rebuilt a security part. Trying to create a AppUser entity" />
     <MESSAGE value="Created a CustomUserDetailService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a CustomUserDetailService.java" />
+    <MESSAGE value="Created a Role.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a Role.class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
