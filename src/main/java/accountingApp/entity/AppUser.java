@@ -23,7 +23,7 @@ public class AppUser {
     private boolean isActive;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "user_role", @JoinColumn(name = "user_id"))
+    @CollectionTable(name = "user_role",joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 
@@ -96,7 +96,10 @@ public class AppUser {
         if (this == o) return true;
         if (!(o instanceof AppUser)) return false;
         AppUser appUser = (AppUser) o;
-        return getId() == appUser.getId() && isActive() == appUser.isActive() && Objects.equals(getUserName(), appUser.getUserName()) && Objects.equals(getUserPass(), appUser.getUserPass()) && Objects.equals(getRoles(), appUser.getRoles());
+        return getId() == appUser.getId() && isActive() == appUser.isActive()
+                && Objects.equals(getUserName(), appUser.getUserName())
+                && Objects.equals(getUserPass(), appUser.getUserPass())
+                && Objects.equals(getRoles(), appUser.getRoles());
     }
 
     @Override

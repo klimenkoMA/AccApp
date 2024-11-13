@@ -1,14 +1,18 @@
 package accountingApp.service;
 
 import accountingApp.entity.AppUser;
+import accountingApp.entity.Role;
 import accountingApp.repository.AppUserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+
 
 @Service
 class CustomUserDetailsService implements UserDetailsService {
@@ -28,14 +32,17 @@ class CustomUserDetailsService implements UserDetailsService {
             }
 
             // Создайте UserDetails на основе информации о пользователе
-            return org.springframework.security.core.userdetails.User
+
+            return User
                     .withUsername(appUser.getUserName())
                     .password(appUser.getUserPass())
-                    .roles(appUser.getRoles().toString()) // предположим, что роли хранятся через запятую
+                    .roles(appUser.getRoles()
+                            .stream()
+                            .map(Role::getAuthority).toArray(String[]::new))
                     .build();
         }catch (Exception e){
-            logger.error("User not found " + e.getMessage());
-            return null;
+            logger.error("User not found with name: " + username + " " + e.getMessage());
+            throw new UsernameNotFoundException("User not found " + e.getMessage());
         }
     }
 }
