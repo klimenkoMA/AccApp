@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.util.List;
+
 public class AppUserService {
 
     final Logger logger = LoggerFactory.getLogger(AppUserService.class);
@@ -17,11 +19,35 @@ public class AppUserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public AppUser createUser(AppUser user){
+    public List<AppUser> getAllAppUsers() {
+        return appUserRepository.findAll();
+    }
+
+    public AppUser createUser(AppUser user) {
         user.setUserPass(passwordEncoder.encode(user.getUserPass()));
         logger.warn("AppUser " + user.getUserName() + " created!");
         return appUserRepository.save(user);
+    }
 
+    public AppUser updateUser(AppUser user) {
+        user.setUserPass(passwordEncoder.encode(user.getUserPass()));
+        logger.warn("AppUser " + user.getUserName() + " updated!");
+        return appUserRepository.save(user);
+    }
+
+    public List<AppUser> findUserById(long id) {
+        return appUserRepository.findAppUserById(id);
+    }
+
+    public List<AppUser> findUserByName(String username) {
+        return appUserRepository.findByUsername(username);
+    }
+
+
+    public void deleteUser(long id) {
+        AppUser user = findUserById(id).get(0);
+        logger.warn("AppUser " + user.getUserName() + " deleted!");
+        appUserRepository.deleteById(id);
     }
 
 }

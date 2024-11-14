@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/AppUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -882,14 +882,7 @@
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
       <workItem from="1730956711300" duration="12635000" />
-      <workItem from="1731039432298" duration="29386000" />
-    </task>
-    <task id="LOCAL-00358" summary="Tried to fix size of nav links in active phase">
-      <created>1728143215561</created>
-      <option name="number" value="00358" />
-      <option name="presentableId" value="LOCAL-00358" />
-      <option name="project" value="LOCAL" />
-      <updated>1728143215561</updated>
+      <workItem from="1731039432298" duration="32708000" />
     </task>
     <task id="LOCAL-00359" summary="Added a few nav elements for all DB pages">
       <created>1728203570163</created>
@@ -1227,7 +1220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731380624047</updated>
     </task>
-    <option name="localTasksCounter" value="407" />
+    <task id="LOCAL-00407" summary="Created a AppUserService.java">
+      <created>1731466142276</created>
+      <option name="number" value="00407" />
+      <option name="presentableId" value="LOCAL-00407" />
+      <option name="project" value="LOCAL" />
+      <updated>1731466142276</updated>
+    </task>
+    <option name="localTasksCounter" value="408" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1250,7 +1250,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt Room, WorkArea and Employee.java" />
     <MESSAGE value="Changed field's type in WorkArea and Room.java" />
     <MESSAGE value="Tried to use a dropdown list in a crudrooms.html" />
     <MESSAGE value="Tried to use a dropdown list in a crudemployees.html" />
@@ -1275,7 +1274,8 @@
     <MESSAGE value="Rebuilt a security part. Trying to create a AppUser entity" />
     <MESSAGE value="Created a CustomUserDetailService.java" />
     <MESSAGE value="Created a Role.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a Role.class" />
+    <MESSAGE value="Created a AppUserService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a AppUserService.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
