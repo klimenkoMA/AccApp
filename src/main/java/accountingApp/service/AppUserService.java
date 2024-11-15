@@ -39,8 +39,8 @@ public class AppUserService {
         return appUserRepository.findAppUserById(id);
     }
 
-    public List<AppUser> findUserByName(String username) {
-        return appUserRepository.findByUsername(username);
+    public List<AppUser> findUserByName(String userName) {
+        return appUserRepository.findByUserName(userName);
     }
 
 

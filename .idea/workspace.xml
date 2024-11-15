@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -882,21 +877,7 @@
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
       <workItem from="1730956711300" duration="12635000" />
-      <workItem from="1731039432298" duration="32708000" />
-    </task>
-    <task id="LOCAL-00359" summary="Added a few nav elements for all DB pages">
-      <created>1728203570163</created>
-      <option name="number" value="00359" />
-      <option name="presentableId" value="LOCAL-00359" />
-      <option name="project" value="LOCAL" />
-      <updated>1728203570163</updated>
-    </task>
-    <task id="LOCAL-00360" summary="Added new users in App">
-      <created>1728267438723</created>
-      <option name="number" value="00360" />
-      <option name="presentableId" value="LOCAL-00360" />
-      <option name="project" value="LOCAL" />
-      <updated>1728267438723</updated>
+      <workItem from="1731039432298" duration="42709000" />
     </task>
     <task id="LOCAL-00361" summary="Finished spelling WebSecurityConfig and starting created test classes">
       <created>1728355162114</created>
@@ -1227,7 +1208,21 @@
       <option name="project" value="LOCAL" />
       <updated>1731466142276</updated>
     </task>
-    <option name="localTasksCounter" value="408" />
+    <task id="LOCAL-00408" summary="Rebuilt a AppUserService.java">
+      <created>1731551646859</created>
+      <option name="number" value="00408" />
+      <option name="presentableId" value="LOCAL-00408" />
+      <option name="project" value="LOCAL" />
+      <updated>1731551646861</updated>
+    </task>
+    <task id="LOCAL-00409" summary="Rebuilt a AppUserService.java v2">
+      <created>1731696181090</created>
+      <option name="number" value="00409" />
+      <option name="presentableId" value="LOCAL-00409" />
+      <option name="project" value="LOCAL" />
+      <updated>1731696181090</updated>
+    </task>
+    <option name="localTasksCounter" value="410" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1250,8 +1245,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed field's type in WorkArea and Room.java" />
-    <MESSAGE value="Tried to use a dropdown list in a crudrooms.html" />
     <MESSAGE value="Tried to use a dropdown list in a crudemployees.html" />
     <MESSAGE value="Tried to use a dropdown list in a crudevents.html" />
     <MESSAGE value="Finished to build a dropdown list in a crudevents.html" />
@@ -1275,7 +1268,9 @@
     <MESSAGE value="Created a CustomUserDetailService.java" />
     <MESSAGE value="Created a Role.class" />
     <MESSAGE value="Created a AppUserService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a AppUserService.java" />
+    <MESSAGE value="Rebuilt a AppUserService.java" />
+    <MESSAGE value="Rebuilt a AppUserService.java v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a AppUserService.java v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
