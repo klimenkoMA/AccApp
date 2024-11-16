@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-15.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -877,14 +884,7 @@
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
       <workItem from="1730956711300" duration="12635000" />
-      <workItem from="1731039432298" duration="42709000" />
-    </task>
-    <task id="LOCAL-00361" summary="Finished spelling WebSecurityConfig and starting created test classes">
-      <created>1728355162114</created>
-      <option name="number" value="00361" />
-      <option name="presentableId" value="LOCAL-00361" />
-      <option name="project" value="LOCAL" />
-      <updated>1728355162117</updated>
+      <workItem from="1731039432298" duration="47153000" />
     </task>
     <task id="LOCAL-00362" summary="Tried to run tests">
       <created>1728441824704</created>
@@ -1222,7 +1222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731696181090</updated>
     </task>
-    <option name="localTasksCounter" value="410" />
+    <task id="LOCAL-00410" summary="Rebuilt a AppUserService.java v3">
+      <created>1731696470700</created>
+      <option name="number" value="00410" />
+      <option name="presentableId" value="LOCAL-00410" />
+      <option name="project" value="LOCAL" />
+      <updated>1731696470700</updated>
+    </task>
+    <option name="localTasksCounter" value="411" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1245,7 +1252,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to use a dropdown list in a crudemployees.html" />
     <MESSAGE value="Tried to use a dropdown list in a crudevents.html" />
     <MESSAGE value="Finished to build a dropdown list in a crudevents.html" />
     <MESSAGE value="Tried to use a bootstrap-datepicker in head.html" />
@@ -1270,7 +1276,8 @@
     <MESSAGE value="Created a AppUserService.java" />
     <MESSAGE value="Rebuilt a AppUserService.java" />
     <MESSAGE value="Rebuilt a AppUserService.java v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a AppUserService.java v2" />
+    <MESSAGE value="Rebuilt a AppUserService.java v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a AppUserService.java v3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

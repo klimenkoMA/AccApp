@@ -20,8 +20,8 @@ import java.util.List;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private UserDetailsService userDetailsService;
+//    @Autowired
+//    private UserDetailsService userDetailsService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -57,28 +57,32 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .csrf().disable();
     }
 
-    @Bean
-    @Override
-    public UserDetailsService userDetailsService() {
-        List<UserDetails> users = new ArrayList<>();
-        users.add(User.withDefaultPasswordEncoder()
-                .username("u")
-                .password("1")
-                .roles("USER")
-                .build());
-        users.add(User.withDefaultPasswordEncoder()
-                .username("u2")
-                .password("1")
-                .roles("USER")
-                .build());
-        users.add(User.withDefaultPasswordEncoder()
-                .username("admin")
-                .password("1")
-                .roles("ADMIN")
-                .build());
 
-        return new InMemoryUserDetailsManager(users);
-    }
+
+
+
+//    @Bean
+//    @Override
+//    public UserDetailsService userDetailsService() {
+//        List<UserDetails> users = new ArrayList<>();
+//        users.add(User.withDefaultPasswordEncoder()
+//                .username("u")
+//                .password("1")
+//                .roles("USER")
+//                .build());
+//        users.add(User.withDefaultPasswordEncoder()
+//                .username("u2")
+//                .password("1")
+//                .roles("USER")
+//                .build());
+//        users.add(User.withDefaultPasswordEncoder()
+//                .username("admin")
+//                .password("1")
+//                .roles("ADMIN")
+//                .build());
+//
+//        return new InMemoryUserDetailsManager(users);
+//    }
 
 
 }
