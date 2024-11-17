@@ -39,9 +39,10 @@ class CustomUserDetailsService implements UserDetailsService {
             return User
                     .withUsername(appUser.getUserName())
                     .password(appUser.getUserPass())
-                    .roles(appUser.getRoles()
-                            .stream()
-                            .map(Role::getAuthority).toArray(String[]::new))
+                    .roles(String.valueOf(Role.USER))
+//                    .roles(appUser.getRoles()
+//                            .stream()
+//                            .map(Role::getAuthority).toArray(String[]::new))
                     .build();
         }catch (Exception e){
             logger.error("User not found with name: " + userName + " " + e.getMessage());

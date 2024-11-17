@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-15.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-16.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-09.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -884,14 +885,7 @@
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
       <workItem from="1730956711300" duration="12635000" />
-      <workItem from="1731039432298" duration="47153000" />
-    </task>
-    <task id="LOCAL-00362" summary="Tried to run tests">
-      <created>1728441824704</created>
-      <option name="number" value="00362" />
-      <option name="presentableId" value="LOCAL-00362" />
-      <option name="project" value="LOCAL" />
-      <updated>1728441824704</updated>
+      <workItem from="1731039432298" duration="50897000" />
     </task>
     <task id="LOCAL-00363" summary="Tried to run tests">
       <created>1728441840167</created>
@@ -1229,7 +1223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731696470700</updated>
     </task>
-    <option name="localTasksCounter" value="411" />
+    <task id="LOCAL-00411" summary="Rebuilt a AppUserService.java v4">
+      <created>1731775348501</created>
+      <option name="number" value="00411" />
+      <option name="presentableId" value="LOCAL-00411" />
+      <option name="project" value="LOCAL" />
+      <updated>1731775348502</updated>
+    </task>
+    <option name="localTasksCounter" value="412" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1252,7 +1253,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to use a dropdown list in a crudevents.html" />
     <MESSAGE value="Finished to build a dropdown list in a crudevents.html" />
     <MESSAGE value="Tried to use a bootstrap-datepicker in head.html" />
     <MESSAGE value="Finished to build a bootstrap-datepicker in head.html" />
@@ -1277,7 +1277,8 @@
     <MESSAGE value="Rebuilt a AppUserService.java" />
     <MESSAGE value="Rebuilt a AppUserService.java v2" />
     <MESSAGE value="Rebuilt a AppUserService.java v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a AppUserService.java v3" />
+    <MESSAGE value="Rebuilt a AppUserService.java v4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a AppUserService.java v4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
