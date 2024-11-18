@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;
+import java.util.Optional;
 
 public class AppUserService {
 
@@ -39,7 +40,7 @@ public class AppUserService {
         return appUserRepository.findAppUserById(id);
     }
 
-    public List<AppUser> findUserByName(String userName) {
+    public Optional<AppUser> findUserByName(String userName) {
         return appUserRepository.findByUserName(userName);
     }
 
