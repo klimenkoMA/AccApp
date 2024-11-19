@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-17.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-18.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/AppUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/AppUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -887,14 +883,7 @@
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
       <workItem from="1730956711300" duration="12635000" />
-      <workItem from="1731039432298" duration="55883000" />
-    </task>
-    <task id="LOCAL-00364" summary="Built a couple of success tests">
-      <created>1728528286100</created>
-      <option name="number" value="00364" />
-      <option name="presentableId" value="LOCAL-00364" />
-      <option name="project" value="LOCAL" />
-      <updated>1728528286100</updated>
+      <workItem from="1731039432298" duration="58460000" />
     </task>
     <task id="LOCAL-00365" summary="Built a couple of success tests v2">
       <created>1728613803857</created>
@@ -1232,7 +1221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731861069551</updated>
     </task>
-    <option name="localTasksCounter" value="413" />
+    <task id="LOCAL-00413" summary="Corrected CustomUserDetailService.java">
+      <created>1731951312943</created>
+      <option name="number" value="00413" />
+      <option name="presentableId" value="LOCAL-00413" />
+      <option name="project" value="LOCAL" />
+      <updated>1731951312943</updated>
+    </task>
+    <option name="localTasksCounter" value="414" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1255,7 +1251,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tried to use a bootstrap-datepicker in head.html" />
     <MESSAGE value="Finished to build a bootstrap-datepicker in head.html" />
     <MESSAGE value="Added a new field into DocumentClass.java and rebuild DocumentControllerClass.java" />
     <MESSAGE value="Rebuilt all Controllers" />
@@ -1280,7 +1275,8 @@
     <MESSAGE value="Rebuilt a AppUserService.java v3" />
     <MESSAGE value="Rebuilt a AppUserService.java v4" />
     <MESSAGE value="Rebuilt a AppUserService.java v5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt a AppUserService.java v5" />
+    <MESSAGE value="Corrected CustomUserDetailService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected CustomUserDetailService.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
