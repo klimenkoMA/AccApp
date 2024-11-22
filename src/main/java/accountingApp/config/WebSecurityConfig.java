@@ -28,6 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/resources/**", "/static/**", "/css/**", "/video/**").permitAll()
+//                .antMatchers("/feedbacks", "/users").hasRole("ADMIN")
                 .antMatchers("/feedbacks").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
@@ -39,22 +40,28 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .exceptionHandling()
-                    .accessDeniedHandler((request, response, accessDeniedException) -> {
-                        // Проверяем, есть ли у пользователя роль ADMIN
-                        if (request.isUserInRole("ADMIN")) {
+                .accessDeniedHandler((request, response, accessDeniedException) -> {
+                    // Проверяем, есть ли у пользователя роль ADMIN
+                    if (request.isUserInRole("ADMIN")) {
+                        if (request.getRequestURI().contains("/feedbacks")) {
                             response.sendRedirect("/feedbacks");
-                        } else {
-                            response.sendRedirect("/");
                         }
-                    })
-                    .authenticationEntryPoint((request, response, authException) ->{
-                        response.sendRedirect("/login");
-                    })
-                    .defaultAuthenticationEntryPointFor((request, response, authException) -> {
+//                        else if (request.getRequestURI().contains("/users")) {
+//                            response.sendRedirect("/users");
+//                        }
+
+                    } else {
                         response.sendRedirect("/");
-                    }, new AntPathRequestMatcher("/**"))
-                    .and()
-                    .csrf().disable();
+                    }
+                })
+                .authenticationEntryPoint((request, response, authException) -> {
+                    response.sendRedirect("/login");
+                })
+                .defaultAuthenticationEntryPointFor((request, response, authException) -> {
+                    response.sendRedirect("/");
+                }, new AntPathRequestMatcher("/**"))
+                .and()
+                .csrf().disable();
     }
 
 //    @Bean
