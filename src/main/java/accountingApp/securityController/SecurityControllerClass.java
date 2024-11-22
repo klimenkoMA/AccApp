@@ -17,7 +17,7 @@ public class SecurityControllerClass {
 
     final Logger logger = LoggerFactory.getLogger(SecurityControllerClass.class);
 
-//    @Autowired
+    @Autowired
     AppUserService service;
 
 
@@ -33,7 +33,7 @@ public class SecurityControllerClass {
     }
 
 
-    @GetMapping("/admin")
+    @GetMapping("/users")
     public String getUsers(Model model){
         List<AppUser> appUserList = service.getAllAppUsers();
         model.addAttribute("appUserList", appUserList);

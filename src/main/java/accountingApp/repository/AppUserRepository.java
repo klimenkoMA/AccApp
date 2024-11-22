@@ -10,6 +10,9 @@ import java.util.Optional;
 @Repository
 public interface AppUserRepository extends JpaRepository<AppUser, String> {
 
+    @Override
+    List<AppUser> findAll();
+
     Optional<AppUser> findByUserName(String userName);
 
     List<AppUser> findAppUserById(long id);
