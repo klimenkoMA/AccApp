@@ -1,15 +1,17 @@
 package accountingApp.service;
 
 import accountingApp.entity.AppUser;
+import accountingApp.entity.Role;
 import accountingApp.repository.AppUserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
+@Service
 public class AppUserService {
 
     final Logger logger = LoggerFactory.getLogger(AppUserService.class);
@@ -17,10 +19,19 @@ public class AppUserService {
     @Autowired
     private AppUserRepository appUserRepository;
 
-    @Autowired
+    //    @Autowired
     private PasswordEncoder passwordEncoder;
 
     public List<AppUser> getAllAppUsers() {
+
+        List<AppUser> appUserList = new ArrayList<>();
+        if (appUserRepository.findAll()== null) {
+            AppUser user = new AppUser(1, "test"
+                    , "test", true, new HashSet<>(Collections.singleton(Role.USER)) {
+            });
+            appUserList.add(user);
+            return appUserList;
+        }
         return appUserRepository.findAll();
     }
 
