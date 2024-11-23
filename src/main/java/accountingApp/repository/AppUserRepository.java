@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface AppUserRepository extends JpaRepository<AppUser, String> {
+public interface AppUserRepository extends JpaRepository<AppUser, Long> {
 
     @Override
     List<AppUser> findAll();
