@@ -25,7 +25,18 @@ public class AppUserService {
     public List<AppUser> getAllAppUsers() {
 
         List<AppUser> appUserList = new ArrayList<>();
-        if (appUserRepository.findAll()== null) {
+
+        try {
+            if (appUserRepository.findAll() == null) {
+                AppUser user = new AppUser(1, "test"
+                        , "test", true, new HashSet<>(Collections.singleton(Role.USER)) {
+                });
+                appUserList.add(user);
+                return appUserList;
+            }
+        }catch (Exception e){
+            logger.warn("***AppUserService.getAllAppUsers() appUserRepository.findAll() return "
+            + e.getMessage());
             AppUser user = new AppUser(1, "test"
                     , "test", true, new HashSet<>(Collections.singleton(Role.USER)) {
             });
