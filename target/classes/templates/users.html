@@ -36,8 +36,18 @@
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 65rem">
-                        Название оборудования
+                        ; width: 25rem">
+                        Логин
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                        ; width: 25rem">
+                        Состояние
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                        ; width: 25rem">
+                        Роль
                     </th>
                 </tr>
             </table>
@@ -58,6 +68,10 @@
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 25rem">
                                     <div>[[${element.isActive}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 25rem">
+                                    <div>[[${element.roles}]]</div>
                                 </td>
 
                             </tr>

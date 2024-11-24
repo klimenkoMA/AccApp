@@ -5,24 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-22.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-23.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-15.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-16.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/AppUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/AppUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/AppUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/AppUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ComposerSettings">
     <execution />
   </component>
@@ -889,14 +889,7 @@
       <workItem from="1729822865411" duration="67179000" />
       <workItem from="1730263088632" duration="97779000" />
       <workItem from="1730956711300" duration="12635000" />
-      <workItem from="1731039432298" duration="76238000" />
-    </task>
-    <task id="LOCAL-00369" summary="Finished to create tests for DevicesControllerTest.class">
-      <created>1728805434324</created>
-      <option name="number" value="00369" />
-      <option name="presentableId" value="LOCAL-00369" />
-      <option name="project" value="LOCAL" />
-      <updated>1728805434324</updated>
+      <workItem from="1731039432298" duration="79898000" />
     </task>
     <task id="LOCAL-00370" summary="Added some new test's methods">
       <created>1728873861809</created>
@@ -1234,7 +1227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732244419546</updated>
     </task>
-    <option name="localTasksCounter" value="418" />
+    <task id="LOCAL-00418" summary="Added some new files for AppUser entity">
+      <created>1732380121228</created>
+      <option name="number" value="00418" />
+      <option name="presentableId" value="LOCAL-00418" />
+      <option name="project" value="LOCAL" />
+      <updated>1732380121228</updated>
+    </task>
+    <option name="localTasksCounter" value="419" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1292,29 +1292,10 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java</url>
-          <line>19</line>
-          <properties field="appUserRepository" class="accountingApp.service.AppUserService" />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java</url>
           <line>21</line>
           <properties field="service" class="accountingApp.securityController.SecurityControllerClass" />
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java</url>
-          <line>24</line>
-          <properties class="accountingApp.service.AppUserService" method="getAllAppUsers">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java</url>
