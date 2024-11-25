@@ -11,7 +11,7 @@ public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private int id;
+    private long id;
 
     @Column(name = "userlogin")
     private String userName;
@@ -27,7 +27,7 @@ public class AppUser {
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 
-    public AppUser(int id, String userName, String userPass, boolean isActive, Set<Role> roles) {
+    public AppUser(long id, String userName, String userPass, boolean isActive, Set<Role> roles) {
         this.id = id;
         this.userName = userName;
         this.userPass = userPass;
@@ -65,7 +65,7 @@ public class AppUser {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

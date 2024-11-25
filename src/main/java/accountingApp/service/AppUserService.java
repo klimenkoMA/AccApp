@@ -19,7 +19,7 @@ public class AppUserService {
     @Autowired
     private AppUserRepository appUserRepository;
 
-    //    @Autowired
+    @Autowired(required = false)
     private PasswordEncoder passwordEncoder;
 
     public List<AppUser> getAllAppUsers() {
@@ -34,10 +34,10 @@ public class AppUserService {
                 appUserList.add(user);
                 return appUserList;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.warn("***AppUserService.getAllAppUsers() appUserRepository.findAll() return "
-            + e.getMessage());
-            AppUser user = new AppUser(1, "test"
+                    + e.getMessage());
+            AppUser user = new AppUser(0, "test"
                     , "test", true, new HashSet<>(Collections.singleton(Role.USER)) {
             });
             appUserList.add(user);
@@ -47,7 +47,7 @@ public class AppUserService {
     }
 
     public AppUser createUser(AppUser user) {
-        user.setUserPass(passwordEncoder.encode(user.getUserPass()));
+//        user.setUserPass(passwordEncoder.encode(user.getUserPass()));
         logger.warn("AppUser " + user.getUserName() + " created!");
         return appUserRepository.save(user);
     }
