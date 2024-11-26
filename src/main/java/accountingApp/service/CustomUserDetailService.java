@@ -43,7 +43,8 @@ class CustomUserDetailsService implements UserDetailsService {
 
             // Создаем UserDetails
             return User
-                    .withDefaultPasswordEncoder()
+//                    .withDefaultPasswordEncoder()
+                    .builder()
                     .username(appUser.getUserName())
                     .password(appUser.getUserPass())
                     .roles(roles) // Это можно заменить на получение ролей из `appUser`

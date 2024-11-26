@@ -6,6 +6,8 @@ import accountingApp.repository.AppUserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,8 +21,13 @@ public class AppUserService {
     @Autowired
     private AppUserRepository appUserRepository;
 
-    @Autowired(required = false)
+    @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Bean
+    public static PasswordEncoder passwordEncoder() {
+        return NoOpPasswordEncoder.getInstance();
+    }
 
     public List<AppUser> getAllAppUsers() {
 
