@@ -190,3 +190,27 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: User no
 2024-11-26 20:49:45.909  WARN 14324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2024-11-26 20:50:14.708  WARN 14324 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : Successful authorization with user: q
 2024-11-26 20:50:33.583  WARN 14324 --- [http-nio-8080-exec-4] accountingApp.service.AppUserService     : AppUser u created!
+2024-11-26 21:12:54.933 ERROR 6628 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-11-26 21:12:54.973  WARN 6628 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-11-26 21:12:54.979  WARN 6628 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-11-26 21:12:54.983 ERROR 6628 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** Attribute is empty!
+2024-11-26 21:12:54.988 ERROR 6628 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Attribute is empty!
+2024-11-26 21:12:54.996 ERROR 6628 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** null
+2024-11-26 21:12:55.001  WARN 6628 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): dborn <<<< 0 ***
+2024-11-26 21:12:55.187 ERROR 6628 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-11-26 21:12:55.268 ERROR 6628 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-11-26 21:12:55.334  WARN 6628 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-11-26 21:12:55.336 ERROR 6628 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-11-26 21:12:55.485 ERROR 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG DB values! *** null
+2024-11-26 21:12:55.527 ERROR 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** null
+2024-11-26 21:12:55.550 ERROR 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG DB values! *** Attribute is empty!
+2024-11-26 21:12:55.561 ERROR 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** null
+2024-11-26 21:12:55.567 ERROR 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** null
+2024-11-26 21:12:55.580 ERROR 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-11-26 21:12:55.595  WARN 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***
+2024-11-26 21:12:55.601  WARN 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-11-26 21:12:55.602 ERROR 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG ID values! *** null
+2024-11-26 21:12:55.613 ERROR 6628 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** Attribute is empty!
+2024-11-26 21:13:06.904  WARN 14972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-26 21:13:28.210  WARN 14972 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : Successful authorization with user: u
+2024-11-26 21:13:48.252  WARN 14972 --- [http-nio-8080-exec-10] accountingApp.service.AppUserService     : AppUser u2 created!
