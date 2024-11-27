@@ -54,7 +54,7 @@ public class AppUserService {
     }
 
     public AppUser createUser(AppUser user) {
-//        user.setUserPass(passwordEncoder.encode(user.getUserPass()));
+        user.setUserPass(passwordEncoder.encode(user.getUserPass()));
         logger.warn("AppUser " + user.getUserName() + " created!");
         return appUserRepository.save(user);
     }
