@@ -38,7 +38,12 @@ class CustomUserDetailsService implements UserDetailsService {
             if (appUser.getRoles().isEmpty()){
                 roles = "USER";
             }else{
-                roles = appUser.getRoles().stream().iterator().next().getAuthority();
+                roles = appUser
+                        .getRoles()
+                        .stream()
+                        .iterator()
+                        .next()
+                        .getAuthority();
             }
 
             // Создаем UserDetails
