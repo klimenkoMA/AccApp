@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,7 @@ public class AppUserService {
 
     @Bean
     public static PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
     }
 
     public List<AppUser> getAllAppUsers() {
@@ -53,8 +54,8 @@ public class AppUserService {
         return appUserRepository.findAll();
     }
 
-    public AppUser createUser(AppUser user) {
-        user.setUserPass(passwordEncoder.encode(user.getUserPass()));
+    public AppUser createUser(AppUser user, String password) {
+        user.setUserPass(passwordEncoder.encode(password));
         logger.warn("AppUser " + user.getUserName() + " created!");
         return appUserRepository.save(user);
     }

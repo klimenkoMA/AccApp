@@ -76,7 +76,7 @@ public class SecurityControllerClass {
                     , userPassWithoutSpaces
                     , isActiveUser
                     , rolesSet);
-            service.createUser(user);
+            service.createUser(user, userPassWithoutSpaces);
             return getUsers(model);
 
         } catch (Exception e) {
