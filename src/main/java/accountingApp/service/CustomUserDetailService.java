@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 
@@ -21,6 +22,9 @@ class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
     private AppUserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
 
     @Override
@@ -62,5 +66,10 @@ class CustomUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("User not found " + e.getMessage());
         }
     }
+
+    public boolean checkPassword(String rawPassword, String hashedPassword) {
+        return passwordEncoder.matches(rawPassword, hashedPassword);
+    }
+
 
 }
