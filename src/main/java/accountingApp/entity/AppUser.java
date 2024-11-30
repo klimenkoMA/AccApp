@@ -22,8 +22,11 @@ public class AppUser {
     @Column(name = "active")
     private boolean isActive;
 
+    private String isActiveForView;
+
+
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "user_role",joinColumns = @JoinColumn(name = "user_id"))
+    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 
@@ -31,6 +34,11 @@ public class AppUser {
         this.id = id;
         this.userName = userName;
         this.userPass = userPass;
+        if (isActive) {
+            this.isActiveForView = "Активный";
+        } else {
+            this.isActiveForView = "Заблокирован";
+        }
         this.isActive = isActive;
         this.roles = roles;
     }
@@ -38,11 +46,24 @@ public class AppUser {
     public AppUser(String userName, String userPass, boolean isActive, Set<Role> roles) {
         this.userName = userName;
         this.userPass = userPass;
+        if (isActive) {
+            this.isActiveForView = "Активный";
+        } else {
+            this.isActiveForView = "Заблокирован";
+        }
         this.isActive = isActive;
         this.roles = roles;
     }
 
     public AppUser() {
+    }
+
+    public String getIsActiveForView() {
+        return isActiveForView;
+    }
+
+    public void setIsActiveForView(String isActiveForView) {
+        this.isActiveForView = isActiveForView;
     }
 
     public boolean isActive() {
@@ -96,14 +117,18 @@ public class AppUser {
         if (this == o) return true;
         if (!(o instanceof AppUser)) return false;
         AppUser appUser = (AppUser) o;
-        return getId() == appUser.getId() && isActive() == appUser.isActive()
+        return getId() == appUser.getId()
+                && isActive() == appUser.isActive()
                 && Objects.equals(getUserName(), appUser.getUserName())
                 && Objects.equals(getUserPass(), appUser.getUserPass())
+                && Objects.equals(getIsActiveForView(), appUser.getIsActiveForView())
                 && Objects.equals(getRoles(), appUser.getRoles());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUserName(), getUserPass(), isActive(), getRoles());
+        return Objects.hash(getId(), getUserName(),
+                getUserPass(), isActive(), getIsActiveForView(),
+                getRoles());
     }
 }

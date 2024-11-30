@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
 @Service
 class CustomUserDetailsService implements UserDetailsService {
 
@@ -31,22 +30,6 @@ class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    private void bCryptEncode(){
-
-        List<AppUser> appUserList = appUserService.getAllAppUsers();
-        AppUser user;
-        String password;
-
-        for (AppUser appUser : appUserList) {
-            user = appUser;
-            password = user.getUserPass();
-            user.setUserPass(passwordEncoder.encode(password));
-            userRepository.save(user);
-        }
-
-    }
-
-
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         try {
@@ -54,9 +37,12 @@ class CustomUserDetailsService implements UserDetailsService {
             AppUser appUser = userRepository.findByUserName(userName).orElseThrow(() ->
                     new UsernameNotFoundException("User not found"));
 
+            if (!appUser.isActive()){
+                throw new Exception("User " + appUser.getUserName() + " isn't active!");
+            }
+
             // Логируем успешную авторизацию
             logger.warn("Successful authorization with user: " + userName);
-//            bCryptEncode();
 
             String roles;
 
@@ -83,12 +69,28 @@ class CustomUserDetailsService implements UserDetailsService {
             throw e;
         } catch (Exception e) {
             logger.error("An error occurred while loading user by username: " + userName, e);
-            throw new UsernameNotFoundException("User not found " + e.getMessage());
+            throw new UsernameNotFoundException(e.toString());
         }
     }
 
-    public boolean checkPassword(String rawPassword, String hashedPassword) {
-        return passwordEncoder.matches(rawPassword, hashedPassword);
+    /**
+     * Метод для шифрования паролей всех пользователей, находящихся в БД на
+     * данный момент. Применялся 1 раз, по окончанию тестирования работы системы
+     * безопасности аутентификации
+     */
+    private void bCryptEncode(){
+
+        List<AppUser> appUserList = appUserService.getAllAppUsers();
+        AppUser user;
+        String password;
+
+        for (AppUser appUser : appUserList) {
+            user = appUser;
+            password = user.getUserPass();
+            user.setUserPass(passwordEncoder.encode(password));
+            userRepository.save(user);
+        }
+
     }
 
 

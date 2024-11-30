@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -54,7 +53,8 @@ public class AppUserService {
             appUserList.add(user);
             return appUserList;
         }
-        return appUserRepository.findAll();
+
+        return setIsActiveFromBooleanIntoString(appUserRepository.findAll());
     }
 
     public AppUser createUser(AppUser user, String password) {
@@ -63,8 +63,8 @@ public class AppUserService {
         return appUserRepository.save(user);
     }
 
-    public AppUser updateUser(AppUser user) {
-        user.setUserPass(passwordEncoder.encode(user.getUserPass()));
+    public AppUser updateUser(AppUser user, String password) {
+        user.setUserPass(passwordEncoder.encode(password));
         logger.warn("AppUser " + user.getUserName() + " updated!");
         return appUserRepository.save(user);
     }
@@ -77,11 +77,38 @@ public class AppUserService {
         return appUserRepository.findByUserName(userName);
     }
 
-
     public void deleteUser(long id) {
         AppUser user = findUserById(id).get(0);
         logger.warn("AppUser " + user.getUserName() + " deleted!");
         appUserRepository.deleteById(id);
+    }
+
+    private List<AppUser> setIsActiveFromBooleanIntoString(List<AppUser> outerUserList) {
+        try {
+            if (outerUserList == null) {
+                throw new Exception("OuterUserList is NULL");
+            }
+
+            List<AppUser> innerUserList = new ArrayList<>();
+            for (AppUser outerUser : outerUserList) {
+                AppUser innerUser;
+
+                long userId = outerUser.getId();
+                String userName = outerUser.getUserName();
+                Set<Role> userRoles = outerUser.getRoles();
+
+                innerUser = new AppUser(userId,
+                        userName,
+                        outerUser.getUserPass(),
+                        outerUser.isActive(), userRoles);
+                innerUserList.add(innerUser);
+            }
+            return innerUserList;
+        } catch (Exception e) {
+            logger.error("AppUserService.setIsActiveFromBooleanIntoString(): " +
+                    e.getMessage());
+            return null;
+        }
     }
 
 }
