@@ -14,10 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
+import java.util.*;
 
 @RequestMapping
 @Controller
@@ -43,6 +40,19 @@ public class SecurityControllerClass {
     @GetMapping("/users")
     public String getUsers(Model model) {
         List<AppUser> appUserList = service.getAllAppUsers();
+        Role[] rolesArray = Role.values();
+        List<String> rolesList = new ArrayList<>();
+        for (Role r : rolesArray
+        ) {
+            rolesList.add(r.getAuthority());
+        }
+
+        List<String> isActiveList = new ArrayList<>();
+        isActiveList.add("active");
+        isActiveList.add("blocked");
+
+        model.addAttribute("isActiveList", isActiveList);
+        model.addAttribute("rolesList", rolesList);
         model.addAttribute("appUserList", appUserList);
         return "users";
     }
@@ -55,6 +65,16 @@ public class SecurityControllerClass {
             , Model model
     ) {
 
+        if (userName == null
+                || userPass == null
+                || isActive == null
+                || roles == null
+        ) {
+            logger.warn("SecurityControllerClass.addNewUser():" +
+                    " Attribute has a null value!");
+            return getUsers(model);
+        }
+
         String userNameWithoutSpaces = userName.trim();
         String userPassWithoutSpaces = userPass.trim();
         String isActiveWithoutSpaces = isActive.trim();
@@ -64,13 +84,12 @@ public class SecurityControllerClass {
             AppUser user;
             Set<Role> rolesSet = new HashSet<>();
             boolean isActiveUser;
-            isActiveUser = isActiveWithoutSpaces.toLowerCase(Locale.ROOT).equals("да");
+            isActiveUser = isActiveWithoutSpaces.toLowerCase(Locale.ROOT).equals("active");
 
-            if (rolesWithoutSpaces.toLowerCase(Locale.ROOT).matches("админ")) {
+            if (rolesWithoutSpaces.toLowerCase(Locale.ROOT).equals("admin")) {
                 rolesSet.add(Role.ADMIN);
             }
             rolesSet.add(Role.USER);
-
 
             user = new AppUser(userNameWithoutSpaces
                     , userPassWithoutSpaces
@@ -81,6 +100,70 @@ public class SecurityControllerClass {
 
         } catch (Exception e) {
             logger.error("*** SecurityControllerClass.addNewUser():  WRONG DB VALUES " +
+                    "OR EMPTY ATTRS *** " + e.getMessage() + " " + e.toString());
+            e.printStackTrace();
+            return getUsers(model);
+        }
+    }
+
+    @PostMapping("/updateuser")
+    public String updateAppUser(@RequestParam String id
+            , @RequestParam String userName
+            , @RequestParam String userPass
+            , @RequestParam String isActive
+            , @RequestParam String roles
+            , Model model
+    ) {
+        if (id == null
+                || userName == null
+                || userPass == null
+                || isActive == null
+                || roles == null
+        ) {
+            logger.warn("SecurityControllerClass.updateAppUser():" +
+                    " Attribute has a null value!");
+            return getUsers(model);
+        }
+
+        String userIdWithoutSpaces = id.trim();
+        String userNameWithoutSpaces = userName.trim();
+        String userPassWithoutSpaces = userPass.trim();
+        String isActiveWithoutSpaces = isActive.trim();
+        String rolesWithoutSpaces = roles.trim();
+
+        try {
+            long idCheck = Long.parseLong(userIdWithoutSpaces);
+            if (idCheck <= 0) {
+                logger.warn("SecurityControllerClass.updateAppUser():" +
+                        " WRONG ID FORMAT");
+                return getUsers(model);
+            } else if (!userNameWithoutSpaces.equals("")
+                    && !userPassWithoutSpaces.equals("")
+                    && !isActiveWithoutSpaces.equals("")
+                    && !rolesWithoutSpaces.equals("")
+            ) {
+
+                AppUser user;
+                Set<Role> rolesSet = new HashSet<>();
+                boolean isActiveUser;
+                isActiveUser = isActiveWithoutSpaces.toLowerCase(Locale.ROOT).equals("active");
+
+                if (rolesWithoutSpaces.toLowerCase(Locale.ROOT).equals("admin")) {
+                    rolesSet.add(Role.ADMIN);
+                }
+                rolesSet.add(Role.USER);
+
+                user = new AppUser(idCheck
+                        , userNameWithoutSpaces
+                        , userPassWithoutSpaces
+                        , isActiveUser
+                        , rolesSet);
+                service.updateUser(user, userPassWithoutSpaces);
+            }
+            return getUsers(model);
+
+        } catch (Exception e) {
+            logger.error("*** SecurityControllerClass.updateAppUser()::  WRONG DB VALUES " +
                     "OR EMPTY ATTRS *** " + e.getMessage() + " " + e.toString());
             e.printStackTrace();
             return getUsers(model);

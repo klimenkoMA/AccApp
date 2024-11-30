@@ -1,35 +1,24 @@
 package accountingApp.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
-//    @Autowired
-//    private UserDetailsService userDetailsService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
                 .antMatchers("/resources/**", "/static/**", "/css/**", "/video/**").permitAll()
-//                .antMatchers("/feedbacks", "/users").hasRole("ADMIN")
                 .antMatchers("/feedbacks").hasRole("ADMIN")
+                .antMatchers("/users").hasRole("ADMIN")
+//                .antMatchers("/feedbacks").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -42,13 +31,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling()
                 .accessDeniedHandler((request, response, accessDeniedException) -> {
                     // Проверяем, есть ли у пользователя роль ADMIN
+                    System.out.println(request.getAuthType());
                     if (request.isUserInRole("ADMIN")) {
                         if (request.getRequestURI().contains("/feedbacks")) {
                             response.sendRedirect("/feedbacks");
+                        } else if (request.getRequestURI().contains("users")) {
+                            response.sendRedirect("/users");
                         }
-//                        else if (request.getRequestURI().contains("/users")) {
-//                            response.sendRedirect("/users");
-//                        }
 
                     } else {
                         response.sendRedirect("/");
@@ -63,29 +52,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf().disable();
     }
-
-//    @Bean
-//    @Override
-//    public UserDetailsService userDetailsService() {
-//        List<UserDetails> users = new ArrayList<>();
-//        users.add(User.withDefaultPasswordEncoder()
-//                .username("u")
-//                .password("1")
-//                .roles("USER")
-//                .build());
-//        users.add(User.withDefaultPasswordEncoder()
-//                .username("u2")
-//                .password("1")
-//                .roles("USER")
-//                .build());
-//        users.add(User.withDefaultPasswordEncoder()
-//                .username("admin")
-//                .password("1")
-//                .roles("ADMIN")
-//                .build());
-//
-//        return new InMemoryUserDetailsManager(users);
-//    }
-
-
 }
