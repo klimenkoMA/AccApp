@@ -37,17 +37,20 @@ public class AppUserService {
         try {
             if (appUserRepository.findAll() == null) {
                 AppUser user = new AppUser(1, "test"
-                        , "test", true, new HashSet<>(Collections.singleton(Role.USER)) {
-                });
+                        , "test", true,
+                        new HashSet<>(Collections.singleton(Role.USER)) {
+                        });
                 appUserList.add(user);
                 return appUserList;
             }
         } catch (Exception e) {
-            logger.warn("***AppUserService.getAllAppUsers() appUserRepository.findAll() return "
+            logger.warn("***AppUserService.getAllAppUsers() appUserRepository.findAll()" +
+                    "return "
                     + e.getMessage());
             AppUser user = new AppUser(0, "test"
-                    , "test", true, new HashSet<>(Collections.singleton(Role.USER)) {
-            });
+                    , "test", true,
+                    new HashSet<>(Collections.singleton(Role.USER)) {
+                    });
             appUserList.add(user);
             return appUserList;
         }

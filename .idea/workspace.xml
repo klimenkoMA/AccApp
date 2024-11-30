@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-29.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-22.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -868,14 +875,7 @@
       <workItem from="1730956711300" duration="12635000" />
       <workItem from="1731039432298" duration="88406000" />
       <workItem from="1732556329455" duration="12280000" />
-      <workItem from="1732847523203" duration="332000" />
-    </task>
-    <task id="LOCAL-00375" summary="Added CRUD buttons into feedbacks.html and created some unit tests">
-      <created>1729271617372</created>
-      <option name="number" value="00375" />
-      <option name="presentableId" value="LOCAL-00375" />
-      <option name="project" value="LOCAL" />
-      <updated>1729271617372</updated>
+      <workItem from="1732847523203" duration="6319000" />
     </task>
     <task id="LOCAL-00376" summary="Added CRUD buttons into feedbacks.html and created some unit tests v2">
       <created>1729318779095</created>
@@ -1213,7 +1213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732760707097</updated>
     </task>
-    <option name="localTasksCounter" value="424" />
+    <task id="LOCAL-00424" summary="Tried to repair encoding passwords">
+      <created>1732849378144</created>
+      <option name="number" value="00424" />
+      <option name="presentableId" value="LOCAL-00424" />
+      <option name="project" value="LOCAL" />
+      <updated>1732849378145</updated>
+    </task>
+    <option name="localTasksCounter" value="425" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1236,8 +1243,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuild documents.html" />
-    <MESSAGE value="Finished rebuilding documents.html&#10;Added scroll-y bar" />
     <MESSAGE value="Rebuild all crud thymeleaf fragments" />
     <MESSAGE value="Corrected some cosmetic issues in all CRUD pages" />
     <MESSAGE value="Tried to use logging in DocumentControllerClass.java" />
@@ -1261,7 +1266,9 @@
     <MESSAGE value="Repaired a creating of new users v2" />
     <MESSAGE value="Repaired a creating of new users v3" />
     <MESSAGE value="Repaired a creating of new users v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repaired a creating of new users v4" />
+    <MESSAGE value="Tried to repair encoding paswords" />
+    <MESSAGE value="Tried to repair encoding passwords" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to repair encoding passwords" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
