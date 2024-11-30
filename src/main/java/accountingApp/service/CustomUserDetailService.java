@@ -14,6 +14,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 class CustomUserDetailsService implements UserDetailsService {
@@ -24,7 +26,25 @@ class CustomUserDetailsService implements UserDetailsService {
     private AppUserRepository userRepository;
 
     @Autowired
+    private AppUserService appUserService;
+
+    @Autowired
     private PasswordEncoder passwordEncoder;
+
+    private void bCryptEncode(){
+
+        List<AppUser> appUserList = appUserService.getAllAppUsers();
+        AppUser user;
+        String password;
+
+        for (AppUser appUser : appUserList) {
+            user = appUser;
+            password = user.getUserPass();
+            user.setUserPass(passwordEncoder.encode(password));
+            userRepository.save(user);
+        }
+
+    }
 
 
     @Override
@@ -36,6 +56,7 @@ class CustomUserDetailsService implements UserDetailsService {
 
             // Логируем успешную авторизацию
             logger.warn("Successful authorization with user: " + userName);
+//            bCryptEncode();
 
             String roles;
 
@@ -52,11 +73,10 @@ class CustomUserDetailsService implements UserDetailsService {
 
             // Создаем UserDetails
             return User
-//                    .withDefaultPasswordEncoder()
                     .builder()
                     .username(appUser.getUserName())
                     .password(appUser.getUserPass())
-                    .roles(roles) // Это можно заменить на получение ролей из `appUser`
+                    .roles(roles)
                     .build();
         } catch (UsernameNotFoundException e) {
             logger.error("User not found: " + userName, e);
