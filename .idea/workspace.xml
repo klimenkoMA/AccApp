@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-11-30.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-23.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudusers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudusers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/AppUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/AppUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudusers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudusers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -880,14 +879,7 @@
       <workItem from="1730956711300" duration="12635000" />
       <workItem from="1731039432298" duration="88406000" />
       <workItem from="1732556329455" duration="12280000" />
-      <workItem from="1732847523203" duration="29836000" />
-    </task>
-    <task id="LOCAL-00377" summary="Added some new test's into FeedbackControllerTest.class">
-      <created>1729328532734</created>
-      <option name="number" value="00377" />
-      <option name="presentableId" value="LOCAL-00377" />
-      <option name="project" value="LOCAL" />
-      <updated>1729328532734</updated>
+      <workItem from="1732847523203" duration="39129000" />
     </task>
     <task id="LOCAL-00378" summary="Finished to create unit tests">
       <created>1729400358111</created>
@@ -1225,7 +1217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732957290795</updated>
     </task>
-    <option name="localTasksCounter" value="426" />
+    <task id="LOCAL-00426" summary="Added updateAppUser() method in SecurityControllerClass">
+      <created>1732991869327</created>
+      <option name="number" value="00426" />
+      <option name="presentableId" value="LOCAL-00426" />
+      <option name="project" value="LOCAL" />
+      <updated>1732991869327</updated>
+    </task>
+    <option name="localTasksCounter" value="427" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1248,7 +1247,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrected some cosmetic issues in all CRUD pages" />
     <MESSAGE value="Tried to use logging in DocumentControllerClass.java" />
     <MESSAGE value="Added logging in all Controller classes" />
     <MESSAGE value="Rebuilt a security part. Trying to create a AppUser entity" />
@@ -1273,7 +1271,8 @@
     <MESSAGE value="Tried to repair encoding paswords" />
     <MESSAGE value="Tried to repair encoding passwords" />
     <MESSAGE value="Finished to repair in passwords encoding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished to repair in passwords encoding" />
+    <MESSAGE value="Added updateAppUser() method in SecurityControllerClass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added updateAppUser() method in SecurityControllerClass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

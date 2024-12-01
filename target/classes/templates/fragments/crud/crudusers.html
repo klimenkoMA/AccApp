@@ -8,7 +8,7 @@
 
 <div class="d-flex p-3 m-3" style="min-width: max-content;justify-content: center;
                 max-height: min-content" th:fragment="crudusers">
-    <table class="crud_buttons col" cellpadding="40px" align="center">
+    <table class="crud_buttons col" cellpadding="45px" align="center">
         <td>
             <div class="popup_div">
                 <input type="checkbox" id="callback">
@@ -22,10 +22,26 @@
                             <input type="text" name="userPass" align="middle" placeholder="Пароль"/>
                         </label>
                         <label>
-                            <input type="text" name="isActive" align="middle" placeholder="Активный"/>
+                            <select class="form-select m-2" name="isActive"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">blocked</option>
+                                <option th:each="element : ${isActiveList}"
+                                        th:value="${element}"
+                                        th:text="${element}"></option>
+                            </select>
                         </label>
                         <label>
-                            <input type="text" name="roles" align="middle" placeholder="Роль"/>
+                            <select class="form-select m-2" name="roles"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">USER</option>
+                                <option th:each="element : ${rolesList}"
+                                        th:value="${element}"
+                                        th:text="${element}"></option>
+                            </select>
                         </label>
                     </div>
                     <div align="center">
@@ -53,7 +69,26 @@
                             <input type="text" name="userPass" align="middle" placeholder="Пароль"/>
                         </label>
                         <label>
-                            <input type="text" name="isActive" align="middle" placeholder="Активный"/>
+                            <select class="form-select m-2" name="isActive"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">blocked</option>
+                                <option th:each="element : ${isActiveList}"
+                                        th:value="${element}"
+                                        th:text="${element}"></option>
+                            </select>
+                        </label>
+                        <label>
+                            <select class="form-select m-2" name="roles"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">USER</option>
+                                <option th:each="element : ${rolesList}"
+                                        th:value="${element}"
+                                        th:text="${element}"></option>
+                            </select>
                         </label>
                     </div>
                     <div align="center">

@@ -37,33 +37,41 @@ class CustomUserDetailsService implements UserDetailsService {
             AppUser appUser = userRepository.findByUserName(userName).orElseThrow(() ->
                     new UsernameNotFoundException("User not found"));
 
-            if (!appUser.isActive()){
+            if (!appUser.isActive()) {
                 throw new Exception("User " + appUser.getUserName() + " isn't active!");
             }
 
             // Логируем успешную авторизацию
-            logger.warn("Successful authorization with user: " + userName);
+            logger.warn("CustomUserDetailsService.loadUserByUsername " +
+                    "Successful authorization with user: " + userName);
 
-            String roles;
+            String roles = "";
+            synchronized (roles) {
+                if (appUser.getRoles().isEmpty()) {
+                    roles = "USER";
+                } else {
+                    roles = appUser
+                            .getRoles()
+                            .stream()
+                            .iterator()
+                            .next()
+                            .getAuthority();
+                }
 
-            if (appUser.getRoles().isEmpty()){
-                roles = "USER";
-            }else{
-                roles = appUser
-                        .getRoles()
-                        .stream()
-                        .iterator()
-                        .next()
-                        .getAuthority();
+                if (appUser.getUserName().equals("admin")) {
+                    roles = "ADMIN";
+                }
+                logger.warn("CustomUserDetailsService.loadUserByUsername " +
+                        "User's role is : " + roles);
+
+                // Создаем UserDetails
+                return User
+                        .builder()
+                        .username(appUser.getUserName())
+                        .password(appUser.getUserPass())
+                        .roles(roles)
+                        .build();
             }
-
-            // Создаем UserDetails
-            return User
-                    .builder()
-                    .username(appUser.getUserName())
-                    .password(appUser.getUserPass())
-                    .roles(roles)
-                    .build();
         } catch (UsernameNotFoundException e) {
             logger.error("User not found: " + userName, e);
             throw e;
@@ -78,7 +86,7 @@ class CustomUserDetailsService implements UserDetailsService {
      * данный момент. Применялся 1 раз, по окончанию тестирования работы системы
      * безопасности аутентификации
      */
-    private void bCryptEncode(){
+    private void bCryptEncode() {
 
         List<AppUser> appUserList = appUserService.getAllAppUsers();
         AppUser user;
