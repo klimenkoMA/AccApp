@@ -170,5 +170,35 @@ public class SecurityControllerClass {
         }
     }
 
+    @PostMapping("/deleteuser")
+    public String deleteAppUser(@RequestParam String id
+            , Model model
+    ) {
+        if (id == null
+        ) {
+            logger.warn("SecurityControllerClass.deleteAppUser():" +
+                    " Attribute has a null value!");
+            return getUsers(model);
+        }
+
+        String userIdWithoutSpaces = id.trim();
+
+        try {
+            long idCheck = Long.parseLong(userIdWithoutSpaces);
+            if (idCheck <= 0) {
+                logger.warn("SecurityControllerClass.updateAppUser():" +
+                        " WRONG ID FORMAT");
+                return getUsers(model);
+            }
+            service.deleteUser(idCheck);
+            return getUsers(model);
+        } catch (Exception e) {
+            logger.error("*** SecurityControllerClass.deleteAppUser():  WRONG DB VALUES " +
+                    "OR EMPTY ATTRS *** " + e.getMessage() + " " + e.toString());
+            e.printStackTrace();
+            return getUsers(model);
+        }
+    }
+
 
 }

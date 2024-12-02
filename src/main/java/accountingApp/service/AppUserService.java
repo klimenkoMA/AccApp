@@ -83,6 +83,12 @@ public class AppUserService {
         appUserRepository.deleteById(id);
     }
 
+    /**
+     * Метод нужен для корректного отображения первых зарегистрированных пользователей.
+     * Нужно убрать перед релизом и очисткой БД
+     * @param outerUserList
+     * @return
+     */
     private List<AppUser> setIsActiveFromBooleanIntoString(List<AppUser> outerUserList) {
         try {
             if (outerUserList == null) {
@@ -100,7 +106,8 @@ public class AppUserService {
                 innerUser = new AppUser(userId,
                         userName,
                         outerUser.getUserPass(),
-                        outerUser.isActive(), userRoles);
+                        outerUser.isActive(),
+                        userRoles);
                 innerUserList.add(innerUser);
             }
             return innerUserList;
