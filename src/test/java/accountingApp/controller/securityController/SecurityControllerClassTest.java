@@ -39,4 +39,24 @@ class SecurityControllerClassTest {
                 .andExpect(status().isOk())
                 .andExpect(view().name("login"));
     }
+
+    @Test
+    void getUsers() {
+    }
+
+    @Test
+    void addNewUser() {
+    }
+
+    @Test
+    void updateAppUser() {
+    }
+
+    @Test
+    void deleteAppUser() {
+    }
+
+    @Test
+    void findAppUser() {
+    }
 }
