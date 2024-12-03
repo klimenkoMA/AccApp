@@ -65,10 +65,10 @@ public class SecurityControllerClass {
             , Model model
     ) {
 
-        if (userName == null
-                || userPass == null
-                || isActive == null
-                || roles == null
+        if (userName == null || userName.equals("") || userName.isEmpty()
+                || userPass == null || userPass.equals("") || userPass.isEmpty()
+                || isActive == null || isActive.equals("") || isActive.isEmpty()
+                || roles == null || roles.equals("") || roles.isEmpty()
         ) {
             logger.warn("SecurityControllerClass.addNewUser():" +
                     " Attribute has a null value!");
@@ -114,11 +114,11 @@ public class SecurityControllerClass {
             , @RequestParam String roles
             , Model model
     ) {
-        if (id == null
-                || userName == null
-                || userPass == null
-                || isActive == null
-                || roles == null
+        if (id == null || id.equals("") || id.isEmpty()
+                || userName == null || userName.equals("") || userName.isEmpty()
+                || userPass == null || userPass.equals("") || userPass.isEmpty()
+                || isActive == null || isActive.equals("") || isActive.isEmpty()
+                || roles == null || roles.equals("") || roles.isEmpty()
         ) {
             logger.warn("SecurityControllerClass.updateAppUser():" +
                     " Attribute has a null value!");
@@ -175,6 +175,8 @@ public class SecurityControllerClass {
             , Model model
     ) {
         if (id == null
+                || id.equals("")
+                || id.isEmpty()
         ) {
             logger.warn("SecurityControllerClass.deleteAppUser():" +
                     " Attribute has a null value!");
@@ -186,7 +188,7 @@ public class SecurityControllerClass {
         try {
             long idCheck = Long.parseLong(userIdWithoutSpaces);
             if (idCheck <= 0) {
-                logger.warn("SecurityControllerClass.updateAppUser():" +
+                logger.warn("SecurityControllerClass.deleteAppUser():" +
                         " WRONG ID FORMAT");
                 return getUsers(model);
             }
@@ -200,5 +202,47 @@ public class SecurityControllerClass {
         }
     }
 
+    @PostMapping("/finduserbyname")
+    public String findAppUser(@RequestParam String userName
+            , Model model
+    ) {
+        if (userName == null
+                || userName.equals("")
+                || userName.isEmpty()
+        ) {
+            logger.warn("SecurityControllerClass.findAppUser():" +
+                    " Attribute has a null value!");
+            return getUsers(model);
+        }
 
+        String userIdWithoutSpaces = userName.trim();
+
+        try {
+            long idCheck = Long.parseLong(userIdWithoutSpaces);
+            if (idCheck <= 0 || userIdWithoutSpaces.isEmpty()) {
+                logger.warn("SecurityControllerClass.findAppUser():" +
+                        " WRONG ID FORMAT");
+                return getUsers(model);
+            }
+            List<AppUser> appUserList = service.findUserById(idCheck);
+            model.addAttribute("appUserList", appUserList);
+            return "users";
+        } catch (Exception e) {
+            try {
+                Optional<AppUser> appUserOptional =
+                        service.findUserByName(userIdWithoutSpaces);
+                List<AppUser> appUserList = new ArrayList<>();
+                appUserOptional.ifPresent(appUserList::add);
+                model.addAttribute("appUserList", appUserList);
+                logger.debug("SecurityControllerClass.findAppUser(): " +
+                        "found an AppUser by fio  *** " + e.getMessage());
+                return "users";
+            } catch (Exception e1) {
+                logger.error("*** SecurityControllerClass.findAppUser():  WRONG DB VALUES " +
+                        "OR EMPTY ATTRS *** " + e.getMessage() + " " + e.toString());
+                e1.printStackTrace();
+                return getUsers(model);
+            }
+        }
+    }
 }

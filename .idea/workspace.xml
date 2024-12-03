@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-01.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-24.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/AppUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/AppUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,6 +415,17 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DocumentControllerClassTest.addDocumentFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -873,14 +883,7 @@
       <workItem from="1730956711300" duration="12635000" />
       <workItem from="1731039432298" duration="88406000" />
       <workItem from="1732556329455" duration="12280000" />
-      <workItem from="1732847523203" duration="46453000" />
-    </task>
-    <task id="LOCAL-00379" summary="Added sone new fields in Events.java, Room.java, WorkArea.java">
-      <created>1729479617380</created>
-      <option name="number" value="00379" />
-      <option name="presentableId" value="LOCAL-00379" />
-      <option name="project" value="LOCAL" />
-      <updated>1729479617380</updated>
+      <workItem from="1732847523203" duration="51735000" />
     </task>
     <task id="LOCAL-00380" summary="Added some new fields in Room.java, WorkArea.java">
       <created>1729566141373</created>
@@ -1218,7 +1221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733060148379</updated>
     </task>
-    <option name="localTasksCounter" value="428" />
+    <task id="LOCAL-00428" summary="Added deleteAppUser() method in SecurityControllerClass">
+      <created>1733106520344</created>
+      <option name="number" value="00428" />
+      <option name="presentableId" value="LOCAL-00428" />
+      <option name="project" value="LOCAL" />
+      <updated>1733106520344</updated>
+    </task>
+    <option name="localTasksCounter" value="429" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1241,7 +1251,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added logging in all Controller classes" />
     <MESSAGE value="Rebuilt a security part. Trying to create a AppUser entity" />
     <MESSAGE value="Created a CustomUserDetailService.java" />
     <MESSAGE value="Created a Role.class" />
@@ -1266,7 +1275,8 @@
     <MESSAGE value="Finished to repair in passwords encoding" />
     <MESSAGE value="Added updateAppUser() method in SecurityControllerClass" />
     <MESSAGE value="Fixed bug with admins role in CustomUserDetailsService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with admins role in CustomUserDetailsService" />
+    <MESSAGE value="Added deleteAppUser() method in SecurityControllerClass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added deleteAppUser() method in SecurityControllerClass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
