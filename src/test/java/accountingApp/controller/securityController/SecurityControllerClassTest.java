@@ -4,19 +4,46 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
+import accountingApp.entity.AppUser;
 import accountingApp.securityController.SecurityControllerClass;
+import accountingApp.service.AppUserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.ui.Model;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.mockito.Mockito.*;
 
 @WebMvcTest(SecurityControllerClass.class)
 class SecurityControllerClassTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    @Mock
+    private AppUserService appUserService;
+
+    @InjectMocks
+    private SecurityControllerClass securityControllerClass;
+
+    @Mock
+    private Model model;
+
+    private final List<AppUser> appUserList;
+
+    @BeforeEach
+    public void setup(){
+        MockitoAnnotations.openMocks(this);
+    }
 
 
     @Test
@@ -40,8 +67,17 @@ class SecurityControllerClassTest {
                 .andExpect(view().name("login"));
     }
 
+    {
+        AppUser u1 = new AppUser();
+        AppUser u2 = new AppUser();
+        appUserList= Arrays.asList(u1, u2);
+    }
+
     @Test
-    void getUsers() {
+    void getUsersShouldReturnAppUserList() {
+
+        when(appUserService.getAllAppUsers()).thenReturn(appUserList);
+
     }
 
     @Test
