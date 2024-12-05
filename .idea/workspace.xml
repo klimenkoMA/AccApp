@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-02.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-25.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/securityController/SecurityControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/securityController/SecurityControllerClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/securityController/SecurityControllerClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/securityController/SecurityControllerClassTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -885,14 +880,7 @@
       <workItem from="1730956711300" duration="12635000" />
       <workItem from="1731039432298" duration="88406000" />
       <workItem from="1732556329455" duration="12280000" />
-      <workItem from="1732847523203" duration="57216000" />
-    </task>
-    <task id="LOCAL-00381" summary="Rebuilt Room and WorkArea.java">
-      <created>1729652357947</created>
-      <option name="number" value="00381" />
-      <option name="presentableId" value="LOCAL-00381" />
-      <option name="project" value="LOCAL" />
-      <updated>1729652357947</updated>
+      <workItem from="1732847523203" duration="59437000" />
     </task>
     <task id="LOCAL-00382" summary="Rebuilt Room, WorkArea and Employee.java">
       <created>1729738763558</created>
@@ -1230,7 +1218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733192497257</updated>
     </task>
-    <option name="localTasksCounter" value="430" />
+    <task id="LOCAL-00430" summary="Added some tests in SecurityControllerClassTest">
+      <created>1733279331002</created>
+      <option name="number" value="00430" />
+      <option name="presentableId" value="LOCAL-00430" />
+      <option name="project" value="LOCAL" />
+      <updated>1733279331002</updated>
+    </task>
+    <option name="localTasksCounter" value="431" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1253,7 +1248,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created a CustomUserDetailService.java" />
     <MESSAGE value="Created a Role.class" />
     <MESSAGE value="Created a AppUserService.java" />
     <MESSAGE value="Rebuilt a AppUserService.java" />
@@ -1278,7 +1272,8 @@
     <MESSAGE value="Fixed bug with admins role in CustomUserDetailsService" />
     <MESSAGE value="Added deleteAppUser() method in SecurityControllerClass" />
     <MESSAGE value="Added findAppUser() method in SecurityControllerClass" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added findAppUser() method in SecurityControllerClass" />
+    <MESSAGE value="Added some tests in SecurityControllerClassTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some tests in SecurityControllerClassTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

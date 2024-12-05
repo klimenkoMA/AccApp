@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import accountingApp.entity.AppUser;
 import accountingApp.securityController.SecurityControllerClass;
 import accountingApp.service.AppUserService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -41,13 +42,14 @@ class SecurityControllerClassTest {
     private final List<AppUser> appUserList;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
 
     @Test
-    @WithMockUser // Создаем пользователя, который будет аутентифицирован
+    @WithMockUser
+        // Создаем пользователя, который будет аутентифицирован
     void testGetHome_WithAuthenticatedUser() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
@@ -70,7 +72,7 @@ class SecurityControllerClassTest {
     {
         AppUser u1 = new AppUser();
         AppUser u2 = new AppUser();
-        appUserList= Arrays.asList(u1, u2);
+        appUserList = Arrays.asList(u1, u2);
     }
 
     @Test
@@ -78,6 +80,13 @@ class SecurityControllerClassTest {
 
         when(appUserService.getAllAppUsers()).thenReturn(appUserList);
 
+        String viewName = securityControllerClass.getUsers(model);
+
+        Assertions.assertEquals("users", viewName);
+
+        verify(model).addAttribute("appUserList", appUserList);
+
+        verify(appUserService).getAllAppUsers();
     }
 
     @Test
