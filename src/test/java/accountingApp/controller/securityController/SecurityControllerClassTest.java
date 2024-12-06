@@ -5,6 +5,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 import accountingApp.entity.AppUser;
+import accountingApp.entity.Role;
 import accountingApp.securityController.SecurityControllerClass;
 import accountingApp.service.AppUserService;
 import org.junit.jupiter.api.Assertions;
@@ -13,13 +14,16 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.verification.VerificationMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
@@ -90,7 +94,24 @@ class SecurityControllerClassTest {
     }
 
     @Test
-    void addNewUser() {
+    void validUserAttributesAdded() {
+
+        String userName = "name";
+        String userPass = "password";
+        String isActive = "active";
+        String roles = "USER";
+
+        when(appUserService.createUser(new AppUser(), "")).thenReturn(new AppUser());
+
+        String viewName = securityControllerClass.addNewUser(userName
+                , userPass, isActive, roles, model);
+
+        Assertions.assertEquals("users", viewName);
+
+//        verify(model).addAttribute("appUserList",appUserList);
+
+//        verify(appUserService).createUser(new AppUser(userName
+//                , userPass, false, new Role[]{Role.USER}), userPass);
     }
 
     @Test
