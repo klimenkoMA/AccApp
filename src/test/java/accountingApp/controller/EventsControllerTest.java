@@ -2,7 +2,7 @@ package accountingApp.controller;
 
 
 import accountingApp.entity.*;
-import accountingApp.service.EventsService;
+import accountingApp.service.*;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 
 import java.util.ArrayList;
@@ -26,9 +27,16 @@ class EventsControllerTest {
 
     @Mock
     private Model model;
-
     @Mock
     private EventsService eventsService;
+    @Mock
+    EmployeeService employeeService;
+    @Mock
+    ITStaffService itStaffService;
+    @Mock
+    DevicesService devicesService;
+    @Mock
+    WorkAreaService workAreaService;
 
     private final List<Events> eventsList;
 
@@ -78,13 +86,13 @@ class EventsControllerTest {
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
-//        String viewName = eventsController.getEvents(model);
+        String viewName = eventsController.getEvents(model);
 
-//        Assertions.assertEquals("events", viewName);
+        Assertions.assertEquals("events", viewName);
 
-//        verify(model).addAttribute("eventsList", eventsList);
+        verify(model).addAttribute("eventsList", eventsList);
 
-//        verify(eventsService).findAllEvents();
+        verify(eventsService).findAllEvents();
 
     }
 
@@ -101,15 +109,15 @@ class EventsControllerTest {
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
-//        String viewName = eventsController.addNewEvent(dateWithoutSpaces
-//                , new Devices(deviceWithoutSpaces)
-//                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
-//                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")))
-//                , new ITStaff(1, itstaffidWithoutSpaces)
-//                , new WorkArea("BGU")
-//                , commentWithoutSpaces, model);
-//
-//        Assertions.assertEquals("events", viewName);
+        String viewName = eventsController.addNewEvent(dateWithoutSpaces
+                , new Devices(deviceWithoutSpaces)
+                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
+                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")))
+                , new ITStaff(1, itstaffidWithoutSpaces)
+                , new WorkArea("BGU")
+                , commentWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
     }
 
     @Test
@@ -124,15 +132,15 @@ class EventsControllerTest {
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
-//        String viewName = eventsController.addNewEvent(dateWithoutSpaces
-//                , new Devices(deviceWithoutSpaces)
-//                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
-//                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")))
-//                , new ITStaff(1, itstaffidWithoutSpaces)
-//                , new WorkArea("BGU")
-//                , commentWithoutSpaces, model);
-//
-//        Assertions.assertEquals("events", viewName);
+        String viewName = eventsController.addNewEvent(dateWithoutSpaces
+                , new Devices(deviceWithoutSpaces)
+                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
+                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")))
+                , new ITStaff(1, itstaffidWithoutSpaces)
+                , new WorkArea("BGU")
+                , commentWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
 
         verify(eventsService, never()).addNewEvent(any(Events.class));
     }
@@ -145,11 +153,11 @@ class EventsControllerTest {
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
-//        String viewName = eventsController.deleteEvent(dateWithoutSpaces, model);
-//
-//        Assertions.assertEquals("events", viewName);
+        String viewName = eventsController.deleteEvent(dateWithoutSpaces, model);
 
-//        verify(eventsService).deleteEventsById(idCheck);
+        Assertions.assertEquals("events", viewName);
+
+        verify(eventsService).deleteEventsById(idCheck);
     }
 
     @Test
@@ -160,9 +168,9 @@ class EventsControllerTest {
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
-//        String viewName = eventsController.deleteEvent(dateWithoutSpaces, model);
-//
-//        Assertions.assertEquals("events", viewName);
+        String viewName = eventsController.deleteEvent(dateWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
 
         verify(eventsService, never()).deleteEventsById(idCheck);
     }
@@ -203,15 +211,15 @@ class EventsControllerTest {
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(events);
 
-//        String viewName = eventsController.updateEvent(eventsId, dateWithoutSpaces
-//                , new Devices(deviceWithoutSpaces)
-//                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
-//                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")))
-//                , new ITStaff(1, itstaffidWithoutSpaces)
-//                , new WorkArea("BGU")
-//                , commentWithoutSpaces, model);
-//
-//        Assertions.assertEquals("events", viewName);
+        String viewName = eventsController.updateEvent(eventsId, dateWithoutSpaces
+                , new Devices(deviceWithoutSpaces)
+                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
+                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")))
+                , new ITStaff(1, itstaffidWithoutSpaces)
+                , new WorkArea("BGU")
+                , commentWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
 
     }
 
@@ -237,15 +245,15 @@ class EventsControllerTest {
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(events);
 
-//        String viewName = eventsController.updateEvent(eventsId, dateWithoutSpaces
-//                , new Devices(deviceWithoutSpaces)
-//                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
-//                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")))
-//                , new ITStaff(1, itstaffidWithoutSpaces)
-//                , new WorkArea("BGU")
-//                , commentWithoutSpaces, model);
-//
-//        Assertions.assertEquals("events", viewName);
+        String viewName = eventsController.updateEvent(eventsId, dateWithoutSpaces
+                , new Devices(deviceWithoutSpaces)
+                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
+                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")))
+                , new ITStaff(1, itstaffidWithoutSpaces)
+                , new WorkArea("BGU")
+                , commentWithoutSpaces, model);
+
+        Assertions.assertEquals("events", viewName);
 
         Mockito.verify(this.eventsService, never()).updateEvent(any(Events.class));
 
@@ -304,9 +312,9 @@ class EventsControllerTest {
 
         Mockito.when(eventsService.getEventById(idCheck)).thenReturn(events);
 
-//        String viewName = eventsController.findEventsById(eventsId, model);
-//
-//        Assertions.assertEquals("events", viewName);
+        String viewName = eventsController.findEventsById(eventsId, model);
+
+        Assertions.assertEquals("events", viewName);
 
         Mockito.verify(this.eventsService, never()).getEventById(idCheck);
 

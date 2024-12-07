@@ -114,11 +114,11 @@ public class SecurityControllerClass {
             , @RequestParam String roles
             , Model model
     ) {
-        if (id == null || id.equals("") || id.isEmpty()
-                || userName == null || userName.equals("") || userName.isEmpty()
-                || userPass == null || userPass.equals("") || userPass.isEmpty()
-                || isActive == null || isActive.equals("") || isActive.isEmpty()
-                || roles == null || roles.equals("") || roles.isEmpty()
+        if (id == null || id.equals("") || id.isEmpty() || id.equals(" ")
+                ||userName == null || userName.equals("") || userName.isEmpty() || userName.equals(" ")
+                || userPass == null || userPass.equals("") || userPass.isEmpty() || userPass.equals(" ")
+                || isActive == null || isActive.equals("") || isActive.isEmpty() || isActive.equals(" ")
+                || roles == null || roles.equals("") || roles.isEmpty() || roles.equals(" ")
         ) {
             logger.warn("SecurityControllerClass.updateAppUser():" +
                     " Attribute has a null value!");
@@ -177,6 +177,7 @@ public class SecurityControllerClass {
         if (id == null
                 || id.equals("")
                 || id.isEmpty()
+                || id.equals(" ")
         ) {
             logger.warn("SecurityControllerClass.deleteAppUser():" +
                     " Attribute has a null value!");

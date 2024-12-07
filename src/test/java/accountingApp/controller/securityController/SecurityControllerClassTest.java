@@ -48,6 +48,7 @@ class SecurityControllerClassTest {
     private Set<Role> roleSet;
     private AppUser user;
     private String viewName;
+    private long userId;
 
 
     {
@@ -115,9 +116,9 @@ class SecurityControllerClassTest {
 
         Assertions.assertEquals("users", viewName);
 
-        verify(model, atMost(3)).addAttribute("appUserList", appUserList);
+        verify(model, atMost(1)).addAttribute("appUserList", appUserList);
 
-        verify(appUserService, atMost(2)).createUser(new AppUser(userName
+        verify(appUserService, atMost(1)).createUser(new AppUser(userName
                 , userPass, false, roleSet), userPass);
 
     }
@@ -152,14 +153,104 @@ class SecurityControllerClassTest {
     }
 
     @Test
-    void updateAppUser() {
+    void validUpdatingAppUser() {
+
+        userId = 1;
+
+        when(appUserService.updateUser(new AppUser(), "222")).thenReturn(new AppUser());
+
+        viewName = securityControllerClass.updateAppUser(userId + "", userName
+                , userPass, isActive, roles, model);
+
+        Assertions.assertEquals("users", viewName);
+
+        verify(model, atMost(1)).addAttribute("appUserList", appUserList);
+
+        verify(appUserService, atMost(1)).updateUser(new AppUser(userId, userName
+                , userPass, false, roleSet), userPass);
     }
 
     @Test
-    void deleteAppUser() {
+    void emptyNameUpdatingAppUser() {
+        userName = " ";
+
+        when(appUserService.updateUser(new AppUser(), "222")).thenThrow(new RuntimeException());
+
+        verify(model, atMost(1)).addAttribute("appUserList", appUserList);
+
+        verify(appUserService, never()).updateUser(new AppUser(userId, userName
+                , userPass, false, roleSet), userPass);
     }
 
     @Test
-    void findAppUser() {
+    void exceptionDuringUpdatingAppUser() {
+
+        doThrow(new RuntimeException("exceptionDuringUpdatingAppUser TEST"))
+                .when(appUserService).updateUser(user, userPass);
+
+        verify(appUserService, never()).updateUser(new AppUser(userId, userName
+                , userPass, false, roleSet), userPass);
+    }
+
+    @Test
+    void validDeletingAppUser() {
+        userId = 1;
+
+        viewName = securityControllerClass.deleteAppUser(userId + "", model);
+
+        Assertions.assertEquals("users", viewName);
+
+        verify(model, atMost(1)).addAttribute("appUserList", appUserList);
+
+        verify(appUserService, atMost(1)).deleteUser(userId);
+    }
+
+    @Test
+    void wrongIdDeletingAppUser() {
+        userId = -1;
+
+        verify(model, atMost(1)).addAttribute("appUserList", appUserList);
+
+        verify(appUserService, never()).deleteUser(userId);
+    }
+
+    @Test
+    void exceptionDuringDeletingAppUser() {
+
+        doThrow(new RuntimeException("exceptionDuringDeletingAppUser TEST"))
+                .when(appUserService).deleteUser(userId);
+
+        verify(appUserService, never()).deleteUser(userId);
+    }
+
+    @Test
+    void validFindingAppUser() {
+        userName = "appuser";
+
+        viewName = securityControllerClass.findAppUser(userName, model);
+
+        Assertions.assertEquals("users", viewName);
+
+        verify(model, atMost(1)).addAttribute("appUserList", appUserList);
+
+        verify(appUserService, atMost(1)).findUserByName(userName);
+    }
+
+    @Test
+    void wrongIdFindingAppUser() {
+        userId = -1;
+
+        verify(model, atMost(1)).addAttribute("appUserList", appUserList);
+
+        verify(appUserService, never()).findUserById(userId);
+    }
+
+    @Test
+    void exceptionDuringFindingAppUser() {
+
+        doThrow(new RuntimeException("exceptionDuringDeletingAppUser TEST"))
+                .when(appUserService).findUserById(userId);
+
+        verify(appUserService, never()).findUserById(userId);
     }
 }

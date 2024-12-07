@@ -62,8 +62,6 @@ class ITStaffControllerTest {
 
         String itStaffFio = "Mikl First";
 
-        ITStaff itStaff = new ITStaff(itStaffFio);
-
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
         String viewName = itStaffController.addItStaff(itStaffFio, model);
@@ -109,7 +107,7 @@ class ITStaffControllerTest {
     @Test
     void deleteItStaffValid() {
 
-        String itStaffId= "15";
+        String itStaffId = "15";
         int idCheck = Integer.parseInt(itStaffId);
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
@@ -125,7 +123,7 @@ class ITStaffControllerTest {
     @Test
     void deleteItStaffFail() {
 
-        String itStaffId= "-15";
+        String itStaffId = "-15";
         int idCheck = Integer.parseInt(itStaffId);
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
@@ -141,7 +139,7 @@ class ITStaffControllerTest {
     @Test
     void deleteItStaffFailWithException() {
 
-        String itStaffId= "15";
+        String itStaffId = "15";
         int idCheck = Integer.parseInt(itStaffId);
 
         doThrow(new RuntimeException()).when(itStaffService).deleteITStaffById(idCheck);
@@ -153,7 +151,7 @@ class ITStaffControllerTest {
     @Test
     void updateItStaffValid() {
 
-        String itStaffId= "15";
+        String itStaffId = "15";
         String fio = "Mikl First";
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
@@ -169,7 +167,7 @@ class ITStaffControllerTest {
     @Test
     void updateItStaffFail() {
 
-        String itStaffId= "-15";
+        String itStaffId = "-15";
         String fio = "Mikl First";
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
@@ -185,12 +183,9 @@ class ITStaffControllerTest {
     @Test
     void updateItStaffFailWithException() {
 
-        String itStaffId= "15";
-        String fio = "Mikl First";
-
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
-       doThrow(new RuntimeException()).when(itStaffService).updateItStaff(any());
+        doThrow(new RuntimeException()).when(itStaffService).updateItStaff(any());
 
         verify(itStaffService, never()).updateItStaff(any());
 
@@ -199,9 +194,8 @@ class ITStaffControllerTest {
     @Test
     void findItStaffValid() {
 
-        String itStaffId= "15";
+        String itStaffId = "15";
         int idCheck = Integer.parseInt(itStaffId);
-
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
@@ -215,7 +209,7 @@ class ITStaffControllerTest {
     @Test
     void findItStaffFail() {
 
-        String itStaffId= "-15";
+        String itStaffId = "-15";
         int idCheck = Integer.parseInt(itStaffId);
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
@@ -230,7 +224,7 @@ class ITStaffControllerTest {
     @Test
     void findItStaffValidWithException() {
 
-        String itStaffId= "15";
+        String itStaffId = "15";
         int idCheck = Integer.parseInt(itStaffId);
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
