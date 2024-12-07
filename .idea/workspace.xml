@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-03.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-05.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-26.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-29.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/securityController/SecurityControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/securityController/SecurityControllerClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/securityController/SecurityControllerClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/securityController/SecurityControllerClassTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -414,7 +418,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.SecurityControllerClassTest.validUserAttributesAdded">
+  <component name="RunManager" selected="JUnit.SecurityControllerClassTest.exceptionWhenAppUserAdded">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -426,7 +430,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DevicesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -440,14 +444,14 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EmployeeControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FeedbackControllerTest.addFeedbackValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DevicesControllerTest.updateProceduresAssignedSuccessfulUpdateShouldReturnView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -461,14 +465,14 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
-      <option name="METHOD_NAME" value="addFeedbackValid" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
+      <option name="METHOD_NAME" value="updateProceduresAssignedSuccessfulUpdateShouldReturnView" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecurityControllerClassTest.addNewUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SecurityControllerClassTest.exceptionWhenAppUserAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -483,13 +487,13 @@
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller.securityController" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.securityController.SecurityControllerClassTest" />
-      <option name="METHOD_NAME" value="addNewUser" />
+      <option name="METHOD_NAME" value="exceptionWhenAppUserAdded" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecurityControllerClassTest.getUsersShouldReturnAppUserList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SecurityControllerClassTest.noNameUserAttributesAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -504,7 +508,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller.securityController" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.securityController.SecurityControllerClassTest" />
-      <option name="METHOD_NAME" value="getUsersShouldReturnAppUserList" />
+      <option name="METHOD_NAME" value="noNameUserAttributesAdded" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -579,20 +583,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
-      <item itemvalue="JUnit.EmployeeControllerTest" />
-      <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackValid" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.SecurityControllerClassTest.getUsersShouldReturnAppUserList" />
-      <item itemvalue="JUnit.SecurityControllerClassTest.addNewUser" />
       <item itemvalue="JUnit.SecurityControllerClassTest.validUserAttributesAdded" />
+      <item itemvalue="JUnit.DevicesControllerTest" />
+      <item itemvalue="JUnit.DevicesControllerTest.updateProceduresAssignedSuccessfulUpdateShouldReturnView" />
+      <item itemvalue="JUnit.SecurityControllerClassTest.noNameUserAttributesAdded" />
+      <item itemvalue="JUnit.SecurityControllerClassTest.exceptionWhenAppUserAdded" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SecurityControllerClassTest.exceptionWhenAppUserAdded" />
+        <item itemvalue="JUnit.SecurityControllerClassTest.noNameUserAttributesAdded" />
         <item itemvalue="JUnit.SecurityControllerClassTest.validUserAttributesAdded" />
-        <item itemvalue="JUnit.SecurityControllerClassTest.addNewUser" />
-        <item itemvalue="JUnit.SecurityControllerClassTest.getUsersShouldReturnAppUserList" />
-        <item itemvalue="JUnit.FeedbackControllerTest.addFeedbackValid" />
-        <item itemvalue="JUnit.EmployeeControllerTest" />
+        <item itemvalue="JUnit.DevicesControllerTest.updateProceduresAssignedSuccessfulUpdateShouldReturnView" />
+        <item itemvalue="JUnit.DevicesControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -883,14 +887,7 @@
       <workItem from="1730956711300" duration="12635000" />
       <workItem from="1731039432298" duration="88406000" />
       <workItem from="1732556329455" duration="12280000" />
-      <workItem from="1732847523203" duration="63705000" />
-    </task>
-    <task id="LOCAL-00383" summary="Changed field's type in WorkArea and Room.java">
-      <created>1729823384901</created>
-      <option name="number" value="00383" />
-      <option name="presentableId" value="LOCAL-00383" />
-      <option name="project" value="LOCAL" />
-      <updated>1729823384902</updated>
+      <workItem from="1732847523203" duration="76507000" />
     </task>
     <task id="LOCAL-00384" summary="Tried to use a dropdown list in a crudrooms.html">
       <created>1729950147095</created>
@@ -1228,7 +1225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733365907781</updated>
     </task>
-    <option name="localTasksCounter" value="432" />
+    <task id="LOCAL-00432" summary="Added validUserAttributesAdded test in SecurityControllerClassTest">
+      <created>1733451477141</created>
+      <option name="number" value="00432" />
+      <option name="presentableId" value="LOCAL-00432" />
+      <option name="project" value="LOCAL" />
+      <updated>1733451477142</updated>
+    </task>
+    <option name="localTasksCounter" value="433" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1251,7 +1255,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created a AppUserService.java" />
     <MESSAGE value="Rebuilt a AppUserService.java" />
     <MESSAGE value="Rebuilt a AppUserService.java v2" />
     <MESSAGE value="Rebuilt a AppUserService.java v3" />
@@ -1276,7 +1279,8 @@
     <MESSAGE value="Added findAppUser() method in SecurityControllerClass" />
     <MESSAGE value="Added some tests in SecurityControllerClassTest" />
     <MESSAGE value="Added getUsersShouldReturnAppUserList test in SecurityControllerClassTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getUsersShouldReturnAppUserList test in SecurityControllerClassTest" />
+    <MESSAGE value="Added validUserAttributesAdded test in SecurityControllerClassTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validUserAttributesAdded test in SecurityControllerClassTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
