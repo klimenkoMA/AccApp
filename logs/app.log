@@ -1,3 +1,23 @@
 2024-12-07 08:19:51.752  WARN 18384 --- [main] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
 2024-12-07 08:29:45.666  WARN 11520 --- [main] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
 2024-12-07 08:31:07.603  WARN 17628 --- [main] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
+2024-12-07 18:57:00.802  WARN 16660 --- [main] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
+2024-12-07 18:57:27.460  WARN 8372 --- [main] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
+2024-12-07 18:57:27.958 ERROR 8372 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-07 18:57:28.049  WARN 8372 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-07 18:57:28.075  WARN 8372 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-07 18:57:28.092 ERROR 8372 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** Attribute is empty!
+2024-12-07 18:57:28.100 ERROR 8372 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Attribute is empty!
+2024-12-07 18:57:28.110 ERROR 8372 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** null
+2024-12-07 18:57:28.117  WARN 8372 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): dborn <<<< 0 ***
+2024-12-07 18:57:28.201 ERROR 8372 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-07 18:57:28.228 ERROR 8372 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-07 18:57:28.248  WARN 8372 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-07 18:57:28.250 ERROR 8372 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-07 18:57:28.318 ERROR 8372 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-07 18:57:28.335  WARN 8372 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***
+2024-12-07 18:57:28.347 ERROR 8372 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** Attribute is empty!
+2024-12-07 18:57:41.114  WARN 15496 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-07 19:00:22.459  WARN 15496 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: admin
+2024-12-07 19:00:22.461  WARN 15496 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
+2024-12-07 19:00:31.535  WARN 15496 --- [http-nio-8080-exec-3] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!

@@ -5,6 +5,8 @@ import accountingApp.entity.Employee;
 import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
 import accountingApp.service.EmployeeService;
+import accountingApp.service.RoomService;
+import accountingApp.service.WorkAreaService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 
 import java.util.ArrayList;
@@ -26,9 +29,12 @@ public class EmployeeControllerTest {
 
     @InjectMocks
     private EmployeeController employeeController;
-
     @Mock
     private EmployeeService employeeService;
+    @Mock
+    RoomService roomService;
+    @Mock
+    WorkAreaService workAreaService;
 
     @Mock
     private Model model;
@@ -62,13 +68,11 @@ public class EmployeeControllerTest {
 
         when(employeeService.getListEmployee()).thenReturn(employeeList);
 
-        try {
-            String viewName = employeeController.getEmployee(model);
-            Assertions.assertEquals("employee", viewName);
-            verify(model).addAttribute("employeeList", employeeList);
-        } catch (Exception e) {
-            e.getMessage();
-        }
+
+        String viewName = employeeController.getEmployee(model);
+        Assertions.assertEquals("employee", viewName);
+        verify(model).addAttribute("employeeList", employeeList);
+
 
         verify(employeeService).getListEmployee();
     }
@@ -81,17 +85,12 @@ public class EmployeeControllerTest {
         String employeeWorkArea = "МГУ";
         String employeeRoom = "115";
 
-        try {
-            String viewName = employeeController.addEmployee(employeeFio, employeeDborn
-                    , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea()), model);
-            Assertions.assertEquals("employee", viewName);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        String viewName = employeeController.addEmployee(employeeFio, employeeDborn
+                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea()), model);
+        Assertions.assertEquals("employee", viewName);
+
 
         when(employeeService.getListEmployee()).thenReturn(new ArrayList<>());
-
-
     }
 
     @Test
@@ -102,19 +101,13 @@ public class EmployeeControllerTest {
         String employeeWorkArea = " ";
         String employeeRoom = " ";
 
-
-        try {
-            when(employeeController.addEmployee(employeeFio, employeeDborn
-                    , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model))
-                    .thenReturn("employeeList");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        when(employeeController.addEmployee(employeeFio, employeeDborn
+                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model)
+        ).thenThrow(new RuntimeException());
 
         when(employeeService.getListEmployee()).thenReturn(new ArrayList<>());
 
         verify(employeeService, never()).addNewEmployee(any(Employee.class));
-
     }
 
     @Test
@@ -126,12 +119,8 @@ public class EmployeeControllerTest {
         when(this.employeeService.getListEmployee()).thenReturn(Arrays.asList(new Employee(),
                 new Employee()));
 
-        try {
-            String result = employeeController.deleteById(employeeId, model);
-            Assertions.assertEquals("employee", result);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        String result = employeeController.deleteById(employeeId, model);
+        Assertions.assertEquals("employee", result);
 
         verify(employeeService).deleteEmployeeById(idCheck);
 
@@ -144,12 +133,8 @@ public class EmployeeControllerTest {
         String employeeId = "0";
         int idCheck = Integer.parseInt(employeeId);
 
-        try {
-            String result = employeeController.deleteById(employeeId, model);
-            Assertions.assertEquals("employee", result);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        String result = employeeController.deleteById(employeeId, model);
+        Assertions.assertEquals("employee", result);
 
         verify(employeeService, never()).deleteEmployeeById(idCheck);
 
@@ -161,12 +146,8 @@ public class EmployeeControllerTest {
 
         String employeeId = "abc";
 
-        try {
-            String result = employeeController.deleteById(employeeId, model);
-            Assertions.assertEquals("employee", result);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        String result = employeeController.deleteById(employeeId, model);
+        Assertions.assertEquals("employee", result);
 
         verify(employeeService, never()).deleteEmployeeById(anyInt());
 
@@ -199,42 +180,18 @@ public class EmployeeControllerTest {
                 new Room(employeeRoom, new WorkArea())));
 
         when(employeeService.getListEmployee()).thenReturn(employees);
-        try {
-            String result = employeeController.updateEmployee(employeeId, employeeFio, employeeDborn
-                    , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model);
-            Assertions.assertEquals("employee", result);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
 
-
+        String result = employeeController.updateEmployee(employeeId, employeeFio, employeeDborn
+                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model);
+        Assertions.assertEquals("employee", result);
     }
 
     @Test
     void updateEmployeeFail() {
 
-        String employeeId = "-1";
-        int idCheck = Integer.parseInt(employeeId);
-        String employeeFio = "TestName";
-        String employeeDborn = "11051988";
-        String employeeWorkArea = "МГУ";
-        String employeeRoom = "115";
+        when(employeeService.getListEmployee()).thenThrow(new RuntimeException());
 
-        List<Employee> employees = Collections.singletonList(new Employee(idCheck
-                , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
-                new Room(employeeRoom, new WorkArea())));
-
-        when(employeeService.getListEmployee()).thenReturn(employees);
-
-        try {
-            String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn
-                    , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model);
-            Assertions.assertEquals("employee", result);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
-//        verify(employeeService, never()).updateEmployee(any(Employee.class));
+        verify(employeeService, never()).updateEmployee(any(Employee.class));
     }
 
     @Test
@@ -247,20 +204,7 @@ public class EmployeeControllerTest {
         String employeeWorkArea = " ";
         String employeeRoom = " ";
 
-        List<Employee> employees = Collections.singletonList(new Employee(idCheck
-                , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
-                new Room(employeeRoom, new WorkArea())));
-
-        when(employeeService.getListEmployee()).thenReturn(employees);
-
-        try {
-            String result = this.employeeController.updateEmployee(employeeId, employeeFio, employeeDborn
-                    , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model);
-            Assertions.assertEquals("employee", result);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
+        when(employeeService.getListEmployee()).thenThrow(new RuntimeException());
 
         verify(employeeService, never()).updateEmployee(new Employee(idCheck
                 , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
