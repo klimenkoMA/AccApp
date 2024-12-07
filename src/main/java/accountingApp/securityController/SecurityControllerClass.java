@@ -65,10 +65,10 @@ public class SecurityControllerClass {
             , Model model
     ) {
 
-        if (userName == null || userName.equals("") || userName.isEmpty()
-                || userPass == null || userPass.equals("") || userPass.isEmpty()
-                || isActive == null || isActive.equals("") || isActive.isEmpty()
-                || roles == null || roles.equals("") || roles.isEmpty()
+        if (userName == null || userName.equals("") || userName.isEmpty() || userName.equals(" ")
+                || userPass == null || userPass.equals("") || userPass.isEmpty() || userPass.equals(" ")
+                || isActive == null || isActive.equals("") || isActive.isEmpty() || isActive.equals(" ")
+                || roles == null || roles.equals("") || roles.isEmpty() || roles.equals(" ")
         ) {
             logger.warn("SecurityControllerClass.addNewUser():" +
                     " Attribute has a null value!");

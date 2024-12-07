@@ -14,17 +14,14 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.verification.VerificationMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
+
+import java.util.*;
 
 import static org.mockito.Mockito.*;
 
@@ -43,7 +40,27 @@ class SecurityControllerClassTest {
     @Mock
     private Model model;
 
-    private final List<AppUser> appUserList;
+    private final List<AppUser> appUserList = new ArrayList<>();
+    private String userName;
+    private String userPass;
+    private String isActive;
+    private String roles;
+    private Set<Role> roleSet;
+    private AppUser user;
+    private String viewName;
+
+
+    {
+        userName = "name";
+        userPass = "password";
+        isActive = "active";
+        roles = "USER";
+        roleSet = new HashSet<>();
+        roleSet.add(Role.USER);
+        user = new AppUser(userName
+                , userPass, false, roleSet);
+        appUserList.add(user);
+    }
 
     @BeforeEach
     public void setup() {
@@ -73,18 +90,13 @@ class SecurityControllerClassTest {
                 .andExpect(view().name("login"));
     }
 
-    {
-        AppUser u1 = new AppUser();
-        AppUser u2 = new AppUser();
-        appUserList = Arrays.asList(u1, u2);
-    }
 
     @Test
     void getUsersShouldReturnAppUserList() {
 
         when(appUserService.getAllAppUsers()).thenReturn(appUserList);
 
-        String viewName = securityControllerClass.getUsers(model);
+        viewName = securityControllerClass.getUsers(model);
 
         Assertions.assertEquals("users", viewName);
 
@@ -96,22 +108,47 @@ class SecurityControllerClassTest {
     @Test
     void validUserAttributesAdded() {
 
-        String userName = "name";
-        String userPass = "password";
-        String isActive = "active";
-        String roles = "USER";
-
         when(appUserService.createUser(new AppUser(), "")).thenReturn(new AppUser());
 
-        String viewName = securityControllerClass.addNewUser(userName
+        viewName = securityControllerClass.addNewUser(userName
                 , userPass, isActive, roles, model);
 
         Assertions.assertEquals("users", viewName);
 
-//        verify(model).addAttribute("appUserList",appUserList);
+        verify(model, atMost(3)).addAttribute("appUserList", appUserList);
 
-//        verify(appUserService).createUser(new AppUser(userName
-//                , userPass, false, new Role[]{Role.USER}), userPass);
+        verify(appUserService, atMost(2)).createUser(new AppUser(userName
+                , userPass, false, roleSet), userPass);
+
+    }
+
+    @Test
+    void noNameUserAttributesAdded() {
+
+        userName = " ";
+        user = new AppUser(userName, userPass, true, roleSet);
+
+        when(appUserService.createUser(new AppUser(), "")).thenReturn(new AppUser());
+
+        viewName = securityControllerClass.addNewUser(userName
+                , userPass, isActive, roles, model);
+
+        Assertions.assertEquals("users", viewName);
+
+        verify(model, atMost(3)).addAttribute("appUserList", appUserList);
+
+        verify(appUserService, never()).createUser(user, userPass);
+
+    }
+
+    @Test
+    void exceptionWhenAppUserAdded() {
+
+        doThrow(new RuntimeException("exceptionWhenAppUserAdded TEST"))
+                .when(appUserService).createUser(user, userPass);
+
+        verify(appUserService, never()).createUser(user, userPass);
+
     }
 
     @Test

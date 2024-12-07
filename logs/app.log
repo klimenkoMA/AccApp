@@ -1,24 +1,3 @@
-2024-12-05 20:38:01.861 ERROR 2092 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2024-12-05 20:38:02.266  WARN 2092 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2024-12-05 20:38:02.281  WARN 2092 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2024-12-05 20:38:02.294 ERROR 2092 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** Attribute is empty!
-2024-12-05 20:38:02.305 ERROR 2092 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Attribute is empty!
-2024-12-05 20:38:02.328 ERROR 2092 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** null
-2024-12-05 20:38:02.339  WARN 2092 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): dborn <<<< 0 ***
-2024-12-05 20:38:02.529 ERROR 2092 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-05 20:38:02.561 ERROR 2092 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2024-12-05 20:38:02.588  WARN 2092 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2024-12-05 20:38:02.590 ERROR 2092 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-05 20:38:02.711 ERROR 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG DB values! *** null
-2024-12-05 20:38:02.727 ERROR 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** null
-2024-12-05 20:38:02.751 ERROR 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG DB values! *** Attribute is empty!
-2024-12-05 20:38:02.760 ERROR 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** null
-2024-12-05 20:38:02.769 ERROR 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** null
-2024-12-05 20:38:02.785 ERROR 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2024-12-05 20:38:02.812  WARN 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***
-2024-12-05 20:38:02.827  WARN 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2024-12-05 20:38:02.828 ERROR 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): WRONG ID values! *** null
-2024-12-05 20:38:02.838 ERROR 2092 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** Attribute is empty!
-2024-12-05 20:38:17.007  WARN 18944 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-05 20:41:04.452  WARN 18944 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: admin
-2024-12-05 20:41:04.454  WARN 18944 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
+2024-12-07 08:19:51.752  WARN 18384 --- [main] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
+2024-12-07 08:29:45.666  WARN 11520 --- [main] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
+2024-12-07 08:31:07.603  WARN 17628 --- [main] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!

@@ -29,15 +29,21 @@ class DevicesControllerTest {
     @Mock
     private Model model;
 
-    private final List<Devices> devicesList;
+    private List<Devices> devicesList;
+    private String deviceName;
+    private String deviceId;
+    private String viewName;
+    private Devices device;
 
     {
         // Arrange: Подготовка данных для теста
-        Devices device1 = new Devices();
+        deviceName = "Hiper";
+        deviceId = "1";
+        device = new Devices(deviceName);
         Devices device2 = new Devices();
 
         // Создаем список устройств
-        devicesList = Arrays.asList(device1, device2);
+        devicesList = new ArrayList<>();
     }
 
     /**
@@ -55,7 +61,7 @@ class DevicesControllerTest {
         when(devicesService.findAllDevices()).thenReturn(devicesList);
 
         // Act: Вызов тестируемого метода
-        String viewName = devicesController.getDevices(model);
+        viewName = devicesController.getDevices(model);
 
         // Assert: Проверяем результаты
         // Проверяем, что возвращаемое имя представления правильно
@@ -72,12 +78,12 @@ class DevicesControllerTest {
     @Test
     void addDeviceValidNameDeviceAdded() {
         // Данные
-        String deviceName = "TestDevice";
+        deviceName = "TestDevice";
 
         when(devicesService.findAllDevices()).thenReturn(new ArrayList<>());
 
         // Действие
-        String viewName = devicesController.addDevice(deviceName, model);
+        viewName = devicesController.addDevice(deviceName, model);
 
         // Проверка
         Assertions.assertEquals("devices", viewName);
@@ -88,10 +94,10 @@ class DevicesControllerTest {
     @Test
     void addDeviceEmptyNameNoDeviceAdded() {
         // Данные
-        String deviceName = " ";
+        deviceName = " ";
 
         // Действие
-        String viewName = devicesController.addDevice(deviceName, model);
+        viewName = devicesController.addDevice(deviceName, model);
 
         // Проверка
         // Пример ожидаемого имени представления
@@ -102,22 +108,22 @@ class DevicesControllerTest {
 
     @Test
     public void testDeleteDeviceSuccess() {
-        String deviceId = "1";
+        deviceId = "1";
         int idCheck = Integer.parseInt(deviceId);
 
-        when(this.devicesService.findAllDevices()).thenReturn(Arrays.asList(new Devices(),
+        when(devicesService.findAllDevices()).thenReturn(Arrays.asList(new Devices(),
                 new Devices()));
 
-        String result = this.devicesController.deleteDevice(deviceId, model);
+        viewName = devicesController.deleteDevice(deviceId, model);
 
-        verify(this.devicesService).deleteDeviceById(idCheck);
+        verify(devicesService).deleteDeviceById(idCheck);
 
-        Assertions.assertEquals("devices", result);
+        Assertions.assertEquals("devices", viewName);
     }
 
     @Test
     public void testDeleteDeviceInvalidId() {
-        String deviceId = "0";
+        deviceId = "0";
 
         String result = devicesController.deleteDevice(deviceId, model);
 
@@ -127,17 +133,17 @@ class DevicesControllerTest {
 
     @Test
     public void testDeleteDeviceNonNumericId() {
-        String deviceId = "abc";
+        deviceId = "abc";
 
-        String result = devicesController.deleteDevice(deviceId, model);
+        viewName = devicesController.deleteDevice(deviceId, model);
 
         verify(devicesService, never()).deleteDeviceById(anyInt());
-        Assertions.assertEquals("devices", result);
+        Assertions.assertEquals("devices", viewName);
     }
 
     @Test
     public void testDeleteDeviceException() {
-        String deviceId = "1";
+        deviceId = "1";
         int idCheck = Integer.parseInt(deviceId);
 
         doThrow(new RuntimeException()).when(devicesService).deleteDeviceById(anyInt());
@@ -148,19 +154,18 @@ class DevicesControllerTest {
     @Test
     void updateProceduresAssignedSuccessfulUpdateShouldReturnView() {
         // Данные
-        String id = "1";
-        String name = "DeviceName";
-        Devices devices = new Devices(1, name);
-        List<Devices> devicesList = new ArrayList<>();
-        devicesList.add(devices);
+        deviceId = "1";
+        deviceName = "DeviceName";
+        device = new Devices(deviceName);
+        devicesList.add(device);
 
         when(devicesService.findAllDevices()).thenReturn(devicesList);
 
         // Действие
-        String result = devicesController.updateDevice(id, name, model);
+        viewName = devicesController.updateDevice(deviceId, deviceName, model);
 
         // Проверка
-        Assertions.assertEquals("devices", result);
+        Assertions.assertEquals("devices", viewName);
 
         verify(devicesService).updateDevice(any(Devices.class));
     }
@@ -168,14 +173,14 @@ class DevicesControllerTest {
     @Test
     void updateProceduresAssignedInvalidIdShouldReturnView() {
         // Данные
-        String id = "-1";
-        String name = "DeviceName";
+        deviceId = "-1";
+        deviceName = "DeviceName";
 
         // Действие
-        String result = devicesController.updateDevice(id, name, model);
+        viewName = devicesController.updateDevice(deviceId, deviceName, model);
 
         // Проверка
-        Assertions.assertEquals("devices", result);
+        Assertions.assertEquals("devices", viewName);
 
         verify(devicesService, never()).updateDevice(any());  // метод не должен быть вызван
     }
@@ -183,14 +188,14 @@ class DevicesControllerTest {
     @Test
     void updateProceduresAssignedEmptyNameShouldReturnView() {
         // Данные
-        String id = "1";
-        String name = "  "; // после очистки от пробелов значение будет пустым
+        deviceId = "1";
+        deviceName = "  "; // после очистки от пробелов значение будет пустым
 
         // Действие
-        String result = devicesController.updateDevice(id, name, model);
+        viewName = devicesController.updateDevice(deviceId, deviceName, model);
 
         // Проверка
-        Assertions.assertEquals("devices", result);
+        Assertions.assertEquals("devices", viewName);
 
         verify(devicesService, never()).updateDevice(any());  // метод не должен быть вызван
     }
@@ -198,30 +203,31 @@ class DevicesControllerTest {
     @Test
     void updateProceduresAssignedExceptionThrownShouldReturnView() {
         // Данные
-        String id = "1";
-        String name = "DeviceName";
+        deviceId = "1";
+        deviceName = "DeviceName";
 
         //Симуляция выброса исключения
         doThrow(new RuntimeException()).when(devicesService).updateDevice(any());
 
         // Действие
-        String result = devicesController.updateDevice(id, name, model);
+        viewName = devicesController.updateDevice(deviceId, deviceName, model);
 
         // Проверка
-        Assertions.assertEquals("devices", result);
+        Assertions.assertEquals("devices", viewName);
+
     }
 
     @Test
     void testFindDevicesByIdValidId() {
-        String name = "1";
-        int id = Integer.parseInt(name);
-        Devices device = new Devices();
+        deviceName = "1";
+        int id = Integer.parseInt(deviceName);
+        device = new Devices();
 
-        List<Devices> devicesList = Collections.singletonList(device);
+        devicesList = Collections.singletonList(device);
 
         when(devicesService.getDevicesById(1)).thenReturn(devicesList);
 
-        String viewName = devicesController.findDevicesById(name, model);
+        viewName = devicesController.findDevicesById(deviceName, model);
 
         Assertions.assertEquals("devices", viewName);
 
@@ -232,14 +238,14 @@ class DevicesControllerTest {
 
     @Test
     void testFindDevicesByIdSubZero() {
-        String name = "0";
-        int idCheck = Integer.parseInt(name);
+        deviceName = "0";
+        int idCheck = Integer.parseInt(deviceName);
 
-        List<Devices> devicesList = new ArrayList<>();
+        devicesList = new ArrayList<>();
 
         when(devicesService.findAllDevices()).thenReturn(devicesList);
 
-        String viewName = devicesController.findDevicesById(name, model);
+        viewName = devicesController.findDevicesById(deviceName, model);
 
         Assertions.assertEquals("devices", viewName);
 
@@ -250,12 +256,12 @@ class DevicesControllerTest {
 
     @Test
     void testFindDevicesThrowsException() {
-        String name = "invalid";
+        deviceName = "invalid";
 
-        Devices device = new Devices(name);
-        List<Devices> devicesList = Collections.singletonList(device);
+        device = new Devices(deviceName);
+        devicesList = Collections.singletonList(device);
 
-        doThrow(new RuntimeException()).when(devicesService).getDevicesByName(name);
+        doThrow(new RuntimeException()).when(devicesService).getDevicesByName(deviceName);
 
         verify(model, never()).addAttribute("devicesList", devicesList);
     }
