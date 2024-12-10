@@ -1,6 +1,7 @@
 package accountingApp.service;
 
 import accountingApp.entity.AppUser;
+import accountingApp.entity.Role;
 import accountingApp.repository.AppUserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +15,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 class CustomUserDetailsService implements UserDetailsService {
@@ -33,6 +36,25 @@ class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         try {
+
+            try{
+                List<AppUser> appUserList = appUserService.getAllAppUsers();
+                for (AppUser user: appUserList
+                     ) {
+                    if (user.getUserName().equals("admin")){
+                        throw new Exception();
+                    }
+                }
+
+                Set<Role> roleSet = new HashSet<>();
+                roleSet.add(Role.ADMIN);
+                roleSet.add(Role.USER);
+                AppUser admin = new AppUser("admin", "1", true, roleSet );
+                appUserService.createUser(admin, "1");
+            }catch (Exception exception){
+                logger.warn("CustomUserDetailsService.loadUserByUsername: INITIALISATION");
+            }
+
             // Получаем пользователя из репозитория
             AppUser appUser = userRepository.findByUserName(userName).orElseThrow(() ->
                     new UsernameNotFoundException("User not found"));
