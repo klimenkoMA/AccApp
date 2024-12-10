@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-07.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-08.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-11-30.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/advantage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/advantage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-01.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -887,14 +886,7 @@
       <workItem from="1731039432298" duration="88406000" />
       <workItem from="1732556329455" duration="12280000" />
       <workItem from="1732847523203" duration="94105000" />
-      <workItem from="1733637177256" duration="11622000" />
-    </task>
-    <task id="LOCAL-00387" summary="Finished to build a dropdown list in a crudevents.html">
-      <created>1730035112783</created>
-      <option name="number" value="00387" />
-      <option name="presentableId" value="LOCAL-00387" />
-      <option name="project" value="LOCAL" />
-      <updated>1730035112783</updated>
+      <workItem from="1733637177256" duration="15840000" />
     </task>
     <task id="LOCAL-00388" summary="Tried to use a bootstrap-datepicker in head.html">
       <created>1730093881527</created>
@@ -1232,7 +1224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733637003444</updated>
     </task>
-    <option name="localTasksCounter" value="436" />
+    <task id="LOCAL-00436" summary="Rebuilt target package v2">
+      <created>1733711268749</created>
+      <option name="number" value="00436" />
+      <option name="presentableId" value="LOCAL-00436" />
+      <option name="project" value="LOCAL" />
+      <updated>1733711268750</updated>
+    </task>
+    <option name="localTasksCounter" value="437" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1255,7 +1254,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt a AppUserService.java v4" />
     <MESSAGE value="Rebuilt a AppUserService.java v5" />
     <MESSAGE value="Corrected CustomUserDetailService.java" />
     <MESSAGE value="Corrected CustomUserDetailService.java v2" />
@@ -1280,7 +1278,8 @@
     <MESSAGE value="Rebuilt some tests" />
     <MESSAGE value="Finished all SecurityControllerClassTest tests" />
     <MESSAGE value="Rebuilt target package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt target package" />
+    <MESSAGE value="Rebuilt target package v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt target package v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
