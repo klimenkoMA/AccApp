@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-08.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-01.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/CustomUserDetailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/CustomUserDetailsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -886,14 +883,7 @@
       <workItem from="1731039432298" duration="88406000" />
       <workItem from="1732556329455" duration="12280000" />
       <workItem from="1732847523203" duration="94105000" />
-      <workItem from="1733637177256" duration="15840000" />
-    </task>
-    <task id="LOCAL-00388" summary="Tried to use a bootstrap-datepicker in head.html">
-      <created>1730093881527</created>
-      <option name="number" value="00388" />
-      <option name="presentableId" value="LOCAL-00388" />
-      <option name="project" value="LOCAL" />
-      <updated>1730093881527</updated>
+      <workItem from="1733637177256" duration="19753000" />
     </task>
     <task id="LOCAL-00389" summary="Finished to build a bootstrap-datepicker in head.html">
       <created>1730135428443</created>
@@ -1231,7 +1221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733711268750</updated>
     </task>
-    <option name="localTasksCounter" value="437" />
+    <task id="LOCAL-00437" summary="Rebuilt CustomUserDetailsService">
+      <created>1733797879189</created>
+      <option name="number" value="00437" />
+      <option name="presentableId" value="LOCAL-00437" />
+      <option name="project" value="LOCAL" />
+      <updated>1733797879189</updated>
+    </task>
+    <option name="localTasksCounter" value="438" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1254,7 +1251,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt a AppUserService.java v5" />
     <MESSAGE value="Corrected CustomUserDetailService.java" />
     <MESSAGE value="Corrected CustomUserDetailService.java v2" />
     <MESSAGE value="Added getUsers() method in SecurityControllerClass" />
@@ -1279,7 +1275,8 @@
     <MESSAGE value="Finished all SecurityControllerClassTest tests" />
     <MESSAGE value="Rebuilt target package" />
     <MESSAGE value="Rebuilt target package v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt target package v2" />
+    <MESSAGE value="Rebuilt CustomUserDetailsService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt CustomUserDetailsService" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
