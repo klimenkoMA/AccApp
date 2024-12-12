@@ -3,9 +3,11 @@ package accountingApp.securityController;
 import accountingApp.entity.AppUser;
 import accountingApp.entity.Role;
 import accountingApp.service.AppUserService;
+import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +26,15 @@ public class SecurityControllerClass {
 
     @Autowired(required = false)
     AppUserService service;
+
+    @Autowired
+    Checker checker;
+
+    @Bean
+    public static Checker checker(){
+        return new Checker();
+    }
+
 
     @GetMapping("/")
     @PreAuthorize("isAuthenticated()")
@@ -65,11 +76,12 @@ public class SecurityControllerClass {
             , Model model
     ) {
 
-        if (userName == null || userName.equals("") || userName.isEmpty() || userName.equals(" ")
-                || userPass == null || userPass.equals("") || userPass.isEmpty() || userPass.equals(" ")
-                || isActive == null || isActive.equals("") || isActive.isEmpty() || isActive.equals(" ")
-                || roles == null || roles.equals("") || roles.isEmpty() || roles.equals(" ")
-        ) {
+        if (checker.checkAttribute(userName)
+        || checker.checkAttribute(userPass)
+        || checker.checkAttribute(isActive)
+        || checker.checkAttribute(roles))
+
+        {
             logger.warn("SecurityControllerClass.addNewUser():" +
                     " Attribute has a null value!");
             return getUsers(model);
