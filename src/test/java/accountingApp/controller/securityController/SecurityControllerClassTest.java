@@ -8,6 +8,7 @@ import accountingApp.entity.AppUser;
 import accountingApp.entity.Role;
 import accountingApp.securityController.SecurityControllerClass;
 import accountingApp.service.AppUserService;
+import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -33,6 +34,9 @@ class SecurityControllerClassTest {
 
     @Mock
     private AppUserService appUserService;
+
+    @Mock
+    private Checker checker;
 
     @InjectMocks
     private SecurityControllerClass securityControllerClass;
