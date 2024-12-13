@@ -31,7 +31,7 @@ public class SecurityControllerClass {
     Checker checker;
 
     @Bean
-    public static Checker checker(){
+    public static Checker checker() {
         return new Checker();
     }
 
@@ -77,11 +77,9 @@ public class SecurityControllerClass {
     ) {
 
         if (checker.checkAttribute(userName)
-        || checker.checkAttribute(userPass)
-        || checker.checkAttribute(isActive)
-        || checker.checkAttribute(roles))
-
-        {
+                || checker.checkAttribute(userPass)
+                || checker.checkAttribute(isActive)
+                || checker.checkAttribute(roles)) {
             logger.warn("SecurityControllerClass.addNewUser():" +
                     " Attribute has a null value!");
             return getUsers(model);
@@ -126,12 +124,11 @@ public class SecurityControllerClass {
             , @RequestParam String roles
             , Model model
     ) {
-        if (id == null || id.equals("") || id.isEmpty() || id.equals(" ")
-                ||userName == null || userName.equals("") || userName.isEmpty() || userName.equals(" ")
-                || userPass == null || userPass.equals("") || userPass.isEmpty() || userPass.equals(" ")
-                || isActive == null || isActive.equals("") || isActive.isEmpty() || isActive.equals(" ")
-                || roles == null || roles.equals("") || roles.isEmpty() || roles.equals(" ")
-        ) {
+        if (checker.checkAttribute(id)
+                || checker.checkAttribute(userName)
+                || checker.checkAttribute(userPass)
+                || checker.checkAttribute(isActive)
+                || checker.checkAttribute(roles)) {
             logger.warn("SecurityControllerClass.updateAppUser():" +
                     " Attribute has a null value!");
             return getUsers(model);
@@ -186,10 +183,7 @@ public class SecurityControllerClass {
     public String deleteAppUser(@RequestParam String id
             , Model model
     ) {
-        if (id == null
-                || id.equals("")
-                || id.isEmpty()
-                || id.equals(" ")
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("SecurityControllerClass.deleteAppUser():" +
                     " Attribute has a null value!");
@@ -219,9 +213,7 @@ public class SecurityControllerClass {
     public String findAppUser(@RequestParam String userName
             , Model model
     ) {
-        if (userName == null
-                || userName.equals("")
-                || userName.isEmpty()
+        if (checker.checkAttribute(userName)
         ) {
             logger.warn("SecurityControllerClass.findAppUser():" +
                     " Attribute has a null value!");
@@ -232,7 +224,7 @@ public class SecurityControllerClass {
 
         try {
             long idCheck = Long.parseLong(userIdWithoutSpaces);
-            if (idCheck <= 0 || userIdWithoutSpaces.isEmpty()) {
+            if (idCheck <= 0 || checker.checkAttribute(idCheck + "")) {
                 logger.warn("SecurityControllerClass.findAppUser():" +
                         " WRONG ID FORMAT");
                 return getUsers(model);

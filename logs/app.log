@@ -4526,3 +4526,39 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2024-12-12 21:09:03.318  WARN 15752 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
 2024-12-12 21:09:21.480  WARN 15752 --- [http-nio-8080-exec-9] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
 2024-12-12 21:09:27.209  WARN 15752 --- [http-nio-8080-exec-3] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
+2024-12-12 21:16:53.148 ERROR 14448 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-12 21:16:53.219  WARN 14448 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-12 21:16:53.231  WARN 14448 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-12 21:16:53.250 ERROR 14448 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** Attribute is empty!
+2024-12-12 21:16:53.256 ERROR 14448 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Attribute is empty!
+2024-12-12 21:16:53.267 ERROR 14448 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** null
+2024-12-12 21:16:53.279  WARN 14448 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): dborn <<<< 0 ***
+2024-12-12 21:16:53.370 ERROR 14448 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-12 21:16:53.400 ERROR 14448 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-12 21:16:53.425  WARN 14448 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-12 21:16:53.427 ERROR 14448 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-12 21:16:53.580 ERROR 14448 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-12 21:16:53.597  WARN 14448 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***
+2024-12-12 21:16:53.620 ERROR 14448 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** Attribute is empty!
+2024-12-12 21:17:07.033  WARN 1440 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-12 21:19:06.339 ERROR 11740 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-12 21:19:06.453  WARN 11740 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-12 21:19:06.468  WARN 11740 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-12 21:19:06.493 ERROR 11740 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** Attribute is empty!
+2024-12-12 21:19:06.503 ERROR 11740 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Attribute is empty!
+2024-12-12 21:19:06.517 ERROR 11740 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** null
+2024-12-12 21:19:06.523  WARN 11740 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): dborn <<<< 0 ***
+2024-12-12 21:19:06.740 ERROR 11740 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-12 21:19:06.811 ERROR 11740 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-12 21:19:06.832  WARN 11740 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-12 21:19:06.832 ERROR 11740 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-12 21:19:06.943 ERROR 11740 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-12 21:19:06.984  WARN 11740 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***
+2024-12-12 21:19:07.074 ERROR 11740 --- [main] a.controller.EmployeeController          : *** EmployeeController.addEmployee(): wrong DB's values! *** Attribute is empty!
+2024-12-12 21:19:21.962  WARN 17068 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-12 21:19:48.739  WARN 17068 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-12 21:19:48.800  WARN 17068 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: admin
+2024-12-12 21:19:48.802  WARN 17068 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
+2024-12-12 21:19:49.099  WARN 17068 --- [http-nio-8080-exec-6] accountingApp.service.AppUserService     : AppUser uuu created!
+2024-12-12 21:20:00.192  WARN 17068 --- [http-nio-8080-exec-10] accountingApp.service.AppUserService     : AppUser uuuu created!
+2024-12-12 21:20:21.413  WARN 17068 --- [http-nio-8080-exec-3] a.s.SecurityControllerClass              : SecurityControllerClass.addNewUser(): Attribute has a null value!
