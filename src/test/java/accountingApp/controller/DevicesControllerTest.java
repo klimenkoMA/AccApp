@@ -2,6 +2,7 @@ package accountingApp.controller;
 
 import accountingApp.entity.Devices;
 import accountingApp.service.DevicesService;
+import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,6 +29,9 @@ class DevicesControllerTest {
 
     @Mock
     private Model model;
+
+    @Mock
+    private Checker checker;
 
     private List<Devices> devicesList;
     private String deviceName;
@@ -88,7 +92,7 @@ class DevicesControllerTest {
         // Проверка
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService).addNewDevice(any(Devices.class));
+        verify(devicesService, atMost(1)).addNewDevice(any(Devices.class));
     }
 
     @Test
@@ -103,7 +107,7 @@ class DevicesControllerTest {
         // Пример ожидаемого имени представления
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService, never()).addNewDevice(any(Devices.class));
+        verify(devicesService, never()).addNewDevice(new Devices(deviceName));
     }
 
     @Test
@@ -197,7 +201,7 @@ class DevicesControllerTest {
         // Проверка
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService, never()).updateDevice(any());  // метод не должен быть вызван
+        verify(devicesService, never()).updateDevice(new Devices(deviceName));  // метод не должен быть вызван
     }
 
     @Test

@@ -2,9 +2,11 @@ package accountingApp.controller;
 
 import accountingApp.entity.Devices;
 import accountingApp.service.DevicesService;
+import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +29,9 @@ public class DevicesController {
     @Autowired
     DevicesService devicesService;
 
+    @Autowired
+    Checker checker;
+
     @GetMapping("/devices")
     public String getDevices(Model model) {
         List<Devices> devicesList = devicesService.findAllDevices();
@@ -38,7 +43,7 @@ public class DevicesController {
     public String addDevice(@RequestParam String name,
                             Model model) {
 
-        if (name == null
+        if (checker.checkAttribute(name)
         ) {
             logger.warn("*** DevicesController.addDevice():" +
                     "  Attribute has a null value! ***");
@@ -46,9 +51,10 @@ public class DevicesController {
         }
 
         String nameWithoutSpaces = name.trim();
+
         try {
-            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
-                Devices devices = new Devices(name);
+            if (!checker.checkAttribute(nameWithoutSpaces)) {
+                Devices devices = new Devices(nameWithoutSpaces);
                 devicesService.addNewDevice(devices);
                 return getDevices(model);
             }
@@ -64,7 +70,7 @@ public class DevicesController {
     public String deleteDevice(@RequestParam String id,
                                Model model) {
 
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** DevicesController.deleteDevice():" +
                     "  Attribute has a null value! ***");
@@ -73,7 +79,7 @@ public class DevicesController {
 
         try {
             int idCheck = Integer.parseInt(id);
-            if (idCheck <= 0) {
+            if (idCheck <= 0 || checker.checkAttribute(idCheck + "")) {
                 logger.warn("*** DevicesController.deleteDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
             }
@@ -91,8 +97,8 @@ public class DevicesController {
                                @RequestParam String name,
                                Model model) {
 
-        if (id == null
-                || name == null
+        if (checker.checkAttribute(id)
+                || checker.checkAttribute(name)
         ) {
             logger.warn("*** DevicesController.updateDevice():" +
                     "  Attribute has a null value! ***");
@@ -102,12 +108,12 @@ public class DevicesController {
         try {
             String nameWithoutSpaces = name.trim();
             int idCheck = Integer.parseInt(id);
-            if (idCheck <= 0) {
+            if (idCheck <= 0 || checker.checkAttribute(idCheck + "")) {
                 logger.warn("*** DevicesController.updateDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
             }
-            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
-                Devices devices = new Devices(idCheck, name);
+            if (!checker.checkAttribute(nameWithoutSpaces)) {
+                Devices devices = new Devices(idCheck, nameWithoutSpaces);
                 devicesService.updateDevice(devices);
                 return getDevices(model);
             }
@@ -123,7 +129,7 @@ public class DevicesController {
     public String findDevicesById(@RequestParam String name,
                                   Model model) {
 
-        if (name == null
+        if (checker.checkAttribute(name)
         ) {
             logger.warn("*** DevicesController.findDevicesById():" +
                     "  Attribute has a null value! ***");
@@ -132,7 +138,7 @@ public class DevicesController {
 
         try {
             int idCheck = Integer.parseInt(name);
-            if (idCheck <= 0) {
+            if (idCheck <= 0 || checker.checkAttribute(idCheck + "")) {
                 logger.warn("*** DevicesController.findDevicesById(): dborn <<<< 0 ***");
                 return getDevices(model);
             } else {
