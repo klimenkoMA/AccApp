@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-12.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/usefulmethods/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/usefulmethods/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-05.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/usefulmethods/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/usefulmethods/Checker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -428,6 +431,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DevicesControllerTest.addDeviceEmptyNameNoDeviceAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.DevicesControllerTest" />
+      <option name="METHOD_NAME" value="addDeviceEmptyNameNoDeviceAdded" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SecurityControllerClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -445,27 +469,6 @@
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.securityController.SecurityControllerClassTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SecurityControllerClassTest.exceptionDuringDeletingAppUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.securityController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller.securityController" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.securityController.SecurityControllerClassTest" />
-      <option name="METHOD_NAME" value="exceptionDuringDeletingAppUser" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -581,20 +584,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
-      <item itemvalue="JUnit.SecurityControllerClassTest.exceptionDuringDeletingAppUser" />
       <item itemvalue="JUnit.SecurityControllerClassTest.validFindingAppUser" />
       <item itemvalue="JUnit.SecurityControllerClassTest.wrongIdFindingAppUser" />
       <item itemvalue="JUnit.SecurityControllerClassTest.exceptionDuringFindingAppUser" />
       <item itemvalue="JUnit.SecurityControllerClassTest" />
       <item itemvalue="Spring Boot.AccountingApplication" />
+      <item itemvalue="JUnit.DevicesControllerTest.addDeviceEmptyNameNoDeviceAdded" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DevicesControllerTest.addDeviceEmptyNameNoDeviceAdded" />
         <item itemvalue="JUnit.SecurityControllerClassTest" />
         <item itemvalue="JUnit.SecurityControllerClassTest.exceptionDuringFindingAppUser" />
         <item itemvalue="JUnit.SecurityControllerClassTest.wrongIdFindingAppUser" />
         <item itemvalue="JUnit.SecurityControllerClassTest.validFindingAppUser" />
-        <item itemvalue="JUnit.SecurityControllerClassTest.exceptionDuringDeletingAppUser" />
       </list>
     </recent_temporary>
   </component>
@@ -886,14 +889,7 @@
       <workItem from="1731039432298" duration="88406000" />
       <workItem from="1732556329455" duration="12280000" />
       <workItem from="1732847523203" duration="94105000" />
-      <workItem from="1733637177256" duration="24080000" />
-    </task>
-    <task id="LOCAL-00391" summary="Rebuilt all Controllers">
-      <created>1730307591495</created>
-      <option name="number" value="00391" />
-      <option name="presentableId" value="LOCAL-00391" />
-      <option name="project" value="LOCAL" />
-      <updated>1730307591495</updated>
+      <workItem from="1733637177256" duration="31056000" />
     </task>
     <task id="LOCAL-00392" summary="Took off hibernates messages from console">
       <created>1730359201601</created>
@@ -1231,7 +1227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1734027237137</updated>
     </task>
-    <option name="localTasksCounter" value="440" />
+    <task id="LOCAL-00440" summary="Rebuilt SecurityControllerClass">
+      <created>1734057103222</created>
+      <option name="number" value="00440" />
+      <option name="presentableId" value="LOCAL-00440" />
+      <option name="project" value="LOCAL" />
+      <updated>1734057103222</updated>
+    </task>
+    <option name="localTasksCounter" value="441" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1254,7 +1257,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added getUsers() method in SecurityControllerClass" />
     <MESSAGE value="Created a crudusers.html" />
     <MESSAGE value="Added some new files for AppUser entity" />
     <MESSAGE value="Corrected an AppUserService.java class" />
@@ -1279,7 +1281,8 @@
     <MESSAGE value="Rebuilt CustomUserDetailsService" />
     <MESSAGE value="Tech commit" />
     <MESSAGE value="Added Checker class for checking different attributes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Checker class for checking different attributes" />
+    <MESSAGE value="Rebuilt SecurityControllerClass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt SecurityControllerClass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
