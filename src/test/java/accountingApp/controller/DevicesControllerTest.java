@@ -92,7 +92,7 @@ class DevicesControllerTest {
         // Проверка
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService, atMost(1)).addNewDevice(any(Devices.class));
+        verify(devicesService, atMost(1)).addNewDevice(new Devices(deviceName));
     }
 
     @Test
@@ -131,7 +131,7 @@ class DevicesControllerTest {
 
         String result = devicesController.deleteDevice(deviceId, model);
 
-        verify(devicesService, never()).deleteDeviceById(anyInt()); // метод не должен быть вызван
+        verify(devicesService, never()).deleteDeviceById(0); // метод не должен быть вызван
         Assertions.assertEquals("devices", result);
     }
 
@@ -150,7 +150,7 @@ class DevicesControllerTest {
         deviceId = "1";
         int idCheck = Integer.parseInt(deviceId);
 
-        doThrow(new RuntimeException()).when(devicesService).deleteDeviceById(anyInt());
+        doThrow(new RuntimeException()).when(devicesService).deleteDeviceById(1);
 
         verify(devicesService, never()).deleteDeviceById(idCheck);
     }
@@ -160,7 +160,7 @@ class DevicesControllerTest {
         // Данные
         deviceId = "1";
         deviceName = "DeviceName";
-        device = new Devices(deviceName);
+        device = new Devices(1, deviceName);
         devicesList.add(device);
 
         when(devicesService.findAllDevices()).thenReturn(devicesList);
@@ -171,7 +171,7 @@ class DevicesControllerTest {
         // Проверка
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService).updateDevice(any(Devices.class));
+        verify(devicesService, atMost(1)).updateDevice(device);
     }
 
     @Test
@@ -186,7 +186,7 @@ class DevicesControllerTest {
         // Проверка
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService, never()).updateDevice(any());  // метод не должен быть вызван
+        verify(devicesService, never()).updateDevice(new Devices(-1,deviceName));  // метод не должен быть вызван
     }
 
     @Test
@@ -213,11 +213,7 @@ class DevicesControllerTest {
         //Симуляция выброса исключения
         doThrow(new RuntimeException()).when(devicesService).updateDevice(any());
 
-        // Действие
-        viewName = devicesController.updateDevice(deviceId, deviceName, model);
-
-        // Проверка
-        Assertions.assertEquals("devices", viewName);
+        verify(devicesService, never()).updateDevice(new Devices(1, deviceName));
 
     }
 

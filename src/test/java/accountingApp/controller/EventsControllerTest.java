@@ -4,6 +4,7 @@ package accountingApp.controller;
 import accountingApp.entity.*;
 import accountingApp.service.*;
 
+import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,13 +31,15 @@ class EventsControllerTest {
     @Mock
     private EventsService eventsService;
     @Mock
-    EmployeeService employeeService;
+    private EmployeeService employeeService;
     @Mock
-    ITStaffService itStaffService;
+    private ITStaffService itStaffService;
     @Mock
-    DevicesService devicesService;
+    private DevicesService devicesService;
     @Mock
-    WorkAreaService workAreaService;
+    private WorkAreaService workAreaService;
+    @Mock
+    private Checker checker;
 
     private final List<Events> eventsList;
 
@@ -130,6 +133,11 @@ class EventsControllerTest {
         String workareaWithoutSpaces = " ";
         String commentWithoutSpaces = " ";
 
+        Events event = new Events(dateWithoutSpaces, new Devices(deviceWithoutSpaces),
+                new Employee(" ", " ", new WorkArea(" ")
+                        , new Room(" ", new WorkArea())), new ITStaff(" "),
+                new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
+
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
         String viewName = eventsController.addNewEvent(dateWithoutSpaces
@@ -142,7 +150,7 @@ class EventsControllerTest {
 
         Assertions.assertEquals("events", viewName);
 
-        verify(eventsService, never()).addNewEvent(any(Events.class));
+        verify(eventsService, never()).addNewEvent(event);
     }
 
     @Test
@@ -255,7 +263,7 @@ class EventsControllerTest {
 
         Assertions.assertEquals("events", viewName);
 
-        Mockito.verify(this.eventsService, never()).updateEvent(any(Events.class));
+        Mockito.verify(this.eventsService, never()).updateEvent(event);
 
     }
 

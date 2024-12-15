@@ -2,6 +2,7 @@ package accountingApp.controller;
 
 import accountingApp.entity.*;
 import accountingApp.service.*;
+import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,15 +20,17 @@ public class EventsController {
     final Logger logger = LoggerFactory.getLogger(EventsController.class);
 
     @Autowired
-    EventsService eventsService;
+    private EventsService eventsService;
     @Autowired
-    EmployeeService employeeService;
+    private EmployeeService employeeService;
     @Autowired
-    ITStaffService itStaffService;
+    private ITStaffService itStaffService;
     @Autowired
-    DevicesService devicesService;
+    private DevicesService devicesService;
     @Autowired
-    WorkAreaService workAreaService;
+    private WorkAreaService workAreaService;
+    @Autowired
+    private Checker checker;
 
     @GetMapping("/events")
     public String getEvents(Model model) {
@@ -46,14 +49,14 @@ public class EventsController {
 
     @PostMapping("/addevent")
     public String addNewEvent(@RequestParam String date,
-                              @RequestParam Devices device,
-                              @RequestParam Employee employee,
-                              @RequestParam ITStaff itstaff,
-                              @RequestParam WorkArea workarea,
+                              @RequestParam(required = false) Devices device,
+                              @RequestParam(required = false) Employee employee,
+                              @RequestParam(required = false) ITStaff itstaff,
+                              @RequestParam(required = false) WorkArea workarea,
                               @RequestParam String comment,
                               Model model) {
 
-        if (date == null
+        if (checker.checkAttribute(date)
                 || device == null
                 || employee == null
                 || itstaff == null
@@ -71,11 +74,13 @@ public class EventsController {
         String workareaWithoutSpaces = workarea.getName();
         String commentWithoutSpaces = comment.trim();
         try {
-           if (!dateWithoutSpaces.equals("")
-                    && !deviceWithoutSpaces.equals("")
-                    && !employeeIdWithoutSpaces.equals("")
-                    && !workareaWithoutSpaces.equals("")
-                    && !itstaffIdWithoutSpaces.equals("")) {
+            if (!checker.checkAttribute(dateWithoutSpaces)
+                    && !checker.checkAttribute(deviceWithoutSpaces)
+                    && !checker.checkAttribute(employeeIdWithoutSpaces)
+                    && !checker.checkAttribute(workareaWithoutSpaces)
+                    && !checker.checkAttribute(itstaffIdWithoutSpaces)
+                    && !checker.checkAttribute(commentWithoutSpaces)
+            ) {
 
                 Events events = new Events(dateWithoutSpaces,
                         device,
@@ -96,7 +101,7 @@ public class EventsController {
     @PostMapping("/deleteevent")
     public String deleteEvent(@RequestParam String id,
                               Model model) {
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** EventsController.deleteEvent():  Attribute ID has a null value! ***");
             return getEvents(model);
@@ -120,15 +125,15 @@ public class EventsController {
     @PostMapping("/updateevent")
     public String updateEvent(@RequestParam String id,
                               @RequestParam String date,
-                              @RequestParam Devices device,
-                              @RequestParam Employee employee,
-                              @RequestParam ITStaff itstaff,
-                              @RequestParam WorkArea workarea,
+                              @RequestParam(required = false) Devices device,
+                              @RequestParam(required = false) Employee employee,
+                              @RequestParam(required = false) ITStaff itstaff,
+                              @RequestParam(required = false) WorkArea workarea,
                               @RequestParam String comment,
                               Model model) {
 
-        if (id == null
-                || date == null
+        if (checker.checkAttribute(id)
+                || checker.checkAttribute(date)
                 || device == null
                 || employee == null
                 || itstaff == null
@@ -152,11 +157,13 @@ public class EventsController {
             if (idCheck <= 0) {
                 logger.warn("*** EventsController.updateEvent():  WRONG ID FORMAT***");
                 return getEvents(model);
-            } else if (!dateWithoutSpaces.equals("")
-                    && !deviceWithoutSpaces.equals("")
-                    && !employeeIdWithoutSpaces.equals("")
-                    && !workareaWithoutSpaces.equals("")
-                    && !itstaffIdWithoutSpaces.equals("")) {
+            } else if (!checker.checkAttribute(dateWithoutSpaces)
+                    && !checker.checkAttribute(deviceWithoutSpaces)
+                    && !checker.checkAttribute(employeeIdWithoutSpaces)
+                    && !checker.checkAttribute(workareaWithoutSpaces)
+                    && !checker.checkAttribute(itstaffIdWithoutSpaces)
+                    && !checker.checkAttribute(commentWithoutSpaces)
+            ) {
 
                 Events events = new Events(idCheck,
                         dateWithoutSpaces,
@@ -179,7 +186,7 @@ public class EventsController {
     @PostMapping("/findeventbyid")
     public String findEventsById(@RequestParam String id,
                                  Model model) {
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** EventsController.findEventsById():  Attribute ID has a null value! ***");
             return getEvents(model);

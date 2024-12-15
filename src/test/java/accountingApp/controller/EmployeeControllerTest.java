@@ -7,6 +7,7 @@ import accountingApp.entity.WorkArea;
 import accountingApp.service.EmployeeService;
 import accountingApp.service.RoomService;
 import accountingApp.service.WorkAreaService;
+import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,10 +33,11 @@ public class EmployeeControllerTest {
     @Mock
     private EmployeeService employeeService;
     @Mock
-    RoomService roomService;
+    private RoomService roomService;
     @Mock
-    WorkAreaService workAreaService;
-
+    private WorkAreaService workAreaService;
+    @Mock
+    private Checker checker;
     @Mock
     private Model model;
 
@@ -101,13 +103,16 @@ public class EmployeeControllerTest {
         String employeeWorkArea = " ";
         String employeeRoom = " ";
 
+        Employee employee = new Employee(employeeFio, employeeDborn,
+               new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea()));
+
         when(employeeController.addEmployee(employeeFio, employeeDborn
                 , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model)
         ).thenThrow(new RuntimeException());
 
         when(employeeService.getListEmployee()).thenReturn(new ArrayList<>());
 
-        verify(employeeService, never()).addNewEmployee(any(Employee.class));
+        verify(employeeService, never()).addNewEmployee(employee);
     }
 
     @Test

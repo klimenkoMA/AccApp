@@ -5,6 +5,7 @@ import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
 import accountingApp.service.RoomService;
 import accountingApp.service.WorkAreaService;
+import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,13 @@ public class EmployeeController {
     final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
     @Autowired
-    EmployeeService employeeService;
+    private EmployeeService employeeService;
     @Autowired
-    RoomService roomService;
+    private RoomService roomService;
     @Autowired
-    WorkAreaService workAreaService;
+    private WorkAreaService workAreaService;
+    @Autowired
+    private Checker checker;
 
     @GetMapping("/employee")
     public String getEmployee(Model model) {
@@ -43,12 +46,12 @@ public class EmployeeController {
     @PostMapping("/addemployee")
     public String addEmployee(@RequestParam String fio,
                               @RequestParam String dborn,
-                              @RequestParam WorkArea workarea,
-                              @RequestParam Room room,
+                              @RequestParam (required = false) WorkArea workarea,
+                              @RequestParam (required = false) Room room,
                               Model model) {
 
-        if (fio == null
-                || dborn == null
+        if (checker.checkAttribute(fio)
+                || checker.checkAttribute(dborn)
                 || workarea == null
                 || room == null
         ) {
@@ -63,10 +66,11 @@ public class EmployeeController {
         String roomWithoutSpaces = room.getNumber();
 
         try {
-            if (!fioWithoutSpaces.equals("")
-                    && !dbornWithoutSpaces.equals("")
-                    && !workAreaWithoutSpaces.equals("")
-                    && !roomWithoutSpaces.equals("")) {
+            if (!checker.checkAttribute(fioWithoutSpaces)
+                    && !checker.checkAttribute(dbornWithoutSpaces)
+                    && !checker.checkAttribute(workAreaWithoutSpaces)
+                    && !checker.checkAttribute(roomWithoutSpaces)
+            ) {
 
                 Employee employee = new Employee(fioWithoutSpaces
                         , dbornWithoutSpaces
@@ -88,7 +92,7 @@ public class EmployeeController {
     public String deleteById(@RequestParam String id
             , Model model) {
 
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** EmployeeController.deleteById():" +
                     "  Attribute ID has a null value! ***");
@@ -112,13 +116,13 @@ public class EmployeeController {
     public String updateEmployee(@RequestParam String id,
                                  @RequestParam String fio,
                                  @RequestParam String dborn,
-                                 @RequestParam WorkArea workarea,
-                                 @RequestParam Room room,
+                                 @RequestParam (required = false) WorkArea workarea,
+                                 @RequestParam (required = false) Room room,
                                  Model model) {
 
-        if (id == null
-                || fio == null
-                || dborn == null
+        if (checker.checkAttribute(id)
+                || checker.checkAttribute(fio)
+                || checker.checkAttribute(dborn)
                 || workarea == null
                 || room == null
         ) {
@@ -148,10 +152,12 @@ public class EmployeeController {
 
         try {
             int idCheck = Integer.parseInt(id);
-            if (!fioWithoutSpaces.equals("")
-                    && !dbornWithoutSpaces.equals("")
-                    && !roomWithoutSpaces.equals("")
-                    && !workAreaWithoutSpaces.equals("")) {
+            if (!checker.checkAttribute(idCheck + "")
+                    && !checker.checkAttribute(fioWithoutSpaces)
+                    && !checker.checkAttribute(dbornWithoutSpaces)
+                    && !checker.checkAttribute(workAreaWithoutSpaces)
+                    && !checker.checkAttribute(roomWithoutSpaces)
+            ) {
 
                 Employee employee = new Employee(idCheck
                         , fioWithoutSpaces
@@ -176,7 +182,7 @@ public class EmployeeController {
     public String findEmployeeByFio(@RequestParam String fio,
                                     Model model) {
 
-        if (fio == null
+        if (checker.checkAttribute(fio)
         ) {
             logger.warn("*** EmployeeController.findEmployeeByFio():" +
                     "  Attribute has a null value! ***");
@@ -187,8 +193,8 @@ public class EmployeeController {
         try {
 
             int idCheck = Integer.parseInt(fioWithoutSpaces);
-            if (idCheck <= 0 || fioWithoutSpaces.isEmpty()) {
-                logger.warn("*** EmployeeController.updateEmployee(): sub-zero ID or dBorn values! ***");
+            if (idCheck <= 0 || checker.checkAttribute(idCheck + "")) {
+                logger.warn("*** EmployeeController.updateEmployee(): sub-zero ID values! ***");
                 return getEmployee(model);
             } else {
                 List<Employee> employeeList = employeeService.findEmployeeById(idCheck);
