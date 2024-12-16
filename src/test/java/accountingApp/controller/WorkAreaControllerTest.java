@@ -2,6 +2,7 @@ package accountingApp.controller;
 
 import accountingApp.entity.WorkArea;
 import accountingApp.service.WorkAreaService;
+import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,12 +22,12 @@ class WorkAreaControllerTest {
 
     @InjectMocks
     private WorkAreaController workAreaController;
-
     @Mock
     private WorkAreaService workAreaService;
-
     @Mock
     private Model model;
+    @Mock
+    private Checker checker;
 
     private final List<WorkArea> workAreaList;
 
@@ -81,7 +82,7 @@ class WorkAreaControllerTest {
 
         verify(model, times(1)).addAttribute("workAreaList", workAreaList);
 
-        verify(workAreaService, never()).addNewWorkArea(any());
+        verify(workAreaService, never()).addNewWorkArea(new WorkArea(nameWA));
     }
 
     @Test

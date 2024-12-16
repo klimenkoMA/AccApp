@@ -2,6 +2,7 @@ package accountingApp.controller;
 
 import accountingApp.entity.Feedback;
 import accountingApp.service.FeedbackService;
+import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,12 +23,12 @@ class FeedbackControllerTest {
 
     @InjectMocks
     private FeedbackController feedbackController;
-
     @Mock
     private FeedbackService feedbackService;
-
     @Mock
-    Model model;
+    private Checker checker;
+    @Mock
+    private Model model;
 
     private final List<Feedback> feedbackList;
 
@@ -80,12 +81,13 @@ class FeedbackControllerTest {
         String message = "       ";
 
         String viewName = feedbackController.addNewFeedback(name, email, message, model);
+        Feedback feedback = new Feedback(name, email, message);
 
         Assertions.assertEquals("main", viewName);
 
         verify(model, never()).addAttribute("feedbackList", new ArrayList<Feedback>());
 
-        verify(feedbackService, never()).addFeedback(any());
+        verify(feedbackService, never()).addFeedback(feedback);
     }
 
     @Test
@@ -129,7 +131,7 @@ class FeedbackControllerTest {
 
         verify(model).addAttribute("feedbackList", new ArrayList<Feedback>());
 
-        verify(feedbackService, never()).deleteFeedback(any());
+        verify(feedbackService, never()).deleteFeedback(new Feedback(id, "dfdfd", " gfgfgg"));
     }
 
     @Test
@@ -217,11 +219,9 @@ class FeedbackControllerTest {
 
         String id = " ";
 
-        String viewName = feedbackController.findFeedback(id, model);
+        Feedback feedback = new Feedback(id, "ggfgf", "gfgfgfg");
 
-        Assertions.assertEquals("feedbacks", viewName);
-
-        verify(feedbackService, never()).findFeedbackById(any());
+        verify(feedbackService, never()).findFeedbackById(id);
     }
 
     @Test

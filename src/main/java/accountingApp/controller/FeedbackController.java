@@ -2,6 +2,7 @@ package accountingApp.controller;
 
 import accountingApp.entity.Feedback;
 import accountingApp.service.FeedbackService;
+import accountingApp.usefulmethods.Checker;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,9 @@ public class FeedbackController {
     final Logger logger = LoggerFactory.getLogger(FeedbackController.class);
 
     @Autowired
-    FeedbackService feedbackService;
+    private FeedbackService feedbackService;
+    @Autowired
+    private Checker checker;
 
     @GetMapping("/feedbacks")
     public String getFeedbacks(Model model) {
@@ -36,9 +39,9 @@ public class FeedbackController {
                                  @RequestParam String message,
                                  Model model) {
 
-        if (name == null
-                || email == null
-                || message == null
+        if (checker.checkAttribute(name)
+                || checker.checkAttribute(email)
+                || checker.checkAttribute(message)
         ) {
             logger.warn("*** FeedbackController.addNewFeedback():  Attribute has a null value! ***");
             return "main";
@@ -49,9 +52,10 @@ public class FeedbackController {
             String emailWithoutSpaces = email.trim();
             String messageWithoutSpaces = message.trim();
 
-            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
-                    && !emailWithoutSpaces.equals("") && !emailWithoutSpaces.equals(" ")
-                    && !messageWithoutSpaces.equals("") && !messageWithoutSpaces.equals(" ")) {
+            if (!checker.checkAttribute(nameWithoutSpaces)
+                    && !checker.checkAttribute(emailWithoutSpaces)
+                    && !checker.checkAttribute(messageWithoutSpaces)
+            ) {
                 Feedback feedback = new Feedback(name, email, message);
                 feedbackService.addFeedback(feedback);
                 return "main";
@@ -68,15 +72,9 @@ public class FeedbackController {
     public String deleteFeedback(@RequestParam String id,
                                  Model model) {
 
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** FeedbackController.deleteFeedback():  Attribute has a null value! ***");
-            return getFeedbacks(model);
-        }
-
-        if (id.equals("") || id.equals(" ")) {
-            logger.warn("*** FeedbackController.deleteFeedback(): " +
-                    " Attribute is empty! ***");
             return getFeedbacks(model);
         }
 
@@ -109,29 +107,24 @@ public class FeedbackController {
                                  @RequestParam String message,
                                  Model model) {
 
-        if (id == null
-                || name == null
-                || email == null
-                || message == null
-        ) {
+        if (checker.checkAttribute(id)
+                || checker.checkAttribute(name)
+                || checker.checkAttribute(email)
+                || checker.checkAttribute(message)) {
             logger.warn("*** FeedbackController.updateFeedback():  Attribute has a null value! ***");
             return getFeedbacks(model);
         }
 
-        if (id.equals("") || id.equals(" ")) {
-            logger.warn("*** FeedbackController.updateFeedback(): " +
-                    " Attribute ID is empty! ***");
-            return getFeedbacks(model);
-        }
         try {
             String idWithoutSpaces = id.trim();
             String nameWithoutSpaces = name.trim();
             String emailWithoutSpaces = email.trim();
             String messageWithoutSpaces = message.trim();
 
-            if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")
-                    && !emailWithoutSpaces.equals("") && !emailWithoutSpaces.equals(" ")
-                    && !messageWithoutSpaces.equals("") && !messageWithoutSpaces.equals(" ")
+            if (!checker.checkAttribute(idWithoutSpaces)
+                    && !checker.checkAttribute(nameWithoutSpaces)
+                    && !checker.checkAttribute(emailWithoutSpaces)
+                    && !checker.checkAttribute(messageWithoutSpaces)
             ) {
                 Feedback feedback = new Feedback(new ObjectId(idWithoutSpaces), nameWithoutSpaces
                         , emailWithoutSpaces, messageWithoutSpaces);
@@ -150,17 +143,12 @@ public class FeedbackController {
     public String findFeedback(@RequestParam String id,
                                Model model) {
 
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** FeedbackController.findFeedback():  Attribute has a null value! ***");
             return getFeedbacks(model);
         }
 
-        if (id.equals("") || id.equals(" ")) {
-            logger.warn("*** FeedbackController.findFeedback(): " +
-                    " Attribute ID is empty! ***");
-            return getFeedbacks(model);
-        }
         try {
             Feedback feedback = feedbackService.findFeedbackById(id);
 
