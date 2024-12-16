@@ -1,6 +1,7 @@
 package accountingApp.controller;
 
 import accountingApp.entity.WorkArea;
+import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,12 @@ import java.util.List;
 @Controller
 public class WorkAreaController {
 
-    final Logger logger = LoggerFactory.getLogger(WorkAreaController.class);
+    private final Logger logger = LoggerFactory.getLogger(WorkAreaController.class);
 
     @Autowired
-    WorkAreaService workAreaService;
-
+    private WorkAreaService workAreaService;
+    @Autowired
+    private Checker checker;
 
     @GetMapping("/workarea")
     public String getWorkArea(Model model) {
@@ -33,14 +35,14 @@ public class WorkAreaController {
     public String addWorkArea(@RequestParam String name,
                               Model model) {
 
-        if (name == null
+        if (checker.checkAttribute(name)
         ) {
             logger.warn("*** WorkAreaController.addWorkArea():  Attribute has a null value! ***");
             return getWorkArea(model);
         }
 
         String nameWithoutSpaces = name.trim();
-        if (nameWithoutSpaces.equals("") || nameWithoutSpaces.equals(" ")) {
+        if (checker.checkAttribute(nameWithoutSpaces)) {
             logger.warn("*** WorkAreaController.addWorkArea(): EMPTY NAME ***");
             return getWorkArea(model);
         }
@@ -61,7 +63,7 @@ public class WorkAreaController {
     public String deleteWorkArea(@RequestParam String id,
                                  Model model) {
 
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** WorkAreaController.deleteWorkArea():  Attribute has a null value! ***");
             return getWorkArea(model);
@@ -89,8 +91,8 @@ public class WorkAreaController {
                                  @RequestParam String name,
                                  Model model) {
 
-        if (id == null
-                || name == null
+        if (checker.checkAttribute(id)
+                || checker.checkAttribute(name)
         ) {
             logger.warn("*** WorkAreaController.updateWorkArea():  Attribute has a null value! ***");
             return getWorkArea(model);
@@ -105,7 +107,7 @@ public class WorkAreaController {
                 logger.warn("*** WorkAreaController.updateWorkArea(): ID is SUBZERO***");
                 return getWorkArea(model);
             } else {
-                if (nameWithoutSpaces.equals("") || nameWithoutSpaces.equals(" ")) {
+                if (checker.checkAttribute(nameWithoutSpaces)) {
                     logger.warn("*** WorkAreaController.updateWorkArea(): NAME is EMPTY ***");
                     return getWorkArea(model);
                 }
@@ -124,7 +126,7 @@ public class WorkAreaController {
     public String findAreaByName(@RequestParam String name,
                                  Model model) {
 
-        if (name == null
+        if (checker.checkAttribute(name)
         ) {
             logger.warn("*** WorkAreaController.findAreaByName():  Attribute has a null value! ***");
             return getWorkArea(model);

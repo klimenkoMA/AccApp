@@ -3,6 +3,7 @@ package accountingApp.controller;
 import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
 import accountingApp.service.WorkAreaService;
+import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +19,14 @@ import java.util.List;
 @Controller
 public class RoomController {
 
-    final Logger logger = LoggerFactory.getLogger(RoomController.class);
+    private final Logger logger = LoggerFactory.getLogger(RoomController.class);
 
     @Autowired
-    RoomService roomService;
+    private RoomService roomService;
     @Autowired
-    WorkAreaService workAreaService;
+    private WorkAreaService workAreaService;
+    @Autowired
+    private Checker checker;
 
     @GetMapping("/room")
     public String getRoom(Model model) {
@@ -36,10 +39,10 @@ public class RoomController {
 
     @PostMapping("/addroom")
     public String addRoom(@RequestParam String number,
-                          @RequestParam WorkArea workarea,
+                          @RequestParam (required = false) WorkArea workarea,
                           Model model) {
 
-        if (number == null
+        if (checker.checkAttribute(number)
                 || workarea == null
         ) {
             logger.warn("*** RoomController.addRoom():  Attribute has a null value! ***");
@@ -73,7 +76,7 @@ public class RoomController {
     public String deleteRoom(@RequestParam String id,
                              Model model) {
 
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** RoomController.deleteRoom():  Attribute has a null value! ***");
             return getRoom(model);
@@ -99,11 +102,11 @@ public class RoomController {
     @PostMapping("/updateroom")
     public String updateRoom(@RequestParam String id,
                              @RequestParam String number,
-                             @RequestParam WorkArea workarea,
+                             @RequestParam (required = false) WorkArea workarea,
                              Model model) {
 
-        if (id == null
-                || number == null
+        if (checker.checkAttribute(id)
+                || checker.checkAttribute(number)
                 || workarea == null
         ) {
             logger.warn("*** RoomController.updateRoom():  Attribute has a null value! ***");
@@ -137,7 +140,7 @@ public class RoomController {
     public String findRoomById(@RequestParam String id,
                                Model model) {
 
-        if (id == null
+        if (checker.checkAttribute(id)
         ) {
             logger.warn("*** RoomController.findRoomById():  Attribute has a null value! ***");
             return getRoom(model);

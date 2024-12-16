@@ -5,6 +5,7 @@ import accountingApp.entity.WorkArea;
 import accountingApp.service.RoomService;
 
 import accountingApp.service.WorkAreaService;
+import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,15 +25,14 @@ class RoomControllerTest {
 
     @InjectMocks
     private RoomController roomController;
-
     @Mock
     private RoomService roomService;
-
     @Mock
     private WorkAreaService workAreaService;
-
     @Mock
     private Model model;
+    @Mock
+    private Checker checker;
 
     private final List<Room> roomList;
 

@@ -2,6 +2,7 @@ package accountingApp.controller;
 
 import accountingApp.entity.ITStaff;
 import accountingApp.service.ITStaffService;
+import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,12 +21,12 @@ class ITStaffControllerTest {
 
     @InjectMocks
     private ITStaffController itStaffController;
-
     @Mock
     private Model model;
-
     @Mock
     private ITStaffService itStaffService;
+    @Mock
+    private Checker checker;
 
     private final List<ITStaff> itStaffList;
 
