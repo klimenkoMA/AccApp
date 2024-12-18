@@ -40,6 +40,7 @@ public class RoomController {
     @PostMapping("/addroom")
     public String addRoom(@RequestParam String number,
                           @RequestParam (required = false) WorkArea workarea,
+                          @RequestParam  String description,
                           Model model) {
 
         if (checker.checkAttribute(number)
@@ -51,6 +52,7 @@ public class RoomController {
 
         String numberWithoutSpaces = number.trim();
         String workAreaIdWithoutSpaces = workarea.getName();
+        String descriptionWithoutSpaces = description.trim();
 
         try {
             int numberCheck = Integer.parseInt(numberWithoutSpaces);
@@ -61,7 +63,7 @@ public class RoomController {
             } else {
                 List<WorkArea> workAreas = workAreaService
                         .getWorkAreaByName(workAreaIdWithoutSpaces);
-                Room room = new Room(numberWithoutSpaces, workAreas.get(0));
+                Room room = new Room(numberWithoutSpaces, workAreas.get(0), description);
                 roomService.addNewRoom(room);
             }
             return getRoom(model);
@@ -88,6 +90,12 @@ public class RoomController {
             if (idCheck <= 0) {
                 logger.warn("*** RoomController.deleteRoom(): NUMBER is SUBZERO***");
             } else {
+                List<Room> roomList = roomService.getRoomById(idCheck);
+
+                Room room = roomList.get(0);
+                room.setWorkarea(new WorkArea());
+                roomService.updateRoom(room);
+
                 roomService.deleteRoomById(idCheck);
             }
             return getRoom(model);
@@ -103,11 +111,13 @@ public class RoomController {
     public String updateRoom(@RequestParam String id,
                              @RequestParam String number,
                              @RequestParam (required = false) WorkArea workarea,
+                             @RequestParam String description,
                              Model model) {
 
         if (checker.checkAttribute(id)
                 || checker.checkAttribute(number)
                 || workarea == null
+                || checker.checkAttribute(description)
         ) {
             logger.warn("*** RoomController.updateRoom():  Attribute has a null value! ***");
             return getRoom(model);
@@ -115,6 +125,7 @@ public class RoomController {
 
         String idWithoutSpaces = id.trim();
         String numberWithoutSpaces = number.trim();
+        String descriptionWithoutSpaces = description.trim();
 
         try {
             int workAreaId = workarea.getId();
@@ -125,7 +136,8 @@ public class RoomController {
                 logger.warn("*** RoomController.updateRoom(): NUMBER or ID is SUBZERO***");
             } else {
                 List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaId);
-                Room room = new Room(idCheck, numberWithoutSpaces, workAreaList.get(0));
+                Room room = new Room(idCheck, numberWithoutSpaces, workAreaList.get(0)
+                , descriptionWithoutSpaces);
                 roomService.updateRoom(room);
             }
             return getRoom(model);

@@ -18,11 +18,9 @@
                     <div align="center">
                         <label>
                             <input type="text" name="number" placeholder="Номер кабинета">
-
                         </label>
-
                         <label class="d-flex justify-content-center align-items-center">
-                                <select class="form-select m-2" name="workarea"
+                            <select class="form-select m-2" name="workarea"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 5vh; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
@@ -32,7 +30,9 @@
                                         th:text="${element.name}"></option>
                             </select>
                         </label>
-
+                        <label>
+                            <input type="text" name="description" placeholder="Описание кабинета">
+                        </label>
                     </div>
                     <button class="button" type="submit">Добавить</button>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
@@ -65,6 +65,9 @@
                                         th:value="${element.id}"
                                         th:text="${element.name}"></option>
                             </select>
+                        </label>
+                        <label>
+                            <input type="text" name="description" placeholder="Описание кабинета">
                         </label>
                     </div>
                     <button class="button" type="submit">Обновить</button>

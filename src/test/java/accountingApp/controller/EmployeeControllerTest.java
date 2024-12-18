@@ -42,14 +42,16 @@ public class EmployeeControllerTest {
     private Model model;
 
     private final List<Employee> employeeList;
+    private String description;
 
     {
+        description = "description";
         Employee empl1 = new Employee(1, "A", "20051977"
-                , new WorkArea("БГУ"), new Room("111", new WorkArea()));
+                , new WorkArea("БГУ"), new Room("111", new WorkArea(), description));
         Employee empl2 = new Employee(2, "Б", "01071988"
-                , new WorkArea("МГУ"), new Room("13", new WorkArea()));
+                , new WorkArea("МГУ"), new Room("13", new WorkArea(), description));
         Employee empl3 = new Employee(3, "Ц", "02051966"
-                , new WorkArea("ФГУ"), new Room("202", new WorkArea()));
+                , new WorkArea("ФГУ"), new Room("202", new WorkArea(), description));
 
         employeeList = new ArrayList<>();
 
@@ -88,7 +90,7 @@ public class EmployeeControllerTest {
         String employeeRoom = "115";
 
         String viewName = employeeController.addEmployee(employeeFio, employeeDborn
-                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea()), model);
+                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(), description), model);
         Assertions.assertEquals("employee", viewName);
 
 
@@ -102,12 +104,15 @@ public class EmployeeControllerTest {
         String employeeDborn = " ";
         String employeeWorkArea = " ";
         String employeeRoom = " ";
+        description = " ";
 
         Employee employee = new Employee(employeeFio, employeeDborn,
-               new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea()));
+               new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea()
+        ,description));
 
         when(employeeController.addEmployee(employeeFio, employeeDborn
-                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model)
+                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)
+                , description), model)
         ).thenThrow(new RuntimeException());
 
         when(employeeService.getListEmployee()).thenReturn(new ArrayList<>());
@@ -182,12 +187,13 @@ public class EmployeeControllerTest {
 
         List<Employee> employees = Collections.singletonList(new Employee(idCheck
                 , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
-                new Room(employeeRoom, new WorkArea())));
+                new Room(employeeRoom, new WorkArea(), description)));
 
         when(employeeService.getListEmployee()).thenReturn(employees);
 
         String result = employeeController.updateEmployee(employeeId, employeeFio, employeeDborn
-                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)), model);
+                , new WorkArea(employeeWorkArea), new Room(employeeRoom, new WorkArea(employeeWorkArea)
+                , description), model);
         Assertions.assertEquals("employee", result);
     }
 
@@ -208,12 +214,13 @@ public class EmployeeControllerTest {
         String employeeDborn = " ";
         String employeeWorkArea = " ";
         String employeeRoom = " ";
+        description = " ";
 
         when(employeeService.getListEmployee()).thenThrow(new RuntimeException());
 
         verify(employeeService, never()).updateEmployee(new Employee(idCheck
                 , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
-                new Room(employeeRoom, new WorkArea())));
+                new Room(employeeRoom, new WorkArea(), description)));
     }
 
     @Test
@@ -225,10 +232,11 @@ public class EmployeeControllerTest {
         String employeeDborn = " ";
         String employeeWorkArea = " ";
         String employeeRoom = " ";
+        description = " ";
 
         Employee employee = new Employee(idCheck
                 , employeeFio, employeeDborn, new WorkArea(employeeWorkArea),
-                new Room(employeeRoom, new WorkArea()));
+                new Room(employeeRoom, new WorkArea(), description));
 
         doThrow(new RuntimeException()).when(employeeService).updateEmployee(employee);
 

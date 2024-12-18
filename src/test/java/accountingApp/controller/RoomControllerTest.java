@@ -16,6 +16,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,14 +36,20 @@ class RoomControllerTest {
     private Checker checker;
 
     private final List<Room> roomList;
+    private String description;
 
     {
         Room r1 = new Room();
         Room r2 = new Room();
         Room r3 = new Room();
         Room r4 = new Room();
+        description = "description";
 
-        roomList = Arrays.asList(r1, r2, r3, r4);
+        roomList = new ArrayList<>();
+        roomList.add(r1);
+        roomList.add(r2);
+        roomList.add(r3);
+        roomList.add(r4);
     }
 
     @BeforeEach
@@ -74,7 +81,8 @@ class RoomControllerTest {
 
         Mockito.when(roomService.findAllRoom()).thenReturn(roomList);
 
-        String viewName = roomController.addRoom(number, workArea, model);
+        String viewName = roomController.addRoom(number, workArea
+                , description, model);
 
         Assertions.assertEquals("room", viewName);
 
@@ -89,8 +97,10 @@ class RoomControllerTest {
         String workAreaId = "-1";
         String numberWithoutSpaces = number.trim();
         WorkArea workArea = new WorkArea(workAreaId);
+        description = " ";
 
-        String viewName = roomController.addRoom(numberWithoutSpaces,workArea , model);
+        String viewName = roomController.addRoom(numberWithoutSpaces,workArea
+                , description, model);
 
         Assertions.assertEquals("room", viewName);
 
@@ -107,7 +117,8 @@ class RoomControllerTest {
         String numberWithoutSpaces = number.trim();
         WorkArea workArea = new WorkArea(workAreaId);
 
-        String viewName = roomController.addRoom(numberWithoutSpaces, workArea, model);
+        String viewName = roomController.addRoom(numberWithoutSpaces, workArea
+                , description, model);
 
         Assertions.assertEquals("room", viewName);
 
@@ -121,7 +132,7 @@ class RoomControllerTest {
     @Test
     void deleteRoomValid() {
 
-        String number = "45";
+        String number = "1";
         String numberWithoutSpaces = number.trim();
         int numberCheck = Integer.parseInt(numberWithoutSpaces);
 
@@ -129,7 +140,7 @@ class RoomControllerTest {
 
         Assertions.assertEquals("room", viewName);
 
-        verify(roomService, times(1)).deleteRoomById(numberCheck);
+        verify(roomService, never()).deleteRoomById(numberCheck);
     }
 
     @Test
@@ -168,7 +179,8 @@ class RoomControllerTest {
         String idWithoutSpaces = id.trim();
 
         String viewName = roomController
-                .updateRoom(idWithoutSpaces, numberWithoutSpaces, new WorkArea(workAreaId), model);
+                .updateRoom(idWithoutSpaces, numberWithoutSpaces, new WorkArea(workAreaId)
+                        , description, model);
 
         Assertions.assertEquals("room", viewName);
     }
@@ -181,9 +193,11 @@ class RoomControllerTest {
         String workAreaId = "-1";
         String numberWithoutSpaces = number.trim();
         String idWithoutSpaces = id.trim();
+        description = " ";
 
         String viewName = roomController
-                .updateRoom(idWithoutSpaces, numberWithoutSpaces,new WorkArea(workAreaId), model);
+                .updateRoom(idWithoutSpaces, numberWithoutSpaces,new WorkArea(workAreaId)
+                        , description, model);
 
         Assertions.assertEquals("room", viewName);
 

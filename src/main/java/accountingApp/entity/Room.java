@@ -18,21 +18,32 @@ public class Room {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="workarea")
     private WorkArea workarea;
+    @Column
+    private String description;
 
     public Room() {
     }
 
-    public Room(String number, WorkArea workarea) {
-        this.number = number;
-        this.workarea = workarea;
-    }
-
-    public Room(int id, String number, WorkArea workarea) {
+    public Room(int id, String number, WorkArea workarea, String description) {
         this.id = id;
         this.number = number;
         this.workarea = workarea;
+        this.description = description;
     }
 
+    public Room(String number, WorkArea workarea, String description) {
+        this.number = number;
+        this.workarea = workarea;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public WorkArea getWorkarea() {
         return workarea;
