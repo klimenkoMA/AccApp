@@ -41,9 +41,13 @@ public class DevicesController {
 
     @PostMapping("/adddevice")
     public String addDevice(@RequestParam String name,
+                            @RequestParam String description,
+                            @RequestParam String inventory,
                             Model model) {
 
         if (checker.checkAttribute(name)
+                || checker.checkAttribute(description)
+                || checker.checkAttribute(inventory)
         ) {
             logger.warn("*** DevicesController.addDevice():" +
                     "  Attribute has a null value! ***");
@@ -51,10 +55,16 @@ public class DevicesController {
         }
 
         String nameWithoutSpaces = name.trim();
+        String descriptionWithoutSpaces = description.trim();
+        String inventoryWithoutSpaces = inventory.trim();
 
         try {
-            if (!checker.checkAttribute(nameWithoutSpaces)) {
-                Devices devices = new Devices(nameWithoutSpaces);
+            long inventoryCheck = Long.parseLong(inventoryWithoutSpaces);
+            if (!checker.checkAttribute(nameWithoutSpaces)
+                    && !checker.checkAttribute(descriptionWithoutSpaces)
+                    && !checker.checkAttribute(inventoryWithoutSpaces)
+            ) {
+                Devices devices = new Devices(nameWithoutSpaces, descriptionWithoutSpaces, inventoryCheck);
                 devicesService.addNewDevice(devices);
                 return getDevices(model);
             }
@@ -95,10 +105,14 @@ public class DevicesController {
     @PostMapping("/updatedevice")
     public String updateDevice(@RequestParam String id,
                                @RequestParam String name,
+                               @RequestParam String description,
+                               @RequestParam String inventory,
                                Model model) {
 
         if (checker.checkAttribute(id)
                 || checker.checkAttribute(name)
+                || checker.checkAttribute(description)
+                || checker.checkAttribute(inventory)
         ) {
             logger.warn("*** DevicesController.updateDevice():" +
                     "  Attribute has a null value! ***");
@@ -107,13 +121,21 @@ public class DevicesController {
 
         try {
             String nameWithoutSpaces = name.trim();
+            String descriptionWithoutSpaces = description.trim();
+            String inventoryWithoutSpaces = inventory.trim();
             int idCheck = Integer.parseInt(id);
-            if (idCheck <= 0 || checker.checkAttribute(idCheck + "")) {
+            long inventoryCheck = Long.parseLong(inventoryWithoutSpaces);
+            if (idCheck <= 0 || checker.checkAttribute(idCheck + "")
+                    || inventoryCheck <= 0 || checker.checkAttribute(inventoryCheck + "")
+            ) {
                 logger.warn("*** DevicesController.updateDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
             }
-            if (!checker.checkAttribute(nameWithoutSpaces)) {
-                Devices devices = new Devices(idCheck, nameWithoutSpaces);
+            if (!checker.checkAttribute(nameWithoutSpaces)
+                    && !checker.checkAttribute(descriptionWithoutSpaces)
+            ) {
+                Devices devices = new Devices(idCheck, nameWithoutSpaces
+                        , descriptionWithoutSpaces, inventoryCheck);
                 devicesService.updateDevice(devices);
                 return getDevices(model);
             }

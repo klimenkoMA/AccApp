@@ -37,13 +37,17 @@ class DevicesControllerTest {
     private String deviceName;
     private String deviceId;
     private String viewName;
+    private String description;
+    private long inventory;
     private Devices device;
 
     {
         // Arrange: Подготовка данных для теста
         deviceName = "Hiper";
         deviceId = "1";
-        device = new Devices(deviceName);
+        description = "Нет-топ для сотрудников IT-отдела";
+        inventory = 111111L;
+        device = new Devices(deviceName, description, inventory);
         Devices device2 = new Devices();
 
         // Создаем список устройств
@@ -87,27 +91,31 @@ class DevicesControllerTest {
         when(devicesService.findAllDevices()).thenReturn(new ArrayList<>());
 
         // Действие
-        viewName = devicesController.addDevice(deviceName, model);
+        viewName = devicesController.addDevice(deviceName, description, inventory + "", model);
 
         // Проверка
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService, atMost(1)).addNewDevice(new Devices(deviceName));
+        verify(devicesService, atMost(1)).addNewDevice(new Devices(deviceName
+                , description, inventory));
     }
 
     @Test
     void addDeviceEmptyNameNoDeviceAdded() {
         // Данные
         deviceName = " ";
+        description = " ";
+
 
         // Действие
-        viewName = devicesController.addDevice(deviceName, model);
+        viewName = devicesController.addDevice(deviceName
+                , description, " ", model);
 
         // Проверка
         // Пример ожидаемого имени представления
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService, never()).addNewDevice(new Devices(deviceName));
+        verify(devicesService, never()).addNewDevice(new Devices(deviceName, description, -1));
     }
 
     @Test
@@ -160,13 +168,14 @@ class DevicesControllerTest {
         // Данные
         deviceId = "1";
         deviceName = "DeviceName";
-        device = new Devices(1, deviceName);
+        device = new Devices(1, deviceName, description, inventory);
         devicesList.add(device);
 
         when(devicesService.findAllDevices()).thenReturn(devicesList);
 
         // Действие
-        viewName = devicesController.updateDevice(deviceId, deviceName, model);
+        viewName = devicesController.updateDevice(deviceId, deviceName
+                , description, inventory + "", model);
 
         // Проверка
         Assertions.assertEquals("devices", viewName);
@@ -181,12 +190,13 @@ class DevicesControllerTest {
         deviceName = "DeviceName";
 
         // Действие
-        viewName = devicesController.updateDevice(deviceId, deviceName, model);
+        viewName = devicesController.updateDevice(deviceId, deviceName
+                , description, " ", model);
 
         // Проверка
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService, never()).updateDevice(new Devices(-1,deviceName));  // метод не должен быть вызван
+        verify(devicesService, never()).updateDevice(new Devices(-1, deviceName, description, -1));  // метод не должен быть вызван
     }
 
     @Test
@@ -194,14 +204,16 @@ class DevicesControllerTest {
         // Данные
         deviceId = "1";
         deviceName = "  "; // после очистки от пробелов значение будет пустым
+        description = " ";
 
         // Действие
-        viewName = devicesController.updateDevice(deviceId, deviceName, model);
+        viewName = devicesController.updateDevice(deviceId, deviceName
+                , description, " ", model);
 
         // Проверка
         Assertions.assertEquals("devices", viewName);
 
-        verify(devicesService, never()).updateDevice(new Devices(deviceName));  // метод не должен быть вызван
+        verify(devicesService, never()).updateDevice(new Devices(1, deviceName, description, -1));  // метод не должен быть вызван
     }
 
     @Test
@@ -213,7 +225,7 @@ class DevicesControllerTest {
         //Симуляция выброса исключения
         doThrow(new RuntimeException()).when(devicesService).updateDevice(any());
 
-        verify(devicesService, never()).updateDevice(new Devices(1, deviceName));
+        verify(devicesService, never()).updateDevice(new Devices(1, deviceName, description, inventory));
 
     }
 
@@ -258,7 +270,7 @@ class DevicesControllerTest {
     void testFindDevicesThrowsException() {
         deviceName = "invalid";
 
-        device = new Devices(deviceName);
+        device = new Devices(deviceName, description, inventory);
         devicesList = Collections.singletonList(device);
 
         doThrow(new RuntimeException()).when(devicesService).getDevicesByName(deviceName);
