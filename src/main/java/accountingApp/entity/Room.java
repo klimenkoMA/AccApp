@@ -1,6 +1,7 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Номера кабинетов
@@ -18,6 +19,8 @@ public class Room {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="workarea")
     private WorkArea workarea;
+    @OneToMany
+    private List<Devices> devices;
     @Column
     private String description;
 

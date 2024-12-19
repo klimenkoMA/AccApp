@@ -15,6 +15,8 @@ public class WorkArea {
     private int id;
     @Column(name = "name")
     private String name;
+    @Column
+    private String description;
     @OneToMany
     private List<Room> rooms;
     @OneToMany(cascade = CascadeType.ALL)
@@ -23,13 +25,23 @@ public class WorkArea {
     public WorkArea() {
     }
 
-    public WorkArea(String name) {
-        this.name = name;
-    }
-
-    public WorkArea(int id, String name) {
+    public WorkArea(int id, String name, String description) {
         this.id = id;
         this.name = name;
+        this.description = description;
+    }
+
+    public WorkArea(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public List<Events> getEvents() {

@@ -21,21 +21,51 @@ public class Devices {
     private Long inventory;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="room")
+    private Room room;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="keeper")
+    private Employee employee;
 
     public Devices() {
     }
 
-    public Devices(int id, String name, String description, long inventory) {
+    public Devices(int id, String name, String description, Long inventory, Room room, Employee employee) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.inventory = inventory;
+        this.room = room;
+        this.employee = employee;
     }
 
-    public Devices(String name, String description, long inventory) {
+    public Devices(String name, String description, Long inventory, Room room, Employee employee) {
         this.name = name;
         this.description = description;
         this.inventory = inventory;
+        this.room = room;
+        this.employee = employee;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public void setInventory(Long inventory) {
+        this.inventory = inventory;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
     public long getInventory() {

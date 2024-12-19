@@ -12,7 +12,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 
 import java.util.ArrayList;
@@ -44,27 +43,31 @@ class EventsControllerTest {
     private final List<Events> eventsList;
     private String description;
     private long inventory;
+    private Room room;
+    private Employee employee;
 
     {
         description = "Description";
         inventory = 111111L;
+        room = new Room();
+        employee = new Employee();
         Employee emp1 = new Employee(1, "08061974", "Сатурнов"
-                , new WorkArea("ПТЦ"), new Room("111", new WorkArea(), description));
+                , new WorkArea("ПТЦ", description), new Room("111", new WorkArea(), description));
         Employee emp2 = new Employee(2, "17111984", "Букина"
-                , new WorkArea("ФГУ"), new Room("205", new WorkArea(), description));
+                , new WorkArea("ФГУ", description), new Room("205", new WorkArea(), description));
         Employee emp3 = new Employee(3, "22011994", "Загаев"
-                , new WorkArea("МГУ"), new Room("15", new WorkArea(), description));
+                , new WorkArea("МГУ", description), new Room("15", new WorkArea(), description));
 
         ITStaff it1 = new ITStaff(1, "Клименко");
         ITStaff it2 = new ITStaff(2, "Плотникова");
 
-        Devices dev1 = new Devices(1, "Kyocera", description, inventory);
-        Devices dev2 = new Devices(2, "HP", description, inventory);
-        Devices dev3 = new Devices(3, "Acer", description, inventory);
+        Devices dev1 = new Devices(1, "Kyocera", description, inventory, room, emp1);
+        Devices dev2 = new Devices(2, "HP", description, inventory, room, emp2);
+        Devices dev3 = new Devices(3, "Acer", description, inventory, room, emp3);
 
-        WorkArea wa1 = new WorkArea("BGU");
-        WorkArea wa2 = new WorkArea("TTN");
-        WorkArea wa3 = new WorkArea("KubSTU");
+        WorkArea wa1 = new WorkArea("BGU", description);
+        WorkArea wa2 = new WorkArea("TTN", description);
+        WorkArea wa3 = new WorkArea("KubSTU", description);
 
         String r1 = "На курс лекций";
         String r2 = "Возврат";
@@ -117,12 +120,19 @@ class EventsControllerTest {
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
         String viewName = eventsController.addNewEvent(dateWithoutSpaces
-                , new Devices(deviceWithoutSpaces, description, inventory)
-                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
-                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")
-                ,description))
+                , new Devices(deviceWithoutSpaces
+                        , description
+                        , inventory
+                        , room
+                        , employee)
+                , new Employee(1
+                        , employeeidWithoutSpaces
+                        , "Сатурнов"
+                        , new WorkArea(workareaWithoutSpaces, description)
+                        , new Room("111", new WorkArea("BGU", description)
+                        , description))
                 , new ITStaff(1, itstaffidWithoutSpaces)
-                , new WorkArea("BGU")
+                , new WorkArea("BGU", description)
                 , commentWithoutSpaces, model);
 
         Assertions.assertEquals("events", viewName);
@@ -140,20 +150,29 @@ class EventsControllerTest {
         description = " ";
         inventory = -1;
 
-        Events event = new Events(dateWithoutSpaces, new Devices(deviceWithoutSpaces, description, inventory),
-                new Employee(" ", " ", new WorkArea(" ")
+        Events event = new Events(dateWithoutSpaces, new Devices(deviceWithoutSpaces
+                , description
+                , inventory
+                , room
+                , employee),
+                new Employee(" ", " ", new WorkArea(" ", " ")
                         , new Room(" ", new WorkArea(), description)), new ITStaff(" "),
-                new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
+                new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
 
         String viewName = eventsController.addNewEvent(dateWithoutSpaces
-                , new Devices(deviceWithoutSpaces, description, inventory)
+                , new Devices(deviceWithoutSpaces
+                        , description
+                        , inventory
+                        , room
+                        , employee)
                 , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
-                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")
-                , description))
+                        , new WorkArea(workareaWithoutSpaces, description),
+                        new Room("111", new WorkArea("BGU", description)
+                                , description))
                 , new ITStaff(1, itstaffidWithoutSpaces)
-                , new WorkArea("BGU")
+                , new WorkArea("BGU", description)
                 , commentWithoutSpaces, model);
 
         Assertions.assertEquals("events", viewName);
@@ -217,10 +236,14 @@ class EventsControllerTest {
 
         int idCheck = Integer.parseInt(eventsId);
 
-        Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces, description, inventory),
-                new Employee("1", "2", new WorkArea("3")
+        Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces
+                , description
+                , inventory
+                , room
+                , employee),
+                new Employee("1", "2", new WorkArea("3", description)
                         , new Room("1", new WorkArea(), description)), new ITStaff("trrr"),
-                new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
+                new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
 
@@ -228,12 +251,17 @@ class EventsControllerTest {
         Mockito.when(eventsService.findAllEvents()).thenReturn(events);
 
         String viewName = eventsController.updateEvent(eventsId, dateWithoutSpaces
-                , new Devices(deviceWithoutSpaces, description, inventory)
+                , new Devices(deviceWithoutSpaces
+                        , description
+                        , inventory
+                        , room
+                        , employee)
                 , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
-                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")
-                , description))
+                        , new WorkArea(workareaWithoutSpaces, description)
+                        , new Room("111", new WorkArea("BGU", description)
+                        , description))
                 , new ITStaff(1, itstaffidWithoutSpaces)
-                , new WorkArea("BGU")
+                , new WorkArea("BGU", description)
                 , commentWithoutSpaces, model);
 
         Assertions.assertEquals("events", viewName);
@@ -254,22 +282,37 @@ class EventsControllerTest {
         inventory = -1;
         int idCheck = Integer.parseInt(eventsId);
 
-        Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces, description, inventory),
-                new Employee(" ", " ", new WorkArea(" ")
+        Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces
+                , description
+                , inventory
+                , room
+                , employee),
+                new Employee(" ", " ", new WorkArea(" ", " ")
                         , new Room(" ", new WorkArea(), description)), new ITStaff(" "),
-                new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
+                new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(events);
 
-        String viewName = eventsController.updateEvent(eventsId, dateWithoutSpaces
-                , new Devices(deviceWithoutSpaces, description, inventory)
-                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
-                        , new WorkArea(workareaWithoutSpaces), new Room("111", new WorkArea("BGU")
-                ,description))
+        String viewName = eventsController.updateEvent(eventsId
+                , dateWithoutSpaces
+                , new Devices(deviceWithoutSpaces
+                        , description
+                        , inventory
+                        , room
+                        , employee)
+                , new Employee(1
+                        , employeeidWithoutSpaces
+                        , "Сатурнов"
+                        , new WorkArea(workareaWithoutSpaces
+                        , description)
+                        , new Room("111"
+                        , new WorkArea("BGU"
+                        , description)
+                        , description))
                 , new ITStaff(1, itstaffidWithoutSpaces)
-                , new WorkArea("BGU")
+                , new WorkArea("BGU", description)
                 , commentWithoutSpaces, model);
 
         Assertions.assertEquals("events", viewName);
@@ -291,10 +334,19 @@ class EventsControllerTest {
 
         int idCheck = Integer.parseInt(eventsId);
 
-        Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces, description, inventory),
-                new Employee(employeeidWithoutSpaces, "fdf "
-                        , new WorkArea("12 "), new Room("32", new WorkArea(), description)),
-                new ITStaff(itstaffidWithoutSpaces), new WorkArea(workareaWithoutSpaces), commentWithoutSpaces);
+        Events event = new Events(idCheck, dateWithoutSpaces, new Devices(deviceWithoutSpaces
+                , description
+                , inventory
+                , room
+                , employee),
+                new Employee(employeeidWithoutSpaces
+                        , "fdf "
+                        , new WorkArea("12 ", description)
+                        , new Room("32"
+                        , new WorkArea(), description)),
+                new ITStaff(itstaffidWithoutSpaces)
+                , new WorkArea(workareaWithoutSpaces, description)
+                , commentWithoutSpaces);
 
         doThrow(new RuntimeException()).when(eventsService).updateEvent(event);
 

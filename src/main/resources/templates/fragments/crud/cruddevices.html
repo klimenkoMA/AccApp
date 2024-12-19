@@ -24,6 +24,28 @@
                         <label>
                             <input type="text" name="inventory" align="middle" placeholder="Инвентарный номер"/>
                         </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="room"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Кабинет</option>
+                                <option th:each="element : ${roomList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.number}"></option>
+                            </select>
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="employee"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Использует</option>
+                                <option th:each="element : ${employeeList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.fio}"></option>
+                            </select>
+                        </label>
                     </div>
                     <div align="center">
                         <button class="button" type="submit">Добавить</button>
@@ -51,6 +73,28 @@
                         </label>
                         <label>
                             <input type="text" name="inventory" align="middle" placeholder="Инвентарный номер"/>
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="room"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Кабинет</option>
+                                <option th:each="element : ${roomList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.number}"></option>
+                            </select>
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="employee"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Использует</option>
+                                <option th:each="element : ${employeeList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.fio}"></option>
+                            </select>
                         </label>
                     </div>
                     <div align="center">

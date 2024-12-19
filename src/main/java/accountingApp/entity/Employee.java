@@ -13,23 +13,20 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-
     @Column(name = "fio")
     private String fio;
-
     @Column(name = "dborn")
     private String dborn;
-
     @ManyToOne
     @JoinColumn(name = "workarea")
     private WorkArea workarea;
-
     @ManyToOne
     @JoinColumn(name = "room")
     private Room room;
-
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Devices> devices;
 
     public Employee() {
     }

@@ -63,7 +63,7 @@ public class RoomController {
             } else {
                 List<WorkArea> workAreas = workAreaService
                         .getWorkAreaByName(workAreaIdWithoutSpaces);
-                Room room = new Room(numberWithoutSpaces, workAreas.get(0), description);
+                Room room = new Room(numberWithoutSpaces, workAreas.get(0), descriptionWithoutSpaces);
                 roomService.addNewRoom(room);
             }
             return getRoom(model);
