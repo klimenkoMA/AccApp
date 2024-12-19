@@ -30,8 +30,10 @@ class WorkAreaControllerTest {
     private Checker checker;
 
     private final List<WorkArea> workAreaList;
+    private String description;
 
     {
+        description = "description";
         WorkArea w1 = new WorkArea();
         WorkArea w2 = new WorkArea();
         WorkArea w3 = new WorkArea();
@@ -64,7 +66,7 @@ class WorkAreaControllerTest {
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.addWorkArea(nameWA, model);
+        String viewName = workAreaController.addWorkArea(nameWA, description, model);
 
         Assertions.assertEquals("workarea", viewName);
 
@@ -76,13 +78,13 @@ class WorkAreaControllerTest {
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.addWorkArea(nameWA, model);
+        String viewName = workAreaController.addWorkArea(nameWA, description, model);
 
         Assertions.assertEquals("workarea", viewName);
 
         verify(model, times(1)).addAttribute("workAreaList", workAreaList);
 
-        verify(workAreaService, never()).addNewWorkArea(new WorkArea(nameWA));
+        verify(workAreaService, never()).addNewWorkArea(new WorkArea(nameWA, description));
     }
 
     @Test
@@ -152,7 +154,8 @@ class WorkAreaControllerTest {
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.updateWorkArea(id, workAreaTitle, model);
+        String viewName = workAreaController.updateWorkArea(id, workAreaTitle
+                , description, model);
 
         Assertions.assertEquals("workarea", viewName);
 
@@ -167,11 +170,12 @@ class WorkAreaControllerTest {
         String workAreaTitle = "GTU";
         int idCheck = Integer.parseInt(id);
 
-        WorkArea workArea = new WorkArea(idCheck, workAreaTitle);
+        WorkArea workArea = new WorkArea(idCheck, workAreaTitle, description);
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 
-        String viewName = workAreaController.updateWorkArea(id, workAreaTitle, model);
+        String viewName = workAreaController.updateWorkArea(id, workAreaTitle
+                , description, model);
 
         Assertions.assertEquals("workarea", viewName);
 
@@ -185,7 +189,7 @@ class WorkAreaControllerTest {
         String id = "15";
         String workAreaTitle = "GTU";
 
-        WorkArea workArea = new WorkArea(id);
+        WorkArea workArea = new WorkArea(id, description);
 
         Mockito.when(workAreaService.findAllWorkArea()).thenReturn(workAreaList);
 

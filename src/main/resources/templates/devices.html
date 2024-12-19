@@ -28,15 +28,15 @@
             <table class="row" style=" justify-content: center;
                   align-content: center; height: 3rem; table-layout: fixed">
 
-                <tr class="text-light fs-5" style="background-color: #62a0f6">
+                <tr class="text-light fs-6" style="background-color: #62a0f6">
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 15rem">
+                        ; width: 5rem">
                         ID
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 20rem">
+                        ; width: 18.5rem">
                         Название оборудования
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
@@ -49,6 +49,16 @@
                         ; width: 15rem">
                         Инвентарный номер
                     </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                        ; width: 5rem">
+                        Кабинет
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                        ; width: 7.5rem">
+                        Использует
+                    </th>
                 </tr>
             </table>
 
@@ -58,11 +68,11 @@
                         <div class="col">
                             <tr style="align-self: center">
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 15rem">
+                                    style="width: 5rem">
                                     <div>[[${element.id}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 20rem">
+                                    style="width: 17.5rem">
                                     <div>[[${element.name}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
@@ -72,6 +82,14 @@
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 15rem">
                                     <div>[[${element.inventory}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 5rem">
+                                    <div>[[${element.room}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 7.5rem">
+                                    <div>[[${element.employee}]]</div>
                                 </td>
                             </tr>
                         </div>

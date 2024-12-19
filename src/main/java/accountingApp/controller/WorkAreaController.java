@@ -33,22 +33,26 @@ public class WorkAreaController {
 
     @PostMapping("/addworkarea")
     public String addWorkArea(@RequestParam String name,
+                              @RequestParam String description,
                               Model model) {
 
         if (checker.checkAttribute(name)
+                || checker.checkAttribute(description)
         ) {
             logger.warn("*** WorkAreaController.addWorkArea():  Attribute has a null value! ***");
             return getWorkArea(model);
         }
 
         String nameWithoutSpaces = name.trim();
-        if (checker.checkAttribute(nameWithoutSpaces)) {
+        String descriptionWithoutSpaces = description.trim();
+        if (checker.checkAttribute(nameWithoutSpaces)
+        || checker.checkAttribute(descriptionWithoutSpaces)) {
             logger.warn("*** WorkAreaController.addWorkArea(): EMPTY NAME ***");
             return getWorkArea(model);
         }
 
         try {
-            WorkArea workArea = new WorkArea(nameWithoutSpaces);
+            WorkArea workArea = new WorkArea(nameWithoutSpaces, descriptionWithoutSpaces);
             workAreaService.addNewWorkArea(workArea);
 
             return getWorkArea(model);
@@ -89,10 +93,12 @@ public class WorkAreaController {
     @PostMapping("/updateworkarea")
     public String updateWorkArea(@RequestParam String id,
                                  @RequestParam String name,
+                                 @RequestParam String description,
                                  Model model) {
 
         if (checker.checkAttribute(id)
                 || checker.checkAttribute(name)
+                || checker.checkAttribute(description)
         ) {
             logger.warn("*** WorkAreaController.updateWorkArea():  Attribute has a null value! ***");
             return getWorkArea(model);
@@ -100,6 +106,7 @@ public class WorkAreaController {
 
         String nameWithoutSpaces = name.trim();
         String idWithoutSpaces = id.trim();
+        String descriptionWithoutSpaces = description.trim();
 
         try {
             int idCheck = Integer.parseInt(idWithoutSpaces);
@@ -107,11 +114,12 @@ public class WorkAreaController {
                 logger.warn("*** WorkAreaController.updateWorkArea(): ID is SUBZERO***");
                 return getWorkArea(model);
             } else {
-                if (checker.checkAttribute(nameWithoutSpaces)) {
+                if (checker.checkAttribute(nameWithoutSpaces)
+                || checker.checkAttribute(descriptionWithoutSpaces)) {
                     logger.warn("*** WorkAreaController.updateWorkArea(): NAME is EMPTY ***");
                     return getWorkArea(model);
                 }
-                WorkArea workArea = new WorkArea(idCheck, nameWithoutSpaces);
+                WorkArea workArea = new WorkArea(idCheck, nameWithoutSpaces, descriptionWithoutSpaces);
                 workAreaService.updateWorkArea(workArea);
             }
             return getWorkArea(model);

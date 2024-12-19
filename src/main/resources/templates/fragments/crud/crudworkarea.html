@@ -19,6 +19,9 @@
                         <label>
                             <input type="text" name="name" placeholder="Название филиала">
                         </label>
+                        <label>
+                            <input type="text" name="description" placeholder="Описание филиала">
+                        </label>
                     </div>
                     <button class="button" type="submit">Добавить</button>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
@@ -40,6 +43,9 @@
                         </label>
                         <label>
                             <input type="text" name="name" placeholder="Название филиала">
+                        </label>
+                        <label>
+                            <input type="text" name="description" placeholder="Описание филиала">
                         </label>
                     </div>
                     <button class="button" type="submit">Обновить</button>

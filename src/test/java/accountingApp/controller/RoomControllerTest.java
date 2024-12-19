@@ -77,7 +77,7 @@ class RoomControllerTest {
         String number = "3";
         String workAreaId = "1";
 
-        WorkArea workArea = new WorkArea(workAreaId);
+        WorkArea workArea = new WorkArea(workAreaId, description);
 
         Mockito.when(roomService.findAllRoom()).thenReturn(roomList);
 
@@ -96,8 +96,8 @@ class RoomControllerTest {
         String number = "-15";
         String workAreaId = "-1";
         String numberWithoutSpaces = number.trim();
-        WorkArea workArea = new WorkArea(workAreaId);
         description = " ";
+        WorkArea workArea = new WorkArea(workAreaId, description);
 
         String viewName = roomController.addRoom(numberWithoutSpaces,workArea
                 , description, model);
@@ -115,7 +115,7 @@ class RoomControllerTest {
         String number = "15";
         String workAreaId = "1";
         String numberWithoutSpaces = number.trim();
-        WorkArea workArea = new WorkArea(workAreaId);
+        WorkArea workArea = new WorkArea(workAreaId, description);
 
         String viewName = roomController.addRoom(numberWithoutSpaces, workArea
                 , description, model);
@@ -179,7 +179,7 @@ class RoomControllerTest {
         String idWithoutSpaces = id.trim();
 
         String viewName = roomController
-                .updateRoom(idWithoutSpaces, numberWithoutSpaces, new WorkArea(workAreaId)
+                .updateRoom(idWithoutSpaces, numberWithoutSpaces, new WorkArea(workAreaId, description)
                         , description, model);
 
         Assertions.assertEquals("room", viewName);
@@ -196,7 +196,7 @@ class RoomControllerTest {
         description = " ";
 
         String viewName = roomController
-                .updateRoom(idWithoutSpaces, numberWithoutSpaces,new WorkArea(workAreaId)
+                .updateRoom(idWithoutSpaces, numberWithoutSpaces,new WorkArea(workAreaId, description)
                         , description, model);
 
         Assertions.assertEquals("room", viewName);

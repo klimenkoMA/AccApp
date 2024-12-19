@@ -1,12 +1,15 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Devices;
+import accountingApp.entity.Employee;
+import accountingApp.entity.Room;
 import accountingApp.service.DevicesService;
+import accountingApp.service.EmployeeService;
+import accountingApp.service.RoomService;
 import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,15 +30,22 @@ public class DevicesController {
     final Logger logger = LoggerFactory.getLogger(DevicesController.class);
 
     @Autowired
-    DevicesService devicesService;
-
+    private DevicesService devicesService;
     @Autowired
-    Checker checker;
+    private RoomService roomService;
+    @Autowired
+    private EmployeeService employeeService;
+    @Autowired
+    private Checker checker;
 
     @GetMapping("/devices")
     public String getDevices(Model model) {
         List<Devices> devicesList = devicesService.findAllDevices();
+        List<Room> roomList = roomService.findAllRoom();
+        List<Employee> employeeList = employeeService.getListEmployee();
         model.addAttribute("devicesList", devicesList);
+        model.addAttribute("roomList", roomList);
+        model.addAttribute("employeeList", employeeList);
         return "devices";
     }
 
@@ -43,11 +53,15 @@ public class DevicesController {
     public String addDevice(@RequestParam String name,
                             @RequestParam String description,
                             @RequestParam String inventory,
+                            @RequestParam(required = false) Room room,
+                            @RequestParam(required = false) Employee employee,
                             Model model) {
 
         if (checker.checkAttribute(name)
                 || checker.checkAttribute(description)
                 || checker.checkAttribute(inventory)
+                || room == null
+                || employee == null
         ) {
             logger.warn("*** DevicesController.addDevice():" +
                     "  Attribute has a null value! ***");
@@ -64,7 +78,11 @@ public class DevicesController {
                     && !checker.checkAttribute(descriptionWithoutSpaces)
                     && !checker.checkAttribute(inventoryWithoutSpaces)
             ) {
-                Devices devices = new Devices(nameWithoutSpaces, descriptionWithoutSpaces, inventoryCheck);
+                Devices devices = new Devices(nameWithoutSpaces
+                        , descriptionWithoutSpaces
+                        , inventoryCheck
+                        , room
+                        , employee);
                 devicesService.addNewDevice(devices);
                 return getDevices(model);
             }
@@ -93,6 +111,13 @@ public class DevicesController {
                 logger.warn("*** DevicesController.deleteDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
             }
+
+            List<Devices> devices = devicesService.getDevicesById(idCheck);
+            Devices device = devices.get(0);
+            device.setEmployee(new Employee());
+            device.setRoom(new Room());
+            devicesService.updateDevice(device);
+
             devicesService.deleteDeviceById(idCheck);
             return getDevices(model);
         } catch (Exception e) {
@@ -107,12 +132,16 @@ public class DevicesController {
                                @RequestParam String name,
                                @RequestParam String description,
                                @RequestParam String inventory,
+                               @RequestParam(required = false) Room room,
+                               @RequestParam(required = false) Employee employee,
                                Model model) {
 
         if (checker.checkAttribute(id)
                 || checker.checkAttribute(name)
                 || checker.checkAttribute(description)
                 || checker.checkAttribute(inventory)
+                || room == null
+                || employee == null
         ) {
             logger.warn("*** DevicesController.updateDevice():" +
                     "  Attribute has a null value! ***");
@@ -125,17 +154,23 @@ public class DevicesController {
             String inventoryWithoutSpaces = inventory.trim();
             int idCheck = Integer.parseInt(id);
             long inventoryCheck = Long.parseLong(inventoryWithoutSpaces);
+
             if (idCheck <= 0 || checker.checkAttribute(idCheck + "")
                     || inventoryCheck <= 0 || checker.checkAttribute(inventoryCheck + "")
             ) {
                 logger.warn("*** DevicesController.updateDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
             }
+
             if (!checker.checkAttribute(nameWithoutSpaces)
                     && !checker.checkAttribute(descriptionWithoutSpaces)
             ) {
-                Devices devices = new Devices(idCheck, nameWithoutSpaces
-                        , descriptionWithoutSpaces, inventoryCheck);
+                Devices devices = new Devices(idCheck
+                        , nameWithoutSpaces
+                        , descriptionWithoutSpaces
+                        , inventoryCheck
+                        , room
+                        , employee);
                 devicesService.updateDevice(devices);
                 return getDevices(model);
             }
