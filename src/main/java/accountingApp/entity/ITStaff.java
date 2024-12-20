@@ -15,12 +15,12 @@ public class ITStaff {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-
     @Column(name = "name")
     private String name;
-
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Devices> devices;
 
     public ITStaff() {
     }

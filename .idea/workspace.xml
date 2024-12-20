@@ -5,41 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-18.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-19.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-12.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/DeviceCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/DeviceCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/WorkArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/WorkArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/ITStaff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/DevicesControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EmployeeControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/EventsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RoomControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/WorkAreaControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/DeviceCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/DeviceCategory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Devices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Devices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/WorkArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/WorkArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/ITStaff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/ITStaff.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/DevicesControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EmployeeControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/EventsControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RoomControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RoomControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/WorkAreaControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -444,6 +431,19 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DevicesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -907,14 +907,7 @@
       <workItem from="1734166433606" duration="19106000" />
       <workItem from="1734283499339" duration="1308000" />
       <workItem from="1734344343179" duration="43093000" />
-      <workItem from="1734585034549" duration="398000" />
-    </task>
-    <task id="LOCAL-00397" summary="Finished changing input type from text into file in cruddoc.html">
-      <created>1730784874580</created>
-      <option name="number" value="00397" />
-      <option name="presentableId" value="LOCAL-00397" />
-      <option name="project" value="LOCAL" />
-      <updated>1730784874580</updated>
+      <workItem from="1734585034549" duration="16440000" />
     </task>
     <task id="LOCAL-00398" summary="Rebuild documents.html">
       <created>1730794989558</created>
@@ -1252,7 +1245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1734503879707</updated>
     </task>
-    <option name="localTasksCounter" value="446" />
+    <task id="LOCAL-00446" summary="Added some new fields and rebuilt controllers, tests and html pages">
+      <created>1734585538660</created>
+      <option name="number" value="00446" />
+      <option name="presentableId" value="LOCAL-00446" />
+      <option name="project" value="LOCAL" />
+      <updated>1734585538660</updated>
+    </task>
+    <option name="localTasksCounter" value="447" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1275,7 +1275,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Repaired a creating of new users v3" />
     <MESSAGE value="Repaired a creating of new users v4" />
     <MESSAGE value="Tried to repair encoding paswords" />
     <MESSAGE value="Tried to repair encoding passwords" />
@@ -1300,7 +1299,8 @@
     <MESSAGE value="Rebuilt all controllers" />
     <MESSAGE value="Added new Enum" />
     <MESSAGE value="Added new fields for some entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new fields for some entities" />
+    <MESSAGE value="Added some new fields and rebuilt controllers, tests and html pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some new fields and rebuilt controllers, tests and html pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

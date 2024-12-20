@@ -13,6 +13,8 @@ public class Devices {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
+    @Column
+    private DeviceCategory category;
     @Column(name = "name")
     private String name;
     @Column
@@ -22,30 +24,66 @@ public class Devices {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="room")
+    @JoinColumn(name = "room")
     private Room room;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="keeper")
+    @JoinColumn(name = "keeper")
     private Employee employee;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "owner")
+    private ITStaff itstaff;
 
     public Devices() {
     }
 
-    public Devices(int id, String name, String description, Long inventory, Room room, Employee employee) {
+    public Devices(int id
+            , DeviceCategory category
+            , String name
+            , String description
+            , Long inventory
+            , Room room
+            , Employee employee
+            , ITStaff itstaff) {
         this.id = id;
+        this.category = category;
         this.name = name;
         this.description = description;
         this.inventory = inventory;
         this.room = room;
         this.employee = employee;
+        this.itstaff = itstaff;
     }
 
-    public Devices(String name, String description, Long inventory, Room room, Employee employee) {
+    public Devices(DeviceCategory category
+            , String name
+            , String description
+            , Long inventory
+            , Room room
+            , Employee employee
+            , ITStaff itstaff) {
+        this.category = category;
         this.name = name;
         this.description = description;
         this.inventory = inventory;
         this.room = room;
         this.employee = employee;
+        this.itstaff = itstaff;
+    }
+
+    public DeviceCategory getCategory() {
+        return category;
+    }
+
+    public void setCategory(DeviceCategory category) {
+        this.category = category;
+    }
+
+    public ITStaff getItstaff() {
+        return itstaff;
+    }
+
+    public void setItstaff(ITStaff itStaff) {
+        this.itstaff = itStaff;
     }
 
     public Employee getEmployee() {

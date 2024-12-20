@@ -15,6 +15,17 @@
                 <label class="popup_try" for="callback">Добавить</label>
                 <form class="popup_form" method="post" action="/adddevice">
                     <div align="center">
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="category"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Категория</option>
+                                <option th:each="element : ${categoryList}"
+                                        th:value="${element}"
+                                        th:text="${element}"></option>
+                            </select>
+                        </label>
                         <label>
                             <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
                         </label>
@@ -40,10 +51,21 @@
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Использует</option>
+                                <option value="0">Взял</option>
                                 <option th:each="element : ${employeeList}"
                                         th:value="${element.id}"
                                         th:text="${element.fio}"></option>
+                            </select>
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="itstaff"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">МОЛ</option>
+                                <option th:each="element : ${itStaffList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
                             </select>
                         </label>
                     </div>
@@ -64,6 +86,17 @@
                     <div align="center">
                         <label>
                             <input type="text" name="id" align="middle" placeholder="ID оборудования">
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="category"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">Категория</option>
+                                <option th:each="element : ${categoryList}"
+                                        th:value="${element}"
+                                        th:text="${element}"></option>
+                            </select>
                         </label>
                         <label>
                             <input type="text" name="name" align="middle" placeholder="Название оборудования">
@@ -94,6 +127,17 @@
                                 <option th:each="element : ${employeeList}"
                                         th:value="${element.id}"
                                         th:text="${element.fio}"></option>
+                            </select>
+                        </label>
+                        <label class="d-flex justify-content-center align-items-center">
+                            <select class="form-select m-2" name="itstaff"
+                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                                <option value="0">МОЛ</option>
+                                <option th:each="element : ${itStaffList}"
+                                        th:value="${element.id}"
+                                        th:text="${element.name}"></option>
                             </select>
                         </label>
                     </div>

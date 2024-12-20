@@ -36,28 +36,38 @@
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 18.5rem">
+                        ; width: 5rem">
+                        Тип
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                        ; width: 16rem">
                         Название оборудования
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 30rem">
+                        ; width: 25rem">
                         Описание оборудования
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 15rem">
-                        Инвентарный номер
+                        ; width: 10rem">
+                        Инвент.номер
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                         ; width: 5rem">
-                        Кабинет
+                        Каб.
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 7.5rem">
-                        Использует
+                        ; width: 7rem">
+                        Взял
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                        ; width: 7rem">
+                        МОЛ
                     </th>
                 </tr>
             </table>
@@ -72,15 +82,19 @@
                                     <div>[[${element.id}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 17.5rem">
+                                    style="width: 5rem">
+                                    <div>[[${element.category}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 16rem">
                                     <div>[[${element.name}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 30rem">
+                                    style="width: 25rem">
                                     <div>[[${element.description}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 15rem">
+                                    style="width: 10rem">
                                     <div>[[${element.inventory}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
@@ -88,8 +102,12 @@
                                     <div>[[${element.room}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 7.5rem">
+                                    style="width: 7rem">
                                     <div>[[${element.employee}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 7rem">
+                                    <div>[[${element.itstaff}]]</div>
                                 </td>
                             </tr>
                         </div>
