@@ -1,10 +1,9 @@
 package accountingApp.controller;
 
-import accountingApp.entity.Devices;
-import accountingApp.entity.Employee;
-import accountingApp.entity.Room;
+import accountingApp.entity.*;
 import accountingApp.service.DevicesService;
 import accountingApp.service.EmployeeService;
+import accountingApp.service.ITStaffService;
 import accountingApp.service.RoomService;
 import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,6 +36,8 @@ public class DevicesController {
     @Autowired
     private EmployeeService employeeService;
     @Autowired
+    private ITStaffService itStaffService;
+    @Autowired
     private Checker checker;
 
     @GetMapping("/devices")
@@ -43,46 +45,76 @@ public class DevicesController {
         List<Devices> devicesList = devicesService.findAllDevices();
         List<Room> roomList = roomService.findAllRoom();
         List<Employee> employeeList = employeeService.getListEmployee();
+        List<ITStaff> itStaffList = itStaffService.getAllItStaff();
+
+        DeviceCategory[] categoriesArray = DeviceCategory.values();
+        List<String> categoryList = new ArrayList<>();
+
+        for (DeviceCategory cat : categoriesArray
+        ) {
+            categoryList.add(cat.getCategory());
+        }
+
         model.addAttribute("devicesList", devicesList);
         model.addAttribute("roomList", roomList);
         model.addAttribute("employeeList", employeeList);
+        model.addAttribute("itStaffList", itStaffList);
+        model.addAttribute("categoryList", categoryList);
         return "devices";
     }
 
     @PostMapping("/adddevice")
-    public String addDevice(@RequestParam String name,
+    public String addDevice(@RequestParam(required = false) String category,
+                            @RequestParam String name,
                             @RequestParam String description,
                             @RequestParam String inventory,
                             @RequestParam(required = false) Room room,
                             @RequestParam(required = false) Employee employee,
+                            @RequestParam(required = false) ITStaff itstaff,
                             Model model) {
 
-        if (checker.checkAttribute(name)
+        if (checker.checkAttribute(category)
+                || checker.checkAttribute(name)
                 || checker.checkAttribute(description)
                 || checker.checkAttribute(inventory)
                 || room == null
                 || employee == null
+                || itstaff == null
         ) {
             logger.warn("*** DevicesController.addDevice():" +
                     "  Attribute has a null value! ***");
             return getDevices(model);
         }
 
+        String categoryWithoutSpaces = category.trim();
         String nameWithoutSpaces = name.trim();
         String descriptionWithoutSpaces = description.trim();
         String inventoryWithoutSpaces = inventory.trim();
 
         try {
             long inventoryCheck = Long.parseLong(inventoryWithoutSpaces);
-            if (!checker.checkAttribute(nameWithoutSpaces)
+            if (!checker.checkAttribute(categoryWithoutSpaces)
+                    && !checker.checkAttribute(nameWithoutSpaces)
                     && !checker.checkAttribute(descriptionWithoutSpaces)
                     && !checker.checkAttribute(inventoryWithoutSpaces)
             ) {
-                Devices devices = new Devices(nameWithoutSpaces
+                DeviceCategory deviceCategory = DeviceCategory.Стационарный_компьютер;
+                DeviceCategory[] categoriesArray = DeviceCategory.values();
+                for (DeviceCategory cat : categoriesArray
+                ) {
+                    if (cat.getCategory().equals(categoryWithoutSpaces)) {
+                        deviceCategory = cat;
+                        break;
+                    }
+                }
+
+                Devices devices = new Devices(deviceCategory
+                        , nameWithoutSpaces
                         , descriptionWithoutSpaces
                         , inventoryCheck
                         , room
-                        , employee);
+                        , employee
+                        , itstaff);
                 devicesService.addNewDevice(devices);
                 return getDevices(model);
             }
@@ -114,8 +146,10 @@ public class DevicesController {
 
             List<Devices> devices = devicesService.getDevicesById(idCheck);
             Devices device = devices.get(0);
-            device.setEmployee(new Employee());
-            device.setRoom(new Room());
+            device.setEmployee(null);
+            device.setRoom(null);
+            device.setItstaff(null);
+            device.setEvents(null);
             devicesService.updateDevice(device);
 
             devicesService.deleteDeviceById(idCheck);
@@ -128,20 +162,24 @@ public class DevicesController {
     }
 
     @PostMapping("/updatedevice")
-    public String updateDevice(@RequestParam String id,
+    public String updateDevice(@RequestParam(required = false) String category,
+                               @RequestParam String id,
                                @RequestParam String name,
                                @RequestParam String description,
                                @RequestParam String inventory,
                                @RequestParam(required = false) Room room,
                                @RequestParam(required = false) Employee employee,
+                               @RequestParam(required = false) ITStaff itstaff,
                                Model model) {
 
-        if (checker.checkAttribute(id)
+        if (checker.checkAttribute(category)
+                || checker.checkAttribute(id)
                 || checker.checkAttribute(name)
                 || checker.checkAttribute(description)
                 || checker.checkAttribute(inventory)
                 || room == null
                 || employee == null
+                || itstaff == null
         ) {
             logger.warn("*** DevicesController.updateDevice():" +
                     "  Attribute has a null value! ***");
@@ -149,28 +187,44 @@ public class DevicesController {
         }
 
         try {
+            String categoryWithoutSpaces = category.trim();
             String nameWithoutSpaces = name.trim();
             String descriptionWithoutSpaces = description.trim();
             String inventoryWithoutSpaces = inventory.trim();
             int idCheck = Integer.parseInt(id);
             long inventoryCheck = Long.parseLong(inventoryWithoutSpaces);
 
-            if (idCheck <= 0 || checker.checkAttribute(idCheck + "")
-                    || inventoryCheck <= 0 || checker.checkAttribute(inventoryCheck + "")
+            if (idCheck <= 0
+                    || checker.checkAttribute(idCheck + "")
+                    || inventoryCheck <= 0
+                    || checker.checkAttribute(inventoryCheck + "")
             ) {
                 logger.warn("*** DevicesController.updateDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
             }
 
-            if (!checker.checkAttribute(nameWithoutSpaces)
+            if (!checker.checkAttribute(categoryWithoutSpaces)
+                    && !checker.checkAttribute(nameWithoutSpaces)
                     && !checker.checkAttribute(descriptionWithoutSpaces)
             ) {
+                DeviceCategory deviceCategory = DeviceCategory.Стационарный_компьютер;
+                DeviceCategory[] categoriesArray = DeviceCategory.values();
+                for (DeviceCategory cat : categoriesArray
+                ) {
+                    if (cat.getCategory().equals(categoryWithoutSpaces)) {
+                        deviceCategory = cat;
+                        break;
+                    }
+                }
+
                 Devices devices = new Devices(idCheck
+                        , deviceCategory
                         , nameWithoutSpaces
                         , descriptionWithoutSpaces
                         , inventoryCheck
                         , room
-                        , employee);
+                        , employee
+                        , itstaff);
                 devicesService.updateDevice(devices);
                 return getDevices(model);
             }

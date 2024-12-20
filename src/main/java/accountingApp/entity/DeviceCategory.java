@@ -2,12 +2,12 @@ package accountingApp.entity;
 
 public enum DeviceCategory {
 
-    MONITOR,
-    PRINTER,
-    SPEAKERS,
-    PROJECTOR,
-    NOTEBOOK,
-    DESKTOP,
+    Монитор,
+    Принтер,
+    Колонки,
+    Проектор,
+    Ноутбук,
+    Стационарный_компьютер,
     ;
 
     public String getCategory() {
