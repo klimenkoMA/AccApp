@@ -2,13 +2,13 @@ package accountingApp.entity;
 
 public enum Profession {
 
-    TEACHER,
-    PROGRAMMER,
-    IT_MANAGER,
-    DIRECTOR,
-    ACCOUNTANT,
-    CHIEF_OF_SECURITY,
-    HR,
+    Преподаватель,
+    Программист,
+    РуководительIT,
+    Директор,
+    Бухгалтер,
+    ИнженерТБ,
+    Кадровик,
     ;
 
     public String getProfession() {

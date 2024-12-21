@@ -47,19 +47,35 @@ class EventsControllerTest {
     private Employee employee;
     private ITStaff itstaff;
     DeviceCategory category;
+    Profession profession;
 
     {
-        category = DeviceCategory.Стационарный_компьютер;
+        category = DeviceCategory.Компьютер;
+        profession = Profession.Преподаватель;
         description = "Description";
         inventory = 111111L;
         room = new Room();
         employee = new Employee();
         itstaff = new ITStaff();
-        Employee emp1 = new Employee(1, "08061974", "Сатурнов"
-                , new WorkArea("ПТЦ", description), new Room("111", new WorkArea(), description));
-        Employee emp2 = new Employee(2, "17111984", "Букина"
-                , new WorkArea("ФГУ", description), new Room("205", new WorkArea(), description));
-        Employee emp3 = new Employee(3, "22011994", "Загаев"
+        Employee emp1 = new Employee(1
+                , "Сатурнов"
+                , "08061974"
+                , profession
+                , new WorkArea("ПТЦ"
+                , description)
+                , new Room("111", new WorkArea()
+                , description));
+        Employee emp2 = new Employee(2
+                , "Букина"
+                , "17111984"
+                , profession
+                , new WorkArea("ФГУ", description)
+                , new Room("205", new WorkArea()
+                , description));
+        Employee emp3 = new Employee(3
+                , "Загаев"
+                , "22011994"
+                , profession
                 , new WorkArea("МГУ", description), new Room("15", new WorkArea(), description));
 
         ITStaff it1 = new ITStaff(1, "Клименко");
@@ -153,8 +169,9 @@ class EventsControllerTest {
                         , employee
                         , itstaff)
                 , new Employee(1
-                        , employeeidWithoutSpaces
                         , "Сатурнов"
+                        , employeeidWithoutSpaces
+                        , profession
                         , new WorkArea(workareaWithoutSpaces, description)
                         , new Room("111"
                         , new WorkArea("BGU", description)
@@ -185,7 +202,10 @@ class EventsControllerTest {
                 , room
                 , employee
                 , itstaff),
-                new Employee(" ", " ", new WorkArea(" ", " ")
+                new Employee(" "
+                        , " "
+                        , profession
+                        , new WorkArea(" ", " ")
                         , new Room(" ", new WorkArea(), description)), new ITStaff(" "),
                 new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
@@ -199,7 +219,10 @@ class EventsControllerTest {
                         , room
                         , employee
                         , itstaff)
-                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
+                , new Employee(1
+                        , "Сатурнов"
+                        , employeeidWithoutSpaces
+                        , profession
                         , new WorkArea(workareaWithoutSpaces, description),
                         new Room("111", new WorkArea("BGU", description)
                                 , description))
@@ -275,7 +298,10 @@ class EventsControllerTest {
                 , room
                 , employee
                 , itstaff),
-                new Employee("1", "2", new WorkArea("3", description)
+                new Employee("1"
+                        , "2"
+                        , profession
+                        , new WorkArea("3", description)
                         , new Room("1", new WorkArea(), description)), new ITStaff("trrr"),
                 new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
@@ -292,7 +318,10 @@ class EventsControllerTest {
                         , room
                         , employee
                         , itstaff)
-                , new Employee(1, employeeidWithoutSpaces, "Сатурнов"
+                , new Employee(1
+                        , "Сатурнов"
+                        , employeeidWithoutSpaces
+                        , profession
                         , new WorkArea(workareaWithoutSpaces, description)
                         , new Room("111", new WorkArea("BGU", description)
                         , description))
@@ -325,7 +354,10 @@ class EventsControllerTest {
                 , room
                 , employee
                 , itstaff),
-                new Employee(" ", " ", new WorkArea(" ", " ")
+                new Employee(" "
+                        , " "
+                        , profession
+                        , new WorkArea(" ", " ")
                         , new Room(" ", new WorkArea(), description)), new ITStaff(" "),
                 new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
@@ -343,8 +375,9 @@ class EventsControllerTest {
                         , employee
                         , itstaff)
                 , new Employee(1
-                        , employeeidWithoutSpaces
                         , "Сатурнов"
+                        , employeeidWithoutSpaces
+                        , profession
                         , new WorkArea(workareaWithoutSpaces
                         , description)
                         , new Room("111"
@@ -367,7 +400,6 @@ class EventsControllerTest {
         String eventsId = "1";
         String dateWithoutSpaces = "12334455";
         String deviceWithoutSpaces = "ertert ";
-        String employeeidWithoutSpaces = "ytyt ";
         String itstaffidWithoutSpaces = "yuuyu ";
         String workareaWithoutSpaces = "GTU";
         String commentWithoutSpaces = "Взял на курс лекций";
@@ -381,8 +413,10 @@ class EventsControllerTest {
                 , room
                 , employee
                 , itstaff),
-                new Employee(employeeidWithoutSpaces
+                new Employee(idCheck
+                        , "dfd"
                         , "fdf "
+                        , profession
                         , new WorkArea("12 ", description)
                         , new Room("32"
                         , new WorkArea(), description)),
