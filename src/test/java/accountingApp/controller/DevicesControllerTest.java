@@ -53,7 +53,7 @@ class DevicesControllerTest {
 
     {
         // Arrange: Подготовка данных для теста
-        category = DeviceCategory.Стационарный_компьютер;
+        category = DeviceCategory.Компьютер;
         deviceName = "Hiper";
         deviceId = "1";
         description = "Нет-топ для сотрудников IT-отдела";

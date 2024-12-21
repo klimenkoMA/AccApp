@@ -40,6 +40,14 @@ public class Room {
         this.description = description;
     }
 
+    public List<Devices> getDevices() {
+        return devices;
+    }
+
+    public void setDevices(List<Devices> devices) {
+        this.devices = devices;
+    }
+
     public String getDescription() {
         return description;
     }

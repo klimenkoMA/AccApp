@@ -34,6 +34,14 @@ public class ITStaff {
         this.name = name;
     }
 
+    public List<Devices> getDevices() {
+        return devices;
+    }
+
+    public void setDevices(List<Devices> devices) {
+        this.devices = devices;
+    }
+
     public List<Events> getEvents() {
         return events;
     }

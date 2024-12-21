@@ -98,7 +98,7 @@ public class DevicesController {
                     && !checker.checkAttribute(descriptionWithoutSpaces)
                     && !checker.checkAttribute(inventoryWithoutSpaces)
             ) {
-                DeviceCategory deviceCategory = DeviceCategory.Стационарный_компьютер;
+                DeviceCategory deviceCategory = DeviceCategory.Компьютер;
                 DeviceCategory[] categoriesArray = DeviceCategory.values();
                 for (DeviceCategory cat : categoriesArray
                 ) {
@@ -207,7 +207,7 @@ public class DevicesController {
                     && !checker.checkAttribute(nameWithoutSpaces)
                     && !checker.checkAttribute(descriptionWithoutSpaces)
             ) {
-                DeviceCategory deviceCategory = DeviceCategory.Стационарный_компьютер;
+                DeviceCategory deviceCategory = DeviceCategory.Компьютер;
                 DeviceCategory[] categoriesArray = DeviceCategory.values();
                 for (DeviceCategory cat : categoriesArray
                 ) {

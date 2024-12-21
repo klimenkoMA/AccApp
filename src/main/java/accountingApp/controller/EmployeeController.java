@@ -1,6 +1,7 @@
 package accountingApp.controller;
 
 import accountingApp.entity.Employee;
+import accountingApp.entity.Profession;
 import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
 import accountingApp.service.RoomService;
@@ -16,6 +17,7 @@ import accountingApp.service.EmployeeService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -37,21 +39,33 @@ public class EmployeeController {
         List<Employee> employeeList = employeeService.getListEmployee();
         List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
         List<Room> roomList = roomService.findAllRoom();
+
+        Profession[] professionsArray = Profession.values();
+        List<String> professionList = new ArrayList<>();
+
+        for (Profession prf : professionsArray
+        ) {
+            professionList.add(prf.getProfession());
+        }
+
         model.addAttribute("employeeList", employeeList);
         model.addAttribute("workAreaList", workAreaList);
         model.addAttribute("roomList", roomList);
+        model.addAttribute("professionList", professionList);
         return "employee";
     }
 
     @PostMapping("/addemployee")
     public String addEmployee(@RequestParam String fio,
                               @RequestParam String dborn,
-                              @RequestParam (required = false) WorkArea workarea,
-                              @RequestParam (required = false) Room room,
+                              @RequestParam String profession,
+                              @RequestParam(required = false) WorkArea workarea,
+                              @RequestParam(required = false) Room room,
                               Model model) {
 
         if (checker.checkAttribute(fio)
                 || checker.checkAttribute(dborn)
+                || checker.checkAttribute(profession)
                 || workarea == null
                 || room == null
         ) {
@@ -71,13 +85,23 @@ public class EmployeeController {
                     && !checker.checkAttribute(workAreaWithoutSpaces)
                     && !checker.checkAttribute(roomWithoutSpaces)
             ) {
+                Profession prof = Profession.Преподаватель;
+                Profession[] professionsArray = Profession.values();
+
+                for (Profession prf : professionsArray
+                ) {
+                    if (prf.getProfession().equals(profession)) {
+                        prof = prf;
+                        break;
+                    }
+                }
 
                 Employee employee = new Employee(fioWithoutSpaces
                         , dbornWithoutSpaces
+                        , prof
                         , workarea
                         , room);
                 employeeService.addNewEmployee(employee);
-
                 return getEmployee(model);
             }
             throw new Exception("Attribute is empty!");
@@ -116,13 +140,15 @@ public class EmployeeController {
     public String updateEmployee(@RequestParam String id,
                                  @RequestParam String fio,
                                  @RequestParam String dborn,
-                                 @RequestParam (required = false) WorkArea workarea,
-                                 @RequestParam (required = false) Room room,
+                                 @RequestParam String profession,
+                                 @RequestParam(required = false) WorkArea workarea,
+                                 @RequestParam(required = false) Room room,
                                  Model model) {
 
         if (checker.checkAttribute(id)
                 || checker.checkAttribute(fio)
                 || checker.checkAttribute(dborn)
+                || checker.checkAttribute(profession)
                 || workarea == null
                 || room == null
         ) {
@@ -158,10 +184,21 @@ public class EmployeeController {
                     && !checker.checkAttribute(workAreaWithoutSpaces)
                     && !checker.checkAttribute(roomWithoutSpaces)
             ) {
+                Profession prof = Profession.Преподаватель;
+                Profession[] professionsArray = Profession.values();
+
+                for (Profession prf : professionsArray
+                ) {
+                    if (prf.getProfession().equals(profession)) {
+                        prof = prf;
+                        break;
+                    }
+                }
 
                 Employee employee = new Employee(idCheck
                         , fioWithoutSpaces
                         , dbornWithoutSpaces
+                        , prof
                         , workarea
                         , room);
 

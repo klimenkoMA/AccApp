@@ -17,6 +17,8 @@ public class Employee {
     private String fio;
     @Column(name = "dborn")
     private String dborn;
+    @Column
+    private Profession profession;
     @ManyToOne
     @JoinColumn(name = "workarea")
     private WorkArea workarea;
@@ -31,19 +33,46 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int id, String fio, String dborn, WorkArea workarea, Room room) {
+    public Employee(int id
+            , String fio
+            , String dborn
+            , Profession profession
+            , WorkArea workarea
+            , Room room) {
         this.id = id;
         this.fio = fio;
         this.dborn = dborn;
+        this.profession = profession;
         this.workarea = workarea;
         this.room = room;
     }
 
-    public Employee(String fio, String dborn, WorkArea workarea, Room room) {
+    public Employee(String fio
+            , String dborn
+            , Profession profession
+            , WorkArea workarea
+            , Room room) {
         this.fio = fio;
         this.dborn = dborn;
+        this.profession = profession;
         this.workarea = workarea;
         this.room = room;
+    }
+
+    public List<Devices> getDevices() {
+        return devices;
+    }
+
+    public Profession getProfession() {
+        return profession;
+    }
+
+    public void setProfession(Profession profession) {
+        this.profession = profession;
+    }
+
+    public void setDevices(List<Devices> devices) {
+        this.devices = devices;
     }
 
     public List<Events> getEvents() {

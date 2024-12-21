@@ -7,7 +7,7 @@ public enum DeviceCategory {
     Колонки,
     Проектор,
     Ноутбук,
-    Стационарный_компьютер,
+    Компьютер,
     ;
 
     public String getCategory() {
