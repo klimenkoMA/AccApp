@@ -1,6 +1,7 @@
 package accountingApp.controller;
 
 import accountingApp.entity.ITStaff;
+import accountingApp.entity.Profession;
 import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import accountingApp.service.ITStaffService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -27,14 +29,26 @@ public class ITStaffController {
     @GetMapping("/itstaff")
     public String getItStaff(Model model) {
         List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+
+        Profession[] professionsArray = Profession.values();
+        List<String> professionList = new ArrayList<>();
+
+        for (Profession prf : professionsArray
+        ) {
+            professionList.add(prf.getProfession());
+        }
+
         model.addAttribute("itStaffList", ITStaffList);
+        model.addAttribute("professionList", professionList);
         return "itstaff";
     }
 
     @PostMapping("/additstaff")
-    public String addItStaff(@RequestParam String name,
-                             Model model) {
+    public String addItStaff(@RequestParam String name
+            , @RequestParam String profession
+            , Model model) {
         if (checker.checkAttribute(name)
+                || checker.checkAttribute(profession)
         ) {
             logger.warn("*** ITStaffController.addItStaff():  Attribute has a null value! ***");
             return getItStaff(model);
@@ -49,7 +63,18 @@ public class ITStaffController {
                 logger.warn("*** ITStaffController.addItStaff(): NAME MATCHES FIGURES ***");
                 return getItStaff(model);
             } else {
-                ITStaff ITStaff = new ITStaff(nameWithoutSpaces);
+                Profession prof = Profession.Преподаватель;
+                Profession[] professionsArray = Profession.values();
+
+                for (Profession prf : professionsArray
+                ) {
+                    if (prf.getProfession().equals(profession)) {
+                        prof = prf;
+                        break;
+                    }
+                }
+
+                ITStaff ITStaff = new ITStaff(nameWithoutSpaces, prof);
                 ITStaffService.addNewItStaff(ITStaff);
 
                 return getItStaff(model);
@@ -87,12 +112,14 @@ public class ITStaffController {
     }
 
     @PostMapping("/updateitstaff")
-    public String updateItStaff(@RequestParam String id,
-                                @RequestParam String name,
-                                Model model) {
+    public String updateItStaff(@RequestParam String id
+            , @RequestParam String name
+            , @RequestParam String profession
+            , Model model) {
 
         if (checker.checkAttribute(id)
                 || checker.checkAttribute(name)
+                || checker.checkAttribute(profession)
         ) {
             logger.warn("*** ITStaffController.updateItStaff():  Attribute has a null value! ***");
             return getItStaff(model);
@@ -108,7 +135,19 @@ public class ITStaffController {
             } else if (nameWithoutSpaces.matches("\\d*")) {
                 logger.warn("*** ITStaffController.updateItStaff(): NAME MATCHES FIGURES ***");
             } else {
-                ITStaff ITStaff = new ITStaff(idCheck, name);
+
+                Profession prof = Profession.Преподаватель;
+                Profession[] professionsArray = Profession.values();
+
+                for (Profession prf : professionsArray
+                ) {
+                    if (prf.getProfession().equals(profession)) {
+                        prof = prf;
+                        break;
+                    }
+                }
+
+                ITStaff ITStaff = new ITStaff(idCheck, name, prof);
                 ITStaffService.updateItStaff(ITStaff);
             }
             return getItStaff(model);

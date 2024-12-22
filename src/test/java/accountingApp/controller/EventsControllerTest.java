@@ -78,8 +78,12 @@ class EventsControllerTest {
                 , profession
                 , new WorkArea("МГУ", description), new Room("15", new WorkArea(), description));
 
-        ITStaff it1 = new ITStaff(1, "Клименко");
-        ITStaff it2 = new ITStaff(2, "Плотникова");
+        ITStaff it1 = new ITStaff(1
+                , "Клименко"
+                , profession);
+        ITStaff it2 = new ITStaff(2
+                , "Плотникова"
+                , profession);
 
         Devices dev1 = new Devices(1
                 , category
@@ -176,7 +180,7 @@ class EventsControllerTest {
                         , new Room("111"
                         , new WorkArea("BGU", description)
                         , description))
-                , new ITStaff(1, itstaffidWithoutSpaces)
+                , new ITStaff(1, itstaffidWithoutSpaces, profession)
                 , new WorkArea("BGU", description)
                 , commentWithoutSpaces, model);
 
@@ -206,7 +210,8 @@ class EventsControllerTest {
                         , " "
                         , profession
                         , new WorkArea(" ", " ")
-                        , new Room(" ", new WorkArea(), description)), new ITStaff(" "),
+                        , new Room(" ", new WorkArea(), description)), new ITStaff(" "
+                , profession),
                 new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
         Mockito.when(eventsService.findAllEvents()).thenReturn(eventsList);
@@ -226,7 +231,9 @@ class EventsControllerTest {
                         , new WorkArea(workareaWithoutSpaces, description),
                         new Room("111", new WorkArea("BGU", description)
                                 , description))
-                , new ITStaff(1, itstaffidWithoutSpaces)
+                , new ITStaff(1
+                        , itstaffidWithoutSpaces
+                        , profession)
                 , new WorkArea("BGU", description)
                 , commentWithoutSpaces, model);
 
@@ -302,7 +309,8 @@ class EventsControllerTest {
                         , "2"
                         , profession
                         , new WorkArea("3", description)
-                        , new Room("1", new WorkArea(), description)), new ITStaff("trrr"),
+                        , new Room("1", new WorkArea(), description)), new ITStaff("trrr"
+                , profession),
                 new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
@@ -325,7 +333,7 @@ class EventsControllerTest {
                         , new WorkArea(workareaWithoutSpaces, description)
                         , new Room("111", new WorkArea("BGU", description)
                         , description))
-                , new ITStaff(1, itstaffidWithoutSpaces)
+                , new ITStaff(1, itstaffidWithoutSpaces, profession)
                 , new WorkArea("BGU", description)
                 , commentWithoutSpaces, model);
 
@@ -358,7 +366,8 @@ class EventsControllerTest {
                         , " "
                         , profession
                         , new WorkArea(" ", " ")
-                        , new Room(" ", new WorkArea(), description)), new ITStaff(" "),
+                        , new Room(" ", new WorkArea(), description)), new ITStaff(" "
+        , profession),
                 new WorkArea(workareaWithoutSpaces, description), commentWithoutSpaces);
 
         List<Events> events = Collections.singletonList(event);
@@ -384,7 +393,7 @@ class EventsControllerTest {
                         , new WorkArea("BGU"
                         , description)
                         , description))
-                , new ITStaff(1, itstaffidWithoutSpaces)
+                , new ITStaff(1, itstaffidWithoutSpaces, profession)
                 , new WorkArea("BGU", description)
                 , commentWithoutSpaces, model);
 
@@ -420,7 +429,7 @@ class EventsControllerTest {
                         , new WorkArea("12 ", description)
                         , new Room("32"
                         , new WorkArea(), description)),
-                new ITStaff(itstaffidWithoutSpaces)
+                new ITStaff(itstaffidWithoutSpaces, profession)
                 , new WorkArea(workareaWithoutSpaces, description)
                 , commentWithoutSpaces);
 

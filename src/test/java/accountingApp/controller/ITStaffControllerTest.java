@@ -1,6 +1,7 @@
 package accountingApp.controller;
 
 import accountingApp.entity.ITStaff;
+import accountingApp.entity.Profession;
 import accountingApp.service.ITStaffService;
 import accountingApp.usefulmethods.Checker;
 import org.junit.jupiter.api.Assertions;
@@ -29,8 +30,10 @@ class ITStaffControllerTest {
     private Checker checker;
 
     private final List<ITStaff> itStaffList;
+    private Profession profession;
 
     {
+        profession = Profession.Преподаватель;
         ITStaff i1 = new ITStaff();
         ITStaff i2 = new ITStaff();
         ITStaff i3 = new ITStaff();
@@ -44,7 +47,6 @@ class ITStaffControllerTest {
 
     @Test
     void getItStaffShouldReturnITStaffList() {
-
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
@@ -65,7 +67,9 @@ class ITStaffControllerTest {
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
-        String viewName = itStaffController.addItStaff(itStaffFio, model);
+        String viewName = itStaffController.addItStaff(itStaffFio
+                , profession.getProfession()
+                , model);
 
         Assertions.assertEquals("itstaff", viewName);
 
@@ -78,9 +82,11 @@ class ITStaffControllerTest {
 
         String itStaffFio = "4";
 
-        ITStaff itStaff = new ITStaff(itStaffFio);
+        ITStaff itStaff = new ITStaff(itStaffFio, profession);
 
-        String viewName = itStaffController.addItStaff(itStaffFio, model);
+        String viewName = itStaffController.addItStaff(itStaffFio
+                , profession.getProfession()
+                , model);
 
         Assertions.assertEquals("itstaff", viewName);
 
@@ -95,7 +101,7 @@ class ITStaffControllerTest {
 
         String itStaffFio = "name";
 
-        ITStaff itStaff = new ITStaff(itStaffFio);
+        ITStaff itStaff = new ITStaff(itStaffFio, profession);
 
         doThrow(new RuntimeException()).when(itStaffService).addNewItStaff(any());
 
@@ -157,7 +163,10 @@ class ITStaffControllerTest {
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
-        String viewName = itStaffController.updateItStaff(itStaffId, fio, model);
+        String viewName = itStaffController.updateItStaff(itStaffId
+                , fio
+                , profession.getProfession()
+                , model);
 
         Assertions.assertEquals("itstaff", viewName);
 
@@ -173,7 +182,10 @@ class ITStaffControllerTest {
 
         Mockito.when(itStaffService.getAllItStaff()).thenReturn(itStaffList);
 
-        String viewName = itStaffController.updateItStaff(itStaffId, fio, model);
+        String viewName = itStaffController.updateItStaff(itStaffId
+                , fio
+                , profession.getProfession()
+                , model);
 
         Assertions.assertEquals("itstaff", viewName);
 

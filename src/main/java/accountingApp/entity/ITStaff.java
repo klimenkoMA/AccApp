@@ -17,6 +17,8 @@ public class ITStaff {
     private int id;
     @Column(name = "name")
     private String name;
+    @Column
+    private Profession profession;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
     @OneToMany(cascade = CascadeType.ALL)
@@ -25,13 +27,23 @@ public class ITStaff {
     public ITStaff() {
     }
 
-    public ITStaff(String name) {
+    public ITStaff(String name, Profession profession) {
         this.name = name;
+        this.profession = profession;
     }
 
-    public ITStaff(int id, String name) {
+    public ITStaff(int id, String name, Profession profession) {
         this.id = id;
         this.name = name;
+        this.profession = profession;
+    }
+
+    public Profession getProfession() {
+        return profession;
+    }
+
+    public void setProfession(Profession profession) {
+        this.profession = profession;
     }
 
     public List<Devices> getDevices() {
