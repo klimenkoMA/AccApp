@@ -19,6 +19,15 @@
                         <label>
                             <input type="text" name="name" placeholder="ФИО программиста">
                         </label>
+                        <select class="form-select m-2" name="profession"
+                                style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                            <option value="0">Профессия</option>
+                            <option th:each="element : ${professionList}"
+                                    th:value="${element}"
+                                    th:text="${element}"></option>
+                        </select>
                     </div>
                     <button class="button" type="submit">Добавить</button>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
@@ -41,6 +50,15 @@
                         <label>
                             <input type="text" name="name" placeholder="ФИО программиста">
                         </label>
+                        <select class="form-select m-2" name="profession"
+                                style="border-radius: 5px; border: 0 solid #62a0f6;
+                                   max-height: min-content; height: 30px; font-size: small;
+                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                            <option value="0">Профессия</option>
+                            <option th:each="element : ${professionList}"
+                                    th:value="${element}"
+                                    th:text="${element}"></option>
+                        </select>
                     </div>
                     <button class="button" type="submit">Обновить</button>
                     <input type="hidden" name="${_csrf.parameterName" value="${_csrf.token}">
