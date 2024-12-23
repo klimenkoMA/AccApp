@@ -89,11 +89,23 @@
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 10rem">
-                                    <div>[[${element.itstaffid}]]</div>
+                                    <form action="/finditstaffbyid" method="post">
+                                        <input type="hidden" name="id" th:value="${element.itstaffid.id}"/>
+                                        <button type="submit" class="text-decoration-none"
+                                                style="background: none;color: inherit; border: none; cursor: pointer;">
+                                            [[${element.itstaffid}]]
+                                        </button>
+                                    </form>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 10rem">
-                                    <div>[[${element.workarea}]]</div>
+                                    <form action="/findworkareabyname" method="post">
+                                        <input type="hidden" name="name" th:value="${element.workarea.id}"/>
+                                        <button type="submit" class="text-decoration-none"
+                                                style="background: none;color: inherit; border: none; cursor: pointer;">
+                                            [[${element.workarea}]]
+                                        </button>
+                                    </form>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 23rem">

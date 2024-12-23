@@ -107,7 +107,13 @@
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 7rem">
-                                    <div>[[${element.itstaff}]]</div>
+                                    <form action="/finditstaffbyid" method="post">
+                                        <input type="hidden" name="id" th:value="${element.itstaff.id}"/>
+                                        <button type="submit" class="text-decoration-none"
+                                                style="background: none;color: inherit; border: none; cursor: pointer;">
+                                            [[${element.itstaff}]]
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                         </div>
