@@ -99,18 +99,34 @@
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 5rem">
-                                    <div>[[${element.room}]]</div>
+                                    <form action="/findroomyid" method="post">
+                                        <input type="hidden" name="id" th:value="${element.room.id}"/>
+                                        <button type="submit" class=""
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
+                                            [[${element.room}]]
+                                        </button>
+                                    </form>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 7rem">
-                                    <div>[[${element.employee}]]</div>
+                                    <form action="/findbyfio" method="post">
+                                        <input type="hidden" name="fio" th:value="${element.employee.id}"/>
+                                        <button type="submit" class="text-decoration-none"
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
+                                            [[${element.employee}]]
+                                        </button>
+                                    </form>
+
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 7rem">
                                     <form action="/finditstaffbyid" method="post">
                                         <input type="hidden" name="id" th:value="${element.itstaff.id}"/>
                                         <button type="submit" class="text-decoration-none"
-                                                style="background: none;color: inherit; border: none; cursor: pointer;">
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
                                             [[${element.itstaff}]]
                                         </button>
                                     </form>

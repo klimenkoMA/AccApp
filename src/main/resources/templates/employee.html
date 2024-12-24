@@ -84,11 +84,25 @@
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 20rem">
-                                    <div>[[${element.workarea}]]</div>
+                                    <form action="/findworkareabyname" method="post">
+                                        <input type="hidden" name="name" th:value="${element.workarea.id}"/>
+                                        <button type="submit" class="text-decoration-none"
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
+                                            [[${element.workarea}]]
+                                        </button>
+                                    </form>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 5rem">
-                                    <div>[[${element.room}]]</div>
+                                    <form action="/findroomyid" method="post">
+                                        <input type="hidden" name="id" th:value="${element.room.id}"/>
+                                        <button type="submit" class="text-decoration-none"
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
+                                            [[${element.room}]]
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                         </div>
