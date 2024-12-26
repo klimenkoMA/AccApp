@@ -32,6 +32,9 @@ public class Devices {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "owner")
     private ITStaff itstaff;
+    @OneToOne
+    @Column
+    private Repair repair;
 
     public Devices() {
     }
