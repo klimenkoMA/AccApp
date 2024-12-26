@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-23.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Important.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Repair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-17.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,15 +416,13 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -887,14 +890,8 @@
       <workItem from="1734166433606" duration="19106000" />
       <workItem from="1734283499339" duration="1308000" />
       <workItem from="1734344343179" duration="43093000" />
-      <workItem from="1734585034549" duration="66971000" />
-    </task>
-    <task id="LOCAL-00403" summary="Added logging in all Controller classes">
-      <created>1731137564258</created>
-      <option name="number" value="00403" />
-      <option name="presentableId" value="LOCAL-00403" />
-      <option name="project" value="LOCAL" />
-      <updated>1731137564258</updated>
+      <workItem from="1734585034549" duration="67813000" />
+      <workItem from="1735135080900" duration="8546000" />
     </task>
     <task id="LOCAL-00404" summary="Rebuilt a security part. Trying to create a AppUser entity">
       <created>1731250328235</created>
@@ -1232,7 +1229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1735020387944</updated>
     </task>
-    <option name="localTasksCounter" value="452" />
+    <task id="LOCAL-00452" summary="Tech commit">
+      <created>1735092985004</created>
+      <option name="number" value="00452" />
+      <option name="presentableId" value="LOCAL-00452" />
+      <option name="project" value="LOCAL" />
+      <updated>1735092985004</updated>
+    </task>
+    <option name="localTasksCounter" value="453" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1266,7 +1270,6 @@
     <MESSAGE value="Rebuilt target package" />
     <MESSAGE value="Rebuilt target package v2" />
     <MESSAGE value="Rebuilt CustomUserDetailsService" />
-    <MESSAGE value="Tech commit" />
     <MESSAGE value="Added Checker class for checking different attributes" />
     <MESSAGE value="Rebuilt SecurityControllerClass" />
     <MESSAGE value="Rebuilt DevicesController.class" />
@@ -1280,7 +1283,8 @@
     <MESSAGE value="Added enum Profession in entity ITStaff" />
     <MESSAGE value="Added the ability to click on entities of some pages" />
     <MESSAGE value="Added the ability to click on entities of some pages v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to click on entities of some pages v2" />
+    <MESSAGE value="Tech commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
