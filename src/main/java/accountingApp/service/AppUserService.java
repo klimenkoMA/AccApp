@@ -16,7 +16,7 @@ import java.util.*;
 @Service
 public class AppUserService {
 
-    final Logger logger = LoggerFactory.getLogger(AppUserService.class);
+    private final Logger logger = LoggerFactory.getLogger(AppUserService.class);
 
     @Autowired
     private AppUserRepository appUserRepository;
@@ -86,6 +86,7 @@ public class AppUserService {
     /**
      * Метод нужен для корректного отображения первых зарегистрированных пользователей.
      * Нужно убрать перед релизом и очисткой БД
+     *
      * @param outerUserList
      * @return
      */

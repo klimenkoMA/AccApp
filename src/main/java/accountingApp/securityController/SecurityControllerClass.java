@@ -25,10 +25,10 @@ public class SecurityControllerClass {
     final Logger logger = LoggerFactory.getLogger(SecurityControllerClass.class);
 
     @Autowired(required = false)
-    AppUserService service;
+    private AppUserService service;
 
     @Autowired
-    Checker checker;
+    private Checker checker;
 
     @Bean
     public static Checker checker() {
