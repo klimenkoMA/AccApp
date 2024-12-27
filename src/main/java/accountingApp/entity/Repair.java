@@ -1,6 +1,7 @@
 package accountingApp.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,23 +21,106 @@ public class Repair {
     @Column
     private boolean isImportant;
     @OneToOne
-    @Column
+//    @Column
+    @JoinColumn
     private Devices device;
     @Column
     private String health;
     @Column
-    private double durability;
-
-    @ElementCollection(targetClass = Important.class, fetch = FetchType.EAGER)
+    private int durability;
+    private String repairedPart;
+    @ElementCollection(targetClass = String.class, fetch = FetchType.EAGER)
+    @Column
+    private List<String> repairedParts;
+//    @ElementCollection(targetClass = Important.class, fetch = FetchType.EAGER)
+    @ElementCollection(targetClass = Important.class)
     @CollectionTable(name = "repair_important", joinColumns = @JoinColumn(name = "repair_id"))
     @Enumerated(EnumType.STRING)
     private List<Important> importants;
 
-    public double getDurability() {
+    public Repair() {
+    }
+
+    public Repair(String firstDay, Devices device) {
+        this.firstDay = firstDay;
+        this.device = device;
+        lastRepairDay = firstDay;
+        isImportant = false;
+        repairCount = 1;
+        health = "green";
+        durability = 0;
+        importants = new ArrayList<>();
+        importants.add(Important.Нет);
+        repairedParts = new ArrayList<>();
+        repairedPart = "";
+    }
+
+    public Repair(Long id
+            , String lastRepairDay
+            , boolean isImportant
+            , Devices device
+            , String repairedPart) {
+        this.id = id;
+        this.lastRepairDay = lastRepairDay;
+        this.isImportant = isImportant;
+        this.device = device;
+        this.repairedPart = repairedPart;
+        if (isImportant) {
+            importants.add(Important.Да);
+        } else {
+            importants.add(Important.Нет);
+        }
+        durability = getDurability();
+
+        if (durability <= 30) {
+            setHealth("green");
+        } else if (durability <= 75) {
+            setHealth("yellow");
+        } else {
+            setHealth("red");
+        }
+        repairCount++;
+        repairedParts.add(repairedPart);
+    }
+
+    public int getDurability() {
+        if (importants.size() == 0) {
+            setDurability(0);
+            return durability;
+        }
+        int countYes = 0;
+
+        for (Important imp : importants
+        ) {
+            if (imp.equals(Important.Да)) {
+                countYes += 10;
+            } else {
+                countYes += 5;
+            }
+        }
+
+        setDurability(countYes);
+
         return durability;
     }
 
-    public void setDurability(double durability) {
+    public String getRepairedPart() {
+        return repairedPart;
+    }
+
+    public void setRepairedPart(String repairedPart) {
+        this.repairedPart = repairedPart;
+    }
+
+    public List<String> getRepairedParts() {
+        return repairedParts;
+    }
+
+    public void setRepairedParts(List<String> repairedParts) {
+        this.repairedParts = repairedParts;
+    }
+
+    public void setDurability(int durability) {
         this.durability = durability;
     }
 
@@ -65,6 +149,12 @@ public class Repair {
     }
 
     public int getRepairCount() {
+
+        if (importants.size() == 0) {
+            setRepairCount(0);
+            return repairCount;
+        }
+        setRepairCount(importants.size());
         return repairCount;
     }
 

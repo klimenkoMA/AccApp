@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-23.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Important.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Repair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-12-25.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RepairController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RepairRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/RepairService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrepair.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav/navrepair.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/repair.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-17.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-18.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Repair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/securityController/SecurityControllerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/AppUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav/navdevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav/navdevices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Devices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Devices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/securityController/SecurityControllerClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/AppUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/nav/navdevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/nav/navdevices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +39,11 @@
       <list>
         <option value="JavaScript File" />
         <option value="UML Activity" />
-        <option value="HTML File" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -891,14 +904,7 @@
       <workItem from="1734283499339" duration="1308000" />
       <workItem from="1734344343179" duration="43093000" />
       <workItem from="1734585034549" duration="67813000" />
-      <workItem from="1735135080900" duration="8546000" />
-    </task>
-    <task id="LOCAL-00404" summary="Rebuilt a security part. Trying to create a AppUser entity">
-      <created>1731250328235</created>
-      <option name="number" value="00404" />
-      <option name="presentableId" value="LOCAL-00404" />
-      <option name="project" value="LOCAL" />
-      <updated>1731250328235</updated>
+      <workItem from="1735135080900" duration="29876000" />
     </task>
     <task id="LOCAL-00405" summary="Created a CustomUserDetailService.java">
       <created>1731293801048</created>
@@ -1236,7 +1242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1735092985004</updated>
     </task>
-    <option name="localTasksCounter" value="453" />
+    <task id="LOCAL-00453" summary="Added new entity Repair and enum Important">
+      <created>1735193478276</created>
+      <option name="number" value="00453" />
+      <option name="presentableId" value="LOCAL-00453" />
+      <option name="project" value="LOCAL" />
+      <updated>1735193478277</updated>
+    </task>
+    <option name="localTasksCounter" value="454" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1259,7 +1272,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed bug with admins role in CustomUserDetailsService" />
     <MESSAGE value="Added deleteAppUser() method in SecurityControllerClass" />
     <MESSAGE value="Added findAppUser() method in SecurityControllerClass" />
     <MESSAGE value="Added some tests in SecurityControllerClassTest" />
@@ -1284,7 +1296,8 @@
     <MESSAGE value="Added the ability to click on entities of some pages" />
     <MESSAGE value="Added the ability to click on entities of some pages v2" />
     <MESSAGE value="Tech commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
+    <MESSAGE value="Added new entity Repair and enum Important" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new entity Repair and enum Important" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

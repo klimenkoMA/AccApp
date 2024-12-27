@@ -33,7 +33,8 @@ public class Devices {
     @JoinColumn(name = "owner")
     private ITStaff itstaff;
     @OneToOne
-    @Column
+//    @Column
+    @JoinColumn
     private Repair repair;
 
     public Devices() {
