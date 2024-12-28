@@ -1,7 +1,12 @@
 package accountingApp.entity;
 
+import org.springframework.format.datetime.DateFormatter;
+
 import javax.persistence.*;
+import java.text.DateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -32,7 +37,7 @@ public class Repair {
     @ElementCollection(targetClass = String.class, fetch = FetchType.EAGER)
     @Column
     private List<String> repairedParts;
-//    @ElementCollection(targetClass = Important.class, fetch = FetchType.EAGER)
+    //    @ElementCollection(targetClass = Important.class, fetch = FetchType.EAGER)
     @ElementCollection(targetClass = Important.class)
     @CollectionTable(name = "repair_important", joinColumns = @JoinColumn(name = "repair_id"))
     @Enumerated(EnumType.STRING)
@@ -99,7 +104,13 @@ public class Repair {
             }
         }
 
-        setDurability(countYes);
+        int firstYear;
+        int currentYear = LocalDate.now().getYear();
+
+        String[] firstYearArray = firstDay.split("-");
+        firstYear = Integer.parseInt(firstYearArray[2]);
+
+        setDurability(countYes + (currentYear - firstYear) * 5);
 
         return durability;
     }
