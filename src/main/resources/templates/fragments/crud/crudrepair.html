@@ -13,57 +13,19 @@
             <div class="popup_div">
                 <input type="checkbox" id="callback">
                 <label class="popup_try" for="callback">Добавить</label>
-                <form class="popup_form" method="post" action="/adddevice">
+                <form class="popup_form" method="post" action="/addrepair">
                     <div align="center">
+                        <label style="text-align: center; margin-bottom: 7px">
+                            <input type="text" name="firstDay" placeholder="Дата ввода"
+                                   style="text-align: center;height: 30px">
+                        </label>
                         <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="category"
+                            <select class="form-select m-2" name="device"
                                     style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Категория</option>
-                                <option th:each="element : ${categoryList}"
-                                        th:value="${element}"
-                                        th:text="${element}"></option>
-                            </select>
-                        </label>
-                        <label>
-                            <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
-                        </label>
-                        <label>
-                            <input type="text" name="description" align="middle" placeholder="Описание оборудования"/>
-                        </label>
-                        <label>
-                            <input type="text" name="inventory" align="middle" placeholder="Инвентарный номер"/>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="room"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Кабинет</option>
-                                <option th:each="element : ${roomList}"
-                                        th:value="${element.id}"
-                                        th:text="${element.number}"></option>
-                            </select>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="employee"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Взял</option>
-                                <option th:each="element : ${employeeList}"
-                                        th:value="${element.id}"
-                                        th:text="${element.fio}"></option>
-                            </select>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="itstaff"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">МОЛ</option>
-                                <option th:each="element : ${itStaffList}"
+                                <option value="0">Оборудование</option>
+                                <option th:each="element : ${devicesList}"
                                         th:value="${element.id}"
                                         th:text="${element.name}"></option>
                             </select>
@@ -173,11 +135,11 @@
             <div class="popup_div">
                 <input type="checkbox" id="callback2">
                 <label class="popup_try" for="callback2">Удалить</label>
-                <form action="/deletedevice" class="popup_form" method="post">
+                <form action="/deleterepair" class="popup_form" method="post">
                     <div align="center">
                         <label>
                             <input type="text" name="id" align="middle"
-                                   placeholder="ID оборудования"/>
+                                   placeholder="ID ремонта"/>
                         </label>
                     </div>
                     <div>

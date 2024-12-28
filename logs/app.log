@@ -1,296 +1,987 @@
-2024-12-26 21:16:10.843 ERROR 15596 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:16:10.907 ERROR 15596 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:16:11.007 ERROR 15596 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2024-12-26 21:16:11.051  WARN 15596 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2024-12-26 21:16:11.088  WARN 15596 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2024-12-26 21:16:11.102 ERROR 15596 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2024-12-26 21:16:11.115 ERROR 15596 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:16:11.132 ERROR 15596 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:16:11.259 ERROR 15596 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:16:11.317 ERROR 15596 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2024-12-26 21:16:11.347  WARN 15596 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2024-12-26 21:16:11.348 ERROR 15596 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:16:11.466 ERROR 15596 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:16:11.486  WARN 15596 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2024-12-26 21:16:27.706 ERROR 15064 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Devices.repair
-2024-12-26 21:16:27.712  WARN 15064 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Devices.repair
-2024-12-26 21:16:27.838 ERROR 15064 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2024-12-27 06:51:33.937 ERROR 16872 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 06:51:34.074 ERROR 16872 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 06:51:34.400 ERROR 16872 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 06:51:34.537  WARN 16872 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 06:51:34.554  WARN 16872 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 06:51:34.562 ERROR 16872 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 06:51:34.578 ERROR 16872 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 06:51:34.610 ERROR 16872 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 06:51:34.705 ERROR 16872 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 06:51:34.738 ERROR 16872 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 06:51:34.770  WARN 16872 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 06:51:34.772 ERROR 16872 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 06:51:34.892 ERROR 16872 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 06:51:34.919  WARN 16872 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 06:51:53.986  WARN 17608 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 06:55:38.846  WARN 17608 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 06:55:38.920  WARN 17608 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 06:55:38.922  WARN 17608 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 06:59:17.196 ERROR 9472 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 06:59:17.236 ERROR 9472 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 06:59:17.289 ERROR 9472 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 06:59:17.306  WARN 9472 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 06:59:17.329  WARN 9472 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 06:59:17.341 ERROR 9472 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 06:59:17.353 ERROR 9472 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 06:59:17.381 ERROR 9472 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 06:59:17.476 ERROR 9472 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 06:59:17.508 ERROR 9472 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 06:59:17.548  WARN 9472 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 06:59:17.553 ERROR 9472 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 06:59:17.664 ERROR 9472 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 06:59:17.720  WARN 9472 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 06:59:32.165  WARN 18384 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 07:02:09.453  WARN 18384 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 07:02:09.508  WARN 18384 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 07:02:09.510  WARN 18384 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 07:02:17.258  WARN 18384 --- [http-nio-8080-exec-10] accountingApp.service.RepairService      : Repair with device Benque created!
+2024-12-27 07:02:46.642  WARN 18384 --- [http-nio-8080-exec-4] accountingApp.service.RepairService      : Repair with device Samsung v12 created!
+2024-12-27 07:03:04.923  WARN 18384 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Acer v223HQ created!
+2024-12-27 07:07:54.493  WARN 18384 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Ирбис created!
+2024-12-27 07:08:55.129  WARN 18384 --- [http-nio-8080-exec-8] accountingApp.service.RepairService      : Repair with device Бизер created!
+2024-12-27 07:09:31.703  WARN 18384 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Canon 334Lb created!
+2024-12-27 07:10:45.036  WARN 18384 --- [http-nio-8080-exec-8] accountingApp.service.RepairService      : Repair with device Самсунг created!
+2024-12-27 07:13:21.046  WARN 18384 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Sven created!
+2024-12-27 07:13:39.913  WARN 18384 --- [http-nio-8080-exec-8] accountingApp.service.RepairService      : Repair with device Hiper created!
+2024-12-27 07:14:23.335  WARN 18384 --- [http-nio-8080-exec-4] accountingApp.service.RepairService      : Repair with device Kyocera created!
+2024-12-27 07:14:36.438  WARN 18384 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Asus created!
+2024-12-27 07:22:16.429  WARN 18384 --- [http-nio-8080-exec-4] accountingApp.service.RepairService      : Repair with device Acer created!
+2024-12-27 07:22:40.102  WARN 18384 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device BenQ created!
+2024-12-27 07:22:52.080  WARN 18384 --- [http-nio-8080-exec-1] accountingApp.service.RepairService      : Repair with device HP created!
+2024-12-27 07:22:53.909  WARN 18384 --- [http-nio-8080-exec-7] a.controller.RepairController            : *** RepairController.addNewRepair():  Attribute has a null value! ***
+2024-12-27 07:23:09.789  WARN 18384 --- [http-nio-8080-exec-10] accountingApp.service.RepairService      : Repair with device Lenovo created!
+2024-12-27 07:23:30.947  WARN 18384 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device HP created!
+2024-12-27 07:34:56.727 ERROR 18420 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 07:34:56.761 ERROR 18420 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:34:56.823 ERROR 18420 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 07:34:56.859  WARN 18420 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 07:34:56.882  WARN 18420 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 07:34:56.897 ERROR 18420 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 07:34:56.918 ERROR 18420 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:34:56.946 ERROR 18420 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:34:57.053 ERROR 18420 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 07:34:57.112 ERROR 18420 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 07:34:57.148  WARN 18420 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 07:34:57.149 ERROR 18420 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 07:34:57.280 ERROR 18420 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 07:34:57.331  WARN 18420 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 07:35:13.823  WARN 6352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 07:35:27.051  WARN 6352 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 07:35:27.116  WARN 6352 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 07:35:27.117  WARN 6352 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 07:36:46.980 ERROR 22408 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 07:36:47.013 ERROR 22408 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:36:47.103 ERROR 22408 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 07:36:47.131  WARN 22408 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 07:36:47.151  WARN 22408 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 07:36:47.164 ERROR 22408 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 07:36:47.178 ERROR 22408 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:36:47.197 ERROR 22408 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:36:47.294 ERROR 22408 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 07:36:47.325 ERROR 22408 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 07:36:47.353  WARN 22408 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 07:36:47.354 ERROR 22408 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 07:36:47.462 ERROR 22408 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 07:36:47.488  WARN 22408 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 07:36:59.524  WARN 17896 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 07:37:17.232  WARN 17896 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 07:37:17.314  WARN 17896 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 07:37:17.316  WARN 17896 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 07:38:23.619 ERROR 21304 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 07:38:23.646 ERROR 21304 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:38:23.684 ERROR 21304 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 07:38:23.699  WARN 21304 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 07:38:23.711  WARN 21304 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 07:38:23.720 ERROR 21304 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 07:38:23.732 ERROR 21304 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:38:23.750 ERROR 21304 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 07:38:23.830 ERROR 21304 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 07:38:23.861 ERROR 21304 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 07:38:23.878  WARN 21304 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 07:38:23.879 ERROR 21304 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 07:38:23.948 ERROR 21304 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 07:38:23.962  WARN 21304 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 07:38:38.143  WARN 21720 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 07:44:56.751  WARN 21720 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 07:44:56.809  WARN 21720 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 07:44:56.810  WARN 21720 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 10:37:57.350  WARN 21720 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 10:37:57.361  WARN 21720 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 10:37:57.362  WARN 21720 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 14:44:59.998 ERROR 14432 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 14:45:00.080 ERROR 14432 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 14:45:00.158 ERROR 14432 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 14:45:00.268  WARN 14432 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 14:45:00.281  WARN 14432 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 14:45:00.295 ERROR 14432 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 14:45:00.304 ERROR 14432 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 14:45:00.343 ERROR 14432 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 14:45:00.532 ERROR 14432 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 14:45:00.559 ERROR 14432 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 14:45:00.600  WARN 14432 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 14:45:00.601 ERROR 14432 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 14:45:00.748 ERROR 14432 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 14:45:00.770  WARN 14432 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 14:45:13.457  WARN 4848 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 14:50:26.071  WARN 4848 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 14:50:26.149  WARN 4848 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 14:50:26.150  WARN 4848 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 15:25:14.645 ERROR 21716 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:25:14.681 ERROR 21716 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:25:14.722 ERROR 21716 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 15:25:14.737  WARN 21716 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 15:25:14.744  WARN 21716 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 15:25:14.769 ERROR 21716 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 15:25:14.779 ERROR 21716 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:25:14.797 ERROR 21716 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:25:14.882 ERROR 21716 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:25:14.946 ERROR 21716 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 15:25:15.089  WARN 21716 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 15:25:15.090 ERROR 21716 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:25:15.212 ERROR 21716 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:25:15.238  WARN 21716 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 15:25:30.723  WARN 7124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 15:25:42.592  WARN 7124 --- [http-nio-8080-exec-8] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 15:25:42.654  WARN 7124 --- [http-nio-8080-exec-8] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 15:25:42.656  WARN 7124 --- [http-nio-8080-exec-8] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 15:25:50.900  WARN 7124 --- [http-nio-8080-exec-10] accountingApp.service.RepairService      : Repair with device HP deleted!
+2024-12-27 15:28:24.144  WARN 7124 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device HP deleted!
+2024-12-27 15:30:52.339 ERROR 15132 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:30:52.371 ERROR 15132 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:30:52.429 ERROR 15132 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 15:30:52.454  WARN 15132 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 15:30:52.464  WARN 15132 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 15:30:52.474 ERROR 15132 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 15:30:52.482 ERROR 15132 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:30:52.537 ERROR 15132 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:30:52.611 ERROR 15132 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:30:52.646 ERROR 15132 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 15:30:52.659  WARN 15132 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 15:30:52.661 ERROR 15132 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:30:52.724 ERROR 15132 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:30:52.741  WARN 15132 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 15:31:05.895  WARN 17148 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 15:31:14.615  WARN 17148 --- [http-nio-8080-exec-6] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 15:31:14.676  WARN 17148 --- [http-nio-8080-exec-6] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 15:31:14.677  WARN 17148 --- [http-nio-8080-exec-6] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 15:31:23.237 ERROR 17148 --- [http-nio-8080-exec-10] a.controller.RepairController            : *** RepairController.deleteRepair():  WRONG DB VALUES*** null
+2024-12-27 15:31:23.423 ERROR 17148 --- [http-nio-8080-exec-10] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-10] Exception processing template "repair": An error happened during template parsing (template: "class path resource [templates/repair.html]")
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Devices.repair
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) ~[spring-boot-2.4.5.jar:2.4.5]
-	at accountingApp.AccountingApplication.main(AccountingApplication.java:23) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.5.jar:2.4.5]
-Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Devices.repair
-	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1829) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:979) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:806) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:248) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.6.jar:5.3.6]
-	... 22 common frames omitted
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/repair.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.5.jar:2.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "element.device.id" (template: "repair" - line 94, col 74)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 90 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "element.device.id" (template: "repair" - line 94, col 74)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:293) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 92 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'id' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 117 common frames omitted
 
-2024-12-26 21:18:38.487 ERROR 20864 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:18:38.518 ERROR 20864 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:18:38.581 ERROR 20864 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2024-12-26 21:18:38.602  WARN 20864 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2024-12-26 21:18:38.614  WARN 20864 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2024-12-26 21:18:38.621 ERROR 20864 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2024-12-26 21:18:38.627 ERROR 20864 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:18:38.639 ERROR 20864 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:18:38.699 ERROR 20864 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:18:38.726 ERROR 20864 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2024-12-26 21:18:38.740  WARN 20864 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2024-12-26 21:18:38.740 ERROR 20864 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:18:38.792 ERROR 20864 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:18:38.806  WARN 20864 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2024-12-26 21:18:47.921 ERROR 14900 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Devices.repair
-2024-12-26 21:18:47.927  WARN 14900 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Devices.repair
-2024-12-26 21:18:48.059 ERROR 14900 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2024-12-27 15:31:23.434 ERROR 17148 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/repair.html]")] with root cause
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Devices.repair
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) ~[spring-boot-2.4.5.jar:2.4.5]
-	at accountingApp.AccountingApplication.main(AccountingApplication.java:23) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.5.jar:2.4.5]
-Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Devices.repair
-	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1829) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:979) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:806) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:248) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.6.jar:5.3.6]
-	... 22 common frames omitted
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'id' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.3.6.jar:5.3.6]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:293) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.5.jar:2.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2024-12-26 21:20:21.849 ERROR 16596 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:20:21.886 ERROR 16596 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:20:21.934 ERROR 16596 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2024-12-26 21:20:21.957  WARN 16596 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2024-12-26 21:20:21.971  WARN 16596 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2024-12-26 21:20:21.982 ERROR 16596 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2024-12-26 21:20:21.998 ERROR 16596 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:20:22.017 ERROR 16596 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:20:22.230 ERROR 16596 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:20:22.382 ERROR 16596 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2024-12-26 21:20:22.454  WARN 16596 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2024-12-26 21:20:22.456 ERROR 16596 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:20:22.652 ERROR 16596 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:20:22.682  WARN 16596 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2024-12-26 21:20:36.886 ERROR 16196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Repair.device
-2024-12-26 21:20:36.895  WARN 16196 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Repair.device
-2024-12-26 21:20:37.136 ERROR 16196 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2024-12-27 15:31:23.499 ERROR 17148 --- [http-nio-8080-exec-10] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/deleterepair] and exception [An error happened during template parsing (template: "class path resource [templates/repair.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-12-27 15:34:17.841 ERROR 21380 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:34:17.868 ERROR 21380 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:34:17.915 ERROR 21380 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 15:34:17.931  WARN 21380 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 15:34:17.943  WARN 21380 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 15:34:17.950 ERROR 21380 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 15:34:17.959 ERROR 21380 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:34:17.984 ERROR 21380 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:34:18.104 ERROR 21380 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:34:18.144 ERROR 21380 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 15:34:18.168  WARN 21380 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 15:34:18.169 ERROR 21380 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:34:18.243 ERROR 21380 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:34:18.263  WARN 21380 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 15:34:34.360  WARN 20428 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 15:36:28.436  WARN 20428 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 15:36:28.493  WARN 20428 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 15:36:28.495  WARN 20428 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 15:36:37.283  WARN 20428 --- [http-nio-8080-exec-10] accountingApp.service.RepairService      : Repair with device null deleted!
+2024-12-27 15:36:37.439 ERROR 20428 --- [http-nio-8080-exec-10] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-10] Exception processing template "repair": An error happened during template parsing (template: "class path resource [templates/repair.html]")
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Repair.device
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) ~[spring-boot-2.4.5.jar:2.4.5]
-	at accountingApp.AccountingApplication.main(AccountingApplication.java:23) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.5.jar:2.4.5]
-Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: accountingApp.entity.Repair.device
-	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1829) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:979) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:806) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:248) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.6.jar:5.3.6]
-	... 22 common frames omitted
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/repair.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.5.jar:2.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.attoparser.ParseException: Error during execution of processor 'org.thymeleaf.standard.processor.StandardTextTagProcessor' (template: "repair" - line 98, col 47)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 90 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Error during execution of processor 'org.thymeleaf.standard.processor.StandardTextTagProcessor' (template: "repair" - line 98, col 47)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:117) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:293) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 92 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.thymeleaf.standard.processor.StandardTextTagProcessor.doProcess(StandardTextTagProcessor.java:89) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:160) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 111 common frames omitted
 
-2024-12-26 21:21:55.185 ERROR 5260 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:21:55.210 ERROR 5260 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:21:55.264 ERROR 5260 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2024-12-26 21:21:55.281  WARN 5260 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2024-12-26 21:21:55.298  WARN 5260 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2024-12-26 21:21:55.309 ERROR 5260 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2024-12-26 21:21:55.320 ERROR 5260 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:21:55.338 ERROR 5260 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:21:55.424 ERROR 5260 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:21:55.457 ERROR 5260 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2024-12-26 21:21:55.483  WARN 5260 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2024-12-26 21:21:55.484 ERROR 5260 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:21:55.599 ERROR 5260 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:21:55.620  WARN 5260 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2024-12-26 21:22:05.429 ERROR 7308 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.loader.MultipleBagFetchException: cannot simultaneously fetch multiple bags: [accountingApp.entity.Repair.importants, accountingApp.entity.Repair.repairedParts]
-2024-12-26 21:22:05.432  WARN 7308 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.loader.MultipleBagFetchException: cannot simultaneously fetch multiple bags: [accountingApp.entity.Repair.importants, accountingApp.entity.Repair.repairedParts]
-2024-12-26 21:22:05.539 ERROR 7308 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2024-12-27 15:36:37.451 ERROR 20428 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/repair.html]")] with root cause
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.loader.MultipleBagFetchException: cannot simultaneously fetch multiple bags: [accountingApp.entity.Repair.importants, accountingApp.entity.Repair.repairedParts]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) ~[spring-boot-2.4.5.jar:2.4.5]
-	at accountingApp.AccountingApplication.main(AccountingApplication.java:23) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.5.jar:2.4.5]
-Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.loader.MultipleBagFetchException: cannot simultaneously fetch multiple bags: [accountingApp.entity.Repair.importants, accountingApp.entity.Repair.repairedParts]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.6.jar:5.3.6]
-	... 22 common frames omitted
-Caused by: org.hibernate.loader.MultipleBagFetchException: cannot simultaneously fetch multiple bags: [accountingApp.entity.Repair.importants, accountingApp.entity.Repair.repairedParts]
-	at org.hibernate.loader.plan.exec.internal.AbstractLoadQueryDetails.generate(AbstractLoadQueryDetails.java:193) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.plan.exec.internal.EntityLoadQueryDetails.<init>(EntityLoadQueryDetails.java:85) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.plan.exec.internal.BatchingLoadQueryDetailsFactory.makeEntityLoadQueryDetails(BatchingLoadQueryDetailsFactory.java:64) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader.<init>(AbstractLoadPlanBasedEntityLoader.java:97) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader.<init>(AbstractLoadPlanBasedEntityLoader.java:112) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:117) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:30) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.entity.plan.EntityLoader$Builder.byUniqueKey(EntityLoader.java:82) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.entity.plan.EntityLoader$Builder.byPrimaryKey(EntityLoader.java:75) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.entity.plan.AbstractBatchingEntityLoaderBuilder.buildNonBatchingLoader(AbstractBatchingEntityLoaderBuilder.java:30) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.loader.entity.BatchingEntityLoaderBuilder.buildLoader(BatchingEntityLoaderBuilder.java:61) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.createEntityLoader(AbstractEntityPersister.java:2607) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.createEntityLoader(AbstractEntityPersister.java:2629) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.generateDelayedEntityLoader(AbstractEntityPersister.java:4379) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.util.collections.LazyIndexedMap.lockedComputeIfAbsent(LazyIndexedMap.java:77) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.util.collections.LazyIndexedMap.computeIfAbsent(LazyIndexedMap.java:63) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.persister.entity.EntityLoaderLazyCollection.getOrBuildByLockMode(EntityLoaderLazyCollection.java:34) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.getLoaderByLockMode(AbstractEntityPersister.java:4370) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.createLoaders(AbstractEntityPersister.java:4357) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.postInstantiate(AbstractEntityPersister.java:4332) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.metamodel.internal.MetamodelImpl.initialize(MetamodelImpl.java:257) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:303) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.6.jar:5.3.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.6.jar:5.3.6]
-	... 26 common frames omitted
+java.lang.NullPointerException: null
+	at org.thymeleaf.standard.processor.StandardTextTagProcessor.doProcess(StandardTextTagProcessor.java:89) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:160) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:293) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.5.jar:2.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2024-12-26 21:24:10.553 ERROR 20432 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:24:10.593 ERROR 20432 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:24:10.653 ERROR 20432 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2024-12-26 21:24:10.671  WARN 20432 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2024-12-26 21:24:10.687  WARN 20432 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2024-12-26 21:24:10.699 ERROR 20432 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2024-12-26 21:24:10.706 ERROR 20432 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:24:10.724 ERROR 20432 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:24:10.794 ERROR 20432 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:24:10.824 ERROR 20432 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2024-12-26 21:24:10.843  WARN 20432 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2024-12-26 21:24:10.844 ERROR 20432 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:24:11.002 ERROR 20432 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:24:11.050  WARN 20432 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2024-12-26 21:24:22.034  WARN 9460 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-26 21:24:38.988  WARN 9460 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2024-12-26 21:24:39.056  WARN 9460 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2024-12-26 21:24:39.057  WARN 9460 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2024-12-26 21:26:44.141 ERROR 7688 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:26:44.189 ERROR 7688 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:26:44.266 ERROR 7688 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2024-12-26 21:26:44.297  WARN 7688 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2024-12-26 21:26:44.343  WARN 7688 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2024-12-26 21:26:44.369 ERROR 7688 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2024-12-26 21:26:44.384 ERROR 7688 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:26:44.427 ERROR 7688 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
-2024-12-26 21:26:44.618 ERROR 7688 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:26:44.685 ERROR 7688 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2024-12-26 21:26:44.719  WARN 7688 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2024-12-26 21:26:44.721 ERROR 7688 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2024-12-26 21:26:44.832 ERROR 7688 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2024-12-26 21:26:44.850  WARN 7688 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2024-12-26 21:26:56.336  WARN 14608 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-26 21:27:06.841  WARN 14608 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2024-12-26 21:27:06.901  WARN 14608 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2024-12-26 21:27:06.902  WARN 14608 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2024-12-26 21:33:12.809  WARN 14608 --- [http-nio-8080-exec-10] a.s.SecurityControllerClass              : WebSecurityConfig: User's role is null
+2024-12-27 15:36:37.494 ERROR 20428 --- [http-nio-8080-exec-10] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/deleterepair] and exception [An error happened during template parsing (template: "class path resource [templates/repair.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-12-27 15:36:44.180  WARN 20428 --- [http-nio-8080-exec-4] accountingApp.service.RepairService      : Repair with device null deleted!
+2024-12-27 15:36:44.302 ERROR 20428 --- [http-nio-8080-exec-4] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-4] Exception processing template "repair": An error happened during template parsing (template: "class path resource [templates/repair.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/repair.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.5.jar:2.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.attoparser.ParseException: Error during execution of processor 'org.thymeleaf.standard.processor.StandardTextTagProcessor' (template: "repair" - line 98, col 47)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 90 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Error during execution of processor 'org.thymeleaf.standard.processor.StandardTextTagProcessor' (template: "repair" - line 98, col 47)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:117) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:293) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 92 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.thymeleaf.standard.processor.StandardTextTagProcessor.doProcess(StandardTextTagProcessor.java:89) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:160) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 111 common frames omitted
+
+2024-12-27 15:36:44.307 ERROR 20428 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/repair.html]")] with root cause
+
+java.lang.NullPointerException: null
+	at org.thymeleaf.standard.processor.StandardTextTagProcessor.doProcess(StandardTextTagProcessor.java:89) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:160) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:293) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.6.jar:5.4.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.5.jar:2.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2024-12-27 15:36:44.329 ERROR 20428 --- [http-nio-8080-exec-4] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/deleterepair] and exception [An error happened during template parsing (template: "class path resource [templates/repair.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-12-27 15:39:22.750 ERROR 7536 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:39:22.780 ERROR 7536 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:39:22.809 ERROR 7536 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 15:39:22.826  WARN 7536 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 15:39:22.838  WARN 7536 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 15:39:22.848 ERROR 7536 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 15:39:22.855 ERROR 7536 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:39:22.873 ERROR 7536 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:39:22.940 ERROR 7536 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:39:22.967 ERROR 7536 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 15:39:22.981  WARN 7536 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 15:39:22.982 ERROR 7536 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:39:23.069 ERROR 7536 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:39:23.082  WARN 7536 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 15:39:34.858  WARN 3428 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 15:40:06.268  WARN 3428 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 15:40:06.327  WARN 3428 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 15:40:06.328  WARN 3428 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 15:40:12.976  WARN 3428 --- [http-nio-8080-exec-10] accountingApp.service.RepairService      : Repair with device null created!
+2024-12-27 15:40:13.017 ERROR 3428 --- [http-nio-8080-exec-10] a.controller.RepairController            : *** RepairController.deleteRepair():  WRONG DB VALUES*** org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : accountingApp.entity.Repair.device -> accountingApp.entity.Devices; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : accountingApp.entity.Repair.device -> accountingApp.entity.Devices
+2024-12-27 15:41:43.699 ERROR 14600 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:41:43.729 ERROR 14600 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:41:43.782 ERROR 14600 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2024-12-27 15:41:43.803  WARN 14600 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2024-12-27 15:41:43.812  WARN 14600 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2024-12-27 15:41:43.824 ERROR 14600 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2024-12-27 15:41:43.831 ERROR 14600 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:41:43.850 ERROR 14600 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: "Компьютер"
+2024-12-27 15:41:43.925 ERROR 14600 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:41:43.956 ERROR 14600 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2024-12-27 15:41:43.978  WARN 14600 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2024-12-27 15:41:43.980 ERROR 14600 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2024-12-27 15:41:44.095 ERROR 14600 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2024-12-27 15:41:44.110  WARN 14600 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2024-12-27 15:41:56.416  WARN 21072 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-27 15:42:14.331  WARN 21072 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2024-12-27 15:42:14.385  WARN 21072 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2024-12-27 15:42:14.386  WARN 21072 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2024-12-27 15:42:19.481  WARN 21072 --- [http-nio-8080-exec-10] accountingApp.service.RepairService      : Repair with device null updated!
+2024-12-27 15:42:19.523 ERROR 21072 --- [http-nio-8080-exec-10] a.controller.RepairController            : *** RepairController.deleteRepair():  WRONG DB VALUES*** org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : accountingApp.entity.Repair.device -> accountingApp.entity.Devices; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : accountingApp.entity.Repair.device -> accountingApp.entity.Devices
