@@ -50,12 +50,17 @@
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 25rem">
+                        ; width: 10rem">
+                        Тип
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                        ; width: 20rem">
                         Устройство
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 25rem">
+                        ; width: 20rem">
                         Отремонтировано
                     </th>
 
@@ -89,7 +94,11 @@
                                     <div>[[${element.repairCount}]] шт</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 25rem">
+                                    style="width: 10rem">
+                                    <div>[[${element.category}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 20rem">
                                     <form action="/finddevicebyname" method="post">
                                         <input type="hidden" name="name" th:value="${element.device.id}"/>
                                         <button type="submit" class="text-decoration-none"
@@ -100,7 +109,7 @@
                                     </form>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 25rem">
+                                    style="width: 20rem">
                                     <div>[[${element.repairedParts}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"

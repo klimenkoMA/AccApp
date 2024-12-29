@@ -17,28 +17,28 @@ public class RepairService {
     @Autowired
     private RepairRepository repairRepository;
 
-    public List<Repair> getAllRepairs(){
+    public List<Repair> getAllRepairs() {
         return repairRepository.findAll();
     }
 
-    public Repair createRepair(Repair repair){
-        logger.warn("Repair with device " + repair.getDevice().getName() + " created!");
+    public Repair createRepair(Repair repair) {
+        logger.warn("Repair with device " + repair.getDevice().getName() + "was created!");
         return repairRepository.save(repair);
     }
 
-    public Repair updateRepair(Repair repair){
-        logger.warn("Repair with device " + repair.getDevice().getName() + " updated!");
+    public Repair updateRepair(Repair repair) {
+        logger.warn("Repair with device " + repair.getDevice().getName() + "was updated!");
         return repairRepository.save(repair);
     }
 
-    public List<Repair> findRepair(long id){
+    public List<Repair> findRepair(long id) {
         return repairRepository.findRepairsById(id);
     }
 
-    public void deleteRepair(long id){
+    public void deleteRepair(long id) {
         Repair repair = repairRepository.findRepairsById(id).get(0);
-        logger.warn("Repair with device " + repair.getDevice().getName() + " deleted!");
-
+        logger.warn("Repair with device " + repair.getDevice().getName() + "was deleted!");
+        repairRepository.deleteById(id);
     }
 
 }
