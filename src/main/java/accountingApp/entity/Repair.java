@@ -26,9 +26,10 @@ public class Repair {
     @Column
     private boolean isImportant;
     @OneToOne
-//    @Column
     @JoinColumn
     private Devices device;
+    @Column
+    private DeviceCategory category;
     @Column
     private String health;
     @Column
@@ -58,6 +59,7 @@ public class Repair {
         importants.add(Important.Нет);
         repairedParts = new ArrayList<>();
         repairedPart = "";
+        category = device.getCategory();
     }
 
     public Repair(Long id
@@ -70,6 +72,7 @@ public class Repair {
         this.isImportant = isImportant;
         this.device = device;
         this.repairedPart = repairedPart;
+
         if (isImportant) {
             importants.add(Important.Да);
         } else {
@@ -86,6 +89,49 @@ public class Repair {
         }
         repairCount++;
         repairedParts.add(repairedPart);
+        category = device.getCategory();
+    }
+
+    public Repair(Long id
+            , String firstDay
+            , String lastRepairDay
+            , int repairCount
+            , boolean isImportant
+            , Devices device
+            , String health
+            , int durability
+            , String repairedPart
+            , List<String> repairedParts
+            , List<Important> importants) {
+        this.id = id;
+        this.firstDay = firstDay;
+        this.lastRepairDay = lastRepairDay;
+        this.repairCount = repairCount;
+        this.isImportant = isImportant;
+        this.device = device;
+        this.health = health;
+        this.durability = durability;
+        this.repairedPart = repairedPart;
+        this.repairedParts = repairedParts;
+        this.importants = importants;
+
+        if (isImportant) {
+            importants.add(Important.Да);
+        } else {
+            importants.add(Important.Нет);
+        }
+        durability = getDurability();
+
+        if (durability <= 30) {
+            setHealth("green");
+        } else if (durability <= 75) {
+            setHealth("yellow");
+        } else {
+            setHealth("red");
+        }
+        repairCount++;
+        repairedParts.add(repairedPart);
+        category = device.getCategory();
     }
 
     public int getDurability() {
@@ -113,6 +159,10 @@ public class Repair {
         setDurability(countYes + (currentYear - firstYear) * 5);
 
         return durability;
+    }
+
+    public DeviceCategory getCategory() {
+        return category;
     }
 
     public String getRepairedPart() {

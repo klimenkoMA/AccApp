@@ -111,6 +111,96 @@
         });
     </script>
 
+    <script>
+        $(function () {
+            $('input[name="firstDay"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1901,
+                locale: {
+                    "format": "DD-MM-YYYY",
+                    "separator": " - ",
+                    "applyLabel": "Подтвердить",
+                    "cancelLabel": "Отменить",
+                    "fromLabel": "От",
+                    "toLabel": "До",
+                    "customRangeLabel": "Пользовательский",
+                    "weekLabel": "Н",
+                    "daysOfWeek": [
+                        "Вс",
+                        "Пн",
+                        "Вт",
+                        "Ср",
+                        "Чт",
+                        "Пт",
+                        "Сб"
+                    ],
+                    "monthNames": [
+                        "Январь",
+                        "Февраль",
+                        "Март",
+                        "Апрель",
+                        "Май",
+                        "Июнь",
+                        "Июль",
+                        "Август",
+                        "Сентябрь",
+                        "Октябрь",
+                        "Ноябрь",
+                        "Декабрь"
+                    ],
+                    "firstDay": 1
+                }
+                , maxYear: parseInt(moment().format('YYYY'), 10),
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('input[name="lastRepairDay"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1901,
+                locale: {
+                    "format": "DD-MM-YYYY",
+                    "separator": " - ",
+                    "applyLabel": "Подтвердить",
+                    "cancelLabel": "Отменить",
+                    "fromLabel": "От",
+                    "toLabel": "До",
+                    "customRangeLabel": "Пользовательский",
+                    "weekLabel": "Н",
+                    "daysOfWeek": [
+                        "Вс",
+                        "Пн",
+                        "Вт",
+                        "Ср",
+                        "Чт",
+                        "Пт",
+                        "Сб"
+                    ],
+                    "monthNames": [
+                        "Январь",
+                        "Февраль",
+                        "Март",
+                        "Апрель",
+                        "Май",
+                        "Июнь",
+                        "Июль",
+                        "Август",
+                        "Сентябрь",
+                        "Октябрь",
+                        "Ноябрь",
+                        "Декабрь"
+                    ],
+                    "firstDay": 1
+                }
+                , maxYear: parseInt(moment().format('YYYY'), 10),
+            });
+        });
+    </script>
+
 
 </head>
 
