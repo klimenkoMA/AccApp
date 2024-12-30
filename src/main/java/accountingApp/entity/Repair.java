@@ -1,12 +1,11 @@
 package accountingApp.entity;
 
-import org.springframework.format.datetime.DateFormatter;
 
 import javax.persistence.*;
-import java.text.DateFormat;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
+
 import java.util.List;
 
 @Entity
@@ -38,7 +37,6 @@ public class Repair {
     @ElementCollection(targetClass = String.class, fetch = FetchType.EAGER)
     @Column
     private List<String> repairedParts;
-    //    @ElementCollection(targetClass = Important.class, fetch = FetchType.EAGER)
     @ElementCollection(targetClass = Important.class)
     @CollectionTable(name = "repair_important", joinColumns = @JoinColumn(name = "repair_id"))
     @Enumerated(EnumType.STRING)
@@ -60,6 +58,7 @@ public class Repair {
         repairedParts = new ArrayList<>();
         repairedPart = "";
         category = device.getCategory();
+        device.setRepair(this);
     }
 
     public Repair(Long id
@@ -90,6 +89,7 @@ public class Repair {
         repairCount++;
         repairedParts.add(repairedPart);
         category = device.getCategory();
+        device.setRepair(this);
     }
 
     public Repair(Long id
@@ -132,6 +132,7 @@ public class Repair {
         repairCount++;
         repairedParts.add(repairedPart);
         category = device.getCategory();
+        device.setRepair(this);
     }
 
     public int getDurability() {
@@ -253,5 +254,10 @@ public class Repair {
 
     public void setImportants(List<Important> importants) {
         this.importants = importants;
+    }
+
+    @Override
+    public String toString() {
+        return  durability + "%";
     }
 }
