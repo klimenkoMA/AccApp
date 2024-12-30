@@ -178,7 +178,7 @@ html, body {
 }
 
 #callback3:checked ~ .popup_form {
-    top: -70px;
+    top: -110px;
 }
 
 #callback3 {

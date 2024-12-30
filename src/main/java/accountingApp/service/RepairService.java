@@ -22,12 +22,12 @@ public class RepairService {
     }
 
     public Repair createRepair(Repair repair) {
-        logger.warn("Repair with device " + repair.getDevice().getName() + "was created!");
+        logger.warn("Repair with device " + repair.getDevice().getName() + " was created!");
         return repairRepository.save(repair);
     }
 
     public Repair updateRepair(Repair repair) {
-        logger.warn("Repair with device " + repair.getDevice().getName() + "was updated!");
+        logger.warn("Repair with device " + repair.getDevice().getName() + " was updated!");
         return repairRepository.save(repair);
     }
 
@@ -37,7 +37,7 @@ public class RepairService {
 
     public void deleteRepair(long id) {
         Repair repair = repairRepository.findRepairsById(id).get(0);
-        logger.warn("Repair with device " + repair.getDevice().getName() + "was deleted!");
+        logger.warn("Repair with device " + repair.getDevice().getName() + " was deleted!");
         repairRepository.deleteById(id);
     }
 

@@ -33,7 +33,6 @@ public class Devices {
     @JoinColumn(name = "owner")
     private ITStaff itstaff;
     @OneToOne
-//    @Column
     @JoinColumn
     private Repair repair;
 
@@ -72,6 +71,14 @@ public class Devices {
         this.room = room;
         this.employee = employee;
         this.itstaff = itstaff;
+    }
+
+    public Repair getRepair() {
+        return repair;
+    }
+
+    public void setRepair(Repair repair) {
+        this.repair = repair;
     }
 
     public DeviceCategory getCategory() {
