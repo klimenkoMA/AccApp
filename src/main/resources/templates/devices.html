@@ -104,7 +104,14 @@
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 5rem">
-                                    <div>[[${element.repair}]]</div>
+                                    <form action="/findrepair" method="post">
+                                        <input type="hidden" name="id" th:value="${element.repair.id}"/>
+                                        <button type="submit" class="text-decoration-none"
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
+                                            [[${element.repair}]]
+                                        </button>
+                                    </form>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 5rem">
