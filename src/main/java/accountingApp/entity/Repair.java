@@ -258,6 +258,6 @@ public class Repair {
 
     @Override
     public String toString() {
-        return  durability + "%";
+        return  durability + " %";
     }
 }

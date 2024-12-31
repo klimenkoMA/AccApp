@@ -65,6 +65,19 @@ html, body {
     height: 400px;
 }
 
+.green {
+    background-color: #89dda6;
+    color: #00008b;
+}
+.yellow {
+    background-color: #e3db72;
+    color: #00008b;
+}
+.red {
+    background-color: #e99a9a;
+    color: #00008b;
+}
+
 .crud_buttons {
     display: flex;
     flex-direction: row;
