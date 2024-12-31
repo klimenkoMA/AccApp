@@ -21,6 +21,8 @@ public class Devices {
     private String description;
     @Column
     private Long inventory;
+    @Column
+    private String serial;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
     @ManyToOne(cascade = CascadeType.ALL)
@@ -44,6 +46,7 @@ public class Devices {
             , String name
             , String description
             , Long inventory
+            , String serial
             , Room room
             , Employee employee
             , ITStaff itstaff) {
@@ -52,6 +55,7 @@ public class Devices {
         this.name = name;
         this.description = description;
         this.inventory = inventory;
+        this.serial = serial;
         this.room = room;
         this.employee = employee;
         this.itstaff = itstaff;
@@ -61,6 +65,7 @@ public class Devices {
             , String name
             , String description
             , Long inventory
+            , String serial
             , Room room
             , Employee employee
             , ITStaff itstaff) {
@@ -68,6 +73,7 @@ public class Devices {
         this.name = name;
         this.description = description;
         this.inventory = inventory;
+        this.serial = serial;
         this.room = room;
         this.employee = employee;
         this.itstaff = itstaff;
@@ -79,6 +85,14 @@ public class Devices {
 
     public void setRepair(Repair repair) {
         this.repair = repair;
+    }
+
+    public String getSerial() {
+        return serial;
+    }
+
+    public void setSerial(String serial) {
+        this.serial = serial;
     }
 
     public DeviceCategory getCategory() {

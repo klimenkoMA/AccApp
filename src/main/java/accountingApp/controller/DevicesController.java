@@ -68,6 +68,7 @@ public class DevicesController {
                             @RequestParam String name,
                             @RequestParam String description,
                             @RequestParam String inventory,
+                            @RequestParam String serial,
                             @RequestParam(required = false) Room room,
                             @RequestParam(required = false) Employee employee,
                             @RequestParam(required = false) ITStaff itstaff,
@@ -77,6 +78,7 @@ public class DevicesController {
                 || checker.checkAttribute(name)
                 || checker.checkAttribute(description)
                 || checker.checkAttribute(inventory)
+                || checker.checkAttribute(serial)
                 || room == null
                 || employee == null
                 || itstaff == null
@@ -90,6 +92,7 @@ public class DevicesController {
         String nameWithoutSpaces = name.trim();
         String descriptionWithoutSpaces = description.trim();
         String inventoryWithoutSpaces = inventory.trim();
+        String serialWithoutSpaces = serial.trim();
 
         try {
             long inventoryCheck = Long.parseLong(inventoryWithoutSpaces);
@@ -97,6 +100,7 @@ public class DevicesController {
                     && !checker.checkAttribute(nameWithoutSpaces)
                     && !checker.checkAttribute(descriptionWithoutSpaces)
                     && !checker.checkAttribute(inventoryWithoutSpaces)
+                    && !checker.checkAttribute(serialWithoutSpaces)
             ) {
                 DeviceCategory deviceCategory = DeviceCategory.Компьютер;
                 DeviceCategory[] categoriesArray = DeviceCategory.values();
@@ -112,6 +116,7 @@ public class DevicesController {
                         , nameWithoutSpaces
                         , descriptionWithoutSpaces
                         , inventoryCheck
+                        , serialWithoutSpaces
                         , room
                         , employee
                         , itstaff);
@@ -162,11 +167,12 @@ public class DevicesController {
     }
 
     @PostMapping("/updatedevice")
-    public String updateDevice(@RequestParam(required = false) String category,
-                               @RequestParam String id,
+    public String updateDevice(@RequestParam String id,
+                               @RequestParam(required = false) String category,
                                @RequestParam String name,
                                @RequestParam String description,
                                @RequestParam String inventory,
+                               @RequestParam String serial,
                                @RequestParam(required = false) Room room,
                                @RequestParam(required = false) Employee employee,
                                @RequestParam(required = false) ITStaff itstaff,
@@ -177,6 +183,7 @@ public class DevicesController {
                 || checker.checkAttribute(name)
                 || checker.checkAttribute(description)
                 || checker.checkAttribute(inventory)
+                || checker.checkAttribute(serial)
                 || room == null
                 || employee == null
                 || itstaff == null
@@ -193,11 +200,13 @@ public class DevicesController {
             String inventoryWithoutSpaces = inventory.trim();
             int idCheck = Integer.parseInt(id);
             long inventoryCheck = Long.parseLong(inventoryWithoutSpaces);
+            String serialWithoutSpaces = serial.trim();
 
             if (idCheck <= 0
                     || checker.checkAttribute(idCheck + "")
                     || inventoryCheck <= 0
                     || checker.checkAttribute(inventoryCheck + "")
+                    || checker.checkAttribute(serialWithoutSpaces)
             ) {
                 logger.warn("*** DevicesController.updateDevice(): dborn <<<< 0 ***");
                 return getDevices(model);
@@ -216,15 +225,18 @@ public class DevicesController {
                         break;
                     }
                 }
+                Repair repair = devicesService.getDevicesById(idCheck).get(0).getRepair();
 
                 Devices devices = new Devices(idCheck
                         , deviceCategory
                         , nameWithoutSpaces
                         , descriptionWithoutSpaces
                         , inventoryCheck
+                        , serialWithoutSpaces
                         , room
                         , employee
                         , itstaff);
+                devices.setRepair(repair);
                 devicesService.updateDevice(devices);
                 return getDevices(model);
             }
