@@ -109,10 +109,17 @@
                                         <button type="submit" class="text-decoration-none"
                                                 style="background: none;color: darkblue; border: none;
                                                 cursor: pointer;text-shadow: none">
-                                            [[${element.repair}]]
+                                             <span th:if="${element.repair.health == 'green'}">
+                                            <div class="green">[[${element.repair}]]</div>
+                                        </span>
+                                            <span th:if="${element.repair.health == 'yellow'}">
+                                             <div class="yellow">[[${element.repair}]]</div>
+                                        </span>
+                                            <span th:if="${element.repair.health == 'red'}">
+                                             <div class="red">[[${element.repair}]]</div>
+                                        </span>
                                         </button>
                                     </form>
-<!--                                    <div>[[${element.repair}]]</div>-->
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 5rem">

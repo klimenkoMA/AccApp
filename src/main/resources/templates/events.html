@@ -26,7 +26,7 @@
             <table class="row" style=" justify-content: center;
                   align-content: center; height: 3rem; table-layout: fixed">
 
-                <tr class="text-light fs-5" style="background-color: #62a0f6">
+                <tr class="text-light fs-7" style="background-color: #62a0f6">
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                                 ; width: 6rem">
@@ -36,6 +36,11 @@
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                                 ; width: 8rem">
                         Событие
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 8rem">
+                        Категория
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
@@ -59,7 +64,7 @@
                     </th>
                     <th class="p-2 m-2 text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                                ; width: 23rem">
+                                ; width: 20rem">
                         Причина
                     </th>
                 </tr>
@@ -80,7 +85,18 @@
                                     <div>[[${element.date}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 12rem">
+                                    style="width: 8rem">
+                                    <form action="/finddevicebyname" method="post">
+                                        <input type="hidden" name="name" th:value="${element.device.id}"/>
+                                        <button type="submit" class="text-decoration-none"
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
+                                            [[${element.device.category}]]
+                                        </button>
+                                    </form>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 13rem">
                                     <form action="/finddevicebyname" method="post">
                                         <input type="hidden" name="name" th:value="${element.device.id}"/>
                                         <button type="submit" class="text-decoration-none"
@@ -124,7 +140,7 @@
                                     </form>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 23rem">
+                                    style="width: 20rem">
                                     <div>[[${element.comment}]]</div>
                                 </td>
                             </tr>

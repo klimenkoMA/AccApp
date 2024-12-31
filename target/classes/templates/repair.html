@@ -114,7 +114,17 @@
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 10rem">
-                                    <div>[[${element.durability}]]%</div>
+                                    <div>
+                                        <span th:if="${element.health == 'green'}">
+                                            <div class="green">[[${element.durability}]] %</div>
+                                        </span>
+                                        <span th:if="${element.health == 'yellow'}">
+                                             <div class="yellow">[[${element.durability}]] %</div>
+                                        </span>
+                                        <span th:if="${element.health == 'red'}">
+                                             <div class="red">[[${element.durability}]] %</div>
+                                        </span>
+                                    </div>
                                 </td>
                             </tr>
                         </div>
