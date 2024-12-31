@@ -29,47 +29,52 @@
                   align-content: center; height: 3rem; table-layout: fixed">
 
                 <tr class="text-light fs-7" style="background-color: #62a0f6">
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                         ; width: 5rem">
                         ID
                     </th>
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 4rem">
+                        ; width: 5rem">
                         Тип
                     </th>
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                         ; width: 14rem">
                         Название
                     </th>
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 23rem">
+                        ; width: 15rem">
                         Описание
                     </th>
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
-                        ; width: 9rem">
+                        ; width: 10rem">
                         Инв.номер
                     </th>
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class="text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                        ; width: 10rem">
+                        С/Н
+                    </th>
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                         ; width: 5rem">
                         Износ
                     </th>
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                         ; width: 5rem">
                         Каб.
                     </th>
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                         ; width: 7rem">
                         Выдано
                     </th>
-                    <th class="p-2 m-2 text-center align-self-center"
+                    <th class=" text-center align-self-center"
                         style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                         ; width: 7rem">
                         МОЛ
@@ -103,7 +108,11 @@
                                     <div>[[${element.inventory}]]</div>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 5rem">
+                                    style="width: 10rem">
+                                    <div>[[${element.serial}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 7rem">
                                     <form action="/findrepair" method="post">
                                         <input type="hidden" name="id" th:value="${element.repair.id}"/>
                                         <button type="submit" class="text-decoration-none"

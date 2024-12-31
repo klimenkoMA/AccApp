@@ -49,7 +49,8 @@ class DevicesControllerTest {
     private Room room;
     private Employee employee;
     private ITStaff itstaff;
-    DeviceCategory category;
+    private DeviceCategory category;
+    private String serial;
 
     {
         // Arrange: Подготовка данных для теста
@@ -58,6 +59,7 @@ class DevicesControllerTest {
         deviceId = "1";
         description = "Нет-топ для сотрудников IT-отдела";
         inventory = 111111L;
+        serial = "A165652-07";
         room = new Room();
         employee = new Employee();
         itstaff = new ITStaff();
@@ -65,6 +67,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , inventory
+                , serial
                 , room
                 , employee
                 , itstaff);
@@ -117,6 +120,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , inventory + ""
+                , serial
                 , room
                 , employee
                 , itstaff
@@ -129,6 +133,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , inventory
+                , serial
                 , room
                 , employee
                 , itstaff));
@@ -145,6 +150,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , " "
+                , serial
                 , room
                 , employee
                 , itstaff
@@ -158,6 +164,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , -1L
+                , serial
                 , room
                 , employee
                 , itstaff));
@@ -218,6 +225,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , inventory
+                , serial
                 , room
                 , employee
                 , itstaff);
@@ -231,6 +239,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , inventory + ""
+                , serial
                 , room
                 , employee
                 , itstaff
@@ -254,6 +263,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , " "
+                , serial
                 , room
                 , employee
                 , itstaff
@@ -267,6 +277,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , -1L
+                , serial
                 , room
                 , employee
                 , itstaff));  // метод не должен быть вызван
@@ -285,6 +296,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , " "
+                , serial
                 , room
                 , employee
                 , itstaff
@@ -298,6 +310,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , -1L
+                , serial
                 , room
                 , employee
                 , itstaff));  // метод не должен быть вызван
@@ -317,6 +330,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , -1L
+                , serial
                 , room
                 , employee
                 , itstaff));  // метод не должен быть вызван
@@ -368,6 +382,7 @@ class DevicesControllerTest {
                 , deviceName
                 , description
                 , inventory
+                , serial
                 , room
                 , employee
                 , itstaff);

@@ -46,14 +46,16 @@ class EventsControllerTest {
     private Room room;
     private Employee employee;
     private ITStaff itstaff;
-    DeviceCategory category;
-    Profession profession;
+    private DeviceCategory category;
+    private Profession profession;
+    private String serial;
 
     {
         category = DeviceCategory.Компьютер;
         profession = Profession.Преподаватель;
         description = "Description";
         inventory = 111111L;
+        serial = "SdSd233445t";
         room = new Room();
         employee = new Employee();
         itstaff = new ITStaff();
@@ -90,6 +92,7 @@ class EventsControllerTest {
                 , "Kyocera"
                 , description
                 , inventory
+                , serial
                 , room
                 , emp1
                 , it1);
@@ -98,6 +101,7 @@ class EventsControllerTest {
                 , "HP"
                 , description
                 , inventory
+                , serial
                 , room
                 , emp2
                 , it1);
@@ -106,6 +110,7 @@ class EventsControllerTest {
                 , "Acer"
                 , description
                 , inventory
+                , serial
                 , room
                 , emp3
                 , it2);
@@ -169,6 +174,7 @@ class EventsControllerTest {
                         , deviceWithoutSpaces
                         , description
                         , inventory
+                        , serial
                         , room
                         , employee
                         , itstaff)
@@ -203,6 +209,7 @@ class EventsControllerTest {
                 , deviceWithoutSpaces
                 , description
                 , inventory
+                , serial
                 , room
                 , employee
                 , itstaff),
@@ -221,6 +228,7 @@ class EventsControllerTest {
                         , deviceWithoutSpaces
                         , description
                         , inventory
+                        , serial
                         , room
                         , employee
                         , itstaff)
@@ -302,6 +310,7 @@ class EventsControllerTest {
                 , deviceWithoutSpaces
                 , description
                 , inventory
+                , serial
                 , room
                 , employee
                 , itstaff),
@@ -323,6 +332,7 @@ class EventsControllerTest {
                         , deviceWithoutSpaces
                         , description
                         , inventory
+                        , serial
                         , room
                         , employee
                         , itstaff)
@@ -359,6 +369,7 @@ class EventsControllerTest {
                 , deviceWithoutSpaces
                 , description
                 , inventory
+                , serial
                 , room
                 , employee
                 , itstaff),
@@ -380,6 +391,7 @@ class EventsControllerTest {
                         , deviceWithoutSpaces
                         , description
                         , inventory
+                        , serial
                         , room
                         , employee
                         , itstaff)
@@ -419,6 +431,7 @@ class EventsControllerTest {
                 , deviceWithoutSpaces
                 , description
                 , inventory
+                , serial
                 , room
                 , employee
                 , itstaff),
