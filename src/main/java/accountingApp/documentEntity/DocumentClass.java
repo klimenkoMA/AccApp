@@ -6,7 +6,12 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PostPersist;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Класс-объект, описывающий документ, который будет храниться в БД
@@ -35,11 +40,15 @@ public class DocumentClass extends MultipartFileAdapter {
     @Indexed
     private String contentType;
 
+    @Field
+    private static long idForView = 100;
+
     public DocumentClass(String name, byte[] content, String description, String contentType) {
         this.name = name;
         this.content = content;
         this.description = description;
         this.contentType = contentType;
+        idForView++;
     }
 
     public DocumentClass(ObjectId id, String name, byte[] content, String description, String contentType) {
@@ -53,9 +62,18 @@ public class DocumentClass extends MultipartFileAdapter {
     public DocumentClass(byte[] content, String contentType) {
         this.content = content;
         this.contentType = contentType;
+        idForView++;
     }
 
     public DocumentClass() {
+    }
+
+    public long getIdForView() {
+        return idForView;
+    }
+
+    public void setIdForView(long idForView) {
+        this.idForView = idForView;
     }
 
     public String getContentType() {
