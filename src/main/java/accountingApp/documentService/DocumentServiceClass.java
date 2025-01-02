@@ -26,6 +26,7 @@ public class DocumentServiceClass {
 
     public void addDocument(DocumentClass doc) {
         documentRepositoryClass.save(doc);
+
     }
 
     public void deleteDocument(DocumentClass doc) {
