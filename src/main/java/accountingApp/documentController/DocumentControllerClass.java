@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -47,9 +48,8 @@ public class DocumentControllerClass {
                                  @RequestParam String description,
                                  Model model) {
 
-        if (
-                content == null
-                        || description == null
+        if (content == null
+                || description == null
         ) {
             logger.warn("*** DocumentControllerClass.addNewDocument():" +
                     "  Attribute has a null value! ***");
@@ -61,9 +61,12 @@ public class DocumentControllerClass {
         try {
             if (
                     !content.isEmpty()
-                            && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
-                DocumentClass document = new DocumentClass(content.getOriginalFilename(), content.getBytes()
-                        , description, content.getContentType());
+                            && !descriptionWithoutSpaces.equals("")
+                            && !descriptionWithoutSpaces.equals(" ")) {
+                DocumentClass document = new DocumentClass(content.getOriginalFilename()
+                        , content.getBytes()
+                        , description
+                        , content.getContentType());
                 documentServiceClass.addDocument(document);
                 return getDocument(model);
             }
@@ -90,7 +93,8 @@ public class DocumentControllerClass {
         try {
             if (!nameWithoutSpaces.equals("") && !nameWithoutSpaces.equals(" ")) {
 
-                DocumentClass document = documentServiceClass.findDocumentById(name);
+                String realId = getIdFromMap(Long.parseLong(nameWithoutSpaces));
+                DocumentClass document = documentServiceClass.findDocumentById(realId);
                 documentServiceClass.deleteDocument(document);
                 return getDocument(model);
             }
@@ -220,6 +224,29 @@ public class DocumentControllerClass {
                     "  WRONG DB VALUES*** " + e.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
+    }
+
+    private String getIdFromMap(long id){
+        List<DocumentClass> classList = documentServiceClass.findAllDocuments();
+        if (classList.isEmpty()){
+            logger.error("*** DocumentControllerClass.getIdFromMap():" +
+                    "  WRONG DB VALUES*** ");
+            return null;
+        }
+        String objectId = "";
+        for (DocumentClass doc: classList
+             ) {
+            Map<ObjectId, Long> idLongMap = doc.getIdMap();
+            for (Map.Entry<ObjectId, Long> entry: idLongMap.entrySet()
+                 ) {
+                if (entry.getValue() == id){
+                    objectId = entry.getKey().toString();
+                    System.out.println(objectId);
+                    break;
+                }
+            }
+        }
+        return objectId;
     }
 
 }

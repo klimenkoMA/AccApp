@@ -6,10 +6,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PostPersist;
+import javax.persistence.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,6 +39,9 @@ public class DocumentClass extends MultipartFileAdapter {
 
     @Field
     private static long idForView = 100;
+    @Field
+    private Long idCount;
+    private Map<ObjectId, Long> idMap = new HashMap<>();
 
     public DocumentClass(String name, byte[] content, String description, String contentType) {
         this.name = name;
@@ -49,6 +49,7 @@ public class DocumentClass extends MultipartFileAdapter {
         this.description = description;
         this.contentType = contentType;
         idForView++;
+        idCount = idForView;
     }
 
     public DocumentClass(ObjectId id, String name, byte[] content, String description, String contentType) {
@@ -63,9 +64,29 @@ public class DocumentClass extends MultipartFileAdapter {
         this.content = content;
         this.contentType = contentType;
         idForView++;
+        idCount = idForView;
     }
 
     public DocumentClass() {
+    }
+
+    @PostPersist
+    public void postPersist(){
+        idMap.put(id, idCount);
+    }
+
+    public Map<ObjectId, Long> getIdMap() {
+        return idMap;
+    }
+
+
+
+    public Long getIdCount() {
+        return idCount;
+    }
+
+    public void setIdCount(Long idCount) {
+        this.idCount = idCount;
     }
 
     public long getIdForView() {
