@@ -58,6 +58,8 @@ public class DocumentClass extends MultipartFileAdapter {
         this.content = content;
         this.description = description;
         this.contentType = contentType;
+        idForView++;
+        idCount = idForView;
     }
 
     public DocumentClass(byte[] content, String contentType) {
@@ -79,7 +81,9 @@ public class DocumentClass extends MultipartFileAdapter {
         return idMap;
     }
 
-
+    public void setIdMap(Map<ObjectId, Long> idMap) {
+        this.idMap = idMap;
+    }
 
     public Long getIdCount() {
         return idCount;

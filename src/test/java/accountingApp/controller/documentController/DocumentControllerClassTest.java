@@ -76,7 +76,7 @@ class DocumentControllerClassTest {
 
         verify(model).addAttribute("documentClassList", documentClassList);
 
-        verify(documentService).addDocument(any(DocumentClass.class));
+        verify(documentService, times(2)).addDocument(any(DocumentClass.class));
 
     }
 

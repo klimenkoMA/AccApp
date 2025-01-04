@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -68,6 +69,13 @@ public class DocumentControllerClass {
                         , description
                         , content.getContentType());
                 documentServiceClass.addDocument(document);
+                ObjectId objectId = document.getId();
+                Long idCount = document.getIdCount();
+                Map<ObjectId, Long> idLongMap = new HashMap<>();
+                idLongMap.put(objectId, idCount);
+                document.setIdMap(idLongMap);
+                documentServiceClass.addDocument(document);
+
                 return getDocument(model);
             }
             throw new Exception("Attribute is empty!");
@@ -226,22 +234,23 @@ public class DocumentControllerClass {
         }
     }
 
-    private String getIdFromMap(long id){
+    private String getIdFromMap(long id) {
+
         List<DocumentClass> classList = documentServiceClass.findAllDocuments();
-        if (classList.isEmpty()){
+        if (classList.isEmpty()) {
             logger.error("*** DocumentControllerClass.getIdFromMap():" +
                     "  WRONG DB VALUES*** ");
             return null;
         }
         String objectId = "";
-        for (DocumentClass doc: classList
-             ) {
+        for (DocumentClass doc : classList
+        ) {
             Map<ObjectId, Long> idLongMap = doc.getIdMap();
-            for (Map.Entry<ObjectId, Long> entry: idLongMap.entrySet()
-                 ) {
-                if (entry.getValue() == id){
+
+            for (Map.Entry<ObjectId, Long> entry : idLongMap.entrySet()
+            ) {
+                if (entry.getValue() == id) {
                     objectId = entry.getKey().toString();
-                    System.out.println(objectId);
                     break;
                 }
             }
