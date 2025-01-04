@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-01.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-02.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-25.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-26.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentController/DocumentControllerClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/documentEntity/DocumentClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/documents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/documentController/DocumentControllerClassTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentController/DocumentControllerClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/documentEntity/DocumentClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -472,6 +471,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DocumentControllerClassTest.addDocumentValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.documentController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller.documentController" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.documentController.DocumentControllerClassTest" />
+      <option name="METHOD_NAME" value="addDocumentValid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EventsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -489,28 +509,6 @@
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.EventsControllerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EventsControllerTest,updateEventsFailWithException and 4 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="accountingApp.controller.EventsControllerTest,updateEventsFailWithException" />
-        <pattern testClass="accountingApp.controller.EventsControllerTest,updateEventsSuccess" />
-        <pattern testClass="accountingApp.controller.EventsControllerTest,updateEventsFail" />
-        <pattern testClass="accountingApp.controller.EventsControllerTest,addEventsFail" />
-        <pattern testClass="accountingApp.controller.EventsControllerTest,addEventsSuccess" />
-      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -585,19 +583,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="JUnit.DevicesControllerTest" />
-      <item itemvalue="JUnit.EventsControllerTest,updateEventsFailWithException and 4 more" />
       <item itemvalue="JUnit.RoomControllerTest.deleteRoomValid" />
       <item itemvalue="JUnit.DevicesControllerTest.testDeleteDeviceSuccess" />
       <item itemvalue="Spring Boot.AccountingApplication" />
       <item itemvalue="JUnit.EventsControllerTest" />
+      <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentValid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DocumentControllerClassTest.addDocumentValid" />
         <item itemvalue="JUnit.EventsControllerTest" />
         <item itemvalue="JUnit.DevicesControllerTest" />
         <item itemvalue="JUnit.DevicesControllerTest.testDeleteDeviceSuccess" />
         <item itemvalue="JUnit.RoomControllerTest.deleteRoomValid" />
-        <item itemvalue="JUnit.EventsControllerTest,updateEventsFailWithException and 4 more" />
       </list>
     </recent_temporary>
   </component>
@@ -894,14 +892,7 @@
       <workItem from="1734283499339" duration="1308000" />
       <workItem from="1734344343179" duration="43093000" />
       <workItem from="1734585034549" duration="67813000" />
-      <workItem from="1735135080900" duration="121939000" />
-    </task>
-    <task id="LOCAL-00414" summary="Corrected CustomUserDetailService.java v2">
-      <created>1732042437135</created>
-      <option name="number" value="00414" />
-      <option name="presentableId" value="LOCAL-00414" />
-      <option name="project" value="LOCAL" />
-      <updated>1732042437135</updated>
+      <workItem from="1735135080900" duration="129794000" />
     </task>
     <task id="LOCAL-00415" summary="Added getUsers() method in SecurityControllerClass">
       <created>1732071746341</created>
@@ -1239,7 +1230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1735801674552</updated>
     </task>
-    <option name="localTasksCounter" value="463" />
+    <task id="LOCAL-00463" summary="Added new attribute 'idForView' in devices.html v2">
+      <created>1735887125768</created>
+      <option name="number" value="00463" />
+      <option name="presentableId" value="LOCAL-00463" />
+      <option name="project" value="LOCAL" />
+      <updated>1735887125768</updated>
+    </task>
+    <option name="localTasksCounter" value="464" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1262,7 +1260,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt CustomUserDetailsService" />
     <MESSAGE value="Added Checker class for checking different attributes" />
     <MESSAGE value="Rebuilt SecurityControllerClass" />
     <MESSAGE value="Rebuilt DevicesController.class" />
@@ -1287,7 +1284,8 @@
     <MESSAGE value="Rebuilt devices.repair column in devices.html v2" />
     <MESSAGE value="Added new attribute 'serial' in devices.html" />
     <MESSAGE value="Added new attribute 'idForView' in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new attribute 'idForView' in devices.html" />
+    <MESSAGE value="Added new attribute 'idForView' in devices.html v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new attribute 'idForView' in devices.html v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
