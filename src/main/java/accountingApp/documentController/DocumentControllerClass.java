@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -70,10 +67,14 @@ public class DocumentControllerClass {
                         , content.getContentType());
                 documentServiceClass.addDocument(document);
                 ObjectId objectId = document.getId();
-                Long idCount = document.getIdCount();
+                Set<ObjectId> objectIdSet = DocumentClass.getIdForViewSet();
+                objectIdSet.add(objectId);
+                Long idCount = Long.parseLong(objectIdSet.size() + "");
                 Map<ObjectId, Long> idLongMap = new HashMap<>();
                 idLongMap.put(objectId, idCount);
                 document.setIdMap(idLongMap);
+                document.setIdCount(idCount);
+                DocumentClass.setIdForViewSet(objectIdSet);
                 documentServiceClass.addDocument(document);
 
                 return getDocument(model);
@@ -149,7 +150,8 @@ public class DocumentControllerClass {
             if (!idWithoutSpaces.equals("") && !idWithoutSpaces.equals(" ")
                     && !content.isEmpty()
                     && !descriptionWithoutSpaces.equals("") && !descriptionWithoutSpaces.equals(" ")) {
-                DocumentClass documentFromBD = documentServiceClass.findDocumentById(idWithoutSpaces);
+                String realId = getIdFromMap(Long.parseLong(idWithoutSpaces));
+                DocumentClass documentFromBD = documentServiceClass.findDocumentById(realId);
                 if (documentFromBD != null) {
 
                     DocumentClass documentToBD = new DocumentClass();
@@ -184,7 +186,9 @@ public class DocumentControllerClass {
 
         try {
             if (!nameWithoutSpaces.isEmpty()) {
-                DocumentClass document = documentServiceClass.findDocumentById(name);
+                String realId = getIdFromMap(Long.parseLong(nameWithoutSpaces));
+                DocumentClass document = documentServiceClass.findDocumentById(realId);
+
                 List<DocumentClass> documentClassList = new ArrayList<>();
                 documentClassList.add(document);
                 model.addAttribute("documentClassList", documentClassList);
