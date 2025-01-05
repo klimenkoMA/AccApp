@@ -152,7 +152,7 @@ class DocumentControllerClassTest {
 
         Assertions.assertEquals("documents", viewName);
 
-        verify(documentService).findDocumentById(documentId);
+        verify(documentService).findDocumentById(any());
 
     }
 

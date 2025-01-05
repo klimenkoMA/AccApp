@@ -8,7 +8,9 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import javax.persistence.*;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Класс-объект, описывающий документ, который будет храниться в БД
@@ -38,7 +40,7 @@ public class DocumentClass extends MultipartFileAdapter {
     private String contentType;
 
     @Field
-    private static long idForView = 100;
+    private static Set<ObjectId> idForViewSet = new HashSet<>();
     @Field
     private Long idCount;
     private Map<ObjectId, Long> idMap = new HashMap<>();
@@ -48,8 +50,7 @@ public class DocumentClass extends MultipartFileAdapter {
         this.content = content;
         this.description = description;
         this.contentType = contentType;
-        idForView++;
-        idCount = idForView;
+        idCount = Long.parseLong(idForViewSet.size() + "");
     }
 
     public DocumentClass(ObjectId id, String name, byte[] content, String description, String contentType) {
@@ -58,15 +59,13 @@ public class DocumentClass extends MultipartFileAdapter {
         this.content = content;
         this.description = description;
         this.contentType = contentType;
-        idForView++;
-        idCount = idForView;
+        idCount = Long.parseLong(idForViewSet.size() + "");
     }
 
     public DocumentClass(byte[] content, String contentType) {
         this.content = content;
         this.contentType = contentType;
-        idForView++;
-        idCount = idForView;
+        idCount = Long.parseLong(idForViewSet.size() + "");
     }
 
     public DocumentClass() {
@@ -93,12 +92,12 @@ public class DocumentClass extends MultipartFileAdapter {
         this.idCount = idCount;
     }
 
-    public long getIdForView() {
-        return idForView;
+    public static Set<ObjectId> getIdForViewSet() {
+        return idForViewSet;
     }
 
-    public void setIdForView(long idForView) {
-        this.idForView = idForView;
+    public static void setIdForViewSet(Set<ObjectId> idForViewSet) {
+        DocumentClass.idForViewSet = idForViewSet;
     }
 
     public String getContentType() {
