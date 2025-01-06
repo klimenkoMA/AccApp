@@ -1,5 +1,6 @@
 package accountingApp.controller;
 
+import accountingApp.documentEntity.DocumentClass;
 import accountingApp.entity.Feedback;
 import accountingApp.service.FeedbackService;
 import accountingApp.usefulmethods.Checker;
@@ -13,8 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class FeedbackController {
@@ -44,7 +44,7 @@ public class FeedbackController {
                 || checker.checkAttribute(message)
         ) {
             logger.warn("*** FeedbackController.addNewFeedback():  Attribute has a null value! ***");
-            return "main";
+            return getFeedbacks(model);
         }
 
         try {
@@ -58,13 +58,38 @@ public class FeedbackController {
             ) {
                 Feedback feedback = new Feedback(name, email, message);
                 feedbackService.addFeedback(feedback);
-                return "main";
+
+                ObjectId objectId = feedback.getId();
+                long idCount = 1L;
+
+                List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
+                Set<Long> idSet = new HashSet<>();
+
+                for (Feedback fb : feedbackList
+                ) {
+                    idSet.add(fb.getIdCount());
+                }
+
+                for (long i = 1; i < idSet.size() + 1_000_000_000_000_000_000L; i++) {
+                    if (!idSet.contains(i)) {
+                        idCount = i;
+                        break;
+                    }
+                }
+
+                Map<ObjectId, Long> idLongMap = new HashMap<>();
+                idLongMap.put(objectId, idCount);
+                feedback.setIdMap(idLongMap);
+                feedback.setIdCount(idCount);
+                feedbackService.addFeedback(feedback);
+
+                return getFeedbacks(model);
             }
             throw new Exception("Attribute is empty!");
         } catch (Exception e) {
             logger.error("*** FeedbackController.addNewFeedback(): wrong DB's values! *** "
                     + e.getMessage());
-            return "main";
+            return getFeedbacks(model);
         }
     }
 
@@ -80,11 +105,12 @@ public class FeedbackController {
 
         try {
             String idWithoutSpaces = id.trim();
+            String realId = getIdFromMap(Long.parseLong(idWithoutSpaces));
             List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
             Feedback feedback = new Feedback();
 
             for (Feedback feedback1 : feedbackList) {
-                if (feedback1.getId().toString().equals(idWithoutSpaces)) {
+                if (feedback1.getId().toString().equals(realId)) {
                     feedback = feedback1;
                     break;
                 }
@@ -126,8 +152,16 @@ public class FeedbackController {
                     && !checker.checkAttribute(emailWithoutSpaces)
                     && !checker.checkAttribute(messageWithoutSpaces)
             ) {
-                Feedback feedback = new Feedback(new ObjectId(idWithoutSpaces), nameWithoutSpaces
-                        , emailWithoutSpaces, messageWithoutSpaces);
+                String realId = getIdFromMap(Long.parseLong(idWithoutSpaces));
+                assert realId != null;
+                Feedback fbFromBD = feedbackService.findFeedbackById(realId);
+                Feedback feedback = new Feedback(new ObjectId(realId)
+                        , nameWithoutSpaces
+                        , emailWithoutSpaces
+                        , messageWithoutSpaces);
+                feedback.setIdCount(fbFromBD.getIdCount());
+                feedback.setIdMap(fbFromBD.getIdMap());
+
                 feedbackService.addFeedback(feedback);
                 return getFeedbacks(model);
             }
@@ -150,7 +184,8 @@ public class FeedbackController {
         }
 
         try {
-            Feedback feedback = feedbackService.findFeedbackById(id);
+            String realId = getIdFromMap(Long.parseLong(id));
+            Feedback feedback = feedbackService.findFeedbackById(realId);
 
             List<Feedback> feedbackList = new ArrayList<>();
             feedbackList.add(feedback);
@@ -161,5 +196,29 @@ public class FeedbackController {
                     + e.getMessage());
             return getFeedbacks(model);
         }
+    }
+
+    private String getIdFromMap(long id) {
+
+        List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
+        if (feedbackList.isEmpty()) {
+            logger.error("*** FeedbackController.getIdFromMap():" +
+                    "  WRONG DB VALUES*** ");
+            return null;
+        }
+        String objectId = "";
+        for (Feedback fb : feedbackList
+        ) {
+            Map<ObjectId, Long> idLongMap = fb.getIdMap();
+
+            for (Map.Entry<ObjectId, Long> entry : idLongMap.entrySet()
+            ) {
+                if (entry.getValue() == id) {
+                    objectId = entry.getKey().toString();
+                    break;
+                }
+            }
+        }
+        return objectId;
     }
 }

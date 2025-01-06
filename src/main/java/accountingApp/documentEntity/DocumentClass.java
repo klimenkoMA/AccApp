@@ -38,11 +38,9 @@ public class DocumentClass extends MultipartFileAdapter {
     @Field
     @Indexed
     private String contentType;
-
-    @Field
-    private static Set<ObjectId> idForViewSet = new HashSet<>();
     @Field
     private Long idCount;
+    @Field
     private Map<ObjectId, Long> idMap = new HashMap<>();
 
     public DocumentClass(String name, byte[] content, String description, String contentType) {
@@ -50,7 +48,6 @@ public class DocumentClass extends MultipartFileAdapter {
         this.content = content;
         this.description = description;
         this.contentType = contentType;
-        idCount = Long.parseLong(idForViewSet.size() + "");
     }
 
     public DocumentClass(ObjectId id, String name, byte[] content, String description, String contentType) {
@@ -59,13 +56,11 @@ public class DocumentClass extends MultipartFileAdapter {
         this.content = content;
         this.description = description;
         this.contentType = contentType;
-        idCount = Long.parseLong(idForViewSet.size() + "");
     }
 
     public DocumentClass(byte[] content, String contentType) {
         this.content = content;
         this.contentType = contentType;
-        idCount = Long.parseLong(idForViewSet.size() + "");
     }
 
     public DocumentClass() {
@@ -90,14 +85,6 @@ public class DocumentClass extends MultipartFileAdapter {
 
     public void setIdCount(Long idCount) {
         this.idCount = idCount;
-    }
-
-    public static Set<ObjectId> getIdForViewSet() {
-        return idForViewSet;
-    }
-
-    public static void setIdForViewSet(Set<ObjectId> idForViewSet) {
-        DocumentClass.idForViewSet = idForViewSet;
     }
 
     public String getContentType() {
