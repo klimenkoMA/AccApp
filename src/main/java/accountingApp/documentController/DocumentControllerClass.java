@@ -66,15 +66,29 @@ public class DocumentControllerClass {
                         , description
                         , content.getContentType());
                 documentServiceClass.addDocument(document);
+
                 ObjectId objectId = document.getId();
-                Set<ObjectId> objectIdSet = DocumentClass.getIdForViewSet();
-                objectIdSet.add(objectId);
-                Long idCount = Long.parseLong(objectIdSet.size() + "");
+                long idCount = 1L;
+
+                List<DocumentClass> documentClassList = documentServiceClass.findAllDocuments();
+                Set<Long> idSet = new HashSet<>();
+
+                for (DocumentClass doc : documentClassList
+                ) {
+                    idSet.add(doc.getIdCount());
+                }
+
+                for (long i = 1; i < idSet.size() + 1_000_000_000_000_000_000L; i++) {
+                    if (!idSet.contains(i)) {
+                        idCount = i;
+                        break;
+                    }
+                }
+
                 Map<ObjectId, Long> idLongMap = new HashMap<>();
                 idLongMap.put(objectId, idCount);
                 document.setIdMap(idLongMap);
                 document.setIdCount(idCount);
-                DocumentClass.setIdForViewSet(objectIdSet);
                 documentServiceClass.addDocument(document);
 
                 return getDocument(model);
@@ -155,11 +169,14 @@ public class DocumentControllerClass {
                 if (documentFromBD != null) {
 
                     DocumentClass documentToBD = new DocumentClass();
-                    documentToBD.setId(new ObjectId(idWithoutSpaces));
-                    documentToBD.setName(documentFromBD.getOriginalFilename());
+                    assert realId != null;
+                    documentToBD.setName(content.getOriginalFilename());
+                    documentToBD.setIdMap(documentFromBD.getIdMap());
+                    documentToBD.setIdCount(documentFromBD.getIdCount());
+                    documentToBD.setId(new ObjectId(realId));
                     documentToBD.setContent(content.getBytes());
                     documentToBD.setDescription(descriptionWithoutSpaces);
-                    documentToBD.setContentType(documentFromBD.getContentType());
+                    documentToBD.setContentType(content.getContentType());
                     documentServiceClass.addDocument(documentToBD);
                     return getDocument(model);
                 }
