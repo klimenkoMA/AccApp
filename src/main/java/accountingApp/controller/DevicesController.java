@@ -1,10 +1,7 @@
 package accountingApp.controller;
 
 import accountingApp.entity.*;
-import accountingApp.service.DevicesService;
-import accountingApp.service.EmployeeService;
-import accountingApp.service.ITStaffService;
-import accountingApp.service.RoomService;
+import accountingApp.service.*;
 import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
