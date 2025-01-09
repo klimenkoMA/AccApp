@@ -1,161 +1,20 @@
-2025-01-06 19:58:46.716 ERROR 21532 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-06 19:58:46.797 ERROR 21532 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-06 19:58:46.904 ERROR 21532 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-06 19:58:46.924  WARN 21532 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-06 19:58:46.931  WARN 21532 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-06 19:58:46.941 ERROR 21532 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 19:58:46.949 ERROR 21532 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 19:58:46.963 ERROR 21532 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 19:58:47.057 ERROR 21532 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 19:58:47.077 ERROR 21532 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-06 19:58:47.083 ERROR 21532 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-06 19:58:47.089  WARN 21532 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-06 19:58:47.110  WARN 21532 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-06 19:58:47.111 ERROR 21532 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 19:58:47.221 ERROR 21532 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-06 19:58:47.234  WARN 21532 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-06 20:04:25.421 ERROR 26376 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-06 20:04:25.520  WARN 26376 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-06 20:04:25.550  WARN 26376 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-06 20:04:25.573 ERROR 26376 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:04:25.584 ERROR 26376 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:04:25.609 ERROR 26376 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:04:25.739 ERROR 26376 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 20:04:25.766 ERROR 26376 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-06 20:04:25.777 ERROR 26376 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-06 20:04:25.783  WARN 26376 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-06 20:04:25.805  WARN 26376 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-06 20:04:25.805 ERROR 26376 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 20:04:25.943 ERROR 26376 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-06 20:04:25.975  WARN 26376 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-06 20:05:59.460 ERROR 17004 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-06 20:05:59.551  WARN 17004 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-06 20:05:59.568  WARN 17004 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-06 20:05:59.592 ERROR 17004 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:05:59.602 ERROR 17004 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:05:59.631 ERROR 17004 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:05:59.766 ERROR 17004 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 20:05:59.802 ERROR 17004 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-06 20:05:59.810 ERROR 17004 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-06 20:05:59.822  WARN 17004 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-06 20:05:59.851  WARN 17004 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-06 20:05:59.852 ERROR 17004 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 20:05:59.995 ERROR 17004 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-06 20:06:00.023  WARN 17004 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-06 20:06:13.976  WARN 16852 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-06 20:06:23.930  WARN 16852 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-06 20:06:23.990  WARN 16852 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-06 20:06:23.991  WARN 16852 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-01-06 20:06:24.346  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Canon 334Lb was updated!
-2025-01-06 20:06:24.460  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Бизер was updated!
-2025-01-06 20:06:24.481  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Ирбис was updated!
-2025-01-06 20:06:24.498  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Acer v223HQ was updated!
-2025-01-06 20:06:24.510  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Lenovo was updated!
-2025-01-06 20:06:24.521  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device HP was updated!
-2025-01-06 20:06:24.528  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device BenQ was updated!
-2025-01-06 20:06:24.538  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Acer was updated!
-2025-01-06 20:06:24.548  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Asus was updated!
-2025-01-06 20:06:24.557  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Kyocera was updated!
-2025-01-06 20:06:24.566  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Hiper was updated!
-2025-01-06 20:06:24.576  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Sven was updated!
-2025-01-06 20:06:24.583  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Самсунг was updated!
-2025-01-06 20:06:24.592  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Benque was updated!
-2025-01-06 20:06:24.599  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Samsung v12 was updated!
-2025-01-06 20:06:38.018  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Canon 334Lb was updated!
-2025-01-06 20:06:38.029  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Бизер was updated!
-2025-01-06 20:06:38.035  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Ирбис was updated!
-2025-01-06 20:06:38.043  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Acer v223HQ was updated!
-2025-01-06 20:06:38.049  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Lenovo was updated!
-2025-01-06 20:06:38.059  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device HP was updated!
-2025-01-06 20:06:38.067  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device BenQ was updated!
-2025-01-06 20:06:38.081  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Acer was updated!
-2025-01-06 20:06:38.088  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Asus was updated!
-2025-01-06 20:06:38.094  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Kyocera was updated!
-2025-01-06 20:06:38.099  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Hiper was updated!
-2025-01-06 20:06:38.107  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Sven was updated!
-2025-01-06 20:06:38.115  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Самсунг was updated!
-2025-01-06 20:06:38.123  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Benque was updated!
-2025-01-06 20:06:38.129  WARN 16852 --- [http-nio-8080-exec-3] accountingApp.service.RepairService      : Repair with device Samsung v12 was updated!
-2025-01-06 20:06:47.990  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Canon 334Lb was updated!
-2025-01-06 20:06:47.995  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Бизер was updated!
-2025-01-06 20:06:48.001  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Ирбис was updated!
-2025-01-06 20:06:48.009  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Acer v223HQ was updated!
-2025-01-06 20:06:48.015  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Lenovo was updated!
-2025-01-06 20:06:48.022  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device HP was updated!
-2025-01-06 20:06:48.027  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device BenQ was updated!
-2025-01-06 20:06:48.031  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Acer was updated!
-2025-01-06 20:06:48.040  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Asus was updated!
-2025-01-06 20:06:48.045  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Kyocera was updated!
-2025-01-06 20:06:48.050  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Hiper was updated!
-2025-01-06 20:06:48.058  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Sven was updated!
-2025-01-06 20:06:48.062  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Самсунг was updated!
-2025-01-06 20:06:48.067  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Benque was updated!
-2025-01-06 20:06:48.074  WARN 16852 --- [http-nio-8080-exec-6] accountingApp.service.RepairService      : Repair with device Samsung v12 was updated!
-2025-01-06 20:07:53.046  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Canon 334Lb was updated!
-2025-01-06 20:07:53.051  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Бизер was updated!
-2025-01-06 20:07:53.058  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Ирбис was updated!
-2025-01-06 20:07:53.063  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Acer v223HQ was updated!
-2025-01-06 20:07:53.068  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Lenovo was updated!
-2025-01-06 20:07:53.075  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device HP was updated!
-2025-01-06 20:07:53.079  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device BenQ was updated!
-2025-01-06 20:07:53.086  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Acer was updated!
-2025-01-06 20:07:53.091  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Asus was updated!
-2025-01-06 20:07:53.095  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Kyocera was updated!
-2025-01-06 20:07:53.100  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Hiper was updated!
-2025-01-06 20:07:53.107  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Sven was updated!
-2025-01-06 20:07:53.111  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Самсунг was updated!
-2025-01-06 20:07:53.116  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Benque was updated!
-2025-01-06 20:07:53.122  WARN 16852 --- [http-nio-8080-exec-9] accountingApp.service.RepairService      : Repair with device Samsung v12 was updated!
-2025-01-06 20:08:04.560  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Canon 334Lb was updated!
-2025-01-06 20:08:04.565  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Бизер was updated!
-2025-01-06 20:08:04.569  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Ирбис was updated!
-2025-01-06 20:08:04.576  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Acer v223HQ was updated!
-2025-01-06 20:08:04.580  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Lenovo was updated!
-2025-01-06 20:08:04.589  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device HP was updated!
-2025-01-06 20:08:04.593  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device BenQ was updated!
-2025-01-06 20:08:04.597  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Acer was updated!
-2025-01-06 20:08:04.601  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Asus was updated!
-2025-01-06 20:08:04.609  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Kyocera was updated!
-2025-01-06 20:08:04.613  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Hiper was updated!
-2025-01-06 20:08:04.618  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Sven was updated!
-2025-01-06 20:08:04.624  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Самсунг was updated!
-2025-01-06 20:08:04.629  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Benque was updated!
-2025-01-06 20:08:04.633  WARN 16852 --- [http-nio-8080-exec-5] accountingApp.service.RepairService      : Repair with device Samsung v12 was updated!
-2025-01-06 20:09:41.846 ERROR 22384 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-06 20:09:41.978  WARN 22384 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-06 20:09:41.991  WARN 22384 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-06 20:09:42.008 ERROR 22384 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:09:42.022 ERROR 22384 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:09:42.042 ERROR 22384 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:09:42.190 ERROR 22384 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 20:09:42.211 ERROR 22384 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-06 20:09:42.220 ERROR 22384 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-06 20:09:42.227  WARN 22384 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-06 20:09:42.247  WARN 22384 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-06 20:09:42.248 ERROR 22384 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 20:09:42.349 ERROR 22384 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-06 20:09:42.375  WARN 22384 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-06 20:10:03.740  WARN 14392 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-06 20:12:10.307  WARN 14392 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-06 20:12:10.381  WARN 14392 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-06 20:12:10.382  WARN 14392 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-01-06 20:14:26.733 ERROR 3360 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-06 20:14:26.775 ERROR 3360 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-06 20:14:26.826 ERROR 3360 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-06 20:14:26.862  WARN 3360 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-06 20:14:26.879  WARN 3360 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-06 20:14:26.892 ERROR 3360 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:14:26.902 ERROR 3360 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:14:26.918 ERROR 3360 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-06 20:14:27.040 ERROR 3360 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 20:14:27.091 ERROR 3360 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-06 20:14:27.102 ERROR 3360 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-06 20:14:27.128  WARN 3360 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-06 20:14:27.176  WARN 3360 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-06 20:14:27.178 ERROR 3360 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-06 20:14:27.369 ERROR 3360 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-06 20:14:27.393  WARN 3360 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-06 20:14:45.426  WARN 24812 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-06 20:15:28.613  WARN 24812 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-06 20:15:28.674  WARN 24812 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-06 20:15:28.675  WARN 24812 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2025-01-08 11:08:10.484 ERROR 14548 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2025-01-08 11:08:10.547 ERROR 14548 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-08 11:08:10.617 ERROR 14548 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-08 11:08:10.634  WARN 14548 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2025-01-08 11:08:10.644  WARN 14548 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2025-01-08 11:08:10.660 ERROR 14548 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2025-01-08 11:08:10.697 ERROR 14548 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-08 11:08:10.717 ERROR 14548 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-08 11:08:10.836 ERROR 14548 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-08 11:08:10.860 ERROR 14548 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
+2025-01-08 11:08:10.872 ERROR 14548 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2025-01-08 11:08:10.890  WARN 14548 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
+2025-01-08 11:08:10.908  WARN 14548 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2025-01-08 11:08:10.910 ERROR 14548 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-08 11:08:11.018 ERROR 14548 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2025-01-08 11:08:11.037  WARN 14548 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2025-01-08 11:08:29.349  WARN 25664 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-08 11:09:08.831  WARN 25664 --- [http-nio-8080-exec-10] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-01-08 11:09:08.889  WARN 25664 --- [http-nio-8080-exec-10] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-01-08 11:09:08.891  WARN 25664 --- [http-nio-8080-exec-10] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
