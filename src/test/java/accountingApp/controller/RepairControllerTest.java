@@ -6,6 +6,7 @@ import accountingApp.entity.Repair;
 import accountingApp.service.DevicesService;
 import accountingApp.service.RepairService;
 import accountingApp.usefulmethods.Checker;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -16,7 +17,7 @@ import org.springframework.ui.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 class RepairControllerTest {
 
@@ -45,6 +46,7 @@ class RepairControllerTest {
     private String repairedPart;
     private List<String> repairedParts;
     private List<Important> importants;
+    private String viewName;
 
     {
         repairList = new ArrayList<>();
@@ -68,11 +70,32 @@ class RepairControllerTest {
     }
 
     @Test
-    void getRepair() {
+    void getValidRepair() {
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        viewName= repairController.getRepair(model);
+
+        Assertions.assertEquals("repair", viewName);
+
+        verify(model).addAttribute("repairList", repairList);
+
+        verify(repairService).getAllRepairs();
+
     }
 
     @Test
-    void addNewRepair() {
+    void addValidNewRepair() {
+
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        viewName = repairController.addNewRepair(firstDay
+                , device
+                , model);
+
+        Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, atMost(1))
+                .createRepair(repair);
     }
 
     @Test
