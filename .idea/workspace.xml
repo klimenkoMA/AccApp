@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-06.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-30.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2024-12-31.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RepairControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RepairControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RepairControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RepairControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -414,7 +411,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountingApplication">
+  <component name="RunManager" selected="JUnit.RepairControllerTest.addEmptyAttrNewRepair">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -468,7 +465,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FeedbackControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepairControllerTest.addEmptyAttrNewRepair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -482,9 +479,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.FeedbackControllerTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RepairControllerTest" />
+      <option name="METHOD_NAME" value="addEmptyAttrNewRepair" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -580,19 +577,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.FeedbackControllerTest" />
       <item itemvalue="JUnit.DevicesControllerTest" />
       <item itemvalue="JUnit.DevicesControllerTest.updateProceduresAssignedSuccessfulUpdateShouldReturnView" />
       <item itemvalue="JUnit.RepairControllerTest.getValidRepair" />
       <item itemvalue="JUnit.RepairControllerTest.addValidNewRepair" />
+      <item itemvalue="JUnit.RepairControllerTest.addEmptyAttrNewRepair" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RepairControllerTest.addEmptyAttrNewRepair" />
         <item itemvalue="JUnit.RepairControllerTest.addValidNewRepair" />
         <item itemvalue="JUnit.RepairControllerTest.getValidRepair" />
         <item itemvalue="JUnit.DevicesControllerTest" />
         <item itemvalue="JUnit.DevicesControllerTest.updateProceduresAssignedSuccessfulUpdateShouldReturnView" />
-        <item itemvalue="JUnit.FeedbackControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -889,14 +886,7 @@
       <workItem from="1734283499339" duration="1308000" />
       <workItem from="1734344343179" duration="43093000" />
       <workItem from="1734585034549" duration="67813000" />
-      <workItem from="1735135080900" duration="167506000" />
-    </task>
-    <task id="LOCAL-00420" summary="Repaired a creating of new users">
-      <created>1732557944145</created>
-      <option name="number" value="00420" />
-      <option name="presentableId" value="LOCAL-00420" />
-      <option name="project" value="LOCAL" />
-      <updated>1732557944146</updated>
+      <workItem from="1735135080900" duration="171130000" />
     </task>
     <task id="LOCAL-00421" summary="Repaired a creating of new users v2">
       <created>1732643619481</created>
@@ -1234,7 +1224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1736317282122</updated>
     </task>
-    <option name="localTasksCounter" value="469" />
+    <task id="LOCAL-00469" summary="Added getValidRepair and addValidNewRepair methods in RepairControllerTest">
+      <created>1736389475418</created>
+      <option name="number" value="00469" />
+      <option name="presentableId" value="LOCAL-00469" />
+      <option name="project" value="LOCAL" />
+      <updated>1736389475418</updated>
+    </task>
+    <option name="localTasksCounter" value="470" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1257,7 +1254,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new Enum" />
     <MESSAGE value="Added new fields for some entities" />
     <MESSAGE value="Added some new fields and rebuilt controllers, tests and html pages" />
     <MESSAGE value="Added enum DeviceCategory in entity Devices" />
@@ -1282,7 +1278,8 @@
     <MESSAGE value="Added new attribute 'idForView' in feedbacks.html" />
     <MESSAGE value="Added new attribute 'idForView' in feedbacks.html v2" />
     <MESSAGE value="Created RepairControllerTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created RepairControllerTest" />
+    <MESSAGE value="Added getValidRepair and addValidNewRepair methods in RepairControllerTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getValidRepair and addValidNewRepair methods in RepairControllerTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
