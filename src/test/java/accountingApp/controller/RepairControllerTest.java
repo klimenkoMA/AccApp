@@ -99,6 +99,24 @@ class RepairControllerTest {
     }
 
     @Test
+    void addEmptyAttrNewRepair() {
+
+        firstDay = " ";
+        device = null;
+
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        viewName = repairController.addNewRepair(firstDay
+                , device
+                , model);
+
+        Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, never())
+                .createRepair(repair);
+    }
+
+    @Test
     void deleteRepair() {
     }
 
