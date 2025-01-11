@@ -117,6 +117,17 @@ class RepairControllerTest {
     }
 
     @Test
+    void addNewRepairWithException() {
+
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        doThrow(new RuntimeException()).when(repairService).createRepair(repair);
+
+        verify(repairService, never())
+                .createRepair(repair);
+    }
+
+    @Test
     void deleteRepair() {
     }
 

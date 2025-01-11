@@ -7,7 +7,6 @@
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RepairControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RepairControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RepairControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RepairControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -886,14 +885,7 @@
       <workItem from="1734283499339" duration="1308000" />
       <workItem from="1734344343179" duration="43093000" />
       <workItem from="1734585034549" duration="67813000" />
-      <workItem from="1735135080900" duration="171130000" />
-    </task>
-    <task id="LOCAL-00421" summary="Repaired a creating of new users v2">
-      <created>1732643619481</created>
-      <option name="number" value="00421" />
-      <option name="presentableId" value="LOCAL-00421" />
-      <option name="project" value="LOCAL" />
-      <updated>1732643619481</updated>
+      <workItem from="1735135080900" duration="174179000" />
     </task>
     <task id="LOCAL-00422" summary="Repaired a creating of new users v3">
       <created>1732675654598</created>
@@ -1231,7 +1223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1736389475418</updated>
     </task>
-    <option name="localTasksCounter" value="470" />
+    <task id="LOCAL-00470" summary="Added addEmptyAttrNewRepair method in RepairControllerTest">
+      <created>1736475196874</created>
+      <option name="number" value="00470" />
+      <option name="presentableId" value="LOCAL-00470" />
+      <option name="project" value="LOCAL" />
+      <updated>1736475196875</updated>
+    </task>
+    <option name="localTasksCounter" value="471" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1254,7 +1253,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new fields for some entities" />
     <MESSAGE value="Added some new fields and rebuilt controllers, tests and html pages" />
     <MESSAGE value="Added enum DeviceCategory in entity Devices" />
     <MESSAGE value="Added enum Profession in entity Employee" />
@@ -1279,7 +1277,8 @@
     <MESSAGE value="Added new attribute 'idForView' in feedbacks.html v2" />
     <MESSAGE value="Created RepairControllerTest" />
     <MESSAGE value="Added getValidRepair and addValidNewRepair methods in RepairControllerTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getValidRepair and addValidNewRepair methods in RepairControllerTest" />
+    <MESSAGE value="Added addEmptyAttrNewRepair method in RepairControllerTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added addEmptyAttrNewRepair method in RepairControllerTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
