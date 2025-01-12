@@ -62,6 +62,9 @@ class RepairControllerTest {
         repairedPart = "трансформатор";
         repairedParts = new ArrayList<>();
         importants = new ArrayList<>();
+        repairList.add(repair);
+        repairList.add(repair);
+        repairList.add(repair);
     }
 
     @BeforeEach
@@ -73,7 +76,7 @@ class RepairControllerTest {
     void getValidRepair() {
         when(repairService.getAllRepairs()).thenReturn(repairList);
 
-        viewName= repairController.getRepair(model);
+        viewName = repairController.getRepair(model);
 
         Assertions.assertEquals("repair", viewName);
 
@@ -128,7 +131,18 @@ class RepairControllerTest {
     }
 
     @Test
-    void deleteRepair() {
+    void deleteValidRepair() {
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        viewName = repairController.addNewRepair(firstDay
+                , device
+                , model);
+
+        Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, atMost(1))
+                .deleteRepair(1);
+
     }
 
     @Test
