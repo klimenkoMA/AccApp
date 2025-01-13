@@ -146,6 +146,26 @@ class RepairControllerTest {
     }
 
     @Test
+    void deleteFailRepair() {
+
+        id = -1L;
+        device = null;
+
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        viewName = repairController.addNewRepair(firstDay
+                , device
+                , model);
+
+        Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, never())
+                .deleteRepair(id);
+
+    }
+
+
+    @Test
     void findRepair() {
     }
 
