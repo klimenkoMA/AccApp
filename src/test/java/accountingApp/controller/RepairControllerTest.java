@@ -164,6 +164,17 @@ class RepairControllerTest {
 
     }
 
+    @Test
+    void deleteRepairWithException() {
+
+        id = 1L;
+
+        doThrow(new RuntimeException()).when(repairService).deleteRepair(id);
+
+        verify(repairService, never())
+                .deleteRepair(id);
+    }
+
 
     @Test
     void findRepair() {
