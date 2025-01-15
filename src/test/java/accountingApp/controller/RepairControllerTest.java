@@ -167,17 +167,31 @@ class RepairControllerTest {
     @Test
     void deleteRepairWithException() {
 
-        id = 1L;
+        when(repairService.getAllRepairs()).thenReturn(repairList);
 
-        doThrow(new RuntimeException()).when(repairService).deleteRepair(id);
+        viewName = repairController.addNewRepair(firstDay
+                , device
+                , model);
 
-        verify(repairService, never())
-                .deleteRepair(id);
+        Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, (atMost(1)))
+                .deleteRepair(1);
     }
 
 
     @Test
-    void findRepair() {
+    void findRepairSuccess() {
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        viewName = repairController.addNewRepair(firstDay
+                , device
+                , model);
+
+        Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, (atMost(1)))
+                .findRepair(1);
     }
 
     @Test

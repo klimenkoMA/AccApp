@@ -410,7 +410,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.RepairControllerTest.deleteRepairWithException">
+  <component name="RunManager" selected="JUnit.RepairControllerTest.findRepairSuccess">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -438,27 +438,6 @@
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RepairControllerTest" />
       <option name="METHOD_NAME" value="addEmptyAttrNewRepair" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RepairControllerTest.addValidNewRepair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RepairControllerTest" />
-      <option name="METHOD_NAME" value="addValidNewRepair" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -527,6 +506,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RepairControllerTest.findRepairSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RepairControllerTest" />
+      <option name="METHOD_NAME" value="findRepairSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <selectedOptions>
         <option name="module.classpath" />
@@ -575,20 +575,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
-      <item itemvalue="JUnit.RepairControllerTest.addValidNewRepair" />
       <item itemvalue="JUnit.RepairControllerTest.addEmptyAttrNewRepair" />
       <item itemvalue="JUnit.RepairControllerTest.deleteValidRepair" />
       <item itemvalue="Spring Boot.AccountingApplication" />
       <item itemvalue="JUnit.RepairControllerTest.deleteFailRepair" />
       <item itemvalue="JUnit.RepairControllerTest.deleteRepairWithException" />
+      <item itemvalue="JUnit.RepairControllerTest.findRepairSuccess" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RepairControllerTest.findRepairSuccess" />
         <item itemvalue="JUnit.RepairControllerTest.deleteRepairWithException" />
         <item itemvalue="JUnit.RepairControllerTest.deleteFailRepair" />
         <item itemvalue="JUnit.RepairControllerTest.deleteValidRepair" />
         <item itemvalue="JUnit.RepairControllerTest.addEmptyAttrNewRepair" />
-        <item itemvalue="JUnit.RepairControllerTest.addValidNewRepair" />
       </list>
     </recent_temporary>
   </component>
@@ -887,14 +887,7 @@
       <workItem from="1734585034549" duration="67813000" />
       <workItem from="1735135080900" duration="176338000" />
       <workItem from="1736662561853" duration="91000" />
-      <workItem from="1736662725627" duration="4677000" />
-    </task>
-    <task id="LOCAL-00425" summary="Finished to repair in passwords encoding">
-      <created>1732957290795</created>
-      <option name="number" value="00425" />
-      <option name="presentableId" value="LOCAL-00425" />
-      <option name="project" value="LOCAL" />
-      <updated>1732957290795</updated>
+      <workItem from="1736662725627" duration="6863000" />
     </task>
     <task id="LOCAL-00426" summary="Added updateAppUser() method in SecurityControllerClass">
       <created>1732991869327</created>
@@ -1232,7 +1225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1736733858322</updated>
     </task>
-    <option name="localTasksCounter" value="474" />
+    <task id="LOCAL-00474" summary="Added deleteRepairWithException method in RepairControllerTest">
+      <created>1736821056765</created>
+      <option name="number" value="00474" />
+      <option name="presentableId" value="LOCAL-00474" />
+      <option name="project" value="LOCAL" />
+      <updated>1736821056766</updated>
+    </task>
+    <option name="localTasksCounter" value="475" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1255,7 +1255,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added enum Profession in entity ITStaff" />
     <MESSAGE value="Added the ability to click on entities of some pages" />
     <MESSAGE value="Added the ability to click on entities of some pages v2" />
     <MESSAGE value="Tech commit" />
@@ -1280,7 +1279,8 @@
     <MESSAGE value="Added addNewRepairWithException method in RepairControllerTest" />
     <MESSAGE value="Added deleteValidRepair method in RepairControllerTest" />
     <MESSAGE value="Added deleteFailRepair method in RepairControllerTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added deleteFailRepair method in RepairControllerTest" />
+    <MESSAGE value="Added deleteRepairWithException method in RepairControllerTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added deleteRepairWithException method in RepairControllerTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
