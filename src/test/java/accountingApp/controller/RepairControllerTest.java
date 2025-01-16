@@ -195,6 +195,20 @@ class RepairControllerTest {
     }
 
     @Test
+    void findRepairFail() {
+        id = -1L;
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        viewName = repairController.addNewRepair(firstDay
+                , device
+                , model);
+
+        Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, never()).findRepair(id);
+    }
+
+    @Test
     void updateRepair() {
     }
 }
