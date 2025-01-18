@@ -1,5 +1,6 @@
 package accountingApp.service;
 
+import accountingApp.entity.Profession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import accountingApp.entity.Employee;
@@ -35,5 +36,9 @@ public class EmployeeService {
 
     public List<Employee> findEmployeeById(int id) {
         return employeeRepository.findById(id);
+    }
+
+    public List<Employee> findEmployeeListByProfession(Profession profession){
+        return employeeRepository.findByProfession(profession);
     }
 }

@@ -254,4 +254,36 @@ public class EmployeeController {
             }
         }
     }
+
+    @PostMapping("/findemployeebyprofession")
+    public String findEmployeesByCategory(@RequestParam String profession
+            , Model model) {
+
+        if (checker.checkAttribute(profession)) {
+            logger.warn("*** EmployeeController.findEmployeesByCategory():" +
+                    "  Attribute has a null value! ***");
+            return getEmployee(model);
+        }
+
+        try {
+            Profession prof = Profession.Преподаватель;
+            Profession[] professionsArray = Profession.values();
+
+            for (Profession prf : professionsArray
+            ) {
+                if (prf.getProfession().equals(profession)) {
+                    prof = prf;
+                    break;
+                }
+            }
+            List<Employee> employeeList = employeeService.findEmployeeListByProfession(prof);
+            model.addAttribute("employeeList", employeeList);
+
+            return "employee";
+        } catch (Exception e) {
+            logger.error("*** EmployeeController.findEmployeesByCategory(): WRONG DB values! *** "
+                    + e.getMessage());
+            return getEmployee(model);
+        }
+    }
 }

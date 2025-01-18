@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-12.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-05.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-06.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-08.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RepairControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RepairControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RepairControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RepairControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/DevicesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/DevicesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -897,14 +900,7 @@
       <workItem from="1734585034549" duration="67813000" />
       <workItem from="1735135080900" duration="176338000" />
       <workItem from="1736662561853" duration="91000" />
-      <workItem from="1736662725627" duration="16236000" />
-    </task>
-    <task id="LOCAL-00430" summary="Added some tests in SecurityControllerClassTest">
-      <created>1733279331002</created>
-      <option name="number" value="00430" />
-      <option name="presentableId" value="LOCAL-00430" />
-      <option name="project" value="LOCAL" />
-      <updated>1733279331002</updated>
+      <workItem from="1736662725627" duration="23358000" />
     </task>
     <task id="LOCAL-00431" summary="Added getUsersShouldReturnAppUserList test in SecurityControllerClassTest">
       <created>1733365907780</created>
@@ -1242,7 +1238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1737163207056</updated>
     </task>
-    <option name="localTasksCounter" value="479" />
+    <task id="LOCAL-00479" summary="Added searching by DeviceCategory in devices.html">
+      <created>1737165806130</created>
+      <option name="number" value="00479" />
+      <option name="presentableId" value="LOCAL-00479" />
+      <option name="project" value="LOCAL" />
+      <updated>1737165806130</updated>
+    </task>
+    <option name="localTasksCounter" value="480" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1265,7 +1268,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new entity Repair and enum Important v2" />
     <MESSAGE value="Added new entity Repair and enum Important v3" />
     <MESSAGE value="Added new entity Repair and enum Important v4" />
     <MESSAGE value="Added new entity Repair and enum Important v5" />
@@ -1290,7 +1292,8 @@
     <MESSAGE value="Added findRepairFail method in RepairControllerTest" />
     <MESSAGE value="Added updateRepairValid method in RepairControllerTest" />
     <MESSAGE value="Added updateRepairFail method in RepairControllerTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added updateRepairFail method in RepairControllerTest" />
+    <MESSAGE value="Added searching by DeviceCategory in devices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added searching by DeviceCategory in devices.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
