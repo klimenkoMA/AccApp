@@ -240,4 +240,22 @@ class RepairControllerTest {
                 .updateRepair(repair);
     }
 
+    @Test
+    void updateRepairFail() {
+        id = -1L;
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        viewName = repairController.updateRepair(id + ""
+                , lastRepairDay
+                , isImportant + ""
+                , device
+                , repairedPart
+                , model);
+
+        Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, never())
+                .updateRepair(repair);
+    }
+
 }
