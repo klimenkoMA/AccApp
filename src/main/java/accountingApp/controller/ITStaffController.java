@@ -202,5 +202,39 @@ public class ITStaffController {
             }
         }
     }
+
+    @PostMapping("/finditstaffbyprofession")
+    public String getItStaffListByProfession(@RequestParam String profession
+            , Model model) {
+
+        if (checker.checkAttribute(profession)
+        ) {
+            logger.warn("*** ITStaffController.getItStaffListByProfession():  Attribute has a null value! ***");
+            return getItStaff(model);
+        }
+        String professionWithOutSpaces = profession.trim();
+
+        try {
+            Profession prof = Profession.Преподаватель;
+            Profession[] professionsArray = Profession.values();
+
+            for (Profession prf : professionsArray
+            ) {
+                if (prf.getProfession().equals(professionWithOutSpaces)) {
+                    prof = prf;
+                    break;
+                }
+            }
+            List<ITStaff> ITStaffList = ITStaffService.getItStaffByProfession(prof);
+            model.addAttribute("itStaffList", ITStaffList);
+
+            return "itstaff";
+
+        } catch (Exception e) {
+            logger.error("*** ITStaffController.getItStaffListByProfession():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getItStaff(model);
+        }
+    }
 }
 

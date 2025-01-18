@@ -93,7 +93,14 @@
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 5rem">
-                                    <div>[[${element.category}]]</div>
+                                    <form action="/filterdevicesbycategory" method="post">
+                                        <input type="hidden" name="category" th:value="${element.category}"/>
+                                        <button type="submit" class=""
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
+                                            [[${element.category}]]
+                                        </button>
+                                    </form>
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 16rem">

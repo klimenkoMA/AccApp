@@ -1,6 +1,7 @@
 package accountingApp.service;
 
 import accountingApp.entity.ITStaff;
+import accountingApp.entity.Profession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import accountingApp.repository.ITStaffRepository;
@@ -12,33 +13,33 @@ import java.util.List;
 @Service
 public class ITStaffService {
     @Autowired
-    ITStaffRepository ITStaffRepository;
+    ITStaffRepository iTStaffRepository;
     @Autowired
     EmployeeRepository employeeRepository;
 
 
     public List<ITStaff> getAllItStaff() {
-        return ITStaffRepository.findAll();
+        return iTStaffRepository.findAll();
     }
 
     public void addNewItStaff(ITStaff ITStaff) {
-        ITStaffRepository.save(ITStaff);
+        iTStaffRepository.save(ITStaff);
     }
 
     public void deleteITStaffById(int id) {
-        ITStaffRepository.deleteById(id);
+        iTStaffRepository.deleteById(id);
     }
 
     public void updateItStaff(ITStaff ITStaff) {
-        ITStaffRepository.save(ITStaff);
+        iTStaffRepository.save(ITStaff);
     }
 
     public List<ITStaff> getITStaffById(int id) {
-        return ITStaffRepository.findITStaffById(id);
+        return iTStaffRepository.findITStaffById(id);
     }
 
     public List<ITStaff> getITStaffByName(String name) {
-        List<ITStaff> itStaffList = ITStaffRepository.findAll();
+        List<ITStaff> itStaffList = iTStaffRepository.findAll();
         List<ITStaff> cloneITStaff = new ArrayList<>();
         for (ITStaff d : itStaffList
         ) {
@@ -49,8 +50,12 @@ public class ITStaffService {
         if (!cloneITStaff.isEmpty()) {
             return cloneITStaff;
         } else {
-            return ITStaffRepository.findAll();
+            return iTStaffRepository.findAll();
         }
+    }
+
+    public List<ITStaff> getItStaffByProfession(Profession profession){
+        return iTStaffRepository.findITStaffByProfession(profession);
     }
 
 }
