@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-12.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-05.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-06.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-08.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RepairControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/accountingApp/controller/RepairControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RepairControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/accountingApp/controller/RepairControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -410,7 +420,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.RepairControllerTest.updateRepairFail">
+  <component name="RunManager" selected="Spring Boot.AccountingApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -422,7 +432,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepairControllerTest.findRepairFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepairControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
         <option name="module.classpath" />
@@ -437,29 +447,8 @@
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="PACKAGE_NAME" value="accountingApp.controller" />
       <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RepairControllerTest" />
-      <option name="METHOD_NAME" value="findRepairFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RepairControllerTest.findRepairSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AccApp" />
-      <selectedOptions>
-        <option name="module.classpath" />
-      </selectedOptions>
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="accountingApp.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
-      <option name="PACKAGE_NAME" value="accountingApp.controller" />
-      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RepairControllerTest" />
-      <option name="METHOD_NAME" value="findRepairSuccess" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -527,6 +516,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RepairControllerTest.updateRepairWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AccApp" />
+      <selectedOptions>
+        <option name="module.classpath" />
+      </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountingApp.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="PACKAGE_NAME" value="accountingApp.controller" />
+      <option name="MAIN_CLASS_NAME" value="accountingApp.controller.RepairControllerTest" />
+      <option name="METHOD_NAME" value="updateRepairWithException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <selectedOptions>
         <option name="module.classpath" />
@@ -576,19 +586,19 @@
     <list>
       <item itemvalue="JUnit.accountingAppWithTests" />
       <item itemvalue="Spring Boot.AccountingApplication" />
-      <item itemvalue="JUnit.RepairControllerTest.findRepairSuccess" />
-      <item itemvalue="JUnit.RepairControllerTest.findRepairFail" />
       <item itemvalue="JUnit.RepairControllerTest.findRepairWithException" />
       <item itemvalue="JUnit.RepairControllerTest.updateRepairValid" />
       <item itemvalue="JUnit.RepairControllerTest.updateRepairFail" />
+      <item itemvalue="JUnit.RepairControllerTest.updateRepairWithException" />
+      <item itemvalue="JUnit.RepairControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RepairControllerTest" />
+        <item itemvalue="JUnit.RepairControllerTest.updateRepairWithException" />
         <item itemvalue="JUnit.RepairControllerTest.updateRepairFail" />
         <item itemvalue="JUnit.RepairControllerTest.updateRepairValid" />
         <item itemvalue="JUnit.RepairControllerTest.findRepairWithException" />
-        <item itemvalue="JUnit.RepairControllerTest.findRepairFail" />
-        <item itemvalue="JUnit.RepairControllerTest.findRepairSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -887,14 +897,7 @@
       <workItem from="1734585034549" duration="67813000" />
       <workItem from="1735135080900" duration="176338000" />
       <workItem from="1736662561853" duration="91000" />
-      <workItem from="1736662725627" duration="13821000" />
-    </task>
-    <task id="LOCAL-00429" summary="Added findAppUser() method in SecurityControllerClass">
-      <created>1733192497256</created>
-      <option name="number" value="00429" />
-      <option name="presentableId" value="LOCAL-00429" />
-      <option name="project" value="LOCAL" />
-      <updated>1733192497257</updated>
+      <workItem from="1736662725627" duration="16236000" />
     </task>
     <task id="LOCAL-00430" summary="Added some tests in SecurityControllerClassTest">
       <created>1733279331002</created>
@@ -1232,7 +1235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1737084469807</updated>
     </task>
-    <option name="localTasksCounter" value="478" />
+    <task id="LOCAL-00478" summary="Added updateRepairFail method in RepairControllerTest">
+      <created>1737163207056</created>
+      <option name="number" value="00478" />
+      <option name="presentableId" value="LOCAL-00478" />
+      <option name="project" value="LOCAL" />
+      <updated>1737163207056</updated>
+    </task>
+    <option name="localTasksCounter" value="479" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1255,7 +1265,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new entity Repair and enum Important" />
     <MESSAGE value="Added new entity Repair and enum Important v2" />
     <MESSAGE value="Added new entity Repair and enum Important v3" />
     <MESSAGE value="Added new entity Repair and enum Important v4" />
@@ -1280,7 +1289,8 @@
     <MESSAGE value="Added findRepairSuccess method in RepairControllerTest" />
     <MESSAGE value="Added findRepairFail method in RepairControllerTest" />
     <MESSAGE value="Added updateRepairValid method in RepairControllerTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added updateRepairValid method in RepairControllerTest" />
+    <MESSAGE value="Added updateRepairFail method in RepairControllerTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added updateRepairFail method in RepairControllerTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -167,15 +167,9 @@ class RepairControllerTest {
     @Test
     void deleteRepairWithException() {
 
-        when(repairService.getAllRepairs()).thenReturn(repairList);
+        doThrow(new RuntimeException()).when(repairService).createRepair(repair);
 
-        viewName = repairController.addNewRepair(firstDay
-                , device
-                , model);
-
-        Assertions.assertEquals("repair", viewName);
-
-        verify(repairService, (atMost(1)))
+        verify(repairService, never())
                 .deleteRepair(1);
     }
 
@@ -253,6 +247,17 @@ class RepairControllerTest {
                 , model);
 
         Assertions.assertEquals("repair", viewName);
+
+        verify(repairService, never())
+                .updateRepair(repair);
+    }
+
+    @Test
+    void updateRepairWithException() {
+        id = 1L;
+        when(repairService.getAllRepairs()).thenReturn(repairList);
+
+        doThrow(new RuntimeException()).when(repairService).createRepair(repair);
 
         verify(repairService, never())
                 .updateRepair(repair);

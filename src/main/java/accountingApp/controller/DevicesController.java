@@ -283,4 +283,37 @@ public class DevicesController {
             }
         }
     }
+
+    @PostMapping("/filterdevicesbycategory")
+    public String findDevicesListByCategory(@RequestParam String category
+            , Model model) {
+
+        if (checker.checkAttribute(category)) {
+            logger.warn("*** DevicesController.findDevicesListByCategory():" +
+                    "  Attribute has a null value! ***");
+            return getDevices(model);
+        }
+        String categoryWithoutSpaces = category.trim();
+
+        try {
+            DeviceCategory categoryEnumObj = DeviceCategory.Компьютер;
+            DeviceCategory[] categoriesArray = DeviceCategory.values();
+            for (DeviceCategory cat : categoriesArray
+            ) {
+                if (cat.getCategory().equals(categoryWithoutSpaces)) {
+                    categoryEnumObj = cat;
+                    break;
+                }
+            }
+
+            List<Devices> devicesList = devicesService.getDevicesByCategory(categoryEnumObj);
+            model.addAttribute("devicesList", devicesList);
+
+            return "devices";
+        } catch (Exception e) {
+            logger.error("*** DevicesController.findDevicesListByCategory(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getDevices(model);
+        }
+    }
 }

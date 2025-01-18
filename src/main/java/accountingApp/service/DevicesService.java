@@ -1,5 +1,6 @@
 package accountingApp.service;
 
+import accountingApp.entity.DeviceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import accountingApp.entity.Devices;
@@ -47,5 +48,9 @@ public class DevicesService {
 
     public List<Devices> getDevicesById(int id) {
         return devicesRepository.findByid(id);
+    }
+
+    public List<Devices> getDevicesByCategory(DeviceCategory category) {
+        return devicesRepository.findByCategory(category);
     }
 }
