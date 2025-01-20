@@ -62,7 +62,15 @@
                                 </td>
                                 <td class="p-2 m-2 text-center border border-1 border-dark"
                                     style="width: 35rem">
-                                    <div>[[${element.profession}]]</div>
+                                    <form action="/finditstaffbyprofession" method="post">
+                                        <input type="hidden" name="profession" th:value="${element.profession}"/>
+                                        <button type="submit" class=""
+                                                style="background: none;color: darkblue; border: none;
+                                                cursor: pointer;text-shadow: none">
+                                            [[${element.profession}]]
+                                        </button>
+                                    </form>
+<!--                                    <div>[[${element.profession}]]</div>-->
                                 </td>
                             </tr>
                         </div>

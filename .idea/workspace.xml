@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-18.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/ITStaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/DevicesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/DevicesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/WorkAreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/WorkAreaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/EmployeeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/ITStaffRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/ITStaffRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/ITStaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/ITStaffService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -900,14 +899,7 @@
       <workItem from="1734585034549" duration="67813000" />
       <workItem from="1735135080900" duration="176338000" />
       <workItem from="1736662561853" duration="91000" />
-      <workItem from="1736662725627" duration="23358000" />
-    </task>
-    <task id="LOCAL-00431" summary="Added getUsersShouldReturnAppUserList test in SecurityControllerClassTest">
-      <created>1733365907780</created>
-      <option name="number" value="00431" />
-      <option name="presentableId" value="LOCAL-00431" />
-      <option name="project" value="LOCAL" />
-      <updated>1733365907781</updated>
+      <workItem from="1736662725627" duration="29157000" />
     </task>
     <task id="LOCAL-00432" summary="Added validUserAttributesAdded test in SecurityControllerClassTest">
       <created>1733451477141</created>
@@ -1245,7 +1237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1737165806130</updated>
     </task>
-    <option name="localTasksCounter" value="480" />
+    <task id="LOCAL-00480" summary="Added filtering by Profession in employee.html, itstaff.html">
+      <created>1737243119059</created>
+      <option name="number" value="00480" />
+      <option name="presentableId" value="LOCAL-00480" />
+      <option name="project" value="LOCAL" />
+      <updated>1737243119059</updated>
+    </task>
+    <option name="localTasksCounter" value="481" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1268,7 +1267,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new entity Repair and enum Important v3" />
     <MESSAGE value="Added new entity Repair and enum Important v4" />
     <MESSAGE value="Added new entity Repair and enum Important v5" />
     <MESSAGE value="Added new entity Repair and enum Important v5 and rebuilt nav fragments" />
@@ -1293,7 +1291,8 @@
     <MESSAGE value="Added updateRepairValid method in RepairControllerTest" />
     <MESSAGE value="Added updateRepairFail method in RepairControllerTest" />
     <MESSAGE value="Added searching by DeviceCategory in devices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added searching by DeviceCategory in devices.html" />
+    <MESSAGE value="Added filtering by Profession in employee.html, itstaff.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added filtering by Profession in employee.html, itstaff.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,370 +1,117 @@
-2025-01-18 04:24:05.983 ERROR 24028 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-18 04:24:06.065 ERROR 24028 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 04:24:06.121 ERROR 24028 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 04:24:06.149  WARN 24028 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-18 04:24:06.180  WARN 24028 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-18 04:24:06.194 ERROR 24028 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:24:06.204 ERROR 24028 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:24:06.221 ERROR 24028 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:24:06.322 ERROR 24028 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 04:24:06.349 ERROR 24028 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-18 04:24:06.357 ERROR 24028 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-18 04:24:06.369  WARN 24028 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-18 04:24:06.393  WARN 24028 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-18 04:24:06.399 ERROR 24028 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 04:24:06.560 ERROR 24028 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-18 04:24:06.584  WARN 24028 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-18 04:24:21.894  WARN 29156 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-18 04:24:27.686  WARN 29156 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [133] milliseconds.
-2025-01-18 04:24:31.301  WARN 29156 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-18 04:24:31.356  WARN 29156 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-18 04:24:31.357  WARN 29156 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-01-18 04:25:23.440  WARN 29156 --- [http-nio-8080-exec-8] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-18 04:25:23.447  WARN 29156 --- [http-nio-8080-exec-8] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: admin
-2025-01-18 04:25:23.448  WARN 29156 --- [http-nio-8080-exec-8] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
-2025-01-18 04:26:05.928  WARN 29156 --- [http-nio-8080-exec-9] accountingApp.service.AppUserService     : AppUser uuu updated!
-2025-01-18 04:56:15.302 ERROR 29504 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-18 04:56:15.327 ERROR 29504 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 04:56:15.383 ERROR 29504 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 04:56:15.396  WARN 29504 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-18 04:56:15.406  WARN 29504 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-18 04:56:15.415 ERROR 29504 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:56:15.425 ERROR 29504 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:56:15.445 ERROR 29504 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:56:15.537 ERROR 29504 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 04:56:15.558 ERROR 29504 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-18 04:56:15.563 ERROR 29504 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-18 04:56:15.570  WARN 29504 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-18 04:56:15.589  WARN 29504 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-18 04:56:15.592 ERROR 29504 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 04:56:15.707 ERROR 29504 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-18 04:56:15.736  WARN 29504 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-18 04:56:30.357  WARN 18108 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-18 04:56:30.986 ERROR 18108 --- [restartedMain] o.h.hql.internal.ast.ErrorTracker        : line 1:8: unexpected token: *
-2025-01-18 04:56:30.998 ERROR 18108 --- [restartedMain] o.h.hql.internal.ast.ErrorTracker        : line 1:8: unexpected token: *
-
-antlr.NoViableAltException: unexpected token: *
-	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1380) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1142) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:825) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:336) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:200) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:294) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-5.3.6.jar:5.3.6]
-	at com.sun.proxy.$Proxy118.createQuery(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:146) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:216) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
-	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1056) ~[na:na]
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at java.base/java.util.Optional.map(Optional.java:258) ~[na:na]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.util.Lazy.get(Lazy.java:114) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) ~[spring-boot-2.4.5.jar:2.4.5]
-	at accountingApp.AccountingApplication.main(AccountingApplication.java:23) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.5.jar:2.4.5]
-
-2025-01-18 04:56:31.008  WARN 18108 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'devicesController': Unsatisfied dependency expressed through field 'devicesService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'devicesService': Unsatisfied dependency expressed through field 'devicesRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'devicesRepository' defined in accountingApp.repository.DevicesRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List accountingApp.repository.DevicesRepository.findByCategory(accountingApp.entity.DeviceCategory)!
-2025-01-18 04:56:31.105 ERROR 18108 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'devicesController': Unsatisfied dependency expressed through field 'devicesService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'devicesService': Unsatisfied dependency expressed through field 'devicesRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'devicesRepository' defined in accountingApp.repository.DevicesRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List accountingApp.repository.DevicesRepository.findByCategory(accountingApp.entity.DeviceCategory)!
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) ~[spring-boot-2.4.5.jar:2.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) ~[spring-boot-2.4.5.jar:2.4.5]
-	at accountingApp.AccountingApplication.main(AccountingApplication.java:23) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.5.jar:2.4.5]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'devicesService': Unsatisfied dependency expressed through field 'devicesRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'devicesRepository' defined in accountingApp.repository.DevicesRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List accountingApp.repository.DevicesRepository.findByCategory(accountingApp.entity.DeviceCategory)!
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.6.jar:5.3.6]
-	... 26 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'devicesRepository' defined in accountingApp.repository.DevicesRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List accountingApp.repository.DevicesRepository.findByCategory(accountingApp.entity.DeviceCategory)!
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.6.jar:5.3.6]
-	... 40 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List accountingApp.repository.DevicesRepository.findByCategory(accountingApp.entity.DeviceCategory)!
-	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:146) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:216) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
-	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1056) ~[na:na]
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at java.base/java.util.Optional.map(Optional.java:258) ~[na:na]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.util.Lazy.get(Lazy.java:114) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.4.8.jar:2.4.8]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.6.jar:5.3.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.6.jar:5.3.6]
-	... 50 common frames omitted
-Caused by: java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [SELECT * from accountingApp.entity.Devices where category = ?1]
-	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:734) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-5.3.6.jar:5.3.6]
-	at com.sun.proxy.$Proxy118.createQuery(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87) ~[spring-data-jpa-2.4.8.jar:2.4.8]
-	... 79 common frames omitted
-Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [SELECT * from accountingApp.entity.Devices where category = ?1]
-	at org.hibernate.hql.internal.ast.QuerySyntaxException.convert(QuerySyntaxException.java:74) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.ast.ErrorTracker.throwQueryException(ErrorTracker.java:93) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:301) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:613) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
-	... 87 common frames omitted
-
-2025-01-18 04:58:58.787 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-18 04:58:58.819 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 04:58:58.860 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 04:58:58.879  WARN 13240 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-18 04:58:58.895  WARN 13240 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-18 04:58:58.910 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:58:58.921 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:58:58.952 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 04:58:59.059 ERROR 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 04:58:59.123 ERROR 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-18 04:58:59.145 ERROR 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-18 04:58:59.165  WARN 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-18 04:58:59.181  WARN 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-18 04:58:59.185 ERROR 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 04:58:59.384 ERROR 13240 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-18 04:58:59.463  WARN 13240 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-18 04:59:12.820  WARN 29688 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-18 04:59:25.462  WARN 29688 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-18 04:59:25.536  WARN 29688 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-18 04:59:25.537  WARN 29688 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-01-18 05:00:34.442 ERROR 13760 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-18 05:00:34.476 ERROR 13760 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 05:00:34.538 ERROR 13760 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 05:00:34.565  WARN 13760 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-18 05:00:34.579  WARN 13760 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-18 05:00:34.592 ERROR 13760 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 05:00:34.602 ERROR 13760 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 05:00:34.622 ERROR 13760 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 05:00:34.704 ERROR 13760 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 05:00:34.719 ERROR 13760 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-18 05:00:34.726 ERROR 13760 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-18 05:00:34.734  WARN 13760 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-18 05:00:34.748  WARN 13760 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-18 05:00:34.751 ERROR 13760 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 05:00:34.862 ERROR 13760 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-18 05:00:34.882  WARN 13760 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-18 05:00:49.024  WARN 19472 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-18 05:00:55.499  WARN 19472 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-18 05:00:55.550  WARN 19472 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-18 05:00:55.551  WARN 19472 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-01-18 07:50:57.229 ERROR 12016 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-18 07:50:57.255 ERROR 12016 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 07:50:57.281 ERROR 12016 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 07:50:57.296  WARN 12016 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-18 07:50:57.304  WARN 12016 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-18 07:50:57.313 ERROR 12016 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 07:50:57.320 ERROR 12016 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 07:50:57.332 ERROR 12016 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 07:50:57.406 ERROR 12016 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 07:50:57.422 ERROR 12016 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-18 07:50:57.430 ERROR 12016 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-18 07:50:57.434  WARN 12016 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-18 07:50:57.465  WARN 12016 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-18 07:50:57.469 ERROR 12016 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 07:50:57.539 ERROR 12016 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-18 07:50:57.581  WARN 12016 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-18 07:51:11.943  WARN 26916 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-18 07:52:12.354  WARN 26916 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-18 07:52:12.407  WARN 26916 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-18 07:52:12.409  WARN 26916 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-01-18 08:51:53.488  WARN 26916 --- [http-nio-8080-exec-10] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-18 08:51:53.500  WARN 26916 --- [http-nio-8080-exec-10] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-18 08:51:53.502  WARN 26916 --- [http-nio-8080-exec-10] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-01-18 10:33:45.059 ERROR 27836 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-18 10:33:45.091 ERROR 27836 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 10:33:45.122 ERROR 27836 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 10:33:45.159  WARN 27836 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-18 10:33:45.198  WARN 27836 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-18 10:33:45.211 ERROR 27836 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 10:33:45.231 ERROR 27836 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 10:33:45.291 ERROR 27836 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 10:33:45.712 ERROR 27836 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 10:33:45.732 ERROR 27836 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-18 10:33:45.738 ERROR 27836 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-18 10:33:45.744  WARN 27836 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-18 10:33:45.758  WARN 27836 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-18 10:33:45.760 ERROR 27836 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 10:33:45.859 ERROR 27836 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-18 10:33:45.881  WARN 27836 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-18 10:34:00.996  WARN 22980 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-18 11:02:27.084  WARN 22980 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-18 11:02:27.136  WARN 22980 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-18 11:02:27.138  WARN 22980 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-01-18 20:31:30.770 ERROR 28856 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-01-18 20:31:30.792 ERROR 28856 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 20:31:30.846 ERROR 28856 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-01-18 20:31:30.866  WARN 28856 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-01-18 20:31:30.879  WARN 28856 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-01-18 20:31:30.889 ERROR 28856 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 20:31:30.902 ERROR 28856 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 20:31:30.922 ERROR 28856 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-01-18 20:31:31.037 ERROR 28856 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 20:31:31.085 ERROR 28856 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-01-18 20:31:31.094 ERROR 28856 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-01-18 20:31:31.101  WARN 28856 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-01-18 20:31:31.120  WARN 28856 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-01-18 20:31:31.123 ERROR 28856 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-01-18 20:31:31.231 ERROR 28856 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-01-18 20:31:31.256  WARN 28856 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-01-18 20:31:44.302  WARN 27076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-18 20:32:20.222  WARN 27076 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-01-18 20:32:20.272  WARN 27076 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-01-18 20:32:20.275  WARN 27076 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2025-01-19 11:04:13.215 ERROR 26060 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:04:13.321 ERROR 26060 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:04:13.375 ERROR 26060 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:04:13.393  WARN 26060 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2025-01-19 11:04:13.404  WARN 26060 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2025-01-19 11:04:13.415 ERROR 26060 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:04:13.427 ERROR 26060 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:04:13.462 ERROR 26060 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:04:13.566 ERROR 26060 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:04:13.597 ERROR 26060 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
+2025-01-19 11:04:13.605 ERROR 26060 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2025-01-19 11:04:13.614  WARN 26060 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
+2025-01-19 11:04:13.631  WARN 26060 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2025-01-19 11:04:13.632 ERROR 26060 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:04:13.741 ERROR 26060 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:04:13.758  WARN 26060 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2025-01-19 11:04:27.041  WARN 21772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-19 11:04:38.400  WARN 21772 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-01-19 11:04:38.458  WARN 21772 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-01-19 11:04:38.459  WARN 21772 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2025-01-19 11:12:05.560 ERROR 29644 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:12:05.578 ERROR 29644 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:12:05.605 ERROR 29644 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:12:05.615  WARN 29644 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2025-01-19 11:12:05.625  WARN 29644 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2025-01-19 11:12:05.632 ERROR 29644 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:12:05.640 ERROR 29644 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:12:05.649 ERROR 29644 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:12:05.710 ERROR 29644 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:12:05.724 ERROR 29644 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
+2025-01-19 11:12:05.728 ERROR 29644 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2025-01-19 11:12:05.733  WARN 29644 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
+2025-01-19 11:12:05.742  WARN 29644 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2025-01-19 11:12:05.743 ERROR 29644 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:12:05.801 ERROR 29644 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:12:05.817  WARN 29644 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2025-01-19 11:12:17.160  WARN 23036 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-19 11:12:57.509  WARN 23036 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-01-19 11:12:57.562  WARN 23036 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-01-19 11:12:57.564  WARN 23036 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2025-01-19 11:14:12.943 ERROR 25072 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:14:12.966 ERROR 25072 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:14:13.031 ERROR 25072 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:14:13.071  WARN 25072 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2025-01-19 11:14:13.084  WARN 25072 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2025-01-19 11:14:13.093 ERROR 25072 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:14:13.104 ERROR 25072 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:14:13.117 ERROR 25072 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:14:13.212 ERROR 25072 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:14:13.246 ERROR 25072 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
+2025-01-19 11:14:13.263 ERROR 25072 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2025-01-19 11:14:13.278  WARN 25072 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
+2025-01-19 11:14:13.292  WARN 25072 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2025-01-19 11:14:13.294 ERROR 25072 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:14:13.377 ERROR 25072 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:14:13.396  WARN 25072 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2025-01-19 11:14:25.499  WARN 23424 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-19 11:15:24.697  WARN 23424 --- [http-nio-8080-exec-2] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-01-19 11:15:24.746  WARN 23424 --- [http-nio-8080-exec-2] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-01-19 11:15:24.747  WARN 23424 --- [http-nio-8080-exec-2] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2025-01-19 11:16:25.123 ERROR 21100 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:16:25.147 ERROR 21100 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:16:25.187 ERROR 21100 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:16:25.199  WARN 21100 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2025-01-19 11:16:25.210  WARN 21100 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2025-01-19 11:16:25.238 ERROR 21100 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:16:25.274 ERROR 21100 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:16:25.309 ERROR 21100 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:16:25.459 ERROR 21100 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:16:25.478 ERROR 21100 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
+2025-01-19 11:16:25.482 ERROR 21100 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2025-01-19 11:16:25.488  WARN 21100 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
+2025-01-19 11:16:25.507  WARN 21100 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2025-01-19 11:16:25.509 ERROR 21100 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:16:25.610 ERROR 21100 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:16:25.629  WARN 21100 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2025-01-19 11:16:39.342  WARN 26540 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-19 11:16:46.453  WARN 26540 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-01-19 11:16:46.520  WARN 26540 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-01-19 11:16:46.521  WARN 26540 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2025-01-19 11:20:25.469 ERROR 15880 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:20:25.494 ERROR 15880 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:20:25.548 ERROR 15880 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 11:20:25.563  WARN 15880 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2025-01-19 11:20:25.576  WARN 15880 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2025-01-19 11:20:25.584 ERROR 15880 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:20:25.595 ERROR 15880 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:20:25.612 ERROR 15880 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 11:20:25.688 ERROR 15880 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:20:25.704 ERROR 15880 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
+2025-01-19 11:20:25.711 ERROR 15880 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2025-01-19 11:20:25.718  WARN 15880 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
+2025-01-19 11:20:25.729  WARN 15880 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2025-01-19 11:20:25.730 ERROR 15880 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 11:20:25.943 ERROR 15880 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2025-01-19 11:20:25.995  WARN 15880 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2025-01-19 11:20:37.528  WARN 27788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-19 11:20:56.389  WARN 27788 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-01-19 11:20:56.437  WARN 27788 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-01-19 11:20:56.439  WARN 27788 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2025-01-19 20:05:00.402 ERROR 9728 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2025-01-19 20:05:00.433 ERROR 9728 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 20:05:00.512 ERROR 9728 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-01-19 20:05:00.528  WARN 9728 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2025-01-19 20:05:00.535  WARN 9728 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2025-01-19 20:05:00.544 ERROR 9728 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 20:05:00.553 ERROR 9728 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 20:05:00.575 ERROR 9728 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-01-19 20:05:00.653 ERROR 9728 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 20:05:00.690 ERROR 9728 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
+2025-01-19 20:05:00.699 ERROR 9728 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2025-01-19 20:05:00.704  WARN 9728 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
+2025-01-19 20:05:00.717  WARN 9728 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2025-01-19 20:05:00.719 ERROR 9728 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-01-19 20:05:00.823 ERROR 9728 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2025-01-19 20:05:00.845  WARN 9728 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2025-01-19 20:05:15.210  WARN 26840 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
