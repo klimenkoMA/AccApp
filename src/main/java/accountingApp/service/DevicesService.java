@@ -35,7 +35,7 @@ public class DevicesService {
         List<Devices> cloneDevices = new ArrayList<>();
         for (Devices d : devicesList
         ) {
-            if (d.getName().equals(name)) {
+            if (d.getName().contains(name)) {
                 cloneDevices.add(d);
             }
         }

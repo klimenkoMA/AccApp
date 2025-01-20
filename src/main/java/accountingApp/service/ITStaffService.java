@@ -9,6 +9,7 @@ import accountingApp.repository.EmployeeRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class ITStaffService {
@@ -43,7 +44,8 @@ public class ITStaffService {
         List<ITStaff> cloneITStaff = new ArrayList<>();
         for (ITStaff d : itStaffList
         ) {
-            if (d.getName().equals(name)) {
+            if (d.getName().toLowerCase(Locale.ROOT)
+                    .contains(name.toLowerCase(Locale.ROOT))) {
                 cloneITStaff.add(d);
             }
         }

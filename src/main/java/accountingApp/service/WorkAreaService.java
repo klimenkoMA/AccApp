@@ -7,6 +7,7 @@ import accountingApp.repository.WorkAreaRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class WorkAreaService {
@@ -38,7 +39,8 @@ public class WorkAreaService {
         List<WorkArea> cloneArea = new ArrayList<>();
         for (WorkArea d : workAreaList
         ) {
-            if (d.getName().equals(name)) {
+            if (d.getName().toLowerCase(Locale.ROOT)
+                    .contains(name.toLowerCase(Locale.ROOT))) {
                 cloneArea.add(d);
             }
         }

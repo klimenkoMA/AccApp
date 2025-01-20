@@ -1,12 +1,15 @@
 package accountingApp.service;
 
+import accountingApp.entity.ITStaff;
 import accountingApp.entity.Profession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import accountingApp.entity.Employee;
 import accountingApp.repository.EmployeeRepository;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class EmployeeService {
@@ -31,14 +34,27 @@ public class EmployeeService {
     }
 
     public List<Employee> findEmployeeByFio(String fio) {
-        return employeeRepository.findByFio(fio);
+        List<Employee> employeeList = employeeRepository.findAll();
+        List<Employee> cloneEmployee = new ArrayList<>();
+        for (Employee d : employeeList
+        ) {
+            if (d.getFio().toLowerCase(Locale.ROOT)
+                    .contains(fio.toLowerCase(Locale.ROOT))) {
+                cloneEmployee.add(d);
+            }
+        }
+        if (!cloneEmployee.isEmpty()) {
+            return cloneEmployee;
+        } else {
+            return employeeRepository.findAll();
+        }
     }
 
     public List<Employee> findEmployeeById(int id) {
         return employeeRepository.findById(id);
     }
 
-    public List<Employee> findEmployeeListByProfession(Profession profession){
+    public List<Employee> findEmployeeListByProfession(Profession profession) {
         return employeeRepository.findByProfession(profession);
     }
 }
