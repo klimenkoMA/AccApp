@@ -1,5 +1,6 @@
 package accountingApp.repository;
 
+import accountingApp.entity.Devices;
 import accountingApp.entity.ITStaff;
 import accountingApp.entity.Profession;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -20,5 +21,7 @@ public interface ITStaffRepository extends JpaRepository<ITStaff, Integer> {
 
     @Query(value = "select i from ITStaff  i where i.profession = ?1")
     public List<ITStaff> findITStaffByProfession(Profession profession);
+    @Query(value = "select i from ITStaff i where i.name = ?1")
+    public List<ITStaff> findITStaffByName(String name);
 
 }
