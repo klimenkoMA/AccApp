@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/WorkAreaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/WorkAreaService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -888,14 +888,7 @@
       <workItem from="1734585034549" duration="67813000" />
       <workItem from="1735135080900" duration="176338000" />
       <workItem from="1736662561853" duration="91000" />
-      <workItem from="1736662725627" duration="31903000" />
-    </task>
-    <task id="LOCAL-00433" summary="Rebuilt some tests">
-      <created>1733554391296</created>
-      <option name="number" value="00433" />
-      <option name="presentableId" value="LOCAL-00433" />
-      <option name="project" value="LOCAL" />
-      <updated>1733554391296</updated>
+      <workItem from="1736662725627" duration="33371000" />
     </task>
     <task id="LOCAL-00434" summary="Finished all SecurityControllerClassTest tests">
       <created>1733587507582</created>
@@ -1233,7 +1226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1737393472694</updated>
     </task>
-    <option name="localTasksCounter" value="482" />
+    <task id="LOCAL-00482" summary="Added findITStaffByName in ITStaffRepository">
+      <created>1737429407646</created>
+      <option name="number" value="00482" />
+      <option name="presentableId" value="LOCAL-00482" />
+      <option name="project" value="LOCAL" />
+      <updated>1737429407646</updated>
+    </task>
+    <option name="localTasksCounter" value="483" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1256,7 +1256,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new entity Repair and enum Important v5" />
     <MESSAGE value="Added new entity Repair and enum Important v5 and rebuilt nav fragments" />
     <MESSAGE value="Rebuilt devices.repair column in devices.html" />
     <MESSAGE value="Rebuilt devices.repair column in devices.html v2" />
@@ -1281,7 +1280,8 @@
     <MESSAGE value="Added searching by DeviceCategory in devices.html" />
     <MESSAGE value="Added filtering by Profession in employee.html, itstaff.html" />
     <MESSAGE value="Added context searching" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added context searching" />
+    <MESSAGE value="Added findITStaffByName in ITStaffRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added findITStaffByName in ITStaffRepository" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
