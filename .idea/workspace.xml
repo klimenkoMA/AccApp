@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-19.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-22.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-12.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ITStaffRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/EmployeeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/ITStaffRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/ITStaffRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -888,14 +892,7 @@
       <workItem from="1734585034549" duration="67813000" />
       <workItem from="1735135080900" duration="176338000" />
       <workItem from="1736662561853" duration="91000" />
-      <workItem from="1736662725627" duration="33371000" />
-    </task>
-    <task id="LOCAL-00434" summary="Finished all SecurityControllerClassTest tests">
-      <created>1733587507582</created>
-      <option name="number" value="00434" />
-      <option name="presentableId" value="LOCAL-00434" />
-      <option name="project" value="LOCAL" />
-      <updated>1733587507582</updated>
+      <workItem from="1736662725627" duration="34263000" />
     </task>
     <task id="LOCAL-00435" summary="Rebuilt target package">
       <created>1733637003444</created>
@@ -1233,7 +1230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1737429407646</updated>
     </task>
-    <option name="localTasksCounter" value="483" />
+    <task id="LOCAL-00483" summary="Added findByDBorn in EmployeeRepository">
+      <created>1737567061105</created>
+      <option name="number" value="00483" />
+      <option name="presentableId" value="LOCAL-00483" />
+      <option name="project" value="LOCAL" />
+      <updated>1737567061105</updated>
+    </task>
+    <option name="localTasksCounter" value="484" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1256,7 +1260,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new entity Repair and enum Important v5 and rebuilt nav fragments" />
     <MESSAGE value="Rebuilt devices.repair column in devices.html" />
     <MESSAGE value="Rebuilt devices.repair column in devices.html v2" />
     <MESSAGE value="Added new attribute 'serial' in devices.html" />
@@ -1281,7 +1284,8 @@
     <MESSAGE value="Added filtering by Profession in employee.html, itstaff.html" />
     <MESSAGE value="Added context searching" />
     <MESSAGE value="Added findITStaffByName in ITStaffRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added findITStaffByName in ITStaffRepository" />
+    <MESSAGE value="Added findByDBorn in EmployeeRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added findByDBorn in EmployeeRepository" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
