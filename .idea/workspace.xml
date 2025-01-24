@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-19.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-22.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-12.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/EmployeeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/ITStaffRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/ITStaffRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -892,14 +887,7 @@
       <workItem from="1734585034549" duration="67813000" />
       <workItem from="1735135080900" duration="176338000" />
       <workItem from="1736662561853" duration="91000" />
-      <workItem from="1736662725627" duration="34263000" />
-    </task>
-    <task id="LOCAL-00435" summary="Rebuilt target package">
-      <created>1733637003444</created>
-      <option name="number" value="00435" />
-      <option name="presentableId" value="LOCAL-00435" />
-      <option name="project" value="LOCAL" />
-      <updated>1733637003444</updated>
+      <workItem from="1736662725627" duration="36506000" />
     </task>
     <task id="LOCAL-00436" summary="Rebuilt target package v2">
       <created>1733711268749</created>
@@ -1237,7 +1225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1737567061105</updated>
     </task>
-    <option name="localTasksCounter" value="484" />
+    <task id="LOCAL-00484" summary="Added findByWorkArea, findByRoom in EmployeeRepository">
+      <created>1737595739681</created>
+      <option name="number" value="00484" />
+      <option name="presentableId" value="LOCAL-00484" />
+      <option name="project" value="LOCAL" />
+      <updated>1737595739681</updated>
+    </task>
+    <option name="localTasksCounter" value="485" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1260,7 +1255,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt devices.repair column in devices.html" />
     <MESSAGE value="Rebuilt devices.repair column in devices.html v2" />
     <MESSAGE value="Added new attribute 'serial' in devices.html" />
     <MESSAGE value="Added new attribute 'idForView' in devices.html" />
@@ -1285,7 +1279,8 @@
     <MESSAGE value="Added context searching" />
     <MESSAGE value="Added findITStaffByName in ITStaffRepository" />
     <MESSAGE value="Added findByDBorn in EmployeeRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added findByDBorn in EmployeeRepository" />
+    <MESSAGE value="Added findByWorkArea, findByRoom in EmployeeRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added findByWorkArea, findByRoom in EmployeeRepository" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
