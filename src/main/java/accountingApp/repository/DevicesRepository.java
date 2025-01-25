@@ -42,7 +42,7 @@ public interface DevicesRepository extends JpaRepository<Devices, Integer> {
     List<Devices> findByEmployee(Employee employee);
 
     @Query(value = "SELECT d from Devices d where d.itstaff = ?1")
-    List<Devices> findByItstaff(ITStaff itstaff);
+    List<Devices> findByItStaff(ITStaff itstaff);
 
     @Query(value = "SELECT d from Devices d where d.repair = ?1")
     List<Devices> findByRepair(Repair repair);

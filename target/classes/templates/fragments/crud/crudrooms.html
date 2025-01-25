@@ -79,19 +79,24 @@
         </td>
         <td>
 
+            <!--            <div class="popup_div">-->
+            <!--                <input type="checkbox" id="callback4">-->
+            <!--                <label class="popup_try" for="callback4">Найти</label>-->
+            <!--                <form action="/findroomyid" class="popup_form" method="post">-->
+            <!--                    <div align="center">-->
+            <!--                        <label>-->
+            <!--                            <input type="text" name="id" placeholder="ID кабинета">-->
+            <!--                        </label>-->
+            <!--                    </div>-->
+            <!--                    <button class="button" type="submit">Найти</button>-->
+            <!--                    <input type="hidden" name="${_csrf.parameterName}" value="csrf.token">-->
+            <!--                    <label class="close" for="callback4">+</label>-->
+            <!--                </form>-->
+            <!--            </div> -->
+
             <div class="popup_div">
-                <input type="checkbox" id="callback4">
-                <label class="popup_try" for="callback4">Найти</label>
-                <form action="/findroomyid" class="popup_form" method="post">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID кабинета">
-                        </label>
-                    </div>
-                    <button class="button" type="submit">Найти</button>
-                    <input type="hidden" name="${_csrf.parameterName}" value="csrf.token">
-                    <label class="close" for="callback4">+</label>
-                </form>
+                <a th:replace="fragments/searching/roomsearching :: roomsearching">
+                    <label class="popup_try">Найти</label></a>
             </div>
 
         </td>

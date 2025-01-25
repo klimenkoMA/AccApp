@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class RoomController {
@@ -39,8 +40,8 @@ public class RoomController {
 
     @PostMapping("/addroom")
     public String addRoom(@RequestParam String number,
-                          @RequestParam (required = false) WorkArea workarea,
-                          @RequestParam  String description,
+                          @RequestParam(required = false) WorkArea workarea,
+                          @RequestParam String description,
                           Model model) {
 
         if (checker.checkAttribute(number)
@@ -110,7 +111,7 @@ public class RoomController {
     @PostMapping("/updateroom")
     public String updateRoom(@RequestParam String id,
                              @RequestParam String number,
-                             @RequestParam (required = false) WorkArea workarea,
+                             @RequestParam(required = false) WorkArea workarea,
                              @RequestParam String description,
                              Model model) {
 
@@ -137,7 +138,7 @@ public class RoomController {
             } else {
                 List<WorkArea> workAreaList = workAreaService.getWorkAreaById(workAreaId);
                 Room room = new Room(idCheck, numberWithoutSpaces, workAreaList.get(0)
-                , descriptionWithoutSpaces);
+                        , descriptionWithoutSpaces);
                 roomService.updateRoom(room);
             }
             return getRoom(model);
@@ -174,6 +175,111 @@ public class RoomController {
             return "room";
         } catch (Exception e) {
             logger.error("*** RoomController.findRoomById():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getRoom(model);
+        }
+    }
+
+    @PostMapping("/findroombynumber")
+    public String findRoomByNumber(@RequestParam String number,
+                                   Model model) {
+
+        if (checker.checkAttribute(number)
+        ) {
+            logger.warn("*** RoomController.findRoomByNumber():  Attribute has a null value! ***");
+            return getRoom(model);
+        }
+
+        String numberWithoutSpaces = number.trim();
+        try {
+
+            logger.debug("*** RoomController.findRoomByNumber(): FOUND Room BY NUMBER ***");
+
+            List<Room> roomList = roomService.getRoomByNumber(numberWithoutSpaces);
+            model.addAttribute("roomList", roomList);
+            if (roomList.isEmpty()) {
+                return getRoom(model);
+            }
+            return "room";
+        } catch (Exception e) {
+            logger.error("*** RoomController.findRoomByNumber():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getRoom(model);
+        }
+    }
+
+    @PostMapping("/findroombyworkarea")
+    public String findRoomByWorkArea(@RequestParam String workArea,
+                                     Model model) {
+
+        if (checker.checkAttribute(workArea)
+        ) {
+            logger.warn("*** RoomController.findRoomByNumber():  Attribute has a null value! ***");
+            return getRoom(model);
+        }
+
+        String workAreaWithoutSpaces = workArea.trim();
+
+
+        try {
+            List<Room> rooms = roomService.findAllRoom();
+            WorkArea area = new WorkArea();
+
+            for (Room r : rooms
+            ) {
+                if (r.getWorkarea().getName().toLowerCase(Locale.ROOT)
+                        .contains(workAreaWithoutSpaces.toLowerCase(Locale.ROOT))) {
+                    area = r.getWorkarea();
+                    break;
+                }
+            }
+
+            List<Room> roomList = roomService.getRoomByWorkArea(area);
+            model.addAttribute("roomList", roomList);
+            if (roomList.isEmpty()) {
+                return getRoom(model);
+            }
+            return "room";
+        } catch (Exception e) {
+            logger.error("*** RoomController.findRoomByWorkArea():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getRoom(model);
+        }
+    }
+
+    @PostMapping("/findroombydescription")
+    public String findRoomByDescription(@RequestParam String description,
+                                        Model model) {
+
+        if (checker.checkAttribute(description)
+        ) {
+            logger.warn("*** RoomController.findRoomByDescription():  Attribute has a null value! ***");
+            return getRoom(model);
+        }
+
+        String descriptionWithoutSpaces = description.trim();
+        try {
+//            List<Room> rooms = roomService.findAllRoom();
+//            String descr = "";
+//
+//            for (Room r : rooms
+//            ) {
+//                if (r.getDescription().toLowerCase(Locale.ROOT)
+//                        .contains(descriptionWithoutSpaces.toLowerCase(Locale.ROOT))) {
+//                    descr = r.getDescription();
+//                    break;
+//                }
+//            }
+
+
+            List<Room> roomList = roomService.getRoomByDescription(descriptionWithoutSpaces);
+            model.addAttribute("roomList", roomList);
+            if (roomList.isEmpty()) {
+                return getRoom(model);
+            }
+            return "room";
+        } catch (Exception e) {
+            logger.error("*** RoomController.findRoomByDescription():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getRoom(model);
         }

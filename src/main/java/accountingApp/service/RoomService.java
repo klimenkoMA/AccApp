@@ -1,6 +1,7 @@
 package accountingApp.service;
 
 import accountingApp.entity.Room;
+import accountingApp.entity.WorkArea;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import accountingApp.repository.RoomRepository;
@@ -30,5 +31,17 @@ public class RoomService {
 
     public List<Room> getRoomById(int id) {
         return roomRepository.findRoomById(id);
+    }
+
+    public List<Room> getRoomByNumber(String number) {
+        return roomRepository.findByNumber(number);
+    }
+
+    public List<Room> getRoomByWorkArea(WorkArea workArea) {
+        return roomRepository.findByWorkArea(workArea);
+    }
+
+    public List<Room> getRoomByDescription(String description) {
+        return roomRepository.findByDescription(description);
     }
 }
