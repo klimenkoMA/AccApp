@@ -19,7 +19,7 @@ public interface ITStaffRepository extends JpaRepository<ITStaff, Integer> {
     @Override
     void deleteById(Integer integer);
 
-    @Query(value = "select i from ITStaff  i where i.profession = ?1")
+    @Query(value = "select i from ITStaff i where i.profession = ?1")
     List<ITStaff> findITStaffByProfession(Profession profession);
 
     @Query(value = "select i from ITStaff i where i.name = ?1")
