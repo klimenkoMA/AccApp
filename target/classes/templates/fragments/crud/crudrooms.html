@@ -13,7 +13,7 @@
 
             <div class="popup_div">
                 <input type="checkbox" id="callback">
-                <label class="popup_try" for="callback">Добавить</label>
+                <label class="popup_try" for="callback">Добавление</label>
                 <form action="/addroom" class="popup_form" method="post">
                     <div align="center">
                         <label>
@@ -46,7 +46,7 @@
 
             <div class="popup_div">
                 <input type="checkbox" id="callback3">
-                <label class="popup_try" for="callback3">Обновить</label>
+                <label class="popup_try" for="callback3">Изменение</label>
                 <form action="/updateroom" class="popup_form" method="post">
                     <div align="center">
                         <label>
@@ -78,34 +78,14 @@
 
         </td>
         <td>
-
-            <!--            <div class="popup_div">-->
-            <!--                <input type="checkbox" id="callback4">-->
-            <!--                <label class="popup_try" for="callback4">Найти</label>-->
-            <!--                <form action="/findroomyid" class="popup_form" method="post">-->
-            <!--                    <div align="center">-->
-            <!--                        <label>-->
-            <!--                            <input type="text" name="id" placeholder="ID кабинета">-->
-            <!--                        </label>-->
-            <!--                    </div>-->
-            <!--                    <button class="button" type="submit">Найти</button>-->
-            <!--                    <input type="hidden" name="${_csrf.parameterName}" value="csrf.token">-->
-            <!--                    <label class="close" for="callback4">+</label>-->
-            <!--                </form>-->
-            <!--            </div> -->
-
-            <div class="popup_div">
-                <a th:replace="fragments/searching/roomsearching :: roomsearching">
-                    <label class="popup_try">Найти</label></a>
-            </div>
-
+            <a th:replace="fragments/searching/roomsearching :: roomsearching"></a>
         </td>
 
         <td>
 
             <div class="popup_div">
                 <input type="checkbox" id="callback2">
-                <label class="popup_try" for="callback2">Удалить</label>
+                <label class="popup_try" for="callback2">Удаление</label>
                 <form action="/deleteroom" class="popup_form" method="post">
                     <div align="center">
                         <label>

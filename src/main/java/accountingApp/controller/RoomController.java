@@ -14,6 +14,7 @@ import accountingApp.service.RoomService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -259,20 +260,17 @@ public class RoomController {
 
         String descriptionWithoutSpaces = description.trim();
         try {
-//            List<Room> rooms = roomService.findAllRoom();
-//            String descr = "";
-//
-//            for (Room r : rooms
-//            ) {
-//                if (r.getDescription().toLowerCase(Locale.ROOT)
-//                        .contains(descriptionWithoutSpaces.toLowerCase(Locale.ROOT))) {
-//                    descr = r.getDescription();
-//                    break;
-//                }
-//            }
+            List<Room> rooms = roomService.findAllRoom();
+            List<Room> roomList = new ArrayList<>();
 
+            for (Room r : rooms
+            ) {
+                if (r.getDescription().toLowerCase(Locale.ROOT)
+                        .contains(descriptionWithoutSpaces.toLowerCase(Locale.ROOT))) {
+                    roomList.add(r);
+                }
+            }
 
-            List<Room> roomList = roomService.getRoomByDescription(descriptionWithoutSpaces);
             model.addAttribute("roomList", roomList);
             if (roomList.isEmpty()) {
                 return getRoom(model);
@@ -280,6 +278,49 @@ public class RoomController {
             return "room";
         } catch (Exception e) {
             logger.error("*** RoomController.findRoomByDescription():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getRoom(model);
+        }
+    }
+
+    @PostMapping("/findroombyallattrs")
+    public String findRoomByAllAttrs(@RequestParam String attrs,
+                                     Model model) {
+
+        if (checker.checkAttribute(attrs)
+        ) {
+            logger.warn("*** RoomController.findRoomByAllAttrs():  Attribute has a null value! ***");
+            return getRoom(model);
+        }
+
+        String attrsWithoutSpaces = attrs.trim();
+        try {
+            List<Room> rooms = roomService.findAllRoom();
+            List<Room> roomList = new ArrayList<>();
+
+            for (Room r : rooms
+            ) {
+                if (r.getDescription().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces.toLowerCase(Locale.ROOT))) {
+                    roomList.add(r);
+                } else if (r.getWorkarea().getName().toLowerCase(Locale.ROOT)
+                        .contains(attrs.toLowerCase(Locale.ROOT))) {
+                    roomList.add(r);
+                } else if (r.getNumber().contains(attrs)) {
+                    roomList.add(r);
+                }
+
+            }
+
+            model.addAttribute("roomList", roomList);
+            if (roomList.isEmpty()) {
+                logger.debug("*** RoomController.findRoomByAllAttrs():  DATA NOT FOUND IN DB*** "
+                        );
+                return getRoom(model);
+            }
+            return "room";
+        } catch (Exception e) {
+            logger.error("*** RoomController.findRoomByAllAttrs():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getRoom(model);
         }

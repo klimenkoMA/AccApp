@@ -6,49 +6,28 @@
     <div th:replace="fragments/head :: head"></div>
 </head>
 <div th:fragment="roomsearching">
+    <label class="popup_try d-flex" style="justify-content: center;
+              font-size: 17px">Поиск
+        <button type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRightfeedback"
+                aria-controls="offcanvasRightfeedback"
+                style="background-color: #62a0f6; color: white; height: 1px; width: 1px" hidden>
+        </button>
+    </label>
 
-    <button class="btn border border-0 text-primary" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRightfeedback"
-            aria-controls="offcanvasRightfeedback" style="text-shadow: none;
-                text-align: left">ПОИСК
-    </button>
 
     <div class="card col offcanvas offcanvas-end border border-0"
          tabindex="-1" id="offcanvasRightfeedback" aria-labelledby="offcanvasRightLabel" style="width: 40vh">
-        <img src="../img/letter.png" class="card-img-top" alt="Feedback" style="max-height: 25vh; max-width: 20vh;
-                border-radius: 10%; align-self: center">
+        <img src="../img/searching.webp" class="card-img-top" alt="Feedback" style="max-height: 25vh; max-width: 20vh;
+                        border-radius: 10%; align-self: center">
         <div class="card-body d-grid gap-2 offcanvas-title bg-light" id="offcanvasRightLabel"
              style="min-height: 100vh; align-content: start">
-            <h5 class="card-title text-center" style="height: 3vh">Напишите нам!</h5>
-            <form action="/findroombynumber" method="post"
-                  class="card-text offcanvas-body align-self-start">
-                <label for="number"><strong>Номер кабинета</strong></label>
-                <br>
-                <input type="text" class="text-start" name="number" id="number" style="min-width: 90%">
-                <br>
-                <button type="submit" class="btn" style="background-color: #62a0f6; text-shadow: none;
-                        color: white">Найти
-                </button>
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-            </form>
 
-            <form action="/findroombyworkarea" method="post"
+            <form action="/findroombyallattrs" method="post"
                   class="card-text offcanvas-body align-self-start">
 
-                <label for="workArea"><strong>Филиал</strong></label>
-                <input type="text" class="text-start" name="workArea" id="workArea"
-                       required style="min-width: 90%">
-                <button type="submit" class="btn" style="background-color: #62a0f6; text-shadow: none;
-                        color: white">Найти
-                </button>
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-            </form>
-
-            <form action="/findroombydescription" method="post"
-                  class="card-text offcanvas-body align-self-start">
-
-                <label for="description"><strong>Описание</strong></label>
-                <input type="text" class="text-start" name="description" id="description"
+                <label for="attrs"><strong>Поиск</strong></label>
+                <input type="text" class="text-start" name="attrs" id="attrs"
                        required style="min-width: 90%">
 
                 <button type="submit" class="btn" style="background-color: #62a0f6; text-shadow: none;
