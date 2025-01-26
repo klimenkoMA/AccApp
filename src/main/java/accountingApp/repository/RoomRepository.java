@@ -24,7 +24,4 @@ public interface RoomRepository extends JpaRepository<Room, Integer> {
 
     @Query(value = "SELECT r from Room r where r.workarea = ?1")
     List<Room> findByWorkArea(WorkArea workarea);
-
-    @Query(value = "SELECT r from Room r where r.description = ?1")
-    List<Room> findByDescription(String description);
 }

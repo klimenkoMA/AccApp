@@ -69,10 +69,12 @@ html, body {
     background-color: #89dda6;
     color: #00008b;
 }
+
 .yellow {
     background-color: #e3db72;
     color: #00008b;
 }
+
 .red {
     background-color: #e99a9a;
     color: #00008b;
@@ -336,7 +338,7 @@ tr:nth-of-type(odd) {
     width: 80rem;
 }
 
-.table-result-db table{
+.table-result-db table {
     table-layout: fixed;
     border: none;
 }

@@ -41,7 +41,4 @@ public class RoomService {
         return roomRepository.findByWorkArea(workArea);
     }
 
-    public List<Room> getRoomByDescription(String description) {
-        return roomRepository.findByDescription(description);
-    }
 }
