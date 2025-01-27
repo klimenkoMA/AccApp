@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-24.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-25.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/searching.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-26.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-18.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-19.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/roomsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/roomsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/RoomRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/RoomRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/RoomService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/RoomService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/roomsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/roomsearching.html" afterDir="false" />
@@ -905,14 +898,7 @@
       <workItem from="1736662561853" duration="91000" />
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
-      <workItem from="1737776174681" duration="17178000" />
-    </task>
-    <task id="LOCAL-00438" summary="Tech commit">
-      <created>1733938351597</created>
-      <option name="number" value="00438" />
-      <option name="presentableId" value="LOCAL-00438" />
-      <option name="project" value="LOCAL" />
-      <updated>1733938351597</updated>
+      <workItem from="1737776174681" duration="29215000" />
     </task>
     <task id="LOCAL-00439" summary="Added Checker class for checking different attributes">
       <created>1734027237136</created>
@@ -1250,7 +1236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1737776585095</updated>
     </task>
-    <option name="localTasksCounter" value="487" />
+    <task id="LOCAL-00487" summary="Created Rooms context searching">
+      <created>1737867767662</created>
+      <option name="number" value="00487" />
+      <option name="presentableId" value="LOCAL-00487" />
+      <option name="project" value="LOCAL" />
+      <updated>1737867767662</updated>
+    </task>
+    <option name="localTasksCounter" value="488" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1273,7 +1266,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new attribute 'idForView' in devices.html" />
     <MESSAGE value="Added new attribute 'idForView' in devices.html v2" />
     <MESSAGE value="Added new attribute 'idForView' in devices.html v3" />
     <MESSAGE value="Added new attribute 'idForView' in devices.html v4" />
@@ -1298,7 +1290,8 @@
     <MESSAGE value="Added findByWorkArea, findByRoom in EmployeeRepository" />
     <MESSAGE value="Added new methods for searching in DevicesRepository" />
     <MESSAGE value="Created Rooms searching methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Rooms searching methods" />
+    <MESSAGE value="Created Rooms context searching" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Rooms context searching" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
