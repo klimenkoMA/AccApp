@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-26.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/classroom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/miniadd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/minidelete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/minisearch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/miniupdate.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-19.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/roomsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/roomsearching.html" afterDir="false" />
@@ -16,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/roomsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/roomsearching.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -898,14 +902,7 @@
       <workItem from="1736662561853" duration="91000" />
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
-      <workItem from="1737776174681" duration="29215000" />
-    </task>
-    <task id="LOCAL-00439" summary="Added Checker class for checking different attributes">
-      <created>1734027237136</created>
-      <option name="number" value="00439" />
-      <option name="presentableId" value="LOCAL-00439" />
-      <option name="project" value="LOCAL" />
-      <updated>1734027237137</updated>
+      <workItem from="1737776174681" duration="39129000" />
     </task>
     <task id="LOCAL-00440" summary="Rebuilt SecurityControllerClass">
       <created>1734057103222</created>
@@ -1243,7 +1240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1737867767662</updated>
     </task>
-    <option name="localTasksCounter" value="488" />
+    <task id="LOCAL-00488" summary="Rebuilt room.html's CRUD buttons">
+      <created>1737947645144</created>
+      <option name="number" value="00488" />
+      <option name="presentableId" value="LOCAL-00488" />
+      <option name="project" value="LOCAL" />
+      <updated>1737947645144</updated>
+    </task>
+    <option name="localTasksCounter" value="489" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1266,7 +1270,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new attribute 'idForView' in devices.html v2" />
     <MESSAGE value="Added new attribute 'idForView' in devices.html v3" />
     <MESSAGE value="Added new attribute 'idForView' in devices.html v4" />
     <MESSAGE value="Added new attribute 'idForView' in feedbacks.html" />
@@ -1291,7 +1294,8 @@
     <MESSAGE value="Added new methods for searching in DevicesRepository" />
     <MESSAGE value="Created Rooms searching methods" />
     <MESSAGE value="Created Rooms context searching" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Rooms context searching" />
+    <MESSAGE value="Rebuilt room.html's CRUD buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt room.html's CRUD buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
