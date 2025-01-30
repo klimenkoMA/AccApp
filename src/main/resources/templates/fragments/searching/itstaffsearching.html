@@ -5,7 +5,7 @@
 <head>
     <div th:replace="fragments/head :: head"></div>
 </head>
-<div th:fragment="roomsearching">
+<div th:fragment="itstaffsearching">
     <label class="popup_try d-flex" style="justify-content: center;
               font-size: 17px; box-shadow: 2px 2px 4px black">Поиск
         <button type="button" data-bs-toggle="offcanvas"
@@ -21,11 +21,10 @@
          style="width: 40vh">
         <img src="../img/searching.webp" class="card-img-top" alt="RoomSearching" style="max-height: 25vh; max-width: 20vh;
                         border-radius: 10%; align-self: center">
-
         <div class="card-body d-grid gap-2 offcanvas-title bg-light" id="offcanvasRightLabel"
              style="min-height: 100vh; align-content: start">
 
-            <form action="/findroombyallattrs" method="post"
+            <form action="/finditstaffbyattrs" method="post"
                   class="card-text offcanvas-body align-self-start">
 
                 <label for="attrs"><strong>Поиск</strong></label>
@@ -37,12 +36,11 @@
                 </button>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
             </form>
-
-            <img src="../img/roomsearchback.jpg" class="card-img-bottom" alt="RoomSearchingBg"
+            <img src="../img/itstaffsearchbg.png" class="card-img-bottom" alt="RoomSearchingBg"
                  style="max-height: 30vh; max-width: 25vh; justify-self: center; margin-top: 25rem;
                         border-radius: 10%; align-self: end">
         </div>
 
     </div>
-</div>
+
 </html>

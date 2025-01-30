@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class ITStaffController {
@@ -22,13 +23,13 @@ public class ITStaffController {
     private final Logger logger = LoggerFactory.getLogger(ITStaffController.class);
 
     @Autowired
-    private ITStaffService ITStaffService;
+    private ITStaffService itStaffService;
     @Autowired
     private Checker checker;
 
     @GetMapping("/itstaff")
     public String getItStaff(Model model) {
-        List<ITStaff> ITStaffList = ITStaffService.getAllItStaff();
+        List<ITStaff> ITStaffList = itStaffService.getAllItStaff();
 
         Profession[] professionsArray = Profession.values();
         List<String> professionList = new ArrayList<>();
@@ -75,7 +76,7 @@ public class ITStaffController {
                 }
 
                 ITStaff ITStaff = new ITStaff(nameWithoutSpaces, prof);
-                ITStaffService.addNewItStaff(ITStaff);
+                itStaffService.addNewItStaff(ITStaff);
 
                 return getItStaff(model);
             }
@@ -101,7 +102,7 @@ public class ITStaffController {
             if (idCheck <= 0) {
                 logger.warn("*** ITStaffController.deleteITStaff(): ID is SUBZERO***");
             } else {
-                ITStaffService.deleteITStaffById(idCheck);
+                itStaffService.deleteITStaffById(idCheck);
             }
             return getItStaff(model);
         } catch (Exception e) {
@@ -148,7 +149,7 @@ public class ITStaffController {
                 }
 
                 ITStaff ITStaff = new ITStaff(idCheck, name, prof);
-                ITStaffService.updateItStaff(ITStaff);
+                itStaffService.updateItStaff(ITStaff);
             }
             return getItStaff(model);
         } catch (Exception e) {
@@ -178,7 +179,7 @@ public class ITStaffController {
                 logger.debug("*** ITStaffController.findItStaffById():" +
                         "found an ItStaff by ID ***");
                 List<ITStaff> ITStaffList;
-                ITStaffList = ITStaffService.getITStaffById(idCheck);
+                ITStaffList = itStaffService.getITStaffById(idCheck);
                 model.addAttribute("itStaffList", ITStaffList);
                 return "itstaff";
             }
@@ -192,7 +193,7 @@ public class ITStaffController {
             try {
                 logger.debug("*** ITStaffController.findItStaffById():" +
                         "found an ItStaff by NAME ***");
-                List<ITStaff> ITStaffList = ITStaffService.getITStaffByName(idWithoutSpaces);
+                List<ITStaff> ITStaffList = itStaffService.getITStaffByName(idWithoutSpaces);
                 model.addAttribute("itStaffList", ITStaffList);
                 return "itstaff";
             } catch (Exception e1) {
@@ -225,13 +226,55 @@ public class ITStaffController {
                     break;
                 }
             }
-            List<ITStaff> ITStaffList = ITStaffService.getItStaffByProfession(prof);
+            List<ITStaff> ITStaffList = itStaffService.getItStaffByProfession(prof);
             model.addAttribute("itStaffList", ITStaffList);
 
             return "itstaff";
 
         } catch (Exception e) {
             logger.error("*** ITStaffController.getItStaffListByProfession():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getItStaff(model);
+        }
+    }
+
+    @PostMapping("/finditstaffbyattrs")
+    public String getItStaffListByAttrs(@RequestParam String attrs
+            , Model model) {
+
+        if (checker.checkAttribute(attrs)
+        ) {
+            logger.warn("*** ITStaffController.getItStaffListByAttrs():  Attribute has a null value! ***");
+            return getItStaff(model);
+        }
+        String attrWithOutSpaces = attrs.trim().toLowerCase(Locale.ROOT);
+
+        try {
+            List<ITStaff> itStaffs = itStaffService.getAllItStaff();
+
+            List<ITStaff> itStaffList = new ArrayList<>();
+
+            for (ITStaff it : itStaffs
+            ) {
+                if ((it.getId() + "").contains(attrWithOutSpaces)) {
+                    itStaffList.add(it);
+                } else if (it.getProfession().name().toLowerCase(Locale.ROOT)
+                        .contains(attrWithOutSpaces)) {
+                    itStaffList.add(it);
+                } else if (it.getName().toLowerCase(Locale.ROOT)
+                        .contains(attrWithOutSpaces)) {
+                    itStaffList.add(it);
+                }
+            }
+
+            model.addAttribute("itStaffList", itStaffList);
+            if (itStaffList.isEmpty()) {
+                logger.debug("*** ITStaffController.getItStaffListByAttrs():  DATA NOT FOUND IN DB***");
+                return getItStaff(model);
+            }
+            return "itstaff";
+        } catch (Exception e) {
+            logger.error("*** ITStaffController.getItStaffListByAttrs():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getItStaff(model);
         }
