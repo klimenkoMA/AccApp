@@ -24,7 +24,7 @@ html, body {
     align-items: start;
     min-height: 80px;
     max-height: 110px;
-    background: #0d6efd;
+    background: #62a0f6;
     outline: none;
     text-shadow: #002349 2px 3px 4px;
     padding-left: 10%;
@@ -106,7 +106,7 @@ html, body {
     border: 0;
     border-radius: 5px;
     /*background-color: #62a0f6;*/
-    background-color: #0d6efd;
+    background-color: #62a0f6;
     width: 130px;
     height: 5vh;
     color: #fcf6f6;
@@ -125,7 +125,7 @@ html, body {
     appearance: none;
     border: 0;
     border-radius: 5px;
-    background-color: #0d6efd;
+    background-color: #62a0f6;
     width: 130px;
     height: 54px;
     line-height: 16px;
@@ -145,7 +145,7 @@ html, body {
 
 .popup_try:focus {
     outline: 4px;
-    box-shadow: 0 0 0 4px #0d6efd;
+    box-shadow: 0 0 0 4px #62a0f6;
 }
 
 .popup_try_1_row:hover {
@@ -155,7 +155,7 @@ html, body {
 
 .popup_try_1_row:focus {
     outline: 4px;
-    box-shadow: 0 0 0 4px #0d6efd;
+    box-shadow: 0 0 0 4px #62a0f6;
 }
 
 .popup_form {
@@ -165,7 +165,7 @@ html, body {
     justify-content: center;
     border-radius: 15px; /* Закругляем углы */
     background-color: #ffffff;
-    border: 2px solid #0d6efd;
+    border: 2px solid #62a0f6;
     padding: 28px;
     text-transform: uppercase;
     color: #fcf6f6; /* Цвет текста */
@@ -241,7 +241,7 @@ html, body {
     top: 2px;
     right: 10px;
     cursor: pointer;
-    color: #0d6efd;
+    color: #62a0f6;
 }
 
 input::placeholder {
@@ -254,8 +254,8 @@ input::placeholder {
     appearance: none;
     height: 30px;
     width: 9.4rem;
-    border: 0 #0d6efd;
-    box-shadow: 0 0 3px 1px #0d6efd;
+    border: 0 #62a0f6;
+    box-shadow: 0 0 3px 1px #62a0f6;
     border-radius: 5px;
     background: #fcf6f6;
     color: gray;
@@ -322,7 +322,7 @@ input[type="file"] {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 2px solid #0d6efd;
+    border: 2px solid #62a0f6;
     border-radius: 5px;
     box-shadow: 0 0 0 2px #15467a;
 }
@@ -371,7 +371,7 @@ tr:nth-of-type(odd) {
 }
 
 .footer {
-    background: #0d6efd;
+    background: #62a0f6;
     font-size: 16px;
     color: #fcf6f6;
     text-align: center;
@@ -383,7 +383,7 @@ button {
     appearance: none;
     border: 0;
     border-radius: 5px;
-    background: #0d6efd;
+    background: #62a0f6;
     color: #fcf6f6;
     padding: 2px 5px;
     font-size: 12px;
@@ -397,7 +397,7 @@ button {
 
 .button:focus {
     outline: 4px;
-    box-shadow: 0 0 0 4px #0d6efd;
+    box-shadow: 0 0 0 4px #62a0f6;
 }
 
 input[type="text"] {
@@ -409,9 +409,9 @@ input[type="text"] {
     align-items: center;
     margin: 4px 0;
     padding: 2px;
-    box-shadow: 0 0 3px 1px #0d6efd;
+    box-shadow: 0 0 3px 1px #62a0f6;
     border-radius: 5px;
-    border: 0 #0d6efd;
+    border: 0 #62a0f6;
 }
 
 *, *:before, *:after {

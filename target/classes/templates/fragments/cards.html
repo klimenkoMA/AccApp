@@ -7,14 +7,15 @@
 </head>
 <div class="container" th:fragment="cards" style="display: grid">
     <div class="row modal-body align-items-start justify-content-around m-2">
-        <div class="card h-25 col" style="max-width: min-content; min-height: 25rem;">
-            <img src="../img/building.png" class="card-img-top" alt="Филиалы">
+        <div class="card col" style="width: 13rem; height: 25rem; max-width: 13rem">
+            <img src="../img/building.png" class="card-img-top" alt="Филиалы"
+                 style="width: 11rem; height: 11rem">
             <div class="card-body d-grid gap-2">
                 <h5 class="card-title">Подразделения предприятия</h5>
                 <p class="card-text">Дочерние филиалы и бэк-офисы</p>
-                <a th:href="@{/workarea}" class="btn stretched-link text-light gap-1"
-                   style="background-color: #62a0f6
-                   ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center">
+                <a th:href="@{/workarea}"
+                   class="btn stretched-link text-light col" style="background-color: #62a0f6;
+                                    ;justify-self: center; height: 5vh; width: 10rem; align-self: center">
                     Филиалы
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                          fill="currentColor"
@@ -29,13 +30,15 @@
             </div>
         </div>
 
-        <div class="card h-25 col text-center" style="max-width: min-content; min-height: 25rem;">
-            <img src="../img/laptop.png" class="card-img-top" alt="Оборудование">
+        <div class="card col" style="width: 13rem; height: 25rem; max-width: 13rem">
+            <img src="../img/laptop.png" class="card-img-top" alt="Оборудование"
+                 style="width: 11rem; height: 11rem">
             <div class="card-body d-grid gap-2">
                 <h5 class="card-title">Устройства</h5>
                 <p class="card-text">Используемые устройства и оборудование</p>
-                <a th:href="@{/devices}" class="btn stretched-link text-light" style="background-color: #62a0f6
-                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center">
+                <a th:href="@{/devices}"
+                   class="btn stretched-link text-light col" style="background-color: #62a0f6;
+                                    ;justify-self: center; height: 5vh; width: 10rem; align-self: center">
                     Оборудование
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                          class="bi bi-laptop" viewBox="0 0 18 18">
@@ -46,14 +49,16 @@
             </div>
         </div>
 
-        <div class="card h-25 col text-center" style="max-width: min-content; min-height: 25rem;">
-            <img src="../img/employees.png" class="card-img-top" alt="Сотрудники">
+        <div class="card col" style="width: 13rem; height: 25rem; max-width: 13rem">
+            <img src="../img/employees.png" class="card-img-top" alt="Сотрудники"
+                 style="width: 11rem; height: 11rem">
             <div class="card-body d-grid gap-2">
                 <h5 class="card-title">Сотрудники</h5>
                 <p class="card-text">Персонал предприятия, пользователи</p>
 
-                <a th:href="@{/employee}" class="col btn stretched-link text-light" style="background-color: #62a0f6
-                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center">
+                <a th:href="@{/employee}"
+                   class="btn stretched-link text-light col" style="background-color: #62a0f6;
+                                    ;justify-self: center; height: 5vh; width: 10rem; align-self: center">
                     Сотрудники
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                          class="bi bi-people-fill" viewBox="0 0 18 18">
@@ -64,13 +69,15 @@
             </div>
         </div>
 
-        <div class="card h-25 col text-center" style="max-width: min-content; min-height: 25rem;">
-            <img src="../img/events.png" class="card-img-top" alt="События">
+        <div class="card col" style="width: 13rem; height: 25rem; max-width: 13rem">
+            <img src="../img/events.png" class="card-img-top" alt="События"
+                 style="width: 11rem; height: 11rem">
             <div class="card-body d-grid gap-2">
                 <h5 class="card-title">Движение ТМЦ</h5>
                 <p class="card-text">История использования оборудования</p>
-                <a th:href="@{/events}" class="col btn stretched-link text-light" style="background-color: #62a0f6
-                      ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center">
+                <a th:href="@{/events}"
+                   class="btn stretched-link text-light col" style="background-color: #62a0f6;
+                                    ;justify-self: center; height: 5vh; width: 10rem; align-self: center">
                     События
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          class="bi bi-calendar2-week-fill" viewBox="0 0 16 16">
@@ -83,13 +90,15 @@
             </div>
         </div>
 
-        <div class="card h-25 col text-center" style="max-width: min-content; min-height: 25rem;">
-            <img src="../img/coders.png" class="card-img-top" alt="Программисты">
+        <div class="card col" style="width: 13rem; height: 25rem; max-width: 13rem">
+            <img src="../img/coders.png" class="card-img-top" alt="Программисты"
+                 style="width: 11rem; height: 11rem">
             <div class="card-body d-grid gap-2 row" style="display: grid">
-                <h5 class="card-title">Специалисты IT</h5>
+                <h5 class="card-title">IT-специалисты предприятия</h5>
                 <p class="card-text">Сотрудники IT-отдела</p>
-                <a th:href="@{/itstaff}" class="btn stretched-link text-light col" style="background-color: #62a0f6;
-                                    ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center">
+                <a th:href="@{/itstaff}"
+                   class="btn stretched-link text-light col" style="background-color: #62a0f6;
+                                    ;justify-self: center; height: 5vh; width: 10rem; align-self: center">
                     IT-отдел
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          class="bi bi-robot" viewBox="0 0 16 16">
@@ -106,13 +115,15 @@
             </div>
         </div>
 
-        <div class="card h-25 col text-center" style="max-width: min-content; min-height: 25rem;">
-            <img src="../img/rooms.png" class="card-img-top" alt="Кабинеты">
+        <div class="card col" style="width: 13rem; height: 25rem; max-width: 13rem">
+            <img src="../img/rooms.png" class="card-img-top" alt="Кабинеты"
+                 style="width: 11rem; height: 11rem">
             <div class="card-body d-grid gap-2">
                 <h5 class="card-title">Кабинеты предприятия</h5>
                 <p class="card-text">Помещения для сотрудников</p>
-                <a th:href="@{/room}" class="btn stretched-link text-light col" style="background-color: #62a0f6
-                                    ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center">
+                <a th:href="@{/room}"
+                   class="btn stretched-link text-light col" style="background-color: #62a0f6;
+                                    ;justify-self: center; height: 5vh; width: 10rem; align-self: center">
                     Кабинеты
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                          class="bi bi-door-closed-fill" viewBox="0 0 18 18">

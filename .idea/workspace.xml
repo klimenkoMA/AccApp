@@ -5,12 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-27.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-28.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/blueadd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/bluedelete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/blueupdate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/itstaffsearchbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/roomsearchback.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/itstaffsearching.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/cards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruditstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruditstaff.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/roomsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/roomsearching.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/cards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruditstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruditstaff.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/roomsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/roomsearching.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -893,14 +912,7 @@
       <workItem from="1736662561853" duration="91000" />
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
-      <workItem from="1737776174681" duration="51453000" />
-    </task>
-    <task id="LOCAL-00441" summary="Rebuilt DevicesController.class">
-      <created>1734154199585</created>
-      <option name="number" value="00441" />
-      <option name="presentableId" value="LOCAL-00441" />
-      <option name="project" value="LOCAL" />
-      <updated>1734154199585</updated>
+      <workItem from="1737776174681" duration="67735000" />
     </task>
     <task id="LOCAL-00442" summary="Rebuilt EmployeeController and EventsController">
       <created>1734247037339</created>
@@ -1238,7 +1250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1738044888285</updated>
     </task>
-    <option name="localTasksCounter" value="490" />
+    <task id="LOCAL-00490" summary="Rebuilt room.html's CRUD buttons v3">
+      <created>1738127957895</created>
+      <option name="number" value="00490" />
+      <option name="presentableId" value="LOCAL-00490" />
+      <option name="project" value="LOCAL" />
+      <updated>1738127957895</updated>
+    </task>
+    <option name="localTasksCounter" value="491" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1261,7 +1280,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new attribute 'idForView' in devices.html v4" />
     <MESSAGE value="Added new attribute 'idForView' in feedbacks.html" />
     <MESSAGE value="Added new attribute 'idForView' in feedbacks.html v2" />
     <MESSAGE value="Created RepairControllerTest" />
@@ -1286,7 +1304,8 @@
     <MESSAGE value="Created Rooms context searching" />
     <MESSAGE value="Rebuilt room.html's CRUD buttons" />
     <MESSAGE value="Rebuilt room.html's CRUD buttons v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt room.html's CRUD buttons v2" />
+    <MESSAGE value="Rebuilt room.html's CRUD buttons v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt room.html's CRUD buttons v3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
