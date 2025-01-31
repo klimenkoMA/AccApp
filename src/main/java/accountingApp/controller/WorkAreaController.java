@@ -12,7 +12,9 @@ import accountingApp.service.WorkAreaService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class WorkAreaController {
@@ -46,7 +48,7 @@ public class WorkAreaController {
         String nameWithoutSpaces = name.trim();
         String descriptionWithoutSpaces = description.trim();
         if (checker.checkAttribute(nameWithoutSpaces)
-        || checker.checkAttribute(descriptionWithoutSpaces)) {
+                || checker.checkAttribute(descriptionWithoutSpaces)) {
             logger.warn("*** WorkAreaController.addWorkArea(): EMPTY NAME ***");
             return getWorkArea(model);
         }
@@ -115,7 +117,7 @@ public class WorkAreaController {
                 return getWorkArea(model);
             } else {
                 if (checker.checkAttribute(nameWithoutSpaces)
-                || checker.checkAttribute(descriptionWithoutSpaces)) {
+                        || checker.checkAttribute(descriptionWithoutSpaces)) {
                     logger.warn("*** WorkAreaController.updateWorkArea(): NAME is EMPTY ***");
                     return getWorkArea(model);
                 }
@@ -171,4 +173,46 @@ public class WorkAreaController {
             }
         }
     }
+
+    @PostMapping("/findworkareabyattrs")
+    public String findAreaByAttrs(@RequestParam String attrs,
+                                  Model model) {
+
+        if (checker.checkAttribute(attrs)
+        ) {
+            logger.warn("*** WorkAreaController.findAreaByAttrs():  Attribute has a null value! ***");
+            return getWorkArea(model);
+        }
+
+        String attrsWithoutSpaces = attrs.trim().toLowerCase(Locale.ROOT);
+        try {
+            List<WorkArea> workAreas = workAreaService.findAllWorkArea();
+            List<WorkArea> workAreaList = new ArrayList<>();
+
+            for (WorkArea wr : workAreas
+            ) {
+                if ((wr.getId() + "").contains(attrsWithoutSpaces)) {
+                    workAreaList.add(wr);
+                } else if (wr.getName().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    workAreaList.add(wr);
+                } else if (wr.getDescription().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces))
+                    workAreaList.add(wr);
+            }
+
+            if (workAreaList.isEmpty()) {
+                logger.debug("*** WorkAreaController.findAreaByAttrs():  DATA NOT FOUND IN DB***");
+                return getWorkArea(model);
+            }
+
+            model.addAttribute("workAreaList", workAreaList);
+            return "workarea";
+        } catch (Exception e1) {
+            logger.error("*** WorkAreaController.findAreaByAttrs():  WRONG DB VALUES*** "
+                    + e1.getMessage());
+            return getWorkArea(model);
+        }
+    }
+
 }

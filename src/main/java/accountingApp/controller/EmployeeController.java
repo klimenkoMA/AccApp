@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class EmployeeController {
@@ -282,6 +283,59 @@ public class EmployeeController {
             return "employee";
         } catch (Exception e) {
             logger.error("*** EmployeeController.findEmployeesByCategory(): WRONG DB values! *** "
+                    + e.getMessage());
+            return getEmployee(model);
+        }
+    }
+
+    @PostMapping("/findemployeebyattrs")
+    public String findEmployeesByAttrs(@RequestParam String attrs
+            , Model model) {
+
+        if (checker.checkAttribute(attrs)) {
+            logger.warn("*** EmployeeController.findEmployeesByAttrs():" +
+                    "  Attribute has a null value! ***");
+            return getEmployee(model);
+        }
+
+        String attrsWithoutSpaces = attrs.trim().toLowerCase(Locale.ROOT);
+        try {
+
+            List<Employee> employees = employeeService.getListEmployee();
+            List<Employee> employeeList = new ArrayList<>();
+
+            for (Employee emp : employees
+            ) {
+                if ((emp.getId() + "").contains(attrsWithoutSpaces)) {
+                    employeeList.add(emp);
+                } else if (emp.getFio().toLowerCase(Locale.ROOT).toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    employeeList.add(emp);
+                } else if (emp.getProfession().name().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    employeeList.add(emp);
+                } else if (emp.getWorkarea().getName().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    employeeList.add(emp);
+                } else if (emp.getDborn().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    employeeList.add(emp);
+                } else if (emp.getRoom().getNumber().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    employeeList.add(emp);
+                }
+            }
+
+            model.addAttribute("employeeList", employeeList);
+
+            if (employeeList.isEmpty()) {
+                logger.debug("*** EmployeeController.findEmployeesByAttrs():  DATA NOT FOUND IN DB***");
+                return getEmployee(model);
+            }
+
+            return "employee";
+        } catch (Exception e) {
+            logger.error("*** EmployeeController.findEmployeesByAttrs(): WRONG DB values! *** "
                     + e.getMessage());
             return getEmployee(model);
         }

@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class EventsController {
@@ -205,6 +207,62 @@ public class EventsController {
             }
         } catch (Exception e) {
             logger.error("*** EventsController.fidEventById():  WRONG DB VALUES*** "
+                    + e.getMessage());
+            return getEvents(model);
+        }
+    }
+
+    @PostMapping("/findeventbyattrs")
+    public String findEventsByAttrs(@RequestParam String attrs,
+                                    Model model) {
+        if (checker.checkAttribute(attrs)
+        ) {
+            logger.warn("*** EventsController.findEventsByAttrs():  Attribute ID has a null value! ***");
+            return getEvents(model);
+        }
+
+        String attrsWithoutSpaces = attrs.trim().toLowerCase(Locale.ROOT);
+        try {
+            List<Events> events = eventsService.findAllEvents();
+            List<Events> eventsList = new ArrayList<>();
+
+            for (Events ev : events
+            ) {
+                if ((ev.getId() + "").contains(attrsWithoutSpaces)) {
+                    eventsList.add(ev);
+                } else if (ev.getComment().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    eventsList.add(ev);
+                } else if (ev.getDate().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    eventsList.add(ev);
+                } else if (ev.getWorkarea().getName().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    eventsList.add(ev);
+                } else if (ev.getDevice().getName().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    eventsList.add(ev);
+                } else if (ev.getEmployeeid().getFio().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    eventsList.add(ev);
+                } else if (ev.getItstaffid().getName().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    eventsList.add(ev);
+                } else if (ev.getDevice().getCategory().getCategory().toLowerCase()
+                        .contains(attrsWithoutSpaces)) {
+                    eventsList.add(ev);
+                }
+            }
+
+            if (eventsList.isEmpty()) {
+                logger.debug("*** EventsController.findEventsByAttrs():  DATA NOT FOUND IN DB***");
+                return getEvents(model);
+            }
+
+            model.addAttribute("eventsList", eventsList);
+            return "events";
+        } catch (Exception e) {
+            logger.error("*** EventsController.findEventsByAttrs():  WRONG DB VALUES*** "
                     + e.getMessage());
             return getEvents(model);
         }
