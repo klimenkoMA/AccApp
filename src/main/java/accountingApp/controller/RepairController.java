@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class RepairController {
@@ -167,6 +168,62 @@ public class RepairController {
         } catch (Exception e) {
             logger.error("*** RepairController.updateRepair():  WRONG DB VALUES*** ");
             e.printStackTrace();
+            return getRepair(model);
+        }
+    }
+
+    @PostMapping("/findrepairbyattrs")
+    public String findRepairByAttrs(@RequestParam String attrs
+            , Model model) {
+        if (checker.checkAttribute(attrs)
+        ) {
+            logger.warn("*** RepairController.findRepairByAttrs():  Attribute has a null value! ***");
+            return getRepair(model);
+        }
+        String attrsClear = attrs.trim().toLowerCase(Locale.ROOT);
+        try {
+            List<Repair> repairs = repairService.getAllRepairs();
+            List<Repair> repairList = new ArrayList<>();
+
+            for (Repair rep : repairs
+            ) {
+                if ((rep.getId() + "").contains(attrsClear)) {
+                    repairList.add(rep);
+                } else if ((rep.getDurability() + "").contains(attrsClear)) {
+                    repairList.add(rep);
+                } else if (rep.getFirstDay().toLowerCase(Locale.ROOT)
+                        .contains(attrsClear)) {
+                    repairList.add(rep);
+                } else if (rep.getLastRepairDay().toLowerCase(Locale.ROOT)
+                        .contains(attrsClear)) {
+                    repairList.add(rep);
+                } else if ((rep.getRepairCount() + "").contains(attrsClear)) {
+                    repairList.add(rep);
+                } else if (rep.getCategory().getCategory().toLowerCase(Locale.ROOT)
+                        .contains(attrsClear)) {
+                    repairList.add(rep);
+                } else if (rep.getDevice().getName().toLowerCase(Locale.ROOT)
+                        .contains(attrsClear)) {
+                    repairList.add(rep);
+                } else if (rep.getRepairedParts()
+                        .stream()
+                        .anyMatch(detail -> detail.toLowerCase(Locale.ROOT)
+                                .contains(attrsClear))) {
+                    repairList.add(rep);
+                } else if ((rep.getDurability() + "").contains(attrsClear)) {
+                    repairList.add(rep);
+                }
+            }
+
+            model.addAttribute("repairList", repairList);
+            if (repairList.isEmpty()) {
+                logger.debug("*** RepairController.findRepairByAttrs():  DATA NOT FOUND IN DB***");
+                return getRepair(model);
+            }
+            return "repair";
+        } catch (Exception e) {
+            logger.error("*** RepairController.findRepairByAttrs():  WRONG DB VALUES*** "
+                    + e.getMessage());
             return getRepair(model);
         }
     }

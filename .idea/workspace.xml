@@ -5,46 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-29.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/emplsearchbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/eventssearchbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/workareasearchbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/employeesearching.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/eventssearching.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/workareasearching.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-01-30.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/devicessearchbg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/repairsearchbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/repairsearchingbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/devicessearching.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/repairsearching.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-22.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EventsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/WorkAreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/blueadd.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/blueadd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/bluedelete.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/bluedelete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/blueupdate.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/blueupdate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/minisearch.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/minisearch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruditstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruditstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EventsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/WorkAreaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/blueadd.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/blueadd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/bluedelete.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/bluedelete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/blueupdate.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/blueupdate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/minisearch.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/minisearch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruditstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruditstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-23.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RepairController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/eventssearchbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/eventssearchbg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrepair.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrepair.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/itstaffsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/itstaffsearching.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/repair.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RepairController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RepairController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/eventssearchbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/eventssearchbg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrepair.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrepair.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/itstaffsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/itstaffsearching.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/repair.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -927,14 +913,7 @@
       <workItem from="1736662561853" duration="91000" />
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
-      <workItem from="1737776174681" duration="87026000" />
-    </task>
-    <task id="LOCAL-00443" summary="Rebuilt all controllers">
-      <created>1734315795385</created>
-      <option name="number" value="00443" />
-      <option name="presentableId" value="LOCAL-00443" />
-      <option name="project" value="LOCAL" />
-      <updated>1734315795385</updated>
+      <workItem from="1737776174681" duration="105241000" />
     </task>
     <task id="LOCAL-00444" summary="Added new Enum">
       <created>1734414732343</created>
@@ -1272,7 +1251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1738213533221</updated>
     </task>
-    <option name="localTasksCounter" value="492" />
+    <task id="LOCAL-00492" summary="Rebuilt employee.html's, workarea.html's, events.html's CRUD buttons">
+      <created>1738301207815</created>
+      <option name="number" value="00492" />
+      <option name="presentableId" value="LOCAL-00492" />
+      <option name="project" value="LOCAL" />
+      <updated>1738301207815</updated>
+    </task>
+    <option name="localTasksCounter" value="493" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1295,7 +1281,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new attribute 'idForView' in feedbacks.html v2" />
     <MESSAGE value="Created RepairControllerTest" />
     <MESSAGE value="Added getValidRepair and addValidNewRepair methods in RepairControllerTest" />
     <MESSAGE value="Added addEmptyAttrNewRepair method in RepairControllerTest" />
@@ -1320,7 +1305,8 @@
     <MESSAGE value="Rebuilt room.html's CRUD buttons v2" />
     <MESSAGE value="Rebuilt room.html's CRUD buttons v3" />
     <MESSAGE value="Rebuilt itstaff.html's CRUD buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt itstaff.html's CRUD buttons" />
+    <MESSAGE value="Rebuilt employee.html's, workarea.html's, events.html's CRUD buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt employee.html's, workarea.html's, events.html's CRUD buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

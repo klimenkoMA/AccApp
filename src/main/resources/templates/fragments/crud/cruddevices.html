@@ -6,192 +6,243 @@
     <div th:replace="fragments/head :: head"></div>
 </head>
 
-<div class="d-flex p-3 m-3" style="min-width: max-content;justify-content: center;
+<div class="d-flex" style="min-width: max-content;justify-content: center;
                 max-height: min-content" th:fragment="cruddevices">
-    <table class="crud_buttons col" cellpadding="40px" align="center">
-        <td>
-            <div class="popup_div">
-                <input type="checkbox" id="callback">
-                <label class="popup_try" for="callback">Добавить</label>
-                <form class="popup_form" method="post" action="/adddevice">
-                    <div align="center">
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="category"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+    <table class="crud_buttons" cellpadding="40px" align="center"
+           style="padding-top: 0; padding-bottom: 0; max-height: 13rem; margin-top: 2.5rem;
+            margin-bottom: 1rem">
+
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/blueadd.png" class="card-img-top"
+                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Оборудование">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Добавить <br>оборудование</p>
+                    <div class="popup_div">
+                        <input type="checkbox" id="callback">
+                        <label class="popup_try" for="callback" style="box-shadow: 2px 2px 4px black"
+                        >Добавление</label>
+                        <form class="popup_form" method="post" action="/adddevice">
+                            <div align="center">
+                                <label class="d-flex justify-content-center align-items-center">
+                                    <select class="form-select m-2" name="category"
+                                            style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Категория</option>
-                                <option th:each="element : ${categoryList}"
-                                        th:value="${element}"
-                                        th:text="${element}"></option>
-                            </select>
-                        </label>
-                        <label>
-                            <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
-                        </label>
-                        <label>
-                            <input type="text" name="description" align="middle" placeholder="Описание оборудования"/>
-                        </label>
-                        <label>
-                            <input type="text" name="inventory" align="middle" placeholder="Инвентарный номер"/>
-                        </label>
-                        <label>
-                            <input type="text" name="serial" align="middle" placeholder="Серийный номер"/>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="room"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                        <option value="0">Категория</option>
+                                        <option th:each="element : ${categoryList}"
+                                                th:value="${element}"
+                                                th:text="${element}"></option>
+                                    </select>
+                                </label>
+                                <label>
+                                    <input type="text" name="name" align="middle" placeholder="Название оборудования"/>
+                                </label>
+                                <label>
+                                    <input type="text" name="description" align="middle"
+                                           placeholder="Описание оборудования"/>
+                                </label>
+                                <label>
+                                    <input type="text" name="inventory" align="middle" placeholder="Инвентарный номер"/>
+                                </label>
+                                <label>
+                                    <input type="text" name="serial" align="middle" placeholder="Серийный номер"/>
+                                </label>
+                                <label class="d-flex justify-content-center align-items-center">
+                                    <select class="form-select m-2" name="room"
+                                            style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Кабинет</option>
-                                <option th:each="element : ${roomList}"
-                                        th:value="${element.id}"
-                                        th:text="${element.number}"></option>
-                            </select>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="employee"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                        <option value="0">Кабинет</option>
+                                        <option th:each="element : ${roomList}"
+                                                th:value="${element.id}"
+                                                th:text="${element.number}"></option>
+                                    </select>
+                                </label>
+                                <label class="d-flex justify-content-center align-items-center">
+                                    <select class="form-select m-2" name="employee"
+                                            style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Взял</option>
-                                <option th:each="element : ${employeeList}"
-                                        th:value="${element.id}"
-                                        th:text="${element.fio}"></option>
-                            </select>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="itstaff"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                        <option value="0">Взял</option>
+                                        <option th:each="element : ${employeeList}"
+                                                th:value="${element.id}"
+                                                th:text="${element.fio}"></option>
+                                    </select>
+                                </label>
+                                <label class="d-flex justify-content-center align-items-center">
+                                    <select class="form-select m-2" name="itstaff"
+                                            style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">МОЛ</option>
-                                <option th:each="element : ${itStaffList}"
-                                        th:value="${element.id}"
-                                        th:text="${element.name}"></option>
-                            </select>
-                        </label>
+                                        <option value="0">МОЛ</option>
+                                        <option th:each="element : ${itStaffList}"
+                                                th:value="${element.id}"
+                                                th:text="${element.name}"></option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div align="center">
+                                <button class="button" type="submit">Добавить</button>
+                            </div>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            <label class="close" for="callback">+</label>
+                        </form>
                     </div>
-                    <div align="center">
-                        <button class="button" type="submit">Добавить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <label class="close" for="callback">+</label>
-                </form>
+                </div>
             </div>
         </td>
 
-        <td>
-            <div class="popup_div">
-                <input type="checkbox" id="callback3">
-                <label class="popup_try" for="callback3">Обновить</label>
-                <form action="/updatedevice" class="popup_form" method="post">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" align="middle" placeholder="ID оборудования">
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="category"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/blueupdate.png" class="card-img-top"
+                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Оборудование">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Изменить <br>оборудование</p>
+                    <div class="popup_div">
+                        <input type="checkbox" id="callback3">
+                        <label class="popup_try" for="callback3" style="box-shadow: 2px 2px 4px black"
+                        >Обновление</label>
+                        <form action="/updatedevice" class="popup_form" method="post">
+                            <div align="center">
+                                <label>
+                                    <input type="text" name="id" align="middle" placeholder="ID оборудования">
+                                </label>
+                                <label class="d-flex justify-content-center align-items-center">
+                                    <select class="form-select m-2" name="category"
+                                            style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Категория</option>
-                                <option th:each="element : ${categoryList}"
-                                        th:value="${element}"
-                                        th:text="${element}"></option>
-                            </select>
-                        </label>
-                        <label>
-                            <input type="text" name="name" align="middle" placeholder="Название оборудования">
-                        </label>
-                        <label>
-                            <input type="text" name="description" align="middle" placeholder="Описание оборудования"/>
-                        </label>
-                        <label>
-                            <input type="text" name="inventory" align="middle" placeholder="Инвентарный номер"/>
-                        </label>
-                        <label>
-                            <input type="text" name="serial" align="middle" placeholder="Серийный номер"/>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="room"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                        <option value="0">Категория</option>
+                                        <option th:each="element : ${categoryList}"
+                                                th:value="${element}"
+                                                th:text="${element}"></option>
+                                    </select>
+                                </label>
+                                <label>
+                                    <input type="text" name="name" align="middle" placeholder="Название оборудования">
+                                </label>
+                                <label>
+                                    <input type="text" name="description" align="middle"
+                                           placeholder="Описание оборудования"/>
+                                </label>
+                                <label>
+                                    <input type="text" name="inventory" align="middle" placeholder="Инвентарный номер"/>
+                                </label>
+                                <label>
+                                    <input type="text" name="serial" align="middle" placeholder="Серийный номер"/>
+                                </label>
+                                <label class="d-flex justify-content-center align-items-center">
+                                    <select class="form-select m-2" name="room"
+                                            style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Кабинет</option>
-                                <option th:each="element : ${roomList}"
-                                        th:value="${element.id}"
-                                        th:text="${element.number}"></option>
-                            </select>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="employee"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                        <option value="0">Кабинет</option>
+                                        <option th:each="element : ${roomList}"
+                                                th:value="${element.id}"
+                                                th:text="${element.number}"></option>
+                                    </select>
+                                </label>
+                                <label class="d-flex justify-content-center align-items-center">
+                                    <select class="form-select m-2" name="employee"
+                                            style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">Использует</option>
-                                <option th:each="element : ${employeeList}"
-                                        th:value="${element.id}"
-                                        th:text="${element.fio}"></option>
-                            </select>
-                        </label>
-                        <label class="d-flex justify-content-center align-items-center">
-                            <select class="form-select m-2" name="itstaff"
-                                    style="border-radius: 5px; border: 0 solid #62a0f6;
+                                        <option value="0">Использует</option>
+                                        <option th:each="element : ${employeeList}"
+                                                th:value="${element.id}"
+                                                th:text="${element.fio}"></option>
+                                    </select>
+                                </label>
+                                <label class="d-flex justify-content-center align-items-center">
+                                    <select class="form-select m-2" name="itstaff"
+                                            style="border-radius: 5px; border: 0 solid #62a0f6;
                                    max-height: min-content; height: 30px; font-size: small;
                                    width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                <option value="0">МОЛ</option>
-                                <option th:each="element : ${itStaffList}"
-                                        th:value="${element.id}"
-                                        th:text="${element.name}"></option>
-                            </select>
-                        </label>
+                                        <option value="0">МОЛ</option>
+                                        <option th:each="element : ${itStaffList}"
+                                                th:value="${element.id}"
+                                                th:text="${element.name}"></option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div align="center">
+                                <button class="button" type="submit">Обновить</button>
+                            </div>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                            <label class="close" for="callback3">+</label>
+                        </form>
                     </div>
-                    <div align="center">
-                        <button class="button" type="submit">Обновить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                    <label class="close" for="callback3">+</label>
-                </form>
+                </div>
             </div>
         </td>
 
-        <td>
-            <div class="popup_div">
-                <input type="checkbox" id="callback5">
-                <label class="popup_try" for="callback5">Найти</label>
-                <form action="/finddevicebyname" class="popup_form" method="post">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="name" align="middle" placeholder="Название оборудования">
-                        </label>
-                    </div>
-                    <div align="center">
-                        <button class="button" type="submit">Найти</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                    <label class="close" for="callback5">+</label>
-                </form>
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/minisearch.png" class="card-img-top"
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Поиск <br>оборудования</p>
+                    <a th:replace="fragments/searching/devicessearching :: devicessearching"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Поиск
+                    </a>
+                </div>
             </div>
         </td>
 
-        <td>
-            <div class="popup_div">
-                <input type="checkbox" id="callback2">
-                <label class="popup_try" for="callback2">Удалить</label>
-                <form action="/deletedevice" class="popup_form" method="post">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" align="middle"
-                                   placeholder="ID оборудования"/>
-                        </label>
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/bluedelete.png" class="card-img-top"
+                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Оборудование">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Удаление оборудования</p>
+                    <div class="popup_div">
+                        <input type="checkbox" id="callback2">
+                        <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
+                        >Удаление</label>
+                        <form action="/deletedevice" class="popup_form" method="post">
+                            <div align="center">
+                                <label>
+                                    <input type="text" name="id" align="middle"
+                                           placeholder="ID оборудования"/>
+                                </label>
+                            </div>
+                            <div>
+                                <button class="button" type="submit">Удалить</button>
+                            </div>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            <label class="close" for="callback2">+</label>
+                        </form>
                     </div>
-                    <div>
-                        <button class="button" type="submit">Удалить</button>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <label class="close" for="callback2">+</label>
-                </form>
+                </div>
+            </div>
+        </td>
+
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/laptop.png" class="card-img-top"
+                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Оборудование">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Список <br>оборудования</p>
+                    <a th:href="@{/devices}" class="btn stretched-link text-light" style="background-color: #62a0f6
+                ; align-content: center; box-shadow: 2px 2px 4px black; height: 5vh;font-size: medium;
+                width: 130px; text-shadow: #002349 2px 3px 4px">
+                        Техника
+                    </a>
+                </div>
             </div>
         </td>
 

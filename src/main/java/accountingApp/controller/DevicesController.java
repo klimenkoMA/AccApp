@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Класс для переадресации введенных пользователем данных в БД, получение ответа
@@ -312,6 +313,67 @@ public class DevicesController {
             return "devices";
         } catch (Exception e) {
             logger.error("*** DevicesController.findDevicesListByCategory(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getDevices(model);
+        }
+    }
+
+    @PostMapping("/filterdevicesbyattrs")
+    public String findDevicesListByAttrs(@RequestParam String attrs
+            , Model model) {
+
+        if (checker.checkAttribute(attrs)) {
+            logger.warn("*** DevicesController.findDevicesListByAttrs():" +
+                    "  Attribute has a null value! ***");
+            return getDevices(model);
+        }
+        String attrsWithoutSpaces = attrs.trim().toLowerCase(Locale.ROOT);
+
+        try {
+            List<Devices> devices = devicesService.findAllDevices();
+            List<Devices> devicesList = new ArrayList<>();
+
+            for (Devices dev: devices
+                 ) {
+                if ((dev.getId() + "").contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if (dev.getName().toLowerCase(Locale.ROOT)
+                .contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if (dev.getCategory().getCategory().toLowerCase(Locale.ROOT)
+                .contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if(dev.getDescription().toLowerCase(Locale.ROOT)
+                .contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if (dev.getEmployee().getFio().toLowerCase(Locale.ROOT)
+                .contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if ((dev.getInventory() + "").toLowerCase(Locale.ROOT)
+                .contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if (dev.getItstaff().getName().toLowerCase(Locale.ROOT)
+                .contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if ((dev.getRepair().getDurability() + "").toLowerCase(Locale.ROOT)
+                .contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if (dev.getRoom().getNumber().contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                } else if (dev.getSerial().toLowerCase(Locale.ROOT)
+                .contains(attrsWithoutSpaces)){
+                    devicesList.add(dev);
+                }
+            }
+
+            model.addAttribute("devicesList", devicesList);
+            if (devicesList.isEmpty()){
+                logger.debug("*** DevicesController.findDevicesListByAttrs():  DATA NOT FOUND IN DB***");
+                return getDevices(model);
+            }
+            return "devices";
+        } catch (Exception e) {
+            logger.error("*** DevicesController.findDevicesListByAttrs(): wrong DB's values! *** "
                     + e.getMessage());
             return getDevices(model);
         }
