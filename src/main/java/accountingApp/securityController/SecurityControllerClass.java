@@ -250,4 +250,55 @@ public class SecurityControllerClass {
             }
         }
     }
+
+    @PostMapping("/finduserbyattrs")
+    public String findAppUserByAttrs(@RequestParam String attrs
+            , Model model
+    ) {
+        if (checker.checkAttribute(attrs)
+        ) {
+            logger.warn("SecurityControllerClass.findAppUserByAttrs():" +
+                    " Attribute has a null value!");
+            return getUsers(model);
+        }
+
+        String attrsWithoutSpaces = attrs.trim().toLowerCase(Locale.ROOT);
+        try {
+            List<AppUser> users = service.getAllAppUsers();
+            List<AppUser> appUserList = new ArrayList<>();
+
+            for (AppUser us : users
+            ) {
+                if ((us.getId() + "").contains(attrsWithoutSpaces)) {
+                    appUserList.add(us);
+                } else if (us.getUserName().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    appUserList.add(us);
+                } else if (us.getIsActiveForView().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    appUserList.add(us);
+                } else if (us.getRoles().stream()
+                        .anyMatch(descr -> descr.getAuthority().toLowerCase(Locale.ROOT)
+                                .contains(attrsWithoutSpaces))) {
+                    appUserList.add(us);
+                }
+            }
+
+            model.addAttribute("appUserList", appUserList);
+
+            if (appUserList.isEmpty()) {
+                logger.debug("*** ITStaffController.getItStaffListByAttrs():  DATA NOT FOUND IN DB***");
+                return getUsers(model);
+            }
+
+            return "users";
+        } catch (Exception e) {
+            logger.error("*** SecurityControllerClass.findAppUserByAttrs():  WRONG DB VALUES " +
+                    "OR EMPTY ATTRS *** " + e.getMessage() + " " + e.toString());
+            e.printStackTrace();
+            return getUsers(model);
+        }
+
+    }
+
 }
