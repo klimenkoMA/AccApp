@@ -279,4 +279,47 @@ public class DocumentControllerClass {
         return objectId;
     }
 
+    @PostMapping("/finddocumentbyattrs")
+    public String findSomeDocumentByAttrs(@RequestParam String attrs,
+                                          Model model) {
+
+        if (attrs == null) {
+            logger.warn("*** DocumentControllerClass.findSomeDocumentByAttrs():" +
+                    "  Attribute has a null value! ***");
+            return getDocument(model);
+        }
+
+        String attrsWithoutSpaces = attrs.trim().toLowerCase(Locale.ROOT);
+
+        try {
+            List<DocumentClass> docs = documentServiceClass.findAllDocuments();
+            List<DocumentClass> documentClassList = new ArrayList<>();
+
+            for (DocumentClass doc : docs
+            ) {
+                if ((doc.getIdCount() + "").contains(attrsWithoutSpaces)) {
+                    documentClassList.add(doc);
+                } else if (doc.getName().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    documentClassList.add(doc);
+                } else if (doc.getDescription().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    documentClassList.add(doc);
+                }
+            }
+            model.addAttribute("documentClassList", documentClassList);
+
+            if (documentClassList.isEmpty()) {
+                logger.debug("***DocumentControllerClass.findSomeDocumentByAttrs()" +
+                        ":  DATA NOT FOUND IN DB***");
+                return getDocument(model);
+            }
+            return "documents";
+        } catch (Exception e) {
+            logger.error("*** DocumentControllerClass.findSomeDocumentByAttrs():" +
+                    "  WRONG DB VALUES*** " + e.getMessage());
+            return getDocument(model);
+        }
+    }
+
 }
