@@ -6,98 +6,142 @@
     <div th:replace="fragments/head :: head"></div>
 </head>
 
-<div class="d-flex p-3 m-3" style="justify-content: center; max-width: min-content;
+<div class="d-flex" style="justify-content: center; max-width: min-content;
                 max-height: min-content" th:fragment="crudfeedbacks">
 
-    <table class="crud_buttons" cellpadding="40px" align="center">
+    <table class="crud_buttons" cellpadding="40px" align="center"
+           style="padding-top: 0; padding-bottom: 0; max-height: 13rem; margin-top: 2.5rem;
+            margin-bottom: 1rem">
 
-        <td>
-
-            <div class="popup_div">
-                <input type="checkbox" id="callback">
-                <label class="popup_try" for="callback">Добавить</label>
-                <form action="/addfeedback" method="post" class="popup_form">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="name" placeholder="Введите имя">
-                        </label>
-                        <label>
-                            <input type="text" name="email" placeholder="e-mail">
-                        </label>
-                        <label>
-                            <input type="text" name="message" placeholder="Сообщение">
-                        </label>
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/greenfb.png" class="card-img-top"
+                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Отзывы">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Добавить <br>отзыв</p>
+                    <div class="popup_div">
+                        <input type="checkbox" id="callback">
+                        <label class="popup_try" for="callback" style="box-shadow: 2px 2px 4px black"
+                        >Добавление</label>
+                        <form action="/addfeedback" method="post" class="popup_form" autocomplete="off">
+                            <div align="center">
+                                <label>
+                                    <input type="text" name="name" placeholder="Введите имя">
+                                </label>
+                                <label>
+                                    <input type="text" name="email" placeholder="e-mail">
+                                </label>
+                                <label>
+                                    <input type="text" name="message" placeholder="Сообщение">
+                                </label>
+                            </div>
+                            <button class="button" type="submit">Добавить</button>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            <label class="close" for="callback">+</label>
+                        </form>
                     </div>
-                    <button class="button" type="submit">Добавить</button>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <label class="close" for="callback">+</label>
-                </form>
+                </div>
             </div>
-
         </td>
 
-        <td>
-
-            <div class="popup_div">
-                <input type="checkbox" id="callback3">
-                <label class="popup_try" for="callback3">Обновить</label>
-                <form action="/updatefeedback" class="popup_form" method="post">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID отзыва">
-                        </label>
-                        <label>
-                            <input type="text" name="name" placeholder="Имя">
-                        </label>
-                        <label>
-                            <input type="text" name="email" placeholder="e-mail">
-                        </label>
-                        <label>
-                            <input type="text" name="message" placeholder="Отзыв">
-                        </label>
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/yellowfb.png" class="card-img-top"
+                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Отзывы">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Изменить <br>отзыв</p>
+                    <div class="popup_div">
+                        <input type="checkbox" id="callback3">
+                        <label class="popup_try" for="callback3" style="box-shadow: 2px 2px 4px black"
+                        >Обновление</label>
+                        <form action="/updatefeedback" class="popup_form" method="post" autocomplete="off">
+                            <div align="center">
+                                <label>
+                                    <input type="text" name="id" placeholder="ID отзыва">
+                                </label>
+                                <label>
+                                    <input type="text" name="name" placeholder="Имя">
+                                </label>
+                                <label>
+                                    <input type="text" name="email" placeholder="e-mail">
+                                </label>
+                                <label>
+                                    <input type="text" name="message" placeholder="Отзыв">
+                                </label>
+                            </div>
+                            <button class="button" type="submit">Обновить</button>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                            <label class="close" for="callback3">+</label>
+                        </form>
                     </div>
-                    <button class="button" type="submit">Обновить</button>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                    <label class="close" for="callback3">+</label>
-                </form>
+                </div>
             </div>
-
-        </td>
-        <td>
-
-            <div class="popup_div">
-                <input type="checkbox" id="callback4">
-                <label class="popup_try" for="callback4">Найти</label>
-                <form action="/findfeedbackbyid" class="popup_form" method="post">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID отзыва">
-                        </label>
-                    </div>
-                    <button type="submit" class="button">Найти</button>
-                    <label class="close" for="callback4">+</label>
-                </form>
-            </div>
-
         </td>
 
-        <td>
-
-            <div class="popup_div">
-                <input type="checkbox" id="callback2">
-                <label class="popup_try" for="callback2">Удалить</label>
-                <form class="popup_form" method="post" action="/deletefeedback">
-                    <div align="center">
-                        <label>
-                            <input type="text" name="id" placeholder="ID отзыва">
-                        </label>
-                    </div>
-                    <button class="button" type="submit">Удалить</button>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <label class="close" for="callback2">+</label>
-                </form>
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/minisearch.png" class="card-img-top"
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Поиск <br>отзыва</p>
+                    <a th:replace="fragments/searching/feedbacksearching :: feedbacksearching"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Поиск
+                    </a>
+                </div>
             </div>
+        </td>
 
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/redfb.png" class="card-img-top"
+                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Отзывы">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Удаление <br>отзыва</p>
+                    <div class="popup_div">
+                        <input type="checkbox" id="callback2">
+                        <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
+                        >Удаление</label>
+                        <form class="popup_form" method="post" action="/deletefeedback" autocomplete="off">
+                            <div align="center">
+                                <label>
+                                    <input type="text" name="id" placeholder="ID отзыва">
+                                </label>
+                            </div>
+                            <button class="button" type="submit">Удалить</button>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            <label class="close" for="callback2">+</label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </td>
+
+        <td style="padding-top: 0; padding-bottom: 0">
+            <div class="card col text-center" style="width: 10rem; height: 13rem;
+                    box-shadow: 2px 2px 4px black">
+                <img src="../img/allfb.png" class="card-img-top"
+                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Отзывы">
+                <div class="card-body d-grid gap-2">
+                    <p class="card-text" style="font-size: medium;
+                        margin: 0">Список <br>отзывов</p>
+                    <a th:href="@{/feedbacks}" class="btn stretched-link text-light" style="background-color: #62a0f6
+                ; align-content: center; box-shadow: 2px 2px 4px black; height: 5vh;font-size: medium;
+                width: 130px; text-shadow: #002349 2px 3px 4px">
+                        Отзывы
+                    </a>
+                </div>
+            </div>
         </td>
 
     </table>

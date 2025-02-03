@@ -24,7 +24,7 @@
                         <input type="checkbox" id="callback">
                         <label class="popup_try" for="callback" style="box-shadow: 2px 2px 4px black"
                         >Добавление</label>
-                        <form class="popup_form" action="/addemployee" method="post">
+                        <form class="popup_form" action="/addemployee" method="post" autocomplete="off">
                             <div align="center">
                                 <label style="margin-bottom: 7px">
                                     <input type="text" name="fio" placeholder="ФИО сотрудника"
@@ -93,7 +93,7 @@
                         <input type="checkbox" id="callbackLongUpdate">
                         <label class="popup_try" for="callbackLongUpdate" style="box-shadow: 2px 2px 4px black"
                         >Обновление</label>
-                        <form action="/updateemployee" method="post" class="popup_form">
+                        <form action="/updateemployee" method="post" class="popup_form" autocomplete="off">
 
                             <div align="center">
                                 <label style="margin-bottom: 7px">
@@ -185,7 +185,7 @@
                         <input type="checkbox" id="callback2">
                         <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
                         >Удаление</label>
-                        <form action="/deleteemployee" class="popup_form" method="post">
+                        <form action="/deleteemployee" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="id" placeholder="ID сотрудника">
