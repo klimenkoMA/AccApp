@@ -24,7 +24,7 @@
                         <input type="checkbox" id="callback">
                         <label class="popup_try" style="box-shadow: 2px 2px 4px black"
                                for="callback">Добавление</label>
-                        <form action="/addroom" class="popup_form" method="post">
+                        <form action="/addroom" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="number" placeholder="Номер кабинета">
@@ -65,7 +65,7 @@
                         <input type="checkbox" id="callback3">
                         <label class="popup_try" style="box-shadow: 2px 2px 4px black"
                                for="callback3">Изменение</label>
-                        <form action="/updateroom" class="popup_form" method="post">
+                        <form action="/updateroom" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="id" placeholder="ID кабинета">
@@ -127,7 +127,7 @@
                         <input type="checkbox" id="callback2">
                         <label class="popup_try" for="callback2"
                                style="box-shadow: 2px 2px 4px black">Удаление</label>
-                        <form action="/deleteroom" class="popup_form" method="post">
+                        <form action="/deleteroom" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="id" placeholder="ID кабинета">

@@ -25,7 +25,7 @@
                         <input type="checkbox" id="callbackLongAdd">
                         <label class="popup_try" for="callbackLongAdd" style="box-shadow: 2px 2px 4px black"
                         >Добавление</label>
-                        <form action="/addevent" method="post" class="popup_form">
+                        <form action="/addevent" method="post" class="popup_form" autocomplete="off">
                             <div align="center">
                                 <label style="text-align: center; margin-bottom: 7px">
                                     <input type="text" name="date" placeholder="Дата события"
@@ -101,7 +101,7 @@
                         <input type="checkbox" id="callbackLongUpdate">
                         <label class="popup_try" for="callbackLongUpdate" style="box-shadow: 2px 2px 4px black"
                         >Обновление</label>
-                        <form action="/updateevent" class="popup_form" method="post">
+                        <form action="/updateevent" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label style="margin-bottom: 7px">
                                     <input type="text" name="id" placeholder="ID события"
@@ -199,7 +199,7 @@
                         <input type="checkbox" id="callback2">
                         <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
                         >Удаление</label>
-                        <form class="popup_form" method="post" action="/deleteevent">
+                        <form class="popup_form" method="post" action="/deleteevent" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="id" placeholder="ID события">

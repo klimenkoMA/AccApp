@@ -24,7 +24,7 @@
                         <input type="checkbox" id="callback">
                         <label class="popup_try" for="callback" style="box-shadow: 2px 2px 4px black"
                         >Добавление</label>
-                        <form class="popup_form" method="post" action="/adduser">
+                        <form class="popup_form" method="post" action="/adduser" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="userName" align="middle" placeholder="Логин"/>
@@ -78,7 +78,7 @@
                         <input type="checkbox" id="callback3">
                         <label class="popup_try" for="callback3" style="box-shadow: 2px 2px 4px black"
                         >Обновление</label>
-                        <form action="/updateuser" class="popup_form" method="post">
+                        <form action="/updateuser" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="id" align="middle" placeholder="ID аккаунта">
@@ -153,7 +153,7 @@
                         <input type="checkbox" id="callback2">
                         <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
                         >Удаление</label>
-                        <form action="/deleteuser" class="popup_form" method="post">
+                        <form action="/deleteuser" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="id" align="middle"

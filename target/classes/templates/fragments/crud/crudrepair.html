@@ -24,7 +24,7 @@
                         <input type="checkbox" id="callback">
                         <label class="popup_try" for="callback" style="box-shadow: 2px 2px 4px black"
                         >Добавление</label>
-                        <form class="popup_form" method="post" action="/addrepair">
+                        <form class="popup_form" method="post" action="/addrepair" autocomplete="off">
                             <div align="center">
                                 <label style="text-align: center; margin-bottom: 7px">
                                     <input type="text" name="firstDay" placeholder="Дата ввода"
@@ -65,7 +65,7 @@
                         <input type="checkbox" id="callback3">
                         <label class="popup_try" for="callback3" style="box-shadow: 2px 2px 4px black"
                         >Обновление</label>
-                        <form action="/updaterepair" class="popup_form" method="post">
+                        <form action="/updaterepair" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="id" align="middle" placeholder="ID ремонта">
@@ -142,7 +142,7 @@
                         <input type="checkbox" id="callback2">
                         <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
                         >Удаление</label>
-                        <form action="/deleterepair" class="popup_form" method="post">
+                        <form action="/deleterepair" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="id" align="middle"

@@ -24,7 +24,7 @@
                         <input type="checkbox" id="callback">
                         <label class="popup_try" for="callback" style="box-shadow: 2px 2px 4px black"
                         >Добавление</label>
-                        <form class="popup_form" method="post" action="/adddocument"
+                        <form class="popup_form" method="post" action="/adddocument" autocomplete="off"
                               enctype="multipart/form-data">
                             <div align="center">
                                 <label class="d-flex justify-content-center align-items-center
@@ -60,7 +60,7 @@
                         <input type="checkbox" id="callback3">
                         <label class="popup_try" for="callback3" style="box-shadow: 2px 2px 4px black"
                         >Обновление</label>
-                        <form action="/updatedocument" class="popup_form" method="post"
+                        <form action="/updatedocument" class="popup_form" method="post" autocomplete="off"
                               enctype="multipart/form-data">
                             <div align="center">
                                 <label style="text-align: center; margin-bottom: 7px">
@@ -118,7 +118,7 @@
                         <input type="checkbox" id="callback2">
                         <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
                         >Удаление</label>
-                        <form action="/deletedocument" class="popup_form" method="post">
+                        <form action="/deletedocument" class="popup_form" method="post" autocomplete="off">
                             <div align="center">
                                 <label>
                                     <input type="text" name="name" align="middle"

@@ -1,6 +1,5 @@
 package accountingApp.controller;
 
-import accountingApp.documentEntity.DocumentClass;
 import accountingApp.entity.Feedback;
 import accountingApp.service.FeedbackService;
 import accountingApp.usefulmethods.Checker;
@@ -220,5 +219,48 @@ public class FeedbackController {
             }
         }
         return objectId;
+    }
+
+    @PostMapping("/findfeedbackbyattrs")
+    public String findFeedbackByAttrs(@RequestParam String attrs,
+                                      Model model) {
+
+        if (checker.checkAttribute(attrs)
+        ) {
+            logger.warn("*** FeedbackController.findFeedbackByAttrs():  Attribute has a null value! ***");
+            return getFeedbacks(model);
+        }
+        String attrsWithoutSpaces = attrs.trim().toLowerCase(Locale.ROOT);
+
+        try {
+            List<Feedback> feedbackList = new ArrayList<>();
+            List<Feedback> feedbacks = feedbackService.findAllFeedbacks();
+
+            for (Feedback fb : feedbacks
+            ) {
+                if ((fb.getIdCount() + "").contains(attrsWithoutSpaces)) {
+                    feedbackList.add(fb);
+                } else if (fb.getName().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    feedbackList.add(fb);
+                } else if (fb.getEmail().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    feedbackList.add(fb);
+                } else if (fb.getMessage().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
+                    feedbackList.add(fb);
+                }
+            }
+            model.addAttribute("feedbackList", feedbackList);
+            if (feedbackList.isEmpty()) {
+                logger.debug("*** FeedbackController.findFeedbackByAttrs():  DATA NOT FOUND IN DB***");
+                return getFeedbacks(model);
+            }
+            return "feedbacks";
+        } catch (Exception e) {
+            logger.error("*** FeedbackController.findFeedbackByAttrs(): wrong DB's values! *** "
+                    + e.getMessage());
+            return getFeedbacks(model);
+        }
     }
 }
