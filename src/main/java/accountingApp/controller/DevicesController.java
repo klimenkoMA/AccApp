@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -35,6 +37,8 @@ public class DevicesController {
     private EmployeeService employeeService;
     @Autowired
     private ITStaffService itStaffService;
+    @Autowired
+    private RepairService repairService;
     @Autowired
     private Checker checker;
 
@@ -61,7 +65,7 @@ public class DevicesController {
         return "devices";
     }
 
-    @PostMapping("/adddevice")
+    @PostMapping("/adddevices")
     public String addDevice(@RequestParam(required = false) String category,
                             @RequestParam String name,
                             @RequestParam String description,
@@ -119,6 +123,31 @@ public class DevicesController {
                         , employee
                         , itstaff);
                 devicesService.addNewDevice(devices);
+
+                List<Devices> devicesList = devicesService.findAllDevices();
+                Devices dev = new Devices();
+
+                for (Devices dv : devicesList
+                ) {
+                    if (dv.getName().equals(nameWithoutSpaces)
+                            && dv.getCategory().getCategory().equals(deviceCategory.getCategory())
+                            && dv.getSerial().equals(serialWithoutSpaces)
+                            && dv.getRoom().equals(room)
+                            && dv.getItstaff().equals(itstaff)
+                            && dv.getEmployee().equals(employee)
+                            && dv.getInventory() == inventoryCheck
+                            && dv.getDescription().equals(descriptionWithoutSpaces)) {
+                        dev = dv;
+                        break;
+                    }
+                }
+
+                LocalDate currentDate = LocalDate.now();
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                Repair repair = new Repair(currentDate.format(formatter), dev);
+                repairService.createRepair(repair);
+                dev.setRepair(repair);
+                devicesService.addNewDevice(dev);
                 return getDevices(model);
             }
             throw new Exception("Attribute is empty!");
@@ -153,6 +182,11 @@ public class DevicesController {
             device.setRoom(null);
             device.setItstaff(null);
             device.setEvents(null);
+
+            Repair repair = device.getRepair();
+            device.setRepair(null);
+            repairService.deleteRepair(repair.getId());
+
             devicesService.updateDevice(device);
 
             devicesService.deleteDeviceById(idCheck);
@@ -333,41 +367,41 @@ public class DevicesController {
             List<Devices> devices = devicesService.findAllDevices();
             List<Devices> devicesList = new ArrayList<>();
 
-            for (Devices dev: devices
-                 ) {
-                if ((dev.getId() + "").contains(attrsWithoutSpaces)){
+            for (Devices dev : devices
+            ) {
+                if ((dev.getId() + "").contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
                 } else if (dev.getName().toLowerCase(Locale.ROOT)
-                .contains(attrsWithoutSpaces)){
+                        .contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
                 } else if (dev.getCategory().getCategory().toLowerCase(Locale.ROOT)
-                .contains(attrsWithoutSpaces)){
+                        .contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
-                } else if(dev.getDescription().toLowerCase(Locale.ROOT)
-                .contains(attrsWithoutSpaces)){
+                } else if (dev.getDescription().toLowerCase(Locale.ROOT)
+                        .contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
                 } else if (dev.getEmployee().getFio().toLowerCase(Locale.ROOT)
-                .contains(attrsWithoutSpaces)){
+                        .contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
                 } else if ((dev.getInventory() + "").toLowerCase(Locale.ROOT)
-                .contains(attrsWithoutSpaces)){
+                        .contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
                 } else if (dev.getItstaff().getName().toLowerCase(Locale.ROOT)
-                .contains(attrsWithoutSpaces)){
+                        .contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
                 } else if ((dev.getRepair().getDurability() + "").toLowerCase(Locale.ROOT)
-                .contains(attrsWithoutSpaces)){
+                        .contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
-                } else if (dev.getRoom().getNumber().contains(attrsWithoutSpaces)){
+                } else if (dev.getRoom().getNumber().contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
                 } else if (dev.getSerial().toLowerCase(Locale.ROOT)
-                .contains(attrsWithoutSpaces)){
+                        .contains(attrsWithoutSpaces)) {
                     devicesList.add(dev);
                 }
             }
 
             model.addAttribute("devicesList", devicesList);
-            if (devicesList.isEmpty()){
+            if (devicesList.isEmpty()) {
                 logger.debug("*** DevicesController.findDevicesListByAttrs():  DATA NOT FOUND IN DB***");
                 return getDevices(model);
             }

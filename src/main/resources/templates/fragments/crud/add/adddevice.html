@@ -8,29 +8,27 @@
     <label class="popup_try d-flex" style="justify-content: center;
               font-size: 17px; box-shadow: 2px 2px 4px black">Добавление
         <button type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRightfeedback"
-                aria-controls="offcanvasRightfeedback"
+                data-bs-target="#offcanvasadddevice"
+                aria-controls="offcanvasadddevice"
                 style="background-color: #62a0f6; color: white; height: 1px; width: 1px" hidden>
         </button>
     </label>
 
 
     <div class="card col offcanvas offcanvas-end border border-0"
-         tabindex="-1" id="offcanvasRightfeedback" aria-labelledby="offcanvasRightLabel"
+         tabindex="-1" id="offcanvasadddevice" aria-labelledby="offcanvasRightAddDeviceLabel"
          style="width: 40vh">
-        <img src="../img/searching.webp" class="card-img-top" alt="DevicesSearching" style="max-height: 25vh; max-width: 20vh;
+        <img src="../img/blueadd.png" class="card-img-top" alt="AddDevice" style="max-height: 25vh; max-width: 20vh;
                         border-radius: 10%; align-self: center">
-        <div class="card-body d-grid gap-2 offcanvas-title bg-light" id="offcanvasRightLabel"
+        <div class="card-body d-grid gap-2 offcanvas-title bg-light" id="offcanvasRightAddDeviceLabel"
              style="min-height: 100vh; align-content: start">
 
-            <form action="/adddevice" method="post" autocomplete="off"
+            <form action="/adddevices" method="post" autocomplete="off"
                   class="card-text offcanvas-body align-self-start">
                 <div align="center">
                     <label class="d-flex justify-content-center align-items-center">
-                        <select class="form-select m-2" name="category"
-                                style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                        <select class="form-select-custom m-2" name="category">
+
                             <option value="0">Категория</option>
                             <option th:each="element : ${categoryList}"
                                     th:value="${element}"
@@ -51,10 +49,8 @@
                         <input type="text" name="serial" align="middle" placeholder="Серийный номер"/>
                     </label>
                     <label class="d-flex justify-content-center align-items-center">
-                        <select class="form-select m-2" name="room"
-                                style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                        <select class="form-select-custom m-2" name="room">
+
                             <option value="0">Кабинет</option>
                             <option th:each="element : ${roomList}"
                                     th:value="${element.id}"
@@ -62,10 +58,7 @@
                         </select>
                     </label>
                     <label class="d-flex justify-content-center align-items-center">
-                        <select class="form-select m-2" name="employee"
-                                style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                        <select class="form-select-custom m-2" name="employee">
                             <option value="0">Взял</option>
                             <option th:each="element : ${employeeList}"
                                     th:value="${element.id}"
@@ -73,10 +66,8 @@
                         </select>
                     </label>
                     <label class="d-flex justify-content-center align-items-center">
-                        <select class="form-select m-2" name="itstaff"
-                                style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
+                        <select class="form-select-custom m-2" name="itstaff">
+
                             <option value="0">МОЛ</option>
                             <option th:each="element : ${itStaffList}"
                                     th:value="${element.id}"
@@ -85,12 +76,17 @@
                     </label>
                 </div>
                 <div align="center">
-                    <button class="button" type="submit">Добавить</button>
+                    <button class="btn text-light" type="submit"
+                            style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black"
+                    >Добавить
+                    </button>
                 </div>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
             </form>
-            <img src="../img/devicessearchbg.jpg" class="card-img-bottom" alt="DevicesSearchingBg"
-                 style="max-height: 30vh; max-width: 25vh; justify-self: center; margin-top: 25rem;
+            <img src="../img/devicessearchbg.jpg" class="card-img-bottom" alt="Device"
+                 style="max-height: 30vh; max-width: 25vh; justify-self: center; margin-top: 5rem;
                         border-radius: 10%; align-self: end">
         </div>
 

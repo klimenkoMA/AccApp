@@ -136,10 +136,18 @@ public class Repair {
     }
 
     public int getDurability() {
+
+        int firstYear;
+        int currentYear = LocalDate.now().getYear();
+
+        String[] firstYearArray = firstDay.split("-");
+        firstYear = Integer.parseInt(firstYearArray[2]);
+
         if (importants.size() == 0) {
-            setDurability(0);
+            setDurability((currentYear - firstYear) * 5);
             return durability;
         }
+
         int countYes = 0;
 
         for (Important imp : importants
@@ -150,12 +158,6 @@ public class Repair {
                 countYes += 5;
             }
         }
-
-        int firstYear;
-        int currentYear = LocalDate.now().getYear();
-
-        String[] firstYearArray = firstDay.split("-");
-        firstYear = Integer.parseInt(firstYearArray[2]);
 
         setDurability(countYes + (currentYear - firstYear) * 5);
 
@@ -258,6 +260,6 @@ public class Repair {
 
     @Override
     public String toString() {
-        return  durability + " %";
+        return durability + " %";
     }
 }

@@ -5,60 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-02-01.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/allfb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/feedbacksearchbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/greenfb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/redfb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/yellowfb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/add/adddevice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/feedbacksearching.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-02-02.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/delete/deletedevices.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-25.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/video/AccAppPresentation.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/video/AccAppPresentation.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-26.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Devices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Repair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/add/adddevice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/add/adddevice.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudfeedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudfeedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruditstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruditstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrepair.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrepair.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudusers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudusers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudworkarea.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/devicessearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/devicessearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/documentsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/documentsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/employeesearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/employeesearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/eventssearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/eventssearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/itstaffsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/itstaffsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/repairsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/repairsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/roomsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/roomsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/userssearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/userssearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/workareasearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searching/workareasearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Devices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Devices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/entity/Repair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/entity/Repair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/video/AccAppPresentation.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/video/AccAppPresentation.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudfeedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudfeedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruditstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruditstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrepair.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrepair.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudrooms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudusers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudusers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudworkarea.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/devicessearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/devicessearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/documentsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/documentsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/employeesearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/employeesearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/eventssearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/eventssearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/itstaffsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/itstaffsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/repairsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/repairsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/roomsearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/roomsearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/userssearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/userssearching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searching/workareasearching.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searching/workareasearching.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -941,14 +906,7 @@
       <workItem from="1736662561853" duration="91000" />
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
-      <workItem from="1737776174681" duration="126229000" />
-    </task>
-    <task id="LOCAL-00446" summary="Added some new fields and rebuilt controllers, tests and html pages">
-      <created>1734585538660</created>
-      <option name="number" value="00446" />
-      <option name="presentableId" value="LOCAL-00446" />
-      <option name="project" value="LOCAL" />
-      <updated>1734585538660</updated>
+      <workItem from="1737776174681" duration="140242000" />
     </task>
     <task id="LOCAL-00447" summary="Added enum DeviceCategory in entity Devices">
       <created>1734673951598</created>
@@ -1286,7 +1244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1738471520260</updated>
     </task>
-    <option name="localTasksCounter" value="495" />
+    <task id="LOCAL-00495" summary="Rebuilt feedbacks.html's CRUD buttons">
+      <created>1738556138607</created>
+      <option name="number" value="00495" />
+      <option name="presentableId" value="LOCAL-00495" />
+      <option name="project" value="LOCAL" />
+      <updated>1738556138607</updated>
+    </task>
+    <option name="localTasksCounter" value="496" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1309,7 +1274,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added addEmptyAttrNewRepair method in RepairControllerTest" />
     <MESSAGE value="Added addNewRepairWithException method in RepairControllerTest" />
     <MESSAGE value="Added deleteValidRepair method in RepairControllerTest" />
     <MESSAGE value="Added deleteFailRepair method in RepairControllerTest" />
@@ -1334,7 +1298,8 @@
     <MESSAGE value="Rebuilt employee.html's, workarea.html's, events.html's CRUD buttons" />
     <MESSAGE value="Rebuilt devices.html's, repair.html's CRUD buttons" />
     <MESSAGE value="Rebuilt documents.html's, users.html's CRUD buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt documents.html's, users.html's CRUD buttons" />
+    <MESSAGE value="Rebuilt feedbacks.html's CRUD buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt feedbacks.html's CRUD buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
