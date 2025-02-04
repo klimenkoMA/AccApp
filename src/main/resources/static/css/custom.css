@@ -412,6 +412,41 @@ input[type="text"] {
     box-shadow: 0 0 3px 1px #62a0f6;
     border-radius: 5px;
     border: 0 #62a0f6;
+    width: 17.6rem;
+    height: 2rem;
+}
+
+input[type="password"] {
+    appearance: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: inherit;
+    align-items: center;
+    margin: 4px 0;
+    padding: 2px;
+    box-shadow: 0 0 3px 1px #62a0f6;
+    border-radius: 5px;
+    border: 0 #62a0f6;
+    width: 17.6rem;
+    height: 2rem;
+}
+
+.form-select-custom {
+    appearance: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: inherit;
+    align-items: center;
+    margin: 4px 0;
+    padding: 2px;
+    box-shadow: 0 0 3px 1px #62a0f6;
+    border-radius: 5px;
+    border: 0 #62a0f6;
+    width: 17.6rem;
+    height: 2rem;
+    text-align: center;
 }
 
 *, *:before, *:after {
