@@ -16,34 +16,16 @@
             <div class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                 <img src="../img/blueadd.png" class="card-img-top"
-                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Оборудование">
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Документы">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
                         margin: 0">Добавить <br>документ</p>
-                    <div class="popup_div">
-                        <input type="checkbox" id="callback">
-                        <label class="popup_try" for="callback" style="box-shadow: 2px 2px 4px black"
-                        >Добавление</label>
-                        <form class="popup_form" method="post" action="/adddocument" autocomplete="off"
-                              enctype="multipart/form-data">
-                            <div align="center">
-                                <label class="d-flex justify-content-center align-items-center
-                        button custom-file-upload" style="margin-bottom: 7px">
-                                    Выбрать файл
-                                    <input type="file" name="content" align="middle" placeholder="Документ"/>
-                                </label>
-                                <label style="text-align: center; margin-bottom: 7px">
-                                    <input type="text" name="description" align="middle" placeholder="Описание"
-                                           style="text-align: center;height: 30px"/>
-                                </label>
-                            </div>
-                            <div align="center">
-                                <button class="button" type="submit">Добавить</button>
-                            </div>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                            <label class="close" for="callback">+</label>
-                        </form>
-                    </div>
+                    <a th:replace="fragments/crud/add/addingdoc :: addingdoc"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Добавление
+                    </a>
                 </div>
             </div>
         </td>
@@ -52,38 +34,16 @@
             <div class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                 <img src="../img/blueupdate.png" class="card-img-top"
-                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Документы">
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Документы">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
                         margin: 0">Изменить <br>документ</p>
-                    <div class="popup_div">
-                        <input type="checkbox" id="callback3">
-                        <label class="popup_try" for="callback3" style="box-shadow: 2px 2px 4px black"
-                        >Обновление</label>
-                        <form action="/updatedocument" class="popup_form" method="post" autocomplete="off"
-                              enctype="multipart/form-data">
-                            <div align="center">
-                                <label style="text-align: center; margin-bottom: 7px">
-                                    <input type="text" name="id" align="middle" placeholder="ID документа"
-                                           style="text-align: center;height: 30px">
-                                </label>
-                                <label class="d-flex justify-content-center align-items-center
-                        button custom-file-upload" style="margin-bottom: 7px">
-                                    Выбрать файл
-                                    <input type="file" name="content" align="middle" placeholder="Документ"/>
-                                </label>
-                                <label style="text-align: center; margin-bottom: 7px">
-                                    <input type="text" name="description" align="middle" placeholder="Описание"
-                                           style="text-align: center;height: 30px"/>
-                                </label>
-                            </div>
-                            <div align="center">
-                                <button class="button" type="submit">Обновить</button>
-                            </div>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                            <label class="close" for="callback3">+</label>
-                        </form>
-                    </div>
+                    <a th:replace="fragments/crud/update/updatingdoc :: updatingdoc"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Обновление
+                    </a>
                 </div>
             </div>
         </td>
@@ -110,28 +70,16 @@
             <div class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                 <img src="../img/bluedelete.png" class="card-img-top"
-                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Оборудование">
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Документы">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
-                        margin: 0">Удаление <br>документа</p>
-                    <div class="popup_div">
-                        <input type="checkbox" id="callback2">
-                        <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
-                        >Удаление</label>
-                        <form action="/deletedocument" class="popup_form" method="post" autocomplete="off">
-                            <div align="center">
-                                <label>
-                                    <input type="text" name="name" align="middle"
-                                           placeholder="Название или ID документа"/>
-                                </label>
-                            </div>
-                            <div>
-                                <button class="button" type="submit">Удалить</button>
-                            </div>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                            <label class="close" for="callback2">+</label>
-                        </form>
-                    </div>
+                        margin: 0">Удалить <br>документ</p>
+                    <a th:replace="fragments/crud/delete/deletingdoc :: deletingdoc"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Удаление
+                    </a>
                 </div>
             </div>
         </td>
