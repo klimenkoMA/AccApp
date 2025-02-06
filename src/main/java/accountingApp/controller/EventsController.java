@@ -63,7 +63,7 @@ public class EventsController {
                 || employee == null
                 || itstaff == null
                 || workarea == null
-                || comment == null
+                || checker.checkAttribute(comment)
         ) {
             logger.warn("*** EventsController.addEvent():  Attribute has a null value! ***");
             return getEvents(model);
