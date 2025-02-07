@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+    <div th:replace="fragments/head :: head"></div>
+</head>
+<div th:fragment="deletingroom">
+    <label class="popup_try d-flex" style="justify-content: center;
+              font-size: 17px; box-shadow: 2px 2px 4px black">Удаление
+        <button type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasdeleteroom"
+                aria-controls="offcanvasdeleteroom"
+                style="background-color: #62a0f6; color: white; height: 1px; width: 1px" hidden>
+        </button>
+    </label>
+
+    <div class="card col offcanvas offcanvas-end border border-0"
+         tabindex="-1" id="offcanvasdeleteroom" aria-labelledby="offcanvasRightDeleteRoomLabel"
+         style="width: 40vh">
+        <img src="../img/bluedelete.png" class="card-img-top" alt="Room" style="max-height: 25vh; max-width: 20vh;
+                        border-radius: 10%; align-self: center">
+        <div class="card-body d-grid gap-2 offcanvas-title bg-light" id="offcanvasRightDeleteRoomLabel"
+             style="min-height: 100vh; align-content: start">
+
+            <form action="/deleteroom" method="post" autocomplete="off"
+                  class="card-text offcanvas-body align-self-start">
+                <div align="center">
+                    <label>
+                        <input type="text" name="id" placeholder="ID кабинета">
+                    </label>
+                </div>
+                <div align="center">
+                    <button class="btn text-light" type="submit"
+                            style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black"
+                    >Удалить
+                    </button>
+                </div>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+            </form>
+            <img src="../img/roomsearchback.jpg" class="card-img-bottom" alt="Device"
+                 style="max-height: 30vh; max-width: 25vh; justify-self: center; margin-top: 19rem;
+                        border-radius: 10%; align-self: end">
+        </div>
+
+    </div>
+
+</html>

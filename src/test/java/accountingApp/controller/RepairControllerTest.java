@@ -224,7 +224,6 @@ class RepairControllerTest {
         viewName = repairController.updateRepair(id + ""
                 , lastRepairDay
                 , isImportant + ""
-                , device
                 , repairedPart
                 , model);
 
@@ -242,7 +241,6 @@ class RepairControllerTest {
         viewName = repairController.updateRepair(id + ""
                 , lastRepairDay
                 , isImportant + ""
-                , device
                 , repairedPart
                 , model);
 
