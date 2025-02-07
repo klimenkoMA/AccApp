@@ -119,13 +119,11 @@ public class RepairController {
     public String updateRepair(@RequestParam String id
             , @RequestParam String lastRepairDay
             , @RequestParam String isImportant
-            , @RequestParam(required = false) Devices device
             , @RequestParam String repairedPart
             , Model model) {
         if (checker.checkAttribute(id)
                 || checker.checkAttribute(lastRepairDay)
                 || checker.checkAttribute(isImportant)
-                || device == null
                 || checker.checkAttribute(repairedPart)
         ) {
             logger.warn("*** RepairController.updateRepair():  Attribute has a null value! ***");
@@ -141,7 +139,9 @@ public class RepairController {
                 logger.warn("*** RepairController.updateRepair():  ID is SUBZERO! ***");
             } else {
                 List<Repair> repairList = repairService.findRepair(idCheck);
+
                 Repair currentRepair = repairList.get(0);
+                Devices device = currentRepair.getDevice();
                 String firstDay = currentRepair.getFirstDay();
                 int repairCount = currentRepair.getRepairCount();
                 String health = currentRepair.getHealth();
@@ -163,6 +163,8 @@ public class RepairController {
                         , repairedParts
                         , importants);
                 repairService.updateRepair(repair);
+                device.setRepair(repair);
+                devicesService.updateDevice(device);
             }
             return getRepair(model);
         } catch (Exception e) {

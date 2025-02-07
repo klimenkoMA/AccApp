@@ -58,7 +58,6 @@ public class Repair {
         repairedParts = new ArrayList<>();
         repairedPart = "";
         category = device.getCategory();
-        device.setRepair(this);
     }
 
     public Repair(Long id
@@ -89,7 +88,6 @@ public class Repair {
         repairCount++;
         repairedParts.add(repairedPart);
         category = device.getCategory();
-        device.setRepair(this);
     }
 
     public Repair(Long id

@@ -19,7 +19,7 @@
                      style="height: 5rem; width: 5rem; align-self: center" alt="Ремонты">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
-                        margin: 0">Добавить <br>ремонта</p>
+                        margin: 0">Добавить <br>ремонт</p>
                     <a th:replace="fragments/crud/add/addingrepair :: addingrepair"
                        class="btn stretched-link text-light" style="background-color: #62a0f6
                 ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
@@ -34,57 +34,16 @@
             <div class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                 <img src="../img/blueupdate.png" class="card-img-top"
-                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Ремонты">
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Ремонты">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
                         margin: 0">Изменить <br>ремонт</p>
-                    <div class="popup_div">
-                        <input type="checkbox" id="callback3">
-                        <label class="popup_try" for="callback3" style="box-shadow: 2px 2px 4px black"
-                        >Обновление</label>
-                        <form action="/updaterepair" class="popup_form" method="post" autocomplete="off">
-                            <div align="center">
-                                <label>
-                                    <input type="text" name="id" align="middle" placeholder="ID ремонта">
-                                </label>
-                                <label style="text-align: center; margin-bottom: 7px">
-                                    <input type="text" name="lastRepairDay" placeholder="Дата ремонта"
-                                           style="text-align: center;height: 30px">
-                                </label>
-                                <label class="d-flex justify-content-center align-items-center">
-                                    <select class="form-select m-2" name="isImportant"
-                                            style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                        <option value="0">Сложность</option>
-                                        <option th:each="element : ${importantList}"
-                                                th:value="${element}"
-                                                th:text="${element}"></option>
-                                    </select>
-                                </label>
-                                <label class="d-flex justify-content-center align-items-center">
-                                    <select class="form-select m-2" name="device"
-                                            style="border-radius: 5px; border: 0 solid #62a0f6;
-                                   max-height: min-content; height: 30px; font-size: small;
-                                   width: 9.4rem;  box-shadow: 0 0 3px 1px #62a0f6; text-align: center">
-                                        <option value="0">Оборудование</option>
-                                        <option th:each="element : ${devicesList}"
-                                                th:value="${element.id}"
-                                                th:text="${element.name}"></option>
-                                    </select>
-                                </label>
-                                <label>
-                                    <input type="text" name="repairedPart" align="middle"
-                                           placeholder="Детали оборудования">
-                                </label>
-                            </div>
-                            <div align="center">
-                                <button class="button" type="submit">Обновить</button>
-                            </div>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                            <label class="close" for="callback3">+</label>
-                        </form>
-                    </div>
+                    <a th:replace="fragments/crud/update/updatingrepair :: updatingrepair"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Обновление
+                    </a>
                 </div>
             </div>
         </td>
@@ -111,28 +70,16 @@
             <div class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                 <img src="../img/bluedelete.png" class="card-img-top"
-                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Ремонты">
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Ремонты">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
-                        margin: 0">Удаление <br>ремонта</p>
-                    <div class="popup_div">
-                        <input type="checkbox" id="callback2">
-                        <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
-                        >Удаление</label>
-                        <form action="/deleterepair" class="popup_form" method="post" autocomplete="off">
-                            <div align="center">
-                                <label>
-                                    <input type="text" name="id" align="middle"
-                                           placeholder="ID ремонта"/>
-                                </label>
-                            </div>
-                            <div>
-                                <button class="button" type="submit">Удалить</button>
-                            </div>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                            <label class="close" for="callback2">+</label>
-                        </form>
-                    </div>
+                        margin: 0">Удалить <br>ремонт</p>
+                    <a th:replace="fragments/crud/delete/deletingrepair :: deletingrepair"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Удаление
+                    </a>
                 </div>
             </div>
         </td>

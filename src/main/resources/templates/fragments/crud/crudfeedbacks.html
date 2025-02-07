@@ -17,31 +17,16 @@
             <div class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                 <img src="../img/greenfb.png" class="card-img-top"
-                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Отзывы">
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
                         margin: 0">Добавить <br>отзыв</p>
-                    <div class="popup_div">
-                        <input type="checkbox" id="callback">
-                        <label class="popup_try" for="callback" style="box-shadow: 2px 2px 4px black"
-                        >Добавление</label>
-                        <form action="/addfeedback" method="post" class="popup_form" autocomplete="off">
-                            <div align="center">
-                                <label>
-                                    <input type="text" name="name" placeholder="Введите имя">
-                                </label>
-                                <label>
-                                    <input type="text" name="email" placeholder="e-mail">
-                                </label>
-                                <label>
-                                    <input type="text" name="message" placeholder="Сообщение">
-                                </label>
-                            </div>
-                            <button class="button" type="submit">Добавить</button>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                            <label class="close" for="callback">+</label>
-                        </form>
-                    </div>
+                    <a th:replace="fragments/crud/add/addingfeedback :: addingfeedback"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Добавление
+                    </a>
                 </div>
             </div>
         </td>
@@ -50,34 +35,16 @@
             <div class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                 <img src="../img/yellowfb.png" class="card-img-top"
-                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Отзывы">
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
                         margin: 0">Изменить <br>отзыв</p>
-                    <div class="popup_div">
-                        <input type="checkbox" id="callback3">
-                        <label class="popup_try" for="callback3" style="box-shadow: 2px 2px 4px black"
-                        >Обновление</label>
-                        <form action="/updatefeedback" class="popup_form" method="post" autocomplete="off">
-                            <div align="center">
-                                <label>
-                                    <input type="text" name="id" placeholder="ID отзыва">
-                                </label>
-                                <label>
-                                    <input type="text" name="name" placeholder="Имя">
-                                </label>
-                                <label>
-                                    <input type="text" name="email" placeholder="e-mail">
-                                </label>
-                                <label>
-                                    <input type="text" name="message" placeholder="Отзыв">
-                                </label>
-                            </div>
-                            <button class="button" type="submit">Обновить</button>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                            <label class="close" for="callback3">+</label>
-                        </form>
-                    </div>
+                    <a th:replace="fragments/crud/update/updatingfeedback :: updatingfeedback"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Обновление
+                    </a>
                 </div>
             </div>
         </td>
@@ -104,25 +71,16 @@
             <div class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                 <img src="../img/redfb.png" class="card-img-top"
-                     style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Отзывы">
+                     style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
                 <div class="card-body d-grid gap-2">
                     <p class="card-text" style="font-size: medium;
-                        margin: 0">Удаление <br>отзыва</p>
-                    <div class="popup_div">
-                        <input type="checkbox" id="callback2">
-                        <label class="popup_try" for="callback2" style="box-shadow: 2px 2px 4px black"
-                        >Удаление</label>
-                        <form class="popup_form" method="post" action="/deletefeedback" autocomplete="off">
-                            <div align="center">
-                                <label>
-                                    <input type="text" name="id" placeholder="ID отзыва">
-                                </label>
-                            </div>
-                            <button class="button" type="submit">Удалить</button>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                            <label class="close" for="callback2">+</label>
-                        </form>
-                    </div>
+                        margin: 0">Удалить <br>отзыв</p>
+                    <a th:replace="fragments/crud/delete/deletingfeedback :: deletingfeedback"
+                       class="btn stretched-link text-light" style="background-color: #62a0f6
+                ;justify-self: center; min-width: max-content; max-height: min-content; align-self: center;
+                    box-shadow: 2px 2px 4px black">
+                        Удаление
+                    </a>
                 </div>
             </div>
         </td>
