@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoomRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -889,14 +889,7 @@
       <workItem from="1736662561853" duration="91000" />
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
-      <workItem from="1737776174681" duration="212117000" />
-    </task>
-    <task id="LOCAL-00452" summary="Tech commit">
-      <created>1735092985004</created>
-      <option name="number" value="00452" />
-      <option name="presentableId" value="LOCAL-00452" />
-      <option name="project" value="LOCAL" />
-      <updated>1735092985004</updated>
+      <workItem from="1737776174681" duration="215979000" />
     </task>
     <task id="LOCAL-00453" summary="Added new entity Repair and enum Important">
       <created>1735193478276</created>
@@ -1234,7 +1227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1738912970457</updated>
     </task>
-    <option name="localTasksCounter" value="501" />
+    <task id="LOCAL-00501" summary="Tech commit">
+      <created>1738999594568</created>
+      <option name="number" value="00501" />
+      <option name="presentableId" value="LOCAL-00501" />
+      <option name="project" value="LOCAL" />
+      <updated>1738999594569</updated>
+    </task>
+    <option name="localTasksCounter" value="502" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1257,7 +1257,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added findRepairSuccess method in RepairControllerTest" />
     <MESSAGE value="Added findRepairFail method in RepairControllerTest" />
     <MESSAGE value="Added updateRepairValid method in RepairControllerTest" />
     <MESSAGE value="Added updateRepairFail method in RepairControllerTest" />
@@ -1282,7 +1281,8 @@
     <MESSAGE value="Created addingitstaff.html and updatedevices.html" />
     <MESSAGE value="Created some CRUD fragments" />
     <MESSAGE value="Created some CRUD fragments v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created some CRUD fragments v2" />
+    <MESSAGE value="Tech commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
