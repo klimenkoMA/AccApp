@@ -2,6 +2,7 @@ package accountingApp.service;
 
 import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
+import accountingApp.entity.dto.roomdto.MaxRoomCountDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import accountingApp.repository.RoomRepository;
@@ -39,6 +40,10 @@ public class RoomService {
 
     public List<Room> getRoomByWorkArea(WorkArea workArea) {
         return roomRepository.findByWorkArea(workArea);
+    }
+
+    public List<MaxRoomCountDTO> getRoomsCount() {
+        return roomRepository.reportingNumbersOfMaxRoomWorkArea();
     }
 
 }
