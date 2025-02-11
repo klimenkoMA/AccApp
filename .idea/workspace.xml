@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/dto/roomdto/MaxRoomCountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-02-06.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-30.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-01-31.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-02-01.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-02-02.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/entity/dto/roomdto/MaxRoomCountDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/dto/roomdto/MaxRoomCountDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/repository/RoomRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/repository/RoomRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/RoomService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/RoomService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -892,14 +898,7 @@
       <workItem from="1736662561853" duration="91000" />
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
-      <workItem from="1737776174681" duration="222517000" />
-    </task>
-    <task id="LOCAL-00454" summary="Added new entity Repair and enum Important v2">
-      <created>1735267399862</created>
-      <option name="number" value="00454" />
-      <option name="presentableId" value="LOCAL-00454" />
-      <option name="project" value="LOCAL" />
-      <updated>1735267399862</updated>
+      <workItem from="1737776174681" duration="225684000" />
     </task>
     <task id="LOCAL-00455" summary="Added new entity Repair and enum Important v3">
       <created>1735367023401</created>
@@ -1237,7 +1236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739081432293</updated>
     </task>
-    <option name="localTasksCounter" value="503" />
+    <task id="LOCAL-00503" summary="Created MaxRoomCountDTO.java for report">
+      <created>1739154057411</created>
+      <option name="number" value="00503" />
+      <option name="presentableId" value="LOCAL-00503" />
+      <option name="project" value="LOCAL" />
+      <updated>1739154057412</updated>
+    </task>
+    <option name="localTasksCounter" value="504" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1260,7 +1266,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added updateRepairValid method in RepairControllerTest" />
     <MESSAGE value="Added updateRepairFail method in RepairControllerTest" />
     <MESSAGE value="Added searching by DeviceCategory in devices.html" />
     <MESSAGE value="Added filtering by Profession in employee.html, itstaff.html" />
@@ -1285,7 +1290,8 @@
     <MESSAGE value="Created some CRUD fragments v2" />
     <MESSAGE value="Tech commit" />
     <MESSAGE value="Created reportingNumbersOfMaxRoomWorkArea method for report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created reportingNumbersOfMaxRoomWorkArea method for report" />
+    <MESSAGE value="Created MaxRoomCountDTO.java for report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created MaxRoomCountDTO.java for report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -25,7 +25,8 @@ public interface RoomRepository extends JpaRepository<Room, Integer> {
     @Query(value = "SELECT r from Room r where r.workarea = ?1")
     List<Room> findByWorkArea(WorkArea workarea);
 
-    @Query(value = "SELECT new MaxRoomCountDTO(w.name, COUNT(r.id)) " +
+    @Query(value = "SELECT new accountingApp.entity.dto.roomdto.MaxRoomCountDTO(w.name ," +
+            " COUNT(r.id))  " +
             "FROM Room r " +
             "JOIN r.workarea w " +
             "GROUP BY w.name")

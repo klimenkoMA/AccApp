@@ -2,19 +2,22 @@ package accountingApp.entity.dto.roomdto;
 
 public class MaxRoomCountDTO {
 
-    private int roomsCount;
     private String workAreaName;
+    private Long roomsCount;
 
-    public MaxRoomCountDTO(int roomsCount, String workAreaName) {
-        this.roomsCount = roomsCount;
+    public MaxRoomCountDTO(String workAreaName, Long roomsCount) {
         this.workAreaName = workAreaName;
+        this.roomsCount = roomsCount;
     }
 
-    public int getRoomsCount() {
+    public MaxRoomCountDTO() {
+    }
+
+    public long getRoomsCount() {
         return roomsCount;
     }
 
-    public void setRoomsCount(int roomsCount) {
+    public void setRoomsCount(Long roomsCount) {
         this.roomsCount = roomsCount;
     }
 
