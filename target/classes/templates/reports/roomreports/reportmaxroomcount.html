@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+    <div th:replace="fragments/head :: head"></div>
+</head>
+
+<div class="wrapper d-flex justify-content-center" style="align-self: center">
+<!--     th:fragment="reportmaxroomcount">-->
+    <header class="modal-header bg-primary container row"
+            style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center;
+                ">
+
+        <div class="col" th:replace="fragments/nav/navroom :: navroom"></div>
+
+    </header>
+    <main class="main d-flex row" style="align-content: baseline;
+        background-image: url('../img/bg/bdfon2.jpg');
+        background-repeat: no-repeat; align-self: center;
+        max-width: 80rem; border-radius: 1rem">
+
+        <div class="col" th:replace="fragments/crud/crudrooms :: crudrooms"></div>
+
+        <div class="table-result-db" style="justify-content: center; max-height: min-content">
+
+            <table class="row" style=" justify-content: center;
+                  align-content: center; height: 3rem; table-layout: fixed">
+
+                <tr class="text-light fs-5" style="background-color: #62a0f6">
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 25rem">
+                        Название филиала
+                    </th>
+                    <th class="p-2 m-2 text-center align-self-center"
+                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                                ; width: 15rem">
+                        Количество кабинетов
+                    </th>
+                </tr>
+
+            </table>
+
+            <div class="scroll-tbody">
+                <table class="col" style="align-self: center">
+
+                    <div th:each="element : ${dtoList}">
+                        <div class="col">
+                            <tr style="align-self: center">
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 25rem">
+                                    <div>[[${element.workAreaName}]]</div>
+                                </td>
+                                <td class="p-2 m-2 text-center border border-1 border-dark"
+                                    style="width: 15rem">
+                                    <div>[[${element.roomsCount}]]</div>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+                </table>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div th:replace="fragments/footermain :: footermain"></div>
+    </footer>
+</div>
+
+</html>
