@@ -2,6 +2,7 @@ package accountingApp.controller;
 
 import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
+import accountingApp.entity.dto.roomdto.MaxRoomCountDTO;
 import accountingApp.service.WorkAreaService;
 import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
@@ -324,6 +325,14 @@ public class RoomController {
                     + e.getMessage());
             return getRoom(model);
         }
+    }
+
+    @GetMapping("/maxroomscountreport")
+    public String maxRoomsCountReport(Model model){
+        List<MaxRoomCountDTO> dtoList = roomService.getRoomsCount();
+        model.addAttribute("dtoList", dtoList);
+
+        return "/reports/roomreports/reportmaxroomcount";
     }
 
 
