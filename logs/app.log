@@ -1,84 +1,21 @@
-2025-02-11 21:03:18.722 ERROR 24496 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-02-11 21:03:18.785 ERROR 24496 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-02-11 21:03:19.025 ERROR 24496 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** null
-2025-02-11 21:03:19.046 ERROR 24496 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-02-11 21:03:19.133  WARN 24496 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-02-11 21:03:19.144  WARN 24496 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-02-11 21:03:19.154 ERROR 24496 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:03:19.171 ERROR 24496 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:03:19.204 ERROR 24496 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:03:19.330 ERROR 24496 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-02-11 21:03:19.347 ERROR 24496 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-02-11 21:03:19.356 ERROR 24496 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-02-11 21:03:19.362  WARN 24496 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-02-11 21:03:19.375  WARN 24496 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-02-11 21:03:19.376 ERROR 24496 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-02-11 21:03:19.470 ERROR 24496 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-02-11 21:03:19.484  WARN 24496 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-02-11 21:03:37.658  WARN 20280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-02-11 21:04:04.319  WARN 20280 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-02-11 21:04:04.372  WARN 20280 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-02-11 21:04:04.374  WARN 20280 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
-2025-02-11 21:06:31.562 ERROR 23344 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-02-11 21:06:31.585 ERROR 23344 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-02-11 21:06:31.606 ERROR 23344 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** null
-2025-02-11 21:06:31.626 ERROR 23344 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-02-11 21:06:31.645  WARN 23344 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-02-11 21:06:31.663  WARN 23344 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-02-11 21:06:31.670 ERROR 23344 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:06:31.679 ERROR 23344 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:06:31.697 ERROR 23344 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:06:31.777 ERROR 23344 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-02-11 21:06:31.797 ERROR 23344 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-02-11 21:06:31.802 ERROR 23344 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-02-11 21:06:31.808  WARN 23344 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-02-11 21:06:31.819  WARN 23344 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-02-11 21:06:31.822 ERROR 23344 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-02-11 21:06:31.922 ERROR 23344 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-02-11 21:06:31.950  WARN 23344 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-02-11 21:06:45.734  WARN 7104 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-02-11 21:07:35.395  WARN 7104 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-02-11 21:07:35.448  WARN 7104 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-02-11 21:07:35.449  WARN 7104 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
-2025-02-11 21:08:58.651 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-02-11 21:08:58.753 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-02-11 21:08:58.790 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** null
-2025-02-11 21:08:58.828 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-02-11 21:08:58.862  WARN 13240 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-02-11 21:08:58.878  WARN 13240 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-02-11 21:08:58.888 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:08:58.898 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:08:58.915 ERROR 13240 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:08:59.101 ERROR 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-02-11 21:08:59.215 ERROR 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-02-11 21:08:59.229 ERROR 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-02-11 21:08:59.236  WARN 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-02-11 21:08:59.252  WARN 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-02-11 21:08:59.253 ERROR 13240 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-02-11 21:08:59.406 ERROR 13240 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-02-11 21:08:59.454  WARN 13240 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-02-11 21:09:12.890  WARN 6320 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-02-11 21:09:30.506  WARN 6320 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-02-11 21:09:30.564  WARN 6320 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-02-11 21:09:30.565  WARN 6320 --- [http-nio-8080-exec-5] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
-2025-02-11 21:14:29.095 ERROR 10196 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
-2025-02-11 21:14:29.122 ERROR 10196 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-02-11 21:14:29.162 ERROR 10196 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** null
-2025-02-11 21:14:29.180 ERROR 10196 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
-2025-02-11 21:14:29.194  WARN 10196 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
-2025-02-11 21:14:29.205  WARN 10196 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
-2025-02-11 21:14:29.219 ERROR 10196 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:14:29.231 ERROR 10196 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:14:29.245 ERROR 10196 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
-2025-02-11 21:14:29.315 ERROR 10196 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-02-11 21:14:29.336 ERROR 10196 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
-2025-02-11 21:14:29.344 ERROR 10196 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
-2025-02-11 21:14:29.351  WARN 10196 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
-2025-02-11 21:14:29.365  WARN 10196 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
-2025-02-11 21:14:29.366 ERROR 10196 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
-2025-02-11 21:14:29.464 ERROR 10196 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
-2025-02-11 21:14:29.489  WARN 10196 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
-2025-02-11 21:14:42.733  WARN 8416 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-02-11 21:15:35.357  WARN 8416 --- [http-nio-8080-exec-4] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-02-11 21:15:35.406  WARN 8416 --- [http-nio-8080-exec-4] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-02-11 21:15:35.407  WARN 8416 --- [http-nio-8080-exec-4] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
+2025-02-12 20:10:19.732 ERROR 8648 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** For input string: "abc"
+2025-02-12 20:10:19.800 ERROR 8648 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-02-12 20:10:19.834 ERROR 8648 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** null
+2025-02-12 20:10:19.853 ERROR 8648 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): wrong DB's values! *** Index: 0, Size: 0
+2025-02-12 20:10:19.871  WARN 8648 --- [main] a.controller.DevicesController           : *** DevicesController.findDevicesById(): dborn <<<< 0 ***
+2025-02-12 20:10:19.884  WARN 8648 --- [main] a.controller.DevicesController           : *** DevicesController.deleteDevice(): dborn <<<< 0 ***
+2025-02-12 20:10:19.891 ERROR 8648 --- [main] a.controller.DevicesController           : *** DevicesController.addDevice(): wrong DB's values! *** For input string: ""
+2025-02-12 20:10:19.903 ERROR 8648 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-02-12 20:10:19.921 ERROR 8648 --- [main] a.controller.DevicesController           : *** DevicesController.updateDevice(): wrong DB's values! *** For input string: ""
+2025-02-12 20:10:20.107 ERROR 8648 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.findSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-02-12 20:10:20.132 ERROR 8648 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.getIdFromMap():  WRONG DB VALUES*** 
+2025-02-12 20:10:20.137 ERROR 8648 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.addNewDocument():  WRONG DB VALUES*** Attribute is empty!
+2025-02-12 20:10:20.141  WARN 8648 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): For input string: "doc1"
+2025-02-12 20:10:20.157  WARN 8648 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument(): It`s not an ID!
+2025-02-12 20:10:20.169 ERROR 8648 --- [main] a.d.DocumentControllerClass              : *** DocumentControllerClass.deleteSomeDocument():  WRONG DB VALUES*** It`s not an ID!
+2025-02-12 20:10:20.261 ERROR 8648 --- [main] a.controller.EmployeeController          : *** EmployeeController.deleteById(): wrong DB's values! *** For input string: "abc"
+2025-02-12 20:10:20.278  WARN 8648 --- [main] a.controller.EmployeeController          : *** EmployeeController.updateEmployee(): sub-zero ID values! ***
+2025-02-12 20:10:34.957  WARN 20524 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-12 20:11:32.680  WARN 20524 --- [http-nio-8080-exec-6] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-02-12 20:11:32.753  WARN 20524 --- [http-nio-8080-exec-6] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-02-12 20:11:32.755  WARN 20524 --- [http-nio-8080-exec-6] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
