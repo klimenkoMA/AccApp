@@ -21,7 +21,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         synchronized (http) {
             http
                     .authorizeRequests()
-                    .antMatchers("/resources/**", "/static/**", "/css/**", "/video/**").permitAll()
+                    .antMatchers("/resources/**", "/static/**", "/css/**", "/video/**", "/js/**").permitAll()
                     .antMatchers("/feedbacks").hasRole("ADMIN")
                     .antMatchers("/users").hasRole("ADMIN")
                     .anyRequest().authenticated()
@@ -46,14 +46,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                             }
 
                         } else {
-                            response.sendRedirect("/");
+                            response.sendRedirect("/main");
                         }
                     })
                     .authenticationEntryPoint((request, response, authException) -> {
                         response.sendRedirect("/login");
                     })
                     .defaultAuthenticationEntryPointFor((request, response, authException) -> {
-                        response.sendRedirect("/");
+                        response.sendRedirect("/main");
                     }, new AntPathRequestMatcher("/**"))
                     .and()
                     .csrf().disable();
