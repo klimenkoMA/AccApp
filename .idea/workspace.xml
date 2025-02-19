@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/roomreportchart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/roomreportchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/roomreportchart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -892,14 +892,7 @@
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
       <workItem from="1737776174681" duration="233633000" />
-      <workItem from="1739462224736" duration="18476000" />
-    </task>
-    <task id="LOCAL-00461" summary="Added new attribute 'serial' in devices.html">
-      <created>1735679353104</created>
-      <option name="number" value="00461" />
-      <option name="presentableId" value="LOCAL-00461" />
-      <option name="project" value="LOCAL" />
-      <updated>1735679353104</updated>
+      <workItem from="1739462224736" duration="21408000" />
     </task>
     <task id="LOCAL-00462" summary="Added new attribute 'idForView' in devices.html">
       <created>1735801674552</created>
@@ -1237,7 +1230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739672314715</updated>
     </task>
-    <option name="localTasksCounter" value="510" />
+    <task id="LOCAL-00510" summary="Created roomreportchart.js">
+      <created>1739816789685</created>
+      <option name="number" value="00510" />
+      <option name="presentableId" value="LOCAL-00510" />
+      <option name="project" value="LOCAL" />
+      <updated>1739816789686</updated>
+    </task>
+    <option name="localTasksCounter" value="511" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1260,7 +1260,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added findByWorkArea, findByRoom in EmployeeRepository" />
     <MESSAGE value="Added new methods for searching in DevicesRepository" />
     <MESSAGE value="Created Rooms searching methods" />
     <MESSAGE value="Created Rooms context searching" />
@@ -1285,7 +1284,8 @@
     <MESSAGE value="Added chart.js" />
     <MESSAGE value="Added bootstrap.js and bootstrap.css" />
     <MESSAGE value="Changed css and js connections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed css and js connections" />
+    <MESSAGE value="Created roomreportchart.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created roomreportchart.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
