@@ -3,6 +3,7 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
     <div th:replace="fragments/head :: head"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <div class="wrapper d-flex justify-content-center" style="align-self: center">
@@ -61,9 +62,34 @@
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
                 </table>
+
+                <div class="row" style="width: 40rem; height: 40rem">
+                    <canvas id="myChart"></canvas>
+                    <script>
+                        const ctx = document.getElementById('myChart');
+
+                        new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                datasets: [{
+                                    label: '# of Votes',
+                                    data: [12, 19, 3, 5, 2, 3],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                </div>
             </div>
         </div>
-
     </main>
     <footer>
         <div th:replace="fragments/footermain :: footermain"></div>

@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-02-15.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/roomreportchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/roomreportchart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-02-10.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-02-11.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,19 +417,6 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RepairControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -892,14 +885,8 @@
       <workItem from="1736662725627" duration="47935000" />
       <workItem from="1737776007339" duration="73000" />
       <workItem from="1737776174681" duration="233633000" />
-      <workItem from="1739462224736" duration="21408000" />
-    </task>
-    <task id="LOCAL-00462" summary="Added new attribute 'idForView' in devices.html">
-      <created>1735801674552</created>
-      <option name="number" value="00462" />
-      <option name="presentableId" value="LOCAL-00462" />
-      <option name="project" value="LOCAL" />
-      <updated>1735801674552</updated>
+      <workItem from="1739462224736" duration="25438000" />
+      <workItem from="1740104111841" duration="765000" />
     </task>
     <task id="LOCAL-00463" summary="Added new attribute 'idForView' in devices.html v2">
       <created>1735887125768</created>
@@ -1237,7 +1224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739816789686</updated>
     </task>
-    <option name="localTasksCounter" value="511" />
+    <task id="LOCAL-00511" summary="Rebuilt roomreportchart.js">
+      <created>1739930930428</created>
+      <option name="number" value="00511" />
+      <option name="presentableId" value="LOCAL-00511" />
+      <option name="project" value="LOCAL" />
+      <updated>1739930930428</updated>
+    </task>
+    <option name="localTasksCounter" value="512" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1260,7 +1254,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new methods for searching in DevicesRepository" />
     <MESSAGE value="Created Rooms searching methods" />
     <MESSAGE value="Created Rooms context searching" />
     <MESSAGE value="Rebuilt room.html's CRUD buttons" />
@@ -1285,7 +1278,8 @@
     <MESSAGE value="Added bootstrap.js and bootstrap.css" />
     <MESSAGE value="Changed css and js connections" />
     <MESSAGE value="Created roomreportchart.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created roomreportchart.js" />
+    <MESSAGE value="Rebuilt roomreportchart.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt roomreportchart.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
