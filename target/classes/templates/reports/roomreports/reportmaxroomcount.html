@@ -22,7 +22,8 @@
 
         <div class="col" th:replace="fragments/crud/crudrooms :: crudrooms"></div>
 
-        <div class="table-result-db" style="justify-content: center; max-height: min-content">
+        <div class="table-result-db d-flex" style="justify-content: center; max-height: min-content">
+            <div style="width: 40rem">
 
             <table class="row" style=" justify-content: center;
                   align-content: center; height: 3rem; table-layout: fixed">
@@ -63,31 +64,33 @@
 
                 </table>
 
-                <div class="row" style="width: 40rem; height: 40rem">
-                    <canvas id="myChart"></canvas>
-                    <script>
-                        const ctx = document.getElementById('myChart');
 
-                        new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                                datasets: [{
-                                    label: '# of Votes',
-                                    data: [12, 19, 3, 5, 2, 3],
-                                    borderWidth: 1
-                                }]
-                            },
-                            options: {
-                                scales: {
-                                    y: {
-                                        beginAtZero: true
-                                    }
+            </div>
+            </div>
+            <div class="row" style="width: 40rem; height: 40rem">
+                <canvas id="myChart"></canvas>
+                <script>
+                    const ctx = document.getElementById('myChart');
+
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [12, 19, 3, 5, 2, 3],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
                                 }
                             }
-                        });
-                    </script>
-                </div>
+                        }
+                    });
+                </script>
             </div>
         </div>
     </main>
@@ -95,5 +98,6 @@
         <div th:replace="fragments/footermain :: footermain"></div>
     </footer>
 </div>
+
 
 </html>
