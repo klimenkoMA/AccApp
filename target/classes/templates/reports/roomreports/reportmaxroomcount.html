@@ -25,50 +25,49 @@
         <div class="table-result-db d-flex" style="justify-content: center; max-height: min-content">
             <div style="width: 40rem">
 
-            <table class="row" style=" justify-content: center;
+                <table class="row" style=" justify-content: center;
                   align-content: center; height: 3rem; table-layout: fixed">
 
-                <tr class="text-light fs-5" style="background-color: #62a0f6">
-                    <th class="p-2 m-2 text-center align-self-center"
-                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                    <tr class="text-light fs-5" style="background-color: #62a0f6">
+                        <th class="p-2 m-2 text-center align-self-center"
+                            style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                                 ; width: 25rem">
-                        Название филиала
-                    </th>
-                    <th class="p-2 m-2 text-center align-self-center"
-                        style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
+                            Название филиала
+                        </th>
+                        <th class="p-2 m-2 text-center align-self-center"
+                            style="padding-left: 2vh; padding-right: 2vh; border-color: #62a0f6
                                 ; width: 15rem">
-                        Количество кабинетов
-                    </th>
-                </tr>
-
-            </table>
-
-            <div class="scroll-tbody">
-                <table class="col" style="align-self: center">
-
-                    <div th:each="element : ${dtoList}">
-                        <div class="col">
-                            <tr style="align-self: center">
-                                <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 25rem">
-                                    <div>[[${element.workAreaName}]]</div>
-                                </td>
-                                <td class="p-2 m-2 text-center border border-1 border-dark"
-                                    style="width: 15rem">
-                                    <div>[[${element.roomsCount}]]</div>
-                                </td>
-                            </tr>
-                        </div>
-                    </div>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            Количество кабинетов
+                        </th>
+                    </tr>
 
                 </table>
 
+                <div class="scroll-tbody">
+                    <table class="col" style="align-self: center">
 
+                        <div th:each="element : ${dtoList}">
+                            <div class="col">
+                                <tr style="align-self: center">
+                                    <td class="p-2 m-2 text-center border border-1 border-dark"
+                                        style="width: 25rem">
+                                        <div>[[${element.workAreaName}]]</div>
+                                    </td>
+                                    <td class="p-2 m-2 text-center border border-1 border-dark"
+                                        style="width: 15rem">
+                                        <div>[[${element.roomsCount}]]</div>
+                                    </td>
+                                </tr>
+                            </div>
+                        </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+                    </table>
+
+                </div>
             </div>
-            </div>
-            <div class="row" style="width: 40rem; height: 40rem">
-                <canvas id="myChart"></canvas>
+            <div class="row" style="width: 40rem; height: 30rem; padding-left: 2rem">
+                <canvas id="myChart" style="height: 30rem"></canvas>
                 <script>
                     const ctx = document.getElementById('myChart');
 
