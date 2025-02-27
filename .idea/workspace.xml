@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-02-22.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-02-15.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -890,14 +895,7 @@
       <workItem from="1737776007339" duration="73000" />
       <workItem from="1737776174681" duration="233633000" />
       <workItem from="1739462224736" duration="25438000" />
-      <workItem from="1740104111841" duration="4939000" />
-    </task>
-    <task id="LOCAL-00465" summary="Added new attribute 'idForView' in devices.html v4">
-      <created>1736053182386</created>
-      <option name="number" value="00465" />
-      <option name="presentableId" value="LOCAL-00465" />
-      <option name="project" value="LOCAL" />
-      <updated>1736053182386</updated>
+      <workItem from="1740104111841" duration="8211000" />
     </task>
     <task id="LOCAL-00466" summary="Added new attribute 'idForView' in feedbacks.html">
       <created>1736160590116</created>
@@ -1235,7 +1233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740241761886</updated>
     </task>
-    <option name="localTasksCounter" value="514" />
+    <task id="LOCAL-00514" summary="Tech commit">
+      <created>1740537280943</created>
+      <option name="number" value="00514" />
+      <option name="presentableId" value="LOCAL-00514" />
+      <option name="project" value="LOCAL" />
+      <updated>1740537280943</updated>
+    </task>
+    <option name="localTasksCounter" value="515" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1281,9 +1286,9 @@
     <MESSAGE value="Changed css and js connections" />
     <MESSAGE value="Created roomreportchart.js" />
     <MESSAGE value="Rebuilt roomreportchart.js" />
-    <MESSAGE value="Tech commit" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxroomcount.html" />
+    <MESSAGE value="Tech commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
