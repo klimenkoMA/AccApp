@@ -316,7 +316,7 @@ public class RoomController {
             model.addAttribute("roomList", roomList);
             if (roomList.isEmpty()) {
                 logger.debug("*** RoomController.findRoomByAllAttrs():  DATA NOT FOUND IN DB*** "
-                        );
+                );
                 return getRoom(model);
             }
             return "room";
@@ -328,9 +328,22 @@ public class RoomController {
     }
 
     @GetMapping("/maxroomscountreport")
-    public String maxRoomsCountReport(Model model){
+    public String maxRoomsCountReport(Model model) {
         List<MaxRoomCountDTO> dtoList = roomService.getRoomsCount();
+        String[] workAreaLabels = new String[dtoList.size()];
+        long[] roomsCounts = new long[dtoList.size()];
+        int i = 0;
+
+        for (MaxRoomCountDTO dto : dtoList
+        ) {
+            workAreaLabels[i] = dto.getWorkAreaName();
+            roomsCounts[i] = dto.getRoomsCount();
+            i++;
+        }
+
         model.addAttribute("dtoList", dtoList);
+        model.addAttribute("workAreaLabels", workAreaLabels);
+        model.addAttribute("roomsCounts", roomsCounts);
 
         return "/reports/roomreports/reportmaxroomcount";
     }
