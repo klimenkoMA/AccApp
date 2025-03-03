@@ -338,6 +338,7 @@ public class RoomController {
         ) {
             workAreaLabels[i] = dto.getWorkAreaName();
             roomsCounts[i] = dto.getRoomsCount();
+
             i++;
         }
 
