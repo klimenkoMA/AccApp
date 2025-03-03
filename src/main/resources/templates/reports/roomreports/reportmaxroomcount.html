@@ -50,10 +50,13 @@
                             <div class="col">
                                 <tr style="align-self: center">
                                     <td class="p-2 m-2 text-center border border-1 border-dark"
+                                        data-work-area-name="${element.workAreaName}"
+                                        data-room-count="${element.roomsCount}"
                                         style="width: 25rem">
                                         <div>[[${element.workAreaName}]]</div>
                                     </td>
                                     <td class="p-2 m-2 text-center border border-1 border-dark"
+
                                         style="width: 15rem">
                                         <div>[[${element.roomsCount}]]</div>
                                     </td>
@@ -70,17 +73,38 @@
                 <canvas id="myChart" style="height: 30rem"></canvas>
                 <script>
                     const ctx = document.getElementById('myChart');
+                    const rows = document.querySelectorAll('data-work-area-name');
+                    let workAreaLabelsArray = [];
+                    let roomsCountsArray = [];
 
+                    // for (let i = 0; i < document.getElementsByName('dtoList').length; i++) {
+                    //     workAreaLabelsArray[i] = rows[i]
+                    //         .getAttribute('data-work-area-name');
+                    //     roomsCountsArray[i] = rows[i]
+                    //         .getAttribute('data-room-count');
+                    // }
+
+                    rows.forEach((row, index) => {
+                        workAreaLabelsArray[index] = row.getAttribute('data-work-area-name');
+                        roomsCountsArray[index] = parseInt(row.getAttribute('data-room-count')); // Преобразуем в число
+                    });
+
+                    // rows.forEach(row => {
+                    //     workAreaLabelsArray = row.querySelector('[data-work-area-name]')
+                    //         .getAttribute('data-work-area-name');
+                    //     roomsCountsArray = row.querySelector('[data-room-count]')
+                    //         .getAttribute('data-room-count');
+                    // });
 
                     new Chart(ctx, {
                         type: 'bar',
                         data: {
                             // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                            labels: `workAreaLabels`,
+                            labels: workAreaLabelsArray,
                             datasets: [{
-                                label: '# of Votes',
+                                label: '# of Rooms',
                                 // data: [12, 19, 3, 5, 2, 3],
-                                data: `roomsCounts`,
+                                data: roomsCountsArray,
                                 borderWidth: 1
                             }]
                         },
@@ -92,6 +116,8 @@
                             }
                         }
                     });
+
+
                 </script>
             </div>
         </div>
