@@ -71,23 +71,14 @@
             </div>
             <div class="row" style="width: 40rem; height: 30rem; padding-left: 2rem">
                 <canvas id="myChart" style="height: 30rem"></canvas>
-                <script>
-                    const ctx = document.getElementById('myChart');
-                    const rows = document.querySelectorAll('data-work-area-name');
-                    let workAreaLabelsArray = [];
-                    let roomsCountsArray = [];
 
+                <script type="text/javascript">
                     // for (let i = 0; i < document.getElementsByName('dtoList').length; i++) {
                     //     workAreaLabelsArray[i] = rows[i]
                     //         .getAttribute('data-work-area-name');
                     //     roomsCountsArray[i] = rows[i]
                     //         .getAttribute('data-room-count');
                     // }
-
-                    rows.forEach((row, index) => {
-                        workAreaLabelsArray[index] = row.getAttribute('data-work-area-name');
-                        roomsCountsArray[index] = parseInt(row.getAttribute('data-room-count')); // Преобразуем в число
-                    });
 
                     // rows.forEach(row => {
                     //     workAreaLabelsArray = row.querySelector('[data-work-area-name]')
@@ -96,15 +87,39 @@
                     //         .getAttribute('data-room-count');
                     // });
 
+
+                </script>
+
+                <script>
+                    const ctx = document.getElementById('myChart');
+                    const rows = document.querySelectorAll('data-work-area-name');
+                    let workAreaLabelsArray = [];
+                    let roomsCountsArray = [];
+
+                    rows.forEach((row) => {
+                        const workAreaName = row.getAttribute('data-work-area-name');
+                        const roomCount = parseInt(row.getAttribute('data-room-count'), 10); // Преобразуем в число
+
+                        // Добавляем в массивы
+                        workAreaLabelsArray.push(workAreaName);
+                        roomsCountsArray.push(roomCount);
+                    });
+
+                    // rows.forEach((row, index) => {
+                    //     workAreaLabelsArray[index] = row.getAttribute('data-work-area-name');
+                    //     roomsCountsArray[index] = parseInt(row.getAttribute('data-room-count')); // Преобразуем в число
+                    // });
+
+
                     new Chart(ctx, {
                         type: 'bar',
                         data: {
                             // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                            labels: workAreaLabelsArray,
+                            labels: workAreaLabelsArray.map(row => row.workarea),
                             datasets: [{
                                 label: '# of Rooms',
                                 // data: [12, 19, 3, 5, 2, 3],
-                                data: roomsCountsArray,
+                                data: roomsCountsArray.map(row => row.count),
                                 borderWidth: 1
                             }]
                         },
