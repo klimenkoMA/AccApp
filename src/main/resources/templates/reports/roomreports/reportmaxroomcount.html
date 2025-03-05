@@ -87,12 +87,17 @@
                     //         .getAttribute('data-room-count');
                     // });
 
+                    // rows.forEach((row, index) => {
+                    //     workAreaLabelsArray[index] = row.getAttribute('data-work-area-name');
+                    //     roomsCountsArray[index] = parseInt(row.getAttribute('data-room-count')); // Преобразуем в число
+                    // });
+
 
                 </script>
 
                 <script>
                     const ctx = document.getElementById('myChart');
-                    const rows = document.querySelectorAll('data-work-area-name');
+                    const rows = document.querySelectorAll('[data-work-area-name]');
                     let workAreaLabelsArray = [];
                     let roomsCountsArray = [];
 
@@ -105,21 +110,15 @@
                         roomsCountsArray.push(roomCount);
                     });
 
-                    // rows.forEach((row, index) => {
-                    //     workAreaLabelsArray[index] = row.getAttribute('data-work-area-name');
-                    //     roomsCountsArray[index] = parseInt(row.getAttribute('data-room-count')); // Преобразуем в число
-                    // });
-
-
                     new Chart(ctx, {
                         type: 'bar',
                         data: {
                             // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                            labels: workAreaLabelsArray.map(row => row.workarea),
+                            labels: workAreaLabelsArray,
                             datasets: [{
                                 label: '# of Rooms',
                                 // data: [12, 19, 3, 5, 2, 3],
-                                data: roomsCountsArray.map(row => row.count),
+                                data: roomsCountsArray,
                                 borderWidth: 1
                             }]
                         },

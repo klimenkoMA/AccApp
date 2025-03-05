@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-03-02.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-03-03.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
@@ -894,14 +894,7 @@
       <workItem from="1737776007339" duration="73000" />
       <workItem from="1737776174681" duration="233633000" />
       <workItem from="1739462224736" duration="25438000" />
-      <workItem from="1740104111841" duration="34330000" />
-    </task>
-    <task id="LOCAL-00470" summary="Added addEmptyAttrNewRepair method in RepairControllerTest">
-      <created>1736475196874</created>
-      <option name="number" value="00470" />
-      <option name="presentableId" value="LOCAL-00470" />
-      <option name="project" value="LOCAL" />
-      <updated>1736475196875</updated>
+      <workItem from="1740104111841" duration="36551000" />
     </task>
     <task id="LOCAL-00471" summary="Added addNewRepairWithException method in RepairControllerTest">
       <created>1736581274503</created>
@@ -1239,7 +1232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740968289747</updated>
     </task>
-    <option name="localTasksCounter" value="519" />
+    <task id="LOCAL-00519" summary="Rebuilt reportmaxroomcount.html v5">
+      <created>1741054854001</created>
+      <option name="number" value="00519" />
+      <option name="presentableId" value="LOCAL-00519" />
+      <option name="project" value="LOCAL" />
+      <updated>1741054854001</updated>
+    </task>
+    <option name="localTasksCounter" value="520" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1262,7 +1262,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt room.html's CRUD buttons v2" />
     <MESSAGE value="Rebuilt room.html's CRUD buttons v3" />
     <MESSAGE value="Rebuilt itstaff.html's CRUD buttons" />
     <MESSAGE value="Rebuilt employee.html's, workarea.html's, events.html's CRUD buttons" />
@@ -1287,7 +1286,8 @@
     <MESSAGE value="Rebuilt reportmaxroomcount.html v2" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v3" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxroomcount.html v4" />
+    <MESSAGE value="Rebuilt reportmaxroomcount.html v5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxroomcount.html v5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
