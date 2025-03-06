@@ -50,8 +50,8 @@
                             <div class="col">
                                 <tr style="align-self: center">
                                     <td class="p-2 m-2 text-center border border-1 border-dark"
-                                        data-work-area-name="${element.workAreaName}"
-                                        data-room-count="${element.roomsCount}"
+                                        data-work-area-name=[[${element.workAreaName}]]
+                                        data-room-count=[[${element.roomsCount}]]
                                         style="width: 25rem">
                                         <div>[[${element.workAreaName}]]</div>
                                     </td>
@@ -92,23 +92,51 @@
                     //     roomsCountsArray[index] = parseInt(row.getAttribute('data-room-count')); // Преобразуем в число
                     // });
 
+                    // rows.forEach((row) => {
+                    //     const workAreaName = row.getAttribute('data-work-area-name');
+                    //     const roomCount = parseInt(row.getAttribute('data-room-count'), 10); // Преобразуем в число
+                    //
+                    //     // Добавляем в массивы
+                    //     workAreaLabelsArray.push(workAreaName);
+                    //     roomsCountsArray.push(roomCount);
+                    // });
+
+                    // let workAreaLabelsArray = '[...workAreaLabels]';
+                    // let roomsCountsArray = '[...roomsCounts]';
+
+                    // const rows = document.querySelectorAll('[data-work-area-name]');
+
+                    // document.addEventListener('DOMContentLoaded', function() {
+                    //     const ctx = document.getElementById('myChart').getContext('2d');
+                    //     new Chart(ctx, {
+                    //         type: 'bar',
+                    //         data: {
+                    //             labels: workAreaLabels, // Массив с названиями
+                    //             datasets: [{
+                    //                 label: '# of Rooms', // Подпись для графика
+                    //                 data: roomsCounts, // Массив с количеством комнат
+                    //                 backgroundColor: 'rgba(75, 192, 192, 0.2)', // Цвет фона столбцов
+                    //                 borderColor: 'rgba(75, 192, 192, 1)', // Цвет границы столбцов
+                    //                 borderWidth: 1
+                    //             }]
+                    //         },
+                    //         options: {
+                    //             scales: {
+                    //                 y: {
+                    //                     beginAtZero: true
+                    //                 }
+                    //             }
+                    //         }
+                    //     });
+                    // });
 
                 </script>
 
-                <script>
+                <script th:inline="javascript">
                     const ctx = document.getElementById('myChart');
-                    const rows = document.querySelectorAll('[data-work-area-name]');
-                    let workAreaLabelsArray = [];
-                    let roomsCountsArray = [];
 
-                    rows.forEach((row) => {
-                        const workAreaName = row.getAttribute('data-work-area-name');
-                        const roomCount = parseInt(row.getAttribute('data-room-count'), 10); // Преобразуем в число
-
-                        // Добавляем в массивы
-                        workAreaLabelsArray.push(workAreaName);
-                        roomsCountsArray.push(roomCount);
-                    });
+                    const workAreaLabelsArray = /*[[${workAreaLabels}]]*/ [];
+                    const roomsCountsArray = /*[[${roomsCounts}]]*/ [];
 
                     new Chart(ctx, {
                         type: 'bar',
@@ -119,6 +147,8 @@
                                 label: '# of Rooms',
                                 // data: [12, 19, 3, 5, 2, 3],
                                 data: roomsCountsArray,
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Цвет фона столбцов
+                                borderColor: 'rgba(75, 192, 192, 1)', // Цвет границы столбцов
                                 borderWidth: 1
                             }]
                         },

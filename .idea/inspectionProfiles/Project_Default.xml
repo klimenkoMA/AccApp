@@ -16,7 +16,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="40">
+          <list size="41">
             <item index="0" class="java.lang.String" itemvalue="charset" />
             <item index="1" class="java.lang.String" itemvalue="placeholder" />
             <item index="2" class="java.lang.String" itemvalue="th:each" />
@@ -57,6 +57,7 @@
             <item index="37" class="java.lang.String" itemvalue="data-work-area-name" />
             <item index="38" class="java.lang.String" itemvalue="data-work-area-count" />
             <item index="39" class="java.lang.String" itemvalue="data-room-count" />
+            <item index="40" class="java.lang.String" itemvalue="th:inline" />
           </list>
         </value>
       </option>
