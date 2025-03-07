@@ -1,6 +1,7 @@
 package accountingApp.repository;
 
 import accountingApp.entity.*;
+import accountingApp.entity.dto.devicesdto.MaxOwnerCountDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -46,4 +47,11 @@ public interface DevicesRepository extends JpaRepository<Devices, Integer> {
 
     @Query(value = "SELECT d from Devices d where d.repair = ?1")
     List<Devices> findByRepair(Repair repair);
+
+    @Query(value = "select new accountingApp.entity.dto.devicesdto.MaxOwnerCountDTO(" +
+            " i.name, count(i.id)) " +
+            " from Devices  d" +
+            " join d.itstaff i" +
+            " group by i.name")
+    List<MaxOwnerCountDTO> reportingDevicesMaxOwnerCount();
 }

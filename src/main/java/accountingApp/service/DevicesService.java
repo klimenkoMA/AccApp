@@ -1,6 +1,7 @@
 package accountingApp.service;
 
 import accountingApp.entity.DeviceCategory;
+import accountingApp.entity.dto.devicesdto.MaxOwnerCountDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import accountingApp.entity.Devices;
@@ -52,5 +53,9 @@ public class DevicesService {
 
     public List<Devices> getDevicesByCategory(DeviceCategory category) {
         return devicesRepository.findByCategory(category);
+    }
+
+    public List<MaxOwnerCountDTO> getOwnersCount(){
+        return devicesRepository.reportingDevicesMaxOwnerCount();
     }
 }
