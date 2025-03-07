@@ -412,4 +412,6 @@ public class DevicesController {
             return getDevices(model);
         }
     }
+
+
 }

@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-03-04.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/dto/devicesdto/MaxOwnerCountDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +27,9 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -893,14 +893,7 @@
       <workItem from="1737776007339" duration="73000" />
       <workItem from="1737776174681" duration="233633000" />
       <workItem from="1739462224736" duration="25438000" />
-      <workItem from="1740104111841" duration="39781000" />
-    </task>
-    <task id="LOCAL-00472" summary="Added deleteValidRepair method in RepairControllerTest">
-      <created>1736662852868</created>
-      <option name="number" value="00472" />
-      <option name="presentableId" value="LOCAL-00472" />
-      <option name="project" value="LOCAL" />
-      <updated>1736662852869</updated>
+      <workItem from="1740104111841" duration="44010000" />
     </task>
     <task id="LOCAL-00473" summary="Added deleteFailRepair method in RepairControllerTest">
       <created>1736733858322</created>
@@ -1238,7 +1231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741141267731</updated>
     </task>
-    <option name="localTasksCounter" value="521" />
+    <task id="LOCAL-00521" summary="Rebuilt reportmaxroomcount.html v7">
+      <created>1741227253547</created>
+      <option name="number" value="00521" />
+      <option name="presentableId" value="LOCAL-00521" />
+      <option name="project" value="LOCAL" />
+      <updated>1741227253547</updated>
+    </task>
+    <option name="localTasksCounter" value="522" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1261,7 +1261,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt itstaff.html's CRUD buttons" />
     <MESSAGE value="Rebuilt employee.html's, workarea.html's, events.html's CRUD buttons" />
     <MESSAGE value="Rebuilt devices.html's, repair.html's CRUD buttons" />
     <MESSAGE value="Rebuilt documents.html's, users.html's CRUD buttons" />
@@ -1286,7 +1285,8 @@
     <MESSAGE value="Rebuilt reportmaxroomcount.html v4" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v5" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxroomcount.html v6" />
+    <MESSAGE value="Rebuilt reportmaxroomcount.html v7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxroomcount.html v7" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
