@@ -413,5 +413,9 @@ public class DevicesController {
         }
     }
 
+    @GetMapping("/maxownercountreport")
+    public String maxOwnerCountReport(Model model) {
 
+        return "/reports/devicesreports/reportmaxownercount";
+    }
 }
