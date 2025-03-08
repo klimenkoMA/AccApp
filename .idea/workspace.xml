@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/dto/devicesdto/MaxOwnerCountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/devicesreports/reportmaxownercount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/DevicesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +25,9 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -893,14 +891,7 @@
       <workItem from="1737776007339" duration="73000" />
       <workItem from="1737776174681" duration="233633000" />
       <workItem from="1739462224736" duration="25438000" />
-      <workItem from="1740104111841" duration="44010000" />
-    </task>
-    <task id="LOCAL-00473" summary="Added deleteFailRepair method in RepairControllerTest">
-      <created>1736733858322</created>
-      <option name="number" value="00473" />
-      <option name="presentableId" value="LOCAL-00473" />
-      <option name="project" value="LOCAL" />
-      <updated>1736733858322</updated>
+      <workItem from="1740104111841" duration="47464000" />
     </task>
     <task id="LOCAL-00474" summary="Added deleteRepairWithException method in RepairControllerTest">
       <created>1736821056765</created>
@@ -1238,7 +1229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741227253547</updated>
     </task>
-    <option name="localTasksCounter" value="522" />
+    <task id="LOCAL-00522" summary="Created MaxOwnerCountDTO.java">
+      <created>1741314062372</created>
+      <option name="number" value="00522" />
+      <option name="presentableId" value="LOCAL-00522" />
+      <option name="project" value="LOCAL" />
+      <updated>1741314062373</updated>
+    </task>
+    <option name="localTasksCounter" value="523" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1261,7 +1259,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt employee.html's, workarea.html's, events.html's CRUD buttons" />
     <MESSAGE value="Rebuilt devices.html's, repair.html's CRUD buttons" />
     <MESSAGE value="Rebuilt documents.html's, users.html's CRUD buttons" />
     <MESSAGE value="Rebuilt feedbacks.html's CRUD buttons" />
@@ -1286,7 +1283,8 @@
     <MESSAGE value="Rebuilt reportmaxroomcount.html v5" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v6" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxroomcount.html v7" />
+    <MESSAGE value="Created MaxOwnerCountDTO.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created MaxOwnerCountDTO.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
