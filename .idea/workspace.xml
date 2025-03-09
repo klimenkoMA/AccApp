@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/devicesreports/reportmaxownercount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-03-05.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-02-26.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-02-27.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudrooms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/devicesreports/reportmaxownercount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/devicesreports/reportmaxownercount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/roomreports/reportmaxroomcount.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -413,17 +419,6 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RepairControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -891,14 +886,8 @@
       <workItem from="1737776007339" duration="73000" />
       <workItem from="1737776174681" duration="233633000" />
       <workItem from="1739462224736" duration="25438000" />
-      <workItem from="1740104111841" duration="47464000" />
-    </task>
-    <task id="LOCAL-00474" summary="Added deleteRepairWithException method in RepairControllerTest">
-      <created>1736821056765</created>
-      <option name="number" value="00474" />
-      <option name="presentableId" value="LOCAL-00474" />
-      <option name="project" value="LOCAL" />
-      <updated>1736821056766</updated>
+      <workItem from="1740104111841" duration="53698000" />
+      <workItem from="1741429365843" duration="5483000" />
     </task>
     <task id="LOCAL-00475" summary="Added findRepairSuccess method in RepairControllerTest">
       <created>1736907663221</created>
@@ -1236,7 +1225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741314062373</updated>
     </task>
-    <option name="localTasksCounter" value="523" />
+    <task id="LOCAL-00523" summary="Created reportmaxownercount.html">
+      <created>1741409706741</created>
+      <option name="number" value="00523" />
+      <option name="presentableId" value="LOCAL-00523" />
+      <option name="project" value="LOCAL" />
+      <updated>1741409706741</updated>
+    </task>
+    <option name="localTasksCounter" value="524" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1259,7 +1255,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt devices.html's, repair.html's CRUD buttons" />
     <MESSAGE value="Rebuilt documents.html's, users.html's CRUD buttons" />
     <MESSAGE value="Rebuilt feedbacks.html's CRUD buttons" />
     <MESSAGE value="Created adddevice.html and deletedevices.html" />
@@ -1284,7 +1279,8 @@
     <MESSAGE value="Rebuilt reportmaxroomcount.html v6" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v7" />
     <MESSAGE value="Created MaxOwnerCountDTO.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created MaxOwnerCountDTO.java" />
+    <MESSAGE value="Created reportmaxownercount.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created reportmaxownercount.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

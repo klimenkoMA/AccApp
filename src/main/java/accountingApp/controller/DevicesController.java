@@ -1,6 +1,7 @@
 package accountingApp.controller;
 
 import accountingApp.entity.*;
+import accountingApp.entity.dto.devicesdto.MaxOwnerCountDTO;
 import accountingApp.service.*;
 import accountingApp.usefulmethods.Checker;
 import org.slf4j.Logger;
@@ -415,6 +416,21 @@ public class DevicesController {
 
     @GetMapping("/maxownercountreport")
     public String maxOwnerCountReport(Model model) {
+
+        List<MaxOwnerCountDTO> dtoList = devicesService.getOwnersCount();
+        String[] owners = new String[dtoList.size()];
+        long[] counts = new long[dtoList.size()];
+        int i = 0;
+
+        for (MaxOwnerCountDTO owner : dtoList
+        ) {
+            owners[i] = owner.getOwner();
+            counts[i] = owner.getDevicesCount();
+            i++;
+        }
+        model.addAttribute("dtoList", dtoList);
+        model.addAttribute("owners", owners);
+        model.addAttribute("counts", counts);
 
         return "/reports/devicesreports/reportmaxownercount";
     }
