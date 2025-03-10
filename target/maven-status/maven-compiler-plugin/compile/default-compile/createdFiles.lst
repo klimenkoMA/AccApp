@@ -41,4 +41,5 @@ accountingApp\repository\RoomRepository.class
 accountingApp\repository\AppUserRepository.class
 accountingApp\documentService\DocumentServiceClass.class
 accountingApp\repository\ITStaffRepository.class
+accountingApp\entity\dto\devicesdto\MaxOwnerCountDTO.class
 accountingApp\service\AppUserService$1.class
