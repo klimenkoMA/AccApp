@@ -50,8 +50,6 @@
                             <div class="col">
                                 <tr style="align-self: center">
                                     <td class="p-2 m-2 text-center border border-1 border-dark"
-                                        data-work-area-name=[[${element.workAreaName}]]
-                                        data-room-count=[[${element.roomsCount}]]
                                         style="width: 25rem">
                                         <div>[[${element.workAreaName}]]</div>
                                     </td>
@@ -72,66 +70,6 @@
             <div class="row" style="width: 40rem; height: 30rem; padding-left: 2rem">
                 <canvas id="myChart" style="height: 30rem"></canvas>
 
-                <script type="text/javascript">
-                    // for (let i = 0; i < document.getElementsByName('dtoList').length; i++) {
-                    //     workAreaLabelsArray[i] = rows[i]
-                    //         .getAttribute('data-work-area-name');
-                    //     roomsCountsArray[i] = rows[i]
-                    //         .getAttribute('data-room-count');
-                    // }
-
-                    // rows.forEach(row => {
-                    //     workAreaLabelsArray = row.querySelector('[data-work-area-name]')
-                    //         .getAttribute('data-work-area-name');
-                    //     roomsCountsArray = row.querySelector('[data-room-count]')
-                    //         .getAttribute('data-room-count');
-                    // });
-
-                    // rows.forEach((row, index) => {
-                    //     workAreaLabelsArray[index] = row.getAttribute('data-work-area-name');
-                    //     roomsCountsArray[index] = parseInt(row.getAttribute('data-room-count')); // Преобразуем в число
-                    // });
-
-                    // rows.forEach((row) => {
-                    //     const workAreaName = row.getAttribute('data-work-area-name');
-                    //     const roomCount = parseInt(row.getAttribute('data-room-count'), 10); // Преобразуем в число
-                    //
-                    //     // Добавляем в массивы
-                    //     workAreaLabelsArray.push(workAreaName);
-                    //     roomsCountsArray.push(roomCount);
-                    // });
-
-                    // let workAreaLabelsArray = '[...workAreaLabels]';
-                    // let roomsCountsArray = '[...roomsCounts]';
-
-                    // const rows = document.querySelectorAll('[data-work-area-name]');
-
-                    // document.addEventListener('DOMContentLoaded', function() {
-                    //     const ctx = document.getElementById('myChart').getContext('2d');
-                    //     new Chart(ctx, {
-                    //         type: 'bar',
-                    //         data: {
-                    //             labels: workAreaLabels, // Массив с названиями
-                    //             datasets: [{
-                    //                 label: '# of Rooms', // Подпись для графика
-                    //                 data: roomsCounts, // Массив с количеством комнат
-                    //                 backgroundColor: 'rgba(75, 192, 192, 0.2)', // Цвет фона столбцов
-                    //                 borderColor: 'rgba(75, 192, 192, 1)', // Цвет границы столбцов
-                    //                 borderWidth: 1
-                    //             }]
-                    //         },
-                    //         options: {
-                    //             scales: {
-                    //                 y: {
-                    //                     beginAtZero: true
-                    //                 }
-                    //             }
-                    //         }
-                    //     });
-                    // });
-
-                </script>
-
                 <script th:inline="javascript">
                     const ctx = document.getElementById('myChart');
 
@@ -141,13 +79,12 @@
                     new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                             labels: workAreaLabelsArray,
                             datasets: [{
                                 label: '# of Rooms',
                                 // data: [12, 19, 3, 5, 2, 3],
                                 data: roomsCountsArray,
-                                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Цвет фона столбцов
+                                backgroundColor: 'rgba(75, 192, 192, 9)', // Цвет фона столбцов
                                 borderColor: 'rgba(75, 192, 192, 1)', // Цвет границы столбцов
                                 borderWidth: 1
                             }]
@@ -160,8 +97,6 @@
                             }
                         }
                     });
-
-
                 </script>
             </div>
         </div>
