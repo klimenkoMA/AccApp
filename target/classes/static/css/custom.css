@@ -80,20 +80,9 @@ html, body {
     color: #00008b;
 }
 
-/*.crud_buttons {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    padding: 10px;*/
-/*    max-height: 300px;*/
-/*    max-width: min-content;*/
-/*    align-items: center;*/
-/*    align-self: center;*/
-/*}*/
-
 .popup_div {
     display: flex;
     max-width: 400px;
-    /*margin: 10px auto;*/
     font-family: sans-serif;
     text-align: center;
     position: relative;
@@ -105,7 +94,6 @@ html, body {
     appearance: none;
     border: 0;
     border-radius: 5px;
-    /*background-color: #62a0f6;*/
     background-color: #62a0f6;
     width: 130px;
     height: 5vh;

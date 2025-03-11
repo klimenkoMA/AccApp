@@ -6,7 +6,7 @@
     <div th:replace="fragments/head :: head"></div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+
 <div class="wrapper d-flex justify-content-center" style="align-self: center">
     <header class="modal-header bg-primary container row"
             style=" border-radius: 1rem; text-shadow: 2px 2px 4px black; align-self: center;
@@ -64,45 +64,44 @@
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="row" style="width: 40rem; height: 30rem; padding-left: 2rem">
-            <canvas id="myChart" style="height: 30rem"></canvas>
 
-            <script th:inline="javascript">
-                const ctx = document.getElementById('myChart');
+            <div class="row" style="width: 40rem; height: 30rem; padding-left: 2rem">
+                <canvas id="devicesOwnerChart" style="height: 30rem"></canvas>
 
-                const ownersArray = /*[[${owners}]]*/ [];
-                const countsArray = /*[[${counts}]]*/ [];
+                <script th:inline="javascript">
+                    const ctx = document.getElementById('devicesOwnerChart');
 
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ownersArray,
-                        datasets: [{
-                            label: '# of Rooms',
-                            // data: [12, 19, 3, 5, 2, 3],
-                            data: countsArray,
-                            backgroundColor: 'rgba(75, 192, 192, 9)', // Цвет фона столбцов
-                            borderColor: 'rgba(75, 192, 192, 1)', // Цвет границы столбцов
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
+                    const ownersArray = /*[[${owners}]]*/ [];
+                    const countsArray = /*[[${counts}]]*/ [];
+
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ownersArray,
+                            datasets: [{
+                                label: '# of Rooms',
+                                // data: [12, 19, 3, 5, 2, 3],
+                                data: countsArray,
+                                backgroundColor: 'rgba(75, 192, 192, 9)', // Цвет фона столбцов
+                                borderColor: 'rgba(75, 192, 192, 1)', // Цвет границы столбцов
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
                             }
                         }
-                    }
-                });
-            </script>
+                    });
+                </script>
+            </div>
         </div>
-
     </main>
     <footer>
         <div th:replace="fragments/footermain :: footermain"></div>
     </footer>
 </div>
-</body>
 </html>
