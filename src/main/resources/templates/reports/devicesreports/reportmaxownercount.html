@@ -73,14 +73,14 @@
                     const ctx = document.getElementById('devicesOwnerChart');
 
                     const ownersArray = /*[[${owners}]]*/ [];
-                    const countsArray = /*[[${counts}]]*/ [];
+                    const countsArray = /*[[${dtoList}]]*/ [];
 
                     new Chart(ctx, {
-                        type: 'bar',
+                        type: 'bubble',
                         data: {
                             labels: ownersArray,
                             datasets: [{
-                                label: '# of Rooms',
+                                label: '# Owners',
                                 // data: [12, 19, 3, 5, 2, 3],
                                 data: countsArray,
                                 backgroundColor: 'rgba(75, 192, 192, 9)', // Цвет фона столбцов
