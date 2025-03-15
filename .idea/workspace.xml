@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-03-12.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-03-14.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-03-05.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/devicesreports/reportmaxownercount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/devicesreports/reportmaxownercount.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/reports/devicesreports/reportmaxownercount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reports/devicesreports/reportmaxownercount.html" afterDir="false" />
     </list>
@@ -887,14 +885,8 @@
       <workItem from="1739462224736" duration="25438000" />
       <workItem from="1740104111841" duration="53698000" />
       <workItem from="1741429365843" duration="20319000" />
-      <workItem from="1741709708011" duration="8445000" />
-    </task>
-    <task id="LOCAL-00480" summary="Added filtering by Profession in employee.html, itstaff.html">
-      <created>1737243119059</created>
-      <option name="number" value="00480" />
-      <option name="presentableId" value="LOCAL-00480" />
-      <option name="project" value="LOCAL" />
-      <updated>1737243119059</updated>
+      <workItem from="1741709708011" duration="9398000" />
+      <workItem from="1741970569146" duration="2492000" />
     </task>
     <task id="LOCAL-00481" summary="Added context searching">
       <created>1737393472694</created>
@@ -1232,7 +1224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741832536136</updated>
     </task>
-    <option name="localTasksCounter" value="529" />
+    <task id="LOCAL-00529" summary="Rebuilt reportmaxownercount.html">
+      <created>1741920026508</created>
+      <option name="number" value="00529" />
+      <option name="presentableId" value="LOCAL-00529" />
+      <option name="project" value="LOCAL" />
+      <updated>1741920026508</updated>
+    </task>
+    <option name="localTasksCounter" value="530" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1278,9 +1277,9 @@
     <MESSAGE value="Created reportmaxownercount.html" />
     <MESSAGE value="Rebuilt reportmaxownercount.html v2" />
     <MESSAGE value="Rebuilt reportmaxownercount.html v3" />
-    <MESSAGE value="Rebuilt reportmaxownercount.html" />
     <MESSAGE value="Added Apache POI in pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Apache POI in pom.xml" />
+    <MESSAGE value="Rebuilt reportmaxownercount.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxownercount.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
