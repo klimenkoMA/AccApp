@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-03-14.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/devicesreports/reportmaxownercount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/devicesreports/reportmaxownercount.html" afterDir="false" />
@@ -92,7 +91,7 @@
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="javascript.nodejs.core.library.configured.version" value="21.7.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="20.12.13" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ChartJs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../acceptsert" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -886,14 +885,7 @@
       <workItem from="1740104111841" duration="53698000" />
       <workItem from="1741429365843" duration="20319000" />
       <workItem from="1741709708011" duration="9398000" />
-      <workItem from="1741970569146" duration="2492000" />
-    </task>
-    <task id="LOCAL-00481" summary="Added context searching">
-      <created>1737393472694</created>
-      <option name="number" value="00481" />
-      <option name="presentableId" value="LOCAL-00481" />
-      <option name="project" value="LOCAL" />
-      <updated>1737393472694</updated>
+      <workItem from="1741970569146" duration="5903000" />
     </task>
     <task id="LOCAL-00482" summary="Added findITStaffByName in ITStaffRepository">
       <created>1737429407646</created>
@@ -1231,7 +1223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741920026508</updated>
     </task>
-    <option name="localTasksCounter" value="530" />
+    <task id="LOCAL-00530" summary="Rebuilt reportmaxownercount.html with adding new color in 'pie'">
+      <created>1742019218168</created>
+      <option name="number" value="00530" />
+      <option name="presentableId" value="LOCAL-00530" />
+      <option name="project" value="LOCAL" />
+      <updated>1742019218169</updated>
+    </task>
+    <option name="localTasksCounter" value="531" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1254,7 +1253,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created some CRUD fragments" />
     <MESSAGE value="Created some CRUD fragments v2" />
     <MESSAGE value="Created reportingNumbersOfMaxRoomWorkArea method for report" />
     <MESSAGE value="Created MaxRoomCountDTO.java for report" />
@@ -1279,7 +1277,8 @@
     <MESSAGE value="Rebuilt reportmaxownercount.html v3" />
     <MESSAGE value="Added Apache POI in pom.xml" />
     <MESSAGE value="Rebuilt reportmaxownercount.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxownercount.html" />
+    <MESSAGE value="Rebuilt reportmaxownercount.html with adding new color in 'pie'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxownercount.html with adding new color in 'pie'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
