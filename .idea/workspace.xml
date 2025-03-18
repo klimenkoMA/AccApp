@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/Act.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ActController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/repository/ActRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/ActService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +23,10 @@
       <list>
         <option value="UML Activity" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -894,14 +896,7 @@
       <workItem from="1740104111841" duration="53698000" />
       <workItem from="1741429365843" duration="20319000" />
       <workItem from="1741709708011" duration="9398000" />
-      <workItem from="1741970569146" duration="8475000" />
-    </task>
-    <task id="LOCAL-00483" summary="Added findByDBorn in EmployeeRepository">
-      <created>1737567061105</created>
-      <option name="number" value="00483" />
-      <option name="presentableId" value="LOCAL-00483" />
-      <option name="project" value="LOCAL" />
-      <updated>1737567061105</updated>
+      <workItem from="1741970569146" duration="11422000" />
     </task>
     <task id="LOCAL-00484" summary="Added findByWorkArea, findByRoom in EmployeeRepository">
       <created>1737595739681</created>
@@ -1239,7 +1234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1742107697886</updated>
     </task>
-    <option name="localTasksCounter" value="532" />
+    <task id="LOCAL-00532" summary="Added Act.java">
+      <created>1742226958597</created>
+      <option name="number" value="00532" />
+      <option name="presentableId" value="LOCAL-00532" />
+      <option name="project" value="LOCAL" />
+      <updated>1742226958597</updated>
+    </task>
+    <option name="localTasksCounter" value="533" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1262,7 +1264,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created some CRUD fragments v2" />
     <MESSAGE value="Created reportingNumbersOfMaxRoomWorkArea method for report" />
     <MESSAGE value="Created MaxRoomCountDTO.java for report" />
     <MESSAGE value="Rebuilt query for reportingNumbersOfMaxRoomWorkArea method" />
@@ -1287,7 +1288,8 @@
     <MESSAGE value="Rebuilt reportmaxownercount.html" />
     <MESSAGE value="Rebuilt reportmaxownercount.html with adding new color in 'pie'" />
     <MESSAGE value="Rebuilt reportmaxownercount.html v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportmaxownercount.html v2" />
+    <MESSAGE value="Added Act.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Act.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
