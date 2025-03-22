@@ -410,17 +410,6 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RepairControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -894,13 +883,7 @@
       <workItem from="1741429365843" duration="20319000" />
       <workItem from="1741709708011" duration="9398000" />
       <workItem from="1741970569146" duration="15117000" />
-    </task>
-    <task id="LOCAL-00486" summary="Created Rooms searching methods">
-      <created>1737776585095</created>
-      <option name="number" value="00486" />
-      <option name="presentableId" value="LOCAL-00486" />
-      <option name="project" value="LOCAL" />
-      <updated>1737776585095</updated>
+      <workItem from="1742448303108" duration="2421000" />
     </task>
     <task id="LOCAL-00487" summary="Created Rooms context searching">
       <created>1737867767662</created>
@@ -1238,7 +1221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1742381776727</updated>
     </task>
-    <option name="localTasksCounter" value="535" />
+    <task id="LOCAL-00535" summary="Tech commit">
+      <created>1742479983576</created>
+      <option name="number" value="00535" />
+      <option name="presentableId" value="LOCAL-00535" />
+      <option name="project" value="LOCAL" />
+      <updated>1742479983582</updated>
+    </task>
+    <option name="localTasksCounter" value="536" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
