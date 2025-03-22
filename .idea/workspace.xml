@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -411,17 +410,6 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RepairControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -894,21 +882,8 @@
       <workItem from="1740104111841" duration="53698000" />
       <workItem from="1741429365843" duration="20319000" />
       <workItem from="1741709708011" duration="9398000" />
-      <workItem from="1741970569146" duration="13904000" />
-    </task>
-    <task id="LOCAL-00485" summary="Added new methods for searching in DevicesRepository">
-      <created>1737684321230</created>
-      <option name="number" value="00485" />
-      <option name="presentableId" value="LOCAL-00485" />
-      <option name="project" value="LOCAL" />
-      <updated>1737684321230</updated>
-    </task>
-    <task id="LOCAL-00486" summary="Created Rooms searching methods">
-      <created>1737776585095</created>
-      <option name="number" value="00486" />
-      <option name="presentableId" value="LOCAL-00486" />
-      <option name="project" value="LOCAL" />
-      <updated>1737776585095</updated>
+      <workItem from="1741970569146" duration="15117000" />
+      <workItem from="1742448303108" duration="2421000" />
     </task>
     <task id="LOCAL-00487" summary="Created Rooms context searching">
       <created>1737867767662</created>
@@ -1239,7 +1214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1742272516966</updated>
     </task>
-    <option name="localTasksCounter" value="534" />
+    <task id="LOCAL-00534" summary="Tech commit">
+      <created>1742381776726</created>
+      <option name="number" value="00534" />
+      <option name="presentableId" value="LOCAL-00534" />
+      <option name="project" value="LOCAL" />
+      <updated>1742381776727</updated>
+    </task>
+    <task id="LOCAL-00535" summary="Tech commit">
+      <created>1742479983576</created>
+      <option name="number" value="00535" />
+      <option name="presentableId" value="LOCAL-00535" />
+      <option name="project" value="LOCAL" />
+      <updated>1742479983582</updated>
+    </task>
+    <option name="localTasksCounter" value="536" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1270,7 +1259,6 @@
     <MESSAGE value="Changed css and js connections" />
     <MESSAGE value="Created roomreportchart.js" />
     <MESSAGE value="Rebuilt roomreportchart.js" />
-    <MESSAGE value="Tech commit" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v2" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v3" />
@@ -1287,7 +1275,8 @@
     <MESSAGE value="Rebuilt reportmaxownercount.html v2" />
     <MESSAGE value="Added Act.java" />
     <MESSAGE value="Added some classes for Act" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some classes for Act" />
+    <MESSAGE value="Tech commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tech commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
