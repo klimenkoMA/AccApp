@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuild all crud thymeleaf fragments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Tech commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/accountingApp/entity/dto/employeedto/MaxEmployeesInWorkAreaDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -410,6 +410,17 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RepairControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -884,14 +895,7 @@
       <workItem from="1741709708011" duration="9398000" />
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
-      <workItem from="1742798580920" duration="612000" />
-    </task>
-    <task id="LOCAL-00490" summary="Rebuilt room.html's CRUD buttons v3">
-      <created>1738127957895</created>
-      <option name="number" value="00490" />
-      <option name="presentableId" value="LOCAL-00490" />
-      <option name="project" value="LOCAL" />
-      <updated>1738127957895</updated>
+      <workItem from="1742798580920" duration="4586000" />
     </task>
     <task id="LOCAL-00491" summary="Rebuilt itstaff.html's CRUD buttons">
       <created>1738213533221</created>
@@ -1229,7 +1233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1742796623440</updated>
     </task>
-    <option name="localTasksCounter" value="539" />
+    <task id="LOCAL-00539" summary="Tech commit">
+      <created>1742892169691</created>
+      <option name="number" value="00539" />
+      <option name="presentableId" value="LOCAL-00539" />
+      <option name="project" value="LOCAL" />
+      <updated>1742892169692</updated>
+    </task>
+    <option name="localTasksCounter" value="540" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
