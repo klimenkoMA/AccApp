@@ -1,6 +1,7 @@
 package accountingApp.repository;
 
 import accountingApp.entity.*;
+import accountingApp.entity.dto.employeedto.MaxEmployeesInWorkAreaDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -34,4 +35,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     @Query(value = "SELECT e from Employee e where e.room = ?1")
     List<Employee> findByRoom(Room room);
+
+    @Query(value = "")
+    List<MaxEmployeesInWorkAreaDTO> reportingMaxEmployeesCountInWorkArea();
 }
