@@ -36,6 +36,10 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     @Query(value = "SELECT e from Employee e where e.room = ?1")
     List<Employee> findByRoom(Room room);
 
-    @Query(value = "")
+    @Query(value = "select new accountingApp.entity.dto.employeedto.MaxEmployeesInWorkAreaDTO(" +
+            " e.name, count(i.id))" +
+            " from Employee e" +
+            " join e.workarea i" +
+            " group by i.name")
     List<MaxEmployeesInWorkAreaDTO> reportingMaxEmployeesCountInWorkArea();
 }
