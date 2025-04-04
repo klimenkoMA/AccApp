@@ -2,22 +2,22 @@ package accountingApp.entity.dto.employeedto;
 
 public class MaxEmployeesInWorkAreaDTO {
 
-    private int employeesCount;
     private String workAreaName;
+    private Long employeesCount;
 
     public MaxEmployeesInWorkAreaDTO() {
     }
 
-    public MaxEmployeesInWorkAreaDTO(int employeesCount, String workAreaName) {
-        this.employeesCount = employeesCount;
+    public MaxEmployeesInWorkAreaDTO(String workAreaName, Long employeesCount) {
         this.workAreaName = workAreaName;
+        this.employeesCount = employeesCount;
     }
 
-    public int getEmployeesCount() {
+    public Long getEmployeesCount() {
         return employeesCount;
     }
 
-    public void setEmployeesCount(int employeesCount) {
+    public void setEmployeesCount(Long employeesCount) {
         this.employeesCount = employeesCount;
     }
 

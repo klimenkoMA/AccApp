@@ -21,6 +21,8 @@ public class WorkArea {
     private List<Room> rooms;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Events> events;
+    @OneToMany
+    private List<Employee> employees;
 
     public WorkArea() {
     }
@@ -34,6 +36,14 @@ public class WorkArea {
     public WorkArea(String name, String description) {
         this.name = name;
         this.description = description;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
     }
 
     public String getDescription() {
