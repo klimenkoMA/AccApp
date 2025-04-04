@@ -1,6 +1,6 @@
-2025-03-24 16:42:32.176  WARN 14140 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-03-24 16:42:37.677  WARN 14140 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [154] milliseconds.
-2025-03-24 16:42:42.749  WARN 14140 --- [http-nio-8080-exec-9] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-03-24 16:42:42.826  WARN 14140 --- [http-nio-8080-exec-9] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-03-24 16:42:42.830  WARN 14140 --- [http-nio-8080-exec-9] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
-2025-03-24 16:42:49.537  WARN 14140 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04 05:51:57.444  WARN 18420 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-04-04 05:51:57.453  WARN 18420 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "uk_40bvkoeycwbuderv0aysgy0pc" в таблице "work_area_employees" не существует, пропускается
+2025-04-04 05:51:58.618  WARN 18420 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04 05:52:18.687  WARN 18420 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-04-04 05:52:18.738  WARN 18420 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-04-04 05:52:18.740  WARN 18420 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
