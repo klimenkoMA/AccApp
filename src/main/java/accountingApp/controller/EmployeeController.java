@@ -4,6 +4,7 @@ import accountingApp.entity.Employee;
 import accountingApp.entity.Profession;
 import accountingApp.entity.Room;
 import accountingApp.entity.WorkArea;
+import accountingApp.entity.dto.employeedto.MaxEmployeesInWorkAreaDTO;
 import accountingApp.service.RoomService;
 import accountingApp.service.WorkAreaService;
 import accountingApp.usefulmethods.Checker;
@@ -339,5 +340,28 @@ public class EmployeeController {
                     + e.getMessage());
             return getEmployee(model);
         }
+    }
+
+    @GetMapping("/maxemployeescountreport")
+    public String maxEmployeesCountReport(Model model) {
+
+        List<MaxEmployeesInWorkAreaDTO> dtoList = employeeService.getEmployeesCount();
+        String[] workAreas = new String[dtoList.size()];
+        long[] counts = new long[dtoList.size()];
+        int i = 0;
+
+        for (MaxEmployeesInWorkAreaDTO dto : dtoList
+        ) {
+            workAreas[i] = dto.getWorkAreaName();
+            counts[i] = dto.getEmployeesCount();
+            i++;
+        }
+
+        model.addAttribute("dtoList", dtoList);
+        model.addAttribute("workAreas", workAreas);
+        model.addAttribute("counts", counts);
+
+
+        return "/reports/workareareports/reportemployeescountinworkareas";
     }
 }

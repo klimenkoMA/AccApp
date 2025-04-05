@@ -1,6 +1,4 @@
-2025-04-04 05:51:57.444  WARN 18420 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2025-04-04 05:51:57.453  WARN 18420 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "uk_40bvkoeycwbuderv0aysgy0pc" в таблице "work_area_employees" не существует, пропускается
-2025-04-04 05:51:58.618  WARN 18420 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-04 05:52:18.687  WARN 18420 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
-2025-04-04 05:52:18.738  WARN 18420 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
-2025-04-04 05:52:18.740  WARN 18420 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN
+2025-04-05 11:04:23.832  WARN 22368 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 11:04:37.671  WARN 22368 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-04-05 11:04:37.730  WARN 22368 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-04-05 11:04:37.732  WARN 22368 --- [http-nio-8080-exec-7] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
