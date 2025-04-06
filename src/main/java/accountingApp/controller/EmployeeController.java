@@ -18,9 +18,8 @@ import accountingApp.service.EmployeeService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Controller
 public class EmployeeController {
@@ -347,6 +346,13 @@ public class EmployeeController {
 
         List<MaxEmployeesInWorkAreaDTO> dtoList = employeeService.getEmployeesCount();
         String[] workAreas = new String[dtoList.size()];
+
+        dtoList = dtoList.stream()
+                .sorted(Comparator
+                        .comparingLong(MaxEmployeesInWorkAreaDTO::getEmployeesCount)
+                        .reversed())
+                .collect(Collectors.toList());
+
         long[] counts = new long[dtoList.size()];
         int i = 0;
 
@@ -356,6 +362,7 @@ public class EmployeeController {
             counts[i] = dto.getEmployeesCount();
             i++;
         }
+
 
         model.addAttribute("dtoList", dtoList);
         model.addAttribute("workAreas", workAreas);
