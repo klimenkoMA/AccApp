@@ -363,10 +363,23 @@ public class EmployeeController {
             i++;
         }
 
+        String[] colors = new String[dtoList.size()];
+
+        String beginColor = "rgb(47,";
+        int secondPartColor = 125;
+        int thirdPartColor = 225;
+
+        for (int j = 0; j < dtoList.size(); j++) {
+            String resultColor = beginColor +
+                    (secondPartColor - 15 - (j * 10)) + "," +
+                    (thirdPartColor - (j * 10)) + ")";
+            colors[j] = resultColor;
+        }
 
         model.addAttribute("dtoList", dtoList);
         model.addAttribute("workAreas", workAreas);
         model.addAttribute("counts", counts);
+        model.addAttribute("colors", colors);
 
 
         return "/reports/workareareports/reportemployeescountinworkareas";
