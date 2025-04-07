@@ -74,26 +74,17 @@
 
                     const workAreasArray = /*[[${workAreas}]]*/ [];
                     const countsArray = /*[[${counts}]]*/ [];
+                    const colors = /*[[${colors}]]*/ [];
 
                     new Chart(ctx, {
                         type: 'pie',
                         data: {
                             labels: workAreasArray,
                             datasets: [{
-                                label: '# Оборудование',
+                                label: '# Сотрудники',
 
                                 data: countsArray,
-                                backgroundColor: ['rgb(3,55,112)'
-                                    , 'rgb(47,114,212)'
-                                    , 'rgb(41,90,198)'
-                                    , 'rgb(32,76,179)'
-                                    , 'rgb(24,66,157)'
-                                    , 'rgb(26,66,124)'
-                                    , 'rgb(18,57,114)'
-                                    , 'rgb(15,49,103)'
-                                    , 'rgb(14,36,93)'
-                                    , 'rgb(10,25,64)'
-                                ], // Цвет фона столбцов
+                                backgroundColor: colors,
                                 borderColor: 'rgba(75, 192, 192, 1)', // Цвет границы столбцов
                                 borderWidth: 1
                             }]
