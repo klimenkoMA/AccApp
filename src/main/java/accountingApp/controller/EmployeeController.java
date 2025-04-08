@@ -267,16 +267,22 @@ public class EmployeeController {
         }
 
         try {
-            Profession prof = Profession.Преподаватель;
-            Profession[] professionsArray = Profession.values();
+//            Profession prof = Profession.Преподаватель;
+//            Profession[] professionsArray = Profession.values();
+//
+//            for (Profession prf : professionsArray
+//            ) {
+//                if (prf.getProfession().equals(profession)) {
+//                    prof = prf;
+//                    break;
+//                }
+//            }
 
-            for (Profession prf : professionsArray
-            ) {
-                if (prf.getProfession().equals(profession)) {
-                    prof = prf;
-                    break;
-                }
-            }
+            Profession prof = Arrays.stream(Profession.values())
+                    .filter(prf -> prf.getProfession().equals(profession))
+                    .findFirst()
+                    .orElse(Profession.Преподаватель);
+
             List<Employee> employeeList = employeeService.findEmployeeListByProfession(prof);
             model.addAttribute("employeeList", employeeList);
 
