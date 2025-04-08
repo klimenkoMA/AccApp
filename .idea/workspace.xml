@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt reportemployeescountinworkareas.html">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-05.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reports/workareareports/reportemployeescountinworkareas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reports/workareareports/reportemployeescountinworkareas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/devices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/devices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/feedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/itstaff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/itstaff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/repair.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reports/workareareports/reportemployeescountinworkareas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reports/workareareports/reportemployeescountinworkareas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/workarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/workarea.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -902,14 +885,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="1258000" />
-    </task>
-    <task id="LOCAL-00498" summary="Created some CRUD fragments">
-      <created>1738853282068</created>
-      <option name="number" value="00498" />
-      <option name="presentableId" value="LOCAL-00498" />
-      <option name="project" value="LOCAL" />
-      <updated>1738853282068</updated>
+      <workItem from="1743928449647" duration="4556000" />
     </task>
     <task id="LOCAL-00499" summary="Created some CRUD fragments">
       <created>1738853293856</created>
@@ -1247,7 +1223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1743918085999</updated>
     </task>
-    <option name="localTasksCounter" value="547" />
+    <task id="LOCAL-00547" summary="Rebuilt maxEmployeesCountReport() in EmployeeController">
+      <created>1743992196072</created>
+      <option name="number" value="00547" />
+      <option name="presentableId" value="LOCAL-00547" />
+      <option name="project" value="LOCAL" />
+      <updated>1743992196073</updated>
+    </task>
+    <option name="localTasksCounter" value="548" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1270,7 +1253,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created roomreportchart.js" />
     <MESSAGE value="Rebuilt roomreportchart.js" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v2" />
@@ -1295,7 +1277,8 @@
     <MESSAGE value="Rebuilt method reportingMaxEmployeesCountInWorkArea in EmployeeRepository.java v2" />
     <MESSAGE value="Created reportemployeescountinworkareas.html" />
     <MESSAGE value="Rebuilt reportemployeescountinworkareas.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt reportemployeescountinworkareas.html" />
+    <MESSAGE value="Rebuilt maxEmployeesCountReport() in EmployeeController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt maxEmployeesCountReport() in EmployeeController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
