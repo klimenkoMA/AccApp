@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @Controller
 public class EmployeeController {
@@ -351,7 +352,7 @@ public class EmployeeController {
     public String maxEmployeesCountReport(Model model) {
 
         List<MaxEmployeesInWorkAreaDTO> dtoList = employeeService.getEmployeesCount();
-        String[] workAreas = new String[dtoList.size()];
+//        String[] workAreas = new String[dtoList.size()];
 
         dtoList = dtoList.stream()
                 .sorted(Comparator
@@ -359,28 +360,43 @@ public class EmployeeController {
                         .reversed())
                 .collect(Collectors.toList());
 
-        long[] counts = new long[dtoList.size()];
-        int i = 0;
 
-        for (MaxEmployeesInWorkAreaDTO dto : dtoList
-        ) {
-            workAreas[i] = dto.getWorkAreaName();
-            counts[i] = dto.getEmployeesCount();
-            i++;
-        }
+//        long[] counts = new long[dtoList.size()];
+//        int i = 0;
+//
+//        for (MaxEmployeesInWorkAreaDTO dto : dtoList
+//        ) {
+//            workAreas[i] = dto.getWorkAreaName();
+//            counts[i] = dto.getEmployeesCount();
+//            i++;
+//        }
+        long[] counts = dtoList.stream()
+                .mapToLong(MaxEmployeesInWorkAreaDTO::getEmployeesCount)
+                .toArray();
 
-        String[] colors = new String[dtoList.size()];
+        String[] workAreas = dtoList.stream()
+                .map(MaxEmployeesInWorkAreaDTO::getWorkAreaName)
+                .toArray(String[] :: new);
 
         String beginColor = "rgb(47,";
         int secondPartColor = 125;
         int thirdPartColor = 225;
 
-        for (int j = 0; j < dtoList.size(); j++) {
-            String resultColor = beginColor +
-                    (secondPartColor - 15 - (j * 10)) + "," +
-                    (thirdPartColor - (j * 10)) + ")";
-            colors[j] = resultColor;
-        }
+//String[] colors = new String[dtoList.size()];
+//
+//
+//        for (int j = 0; j < dtoList.size(); j++) {
+//            String resultColor = beginColor +
+//                    (secondPartColor - 15 - (j * 10)) + "," +
+//                    (thirdPartColor - (j * 10)) + ")";
+//            colors[j] = resultColor;
+//        }
+
+        String[] colors = IntStream.range(0, dtoList.size())
+                .mapToObj(j -> beginColor +
+                        (secondPartColor - 15 - (j * 10)) + "," +
+                        (thirdPartColor - (j * 10)) + ")")
+                .toArray(String[] :: new);
 
         model.addAttribute("dtoList", dtoList);
         model.addAttribute("workAreas", workAreas);
