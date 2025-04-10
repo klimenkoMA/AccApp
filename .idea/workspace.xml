@@ -886,14 +886,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="8566000" />
-    </task>
-    <task id="LOCAL-00500" summary="Created some CRUD fragments v2">
-      <created>1738912970457</created>
-      <option name="number" value="00500" />
-      <option name="presentableId" value="LOCAL-00500" />
-      <option name="project" value="LOCAL" />
-      <updated>1738912970457</updated>
+      <workItem from="1743928449647" duration="11767000" />
     </task>
     <task id="LOCAL-00501" summary="Tech commit">
       <created>1738999594568</created>
@@ -1231,7 +1224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744078586924</updated>
     </task>
-    <option name="localTasksCounter" value="549" />
+    <task id="LOCAL-00549" summary="Refactored maxEmployeesCountReport() in EmployeeController">
+      <created>1744166172642</created>
+      <option name="number" value="00549" />
+      <option name="presentableId" value="LOCAL-00549" />
+      <option name="project" value="LOCAL" />
+      <updated>1744166172642</updated>
+    </task>
+    <option name="localTasksCounter" value="550" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1254,7 +1254,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt reportmaxroomcount.html" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v2" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v3" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v4" />
@@ -1279,7 +1278,8 @@
     <MESSAGE value="Rebuilt reportemployeescountinworkareas.html" />
     <MESSAGE value="Rebuilt maxEmployeesCountReport() in EmployeeController" />
     <MESSAGE value="Refactored findEmployeesByCategory() in EmployeeController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored findEmployeesByCategory() in EmployeeController" />
+    <MESSAGE value="Refactored maxEmployeesCountReport() in EmployeeController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored maxEmployeesCountReport() in EmployeeController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
