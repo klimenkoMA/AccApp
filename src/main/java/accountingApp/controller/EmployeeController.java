@@ -42,13 +42,9 @@ public class EmployeeController {
         List<WorkArea> workAreaList = workAreaService.findAllWorkArea();
         List<Room> roomList = roomService.findAllRoom();
 
-        Profession[] professionsArray = Profession.values();
-        List<String> professionList = new ArrayList<>();
-
-        for (Profession prf : professionsArray
-        ) {
-            professionList.add(prf.getProfession());
-        }
+        List<String> professionList = Arrays.stream(Profession.values())
+                .map(Profession::getProfession)
+                .collect(Collectors.toList());
 
         model.addAttribute("employeeList", employeeList);
         model.addAttribute("workAreaList", workAreaList);
@@ -87,16 +83,11 @@ public class EmployeeController {
                     && !checker.checkAttribute(workAreaWithoutSpaces)
                     && !checker.checkAttribute(roomWithoutSpaces)
             ) {
-                Profession prof = Profession.Преподаватель;
-                Profession[] professionsArray = Profession.values();
 
-                for (Profession prf : professionsArray
-                ) {
-                    if (prf.getProfession().equals(profession)) {
-                        prof = prf;
-                        break;
-                    }
-                }
+                Profession prof = Arrays.stream(Profession.values())
+                        .filter(prf -> prf.getProfession().equals(profession))
+                        .findFirst()
+                        .orElse(Profession.Преподаватель);
 
                 Employee employee = new Employee(fioWithoutSpaces
                         , dbornWithoutSpaces
@@ -186,16 +177,11 @@ public class EmployeeController {
                     && !checker.checkAttribute(workAreaWithoutSpaces)
                     && !checker.checkAttribute(roomWithoutSpaces)
             ) {
-                Profession prof = Profession.Преподаватель;
-                Profession[] professionsArray = Profession.values();
 
-                for (Profession prf : professionsArray
-                ) {
-                    if (prf.getProfession().equals(profession)) {
-                        prof = prf;
-                        break;
-                    }
-                }
+                Profession prof = Arrays.stream(Profession.values())
+                        .filter(prf -> prf.getProfession().equals(profession))
+                        .findFirst()
+                        .orElse(Profession.Преподаватель);
 
                 Employee employee = new Employee(idCheck
                         , fioWithoutSpaces
@@ -268,17 +254,6 @@ public class EmployeeController {
         }
 
         try {
-//            Profession prof = Profession.Преподаватель;
-//            Profession[] professionsArray = Profession.values();
-//
-//            for (Profession prf : professionsArray
-//            ) {
-//                if (prf.getProfession().equals(profession)) {
-//                    prof = prf;
-//                    break;
-//                }
-//            }
-
             Profession prof = Arrays.stream(Profession.values())
                     .filter(prf -> prf.getProfession().equals(profession))
                     .findFirst()
@@ -352,7 +327,6 @@ public class EmployeeController {
     public String maxEmployeesCountReport(Model model) {
 
         List<MaxEmployeesInWorkAreaDTO> dtoList = employeeService.getEmployeesCount();
-//        String[] workAreas = new String[dtoList.size()];
 
         dtoList = dtoList.stream()
                 .sorted(Comparator
@@ -360,16 +334,6 @@ public class EmployeeController {
                         .reversed())
                 .collect(Collectors.toList());
 
-
-//        long[] counts = new long[dtoList.size()];
-//        int i = 0;
-//
-//        for (MaxEmployeesInWorkAreaDTO dto : dtoList
-//        ) {
-//            workAreas[i] = dto.getWorkAreaName();
-//            counts[i] = dto.getEmployeesCount();
-//            i++;
-//        }
         long[] counts = dtoList.stream()
                 .mapToLong(MaxEmployeesInWorkAreaDTO::getEmployeesCount)
                 .toArray();
@@ -381,16 +345,6 @@ public class EmployeeController {
         String beginColor = "rgb(47,";
         int secondPartColor = 125;
         int thirdPartColor = 225;
-
-//String[] colors = new String[dtoList.size()];
-//
-//
-//        for (int j = 0; j < dtoList.size(); j++) {
-//            String resultColor = beginColor +
-//                    (secondPartColor - 15 - (j * 10)) + "," +
-//                    (thirdPartColor - (j * 10)) + ")";
-//            colors[j] = resultColor;
-//        }
 
         String[] colors = IntStream.range(0, dtoList.size())
                 .mapToObj(j -> beginColor +
