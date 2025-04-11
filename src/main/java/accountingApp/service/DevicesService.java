@@ -9,6 +9,7 @@ import accountingApp.repository.DevicesRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class DevicesService {
@@ -32,14 +33,12 @@ public class DevicesService {
     }
 
     public List<Devices> getDevicesByName(String name) {
-        List<Devices> devicesList = devicesRepository.findAll();
-        List<Devices> cloneDevices = new ArrayList<>();
-        for (Devices d : devicesList
-        ) {
-            if (d.getName().contains(name)) {
-                cloneDevices.add(d);
-            }
-        }
+
+        List<Devices> cloneDevices = devicesRepository.findAll().stream()
+        .filter(dev -> dev.getName().contains(name))
+        .collect(Collectors.toList());
+
+
         if (!cloneDevices.isEmpty()) {
             return cloneDevices;
         } else {
