@@ -17,8 +17,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 /**
  * Класс для переадресации введенных пользователем данных в БД, получение ответа
@@ -29,6 +31,7 @@ import java.util.Locale;
 public class DevicesController {
 
     final Logger logger = LoggerFactory.getLogger(DevicesController.class);
+    private static final DeviceCategory[] DEVICE_CATEGORIES = DeviceCategory.values();
 
     @Autowired
     private DevicesService devicesService;
@@ -50,13 +53,10 @@ public class DevicesController {
         List<Employee> employeeList = employeeService.getListEmployee();
         List<ITStaff> itStaffList = itStaffService.getAllItStaff();
 
-        DeviceCategory[] categoriesArray = DeviceCategory.values();
-        List<String> categoryList = new ArrayList<>();
+        List<String> categoryList = Arrays.stream(DEVICE_CATEGORIES)
+                .map(DeviceCategory::getCategory)
+                .collect(Collectors.toList());
 
-        for (DeviceCategory cat : categoriesArray
-        ) {
-            categoryList.add(cat.getCategory());
-        }
 
         model.addAttribute("devicesList", devicesList);
         model.addAttribute("roomList", roomList);
@@ -105,15 +105,11 @@ public class DevicesController {
                     && !checker.checkAttribute(inventoryWithoutSpaces)
                     && !checker.checkAttribute(serialWithoutSpaces)
             ) {
-                DeviceCategory deviceCategory = DeviceCategory.Компьютер;
-                DeviceCategory[] categoriesArray = DeviceCategory.values();
-                for (DeviceCategory cat : categoriesArray
-                ) {
-                    if (cat.getCategory().equals(categoryWithoutSpaces)) {
-                        deviceCategory = cat;
-                        break;
-                    }
-                }
+
+                DeviceCategory deviceCategory = Arrays.stream(DEVICE_CATEGORIES)
+                        .filter(cat -> cat.getCategory().equals(categoryWithoutSpaces))
+                        .findFirst()
+                        .orElse(DeviceCategory.Компьютер);
 
                 Devices devices = new Devices(deviceCategory
                         , nameWithoutSpaces
@@ -249,15 +245,12 @@ public class DevicesController {
                     && !checker.checkAttribute(nameWithoutSpaces)
                     && !checker.checkAttribute(descriptionWithoutSpaces)
             ) {
-                DeviceCategory deviceCategory = DeviceCategory.Компьютер;
-                DeviceCategory[] categoriesArray = DeviceCategory.values();
-                for (DeviceCategory cat : categoriesArray
-                ) {
-                    if (cat.getCategory().equals(categoryWithoutSpaces)) {
-                        deviceCategory = cat;
-                        break;
-                    }
-                }
+
+                DeviceCategory deviceCategory = Arrays.stream(DEVICE_CATEGORIES)
+                        .filter(cat -> cat.getCategory().equals(categoryWithoutSpaces))
+                        .findFirst()
+                        .orElse(DeviceCategory.Компьютер);
+
                 Repair repair = devicesService.getDevicesById(idCheck).get(0).getRepair();
 
                 Devices devices = new Devices(idCheck
