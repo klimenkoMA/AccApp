@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.LongStream;
 
 @Controller
 public class FeedbackController {
@@ -62,19 +64,15 @@ public class FeedbackController {
                 long idCount = 1L;
 
                 List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
-                Set<Long> idSet = new HashSet<>();
 
-                for (Feedback fb : feedbackList
-                ) {
-                    idSet.add(fb.getIdCount());
-                }
+                Set<Long> idSet = feedbackList.stream()
+                        .map(Feedback::getIdCount)
+                        .collect(Collectors.toSet());
 
-                for (long i = 1; i < idSet.size() + 1_000_000_000_000_000_000L; i++) {
-                    if (!idSet.contains(i)) {
-                        idCount = i;
-                        break;
-                    }
-                }
+                idCount = LongStream.rangeClosed(1, idSet.size() + 1_000_000_000_000_000_000L)
+                        .filter(idc -> !idSet.contains(idc))
+                        .findFirst()
+                        .orElse(0L);
 
                 Map<ObjectId, Long> idLongMap = new HashMap<>();
                 idLongMap.put(objectId, idCount);
@@ -106,14 +104,11 @@ public class FeedbackController {
             String idWithoutSpaces = id.trim();
             String realId = getIdFromMap(Long.parseLong(idWithoutSpaces));
             List<Feedback> feedbackList = feedbackService.findAllFeedbacks();
-            Feedback feedback = new Feedback();
 
-            for (Feedback feedback1 : feedbackList) {
-                if (feedback1.getId().toString().equals(realId)) {
-                    feedback = feedback1;
-                    break;
-                }
-            }
+            Feedback feedback = feedbackList.stream()
+                    .filter(fb -> fb.getId().toString().equals(realId))
+                    .findFirst()
+                    .orElse(null);
 
             feedbackService.deleteFeedback(feedback);
 

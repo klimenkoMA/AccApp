@@ -57,7 +57,6 @@ public class DevicesController {
                 .map(DeviceCategory::getCategory)
                 .collect(Collectors.toList());
 
-
         model.addAttribute("devicesList", devicesList);
         model.addAttribute("roomList", roomList);
         model.addAttribute("employeeList", employeeList);
@@ -325,17 +324,13 @@ public class DevicesController {
         String categoryWithoutSpaces = category.trim();
 
         try {
-            DeviceCategory categoryEnumObj = DeviceCategory.Компьютер;
-            DeviceCategory[] categoriesArray = DeviceCategory.values();
-            for (DeviceCategory cat : categoriesArray
-            ) {
-                if (cat.getCategory().equals(categoryWithoutSpaces)) {
-                    categoryEnumObj = cat;
-                    break;
-                }
-            }
 
-            List<Devices> devicesList = devicesService.getDevicesByCategory(categoryEnumObj);
+            DeviceCategory deviceCategory = Arrays.stream(DEVICE_CATEGORIES)
+                    .filter(cat -> cat.getCategory().equals(categoryWithoutSpaces))
+                    .findFirst()
+                    .orElse(DeviceCategory.Компьютер);
+
+            List<Devices> devicesList = devicesService.getDevicesByCategory(deviceCategory);
             model.addAttribute("devicesList", devicesList);
 
             return "devices";
@@ -411,16 +406,15 @@ public class DevicesController {
     public String maxOwnerCountReport(Model model) {
 
         List<MaxOwnerCountDTO> dtoList = devicesService.getOwnersCount();
-        String[] owners = new String[dtoList.size()];
-        long[] counts = new long[dtoList.size()];
-        int i = 0;
 
-        for (MaxOwnerCountDTO owner : dtoList
-        ) {
-            owners[i] = owner.getOwner();
-            counts[i] = owner.getDevicesCount();
-            i++;
-        }
+        String[] owners = dtoList.stream()
+                .map(MaxOwnerCountDTO::getOwner)
+                .toArray(String[]::new);
+
+        long[] counts = dtoList.stream()
+                .mapToLong(MaxOwnerCountDTO::getDevicesCount)
+                .toArray();
+
         model.addAttribute("dtoList", dtoList);
         model.addAttribute("owners", owners);
         model.addAttribute("counts", counts);

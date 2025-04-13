@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt reportemployeescountinworkareas.html">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-10.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-11.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-12.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-04-04.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-04-05.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/service/DevicesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/service/DevicesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -893,14 +893,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="21632000" />
-    </task>
-    <task id="LOCAL-00503" summary="Created MaxRoomCountDTO.java for report">
-      <created>1739154057411</created>
-      <option name="number" value="00503" />
-      <option name="presentableId" value="LOCAL-00503" />
-      <option name="project" value="LOCAL" />
-      <updated>1739154057412</updated>
+      <workItem from="1743928449647" duration="29227000" />
     </task>
     <task id="LOCAL-00504" summary="Rebuilt query for reportingNumbersOfMaxRoomWorkArea method">
       <created>1739241714845</created>
@@ -1238,7 +1231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744336687576</updated>
     </task>
-    <option name="localTasksCounter" value="552" />
+    <task id="LOCAL-00552" summary="Refactored DevicesController">
+      <created>1744458322497</created>
+      <option name="number" value="00552" />
+      <option name="presentableId" value="LOCAL-00552" />
+      <option name="project" value="LOCAL" />
+      <updated>1744458322498</updated>
+    </task>
+    <option name="localTasksCounter" value="553" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1261,7 +1261,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt reportmaxroomcount.html v4" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v5" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v6" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v7" />
@@ -1286,7 +1285,8 @@
     <MESSAGE value="Refactored maxEmployeesCountReport() in EmployeeController" />
     <MESSAGE value="Refactored EmployeeController" />
     <MESSAGE value="Refactored DevicesService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored DevicesService" />
+    <MESSAGE value="Refactored DevicesController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored DevicesController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
