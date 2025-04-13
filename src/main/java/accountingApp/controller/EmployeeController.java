@@ -340,7 +340,7 @@ public class EmployeeController {
 
         String[] workAreas = dtoList.stream()
                 .map(MaxEmployeesInWorkAreaDTO::getWorkAreaName)
-                .toArray(String[] :: new);
+                .toArray(String[]::new);
 
         String beginColor = "rgb(47,";
         int secondPartColor = 125;
@@ -350,7 +350,7 @@ public class EmployeeController {
                 .mapToObj(j -> beginColor +
                         (secondPartColor - 15 - (j * 10)) + "," +
                         (thirdPartColor - (j * 10)) + ")")
-                .toArray(String[] :: new);
+                .toArray(String[]::new);
 
         model.addAttribute("dtoList", dtoList);
         model.addAttribute("workAreas", workAreas);
