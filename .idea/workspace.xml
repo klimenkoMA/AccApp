@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt reportemployeescountinworkareas.html">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-12.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-04-05.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/DevicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/DevicesController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -893,14 +888,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="29227000" />
-    </task>
-    <task id="LOCAL-00504" summary="Rebuilt query for reportingNumbersOfMaxRoomWorkArea method">
-      <created>1739241714845</created>
-      <option name="number" value="00504" />
-      <option name="presentableId" value="LOCAL-00504" />
-      <option name="project" value="LOCAL" />
-      <updated>1739241714845</updated>
+      <workItem from="1743928449647" duration="35360000" />
     </task>
     <task id="LOCAL-00505" summary="Created reportmaxroomcount.html">
       <created>1739326739794</created>
@@ -1238,7 +1226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744458322498</updated>
     </task>
-    <option name="localTasksCounter" value="553" />
+    <task id="LOCAL-00553" summary="Refactored into Java 8 some classes">
+      <created>1744550143087</created>
+      <option name="number" value="00553" />
+      <option name="presentableId" value="LOCAL-00553" />
+      <option name="project" value="LOCAL" />
+      <updated>1744550143087</updated>
+    </task>
+    <option name="localTasksCounter" value="554" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1261,7 +1256,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt reportmaxroomcount.html v5" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v6" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v7" />
     <MESSAGE value="Created MaxOwnerCountDTO.java" />
@@ -1286,7 +1280,8 @@
     <MESSAGE value="Refactored EmployeeController" />
     <MESSAGE value="Refactored DevicesService" />
     <MESSAGE value="Refactored DevicesController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored DevicesController" />
+    <MESSAGE value="Refactored into Java 8 some classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored into Java 8 some classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
