@@ -200,20 +200,13 @@ public class FeedbackController {
                     "  WRONG DB VALUES*** ");
             return null;
         }
-        String objectId = "";
-        for (Feedback fb : feedbackList
-        ) {
-            Map<ObjectId, Long> idLongMap = fb.getIdMap();
 
-            for (Map.Entry<ObjectId, Long> entry : idLongMap.entrySet()
-            ) {
-                if (entry.getValue() == id) {
-                    objectId = entry.getKey().toString();
-                    break;
-                }
-            }
-        }
-        return objectId;
+        return feedbackList.stream()
+                .flatMap(fb -> fb.getIdMap().entrySet().stream())
+                .filter(entry -> entry.getValue() == id)
+                .findFirst()
+                .map(key -> key.getKey().toString())
+                .orElse("");
     }
 
     @PostMapping("/findfeedbackbyattrs")
