@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 @Controller
 public class ITStaffController {
@@ -31,13 +33,9 @@ public class ITStaffController {
     public String getItStaff(Model model) {
         List<ITStaff> ITStaffList = itStaffService.getAllItStaff();
 
-        Profession[] professionsArray = Profession.values();
-        List<String> professionList = new ArrayList<>();
-
-        for (Profession prf : professionsArray
-        ) {
-            professionList.add(prf.getProfession());
-        }
+        List<String> professionList = Arrays.stream(Profession.values())
+                .map(Profession::getProfession)
+                .collect(Collectors.toList());
 
         model.addAttribute("itStaffList", ITStaffList);
         model.addAttribute("professionList", professionList);
@@ -64,16 +62,11 @@ public class ITStaffController {
                 logger.warn("*** ITStaffController.addItStaff(): NAME MATCHES FIGURES ***");
                 return getItStaff(model);
             } else {
-                Profession prof = Profession.Преподаватель;
-                Profession[] professionsArray = Profession.values();
 
-                for (Profession prf : professionsArray
-                ) {
-                    if (prf.getProfession().equals(profession)) {
-                        prof = prf;
-                        break;
-                    }
-                }
+                Profession prof = Arrays.stream(Profession.values())
+                        .filter(prf -> prf.getProfession().equals(profession))
+                        .findFirst()
+                        .orElse(Profession.Преподаватель);
 
                 ITStaff ITStaff = new ITStaff(nameWithoutSpaces, prof);
                 itStaffService.addNewItStaff(ITStaff);
@@ -137,16 +130,10 @@ public class ITStaffController {
                 logger.warn("*** ITStaffController.updateItStaff(): NAME MATCHES FIGURES ***");
             } else {
 
-                Profession prof = Profession.Преподаватель;
-                Profession[] professionsArray = Profession.values();
-
-                for (Profession prf : professionsArray
-                ) {
-                    if (prf.getProfession().equals(profession)) {
-                        prof = prf;
-                        break;
-                    }
-                }
+                Profession prof = Arrays.stream(Profession.values())
+                        .filter(prf -> prf.getProfession().equals(profession))
+                        .findFirst()
+                        .orElse(Profession.Преподаватель);
 
                 ITStaff ITStaff = new ITStaff(idCheck, name, prof);
                 itStaffService.updateItStaff(ITStaff);
@@ -216,16 +203,12 @@ public class ITStaffController {
         String professionWithOutSpaces = profession.trim();
 
         try {
-            Profession prof = Profession.Преподаватель;
-            Profession[] professionsArray = Profession.values();
 
-            for (Profession prf : professionsArray
-            ) {
-                if (prf.getProfession().equals(professionWithOutSpaces)) {
-                    prof = prf;
-                    break;
-                }
-            }
+            Profession prof = Arrays.stream(Profession.values())
+                    .filter(prf -> prf.getProfession().equals(professionWithOutSpaces))
+                    .findFirst()
+                    .orElse(Profession.Преподаватель);
+
             List<ITStaff> ITStaffList = itStaffService.getItStaffByProfession(prof);
             model.addAttribute("itStaffList", ITStaffList);
 
