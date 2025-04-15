@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt reportemployeescountinworkareas.html">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-14.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/FeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-04-07.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/ITStaffController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/FeedbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -888,14 +891,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="35360000" />
-    </task>
-    <task id="LOCAL-00505" summary="Created reportmaxroomcount.html">
-      <created>1739326739794</created>
-      <option name="number" value="00505" />
-      <option name="presentableId" value="LOCAL-00505" />
-      <option name="project" value="LOCAL" />
-      <updated>1739326739794</updated>
+      <workItem from="1743928449647" duration="39892000" />
     </task>
     <task id="LOCAL-00506" summary="Rebuilt reportmaxroomcount.html">
       <created>1739412926167</created>
@@ -1233,7 +1229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744550143087</updated>
     </task>
-    <option name="localTasksCounter" value="554" />
+    <task id="LOCAL-00554" summary="Refactored into Java 8 Stream API FeedbackController">
+      <created>1744597402089</created>
+      <option name="number" value="00554" />
+      <option name="presentableId" value="LOCAL-00554" />
+      <option name="project" value="LOCAL" />
+      <updated>1744597402089</updated>
+    </task>
+    <option name="localTasksCounter" value="555" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1256,7 +1259,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt reportmaxroomcount.html v6" />
     <MESSAGE value="Rebuilt reportmaxroomcount.html v7" />
     <MESSAGE value="Created MaxOwnerCountDTO.java" />
     <MESSAGE value="Created reportmaxownercount.html" />
@@ -1281,7 +1283,8 @@
     <MESSAGE value="Refactored DevicesService" />
     <MESSAGE value="Refactored DevicesController" />
     <MESSAGE value="Refactored into Java 8 some classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored into Java 8 some classes" />
+    <MESSAGE value="Refactored into Java 8 Stream API FeedbackController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored into Java 8 Stream API FeedbackController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
