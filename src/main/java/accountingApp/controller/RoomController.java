@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 @Controller
 public class RoomController {
@@ -224,17 +225,13 @@ public class RoomController {
 
 
         try {
-            List<Room> rooms = roomService.findAllRoom();
-            WorkArea area = new WorkArea();
 
-            for (Room r : rooms
-            ) {
-                if (r.getWorkarea().getName().toLowerCase(Locale.ROOT)
-                        .contains(workAreaWithoutSpaces.toLowerCase(Locale.ROOT))) {
-                    area = r.getWorkarea();
-                    break;
-                }
-            }
+            WorkArea area = roomService.findAllRoom().stream()
+                    .filter(r -> r.getWorkarea().getName().toLowerCase(Locale.ROOT)
+                    .contains(workAreaWithoutSpaces.toLowerCase(Locale.ROOT)))
+                    .findFirst()
+                    .map(Room::getWorkarea)
+                    .orElse(null);
 
             List<Room> roomList = roomService.getRoomByWorkArea(area);
             model.addAttribute("roomList", roomList);
@@ -261,16 +258,11 @@ public class RoomController {
 
         String descriptionWithoutSpaces = description.trim();
         try {
-            List<Room> rooms = roomService.findAllRoom();
-            List<Room> roomList = new ArrayList<>();
 
-            for (Room r : rooms
-            ) {
-                if (r.getDescription().toLowerCase(Locale.ROOT)
-                        .contains(descriptionWithoutSpaces.toLowerCase(Locale.ROOT))) {
-                    roomList.add(r);
-                }
-            }
+            List<Room> roomList = roomService.findAllRoom().stream()
+                    .filter(r -> r.getDescription().toLowerCase(Locale.ROOT)
+                    .contains(descriptionWithoutSpaces.toLowerCase(Locale.ROOT)))
+                    .collect(Collectors.toList());
 
             model.addAttribute("roomList", roomList);
             if (roomList.isEmpty()) {
