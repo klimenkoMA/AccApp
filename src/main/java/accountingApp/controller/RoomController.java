@@ -228,7 +228,7 @@ public class RoomController {
 
             WorkArea area = roomService.findAllRoom().stream()
                     .filter(r -> r.getWorkarea().getName().toLowerCase(Locale.ROOT)
-                    .contains(workAreaWithoutSpaces.toLowerCase(Locale.ROOT)))
+                            .contains(workAreaWithoutSpaces.toLowerCase(Locale.ROOT)))
                     .findFirst()
                     .map(Room::getWorkarea)
                     .orElse(null);
@@ -261,7 +261,7 @@ public class RoomController {
 
             List<Room> roomList = roomService.findAllRoom().stream()
                     .filter(r -> r.getDescription().toLowerCase(Locale.ROOT)
-                    .contains(descriptionWithoutSpaces.toLowerCase(Locale.ROOT)))
+                            .contains(descriptionWithoutSpaces.toLowerCase(Locale.ROOT)))
                     .collect(Collectors.toList());
 
             model.addAttribute("roomList", roomList);
@@ -322,17 +322,14 @@ public class RoomController {
     @GetMapping("/maxroomscountreport")
     public String maxRoomsCountReport(Model model) {
         List<MaxRoomCountDTO> dtoList = roomService.getRoomsCount();
-        String[] workAreaLabels = new String[dtoList.size()];
-        long[] roomsCounts = new long[dtoList.size()];
-        int i = 0;
 
-        for (MaxRoomCountDTO dto : dtoList
-        ) {
-            workAreaLabels[i] = dto.getWorkAreaName();
-            roomsCounts[i] = dto.getRoomsCount();
+        String[] workAreaLabels = dtoList.stream()
+                .map(MaxRoomCountDTO::getWorkAreaName)
+                .toArray(String[]::new);
 
-            i++;
-        }
+        long[] roomsCounts = dtoList.stream()
+                .mapToLong(MaxRoomCountDTO::getRoomsCount)
+                .toArray();
 
         model.addAttribute("dtoList", dtoList);
         model.addAttribute("workAreaLabels", workAreaLabels);
