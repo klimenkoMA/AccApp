@@ -4,3 +4,9 @@
 2025-04-16 05:19:53.211  WARN 25292 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
 2025-04-16 05:19:53.256  WARN 25292 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
 2025-04-16 05:19:53.258  WARN 25292 --- [http-nio-8080-exec-1] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : USER
+2025-04-16 20:39:43.167  WARN 5952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-16 20:40:00.084  WARN 5952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-16 20:40:06.186  WARN 5952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-16 20:40:30.370  WARN 5952 --- [http-nio-8080-exec-3] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername: INITIALISATION
+2025-04-16 20:40:30.417  WARN 5952 --- [http-nio-8080-exec-3] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername Successful authorization with user: u
+2025-04-16 20:40:30.419  WARN 5952 --- [http-nio-8080-exec-3] a.service.CustomUserDetailsService       : CustomUserDetailsService.loadUserByUsername User's role is : ADMIN

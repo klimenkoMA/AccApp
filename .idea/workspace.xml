@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt reportemployeescountinworkareas.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/ITStaffController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -889,14 +886,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="42866000" />
-    </task>
-    <task id="LOCAL-00507" summary="Added chart.js">
-      <created>1739499751305</created>
-      <option name="number" value="00507" />
-      <option name="presentableId" value="LOCAL-00507" />
-      <option name="project" value="LOCAL" />
-      <updated>1739499751306</updated>
+      <workItem from="1743928449647" duration="45125000" />
     </task>
     <task id="LOCAL-00508" summary="Added bootstrap.js and bootstrap.css">
       <created>1739596384344</created>
@@ -1234,7 +1224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744684641395</updated>
     </task>
-    <option name="localTasksCounter" value="556" />
+    <task id="LOCAL-00556" summary="Refactored into Java 8 Stream API a RoomController">
+      <created>1744770211345</created>
+      <option name="number" value="00556" />
+      <option name="presentableId" value="LOCAL-00556" />
+      <option name="project" value="LOCAL" />
+      <updated>1744770211345</updated>
+    </task>
+    <option name="localTasksCounter" value="557" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1257,7 +1254,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created MaxOwnerCountDTO.java" />
     <MESSAGE value="Created reportmaxownercount.html" />
     <MESSAGE value="Rebuilt reportmaxownercount.html v3" />
     <MESSAGE value="Added Apache POI in pom.xml" />
@@ -1282,7 +1278,8 @@
     <MESSAGE value="Refactored into Java 8 some classes" />
     <MESSAGE value="Refactored into Java 8 Stream API FeedbackController" />
     <MESSAGE value="Refactored into Java 8 Stream API a ITStaffController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored into Java 8 Stream API a ITStaffController" />
+    <MESSAGE value="Refactored into Java 8 Stream API a RoomController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored into Java 8 Stream API a RoomController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
