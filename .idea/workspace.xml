@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt reportemployeescountinworkareas.html">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-16.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accountingApp/controller/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-04-09.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/update/updatedevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/update/updatedevices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/update/updatedevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/update/updatedevices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -886,14 +893,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="45125000" />
-    </task>
-    <task id="LOCAL-00508" summary="Added bootstrap.js and bootstrap.css">
-      <created>1739596384344</created>
-      <option name="number" value="00508" />
-      <option name="presentableId" value="LOCAL-00508" />
-      <option name="project" value="LOCAL" />
-      <updated>1739596384344</updated>
+      <workItem from="1743928449647" duration="52257000" />
     </task>
     <task id="LOCAL-00509" summary="Changed css and js connections">
       <created>1739672314714</created>
@@ -1231,7 +1231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744770211345</updated>
     </task>
-    <option name="localTasksCounter" value="557" />
+    <task id="LOCAL-00557" summary="Refactored into Java 8 Stream API a RoomController v2">
+      <created>1744855478480</created>
+      <option name="number" value="00557" />
+      <option name="presentableId" value="LOCAL-00557" />
+      <option name="project" value="LOCAL" />
+      <updated>1744855478481</updated>
+    </task>
+    <option name="localTasksCounter" value="558" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1254,7 +1261,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created reportmaxownercount.html" />
     <MESSAGE value="Rebuilt reportmaxownercount.html v3" />
     <MESSAGE value="Added Apache POI in pom.xml" />
     <MESSAGE value="Rebuilt reportmaxownercount.html" />
@@ -1279,7 +1285,8 @@
     <MESSAGE value="Refactored into Java 8 Stream API FeedbackController" />
     <MESSAGE value="Refactored into Java 8 Stream API a ITStaffController" />
     <MESSAGE value="Refactored into Java 8 Stream API a RoomController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored into Java 8 Stream API a RoomController" />
+    <MESSAGE value="Refactored into Java 8 Stream API a RoomController v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored into Java 8 Stream API a RoomController v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

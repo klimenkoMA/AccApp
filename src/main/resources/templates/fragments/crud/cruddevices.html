@@ -14,7 +14,7 @@
 
         <tr>
             <td style="padding-top: 0; padding-bottom: 0">
-                <div class="card col text-center" style="width: 10rem; height: 13rem;
+                <div id="add-device" class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                     <img src="../img/blueadd.png" class="card-img-top"
                          style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
@@ -32,7 +32,7 @@
             </td>
 
             <td style="padding-top: 0; padding-bottom: 0">
-                <div class="card col text-center" style="width: 10rem; height: 13rem;
+                <div id="update-device" class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                     <img src="../img/blueupdate.png" class="card-img-top"
                          style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
@@ -50,7 +50,7 @@
             </td>
 
             <td style="padding-top: 0; padding-bottom: 0">
-                <div class="card col text-center" style="width: 10rem; height: 13rem;
+                <div id="find-device" class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                     <img src="../img/minisearch.png" class="card-img-top"
                          style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
@@ -68,7 +68,7 @@
             </td>
 
             <td style="padding-top: 0; padding-bottom: 0">
-                <div class="card col text-center" style="width: 10rem; height: 13rem;
+                <div id="delete-device" class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                     <img src="../img/bluedelete.png" class="card-img-top"
                          style="height: 5rem; width: 5rem; align-self: center" alt="Оборудование">
@@ -86,7 +86,7 @@
             </td>
 
             <td style="padding-top: 0; padding-bottom: 0">
-                <div class="card col text-center" style="width: 10rem; height: 13rem;
+                <div id="all-devices" class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                     <img src="../img/laptop.png" class="card-img-top"
                          style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Оборудование">
@@ -103,7 +103,7 @@
             </td>
 
             <td style="padding-top: 0; padding-bottom: 0">
-                <div  class="card col text-center" style="width: 10rem; height: 13rem;
+                <div id="report-device" class="card col text-center" style="width: 10rem; height: 13rem;
                     box-shadow: 2px 2px 4px black">
                     <img src="../img/roomreport.png" class="card-img-top"
                          style="max-height: 5rem; max-width: 5rem; align-self: center" alt="Оборудование">
@@ -122,6 +122,81 @@
         </tr>
 
     </table>
+    <script>
+        const addDevice = document.getElementById('add-device');
+        const updateDevice = document.getElementById('update-device');
+        const findDevice = document.getElementById('find-device');
+        const deleteDevice = document.getElementById('delete-device');
+        const allDevices = document.getElementById('all-devices');
+        const reportDevice = document.getElementById('report-device');
+
+        updateDevice.addEventListener('mouseenter', function (event) {
+            event.target.style.transform = 'scale(1.2)';
+            event.target.style.backgroundColor = '#d3e1f6';
+            event.target.style.transition = 'transform 0.3 ease';
+        });
+
+        updateDevice.addEventListener('mouseleave', function (event) {
+            event.target.style.transform = 'scale(1)';
+            event.target.style.backgroundColor = 'white';
+        });
+
+        addDevice.addEventListener('mouseenter', function (event) {
+            event.target.style.transform = 'scale(1.2)';
+            event.target.style.backgroundColor = '#d3e1f6';
+            event.target.style.transition = 'transform 0.3 ease';
+        });
+
+        addDevice.addEventListener('mouseleave', function (event) {
+            event.target.style.transform = 'scale(1)';
+            event.target.style.backgroundColor = 'white';
+        });
+
+        findDevice.addEventListener('mouseenter', function (event) {
+            event.target.style.transform = 'scale(1.2)';
+            event.target.style.backgroundColor = '#d3e1f6';
+            event.target.style.transition = 'transform 0.3 ease';
+        });
+
+        findDevice.addEventListener('mouseleave', function (event) {
+            event.target.style.transform = 'scale(1)';
+            event.target.style.backgroundColor = 'white';
+        });
+
+        deleteDevice.addEventListener('mouseenter', function (event) {
+            event.target.style.transform = 'scale(1.2)';
+            event.target.style.backgroundColor = '#d3e1f6';
+            event.target.style.transition = 'transform 0.3 ease';
+        });
+
+        deleteDevice.addEventListener('mouseleave', function (event) {
+            event.target.style.transform = 'scale(1)';
+            event.target.style.backgroundColor = 'white';
+        });
+
+        allDevices.addEventListener('mouseenter', function (event) {
+            event.target.style.transform = 'scale(1.2)';
+            event.target.style.backgroundColor = '#d3e1f6';
+            event.target.style.transition = 'transform 0.3 ease';
+        });
+
+        allDevices.addEventListener('mouseleave', function (event) {
+            event.target.style.transform = 'scale(1)';
+            event.target.style.backgroundColor = 'white';
+        });
+
+        reportDevice.addEventListener('mouseenter', function (event) {
+            event.target.style.transform = 'scale(1.2)';
+            event.target.style.backgroundColor = '#d3e1f6';
+            event.target.style.transition = 'transform 0.3 ease';
+        });
+
+        reportDevice.addEventListener('mouseleave', function (event) {
+            event.target.style.transform = 'scale(1)';
+            event.target.style.backgroundColor = 'white';
+        });
+    </script>
 </div>
 
 </html>
+
