@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt reportemployeescountinworkareas.html">
-      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-16.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Check List" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Check List" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-17.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/crudjs/cruddevices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/crudjs/cruddoc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/crudjs/crudemployee.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-04-09.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-04-10.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddevices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/update/updatedevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/update/updatedevices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/accountingApp/controller/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/update/updatedevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/update/updatedevices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/cruddoc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddevices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/cruddoc.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +32,10 @@
         <option value="UML Activity" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -116,11 +119,11 @@
       <recent name="D:\JAVA\REPOSITORY\AccApp\frontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\static\js\crudjs" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates\fragments\crud" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\test" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates\reports\roomreports" />
       <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates" />
-      <recent name="D:\JAVA\REPOSITORY\AccApp\src\main\resources\templates\fragments\reports\" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -418,6 +421,19 @@
     </treeState>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountingApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RepairControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AccApp" />
       <selectedOptions>
@@ -893,14 +909,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="52257000" />
-    </task>
-    <task id="LOCAL-00509" summary="Changed css and js connections">
-      <created>1739672314714</created>
-      <option name="number" value="00509" />
-      <option name="presentableId" value="LOCAL-00509" />
-      <option name="project" value="LOCAL" />
-      <updated>1739672314715</updated>
+      <workItem from="1743928449647" duration="56935000" />
     </task>
     <task id="LOCAL-00510" summary="Created roomreportchart.js">
       <created>1739816789685</created>
@@ -1238,7 +1247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1744855478481</updated>
     </task>
-    <option name="localTasksCounter" value="558" />
+    <task id="LOCAL-00558" summary="Added Js script in cruddevices.html">
+      <created>1744942732912</created>
+      <option name="number" value="00558" />
+      <option name="presentableId" value="LOCAL-00558" />
+      <option name="project" value="LOCAL" />
+      <updated>1744942732912</updated>
+    </task>
+    <option name="localTasksCounter" value="559" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1261,7 +1277,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt reportmaxownercount.html v3" />
     <MESSAGE value="Added Apache POI in pom.xml" />
     <MESSAGE value="Rebuilt reportmaxownercount.html" />
     <MESSAGE value="Rebuilt reportmaxownercount.html with adding new color in 'pie'" />
@@ -1286,7 +1301,8 @@
     <MESSAGE value="Refactored into Java 8 Stream API a ITStaffController" />
     <MESSAGE value="Refactored into Java 8 Stream API a RoomController" />
     <MESSAGE value="Refactored into Java 8 Stream API a RoomController v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored into Java 8 Stream API a RoomController v2" />
+    <MESSAGE value="Added Js script in cruddevices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Js script in cruddevices.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
