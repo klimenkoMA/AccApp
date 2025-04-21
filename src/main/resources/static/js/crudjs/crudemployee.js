@@ -7,19 +7,11 @@
     const allEmpl = document.getElementById('all-empl');
     const reportEmpl = document.getElementById('report-empl');
 
-    // updateEmpl.addEventListener('mouseenter', function (event) {
-    //     // event.target.style.transform = 'scale(1.2)';
-    //     event.target.style.backgroundColor = '#d3e1f6';
-    //     // event.target.style.transition = 'transform 0.3 ease';
-    //
-    //     if (event.target.closest('#add-empl-btn')) {
-    //         // Применяем стили только если курсор не на кнопке
-    //         event.target.style.transform = 'scale(1)';
-    //         event.target.style.backgroundColor = 'white';
-    //         // event.target.style.transition = 'transform 0.3 ease'; // исправлено: добавлено "s" в "0.3s"
-    //     }
-    //
-    // });
+    updateEmpl.addEventListener('mouseenter', function (event) {
+        event.target.style.transform = 'scale(1.2)';
+        event.target.style.backgroundColor = '#d3e1f6';
+        event.target.style.transition = 'transform 0.3 ease';
+    });
 
     updateEmpl.addEventListener('mouseleave', function (event) {
         event.target.style.transform = 'scale(1)';
