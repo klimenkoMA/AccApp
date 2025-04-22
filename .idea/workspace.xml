@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bfb272-736d-4b61-af2e-3f2fb025a0cf" name="Default Changelist" comment="Rebuilt reportemployeescountinworkareas.html">
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2025-04-20.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log.2025-04-13.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/crudjs/crudemployee.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/crudjs/crudemployee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/crud/crudemployees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/crudjs/crudemployee.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/crudjs/crudemployee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/crud/crudemployees.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -899,14 +905,7 @@
       <workItem from="1741970569146" duration="15117000" />
       <workItem from="1742448303108" duration="5484000" />
       <workItem from="1742798580920" duration="28789000" />
-      <workItem from="1743928449647" duration="67635000" />
-    </task>
-    <task id="LOCAL-00512" summary="Tech commit">
-      <created>1740162354565</created>
-      <option name="number" value="00512" />
-      <option name="presentableId" value="LOCAL-00512" />
-      <option name="project" value="LOCAL" />
-      <updated>1740162354567</updated>
+      <workItem from="1743928449647" duration="71667000" />
     </task>
     <task id="LOCAL-00513" summary="Rebuilt reportmaxroomcount.html">
       <created>1740241761886</created>
@@ -1244,7 +1243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1745127673426</updated>
     </task>
-    <option name="localTasksCounter" value="561" />
+    <task id="LOCAL-00561" summary="Rebuilt crudemployee.js">
+      <created>1745202190893</created>
+      <option name="number" value="00561" />
+      <option name="presentableId" value="LOCAL-00561" />
+      <option name="project" value="LOCAL" />
+      <updated>1745202190894</updated>
+    </task>
+    <option name="localTasksCounter" value="562" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1267,7 +1273,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rebuilt reportmaxownercount.html with adding new color in 'pie'" />
     <MESSAGE value="Rebuilt reportmaxownercount.html v2" />
     <MESSAGE value="Added Act.java" />
     <MESSAGE value="Added some classes for Act" />
@@ -1292,7 +1297,8 @@
     <MESSAGE value="Added Js script in cruddevices.html" />
     <MESSAGE value="Added some Js scripts" />
     <MESSAGE value="Added some Js scripts v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some Js scripts v2" />
+    <MESSAGE value="Rebuilt crudemployee.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebuilt crudemployee.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
